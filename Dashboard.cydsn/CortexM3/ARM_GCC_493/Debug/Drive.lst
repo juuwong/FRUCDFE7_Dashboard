@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccEziXfa.s 			page 1
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccjywNk0.s 			page 1
 
 
    1              		.syntax unified
@@ -26,81 +26,81 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccEziXfa.s 			page 1
   23              		.type	Drive_Write, %function
   24              	Drive_Write:
   25              	.LFB0:
-  26              		.file 1 ".\\Generated_Source\\PSoC5\\Drive.c"
-   1:.\Generated_Source\PSoC5/Drive.c **** /*******************************************************************************
-   2:.\Generated_Source\PSoC5/Drive.c **** * File Name: Drive.c  
-   3:.\Generated_Source\PSoC5/Drive.c **** * Version 2.20
-   4:.\Generated_Source\PSoC5/Drive.c **** *
-   5:.\Generated_Source\PSoC5/Drive.c **** * Description:
-   6:.\Generated_Source\PSoC5/Drive.c **** *  This file contains API to enable firmware control of a Pins component.
-   7:.\Generated_Source\PSoC5/Drive.c **** *
-   8:.\Generated_Source\PSoC5/Drive.c **** * Note:
-   9:.\Generated_Source\PSoC5/Drive.c **** *
-  10:.\Generated_Source\PSoC5/Drive.c **** ********************************************************************************
-  11:.\Generated_Source\PSoC5/Drive.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
-  12:.\Generated_Source\PSoC5/Drive.c **** * You may use this file only in accordance with the license, terms, conditions, 
-  13:.\Generated_Source\PSoC5/Drive.c **** * disclaimers, and limitations in the end user license agreement accompanying 
-  14:.\Generated_Source\PSoC5/Drive.c **** * the software package with which this file was provided.
-  15:.\Generated_Source\PSoC5/Drive.c **** *******************************************************************************/
-  16:.\Generated_Source\PSoC5/Drive.c **** 
-  17:.\Generated_Source\PSoC5/Drive.c **** #include "cytypes.h"
-  18:.\Generated_Source\PSoC5/Drive.c **** #include "Drive.h"
-  19:.\Generated_Source\PSoC5/Drive.c **** 
-  20:.\Generated_Source\PSoC5/Drive.c **** /* APIs are not generated for P15[7:6] on PSoC 5 */
-  21:.\Generated_Source\PSoC5/Drive.c **** #if !(CY_PSOC5A &&\
-  22:.\Generated_Source\PSoC5/Drive.c **** 	 Drive__PORT == 15 && ((Drive__MASK & 0xC0) != 0))
-  23:.\Generated_Source\PSoC5/Drive.c **** 
-  24:.\Generated_Source\PSoC5/Drive.c **** 
-  25:.\Generated_Source\PSoC5/Drive.c **** /*******************************************************************************
-  26:.\Generated_Source\PSoC5/Drive.c **** * Function Name: Drive_Write
-  27:.\Generated_Source\PSoC5/Drive.c **** ****************************************************************************//**
-  28:.\Generated_Source\PSoC5/Drive.c **** *
-  29:.\Generated_Source\PSoC5/Drive.c **** * \brief Writes the value to the physical port (data output register), masking
-  30:.\Generated_Source\PSoC5/Drive.c **** *  and shifting the bits appropriately. 
-  31:.\Generated_Source\PSoC5/Drive.c **** *
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccEziXfa.s 			page 2
+  26              		.file 1 "Generated_Source\\PSoC5\\Drive.c"
+   1:Generated_Source\PSoC5/Drive.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/Drive.c **** * File Name: Drive.c  
+   3:Generated_Source\PSoC5/Drive.c **** * Version 2.20
+   4:Generated_Source\PSoC5/Drive.c **** *
+   5:Generated_Source\PSoC5/Drive.c **** * Description:
+   6:Generated_Source\PSoC5/Drive.c **** *  This file contains API to enable firmware control of a Pins component.
+   7:Generated_Source\PSoC5/Drive.c **** *
+   8:Generated_Source\PSoC5/Drive.c **** * Note:
+   9:Generated_Source\PSoC5/Drive.c **** *
+  10:Generated_Source\PSoC5/Drive.c **** ********************************************************************************
+  11:Generated_Source\PSoC5/Drive.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  12:Generated_Source\PSoC5/Drive.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  13:Generated_Source\PSoC5/Drive.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  14:Generated_Source\PSoC5/Drive.c **** * the software package with which this file was provided.
+  15:Generated_Source\PSoC5/Drive.c **** *******************************************************************************/
+  16:Generated_Source\PSoC5/Drive.c **** 
+  17:Generated_Source\PSoC5/Drive.c **** #include "cytypes.h"
+  18:Generated_Source\PSoC5/Drive.c **** #include "Drive.h"
+  19:Generated_Source\PSoC5/Drive.c **** 
+  20:Generated_Source\PSoC5/Drive.c **** /* APIs are not generated for P15[7:6] on PSoC 5 */
+  21:Generated_Source\PSoC5/Drive.c **** #if !(CY_PSOC5A &&\
+  22:Generated_Source\PSoC5/Drive.c **** 	 Drive__PORT == 15 && ((Drive__MASK & 0xC0) != 0))
+  23:Generated_Source\PSoC5/Drive.c **** 
+  24:Generated_Source\PSoC5/Drive.c **** 
+  25:Generated_Source\PSoC5/Drive.c **** /*******************************************************************************
+  26:Generated_Source\PSoC5/Drive.c **** * Function Name: Drive_Write
+  27:Generated_Source\PSoC5/Drive.c **** ****************************************************************************//**
+  28:Generated_Source\PSoC5/Drive.c **** *
+  29:Generated_Source\PSoC5/Drive.c **** * \brief Writes the value to the physical port (data output register), masking
+  30:Generated_Source\PSoC5/Drive.c **** *  and shifting the bits appropriately. 
+  31:Generated_Source\PSoC5/Drive.c **** *
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccjywNk0.s 			page 2
 
 
-  32:.\Generated_Source\PSoC5/Drive.c **** * The data output register controls the signal applied to the physical pin in 
-  33:.\Generated_Source\PSoC5/Drive.c **** * conjunction with the drive mode parameter. This function avoids changing 
-  34:.\Generated_Source\PSoC5/Drive.c **** * other bits in the port by using the appropriate method (read-modify-write or
-  35:.\Generated_Source\PSoC5/Drive.c **** * bit banding).
-  36:.\Generated_Source\PSoC5/Drive.c **** *
-  37:.\Generated_Source\PSoC5/Drive.c **** * <b>Note</b> This function should not be used on a hardware digital output pin 
-  38:.\Generated_Source\PSoC5/Drive.c **** * as it is driven by the hardware signal attached to it.
-  39:.\Generated_Source\PSoC5/Drive.c **** *
-  40:.\Generated_Source\PSoC5/Drive.c **** * \param value
-  41:.\Generated_Source\PSoC5/Drive.c **** *  Value to write to the component instance.
-  42:.\Generated_Source\PSoC5/Drive.c **** *
-  43:.\Generated_Source\PSoC5/Drive.c **** * \return 
-  44:.\Generated_Source\PSoC5/Drive.c **** *  None 
-  45:.\Generated_Source\PSoC5/Drive.c **** *
-  46:.\Generated_Source\PSoC5/Drive.c **** * \sideeffect
-  47:.\Generated_Source\PSoC5/Drive.c **** *  If you use read-modify-write operations that are not atomic; the Interrupt 
-  48:.\Generated_Source\PSoC5/Drive.c **** *  Service Routines (ISR) can cause corruption of this function. An ISR that 
-  49:.\Generated_Source\PSoC5/Drive.c **** *  interrupts this function and performs writes to the Pins component data 
-  50:.\Generated_Source\PSoC5/Drive.c **** *  register can cause corrupted port data. To avoid this issue, you should 
-  51:.\Generated_Source\PSoC5/Drive.c **** *  either use the Per-Pin APIs (primary method) or disable interrupts around 
-  52:.\Generated_Source\PSoC5/Drive.c **** *  this function.
-  53:.\Generated_Source\PSoC5/Drive.c **** *
-  54:.\Generated_Source\PSoC5/Drive.c **** * \funcusage
-  55:.\Generated_Source\PSoC5/Drive.c **** *  \snippet Drive_SUT.c usage_Drive_Write
-  56:.\Generated_Source\PSoC5/Drive.c **** *******************************************************************************/
-  57:.\Generated_Source\PSoC5/Drive.c **** void Drive_Write(uint8 value)
-  58:.\Generated_Source\PSoC5/Drive.c **** {
+  32:Generated_Source\PSoC5/Drive.c **** * The data output register controls the signal applied to the physical pin in 
+  33:Generated_Source\PSoC5/Drive.c **** * conjunction with the drive mode parameter. This function avoids changing 
+  34:Generated_Source\PSoC5/Drive.c **** * other bits in the port by using the appropriate method (read-modify-write or
+  35:Generated_Source\PSoC5/Drive.c **** * bit banding).
+  36:Generated_Source\PSoC5/Drive.c **** *
+  37:Generated_Source\PSoC5/Drive.c **** * <b>Note</b> This function should not be used on a hardware digital output pin 
+  38:Generated_Source\PSoC5/Drive.c **** * as it is driven by the hardware signal attached to it.
+  39:Generated_Source\PSoC5/Drive.c **** *
+  40:Generated_Source\PSoC5/Drive.c **** * \param value
+  41:Generated_Source\PSoC5/Drive.c **** *  Value to write to the component instance.
+  42:Generated_Source\PSoC5/Drive.c **** *
+  43:Generated_Source\PSoC5/Drive.c **** * \return 
+  44:Generated_Source\PSoC5/Drive.c **** *  None 
+  45:Generated_Source\PSoC5/Drive.c **** *
+  46:Generated_Source\PSoC5/Drive.c **** * \sideeffect
+  47:Generated_Source\PSoC5/Drive.c **** *  If you use read-modify-write operations that are not atomic; the Interrupt 
+  48:Generated_Source\PSoC5/Drive.c **** *  Service Routines (ISR) can cause corruption of this function. An ISR that 
+  49:Generated_Source\PSoC5/Drive.c **** *  interrupts this function and performs writes to the Pins component data 
+  50:Generated_Source\PSoC5/Drive.c **** *  register can cause corrupted port data. To avoid this issue, you should 
+  51:Generated_Source\PSoC5/Drive.c **** *  either use the Per-Pin APIs (primary method) or disable interrupts around 
+  52:Generated_Source\PSoC5/Drive.c **** *  this function.
+  53:Generated_Source\PSoC5/Drive.c **** *
+  54:Generated_Source\PSoC5/Drive.c **** * \funcusage
+  55:Generated_Source\PSoC5/Drive.c **** *  \snippet Drive_SUT.c usage_Drive_Write
+  56:Generated_Source\PSoC5/Drive.c **** *******************************************************************************/
+  57:Generated_Source\PSoC5/Drive.c **** void Drive_Write(uint8 value)
+  58:Generated_Source\PSoC5/Drive.c **** {
   27              		.loc 1 58 0
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
   30              		@ frame_needed = 0, uses_anonymous_args = 0
   31              		@ link register save eliminated.
   32              	.LVL0:
-  59:.\Generated_Source\PSoC5/Drive.c ****     uint8 staticBits = (Drive_DR & (uint8)(~Drive_MASK));
+  59:Generated_Source\PSoC5/Drive.c ****     uint8 staticBits = (Drive_DR & (uint8)(~Drive_MASK));
   33              		.loc 1 59 0
   34 0000 044A     		ldr	r2, .L2
   35 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
   36 0004 03F0FE03 		and	r3, r3, #254
   37              	.LVL1:
-  60:.\Generated_Source\PSoC5/Drive.c ****     Drive_DR = staticBits | ((uint8)(value << Drive_SHIFT) & Drive_MASK);
+  60:Generated_Source\PSoC5/Drive.c ****     Drive_DR = staticBits | ((uint8)(value << Drive_SHIFT) & Drive_MASK);
   38              		.loc 1 60 0
   39 0008 00F00100 		and	r0, r0, #1
   40              	.LVL2:
@@ -118,51 +118,51 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccEziXfa.s 			page 1
   52              		.align	2
   53              		.global	Drive_SetDriveMode
   54              		.thumb
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccEziXfa.s 			page 3
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccjywNk0.s 			page 3
 
 
   55              		.thumb_func
   56              		.type	Drive_SetDriveMode, %function
   57              	Drive_SetDriveMode:
   58              	.LFB1:
-  61:.\Generated_Source\PSoC5/Drive.c **** }
-  62:.\Generated_Source\PSoC5/Drive.c **** 
-  63:.\Generated_Source\PSoC5/Drive.c **** 
-  64:.\Generated_Source\PSoC5/Drive.c **** /*******************************************************************************
-  65:.\Generated_Source\PSoC5/Drive.c **** * Function Name: Drive_SetDriveMode
-  66:.\Generated_Source\PSoC5/Drive.c **** ****************************************************************************//**
-  67:.\Generated_Source\PSoC5/Drive.c **** *
-  68:.\Generated_Source\PSoC5/Drive.c **** * \brief Sets the drive mode for each of the Pins component's pins.
-  69:.\Generated_Source\PSoC5/Drive.c **** * 
-  70:.\Generated_Source\PSoC5/Drive.c **** * <b>Note</b> This affects all pins in the Pins component instance. Use the
-  71:.\Generated_Source\PSoC5/Drive.c **** * Per-Pin APIs if you wish to control individual pin's drive modes.
-  72:.\Generated_Source\PSoC5/Drive.c **** *
-  73:.\Generated_Source\PSoC5/Drive.c **** * \param mode
-  74:.\Generated_Source\PSoC5/Drive.c **** *  Mode for the selected signals. Valid options are documented in 
-  75:.\Generated_Source\PSoC5/Drive.c **** *  \ref driveMode.
-  76:.\Generated_Source\PSoC5/Drive.c **** *
-  77:.\Generated_Source\PSoC5/Drive.c **** * \return
-  78:.\Generated_Source\PSoC5/Drive.c **** *  None
-  79:.\Generated_Source\PSoC5/Drive.c **** *
-  80:.\Generated_Source\PSoC5/Drive.c **** * \sideeffect
-  81:.\Generated_Source\PSoC5/Drive.c **** *  If you use read-modify-write operations that are not atomic, the ISR can
-  82:.\Generated_Source\PSoC5/Drive.c **** *  cause corruption of this function. An ISR that interrupts this function 
-  83:.\Generated_Source\PSoC5/Drive.c **** *  and performs writes to the Pins component Drive Mode registers can cause 
-  84:.\Generated_Source\PSoC5/Drive.c **** *  corrupted port data. To avoid this issue, you should either use the Per-Pin
-  85:.\Generated_Source\PSoC5/Drive.c **** *  APIs (primary method) or disable interrupts around this function.
-  86:.\Generated_Source\PSoC5/Drive.c **** *
-  87:.\Generated_Source\PSoC5/Drive.c **** * \funcusage
-  88:.\Generated_Source\PSoC5/Drive.c **** *  \snippet Drive_SUT.c usage_Drive_SetDriveMode
-  89:.\Generated_Source\PSoC5/Drive.c **** *******************************************************************************/
-  90:.\Generated_Source\PSoC5/Drive.c **** void Drive_SetDriveMode(uint8 mode)
-  91:.\Generated_Source\PSoC5/Drive.c **** {
+  61:Generated_Source\PSoC5/Drive.c **** }
+  62:Generated_Source\PSoC5/Drive.c **** 
+  63:Generated_Source\PSoC5/Drive.c **** 
+  64:Generated_Source\PSoC5/Drive.c **** /*******************************************************************************
+  65:Generated_Source\PSoC5/Drive.c **** * Function Name: Drive_SetDriveMode
+  66:Generated_Source\PSoC5/Drive.c **** ****************************************************************************//**
+  67:Generated_Source\PSoC5/Drive.c **** *
+  68:Generated_Source\PSoC5/Drive.c **** * \brief Sets the drive mode for each of the Pins component's pins.
+  69:Generated_Source\PSoC5/Drive.c **** * 
+  70:Generated_Source\PSoC5/Drive.c **** * <b>Note</b> This affects all pins in the Pins component instance. Use the
+  71:Generated_Source\PSoC5/Drive.c **** * Per-Pin APIs if you wish to control individual pin's drive modes.
+  72:Generated_Source\PSoC5/Drive.c **** *
+  73:Generated_Source\PSoC5/Drive.c **** * \param mode
+  74:Generated_Source\PSoC5/Drive.c **** *  Mode for the selected signals. Valid options are documented in 
+  75:Generated_Source\PSoC5/Drive.c **** *  \ref driveMode.
+  76:Generated_Source\PSoC5/Drive.c **** *
+  77:Generated_Source\PSoC5/Drive.c **** * \return
+  78:Generated_Source\PSoC5/Drive.c **** *  None
+  79:Generated_Source\PSoC5/Drive.c **** *
+  80:Generated_Source\PSoC5/Drive.c **** * \sideeffect
+  81:Generated_Source\PSoC5/Drive.c **** *  If you use read-modify-write operations that are not atomic, the ISR can
+  82:Generated_Source\PSoC5/Drive.c **** *  cause corruption of this function. An ISR that interrupts this function 
+  83:Generated_Source\PSoC5/Drive.c **** *  and performs writes to the Pins component Drive Mode registers can cause 
+  84:Generated_Source\PSoC5/Drive.c **** *  corrupted port data. To avoid this issue, you should either use the Per-Pin
+  85:Generated_Source\PSoC5/Drive.c **** *  APIs (primary method) or disable interrupts around this function.
+  86:Generated_Source\PSoC5/Drive.c **** *
+  87:Generated_Source\PSoC5/Drive.c **** * \funcusage
+  88:Generated_Source\PSoC5/Drive.c **** *  \snippet Drive_SUT.c usage_Drive_SetDriveMode
+  89:Generated_Source\PSoC5/Drive.c **** *******************************************************************************/
+  90:Generated_Source\PSoC5/Drive.c **** void Drive_SetDriveMode(uint8 mode)
+  91:Generated_Source\PSoC5/Drive.c **** {
   59              		.loc 1 91 0
   60              		.cfi_startproc
   61              		@ args = 0, pretend = 0, frame = 0
   62              		@ frame_needed = 0, uses_anonymous_args = 0
   63              		@ link register save eliminated.
   64              	.LVL3:
-  92:.\Generated_Source\PSoC5/Drive.c **** 	CyPins_SetPinDriveMode(Drive_0, mode);
+  92:Generated_Source\PSoC5/Drive.c **** 	CyPins_SetPinDriveMode(Drive_0, mode);
   65              		.loc 1 92 0
   66 0000 044A     		ldr	r2, .L5
   67 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccEziXfa.s 			page 1
   77 0014 18500040 		.word	1073762328
   78              		.cfi_endproc
   79              	.LFE1:
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccEziXfa.s 			page 4
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccjywNk0.s 			page 4
 
 
   80              		.size	Drive_SetDriveMode, .-Drive_SetDriveMode
@@ -190,38 +190,38 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccEziXfa.s 			page 1
   86              		.type	Drive_Read, %function
   87              	Drive_Read:
   88              	.LFB2:
-  93:.\Generated_Source\PSoC5/Drive.c **** }
-  94:.\Generated_Source\PSoC5/Drive.c **** 
-  95:.\Generated_Source\PSoC5/Drive.c **** 
-  96:.\Generated_Source\PSoC5/Drive.c **** /*******************************************************************************
-  97:.\Generated_Source\PSoC5/Drive.c **** * Function Name: Drive_Read
-  98:.\Generated_Source\PSoC5/Drive.c **** ****************************************************************************//**
-  99:.\Generated_Source\PSoC5/Drive.c **** *
- 100:.\Generated_Source\PSoC5/Drive.c **** * \brief Reads the associated physical port (pin status register) and masks 
- 101:.\Generated_Source\PSoC5/Drive.c **** *  the required bits according to the width and bit position of the component
- 102:.\Generated_Source\PSoC5/Drive.c **** *  instance. 
- 103:.\Generated_Source\PSoC5/Drive.c **** *
- 104:.\Generated_Source\PSoC5/Drive.c **** * The pin's status register returns the current logic level present on the 
- 105:.\Generated_Source\PSoC5/Drive.c **** * physical pin.
- 106:.\Generated_Source\PSoC5/Drive.c **** *
- 107:.\Generated_Source\PSoC5/Drive.c **** * \return 
- 108:.\Generated_Source\PSoC5/Drive.c **** *  The current value for the pins in the component as a right justified number.
- 109:.\Generated_Source\PSoC5/Drive.c **** *
- 110:.\Generated_Source\PSoC5/Drive.c **** * \funcusage
- 111:.\Generated_Source\PSoC5/Drive.c **** *  \snippet Drive_SUT.c usage_Drive_Read  
- 112:.\Generated_Source\PSoC5/Drive.c **** *******************************************************************************/
- 113:.\Generated_Source\PSoC5/Drive.c **** uint8 Drive_Read(void)
- 114:.\Generated_Source\PSoC5/Drive.c **** {
+  93:Generated_Source\PSoC5/Drive.c **** }
+  94:Generated_Source\PSoC5/Drive.c **** 
+  95:Generated_Source\PSoC5/Drive.c **** 
+  96:Generated_Source\PSoC5/Drive.c **** /*******************************************************************************
+  97:Generated_Source\PSoC5/Drive.c **** * Function Name: Drive_Read
+  98:Generated_Source\PSoC5/Drive.c **** ****************************************************************************//**
+  99:Generated_Source\PSoC5/Drive.c **** *
+ 100:Generated_Source\PSoC5/Drive.c **** * \brief Reads the associated physical port (pin status register) and masks 
+ 101:Generated_Source\PSoC5/Drive.c **** *  the required bits according to the width and bit position of the component
+ 102:Generated_Source\PSoC5/Drive.c **** *  instance. 
+ 103:Generated_Source\PSoC5/Drive.c **** *
+ 104:Generated_Source\PSoC5/Drive.c **** * The pin's status register returns the current logic level present on the 
+ 105:Generated_Source\PSoC5/Drive.c **** * physical pin.
+ 106:Generated_Source\PSoC5/Drive.c **** *
+ 107:Generated_Source\PSoC5/Drive.c **** * \return 
+ 108:Generated_Source\PSoC5/Drive.c **** *  The current value for the pins in the component as a right justified number.
+ 109:Generated_Source\PSoC5/Drive.c **** *
+ 110:Generated_Source\PSoC5/Drive.c **** * \funcusage
+ 111:Generated_Source\PSoC5/Drive.c **** *  \snippet Drive_SUT.c usage_Drive_Read  
+ 112:Generated_Source\PSoC5/Drive.c **** *******************************************************************************/
+ 113:Generated_Source\PSoC5/Drive.c **** uint8 Drive_Read(void)
+ 114:Generated_Source\PSoC5/Drive.c **** {
   89              		.loc 1 114 0
   90              		.cfi_startproc
   91              		@ args = 0, pretend = 0, frame = 0
   92              		@ frame_needed = 0, uses_anonymous_args = 0
   93              		@ link register save eliminated.
- 115:.\Generated_Source\PSoC5/Drive.c ****     return (Drive_PS & Drive_MASK) >> Drive_SHIFT;
+ 115:Generated_Source\PSoC5/Drive.c ****     return (Drive_PS & Drive_MASK) >> Drive_SHIFT;
   94              		.loc 1 115 0
   95 0000 024B     		ldr	r3, .L8
   96 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
- 116:.\Generated_Source\PSoC5/Drive.c **** }
+ 116:Generated_Source\PSoC5/Drive.c **** }
   97              		.loc 1 116 0
   98 0004 00F00100 		and	r0, r0, #1
   99 0008 7047     		bx	lr
@@ -238,47 +238,47 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccEziXfa.s 			page 1
  110              		.thumb
  111              		.thumb_func
  112              		.type	Drive_ReadDataReg, %function
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccEziXfa.s 			page 5
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccjywNk0.s 			page 5
 
 
  113              	Drive_ReadDataReg:
  114              	.LFB3:
- 117:.\Generated_Source\PSoC5/Drive.c **** 
- 118:.\Generated_Source\PSoC5/Drive.c **** 
- 119:.\Generated_Source\PSoC5/Drive.c **** /*******************************************************************************
- 120:.\Generated_Source\PSoC5/Drive.c **** * Function Name: Drive_ReadDataReg
- 121:.\Generated_Source\PSoC5/Drive.c **** ****************************************************************************//**
- 122:.\Generated_Source\PSoC5/Drive.c **** *
- 123:.\Generated_Source\PSoC5/Drive.c **** * \brief Reads the associated physical port's data output register and masks 
- 124:.\Generated_Source\PSoC5/Drive.c **** *  the correct bits according to the width and bit position of the component 
- 125:.\Generated_Source\PSoC5/Drive.c **** *  instance. 
- 126:.\Generated_Source\PSoC5/Drive.c **** *
- 127:.\Generated_Source\PSoC5/Drive.c **** * The data output register controls the signal applied to the physical pin in 
- 128:.\Generated_Source\PSoC5/Drive.c **** * conjunction with the drive mode parameter. This is not the same as the 
- 129:.\Generated_Source\PSoC5/Drive.c **** * preferred Drive_Read() API because the 
- 130:.\Generated_Source\PSoC5/Drive.c **** * Drive_ReadDataReg() reads the data register instead of the status 
- 131:.\Generated_Source\PSoC5/Drive.c **** * register. For output pins this is a useful function to determine the value 
- 132:.\Generated_Source\PSoC5/Drive.c **** * just written to the pin.
- 133:.\Generated_Source\PSoC5/Drive.c **** *
- 134:.\Generated_Source\PSoC5/Drive.c **** * \return 
- 135:.\Generated_Source\PSoC5/Drive.c **** *  The current value of the data register masked and shifted into a right 
- 136:.\Generated_Source\PSoC5/Drive.c **** *  justified number for the component instance.
- 137:.\Generated_Source\PSoC5/Drive.c **** *
- 138:.\Generated_Source\PSoC5/Drive.c **** * \funcusage
- 139:.\Generated_Source\PSoC5/Drive.c **** *  \snippet Drive_SUT.c usage_Drive_ReadDataReg 
- 140:.\Generated_Source\PSoC5/Drive.c **** *******************************************************************************/
- 141:.\Generated_Source\PSoC5/Drive.c **** uint8 Drive_ReadDataReg(void)
- 142:.\Generated_Source\PSoC5/Drive.c **** {
+ 117:Generated_Source\PSoC5/Drive.c **** 
+ 118:Generated_Source\PSoC5/Drive.c **** 
+ 119:Generated_Source\PSoC5/Drive.c **** /*******************************************************************************
+ 120:Generated_Source\PSoC5/Drive.c **** * Function Name: Drive_ReadDataReg
+ 121:Generated_Source\PSoC5/Drive.c **** ****************************************************************************//**
+ 122:Generated_Source\PSoC5/Drive.c **** *
+ 123:Generated_Source\PSoC5/Drive.c **** * \brief Reads the associated physical port's data output register and masks 
+ 124:Generated_Source\PSoC5/Drive.c **** *  the correct bits according to the width and bit position of the component 
+ 125:Generated_Source\PSoC5/Drive.c **** *  instance. 
+ 126:Generated_Source\PSoC5/Drive.c **** *
+ 127:Generated_Source\PSoC5/Drive.c **** * The data output register controls the signal applied to the physical pin in 
+ 128:Generated_Source\PSoC5/Drive.c **** * conjunction with the drive mode parameter. This is not the same as the 
+ 129:Generated_Source\PSoC5/Drive.c **** * preferred Drive_Read() API because the 
+ 130:Generated_Source\PSoC5/Drive.c **** * Drive_ReadDataReg() reads the data register instead of the status 
+ 131:Generated_Source\PSoC5/Drive.c **** * register. For output pins this is a useful function to determine the value 
+ 132:Generated_Source\PSoC5/Drive.c **** * just written to the pin.
+ 133:Generated_Source\PSoC5/Drive.c **** *
+ 134:Generated_Source\PSoC5/Drive.c **** * \return 
+ 135:Generated_Source\PSoC5/Drive.c **** *  The current value of the data register masked and shifted into a right 
+ 136:Generated_Source\PSoC5/Drive.c **** *  justified number for the component instance.
+ 137:Generated_Source\PSoC5/Drive.c **** *
+ 138:Generated_Source\PSoC5/Drive.c **** * \funcusage
+ 139:Generated_Source\PSoC5/Drive.c **** *  \snippet Drive_SUT.c usage_Drive_ReadDataReg 
+ 140:Generated_Source\PSoC5/Drive.c **** *******************************************************************************/
+ 141:Generated_Source\PSoC5/Drive.c **** uint8 Drive_ReadDataReg(void)
+ 142:Generated_Source\PSoC5/Drive.c **** {
  115              		.loc 1 142 0
  116              		.cfi_startproc
  117              		@ args = 0, pretend = 0, frame = 0
  118              		@ frame_needed = 0, uses_anonymous_args = 0
  119              		@ link register save eliminated.
- 143:.\Generated_Source\PSoC5/Drive.c ****     return (Drive_DR & Drive_MASK) >> Drive_SHIFT;
+ 143:Generated_Source\PSoC5/Drive.c ****     return (Drive_DR & Drive_MASK) >> Drive_SHIFT;
  120              		.loc 1 143 0
  121 0000 024B     		ldr	r3, .L11
  122 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
- 144:.\Generated_Source\PSoC5/Drive.c **** }
+ 144:Generated_Source\PSoC5/Drive.c **** }
  123              		.loc 1 144 0
  124 0004 00F00100 		and	r0, r0, #1
  125 0008 7047     		bx	lr
@@ -291,56 +291,56 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccEziXfa.s 			page 1
  132              		.size	Drive_ReadDataReg, .-Drive_ReadDataReg
  133              		.text
  134              	.Letext0:
- 135              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
+ 135              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
  136              		.section	.debug_info,"",%progbits
  137              	.Ldebug_info0:
  138 0000 1B010000 		.4byte	0x11b
  139 0004 0400     		.2byte	0x4
  140 0006 00000000 		.4byte	.Ldebug_abbrev0
  141 000a 04       		.byte	0x4
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccEziXfa.s 			page 6
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccjywNk0.s 			page 6
 
 
  142 000b 01       		.uleb128 0x1
- 143 000c D3000000 		.4byte	.LASF20
+ 143 000c C7000000 		.4byte	.LASF20
  144 0010 01       		.byte	0x1
- 145 0011 75000000 		.4byte	.LASF21
- 146 0015 00000000 		.4byte	.LASF22
+ 145 0011 A3010000 		.4byte	.LASF21
+ 146 0015 35000000 		.4byte	.LASF22
  147 0019 00000000 		.4byte	.Ldebug_ranges0+0
  148 001d 00000000 		.4byte	0
  149 0021 00000000 		.4byte	.Ldebug_line0
  150 0025 02       		.uleb128 0x2
  151 0026 01       		.byte	0x1
  152 0027 06       		.byte	0x6
- 153 0028 C8010000 		.4byte	.LASF0
+ 153 0028 DB010000 		.4byte	.LASF0
  154 002c 02       		.uleb128 0x2
  155 002d 01       		.byte	0x1
  156 002e 08       		.byte	0x8
- 157 002f 67000000 		.4byte	.LASF1
+ 157 002f 7C000000 		.4byte	.LASF1
  158 0033 02       		.uleb128 0x2
  159 0034 02       		.byte	0x2
  160 0035 05       		.byte	0x5
- 161 0036 AF010000 		.4byte	.LASF2
+ 161 0036 C2010000 		.4byte	.LASF2
  162 003a 02       		.uleb128 0x2
  163 003b 02       		.byte	0x2
  164 003c 07       		.byte	0x7
- 165 003d AD000000 		.4byte	.LASF3
+ 165 003d A1000000 		.4byte	.LASF3
  166 0041 02       		.uleb128 0x2
  167 0042 04       		.byte	0x4
  168 0043 05       		.byte	0x5
- 169 0044 BF010000 		.4byte	.LASF4
+ 169 0044 D2010000 		.4byte	.LASF4
  170 0048 02       		.uleb128 0x2
  171 0049 04       		.byte	0x4
  172 004a 07       		.byte	0x7
- 173 004b 9B000000 		.4byte	.LASF5
+ 173 004b 8F000000 		.4byte	.LASF5
  174 004f 02       		.uleb128 0x2
  175 0050 08       		.byte	0x8
  176 0051 05       		.byte	0x5
- 177 0052 8A010000 		.4byte	.LASF6
+ 177 0052 7E010000 		.4byte	.LASF6
  178 0056 02       		.uleb128 0x2
  179 0057 08       		.byte	0x8
  180 0058 07       		.byte	0x7
- 181 0059 6E010000 		.4byte	.LASF7
+ 181 0059 62010000 		.4byte	.LASF7
  182 005d 03       		.uleb128 0x3
  183 005e 04       		.byte	0x4
  184 005f 05       		.byte	0x5
@@ -348,36 +348,36 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccEziXfa.s 			page 1
  186 0064 02       		.uleb128 0x2
  187 0065 04       		.byte	0x4
  188 0066 07       		.byte	0x7
- 189 0067 61010000 		.4byte	.LASF8
+ 189 0067 55010000 		.4byte	.LASF8
  190 006b 04       		.uleb128 0x4
- 191 006c B9010000 		.4byte	.LASF12
+ 191 006c CC010000 		.4byte	.LASF12
  192 0070 02       		.byte	0x2
  193 0071 3801     		.2byte	0x138
  194 0073 2C000000 		.4byte	0x2c
  195 0077 02       		.uleb128 0x2
  196 0078 04       		.byte	0x4
  197 0079 04       		.byte	0x4
- 198 007a 61000000 		.4byte	.LASF9
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccEziXfa.s 			page 7
+ 198 007a 2F000000 		.4byte	.LASF9
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccjywNk0.s 			page 7
 
 
  199 007e 02       		.uleb128 0x2
  200 007f 08       		.byte	0x8
  201 0080 04       		.byte	0x4
- 202 0081 C0000000 		.4byte	.LASF10
+ 202 0081 B4000000 		.4byte	.LASF10
  203 0085 02       		.uleb128 0x2
  204 0086 01       		.byte	0x1
  205 0087 08       		.byte	0x8
- 206 0088 98010000 		.4byte	.LASF11
+ 206 0088 8C010000 		.4byte	.LASF11
  207 008c 04       		.uleb128 0x4
- 208 008d 96000000 		.4byte	.LASF13
+ 208 008d 8A000000 		.4byte	.LASF13
  209 0091 02       		.byte	0x2
  210 0092 E201     		.2byte	0x1e2
  211 0094 98000000 		.4byte	0x98
  212 0098 05       		.uleb128 0x5
  213 0099 6B000000 		.4byte	0x6b
  214 009d 06       		.uleb128 0x6
- 215 009e C7000000 		.4byte	.LASF14
+ 215 009e BB000000 		.4byte	.LASF14
  216 00a2 01       		.byte	0x1
  217 00a3 39       		.byte	0x39
  218 00a4 00000000 		.4byte	.LFB0
@@ -386,13 +386,13 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccEziXfa.s 			page 1
  221 00ad 9C       		.byte	0x9c
  222 00ae CF000000 		.4byte	0xcf
  223 00b2 07       		.uleb128 0x7
- 224 00b3 32000000 		.4byte	.LASF16
+ 224 00b3 00000000 		.4byte	.LASF16
  225 00b7 01       		.byte	0x1
  226 00b8 39       		.byte	0x39
  227 00b9 6B000000 		.4byte	0x6b
  228 00bd 00000000 		.4byte	.LLST0
  229 00c1 08       		.uleb128 0x8
- 230 00c2 38000000 		.4byte	.LASF23
+ 230 00c2 06000000 		.4byte	.LASF23
  231 00c6 01       		.byte	0x1
  232 00c7 3B       		.byte	0x3b
  233 00c8 6B000000 		.4byte	0x6b
@@ -400,7 +400,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccEziXfa.s 			page 1
  235 00cd 53       		.byte	0x53
  236 00ce 00       		.byte	0
  237 00cf 06       		.uleb128 0x6
- 238 00d0 43000000 		.4byte	.LASF15
+ 238 00d0 11000000 		.4byte	.LASF15
  239 00d4 01       		.byte	0x1
  240 00d5 5A       		.byte	0x5a
  241 00d6 00000000 		.4byte	.LFB1
@@ -409,16 +409,16 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccEziXfa.s 			page 1
  244 00df 9C       		.byte	0x9c
  245 00e0 F4000000 		.4byte	0xf4
  246 00e4 07       		.uleb128 0x7
- 247 00e5 85010000 		.4byte	.LASF17
+ 247 00e5 79010000 		.4byte	.LASF17
  248 00e9 01       		.byte	0x1
  249 00ea 5A       		.byte	0x5a
  250 00eb 6B000000 		.4byte	0x6b
  251 00ef 21000000 		.4byte	.LLST1
  252 00f3 00       		.byte	0
  253 00f4 09       		.uleb128 0x9
- 254 00f5 56000000 		.4byte	.LASF18
+ 254 00f5 24000000 		.4byte	.LASF18
  255 00f9 01       		.byte	0x1
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccEziXfa.s 			page 8
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccjywNk0.s 			page 8
 
 
  256 00fa 71       		.byte	0x71
@@ -428,7 +428,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccEziXfa.s 			page 1
  260 0107 01       		.uleb128 0x1
  261 0108 9C       		.byte	0x9c
  262 0109 09       		.uleb128 0x9
- 263 010a 9D010000 		.4byte	.LASF19
+ 263 010a 91010000 		.4byte	.LASF19
  264 010e 01       		.byte	0x1
  265 010f 8D       		.byte	0x8d
  266 0110 6B000000 		.4byte	0x6b
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccEziXfa.s 			page 1
  310 0024 0B       		.uleb128 0xb
  311 0025 03       		.uleb128 0x3
  312 0026 08       		.uleb128 0x8
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccEziXfa.s 			page 9
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccjywNk0.s 			page 9
 
 
  313 0027 00       		.byte	0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccEziXfa.s 			page 1
  367 005e 3B       		.uleb128 0x3b
  368 005f 0B       		.uleb128 0xb
  369 0060 49       		.uleb128 0x49
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccEziXfa.s 			page 10
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccjywNk0.s 			page 10
 
 
  370 0061 13       		.uleb128 0x13
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccEziXfa.s 			page 1
  424 000f 18000000 		.4byte	.LFE0
  425 0013 0400     		.2byte	0x4
  426 0015 F3       		.byte	0xf3
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccEziXfa.s 			page 11
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccjywNk0.s 			page 11
 
 
  427 0016 01       		.uleb128 0x1
@@ -652,137 +652,141 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccEziXfa.s 			page 1
  475 0024 00000000 		.4byte	0
  476              		.section	.debug_line,"",%progbits
  477              	.Ldebug_line0:
- 478 0000 90000000 		.section	.debug_str,"MS",%progbits,1
- 478      02004400 
+ 478 0000 8E000000 		.section	.debug_str,"MS",%progbits,1
+ 478      02004200 
  478      00000201 
  478      FB0E0D00 
  478      01010101 
- 479              	.LASF22:
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccEziXfa.s 			page 12
+ 479              	.LASF16:
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccjywNk0.s 			page 12
 
 
- 480 0000 433A5C55 		.ascii	"C:\\Users\\Sirius\\Desktop\\Dashboard\\Dashboard.cy"
- 480      73657273 
- 480      5C536972 
- 480      6975735C 
- 480      4465736B 
- 481 002e 64736E00 		.ascii	"dsn\000"
- 482              	.LASF16:
- 483 0032 76616C75 		.ascii	"value\000"
- 483      6500
- 484              	.LASF23:
- 485 0038 73746174 		.ascii	"staticBits\000"
- 485      69634269 
- 485      747300
- 486              	.LASF15:
- 487 0043 44726976 		.ascii	"Drive_SetDriveMode\000"
- 487      655F5365 
- 487      74447269 
- 487      76654D6F 
- 487      646500
- 488              	.LASF18:
- 489 0056 44726976 		.ascii	"Drive_Read\000"
- 489      655F5265 
- 489      616400
- 490              	.LASF9:
- 491 0061 666C6F61 		.ascii	"float\000"
- 491      7400
+ 480 0000 76616C75 		.ascii	"value\000"
+ 480      6500
+ 481              	.LASF23:
+ 482 0006 73746174 		.ascii	"staticBits\000"
+ 482      69634269 
+ 482      747300
+ 483              	.LASF15:
+ 484 0011 44726976 		.ascii	"Drive_SetDriveMode\000"
+ 484      655F5365 
+ 484      74447269 
+ 484      76654D6F 
+ 484      646500
+ 485              	.LASF18:
+ 486 0024 44726976 		.ascii	"Drive_Read\000"
+ 486      655F5265 
+ 486      616400
+ 487              	.LASF9:
+ 488 002f 666C6F61 		.ascii	"float\000"
+ 488      7400
+ 489              	.LASF22:
+ 490 0035 433A5C55 		.ascii	"C:\\Users\\Schuyler\\Documents\\PSoC Creator\\FE3-D"
+ 490      73657273 
+ 490      5C536368 
+ 490      75796C65 
+ 490      725C446F 
+ 491 0063 61736862 		.ascii	"ashboard\\Dashboard.cydsn\000"
+ 491      6F617264 
+ 491      5C446173 
+ 491      68626F61 
+ 491      72642E63 
  492              	.LASF1:
- 493 0067 756E7369 		.ascii	"unsigned char\000"
+ 493 007c 756E7369 		.ascii	"unsigned char\000"
  493      676E6564 
  493      20636861 
  493      7200
- 494              	.LASF21:
- 495 0075 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\Drive.c\000"
- 495      6E657261 
- 495      7465645F 
- 495      536F7572 
- 495      63655C50 
- 496              	.LASF13:
- 497 0096 72656738 		.ascii	"reg8\000"
- 497      00
- 498              	.LASF5:
- 499 009b 6C6F6E67 		.ascii	"long unsigned int\000"
- 499      20756E73 
- 499      69676E65 
- 499      6420696E 
- 499      7400
- 500              	.LASF3:
- 501 00ad 73686F72 		.ascii	"short unsigned int\000"
- 501      7420756E 
- 501      7369676E 
- 501      65642069 
- 501      6E7400
- 502              	.LASF10:
- 503 00c0 646F7562 		.ascii	"double\000"
- 503      6C6500
- 504              	.LASF14:
- 505 00c7 44726976 		.ascii	"Drive_Write\000"
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccEziXfa.s 			page 13
+ 494              	.LASF13:
+ 495 008a 72656738 		.ascii	"reg8\000"
+ 495      00
+ 496              	.LASF5:
+ 497 008f 6C6F6E67 		.ascii	"long unsigned int\000"
+ 497      20756E73 
+ 497      69676E65 
+ 497      6420696E 
+ 497      7400
+ 498              	.LASF3:
+ 499 00a1 73686F72 		.ascii	"short unsigned int\000"
+ 499      7420756E 
+ 499      7369676E 
+ 499      65642069 
+ 499      6E7400
+ 500              	.LASF10:
+ 501 00b4 646F7562 		.ascii	"double\000"
+ 501      6C6500
+ 502              	.LASF14:
+ 503 00bb 44726976 		.ascii	"Drive_Write\000"
+ 503      655F5772 
+ 503      69746500 
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccjywNk0.s 			page 13
 
 
- 505      655F5772 
- 505      69746500 
- 506              	.LASF20:
- 507 00d3 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 507      4320342E 
- 507      392E3320 
- 507      32303135 
- 507      30333033 
- 508 0106 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 508      20726576 
- 508      6973696F 
- 508      6E203232 
- 508      31323230 
- 509 0139 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 509      66756E63 
- 509      74696F6E 
- 509      2D736563 
- 509      74696F6E 
- 510              	.LASF8:
- 511 0161 756E7369 		.ascii	"unsigned int\000"
- 511      676E6564 
- 511      20696E74 
- 511      00
- 512              	.LASF7:
- 513 016e 6C6F6E67 		.ascii	"long long unsigned int\000"
- 513      206C6F6E 
- 513      6720756E 
- 513      7369676E 
- 513      65642069 
- 514              	.LASF17:
- 515 0185 6D6F6465 		.ascii	"mode\000"
- 515      00
- 516              	.LASF6:
- 517 018a 6C6F6E67 		.ascii	"long long int\000"
- 517      206C6F6E 
- 517      6720696E 
- 517      7400
- 518              	.LASF11:
- 519 0198 63686172 		.ascii	"char\000"
- 519      00
- 520              	.LASF19:
- 521 019d 44726976 		.ascii	"Drive_ReadDataReg\000"
- 521      655F5265 
- 521      61644461 
- 521      74615265 
- 521      6700
+ 504              	.LASF20:
+ 505 00c7 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 505      4320342E 
+ 505      392E3320 
+ 505      32303135 
+ 505      30333033 
+ 506 00fa 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 506      20726576 
+ 506      6973696F 
+ 506      6E203232 
+ 506      31323230 
+ 507 012d 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 507      66756E63 
+ 507      74696F6E 
+ 507      2D736563 
+ 507      74696F6E 
+ 508              	.LASF8:
+ 509 0155 756E7369 		.ascii	"unsigned int\000"
+ 509      676E6564 
+ 509      20696E74 
+ 509      00
+ 510              	.LASF7:
+ 511 0162 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 511      206C6F6E 
+ 511      6720756E 
+ 511      7369676E 
+ 511      65642069 
+ 512              	.LASF17:
+ 513 0179 6D6F6465 		.ascii	"mode\000"
+ 513      00
+ 514              	.LASF6:
+ 515 017e 6C6F6E67 		.ascii	"long long int\000"
+ 515      206C6F6E 
+ 515      6720696E 
+ 515      7400
+ 516              	.LASF11:
+ 517 018c 63686172 		.ascii	"char\000"
+ 517      00
+ 518              	.LASF19:
+ 519 0191 44726976 		.ascii	"Drive_ReadDataReg\000"
+ 519      655F5265 
+ 519      61644461 
+ 519      74615265 
+ 519      6700
+ 520              	.LASF21:
+ 521 01a3 47656E65 		.ascii	"Generated_Source\\PSoC5\\Drive.c\000"
+ 521      72617465 
+ 521      645F536F 
+ 521      75726365 
+ 521      5C50536F 
  522              	.LASF2:
- 523 01af 73686F72 		.ascii	"short int\000"
+ 523 01c2 73686F72 		.ascii	"short int\000"
  523      7420696E 
  523      7400
  524              	.LASF12:
- 525 01b9 75696E74 		.ascii	"uint8\000"
+ 525 01cc 75696E74 		.ascii	"uint8\000"
  525      3800
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccjywNk0.s 			page 14
+
+
  526              	.LASF4:
- 527 01bf 6C6F6E67 		.ascii	"long int\000"
+ 527 01d2 6C6F6E67 		.ascii	"long int\000"
  527      20696E74 
  527      00
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccEziXfa.s 			page 14
-
-
  528              	.LASF0:
- 529 01c8 7369676E 		.ascii	"signed char\000"
+ 529 01db 7369676E 		.ascii	"signed char\000"
  529      65642063 
  529      68617200 
  530              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

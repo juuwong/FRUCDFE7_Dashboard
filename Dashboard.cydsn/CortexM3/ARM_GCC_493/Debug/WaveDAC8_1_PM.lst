@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 1
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccEChMaC.s 			page 1
 
 
    1              		.syntax unified
@@ -26,54 +26,54 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 1
   23              		.type	WaveDAC8_1_Sleep, %function
   24              	WaveDAC8_1_Sleep:
   25              	.LFB0:
-  26              		.file 1 ".\\Generated_Source\\PSoC5\\WaveDAC8_1_PM.c"
-   1:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** /*******************************************************************************
-   2:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * File Name: WaveDAC8_1_PM.c  
-   3:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * Version 2.0
-   4:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *
-   5:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * Description:
-   6:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  This file provides the power manager source code to the API for 
-   7:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  the WaveDAC8 component.
-   8:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *
-   9:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** ********************************************************************************
-  10:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * Copyright 2013, Cypress Semiconductor Corporation.  All rights reserved.
-  11:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * You may use this file only in accordance with the license, terms, conditions, 
-  12:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying 
-  13:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * the software package with which this file was provided.
-  14:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *******************************************************************************/
-  15:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 
-  16:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** #include "WaveDAC8_1.h"
-  17:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 
-  18:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** static WaveDAC8_1_BACKUP_STRUCT  WaveDAC8_1_backup;
-  19:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 
-  20:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 
-  21:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** /*******************************************************************************
-  22:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * Function Name: WaveDAC8_1_Sleep
-  23:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** ********************************************************************************
-  24:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *
-  25:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * Summary:
-  26:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  Stops the component and saves its configuration. Should be called 
-  27:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  just prior to entering sleep.
-  28:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  
-  29:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * Parameters:  
-  30:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  None
-  31:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 2
+  26              		.file 1 "Generated_Source\\PSoC5\\WaveDAC8_1_PM.c"
+   1:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * File Name: WaveDAC8_1_PM.c  
+   3:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * Version 2.0
+   4:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *
+   5:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * Description:
+   6:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  This file provides the power manager source code to the API for 
+   7:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  the WaveDAC8 component.
+   8:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *
+   9:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** ********************************************************************************
+  10:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * Copyright 2013, Cypress Semiconductor Corporation.  All rights reserved.
+  11:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  12:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  13:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * the software package with which this file was provided.
+  14:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *******************************************************************************/
+  15:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 
+  16:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** #include "WaveDAC8_1.h"
+  17:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 
+  18:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** static WaveDAC8_1_BACKUP_STRUCT  WaveDAC8_1_backup;
+  19:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 
+  20:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 
+  21:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** /*******************************************************************************
+  22:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * Function Name: WaveDAC8_1_Sleep
+  23:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** ********************************************************************************
+  24:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *
+  25:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * Summary:
+  26:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  Stops the component and saves its configuration. Should be called 
+  27:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  just prior to entering sleep.
+  28:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  
+  29:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * Parameters:  
+  30:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  None
+  31:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccEChMaC.s 			page 2
 
 
-  32:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * Return: 
-  33:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  None
-  34:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *
-  35:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * Global variables:
-  36:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  WaveDAC8_1_backup:  The structure field 'enableState' is modified 
-  37:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  depending on the enable state of the block before entering to sleep mode.
-  38:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *
-  39:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * Reentrant:
-  40:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  No
-  41:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *
-  42:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *******************************************************************************/
-  43:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** void WaveDAC8_1_Sleep(void) 
-  44:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** {
+  32:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * Return: 
+  33:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  None
+  34:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *
+  35:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * Global variables:
+  36:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  WaveDAC8_1_backup:  The structure field 'enableState' is modified 
+  37:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  depending on the enable state of the block before entering to sleep mode.
+  38:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *
+  39:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * Reentrant:
+  40:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  No
+  41:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *
+  42:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *******************************************************************************/
+  43:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** void WaveDAC8_1_Sleep(void) 
+  44:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** {
   27              		.loc 1 44 0
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
@@ -82,30 +82,30 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 1
   32              		.cfi_def_cfa_offset 8
   33              		.cfi_offset 3, -8
   34              		.cfi_offset 14, -4
-  45:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 	/* Save DAC8's enable state */
-  46:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 
-  47:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 	WaveDAC8_1_backup.enableState = (WaveDAC8_1_VDAC8_ACT_PWR_EN == 
-  48:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 		(WaveDAC8_1_VDAC8_PWRMGR_REG & WaveDAC8_1_VDAC8_ACT_PWR_EN)) ? 1u : 0u ;
+  45:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 	/* Save DAC8's enable state */
+  46:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 
+  47:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 	WaveDAC8_1_backup.enableState = (WaveDAC8_1_VDAC8_ACT_PWR_EN == 
+  48:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 		(WaveDAC8_1_VDAC8_PWRMGR_REG & WaveDAC8_1_VDAC8_ACT_PWR_EN)) ? 1u : 0u ;
   35              		.loc 1 48 0
   36 0002 074B     		ldr	r3, .L4
   37 0004 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
   38 0006 03F00203 		and	r3, r3, #2
-  47:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 		(WaveDAC8_1_VDAC8_PWRMGR_REG & WaveDAC8_1_VDAC8_ACT_PWR_EN)) ? 1u : 0u ;
+  47:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 		(WaveDAC8_1_VDAC8_PWRMGR_REG & WaveDAC8_1_VDAC8_ACT_PWR_EN)) ? 1u : 0u ;
   39              		.loc 1 47 0
   40 000a 03F0FF02 		and	r2, r3, #255
   41 000e 03B1     		cbz	r3, .L2
   42 0010 0122     		movs	r2, #1
   43              	.L2:
-  47:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 		(WaveDAC8_1_VDAC8_PWRMGR_REG & WaveDAC8_1_VDAC8_ACT_PWR_EN)) ? 1u : 0u ;
+  47:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 		(WaveDAC8_1_VDAC8_PWRMGR_REG & WaveDAC8_1_VDAC8_ACT_PWR_EN)) ? 1u : 0u ;
   44              		.loc 1 47 0 is_stmt 0 discriminator 4
   45 0012 044B     		ldr	r3, .L4+4
   46 0014 1A70     		strb	r2, [r3]
-  49:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 	
-  50:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 	WaveDAC8_1_Stop();
+  49:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 	
+  50:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 	WaveDAC8_1_Stop();
   47              		.loc 1 50 0 is_stmt 1 discriminator 4
   48 0016 FFF7FEFF 		bl	WaveDAC8_1_Stop
   49              	.LVL0:
-  51:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 	WaveDAC8_1_SaveConfig();
+  51:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 	WaveDAC8_1_SaveConfig();
   50              		.loc 1 51 0 discriminator 4
   51 001a FFF7FEFF 		bl	WaveDAC8_1_VDAC8_SaveConfig
   52              	.LVL1:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 1
   59              		.cfi_endproc
   60              	.LFE0:
   61              		.size	WaveDAC8_1_Sleep, .-WaveDAC8_1_Sleep
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 3
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccEChMaC.s 			page 3
 
 
   62              		.section	.text.WaveDAC8_1_Wakeup,"ax",%progbits
@@ -129,33 +129,33 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 1
   67              		.type	WaveDAC8_1_Wakeup, %function
   68              	WaveDAC8_1_Wakeup:
   69              	.LFB1:
-  52:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** }
-  53:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 
-  54:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 
-  55:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** /*******************************************************************************
-  56:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * Function Name: WaveDAC8_1_Wakeup
-  57:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** ********************************************************************************
-  58:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *
-  59:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * Summary:
-  60:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  Restores the component configuration. Should be called
-  61:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  just after awaking from sleep.
-  62:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  
-  63:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * Parameters:  
-  64:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  None
-  65:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *
-  66:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * Return: 
-  67:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  void
-  68:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *
-  69:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * Global variables:
-  70:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  WaveDAC8_1_backup:  The structure field 'enableState' is used to 
-  71:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  restore the enable state of block after wakeup from sleep mode.
-  72:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *
-  73:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * Reentrant:
-  74:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  No
-  75:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *
-  76:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *******************************************************************************/
-  77:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** void WaveDAC8_1_Wakeup(void) 
-  78:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** {
+  52:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** }
+  53:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 
+  54:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 
+  55:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** /*******************************************************************************
+  56:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * Function Name: WaveDAC8_1_Wakeup
+  57:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** ********************************************************************************
+  58:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *
+  59:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * Summary:
+  60:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  Restores the component configuration. Should be called
+  61:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  just after awaking from sleep.
+  62:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  
+  63:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * Parameters:  
+  64:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  None
+  65:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *
+  66:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * Return: 
+  67:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  void
+  68:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *
+  69:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * Global variables:
+  70:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  WaveDAC8_1_backup:  The structure field 'enableState' is used to 
+  71:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  restore the enable state of block after wakeup from sleep mode.
+  72:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *
+  73:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** * Reentrant:
+  74:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *  No
+  75:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *
+  76:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** *******************************************************************************/
+  77:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** void WaveDAC8_1_Wakeup(void) 
+  78:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** {
   70              		.loc 1 78 0
   71              		.cfi_startproc
   72              		@ args = 0, pretend = 0, frame = 0
@@ -164,21 +164,21 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 1
   75              		.cfi_def_cfa_offset 8
   76              		.cfi_offset 3, -8
   77              		.cfi_offset 14, -4
-  79:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 	WaveDAC8_1_RestoreConfig();
+  79:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 	WaveDAC8_1_RestoreConfig();
   78              		.loc 1 79 0
   79 0002 FFF7FEFF 		bl	WaveDAC8_1_VDAC8_RestoreConfig
   80              	.LVL2:
-  80:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 
-  81:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 	if(WaveDAC8_1_backup.enableState == 1u)
+  80:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 
+  81:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 	if(WaveDAC8_1_backup.enableState == 1u)
   81              		.loc 1 81 0
   82 0006 034B     		ldr	r3, .L9
   83 0008 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
   84 000a 012B     		cmp	r3, #1
   85 000c 01D1     		bne	.L6
-  82:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 	{
-  83:.\Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 		WaveDAC8_1_Enable();
+  82:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 	{
+  83:Generated_Source\PSoC5/WaveDAC8_1_PM.c **** 		WaveDAC8_1_Enable();
   86              		.loc 1 83 0
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 4
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccEChMaC.s 			page 4
 
 
   87 000e FFF7FEFF 		bl	WaveDAC8_1_Enable
@@ -201,8 +201,8 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 1
  104 0000 00       		.space	1
  105 0001 000000   		.text
  106              	.Letext0:
- 107              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
- 108              		.file 3 ".\\Generated_Source\\PSoC5\\WaveDAC8_1.h"
+ 107              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 108              		.file 3 "Generated_Source\\PSoC5\\WaveDAC8_1.h"
  109              		.file 4 "Generated_Source\\PSoC5/WaveDAC8_1_VDAC8.h"
  110              		.section	.debug_info,"",%progbits
  111              	.Ldebug_info0:
@@ -211,40 +211,40 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 1
  114 0006 00000000 		.4byte	.Ldebug_abbrev0
  115 000a 04       		.byte	0x4
  116 000b 01       		.uleb128 0x1
- 117 000c 0E010000 		.4byte	.LASF22
+ 117 000c FA000000 		.4byte	.LASF22
  118 0010 01       		.byte	0x1
- 119 0011 BC000000 		.4byte	.LASF23
- 120 0015 50000000 		.4byte	.LASF24
+ 119 0011 E7010000 		.4byte	.LASF23
+ 120 0015 34000000 		.4byte	.LASF24
  121 0019 00000000 		.4byte	.Ldebug_ranges0+0
  122 001d 00000000 		.4byte	0
  123 0021 00000000 		.4byte	.Ldebug_line0
  124 0025 02       		.uleb128 0x2
  125 0026 01       		.byte	0x1
  126 0027 06       		.byte	0x6
- 127 0028 EF010000 		.4byte	.LASF0
+ 127 0028 DB010000 		.4byte	.LASF0
  128 002c 02       		.uleb128 0x2
  129 002d 01       		.byte	0x1
  130 002e 08       		.byte	0x8
- 131 002f 9C010000 		.4byte	.LASF1
+ 131 002f 88010000 		.4byte	.LASF1
  132 0033 02       		.uleb128 0x2
  133 0034 02       		.byte	0x2
  134 0035 05       		.byte	0x5
- 135 0036 01020000 		.4byte	.LASF2
+ 135 0036 14020000 		.4byte	.LASF2
  136 003a 02       		.uleb128 0x2
  137 003b 02       		.byte	0x2
  138 003c 07       		.byte	0x7
- 139 003d DC010000 		.4byte	.LASF3
+ 139 003d C8010000 		.4byte	.LASF3
  140 0041 02       		.uleb128 0x2
  141 0042 04       		.byte	0x4
  142 0043 05       		.byte	0x5
- 143 0044 AF010000 		.4byte	.LASF4
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 5
+ 143 0044 9B010000 		.4byte	.LASF4
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccEChMaC.s 			page 5
 
 
  144 0048 02       		.uleb128 0x2
  145 0049 04       		.byte	0x4
  146 004a 07       		.byte	0x7
- 147 004b AA000000 		.4byte	.LASF5
+ 147 004b BF000000 		.4byte	.LASF5
  148 004f 02       		.uleb128 0x2
  149 0050 08       		.byte	0x8
  150 0051 05       		.byte	0x5
@@ -252,7 +252,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 1
  152 0056 02       		.uleb128 0x2
  153 0057 08       		.byte	0x8
  154 0058 07       		.byte	0x7
- 155 0059 E5000000 		.4byte	.LASF7
+ 155 0059 D1000000 		.4byte	.LASF7
  156 005d 03       		.uleb128 0x3
  157 005e 04       		.byte	0x4
  158 005f 05       		.byte	0x5
@@ -262,24 +262,24 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 1
  162 0066 07       		.byte	0x7
  163 0067 27000000 		.4byte	.LASF8
  164 006b 04       		.uleb128 0x4
- 165 006c A4000000 		.4byte	.LASF12
+ 165 006c B9000000 		.4byte	.LASF12
  166 0070 02       		.byte	0x2
  167 0071 3801     		.2byte	0x138
  168 0073 2C000000 		.4byte	0x2c
  169 0077 02       		.uleb128 0x2
  170 0078 04       		.byte	0x4
  171 0079 04       		.byte	0x4
- 172 007a FB010000 		.4byte	.LASF9
+ 172 007a 0E020000 		.4byte	.LASF9
  173 007e 02       		.uleb128 0x2
  174 007f 08       		.byte	0x8
  175 0080 04       		.byte	0x4
- 176 0081 D5010000 		.4byte	.LASF10
+ 176 0081 C1010000 		.4byte	.LASF10
  177 0085 02       		.uleb128 0x2
  178 0086 01       		.byte	0x1
  179 0087 08       		.byte	0x8
- 180 0088 AA010000 		.4byte	.LASF11
+ 180 0088 96010000 		.4byte	.LASF11
  181 008c 04       		.uleb128 0x4
- 182 008d 0B020000 		.4byte	.LASF13
+ 182 008d 1E020000 		.4byte	.LASF13
  183 0091 02       		.byte	0x2
  184 0092 E201     		.2byte	0x1e2
  185 0094 98000000 		.4byte	0x98
@@ -288,17 +288,17 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 1
  188 009d 02       		.uleb128 0x2
  189 009e 04       		.byte	0x4
  190 009f 07       		.byte	0x7
- 191 00a0 2F020000 		.4byte	.LASF14
+ 191 00a0 42020000 		.4byte	.LASF14
  192 00a4 06       		.uleb128 0x6
  193 00a5 01       		.byte	0x1
  194 00a6 03       		.byte	0x3
  195 00a7 5D       		.byte	0x5d
  196 00a8 B9000000 		.4byte	0xb9
  197 00ac 07       		.uleb128 0x7
- 198 00ad C9010000 		.4byte	.LASF25
+ 198 00ad B5010000 		.4byte	.LASF25
  199 00b1 03       		.byte	0x3
  200 00b2 5F       		.byte	0x5f
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 6
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccEChMaC.s 			page 6
 
 
  201 00b3 6B000000 		.4byte	0x6b
@@ -310,7 +310,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 1
  207 00bf 60       		.byte	0x60
  208 00c0 A4000000 		.4byte	0xa4
  209 00c4 09       		.uleb128 0x9
- 210 00c5 B8010000 		.4byte	.LASF16
+ 210 00c5 A4010000 		.4byte	.LASF16
  211 00c9 01       		.byte	0x1
  212 00ca 2B       		.byte	0x2b
  213 00cb 00000000 		.4byte	.LFB0
@@ -326,7 +326,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 1
  223 00e7 2C010000 		.4byte	0x12c
  224 00eb 00       		.byte	0
  225 00ec 09       		.uleb128 0x9
- 226 00ed 82000000 		.4byte	.LASF17
+ 226 00ed 97000000 		.4byte	.LASF17
  227 00f1 01       		.byte	0x1
  228 00f2 4D       		.byte	0x4d
  229 00f3 00000000 		.4byte	.LFB1
@@ -342,7 +342,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 1
  239 010f 3A010000 		.4byte	0x13a
  240 0113 00       		.byte	0
  241 0114 0B       		.uleb128 0xb
- 242 0115 38020000 		.4byte	.LASF26
+ 242 0115 4B020000 		.4byte	.LASF26
  243 0119 01       		.byte	0x1
  244 011a 12       		.byte	0x12
  245 011b B9000000 		.4byte	0xb9
@@ -350,22 +350,22 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 1
  247 0120 03       		.byte	0x3
  248 0121 00000000 		.4byte	WaveDAC8_1_backup
  249 0125 0C       		.uleb128 0xc
- 250 0126 94000000 		.4byte	.LASF18
+ 250 0126 A9000000 		.4byte	.LASF18
  251 012a 03       		.byte	0x3
  252 012b 6C       		.byte	0x6c
  253 012c 0C       		.uleb128 0xc
- 254 012d 34000000 		.4byte	.LASF19
+ 254 012d 7B000000 		.4byte	.LASF19
  255 0131 04       		.byte	0x4
  256 0132 3B       		.byte	0x3b
  257 0133 0C       		.uleb128 0xc
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 7
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccEChMaC.s 			page 7
 
 
- 258 0134 10020000 		.4byte	.LASF20
+ 258 0134 23020000 		.4byte	.LASF20
  259 0138 04       		.byte	0x4
  260 0139 3C       		.byte	0x3c
  261 013a 0C       		.uleb128 0xc
- 262 013b FC000000 		.4byte	.LASF21
+ 262 013b E8000000 		.4byte	.LASF21
  263 013f 03       		.byte	0x3
  264 0140 6B       		.byte	0x6b
  265 0141 00       		.byte	0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 1
  312 002c 03       		.uleb128 0x3
  313 002d 0E       		.uleb128 0xe
  314 002e 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 8
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccEChMaC.s 			page 8
 
 
  315 002f 0B       		.uleb128 0xb
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 1
  369 0065 00       		.byte	0
  370 0066 09       		.uleb128 0x9
  371 0067 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 9
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccEChMaC.s 			page 9
 
 
  372 0068 01       		.byte	0x1
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 1
  426 00a1 3A       		.uleb128 0x3a
  427 00a2 0B       		.uleb128 0xb
  428 00a3 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 10
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccEChMaC.s 			page 10
 
 
  429 00a4 0B       		.uleb128 0xb
@@ -573,8 +573,8 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 1
  458 0014 00000000 		.4byte	0
  459              		.section	.debug_line,"",%progbits
  460              	.Ldebug_line0:
- 461 0000 C4000000 		.section	.debug_str,"MS",%progbits,1
- 461      02008900 
+ 461 0000 AB000000 		.section	.debug_str,"MS",%progbits,1
+ 461      02007000 
  461      00000201 
  461      FB0E0D00 
  461      01010101 
@@ -594,139 +594,143 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 1
  467      676E6564 
  467      20696E74 
  467      00
- 468              	.LASF19:
- 469 0034 57617665 		.ascii	"WaveDAC8_1_VDAC8_SaveConfig\000"
- 469      44414338 
- 469      5F315F56 
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 11
+ 468              	.LASF24:
+ 469 0034 433A5C55 		.ascii	"C:\\Users\\Schuyler\\Documents\\PSoC Creator\\FE3-D"
+ 469      73657273 
+ 469      5C536368 
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccEChMaC.s 			page 11
 
 
- 469      44414338 
- 469      5F536176 
- 470              	.LASF24:
- 471 0050 433A5C55 		.ascii	"C:\\Users\\Sirius\\Desktop\\Dashboard\\Dashboard.cy"
- 471      73657273 
- 471      5C536972 
- 471      6975735C 
- 471      4465736B 
- 472 007e 64736E00 		.ascii	"dsn\000"
+ 469      75796C65 
+ 469      725C446F 
+ 470 0062 61736862 		.ascii	"ashboard\\Dashboard.cydsn\000"
+ 470      6F617264 
+ 470      5C446173 
+ 470      68626F61 
+ 470      72642E63 
+ 471              	.LASF19:
+ 472 007b 57617665 		.ascii	"WaveDAC8_1_VDAC8_SaveConfig\000"
+ 472      44414338 
+ 472      5F315F56 
+ 472      44414338 
+ 472      5F536176 
  473              	.LASF17:
- 474 0082 57617665 		.ascii	"WaveDAC8_1_Wakeup\000"
+ 474 0097 57617665 		.ascii	"WaveDAC8_1_Wakeup\000"
  474      44414338 
  474      5F315F57 
  474      616B6575 
  474      7000
  475              	.LASF18:
- 476 0094 57617665 		.ascii	"WaveDAC8_1_Stop\000"
+ 476 00a9 57617665 		.ascii	"WaveDAC8_1_Stop\000"
  476      44414338 
  476      5F315F53 
  476      746F7000 
  477              	.LASF12:
- 478 00a4 75696E74 		.ascii	"uint8\000"
+ 478 00b9 75696E74 		.ascii	"uint8\000"
  478      3800
  479              	.LASF5:
- 480 00aa 6C6F6E67 		.ascii	"long unsigned int\000"
+ 480 00bf 6C6F6E67 		.ascii	"long unsigned int\000"
  480      20756E73 
  480      69676E65 
  480      6420696E 
  480      7400
- 481              	.LASF23:
- 482 00bc 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\WaveDAC8_1_PM.c\000"
- 482      6E657261 
- 482      7465645F 
- 482      536F7572 
- 482      63655C50 
- 483              	.LASF7:
- 484 00e5 6C6F6E67 		.ascii	"long long unsigned int\000"
- 484      206C6F6E 
- 484      6720756E 
- 484      7369676E 
- 484      65642069 
- 485              	.LASF21:
- 486 00fc 57617665 		.ascii	"WaveDAC8_1_Enable\000"
- 486      44414338 
- 486      5F315F45 
- 486      6E61626C 
- 486      6500
- 487              	.LASF22:
- 488 010e 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 488      4320342E 
- 488      392E3320 
- 488      32303135 
- 488      30333033 
- 489 0141 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 489      20726576 
- 489      6973696F 
- 489      6E203232 
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 12
+ 481              	.LASF7:
+ 482 00d1 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 482      206C6F6E 
+ 482      6720756E 
+ 482      7369676E 
+ 482      65642069 
+ 483              	.LASF21:
+ 484 00e8 57617665 		.ascii	"WaveDAC8_1_Enable\000"
+ 484      44414338 
+ 484      5F315F45 
+ 484      6E61626C 
+ 484      6500
+ 485              	.LASF22:
+ 486 00fa 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 486      4320342E 
+ 486      392E3320 
+ 486      32303135 
+ 486      30333033 
+ 487 012d 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 487      20726576 
+ 487      6973696F 
+ 487      6E203232 
+ 487      31323230 
+ 488 0160 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccEChMaC.s 			page 12
 
 
- 489      31323230 
- 490 0174 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 490      66756E63 
- 490      74696F6E 
- 490      2D736563 
- 490      74696F6E 
- 491              	.LASF1:
- 492 019c 756E7369 		.ascii	"unsigned char\000"
- 492      676E6564 
- 492      20636861 
- 492      7200
- 493              	.LASF11:
- 494 01aa 63686172 		.ascii	"char\000"
+ 488      66756E63 
+ 488      74696F6E 
+ 488      2D736563 
+ 488      74696F6E 
+ 489              	.LASF1:
+ 490 0188 756E7369 		.ascii	"unsigned char\000"
+ 490      676E6564 
+ 490      20636861 
+ 490      7200
+ 491              	.LASF11:
+ 492 0196 63686172 		.ascii	"char\000"
+ 492      00
+ 493              	.LASF4:
+ 494 019b 6C6F6E67 		.ascii	"long int\000"
+ 494      20696E74 
  494      00
- 495              	.LASF4:
- 496 01af 6C6F6E67 		.ascii	"long int\000"
- 496      20696E74 
+ 495              	.LASF16:
+ 496 01a4 57617665 		.ascii	"WaveDAC8_1_Sleep\000"
+ 496      44414338 
+ 496      5F315F53 
+ 496      6C656570 
  496      00
- 497              	.LASF16:
- 498 01b8 57617665 		.ascii	"WaveDAC8_1_Sleep\000"
- 498      44414338 
- 498      5F315F53 
- 498      6C656570 
- 498      00
- 499              	.LASF25:
- 500 01c9 656E6162 		.ascii	"enableState\000"
- 500      6C655374 
- 500      61746500 
- 501              	.LASF10:
- 502 01d5 646F7562 		.ascii	"double\000"
- 502      6C6500
- 503              	.LASF3:
- 504 01dc 73686F72 		.ascii	"short unsigned int\000"
- 504      7420756E 
- 504      7369676E 
- 504      65642069 
- 504      6E7400
- 505              	.LASF0:
- 506 01ef 7369676E 		.ascii	"signed char\000"
- 506      65642063 
- 506      68617200 
+ 497              	.LASF25:
+ 498 01b5 656E6162 		.ascii	"enableState\000"
+ 498      6C655374 
+ 498      61746500 
+ 499              	.LASF10:
+ 500 01c1 646F7562 		.ascii	"double\000"
+ 500      6C6500
+ 501              	.LASF3:
+ 502 01c8 73686F72 		.ascii	"short unsigned int\000"
+ 502      7420756E 
+ 502      7369676E 
+ 502      65642069 
+ 502      6E7400
+ 503              	.LASF0:
+ 504 01db 7369676E 		.ascii	"signed char\000"
+ 504      65642063 
+ 504      68617200 
+ 505              	.LASF23:
+ 506 01e7 47656E65 		.ascii	"Generated_Source\\PSoC5\\WaveDAC8_1_PM.c\000"
+ 506      72617465 
+ 506      645F536F 
+ 506      75726365 
+ 506      5C50536F 
  507              	.LASF9:
- 508 01fb 666C6F61 		.ascii	"float\000"
+ 508 020e 666C6F61 		.ascii	"float\000"
  508      7400
  509              	.LASF2:
- 510 0201 73686F72 		.ascii	"short int\000"
+ 510 0214 73686F72 		.ascii	"short int\000"
  510      7420696E 
  510      7400
  511              	.LASF13:
- 512 020b 72656738 		.ascii	"reg8\000"
+ 512 021e 72656738 		.ascii	"reg8\000"
  512      00
  513              	.LASF20:
- 514 0210 57617665 		.ascii	"WaveDAC8_1_VDAC8_RestoreConfig\000"
+ 514 0223 57617665 		.ascii	"WaveDAC8_1_VDAC8_RestoreConfig\000"
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccEChMaC.s 			page 13
+
+
  514      44414338 
  514      5F315F56 
  514      44414338 
  514      5F526573 
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccNno8Js.s 			page 13
-
-
  515              	.LASF14:
- 516 022f 73697A65 		.ascii	"sizetype\000"
+ 516 0242 73697A65 		.ascii	"sizetype\000"
  516      74797065 
  516      00
  517              	.LASF26:
- 518 0238 57617665 		.ascii	"WaveDAC8_1_backup\000"
+ 518 024b 57617665 		.ascii	"WaveDAC8_1_backup\000"
  518      44414338 
  518      5F315F62 
  518      61636B75 

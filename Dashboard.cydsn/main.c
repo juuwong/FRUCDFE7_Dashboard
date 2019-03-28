@@ -1,6 +1,11 @@
 #include <project.h>
 #include <stdio.h>
-#include "can_manager.h"
+#include "can_manga.h"
+
+// Uncomment THROTTLE_LIMITING to enable power reduction at high temperatures
+#define THROTTLE_LIMITING
+volatile double THROTTLE_MULTIPLIER = 1;
+const double THROTTLE_MAP[8] = { 95, 71, 59, 47, 35, 23, 11, 5 };
 
 #define PWM_PULSE_WIDTH_STEP        (10u)
 #define SWITCH_PRESSED              (0u)
@@ -12,6 +17,8 @@
 #define CAN_RX_MAILBOX_1_SHIFT      (2u)
 #define DATA_SIZE                   (6u)
 #define ONE_BYTE_OFFSET             (8u)
+
+#define PEDAL_TIMEOUT 100 // Timeout after (PEDAL_TIMEOUT * 10)ms
 
 /* Function prototypes */
 //CY_ISR_PROTO(ISR_CAN);
@@ -25,6 +32,12 @@
 
 /* Global variable used to store receive message mailbox number */
 //volatile uint8 receiveMailboxNumber = 0xFFu;
+
+void nodeCheckStart()
+{
+    Node_Timer_Start();
+    isr_nodeok_Start();
+}
 
 typedef enum 
 {
@@ -44,7 +57,8 @@ typedef enum
 	fromPrecharging,
 	fromHV_Enabled,
 	fromDrive,
-    fromFault
+    fromFault,
+    nodeFailure
     
 }Error_State;
 
@@ -63,29 +77,14 @@ uint8 HVSwitch = SWITCH_OFF;
 uint8 DriveSwitch = SWITCH_OFF;
 //volatile Dash_State state = Startup;
 
+// Global variables used to track status of nodes
+volatile uint32_t pedalOK = 0; // for pedal node
+
 //CY_ISR(isr_can_handler){
     
 //    can_send_status(state);
     
 //}
-void test_inject(DataPacket *data_queue, uint16_t *data_tail)
-{
-	//inject message to test usb
-	// NOTE: does not handle queue wrapping. Assumes queue has room.
-	data_queue[*data_tail].millicounter = 0;
-	data_queue[*data_tail].id = 0x111;
-	data_queue[*data_tail].length = 8;
-	data_queue[*data_tail].data[0]= 0;
-	data_queue[*data_tail].data[1]= 1;
-	data_queue[*data_tail].data[2]= 2;
-	data_queue[*data_tail].data[3]= 3;
-	data_queue[*data_tail].data[4]= 4;
-	data_queue[*data_tail].data[5]= 5;
-	data_queue[*data_tail].data[6]= 6;
-	data_queue[*data_tail].data[7]= 0x7E;
-	(*data_tail)++; // does not handle queue wrapping.
-} // test_inject()
-
 
 /*******************************************************************************
 * Function Name: main
@@ -109,102 +108,81 @@ void test_inject(DataPacket *data_queue, uint16_t *data_tail)
 
 int main()
 {   
+    
     Dash_State state = Startup;
     Error_State error_state = OK;
-    
-    // Main data queue
-	DataPacket data_queue[DATA_QUEUE_LENGTH];
-	uint16_t data_head, data_tail;
-	data_head = data_tail = 0;
     
     //Tach Meter Stuff
     uint8_t value=0; // replace the value with 
     int8_t direction=1;
-    WaveDAC8_1_Start();
+    //WaveDAC8_1_Start();
     
     //precharging time counter
-    uint32_t PrechargingTimeCount = 0;
+    volatile uint32_t PrechargingTimeCount = 0;
     uint32_t DriveTimeCount = 0;
-    
-    //CyDelay(5000);
-    //Initialize CAN
-    //CAN_GlobalIntEnable();
-    //CAN_Init();
-    //CAN_Start();
-    
-    /* Set CAN interrupt handler to local routine */
-    //CyIntSetVector(CAN_ISR_NUMBER, ISR_CAN);   
-    
-    //CAN_Timer_Start();
-    //isr_can_StartEx(isr_can_handler);    
 
     CyGlobalIntEnable;
-    
-    //while(1){
-    //}
-    
-    //char8 txData[DATA_SIZE];
-    //uint16 adcData;
-    
-    /* BASIC CAN mailbox configuration */
-    //messagePWM.dlc = CAN_TX_DLC_MAX_VALUE;
-    //messagePWM.id  = PWM_MESSAGE_ID;
-    //messagePWM.ide = PWM_MESSAGE_IDE;
-    //messagePWM.irq = PWM_MESSAGE_IRQ;
-    //messagePWM.msg = &dataPWM;
-    //messagePWM.rtr = PWM_MESSAGE_RTR;
+   
 
-    ////LCD_Start();
-
-    
-    /* Display value of ADC output on LCD */
-    //LCD_Position(0u, 0u);
-    //LCD_PrintString("ADC");
-
-    /* Display state of switch on LCD */
-    //LCD_Position(1u, 0u);
-    //LCD_PrintString("SW");
-
-    /* Display state of PWM pulse width on LCD */
-    //LCD_Position(0u, 10u);
-    //LCD_PrintString("PWM");
-
-    //test_inject(data_queue, &data_tail);
+    nodeCheckStart();
     
     for(;;)
     {
-        //LED_Write(~LED_ReadDataReg());    
+        /*
+        for (;;) { //1 0 0 0
+            Hex1Reg_Write(0x2);
+            Hex2Reg_Write(0x3);
+            Hex3Reg_Write(0x4);
+            Hex4Reg_Write(0x5);
         
-        //can_send_status(state);
-        //CyDelay(2000);
-        
-        RGB3_2_Write(1);
-        RGB2_2_Write(1);
-        RGB1_2_Write(1);
+            RGB3_1_Write(1);
+            RGB2_1_Write(1);
+            RGB1_1_Write(0);
+                
+            RGB3_2_Write(1);
+            RGB2_2_Write(0);
+            RGB1_2_Write(1);
             
+        }
+        */
+        LED_Write(1);
+        
+        // Check if all nodes are OK
+        if (pedalOK > PEDAL_TIMEOUT)
+        {
+            can_send_cmd(0, 0, 0); // setInterlock. 
+            state = Fault;
+            error_state = nodeFailure;
+        }
+        
         switch(state)
         {    
             //CyDelay(1000);
             case Startup:
+                Hex1Reg_Write(0x8);
+                Hex2Reg_Write(0x0);
+                Hex3Reg_Write(0x0);
+                Hex4Reg_Write(0x8);
   
                 //CyDelay(5000);
                 //Initialize CAN
                 CAN_GlobalIntEnable();
                 CAN_Init();
                 CAN_Start();
+                CyDelay(1000);
                 
                 //CyDelay(5000);
-                can_send_status(state);
+                can_send_status(state, error_state);
 
                 //CyGlobalIntEnable;
                 //CAN_GlobalIntDisable();
                 //CyGlobalIntDisable;
-                LCD_Start();
+                //LCD_Start();
                 
                 //UI
                 
                 Buzzer_Write(1);
-                WaveDAC8_1_SetValue(253);
+                //WaveDAC8_1_SetValue(253);
                 CyDelay(50);
                 
                 
@@ -241,9 +219,9 @@ int main()
                 
                 
                 Buzzer_Write(0);
-                WaveDAC8_1_SetValue(250);
+                //WaveDAC8_1_SetValue(250);
                 //CyDelay(5000);
-                WaveDAC8_1_SetValue(0);
+                //WaveDAC8_1_SetValue(0);
                 
                 state = LV;
                 
@@ -251,16 +229,15 @@ int main()
                 
             case LV:
                 
-                can_send_cmd(0,0,0);
-                
                 CAN_GlobalIntEnable();
                 CAN_Init();
                 CAN_Start();
+                
+                can_send_cmd(0, 0, 0);
+                //nodeCheckStart();
           
-                can_send_status(state);
-                
-                can_get(data_queue, &data_head, &data_tail); // clears queue before filling
-                
+                can_send_status(state, error_state);
+
                 /*
                 LCD_Position(1u, 10u);
                 LCD_PrintInt16(data_queue[0].id);
@@ -291,7 +268,7 @@ int main()
                 // all on. 
                 
                 RGB3_1_Write(0);
-                RGB2_1_Write(1);
+                RGB2_1_Write(0);
                 RGB1_1_Write(0);
                 
                 RGB3_2_Write(1);
@@ -314,21 +291,21 @@ int main()
             break;
                 
             case Precharging:
-                
                 CAN_GlobalIntEnable();
                 CAN_Init();
                 CAN_Start();
+                //nodeCheckStart();
                 
-                can_send_status(state);
+                can_send_status(state, error_state);
                 
-                RGB3_1_Write(0);
+                RGB3_1_Write(1);
                 RGB2_1_Write(0);
-                RGB1_1_Write(1);
-                
+                RGB1_1_Write(0);
+                /*
                 RGB3_2_Write(1);
                 RGB2_2_Write(1);
                 RGB1_2_Write(1);
-                
+                */
                 Buzzer_Write(0);
                 
                 
@@ -336,14 +313,13 @@ int main()
                 
                 while(1)
                 {
-                    can_send_cmd(1,0,0); // setInterlock
+                    can_send_cmd(1, 0, 0); // setInterlock
                 
-                    can_get(data_queue, &data_head, &data_tail); // clears queue before filling
-                    uint8_t MainState = can_read(data_queue, data_head, data_tail, 0x0566, 0);
-                    uint8_t CapacitorVolt = can_read(data_queue, data_head, data_tail, 0x0566, 0);
-                    uint8_t NomialVolt =  can_read(data_queue, data_head, data_tail, 0x0566, 2);
+                    // UNUSED //uint8_t MainState = can_read(data_queue, data_head, data_tail, 0x0566, 0);
+                    uint8_t CapacitorVolt = getCapacitorVoltage(); //can_read(data_queue, data_head, data_tail, 0x0566, 0);
+                    // UNUSED //uint8_t NomialVolt =  can_read(data_queue, data_head, data_tail, 0x0566, 2);
                 
-                    if(CapacitorVolt >= 0x1A) // need to be tuned
+                    if(CapacitorVolt >= 0x16) // need to be tuned
                     {
                         state = HV_Enabled;
                         break;
@@ -370,18 +346,22 @@ int main()
                 CAN_Init();
                 CAN_Start();
                 
-                can_send_status(state);
+                //nodeCheckStart();
+                
+                can_send_status(state, error_state);
                 
                 //
                 // RGB code goes here
                 // Blue
-                RGB3_1_Write(1);
-                RGB2_1_Write(1);
-                RGB1_1_Write(0);
+                RGB3_1_Write(0);
+                RGB2_1_Write(0);
+                RGB1_1_Write(1);
                 
+                /*
                 RGB3_2_Write(1);
                 RGB2_2_Write(1);
                 RGB1_2_Write(1);
+                */
                 //CyDelay(5000); ///for debug
                 
                 Buzzer_Write(0);
@@ -389,8 +369,7 @@ int main()
                 if (Drive_Read())
                 {
                     CyDelay(1000); // wait for the brake msg to be sent
-                    can_get(data_queue, &data_head, &data_tail); // clears queue before filling
-                    if(can_read(data_queue, data_head, data_tail, 0x0201, 0)==1) // 100 for error tolerance
+                    if(getErrorTolerance() == 1) // 100 for error tolerance /// needs to be getErrorTolerance
                     {
                         Buzzer_Write(1);
                         CyDelay(1000);
@@ -406,8 +385,8 @@ int main()
                     }                     
                 }
                 
-                // if capacitor voltage is undervoltage, change the threshold 0x1A
-                if(!HV_Read() | can_read(data_queue, data_head, data_tail, 0x0566, 0) < 0x1A)
+                // if capacitor voltage is undervoltage, change the threshold 0x16
+                if(!HV_Read() | getCapacitorVoltage() < 0x16)
                 {
                     state = LV;
                     DriveTimeCount = 0;
@@ -421,18 +400,18 @@ int main()
                 //CAN_Init();
                 //CAN_Start();
                 
-                can_send_status(state);
+                can_send_status(state, error_state);
                 //
                 // RGB code goes here
                 // Green
                 RGB3_1_Write(1);
                 RGB2_1_Write(0);
                 RGB1_1_Write(1);
-                
+                /*
                 RGB3_2_Write(1);
                 RGB2_2_Write(1);
                 RGB1_2_Write(1);
-                
+                */
                 //CyDelay(10000); // debug
                 
                 //Buzzer_Write(1);
@@ -445,37 +424,47 @@ int main()
                 uint8_t ACK = 0xFF;
                 
                 DriveTimeCount++;
-                if (DriveTimeCount > 100)
+                if (DriveTimeCount > 100) //EDIT: was 100!
                 {
-                    DriveTimeCount = 0;
-                    can_get(data_queue, &data_head, &data_tail); // clears queue before filling
-                    ACK = can_read(data_queue, data_head, data_tail, 0x0666, 0);
+                    DriveTimeCount = 0; 
+                    ACK = getAckRx();
                 }
    
-                uint8_t ABS_Motor_RPM = can_read(data_queue, data_head, data_tail, 0x0566, 4);
-                uint16_t Throttle_High = can_read(data_queue, data_head, data_tail, 0x0200, 1); // use 123 for pedal node place holder
-                uint16_t Throttle_Low = can_read(data_queue, data_head, data_tail, 0x0200, 2);
+                uint8_t ABS_Motor_RPM = getABSMotorRPM();
                 
-                WaveDAC8_1_SetValue(ABS_Motor_RPM);
-                can_send_cmd(1,Throttle_High,Throttle_Low); // setInterlock
+                uint16_t Throttle_Total = 0x0;
+                Throttle_Total |= getPedalHigh() << 8;
+                Throttle_Total |= getPedalLow();
+                Throttle_Total = (double)Throttle_Total * THROTTLE_MULTIPLIER;
+                
+                uint8_t Throttle_High = Throttle_Total >> 8;
+                uint8_t Throttle_Low = Throttle_Total & 0x00FF;
+                
+                //WaveDAC8_1_SetValue(ABS_Motor_RPM);
+                
+                can_send_cmd(1, Throttle_High, Throttle_Low); // setInterlock 
+                
                 
                 //check if everything is going well
-                
+                if (!HV_Read()) {
+                    can_send_cmd(0, 0, 0);
+                    state = LV;
+                }
+                if (!Drive_Read()) {
+                    state = HV_Enabled;
+                    can_send_cmd(1, 0, 0);
+                }
                 if ((ACK != 0xFF) | 
-                    (!Curtis_Heart_Beat_Check(data_queue, data_head, data_tail)) |
-                    (Curtis_Fault_Check(data_queue, data_head,data_tail)))
+                    (!getCurtisHeartBeatCheck())) // TODO: Heart beat message is never cleared
                 {
+                    can_send_cmd(0, 0, 0);
                     state = Fault;
                     error_state = fromDrive;
                     DriveTimeCount = 0;
                     break;
                 }
                 
-                if (!HV_Read())
-                    state = LV;
                 
-                if (!Drive_Read())
-                    state = HV_Enabled;
                 
                     
                 // need to map ABS_Motor_RPM into 1-253 scale.
@@ -499,8 +488,9 @@ int main()
                 CAN_GlobalIntEnable();
                 CAN_Init();
                 CAN_Start();
+                //nodeCheckStart();
                 
-                can_send_status(state);
+                can_send_status(state, error_state);
                 
                 //
                 // RGB code goes here
@@ -508,14 +498,14 @@ int main()
                 RGB3_1_Write(1);
                 RGB2_1_Write(1);
                 RGB1_1_Write(1);
-                
-                RGB3_2_Write(1);
-                RGB2_2_Write(1);
-                RGB1_2_Write(1);
-                
-                RGB3_1_Write(0);
+                /*
+                RGB3_2_Write(0);
+                RGB2_2_Write(0);
+                RGB1_2_Write(0);
+                */
+                RGB1_1_Write(0);
                 CyDelay(1000);
-                RGB3_1_Write(1);
+                RGB1_1_Write(1);
                 CyDelay(1000);
                 
                 Buzzer_Write(0);
@@ -545,25 +535,26 @@ int main()
                     }
                 }
                 else if (error_state == fromDrive)
-                {
-                    can_get(data_queue, &data_head, &data_tail); // clears queue before filling
-                    
-                    can_send_cmd(1,Throttle_High,Throttle_Low); // setInterlock
+                {   
+                    can_send_cmd(1, Throttle_High, Throttle_Low); // setInterlock
                     
                     CyDelay(200);
                     
                     // Curtis Come back online again without error
-                    if(!(Curtis_Fault_Check(data_queue,data_head,data_tail)) 
-                       & (Curtis_Heart_Beat_Check(data_queue, data_head, data_tail)))
+                    if((getCurtisHeartBeatCheck())) // EDIT: Removed !(Curtis_Fault_Check(data_queue,data_head,data_tail) & 
                     {
                         state = LV;
                         error_state = OK;
                     }
-                    else if(0xFF == can_read(data_queue, data_head, data_tail, 0x0666, 0)) //ACK received
+                    else if(0xFF == getAckRx()) //ACK received
                     {
                         state = HV_Enabled;
                         error_state = OK;
                     }                   
+                }
+                else if (error_state == nodeFailure)
+                {
+                    state = Fault;
                 }
             break;
                 
@@ -571,11 +562,11 @@ int main()
                 RGB3_1_Write(1);
                 RGB2_1_Write(1);
                 RGB1_1_Write(1);
-                
+                /*
                 RGB3_2_Write(1);
                 RGB2_2_Write(1);
                 RGB1_2_Write(1);
-
+                */
         }// end of switch
         
         

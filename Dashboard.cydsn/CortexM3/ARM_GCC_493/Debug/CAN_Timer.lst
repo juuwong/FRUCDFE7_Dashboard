@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 1
 
 
    1              		.syntax unified
@@ -26,224 +26,224 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
   23              		.type	CAN_Timer_Enable, %function
   24              	CAN_Timer_Enable:
   25              	.LFB1:
-  26              		.file 1 ".\\Generated_Source\\PSoC5\\CAN_Timer.c"
-   1:.\Generated_Source\PSoC5/CAN_Timer.c **** /*******************************************************************************
-   2:.\Generated_Source\PSoC5/CAN_Timer.c **** * File Name: CAN_Timer.c
-   3:.\Generated_Source\PSoC5/CAN_Timer.c **** * Version 2.70
-   4:.\Generated_Source\PSoC5/CAN_Timer.c **** *
-   5:.\Generated_Source\PSoC5/CAN_Timer.c **** * Description:
-   6:.\Generated_Source\PSoC5/CAN_Timer.c **** *  The Timer component consists of a 8, 16, 24 or 32-bit timer with
-   7:.\Generated_Source\PSoC5/CAN_Timer.c **** *  a selectable period between 2 and 2^Width - 1.  The timer may free run
-   8:.\Generated_Source\PSoC5/CAN_Timer.c **** *  or be used as a capture timer as well.  The capture can be initiated
-   9:.\Generated_Source\PSoC5/CAN_Timer.c **** *  by a positive or negative edge signal as well as via software.
-  10:.\Generated_Source\PSoC5/CAN_Timer.c **** *  A trigger input can be programmed to enable the timer on rising edge
-  11:.\Generated_Source\PSoC5/CAN_Timer.c **** *  falling edge, either edge or continous run.
-  12:.\Generated_Source\PSoC5/CAN_Timer.c **** *  Interrupts may be generated due to a terminal count condition
-  13:.\Generated_Source\PSoC5/CAN_Timer.c **** *  or a capture event.
-  14:.\Generated_Source\PSoC5/CAN_Timer.c **** *
-  15:.\Generated_Source\PSoC5/CAN_Timer.c **** * Note:
-  16:.\Generated_Source\PSoC5/CAN_Timer.c **** *
-  17:.\Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************
-  18:.\Generated_Source\PSoC5/CAN_Timer.c **** * Copyright 2008-2014, Cypress Semiconductor Corporation.  All rights reserved.
-  19:.\Generated_Source\PSoC5/CAN_Timer.c **** * You may use this file only in accordance with the license, terms, conditions,
-  20:.\Generated_Source\PSoC5/CAN_Timer.c **** * disclaimers, and limitations in the end user license agreement accompanying
-  21:.\Generated_Source\PSoC5/CAN_Timer.c **** * the software package with which this file was provided.
-  22:.\Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************/
-  23:.\Generated_Source\PSoC5/CAN_Timer.c **** 
-  24:.\Generated_Source\PSoC5/CAN_Timer.c **** #include "CAN_Timer.h"
-  25:.\Generated_Source\PSoC5/CAN_Timer.c **** 
-  26:.\Generated_Source\PSoC5/CAN_Timer.c **** uint8 CAN_Timer_initVar = 0u;
-  27:.\Generated_Source\PSoC5/CAN_Timer.c **** 
-  28:.\Generated_Source\PSoC5/CAN_Timer.c **** 
-  29:.\Generated_Source\PSoC5/CAN_Timer.c **** /*******************************************************************************
-  30:.\Generated_Source\PSoC5/CAN_Timer.c **** * Function Name: CAN_Timer_Init
-  31:.\Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 2
+  26              		.file 1 "Generated_Source\\PSoC5\\CAN_Timer.c"
+   1:Generated_Source\PSoC5/CAN_Timer.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/CAN_Timer.c **** * File Name: CAN_Timer.c
+   3:Generated_Source\PSoC5/CAN_Timer.c **** * Version 2.70
+   4:Generated_Source\PSoC5/CAN_Timer.c **** *
+   5:Generated_Source\PSoC5/CAN_Timer.c **** * Description:
+   6:Generated_Source\PSoC5/CAN_Timer.c **** *  The Timer component consists of a 8, 16, 24 or 32-bit timer with
+   7:Generated_Source\PSoC5/CAN_Timer.c **** *  a selectable period between 2 and 2^Width - 1.  The timer may free run
+   8:Generated_Source\PSoC5/CAN_Timer.c **** *  or be used as a capture timer as well.  The capture can be initiated
+   9:Generated_Source\PSoC5/CAN_Timer.c **** *  by a positive or negative edge signal as well as via software.
+  10:Generated_Source\PSoC5/CAN_Timer.c **** *  A trigger input can be programmed to enable the timer on rising edge
+  11:Generated_Source\PSoC5/CAN_Timer.c **** *  falling edge, either edge or continous run.
+  12:Generated_Source\PSoC5/CAN_Timer.c **** *  Interrupts may be generated due to a terminal count condition
+  13:Generated_Source\PSoC5/CAN_Timer.c **** *  or a capture event.
+  14:Generated_Source\PSoC5/CAN_Timer.c **** *
+  15:Generated_Source\PSoC5/CAN_Timer.c **** * Note:
+  16:Generated_Source\PSoC5/CAN_Timer.c **** *
+  17:Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************
+  18:Generated_Source\PSoC5/CAN_Timer.c **** * Copyright 2008-2014, Cypress Semiconductor Corporation.  All rights reserved.
+  19:Generated_Source\PSoC5/CAN_Timer.c **** * You may use this file only in accordance with the license, terms, conditions,
+  20:Generated_Source\PSoC5/CAN_Timer.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  21:Generated_Source\PSoC5/CAN_Timer.c **** * the software package with which this file was provided.
+  22:Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************/
+  23:Generated_Source\PSoC5/CAN_Timer.c **** 
+  24:Generated_Source\PSoC5/CAN_Timer.c **** #include "CAN_Timer.h"
+  25:Generated_Source\PSoC5/CAN_Timer.c **** 
+  26:Generated_Source\PSoC5/CAN_Timer.c **** uint8 CAN_Timer_initVar = 0u;
+  27:Generated_Source\PSoC5/CAN_Timer.c **** 
+  28:Generated_Source\PSoC5/CAN_Timer.c **** 
+  29:Generated_Source\PSoC5/CAN_Timer.c **** /*******************************************************************************
+  30:Generated_Source\PSoC5/CAN_Timer.c **** * Function Name: CAN_Timer_Init
+  31:Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 2
 
 
-  32:.\Generated_Source\PSoC5/CAN_Timer.c **** *
-  33:.\Generated_Source\PSoC5/CAN_Timer.c **** * Summary:
-  34:.\Generated_Source\PSoC5/CAN_Timer.c **** *  Initialize to the schematic state
-  35:.\Generated_Source\PSoC5/CAN_Timer.c **** *
-  36:.\Generated_Source\PSoC5/CAN_Timer.c **** * Parameters:
-  37:.\Generated_Source\PSoC5/CAN_Timer.c **** *  void
-  38:.\Generated_Source\PSoC5/CAN_Timer.c **** *
-  39:.\Generated_Source\PSoC5/CAN_Timer.c **** * Return:
-  40:.\Generated_Source\PSoC5/CAN_Timer.c **** *  void
-  41:.\Generated_Source\PSoC5/CAN_Timer.c **** *
-  42:.\Generated_Source\PSoC5/CAN_Timer.c **** *******************************************************************************/
-  43:.\Generated_Source\PSoC5/CAN_Timer.c **** void CAN_Timer_Init(void) 
-  44:.\Generated_Source\PSoC5/CAN_Timer.c **** {
-  45:.\Generated_Source\PSoC5/CAN_Timer.c ****     #if(!CAN_Timer_UsingFixedFunction)
-  46:.\Generated_Source\PSoC5/CAN_Timer.c ****             /* Interrupt State Backup for Critical Region*/
-  47:.\Generated_Source\PSoC5/CAN_Timer.c ****             uint8 CAN_Timer_interruptState;
-  48:.\Generated_Source\PSoC5/CAN_Timer.c ****     #endif /* Interrupt state back up for Fixed Function only */
-  49:.\Generated_Source\PSoC5/CAN_Timer.c **** 
-  50:.\Generated_Source\PSoC5/CAN_Timer.c ****     #if (CAN_Timer_UsingFixedFunction)
-  51:.\Generated_Source\PSoC5/CAN_Timer.c ****         /* Clear all bits but the enable bit (if it's already set) for Timer operation */
-  52:.\Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_CONTROL &= CAN_Timer_CTRL_ENABLE;
-  53:.\Generated_Source\PSoC5/CAN_Timer.c **** 
-  54:.\Generated_Source\PSoC5/CAN_Timer.c ****         /* Clear the mode bits for continuous run mode */
-  55:.\Generated_Source\PSoC5/CAN_Timer.c ****         #if (CY_PSOC5A)
-  56:.\Generated_Source\PSoC5/CAN_Timer.c ****             CAN_Timer_CONTROL2 &= ((uint8)(~CAN_Timer_CTRL_MODE_MASK));
-  57:.\Generated_Source\PSoC5/CAN_Timer.c ****         #endif /* Clear bits in CONTROL2 only in PSOC5A */
-  58:.\Generated_Source\PSoC5/CAN_Timer.c **** 
-  59:.\Generated_Source\PSoC5/CAN_Timer.c ****         #if (CY_PSOC3 || CY_PSOC5LP)
-  60:.\Generated_Source\PSoC5/CAN_Timer.c ****             CAN_Timer_CONTROL3 &= ((uint8)(~CAN_Timer_CTRL_MODE_MASK));
-  61:.\Generated_Source\PSoC5/CAN_Timer.c ****         #endif /* CONTROL3 register exists only in PSoC3 OR PSoC5LP */
-  62:.\Generated_Source\PSoC5/CAN_Timer.c **** 
-  63:.\Generated_Source\PSoC5/CAN_Timer.c ****         /* Check if One Shot mode is enabled i.e. RunMode !=0*/
-  64:.\Generated_Source\PSoC5/CAN_Timer.c ****         #if (CAN_Timer_RunModeUsed != 0x0u)
-  65:.\Generated_Source\PSoC5/CAN_Timer.c ****             /* Set 3rd bit of Control register to enable one shot mode */
-  66:.\Generated_Source\PSoC5/CAN_Timer.c ****             CAN_Timer_CONTROL |= 0x04u;
-  67:.\Generated_Source\PSoC5/CAN_Timer.c ****         #endif /* One Shot enabled only when RunModeUsed is not Continuous*/
-  68:.\Generated_Source\PSoC5/CAN_Timer.c **** 
-  69:.\Generated_Source\PSoC5/CAN_Timer.c ****         #if (CAN_Timer_RunModeUsed == 2)
-  70:.\Generated_Source\PSoC5/CAN_Timer.c ****             #if (CY_PSOC5A)
-  71:.\Generated_Source\PSoC5/CAN_Timer.c ****                 /* Set last 2 bits of control2 register if one shot(halt on
-  72:.\Generated_Source\PSoC5/CAN_Timer.c ****                 interrupt) is enabled*/
-  73:.\Generated_Source\PSoC5/CAN_Timer.c ****                 CAN_Timer_CONTROL2 |= 0x03u;
-  74:.\Generated_Source\PSoC5/CAN_Timer.c ****             #endif /* Set One-Shot Halt on Interrupt bit in CONTROL2 for PSoC5A */
-  75:.\Generated_Source\PSoC5/CAN_Timer.c **** 
-  76:.\Generated_Source\PSoC5/CAN_Timer.c ****             #if (CY_PSOC3 || CY_PSOC5LP)
-  77:.\Generated_Source\PSoC5/CAN_Timer.c ****                 /* Set last 2 bits of control3 register if one shot(halt on
-  78:.\Generated_Source\PSoC5/CAN_Timer.c ****                 interrupt) is enabled*/
-  79:.\Generated_Source\PSoC5/CAN_Timer.c ****                 CAN_Timer_CONTROL3 |= 0x03u;
-  80:.\Generated_Source\PSoC5/CAN_Timer.c ****             #endif /* Set One-Shot Halt on Interrupt bit in CONTROL3 for PSoC3 or PSoC5LP */
-  81:.\Generated_Source\PSoC5/CAN_Timer.c **** 
-  82:.\Generated_Source\PSoC5/CAN_Timer.c ****         #endif /* Remove section if One Shot Halt on Interrupt is not enabled */
-  83:.\Generated_Source\PSoC5/CAN_Timer.c **** 
-  84:.\Generated_Source\PSoC5/CAN_Timer.c ****         #if (CAN_Timer_UsingHWEnable != 0)
-  85:.\Generated_Source\PSoC5/CAN_Timer.c ****             #if (CY_PSOC5A)
-  86:.\Generated_Source\PSoC5/CAN_Timer.c ****                 /* Set the default Run Mode of the Timer to Continuous */
-  87:.\Generated_Source\PSoC5/CAN_Timer.c ****                 CAN_Timer_CONTROL2 |= CAN_Timer_CTRL_MODE_PULSEWIDTH;
-  88:.\Generated_Source\PSoC5/CAN_Timer.c ****             #endif /* Set Continuous Run Mode in CONTROL2 for PSoC5A */
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 3
+  32:Generated_Source\PSoC5/CAN_Timer.c **** *
+  33:Generated_Source\PSoC5/CAN_Timer.c **** * Summary:
+  34:Generated_Source\PSoC5/CAN_Timer.c **** *  Initialize to the schematic state
+  35:Generated_Source\PSoC5/CAN_Timer.c **** *
+  36:Generated_Source\PSoC5/CAN_Timer.c **** * Parameters:
+  37:Generated_Source\PSoC5/CAN_Timer.c **** *  void
+  38:Generated_Source\PSoC5/CAN_Timer.c **** *
+  39:Generated_Source\PSoC5/CAN_Timer.c **** * Return:
+  40:Generated_Source\PSoC5/CAN_Timer.c **** *  void
+  41:Generated_Source\PSoC5/CAN_Timer.c **** *
+  42:Generated_Source\PSoC5/CAN_Timer.c **** *******************************************************************************/
+  43:Generated_Source\PSoC5/CAN_Timer.c **** void CAN_Timer_Init(void) 
+  44:Generated_Source\PSoC5/CAN_Timer.c **** {
+  45:Generated_Source\PSoC5/CAN_Timer.c ****     #if(!CAN_Timer_UsingFixedFunction)
+  46:Generated_Source\PSoC5/CAN_Timer.c ****             /* Interrupt State Backup for Critical Region*/
+  47:Generated_Source\PSoC5/CAN_Timer.c ****             uint8 CAN_Timer_interruptState;
+  48:Generated_Source\PSoC5/CAN_Timer.c ****     #endif /* Interrupt state back up for Fixed Function only */
+  49:Generated_Source\PSoC5/CAN_Timer.c **** 
+  50:Generated_Source\PSoC5/CAN_Timer.c ****     #if (CAN_Timer_UsingFixedFunction)
+  51:Generated_Source\PSoC5/CAN_Timer.c ****         /* Clear all bits but the enable bit (if it's already set) for Timer operation */
+  52:Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_CONTROL &= CAN_Timer_CTRL_ENABLE;
+  53:Generated_Source\PSoC5/CAN_Timer.c **** 
+  54:Generated_Source\PSoC5/CAN_Timer.c ****         /* Clear the mode bits for continuous run mode */
+  55:Generated_Source\PSoC5/CAN_Timer.c ****         #if (CY_PSOC5A)
+  56:Generated_Source\PSoC5/CAN_Timer.c ****             CAN_Timer_CONTROL2 &= ((uint8)(~CAN_Timer_CTRL_MODE_MASK));
+  57:Generated_Source\PSoC5/CAN_Timer.c ****         #endif /* Clear bits in CONTROL2 only in PSOC5A */
+  58:Generated_Source\PSoC5/CAN_Timer.c **** 
+  59:Generated_Source\PSoC5/CAN_Timer.c ****         #if (CY_PSOC3 || CY_PSOC5LP)
+  60:Generated_Source\PSoC5/CAN_Timer.c ****             CAN_Timer_CONTROL3 &= ((uint8)(~CAN_Timer_CTRL_MODE_MASK));
+  61:Generated_Source\PSoC5/CAN_Timer.c ****         #endif /* CONTROL3 register exists only in PSoC3 OR PSoC5LP */
+  62:Generated_Source\PSoC5/CAN_Timer.c **** 
+  63:Generated_Source\PSoC5/CAN_Timer.c ****         /* Check if One Shot mode is enabled i.e. RunMode !=0*/
+  64:Generated_Source\PSoC5/CAN_Timer.c ****         #if (CAN_Timer_RunModeUsed != 0x0u)
+  65:Generated_Source\PSoC5/CAN_Timer.c ****             /* Set 3rd bit of Control register to enable one shot mode */
+  66:Generated_Source\PSoC5/CAN_Timer.c ****             CAN_Timer_CONTROL |= 0x04u;
+  67:Generated_Source\PSoC5/CAN_Timer.c ****         #endif /* One Shot enabled only when RunModeUsed is not Continuous*/
+  68:Generated_Source\PSoC5/CAN_Timer.c **** 
+  69:Generated_Source\PSoC5/CAN_Timer.c ****         #if (CAN_Timer_RunModeUsed == 2)
+  70:Generated_Source\PSoC5/CAN_Timer.c ****             #if (CY_PSOC5A)
+  71:Generated_Source\PSoC5/CAN_Timer.c ****                 /* Set last 2 bits of control2 register if one shot(halt on
+  72:Generated_Source\PSoC5/CAN_Timer.c ****                 interrupt) is enabled*/
+  73:Generated_Source\PSoC5/CAN_Timer.c ****                 CAN_Timer_CONTROL2 |= 0x03u;
+  74:Generated_Source\PSoC5/CAN_Timer.c ****             #endif /* Set One-Shot Halt on Interrupt bit in CONTROL2 for PSoC5A */
+  75:Generated_Source\PSoC5/CAN_Timer.c **** 
+  76:Generated_Source\PSoC5/CAN_Timer.c ****             #if (CY_PSOC3 || CY_PSOC5LP)
+  77:Generated_Source\PSoC5/CAN_Timer.c ****                 /* Set last 2 bits of control3 register if one shot(halt on
+  78:Generated_Source\PSoC5/CAN_Timer.c ****                 interrupt) is enabled*/
+  79:Generated_Source\PSoC5/CAN_Timer.c ****                 CAN_Timer_CONTROL3 |= 0x03u;
+  80:Generated_Source\PSoC5/CAN_Timer.c ****             #endif /* Set One-Shot Halt on Interrupt bit in CONTROL3 for PSoC3 or PSoC5LP */
+  81:Generated_Source\PSoC5/CAN_Timer.c **** 
+  82:Generated_Source\PSoC5/CAN_Timer.c ****         #endif /* Remove section if One Shot Halt on Interrupt is not enabled */
+  83:Generated_Source\PSoC5/CAN_Timer.c **** 
+  84:Generated_Source\PSoC5/CAN_Timer.c ****         #if (CAN_Timer_UsingHWEnable != 0)
+  85:Generated_Source\PSoC5/CAN_Timer.c ****             #if (CY_PSOC5A)
+  86:Generated_Source\PSoC5/CAN_Timer.c ****                 /* Set the default Run Mode of the Timer to Continuous */
+  87:Generated_Source\PSoC5/CAN_Timer.c ****                 CAN_Timer_CONTROL2 |= CAN_Timer_CTRL_MODE_PULSEWIDTH;
+  88:Generated_Source\PSoC5/CAN_Timer.c ****             #endif /* Set Continuous Run Mode in CONTROL2 for PSoC5A */
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 3
 
 
-  89:.\Generated_Source\PSoC5/CAN_Timer.c **** 
-  90:.\Generated_Source\PSoC5/CAN_Timer.c ****             #if (CY_PSOC3 || CY_PSOC5LP)
-  91:.\Generated_Source\PSoC5/CAN_Timer.c ****                 /* Clear and Set ROD and COD bits of CFG2 register */
-  92:.\Generated_Source\PSoC5/CAN_Timer.c ****                 CAN_Timer_CONTROL3 &= ((uint8)(~CAN_Timer_CTRL_RCOD_MASK));
-  93:.\Generated_Source\PSoC5/CAN_Timer.c ****                 CAN_Timer_CONTROL3 |= CAN_Timer_CTRL_RCOD;
-  94:.\Generated_Source\PSoC5/CAN_Timer.c **** 
-  95:.\Generated_Source\PSoC5/CAN_Timer.c ****                 /* Clear and Enable the HW enable bit in CFG2 register */
-  96:.\Generated_Source\PSoC5/CAN_Timer.c ****                 CAN_Timer_CONTROL3 &= ((uint8)(~CAN_Timer_CTRL_ENBL_MASK));
-  97:.\Generated_Source\PSoC5/CAN_Timer.c ****                 CAN_Timer_CONTROL3 |= CAN_Timer_CTRL_ENBL;
-  98:.\Generated_Source\PSoC5/CAN_Timer.c **** 
-  99:.\Generated_Source\PSoC5/CAN_Timer.c ****                 /* Set the default Run Mode of the Timer to Continuous */
- 100:.\Generated_Source\PSoC5/CAN_Timer.c ****                 CAN_Timer_CONTROL3 |= CAN_Timer_CTRL_MODE_CONTINUOUS;
- 101:.\Generated_Source\PSoC5/CAN_Timer.c ****             #endif /* Set Continuous Run Mode in CONTROL3 for PSoC3ES3 or PSoC5A */
- 102:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 103:.\Generated_Source\PSoC5/CAN_Timer.c ****         #endif /* Configure Run Mode with hardware enable */
- 104:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 105:.\Generated_Source\PSoC5/CAN_Timer.c ****         /* Clear and Set SYNCTC and SYNCCMP bits of RT1 register */
- 106:.\Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_RT1 &= ((uint8)(~CAN_Timer_RT1_MASK));
- 107:.\Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_RT1 |= CAN_Timer_SYNC;
- 108:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 109:.\Generated_Source\PSoC5/CAN_Timer.c ****         /*Enable DSI Sync all all inputs of the Timer*/
- 110:.\Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_RT1 &= ((uint8)(~CAN_Timer_SYNCDSI_MASK));
- 111:.\Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_RT1 |= CAN_Timer_SYNCDSI_EN;
- 112:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 113:.\Generated_Source\PSoC5/CAN_Timer.c ****         /* Set the IRQ to use the status register interrupts */
- 114:.\Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_CONTROL2 |= CAN_Timer_CTRL2_IRQ_SEL;
- 115:.\Generated_Source\PSoC5/CAN_Timer.c ****     #endif /* Configuring registers of fixed function implementation */
- 116:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 117:.\Generated_Source\PSoC5/CAN_Timer.c ****     /* Set Initial values from Configuration */
- 118:.\Generated_Source\PSoC5/CAN_Timer.c ****     CAN_Timer_WritePeriod(CAN_Timer_INIT_PERIOD);
- 119:.\Generated_Source\PSoC5/CAN_Timer.c ****     CAN_Timer_WriteCounter(CAN_Timer_INIT_PERIOD);
- 120:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 121:.\Generated_Source\PSoC5/CAN_Timer.c ****     #if (CAN_Timer_UsingHWCaptureCounter)/* Capture counter is enabled */
- 122:.\Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_CAPTURE_COUNT_CTRL |= CAN_Timer_CNTR_ENABLE;
- 123:.\Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_SetCaptureCount(CAN_Timer_INIT_CAPTURE_COUNT);
- 124:.\Generated_Source\PSoC5/CAN_Timer.c ****     #endif /* Configure capture counter value */
- 125:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 126:.\Generated_Source\PSoC5/CAN_Timer.c ****     #if (!CAN_Timer_UsingFixedFunction)
- 127:.\Generated_Source\PSoC5/CAN_Timer.c ****         #if (CAN_Timer_SoftwareCaptureMode)
- 128:.\Generated_Source\PSoC5/CAN_Timer.c ****             CAN_Timer_SetCaptureMode(CAN_Timer_INIT_CAPTURE_MODE);
- 129:.\Generated_Source\PSoC5/CAN_Timer.c ****         #endif /* Set Capture Mode for UDB implementation if capture mode is software controlled */
- 130:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 131:.\Generated_Source\PSoC5/CAN_Timer.c ****         #if (CAN_Timer_SoftwareTriggerMode)
- 132:.\Generated_Source\PSoC5/CAN_Timer.c ****             #if (!CAN_Timer_UDB_CONTROL_REG_REMOVED)
- 133:.\Generated_Source\PSoC5/CAN_Timer.c ****                 if (0u == (CAN_Timer_CONTROL & CAN_Timer__B_TIMER__TM_SOFTWARE))
- 134:.\Generated_Source\PSoC5/CAN_Timer.c ****                 {
- 135:.\Generated_Source\PSoC5/CAN_Timer.c ****                     CAN_Timer_SetTriggerMode(CAN_Timer_INIT_TRIGGER_MODE);
- 136:.\Generated_Source\PSoC5/CAN_Timer.c ****                 }
- 137:.\Generated_Source\PSoC5/CAN_Timer.c ****             #endif /* (!CAN_Timer_UDB_CONTROL_REG_REMOVED) */
- 138:.\Generated_Source\PSoC5/CAN_Timer.c ****         #endif /* Set trigger mode for UDB Implementation if trigger mode is software controlled */
- 139:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 140:.\Generated_Source\PSoC5/CAN_Timer.c ****         /* CyEnterCriticalRegion and CyExitCriticalRegion are used to mark following region critica
- 141:.\Generated_Source\PSoC5/CAN_Timer.c ****         /* Enter Critical Region*/
- 142:.\Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_interruptState = CyEnterCriticalSection();
- 143:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 144:.\Generated_Source\PSoC5/CAN_Timer.c ****         /* Use the interrupt output of the status register for IRQ output */
- 145:.\Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_STATUS_AUX_CTRL |= CAN_Timer_STATUS_ACTL_INT_EN_MASK;
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 4
+  89:Generated_Source\PSoC5/CAN_Timer.c **** 
+  90:Generated_Source\PSoC5/CAN_Timer.c ****             #if (CY_PSOC3 || CY_PSOC5LP)
+  91:Generated_Source\PSoC5/CAN_Timer.c ****                 /* Clear and Set ROD and COD bits of CFG2 register */
+  92:Generated_Source\PSoC5/CAN_Timer.c ****                 CAN_Timer_CONTROL3 &= ((uint8)(~CAN_Timer_CTRL_RCOD_MASK));
+  93:Generated_Source\PSoC5/CAN_Timer.c ****                 CAN_Timer_CONTROL3 |= CAN_Timer_CTRL_RCOD;
+  94:Generated_Source\PSoC5/CAN_Timer.c **** 
+  95:Generated_Source\PSoC5/CAN_Timer.c ****                 /* Clear and Enable the HW enable bit in CFG2 register */
+  96:Generated_Source\PSoC5/CAN_Timer.c ****                 CAN_Timer_CONTROL3 &= ((uint8)(~CAN_Timer_CTRL_ENBL_MASK));
+  97:Generated_Source\PSoC5/CAN_Timer.c ****                 CAN_Timer_CONTROL3 |= CAN_Timer_CTRL_ENBL;
+  98:Generated_Source\PSoC5/CAN_Timer.c **** 
+  99:Generated_Source\PSoC5/CAN_Timer.c ****                 /* Set the default Run Mode of the Timer to Continuous */
+ 100:Generated_Source\PSoC5/CAN_Timer.c ****                 CAN_Timer_CONTROL3 |= CAN_Timer_CTRL_MODE_CONTINUOUS;
+ 101:Generated_Source\PSoC5/CAN_Timer.c ****             #endif /* Set Continuous Run Mode in CONTROL3 for PSoC3ES3 or PSoC5A */
+ 102:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 103:Generated_Source\PSoC5/CAN_Timer.c ****         #endif /* Configure Run Mode with hardware enable */
+ 104:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 105:Generated_Source\PSoC5/CAN_Timer.c ****         /* Clear and Set SYNCTC and SYNCCMP bits of RT1 register */
+ 106:Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_RT1 &= ((uint8)(~CAN_Timer_RT1_MASK));
+ 107:Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_RT1 |= CAN_Timer_SYNC;
+ 108:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 109:Generated_Source\PSoC5/CAN_Timer.c ****         /*Enable DSI Sync all all inputs of the Timer*/
+ 110:Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_RT1 &= ((uint8)(~CAN_Timer_SYNCDSI_MASK));
+ 111:Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_RT1 |= CAN_Timer_SYNCDSI_EN;
+ 112:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 113:Generated_Source\PSoC5/CAN_Timer.c ****         /* Set the IRQ to use the status register interrupts */
+ 114:Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_CONTROL2 |= CAN_Timer_CTRL2_IRQ_SEL;
+ 115:Generated_Source\PSoC5/CAN_Timer.c ****     #endif /* Configuring registers of fixed function implementation */
+ 116:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 117:Generated_Source\PSoC5/CAN_Timer.c ****     /* Set Initial values from Configuration */
+ 118:Generated_Source\PSoC5/CAN_Timer.c ****     CAN_Timer_WritePeriod(CAN_Timer_INIT_PERIOD);
+ 119:Generated_Source\PSoC5/CAN_Timer.c ****     CAN_Timer_WriteCounter(CAN_Timer_INIT_PERIOD);
+ 120:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 121:Generated_Source\PSoC5/CAN_Timer.c ****     #if (CAN_Timer_UsingHWCaptureCounter)/* Capture counter is enabled */
+ 122:Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_CAPTURE_COUNT_CTRL |= CAN_Timer_CNTR_ENABLE;
+ 123:Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_SetCaptureCount(CAN_Timer_INIT_CAPTURE_COUNT);
+ 124:Generated_Source\PSoC5/CAN_Timer.c ****     #endif /* Configure capture counter value */
+ 125:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 126:Generated_Source\PSoC5/CAN_Timer.c ****     #if (!CAN_Timer_UsingFixedFunction)
+ 127:Generated_Source\PSoC5/CAN_Timer.c ****         #if (CAN_Timer_SoftwareCaptureMode)
+ 128:Generated_Source\PSoC5/CAN_Timer.c ****             CAN_Timer_SetCaptureMode(CAN_Timer_INIT_CAPTURE_MODE);
+ 129:Generated_Source\PSoC5/CAN_Timer.c ****         #endif /* Set Capture Mode for UDB implementation if capture mode is software controlled */
+ 130:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 131:Generated_Source\PSoC5/CAN_Timer.c ****         #if (CAN_Timer_SoftwareTriggerMode)
+ 132:Generated_Source\PSoC5/CAN_Timer.c ****             #if (!CAN_Timer_UDB_CONTROL_REG_REMOVED)
+ 133:Generated_Source\PSoC5/CAN_Timer.c ****                 if (0u == (CAN_Timer_CONTROL & CAN_Timer__B_TIMER__TM_SOFTWARE))
+ 134:Generated_Source\PSoC5/CAN_Timer.c ****                 {
+ 135:Generated_Source\PSoC5/CAN_Timer.c ****                     CAN_Timer_SetTriggerMode(CAN_Timer_INIT_TRIGGER_MODE);
+ 136:Generated_Source\PSoC5/CAN_Timer.c ****                 }
+ 137:Generated_Source\PSoC5/CAN_Timer.c ****             #endif /* (!CAN_Timer_UDB_CONTROL_REG_REMOVED) */
+ 138:Generated_Source\PSoC5/CAN_Timer.c ****         #endif /* Set trigger mode for UDB Implementation if trigger mode is software controlled */
+ 139:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 140:Generated_Source\PSoC5/CAN_Timer.c ****         /* CyEnterCriticalRegion and CyExitCriticalRegion are used to mark following region critica
+ 141:Generated_Source\PSoC5/CAN_Timer.c ****         /* Enter Critical Region*/
+ 142:Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_interruptState = CyEnterCriticalSection();
+ 143:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 144:Generated_Source\PSoC5/CAN_Timer.c ****         /* Use the interrupt output of the status register for IRQ output */
+ 145:Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_STATUS_AUX_CTRL |= CAN_Timer_STATUS_ACTL_INT_EN_MASK;
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 4
 
 
- 146:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 147:.\Generated_Source\PSoC5/CAN_Timer.c ****         /* Exit Critical Region*/
- 148:.\Generated_Source\PSoC5/CAN_Timer.c ****         CyExitCriticalSection(CAN_Timer_interruptState);
- 149:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 150:.\Generated_Source\PSoC5/CAN_Timer.c ****         #if (CAN_Timer_EnableTriggerMode)
- 151:.\Generated_Source\PSoC5/CAN_Timer.c ****             CAN_Timer_EnableTrigger();
- 152:.\Generated_Source\PSoC5/CAN_Timer.c ****         #endif /* Set Trigger enable bit for UDB implementation in the control register*/
- 153:.\Generated_Source\PSoC5/CAN_Timer.c **** 		
- 154:.\Generated_Source\PSoC5/CAN_Timer.c **** 		
- 155:.\Generated_Source\PSoC5/CAN_Timer.c ****         #if (CAN_Timer_InterruptOnCaptureCount && !CAN_Timer_UDB_CONTROL_REG_REMOVED)
- 156:.\Generated_Source\PSoC5/CAN_Timer.c ****             CAN_Timer_SetInterruptCount(CAN_Timer_INIT_INT_CAPTURE_COUNT);
- 157:.\Generated_Source\PSoC5/CAN_Timer.c ****         #endif /* Set interrupt count in UDB implementation if interrupt count feature is checked.*
- 158:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 159:.\Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_ClearFIFO();
- 160:.\Generated_Source\PSoC5/CAN_Timer.c ****     #endif /* Configure additional features of UDB implementation */
- 161:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 162:.\Generated_Source\PSoC5/CAN_Timer.c ****     CAN_Timer_SetInterruptMode(CAN_Timer_INIT_INTERRUPT_MODE);
- 163:.\Generated_Source\PSoC5/CAN_Timer.c **** }
- 164:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 165:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 166:.\Generated_Source\PSoC5/CAN_Timer.c **** /*******************************************************************************
- 167:.\Generated_Source\PSoC5/CAN_Timer.c **** * Function Name: CAN_Timer_Enable
- 168:.\Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************
- 169:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 170:.\Generated_Source\PSoC5/CAN_Timer.c **** * Summary:
- 171:.\Generated_Source\PSoC5/CAN_Timer.c **** *  Enable the Timer
- 172:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 173:.\Generated_Source\PSoC5/CAN_Timer.c **** * Parameters:
- 174:.\Generated_Source\PSoC5/CAN_Timer.c **** *  void
- 175:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 176:.\Generated_Source\PSoC5/CAN_Timer.c **** * Return:
- 177:.\Generated_Source\PSoC5/CAN_Timer.c **** *  void
- 178:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 179:.\Generated_Source\PSoC5/CAN_Timer.c **** *******************************************************************************/
- 180:.\Generated_Source\PSoC5/CAN_Timer.c **** void CAN_Timer_Enable(void) 
- 181:.\Generated_Source\PSoC5/CAN_Timer.c **** {
+ 146:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 147:Generated_Source\PSoC5/CAN_Timer.c ****         /* Exit Critical Region*/
+ 148:Generated_Source\PSoC5/CAN_Timer.c ****         CyExitCriticalSection(CAN_Timer_interruptState);
+ 149:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 150:Generated_Source\PSoC5/CAN_Timer.c ****         #if (CAN_Timer_EnableTriggerMode)
+ 151:Generated_Source\PSoC5/CAN_Timer.c ****             CAN_Timer_EnableTrigger();
+ 152:Generated_Source\PSoC5/CAN_Timer.c ****         #endif /* Set Trigger enable bit for UDB implementation in the control register*/
+ 153:Generated_Source\PSoC5/CAN_Timer.c **** 		
+ 154:Generated_Source\PSoC5/CAN_Timer.c **** 		
+ 155:Generated_Source\PSoC5/CAN_Timer.c ****         #if (CAN_Timer_InterruptOnCaptureCount && !CAN_Timer_UDB_CONTROL_REG_REMOVED)
+ 156:Generated_Source\PSoC5/CAN_Timer.c ****             CAN_Timer_SetInterruptCount(CAN_Timer_INIT_INT_CAPTURE_COUNT);
+ 157:Generated_Source\PSoC5/CAN_Timer.c ****         #endif /* Set interrupt count in UDB implementation if interrupt count feature is checked.*
+ 158:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 159:Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_ClearFIFO();
+ 160:Generated_Source\PSoC5/CAN_Timer.c ****     #endif /* Configure additional features of UDB implementation */
+ 161:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 162:Generated_Source\PSoC5/CAN_Timer.c ****     CAN_Timer_SetInterruptMode(CAN_Timer_INIT_INTERRUPT_MODE);
+ 163:Generated_Source\PSoC5/CAN_Timer.c **** }
+ 164:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 165:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 166:Generated_Source\PSoC5/CAN_Timer.c **** /*******************************************************************************
+ 167:Generated_Source\PSoC5/CAN_Timer.c **** * Function Name: CAN_Timer_Enable
+ 168:Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************
+ 169:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 170:Generated_Source\PSoC5/CAN_Timer.c **** * Summary:
+ 171:Generated_Source\PSoC5/CAN_Timer.c **** *  Enable the Timer
+ 172:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 173:Generated_Source\PSoC5/CAN_Timer.c **** * Parameters:
+ 174:Generated_Source\PSoC5/CAN_Timer.c **** *  void
+ 175:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 176:Generated_Source\PSoC5/CAN_Timer.c **** * Return:
+ 177:Generated_Source\PSoC5/CAN_Timer.c **** *  void
+ 178:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 179:Generated_Source\PSoC5/CAN_Timer.c **** *******************************************************************************/
+ 180:Generated_Source\PSoC5/CAN_Timer.c **** void CAN_Timer_Enable(void) 
+ 181:Generated_Source\PSoC5/CAN_Timer.c **** {
   27              		.loc 1 181 0
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
   30              		@ frame_needed = 0, uses_anonymous_args = 0
   31              		@ link register save eliminated.
- 182:.\Generated_Source\PSoC5/CAN_Timer.c ****     /* Globally Enable the Fixed Function Block chosen */
- 183:.\Generated_Source\PSoC5/CAN_Timer.c ****     #if (CAN_Timer_UsingFixedFunction)
- 184:.\Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_GLOBAL_ENABLE |= CAN_Timer_BLOCK_EN_MASK;
+ 182:Generated_Source\PSoC5/CAN_Timer.c ****     /* Globally Enable the Fixed Function Block chosen */
+ 183:Generated_Source\PSoC5/CAN_Timer.c ****     #if (CAN_Timer_UsingFixedFunction)
+ 184:Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_GLOBAL_ENABLE |= CAN_Timer_BLOCK_EN_MASK;
   32              		.loc 1 184 0
   33 0000 084A     		ldr	r2, .L2
   34 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
   35 0004 43F00103 		orr	r3, r3, #1
   36 0008 1370     		strb	r3, [r2]
- 185:.\Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_GLOBAL_STBY_ENABLE |= CAN_Timer_BLOCK_STBY_EN_MASK;
+ 185:Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_GLOBAL_STBY_ENABLE |= CAN_Timer_BLOCK_STBY_EN_MASK;
   37              		.loc 1 185 0
   38 000a 1032     		adds	r2, r2, #16
   39 000c 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
   40 000e 43F00103 		orr	r3, r3, #1
   41 0012 1370     		strb	r3, [r2]
- 186:.\Generated_Source\PSoC5/CAN_Timer.c ****     #endif /* Set Enable bit for enabling Fixed function timer*/
- 187:.\Generated_Source\PSoC5/CAN_Timer.c **** 
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 5
+ 186:Generated_Source\PSoC5/CAN_Timer.c ****     #endif /* Set Enable bit for enabling Fixed function timer*/
+ 187:Generated_Source\PSoC5/CAN_Timer.c **** 
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 5
 
 
- 188:.\Generated_Source\PSoC5/CAN_Timer.c ****     /* Remove assignment if control register is removed */
- 189:.\Generated_Source\PSoC5/CAN_Timer.c ****     #if (!CAN_Timer_UDB_CONTROL_REG_REMOVED || CAN_Timer_UsingFixedFunction)
- 190:.\Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_CONTROL |= CAN_Timer_CTRL_ENABLE;
+ 188:Generated_Source\PSoC5/CAN_Timer.c ****     /* Remove assignment if control register is removed */
+ 189:Generated_Source\PSoC5/CAN_Timer.c ****     #if (!CAN_Timer_UDB_CONTROL_REG_REMOVED || CAN_Timer_UsingFixedFunction)
+ 190:Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_CONTROL |= CAN_Timer_CTRL_ENABLE;
   42              		.loc 1 190 0
   43 0014 02F64D32 		addw	r2, r2, #2893
   44 0018 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
@@ -265,91 +265,91 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
   60              		.type	CAN_Timer_Stop, %function
   61              	CAN_Timer_Stop:
   62              	.LFB3:
- 191:.\Generated_Source\PSoC5/CAN_Timer.c ****     #endif /* Remove assignment if control register is removed */
- 192:.\Generated_Source\PSoC5/CAN_Timer.c **** }
- 193:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 194:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 195:.\Generated_Source\PSoC5/CAN_Timer.c **** /*******************************************************************************
- 196:.\Generated_Source\PSoC5/CAN_Timer.c **** * Function Name: CAN_Timer_Start
- 197:.\Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************
- 198:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 199:.\Generated_Source\PSoC5/CAN_Timer.c **** * Summary:
- 200:.\Generated_Source\PSoC5/CAN_Timer.c **** *  The start function initializes the timer with the default values, the
- 201:.\Generated_Source\PSoC5/CAN_Timer.c **** *  enables the timerto begin counting.  It does not enable interrupts,
- 202:.\Generated_Source\PSoC5/CAN_Timer.c **** *  the EnableInt command should be called if interrupt generation is required.
- 203:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 204:.\Generated_Source\PSoC5/CAN_Timer.c **** * Parameters:
- 205:.\Generated_Source\PSoC5/CAN_Timer.c **** *  void
- 206:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 207:.\Generated_Source\PSoC5/CAN_Timer.c **** * Return:
- 208:.\Generated_Source\PSoC5/CAN_Timer.c **** *  void
- 209:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 210:.\Generated_Source\PSoC5/CAN_Timer.c **** * Global variables:
- 211:.\Generated_Source\PSoC5/CAN_Timer.c **** *  CAN_Timer_initVar: Is modified when this function is called for the
- 212:.\Generated_Source\PSoC5/CAN_Timer.c **** *   first time. Is used to ensure that initialization happens only once.
- 213:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 214:.\Generated_Source\PSoC5/CAN_Timer.c **** *******************************************************************************/
- 215:.\Generated_Source\PSoC5/CAN_Timer.c **** void CAN_Timer_Start(void) 
- 216:.\Generated_Source\PSoC5/CAN_Timer.c **** {
- 217:.\Generated_Source\PSoC5/CAN_Timer.c ****     if(CAN_Timer_initVar == 0u)
- 218:.\Generated_Source\PSoC5/CAN_Timer.c ****     {
- 219:.\Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_Init();
- 220:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 221:.\Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_initVar = 1u;   /* Clear this bit for Initialization */
- 222:.\Generated_Source\PSoC5/CAN_Timer.c ****     }
- 223:.\Generated_Source\PSoC5/CAN_Timer.c **** 
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 6
+ 191:Generated_Source\PSoC5/CAN_Timer.c ****     #endif /* Remove assignment if control register is removed */
+ 192:Generated_Source\PSoC5/CAN_Timer.c **** }
+ 193:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 194:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 195:Generated_Source\PSoC5/CAN_Timer.c **** /*******************************************************************************
+ 196:Generated_Source\PSoC5/CAN_Timer.c **** * Function Name: CAN_Timer_Start
+ 197:Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************
+ 198:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 199:Generated_Source\PSoC5/CAN_Timer.c **** * Summary:
+ 200:Generated_Source\PSoC5/CAN_Timer.c **** *  The start function initializes the timer with the default values, the
+ 201:Generated_Source\PSoC5/CAN_Timer.c **** *  enables the timerto begin counting.  It does not enable interrupts,
+ 202:Generated_Source\PSoC5/CAN_Timer.c **** *  the EnableInt command should be called if interrupt generation is required.
+ 203:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 204:Generated_Source\PSoC5/CAN_Timer.c **** * Parameters:
+ 205:Generated_Source\PSoC5/CAN_Timer.c **** *  void
+ 206:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 207:Generated_Source\PSoC5/CAN_Timer.c **** * Return:
+ 208:Generated_Source\PSoC5/CAN_Timer.c **** *  void
+ 209:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 210:Generated_Source\PSoC5/CAN_Timer.c **** * Global variables:
+ 211:Generated_Source\PSoC5/CAN_Timer.c **** *  CAN_Timer_initVar: Is modified when this function is called for the
+ 212:Generated_Source\PSoC5/CAN_Timer.c **** *   first time. Is used to ensure that initialization happens only once.
+ 213:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 214:Generated_Source\PSoC5/CAN_Timer.c **** *******************************************************************************/
+ 215:Generated_Source\PSoC5/CAN_Timer.c **** void CAN_Timer_Start(void) 
+ 216:Generated_Source\PSoC5/CAN_Timer.c **** {
+ 217:Generated_Source\PSoC5/CAN_Timer.c ****     if(CAN_Timer_initVar == 0u)
+ 218:Generated_Source\PSoC5/CAN_Timer.c ****     {
+ 219:Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_Init();
+ 220:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 221:Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_initVar = 1u;   /* Clear this bit for Initialization */
+ 222:Generated_Source\PSoC5/CAN_Timer.c ****     }
+ 223:Generated_Source\PSoC5/CAN_Timer.c **** 
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 6
 
 
- 224:.\Generated_Source\PSoC5/CAN_Timer.c ****     /* Enable the Timer */
- 225:.\Generated_Source\PSoC5/CAN_Timer.c ****     CAN_Timer_Enable();
- 226:.\Generated_Source\PSoC5/CAN_Timer.c **** }
- 227:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 228:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 229:.\Generated_Source\PSoC5/CAN_Timer.c **** /*******************************************************************************
- 230:.\Generated_Source\PSoC5/CAN_Timer.c **** * Function Name: CAN_Timer_Stop
- 231:.\Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************
- 232:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 233:.\Generated_Source\PSoC5/CAN_Timer.c **** * Summary:
- 234:.\Generated_Source\PSoC5/CAN_Timer.c **** *  The stop function halts the timer, but does not change any modes or disable
- 235:.\Generated_Source\PSoC5/CAN_Timer.c **** *  interrupts.
- 236:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 237:.\Generated_Source\PSoC5/CAN_Timer.c **** * Parameters:
- 238:.\Generated_Source\PSoC5/CAN_Timer.c **** *  void
- 239:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 240:.\Generated_Source\PSoC5/CAN_Timer.c **** * Return:
- 241:.\Generated_Source\PSoC5/CAN_Timer.c **** *  void
- 242:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 243:.\Generated_Source\PSoC5/CAN_Timer.c **** * Side Effects: If the Enable mode is set to Hardware only then this function
- 244:.\Generated_Source\PSoC5/CAN_Timer.c **** *               has no effect on the operation of the timer.
- 245:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 246:.\Generated_Source\PSoC5/CAN_Timer.c **** *******************************************************************************/
- 247:.\Generated_Source\PSoC5/CAN_Timer.c **** void CAN_Timer_Stop(void) 
- 248:.\Generated_Source\PSoC5/CAN_Timer.c **** {
+ 224:Generated_Source\PSoC5/CAN_Timer.c ****     /* Enable the Timer */
+ 225:Generated_Source\PSoC5/CAN_Timer.c ****     CAN_Timer_Enable();
+ 226:Generated_Source\PSoC5/CAN_Timer.c **** }
+ 227:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 228:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 229:Generated_Source\PSoC5/CAN_Timer.c **** /*******************************************************************************
+ 230:Generated_Source\PSoC5/CAN_Timer.c **** * Function Name: CAN_Timer_Stop
+ 231:Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************
+ 232:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 233:Generated_Source\PSoC5/CAN_Timer.c **** * Summary:
+ 234:Generated_Source\PSoC5/CAN_Timer.c **** *  The stop function halts the timer, but does not change any modes or disable
+ 235:Generated_Source\PSoC5/CAN_Timer.c **** *  interrupts.
+ 236:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 237:Generated_Source\PSoC5/CAN_Timer.c **** * Parameters:
+ 238:Generated_Source\PSoC5/CAN_Timer.c **** *  void
+ 239:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 240:Generated_Source\PSoC5/CAN_Timer.c **** * Return:
+ 241:Generated_Source\PSoC5/CAN_Timer.c **** *  void
+ 242:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 243:Generated_Source\PSoC5/CAN_Timer.c **** * Side Effects: If the Enable mode is set to Hardware only then this function
+ 244:Generated_Source\PSoC5/CAN_Timer.c **** *               has no effect on the operation of the timer.
+ 245:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 246:Generated_Source\PSoC5/CAN_Timer.c **** *******************************************************************************/
+ 247:Generated_Source\PSoC5/CAN_Timer.c **** void CAN_Timer_Stop(void) 
+ 248:Generated_Source\PSoC5/CAN_Timer.c **** {
   63              		.loc 1 248 0
   64              		.cfi_startproc
   65              		@ args = 0, pretend = 0, frame = 0
   66              		@ frame_needed = 0, uses_anonymous_args = 0
   67              		@ link register save eliminated.
- 249:.\Generated_Source\PSoC5/CAN_Timer.c ****     /* Disable Timer */
- 250:.\Generated_Source\PSoC5/CAN_Timer.c ****     #if(!CAN_Timer_UDB_CONTROL_REG_REMOVED || CAN_Timer_UsingFixedFunction)
- 251:.\Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_CONTROL &= ((uint8)(~CAN_Timer_CTRL_ENABLE));
+ 249:Generated_Source\PSoC5/CAN_Timer.c ****     /* Disable Timer */
+ 250:Generated_Source\PSoC5/CAN_Timer.c ****     #if(!CAN_Timer_UDB_CONTROL_REG_REMOVED || CAN_Timer_UsingFixedFunction)
+ 251:Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_CONTROL &= ((uint8)(~CAN_Timer_CTRL_ENABLE));
   68              		.loc 1 251 0
   69 0000 084A     		ldr	r2, .L5
   70 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
   71 0004 03F0FE03 		and	r3, r3, #254
   72 0008 1370     		strb	r3, [r2]
- 252:.\Generated_Source\PSoC5/CAN_Timer.c ****     #endif /* Remove assignment if control register is removed */
- 253:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 254:.\Generated_Source\PSoC5/CAN_Timer.c ****     /* Globally disable the Fixed Function Block chosen */
- 255:.\Generated_Source\PSoC5/CAN_Timer.c ****     #if (CAN_Timer_UsingFixedFunction)
- 256:.\Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_GLOBAL_ENABLE &= ((uint8)(~CAN_Timer_BLOCK_EN_MASK));
+ 252:Generated_Source\PSoC5/CAN_Timer.c ****     #endif /* Remove assignment if control register is removed */
+ 253:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 254:Generated_Source\PSoC5/CAN_Timer.c ****     /* Globally disable the Fixed Function Block chosen */
+ 255:Generated_Source\PSoC5/CAN_Timer.c ****     #if (CAN_Timer_UsingFixedFunction)
+ 256:Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_GLOBAL_ENABLE &= ((uint8)(~CAN_Timer_BLOCK_EN_MASK));
   73              		.loc 1 256 0
   74 000a A2F65D32 		subw	r2, r2, #2909
   75 000e 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
   76 0010 03F0FE03 		and	r3, r3, #254
   77 0014 1370     		strb	r3, [r2]
- 257:.\Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_GLOBAL_STBY_ENABLE &= ((uint8)(~CAN_Timer_BLOCK_STBY_EN_MASK));
+ 257:Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_GLOBAL_STBY_ENABLE &= ((uint8)(~CAN_Timer_BLOCK_STBY_EN_MASK));
   78              		.loc 1 257 0
   79 0016 1032     		adds	r2, r2, #16
   80 0018 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
   83 0020 7047     		bx	lr
   84              	.L6:
   85 0022 00BF     		.align	2
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 7
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 7
 
 
   86              	.L5:
@@ -374,36 +374,36 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
   96              		.type	CAN_Timer_SetInterruptMode, %function
   97              	CAN_Timer_SetInterruptMode:
   98              	.LFB4:
- 258:.\Generated_Source\PSoC5/CAN_Timer.c ****     #endif /* Disable global enable for the Timer Fixed function block to stop the Timer*/
- 259:.\Generated_Source\PSoC5/CAN_Timer.c **** }
- 260:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 261:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 262:.\Generated_Source\PSoC5/CAN_Timer.c **** /*******************************************************************************
- 263:.\Generated_Source\PSoC5/CAN_Timer.c **** * Function Name: CAN_Timer_SetInterruptMode
- 264:.\Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************
- 265:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 266:.\Generated_Source\PSoC5/CAN_Timer.c **** * Summary:
- 267:.\Generated_Source\PSoC5/CAN_Timer.c **** *  This function selects which of the interrupt inputs may cause an interrupt.
- 268:.\Generated_Source\PSoC5/CAN_Timer.c **** *  The twosources are caputure and terminal.  One, both or neither may
- 269:.\Generated_Source\PSoC5/CAN_Timer.c **** *  be selected.
- 270:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 271:.\Generated_Source\PSoC5/CAN_Timer.c **** * Parameters:
- 272:.\Generated_Source\PSoC5/CAN_Timer.c **** *  interruptMode:   This parameter is used to enable interrups on either/or
- 273:.\Generated_Source\PSoC5/CAN_Timer.c **** *                   terminal count or capture.
- 274:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 275:.\Generated_Source\PSoC5/CAN_Timer.c **** * Return:
- 276:.\Generated_Source\PSoC5/CAN_Timer.c **** *  void
- 277:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 278:.\Generated_Source\PSoC5/CAN_Timer.c **** *******************************************************************************/
- 279:.\Generated_Source\PSoC5/CAN_Timer.c **** void CAN_Timer_SetInterruptMode(uint8 interruptMode) 
- 280:.\Generated_Source\PSoC5/CAN_Timer.c **** {
+ 258:Generated_Source\PSoC5/CAN_Timer.c ****     #endif /* Disable global enable for the Timer Fixed function block to stop the Timer*/
+ 259:Generated_Source\PSoC5/CAN_Timer.c **** }
+ 260:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 261:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 262:Generated_Source\PSoC5/CAN_Timer.c **** /*******************************************************************************
+ 263:Generated_Source\PSoC5/CAN_Timer.c **** * Function Name: CAN_Timer_SetInterruptMode
+ 264:Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************
+ 265:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 266:Generated_Source\PSoC5/CAN_Timer.c **** * Summary:
+ 267:Generated_Source\PSoC5/CAN_Timer.c **** *  This function selects which of the interrupt inputs may cause an interrupt.
+ 268:Generated_Source\PSoC5/CAN_Timer.c **** *  The twosources are caputure and terminal.  One, both or neither may
+ 269:Generated_Source\PSoC5/CAN_Timer.c **** *  be selected.
+ 270:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 271:Generated_Source\PSoC5/CAN_Timer.c **** * Parameters:
+ 272:Generated_Source\PSoC5/CAN_Timer.c **** *  interruptMode:   This parameter is used to enable interrups on either/or
+ 273:Generated_Source\PSoC5/CAN_Timer.c **** *                   terminal count or capture.
+ 274:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 275:Generated_Source\PSoC5/CAN_Timer.c **** * Return:
+ 276:Generated_Source\PSoC5/CAN_Timer.c **** *  void
+ 277:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 278:Generated_Source\PSoC5/CAN_Timer.c **** *******************************************************************************/
+ 279:Generated_Source\PSoC5/CAN_Timer.c **** void CAN_Timer_SetInterruptMode(uint8 interruptMode) 
+ 280:Generated_Source\PSoC5/CAN_Timer.c **** {
   99              		.loc 1 280 0
  100              		.cfi_startproc
  101              		@ args = 0, pretend = 0, frame = 0
  102              		@ frame_needed = 0, uses_anonymous_args = 0
  103              		@ link register save eliminated.
  104              	.LVL0:
- 281:.\Generated_Source\PSoC5/CAN_Timer.c ****     CAN_Timer_STATUS_MASK = interruptMode;
+ 281:Generated_Source\PSoC5/CAN_Timer.c ****     CAN_Timer_STATUS_MASK = interruptMode;
  105              		.loc 1 281 0
  106 0000 014B     		ldr	r3, .L8
  107 0002 1870     		strb	r0, [r3]
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  116              		.section	.text.CAN_Timer_SoftwareCapture,"ax",%progbits
  117              		.align	2
  118              		.global	CAN_Timer_SoftwareCapture
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 8
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 8
 
 
  119              		.thumb
@@ -426,36 +426,36 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  121              		.type	CAN_Timer_SoftwareCapture, %function
  122              	CAN_Timer_SoftwareCapture:
  123              	.LFB5:
- 282:.\Generated_Source\PSoC5/CAN_Timer.c **** }
- 283:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 284:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 285:.\Generated_Source\PSoC5/CAN_Timer.c **** /*******************************************************************************
- 286:.\Generated_Source\PSoC5/CAN_Timer.c **** * Function Name: CAN_Timer_SoftwareCapture
- 287:.\Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************
- 288:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 289:.\Generated_Source\PSoC5/CAN_Timer.c **** * Summary:
- 290:.\Generated_Source\PSoC5/CAN_Timer.c **** *  This function forces a capture independent of the capture signal.
- 291:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 292:.\Generated_Source\PSoC5/CAN_Timer.c **** * Parameters:
- 293:.\Generated_Source\PSoC5/CAN_Timer.c **** *  void
- 294:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 295:.\Generated_Source\PSoC5/CAN_Timer.c **** * Return:
- 296:.\Generated_Source\PSoC5/CAN_Timer.c **** *  void
- 297:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 298:.\Generated_Source\PSoC5/CAN_Timer.c **** * Side Effects:
- 299:.\Generated_Source\PSoC5/CAN_Timer.c **** *  An existing hardware capture could be overwritten.
- 300:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 301:.\Generated_Source\PSoC5/CAN_Timer.c **** *******************************************************************************/
- 302:.\Generated_Source\PSoC5/CAN_Timer.c **** void CAN_Timer_SoftwareCapture(void) 
- 303:.\Generated_Source\PSoC5/CAN_Timer.c **** {
+ 282:Generated_Source\PSoC5/CAN_Timer.c **** }
+ 283:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 284:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 285:Generated_Source\PSoC5/CAN_Timer.c **** /*******************************************************************************
+ 286:Generated_Source\PSoC5/CAN_Timer.c **** * Function Name: CAN_Timer_SoftwareCapture
+ 287:Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************
+ 288:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 289:Generated_Source\PSoC5/CAN_Timer.c **** * Summary:
+ 290:Generated_Source\PSoC5/CAN_Timer.c **** *  This function forces a capture independent of the capture signal.
+ 291:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 292:Generated_Source\PSoC5/CAN_Timer.c **** * Parameters:
+ 293:Generated_Source\PSoC5/CAN_Timer.c **** *  void
+ 294:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 295:Generated_Source\PSoC5/CAN_Timer.c **** * Return:
+ 296:Generated_Source\PSoC5/CAN_Timer.c **** *  void
+ 297:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 298:Generated_Source\PSoC5/CAN_Timer.c **** * Side Effects:
+ 299:Generated_Source\PSoC5/CAN_Timer.c **** *  An existing hardware capture could be overwritten.
+ 300:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 301:Generated_Source\PSoC5/CAN_Timer.c **** *******************************************************************************/
+ 302:Generated_Source\PSoC5/CAN_Timer.c **** void CAN_Timer_SoftwareCapture(void) 
+ 303:Generated_Source\PSoC5/CAN_Timer.c **** {
  124              		.loc 1 303 0
  125              		.cfi_startproc
  126              		@ args = 0, pretend = 0, frame = 0
  127              		@ frame_needed = 0, uses_anonymous_args = 0
  128              		@ link register save eliminated.
- 304:.\Generated_Source\PSoC5/CAN_Timer.c ****     /* Generate a software capture by reading the counter register */
- 305:.\Generated_Source\PSoC5/CAN_Timer.c ****     #if(CAN_Timer_UsingFixedFunction)
- 306:.\Generated_Source\PSoC5/CAN_Timer.c ****         (void)CY_GET_REG16(CAN_Timer_COUNTER_LSB_PTR);
+ 304:Generated_Source\PSoC5/CAN_Timer.c ****     /* Generate a software capture by reading the counter register */
+ 305:Generated_Source\PSoC5/CAN_Timer.c ****     #if(CAN_Timer_UsingFixedFunction)
+ 306:Generated_Source\PSoC5/CAN_Timer.c ****         (void)CY_GET_REG16(CAN_Timer_COUNTER_LSB_PTR);
  129              		.loc 1 306 0
  130 0000 014B     		ldr	r3, .L11
  131 0002 1B88     		ldrh	r3, [r3]
@@ -475,47 +475,47 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  145              		.type	CAN_Timer_ReadStatusRegister, %function
  146              	CAN_Timer_ReadStatusRegister:
  147              	.LFB6:
- 307:.\Generated_Source\PSoC5/CAN_Timer.c ****     #else
- 308:.\Generated_Source\PSoC5/CAN_Timer.c ****         (void)CY_GET_REG8(CAN_Timer_COUNTER_LSB_PTR_8BIT);
- 309:.\Generated_Source\PSoC5/CAN_Timer.c ****     #endif/* (CAN_Timer_UsingFixedFunction) */
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 9
+ 307:Generated_Source\PSoC5/CAN_Timer.c ****     #else
+ 308:Generated_Source\PSoC5/CAN_Timer.c ****         (void)CY_GET_REG8(CAN_Timer_COUNTER_LSB_PTR_8BIT);
+ 309:Generated_Source\PSoC5/CAN_Timer.c ****     #endif/* (CAN_Timer_UsingFixedFunction) */
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 9
 
 
- 310:.\Generated_Source\PSoC5/CAN_Timer.c ****     /* Capture Data is now in the FIFO */
- 311:.\Generated_Source\PSoC5/CAN_Timer.c **** }
- 312:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 313:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 314:.\Generated_Source\PSoC5/CAN_Timer.c **** /*******************************************************************************
- 315:.\Generated_Source\PSoC5/CAN_Timer.c **** * Function Name: CAN_Timer_ReadStatusRegister
- 316:.\Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************
- 317:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 318:.\Generated_Source\PSoC5/CAN_Timer.c **** * Summary:
- 319:.\Generated_Source\PSoC5/CAN_Timer.c **** *  Reads the status register and returns it's state. This function should use
- 320:.\Generated_Source\PSoC5/CAN_Timer.c **** *  defined types for the bit-field information as the bits in this register may
- 321:.\Generated_Source\PSoC5/CAN_Timer.c **** *  be permuteable.
- 322:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 323:.\Generated_Source\PSoC5/CAN_Timer.c **** * Parameters:
- 324:.\Generated_Source\PSoC5/CAN_Timer.c **** *  void
- 325:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 326:.\Generated_Source\PSoC5/CAN_Timer.c **** * Return:
- 327:.\Generated_Source\PSoC5/CAN_Timer.c **** *  The contents of the status register
- 328:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 329:.\Generated_Source\PSoC5/CAN_Timer.c **** * Side Effects:
- 330:.\Generated_Source\PSoC5/CAN_Timer.c **** *  Status register bits may be clear on read.
- 331:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 332:.\Generated_Source\PSoC5/CAN_Timer.c **** *******************************************************************************/
- 333:.\Generated_Source\PSoC5/CAN_Timer.c **** uint8   CAN_Timer_ReadStatusRegister(void) 
- 334:.\Generated_Source\PSoC5/CAN_Timer.c **** {
+ 310:Generated_Source\PSoC5/CAN_Timer.c ****     /* Capture Data is now in the FIFO */
+ 311:Generated_Source\PSoC5/CAN_Timer.c **** }
+ 312:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 313:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 314:Generated_Source\PSoC5/CAN_Timer.c **** /*******************************************************************************
+ 315:Generated_Source\PSoC5/CAN_Timer.c **** * Function Name: CAN_Timer_ReadStatusRegister
+ 316:Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************
+ 317:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 318:Generated_Source\PSoC5/CAN_Timer.c **** * Summary:
+ 319:Generated_Source\PSoC5/CAN_Timer.c **** *  Reads the status register and returns it's state. This function should use
+ 320:Generated_Source\PSoC5/CAN_Timer.c **** *  defined types for the bit-field information as the bits in this register may
+ 321:Generated_Source\PSoC5/CAN_Timer.c **** *  be permuteable.
+ 322:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 323:Generated_Source\PSoC5/CAN_Timer.c **** * Parameters:
+ 324:Generated_Source\PSoC5/CAN_Timer.c **** *  void
+ 325:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 326:Generated_Source\PSoC5/CAN_Timer.c **** * Return:
+ 327:Generated_Source\PSoC5/CAN_Timer.c **** *  The contents of the status register
+ 328:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 329:Generated_Source\PSoC5/CAN_Timer.c **** * Side Effects:
+ 330:Generated_Source\PSoC5/CAN_Timer.c **** *  Status register bits may be clear on read.
+ 331:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 332:Generated_Source\PSoC5/CAN_Timer.c **** *******************************************************************************/
+ 333:Generated_Source\PSoC5/CAN_Timer.c **** uint8   CAN_Timer_ReadStatusRegister(void) 
+ 334:Generated_Source\PSoC5/CAN_Timer.c **** {
  148              		.loc 1 334 0
  149              		.cfi_startproc
  150              		@ args = 0, pretend = 0, frame = 0
  151              		@ frame_needed = 0, uses_anonymous_args = 0
  152              		@ link register save eliminated.
- 335:.\Generated_Source\PSoC5/CAN_Timer.c ****     return (CAN_Timer_STATUS);
+ 335:Generated_Source\PSoC5/CAN_Timer.c ****     return (CAN_Timer_STATUS);
  153              		.loc 1 335 0
  154 0000 014B     		ldr	r3, .L14
  155 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
- 336:.\Generated_Source\PSoC5/CAN_Timer.c **** }
+ 336:Generated_Source\PSoC5/CAN_Timer.c **** }
  156              		.loc 1 336 0
  157 0004 7047     		bx	lr
  158              	.L15:
@@ -533,44 +533,44 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  170              		.type	CAN_Timer_ReadControlRegister, %function
  171              	CAN_Timer_ReadControlRegister:
  172              	.LFB7:
- 337:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 338:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 339:.\Generated_Source\PSoC5/CAN_Timer.c **** #if (!CAN_Timer_UDB_CONTROL_REG_REMOVED) /* Remove API if control register is unused */
- 340:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 341:.\Generated_Source\PSoC5/CAN_Timer.c **** 
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 10
+ 337:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 338:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 339:Generated_Source\PSoC5/CAN_Timer.c **** #if (!CAN_Timer_UDB_CONTROL_REG_REMOVED) /* Remove API if control register is unused */
+ 340:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 341:Generated_Source\PSoC5/CAN_Timer.c **** 
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 10
 
 
- 342:.\Generated_Source\PSoC5/CAN_Timer.c **** /*******************************************************************************
- 343:.\Generated_Source\PSoC5/CAN_Timer.c **** * Function Name: CAN_Timer_ReadControlRegister
- 344:.\Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************
- 345:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 346:.\Generated_Source\PSoC5/CAN_Timer.c **** * Summary:
- 347:.\Generated_Source\PSoC5/CAN_Timer.c **** *  Reads the control register and returns it's value.
- 348:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 349:.\Generated_Source\PSoC5/CAN_Timer.c **** * Parameters:
- 350:.\Generated_Source\PSoC5/CAN_Timer.c **** *  void
- 351:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 352:.\Generated_Source\PSoC5/CAN_Timer.c **** * Return:
- 353:.\Generated_Source\PSoC5/CAN_Timer.c **** *  The contents of the control register
- 354:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 355:.\Generated_Source\PSoC5/CAN_Timer.c **** *******************************************************************************/
- 356:.\Generated_Source\PSoC5/CAN_Timer.c **** uint8 CAN_Timer_ReadControlRegister(void) 
- 357:.\Generated_Source\PSoC5/CAN_Timer.c **** {
+ 342:Generated_Source\PSoC5/CAN_Timer.c **** /*******************************************************************************
+ 343:Generated_Source\PSoC5/CAN_Timer.c **** * Function Name: CAN_Timer_ReadControlRegister
+ 344:Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************
+ 345:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 346:Generated_Source\PSoC5/CAN_Timer.c **** * Summary:
+ 347:Generated_Source\PSoC5/CAN_Timer.c **** *  Reads the control register and returns it's value.
+ 348:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 349:Generated_Source\PSoC5/CAN_Timer.c **** * Parameters:
+ 350:Generated_Source\PSoC5/CAN_Timer.c **** *  void
+ 351:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 352:Generated_Source\PSoC5/CAN_Timer.c **** * Return:
+ 353:Generated_Source\PSoC5/CAN_Timer.c **** *  The contents of the control register
+ 354:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 355:Generated_Source\PSoC5/CAN_Timer.c **** *******************************************************************************/
+ 356:Generated_Source\PSoC5/CAN_Timer.c **** uint8 CAN_Timer_ReadControlRegister(void) 
+ 357:Generated_Source\PSoC5/CAN_Timer.c **** {
  173              		.loc 1 357 0
  174              		.cfi_startproc
  175              		@ args = 0, pretend = 0, frame = 0
  176              		@ frame_needed = 0, uses_anonymous_args = 0
  177              		@ link register save eliminated.
- 358:.\Generated_Source\PSoC5/CAN_Timer.c ****     #if (!CAN_Timer_UDB_CONTROL_REG_REMOVED) 
- 359:.\Generated_Source\PSoC5/CAN_Timer.c ****         return ((uint8)CAN_Timer_CONTROL);
+ 358:Generated_Source\PSoC5/CAN_Timer.c ****     #if (!CAN_Timer_UDB_CONTROL_REG_REMOVED) 
+ 359:Generated_Source\PSoC5/CAN_Timer.c ****         return ((uint8)CAN_Timer_CONTROL);
  178              		.loc 1 359 0
  179 0000 014B     		ldr	r3, .L17
  180 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
- 360:.\Generated_Source\PSoC5/CAN_Timer.c ****     #else
- 361:.\Generated_Source\PSoC5/CAN_Timer.c ****         return (0);
- 362:.\Generated_Source\PSoC5/CAN_Timer.c ****     #endif /* (!CAN_Timer_UDB_CONTROL_REG_REMOVED) */
- 363:.\Generated_Source\PSoC5/CAN_Timer.c **** }
+ 360:Generated_Source\PSoC5/CAN_Timer.c ****     #else
+ 361:Generated_Source\PSoC5/CAN_Timer.c ****         return (0);
+ 362:Generated_Source\PSoC5/CAN_Timer.c ****     #endif /* (!CAN_Timer_UDB_CONTROL_REG_REMOVED) */
+ 363:Generated_Source\PSoC5/CAN_Timer.c **** }
  181              		.loc 1 363 0
  182 0004 7047     		bx	lr
  183              	.L18:
@@ -588,34 +588,34 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  195              		.type	CAN_Timer_WriteControlRegister, %function
  196              	CAN_Timer_WriteControlRegister:
  197              	.LFB8:
- 364:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 365:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 366:.\Generated_Source\PSoC5/CAN_Timer.c **** /*******************************************************************************
- 367:.\Generated_Source\PSoC5/CAN_Timer.c **** * Function Name: CAN_Timer_WriteControlRegister
- 368:.\Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************
- 369:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 370:.\Generated_Source\PSoC5/CAN_Timer.c **** * Summary:
- 371:.\Generated_Source\PSoC5/CAN_Timer.c **** *  Sets the bit-field of the control register.
- 372:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 373:.\Generated_Source\PSoC5/CAN_Timer.c **** * Parameters:
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 11
+ 364:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 365:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 366:Generated_Source\PSoC5/CAN_Timer.c **** /*******************************************************************************
+ 367:Generated_Source\PSoC5/CAN_Timer.c **** * Function Name: CAN_Timer_WriteControlRegister
+ 368:Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************
+ 369:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 370:Generated_Source\PSoC5/CAN_Timer.c **** * Summary:
+ 371:Generated_Source\PSoC5/CAN_Timer.c **** *  Sets the bit-field of the control register.
+ 372:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 373:Generated_Source\PSoC5/CAN_Timer.c **** * Parameters:
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 11
 
 
- 374:.\Generated_Source\PSoC5/CAN_Timer.c **** *  control: The contents of the control register
- 375:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 376:.\Generated_Source\PSoC5/CAN_Timer.c **** * Return:
- 377:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 378:.\Generated_Source\PSoC5/CAN_Timer.c **** *******************************************************************************/
- 379:.\Generated_Source\PSoC5/CAN_Timer.c **** void CAN_Timer_WriteControlRegister(uint8 control) 
- 380:.\Generated_Source\PSoC5/CAN_Timer.c **** {
+ 374:Generated_Source\PSoC5/CAN_Timer.c **** *  control: The contents of the control register
+ 375:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 376:Generated_Source\PSoC5/CAN_Timer.c **** * Return:
+ 377:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 378:Generated_Source\PSoC5/CAN_Timer.c **** *******************************************************************************/
+ 379:Generated_Source\PSoC5/CAN_Timer.c **** void CAN_Timer_WriteControlRegister(uint8 control) 
+ 380:Generated_Source\PSoC5/CAN_Timer.c **** {
  198              		.loc 1 380 0
  199              		.cfi_startproc
  200              		@ args = 0, pretend = 0, frame = 0
  201              		@ frame_needed = 0, uses_anonymous_args = 0
  202              		@ link register save eliminated.
  203              	.LVL1:
- 381:.\Generated_Source\PSoC5/CAN_Timer.c ****     #if (!CAN_Timer_UDB_CONTROL_REG_REMOVED) 
- 382:.\Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_CONTROL = control;
+ 381:Generated_Source\PSoC5/CAN_Timer.c ****     #if (!CAN_Timer_UDB_CONTROL_REG_REMOVED) 
+ 382:Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_CONTROL = control;
  204              		.loc 1 382 0
  205 0000 014B     		ldr	r3, .L20
  206 0002 1870     		strb	r0, [r3]
@@ -635,47 +635,47 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  220              		.type	CAN_Timer_ReadPeriod, %function
  221              	CAN_Timer_ReadPeriod:
  222              	.LFB9:
- 383:.\Generated_Source\PSoC5/CAN_Timer.c ****     #else
- 384:.\Generated_Source\PSoC5/CAN_Timer.c ****         control = 0u;
- 385:.\Generated_Source\PSoC5/CAN_Timer.c ****     #endif /* (!CAN_Timer_UDB_CONTROL_REG_REMOVED) */
- 386:.\Generated_Source\PSoC5/CAN_Timer.c **** }
- 387:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 388:.\Generated_Source\PSoC5/CAN_Timer.c **** #endif /* Remove API if control register is unused */
- 389:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 390:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 391:.\Generated_Source\PSoC5/CAN_Timer.c **** /*******************************************************************************
- 392:.\Generated_Source\PSoC5/CAN_Timer.c **** * Function Name: CAN_Timer_ReadPeriod
- 393:.\Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************
- 394:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 395:.\Generated_Source\PSoC5/CAN_Timer.c **** * Summary:
- 396:.\Generated_Source\PSoC5/CAN_Timer.c **** *  This function returns the current value of the Period.
- 397:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 398:.\Generated_Source\PSoC5/CAN_Timer.c **** * Parameters:
- 399:.\Generated_Source\PSoC5/CAN_Timer.c **** *  void
- 400:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 401:.\Generated_Source\PSoC5/CAN_Timer.c **** * Return:
- 402:.\Generated_Source\PSoC5/CAN_Timer.c **** *  The present value of the counter.
- 403:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 404:.\Generated_Source\PSoC5/CAN_Timer.c **** *******************************************************************************/
- 405:.\Generated_Source\PSoC5/CAN_Timer.c **** uint8 CAN_Timer_ReadPeriod(void) 
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 12
+ 383:Generated_Source\PSoC5/CAN_Timer.c ****     #else
+ 384:Generated_Source\PSoC5/CAN_Timer.c ****         control = 0u;
+ 385:Generated_Source\PSoC5/CAN_Timer.c ****     #endif /* (!CAN_Timer_UDB_CONTROL_REG_REMOVED) */
+ 386:Generated_Source\PSoC5/CAN_Timer.c **** }
+ 387:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 388:Generated_Source\PSoC5/CAN_Timer.c **** #endif /* Remove API if control register is unused */
+ 389:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 390:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 391:Generated_Source\PSoC5/CAN_Timer.c **** /*******************************************************************************
+ 392:Generated_Source\PSoC5/CAN_Timer.c **** * Function Name: CAN_Timer_ReadPeriod
+ 393:Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************
+ 394:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 395:Generated_Source\PSoC5/CAN_Timer.c **** * Summary:
+ 396:Generated_Source\PSoC5/CAN_Timer.c **** *  This function returns the current value of the Period.
+ 397:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 398:Generated_Source\PSoC5/CAN_Timer.c **** * Parameters:
+ 399:Generated_Source\PSoC5/CAN_Timer.c **** *  void
+ 400:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 401:Generated_Source\PSoC5/CAN_Timer.c **** * Return:
+ 402:Generated_Source\PSoC5/CAN_Timer.c **** *  The present value of the counter.
+ 403:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 404:Generated_Source\PSoC5/CAN_Timer.c **** *******************************************************************************/
+ 405:Generated_Source\PSoC5/CAN_Timer.c **** uint8 CAN_Timer_ReadPeriod(void) 
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 12
 
 
- 406:.\Generated_Source\PSoC5/CAN_Timer.c **** {
+ 406:Generated_Source\PSoC5/CAN_Timer.c **** {
  223              		.loc 1 406 0
  224              		.cfi_startproc
  225              		@ args = 0, pretend = 0, frame = 0
  226              		@ frame_needed = 0, uses_anonymous_args = 0
  227              		@ link register save eliminated.
- 407:.\Generated_Source\PSoC5/CAN_Timer.c ****    #if(CAN_Timer_UsingFixedFunction)
- 408:.\Generated_Source\PSoC5/CAN_Timer.c ****        return ((uint8)CY_GET_REG16(CAN_Timer_PERIOD_LSB_PTR));
+ 407:Generated_Source\PSoC5/CAN_Timer.c ****    #if(CAN_Timer_UsingFixedFunction)
+ 408:Generated_Source\PSoC5/CAN_Timer.c ****        return ((uint8)CY_GET_REG16(CAN_Timer_PERIOD_LSB_PTR));
  228              		.loc 1 408 0
  229 0000 014B     		ldr	r3, .L23
  230 0002 1888     		ldrh	r0, [r3]
- 409:.\Generated_Source\PSoC5/CAN_Timer.c ****    #else
- 410:.\Generated_Source\PSoC5/CAN_Timer.c ****        return (CY_GET_REG8(CAN_Timer_PERIOD_LSB_PTR));
- 411:.\Generated_Source\PSoC5/CAN_Timer.c ****    #endif /* (CAN_Timer_UsingFixedFunction) */
- 412:.\Generated_Source\PSoC5/CAN_Timer.c **** }
+ 409:Generated_Source\PSoC5/CAN_Timer.c ****    #else
+ 410:Generated_Source\PSoC5/CAN_Timer.c ****        return (CY_GET_REG8(CAN_Timer_PERIOD_LSB_PTR));
+ 411:Generated_Source\PSoC5/CAN_Timer.c ****    #endif /* (CAN_Timer_UsingFixedFunction) */
+ 412:Generated_Source\PSoC5/CAN_Timer.c **** }
  231              		.loc 1 412 0
  232 0004 C0B2     		uxtb	r0, r0
  233 0006 7047     		bx	lr
@@ -694,38 +694,38 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  246              		.type	CAN_Timer_WritePeriod, %function
  247              	CAN_Timer_WritePeriod:
  248              	.LFB10:
- 413:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 414:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 415:.\Generated_Source\PSoC5/CAN_Timer.c **** /*******************************************************************************
- 416:.\Generated_Source\PSoC5/CAN_Timer.c **** * Function Name: CAN_Timer_WritePeriod
- 417:.\Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************
- 418:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 419:.\Generated_Source\PSoC5/CAN_Timer.c **** * Summary:
- 420:.\Generated_Source\PSoC5/CAN_Timer.c **** *  This function is used to change the period of the counter.  The new period
- 421:.\Generated_Source\PSoC5/CAN_Timer.c **** *  will be loaded the next time terminal count is detected.
- 422:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 423:.\Generated_Source\PSoC5/CAN_Timer.c **** * Parameters:
- 424:.\Generated_Source\PSoC5/CAN_Timer.c **** *  period: This value may be between 1 and (2^Resolution)-1.  A value of 0 will
- 425:.\Generated_Source\PSoC5/CAN_Timer.c **** *          result in the counter remaining at zero.
- 426:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 427:.\Generated_Source\PSoC5/CAN_Timer.c **** * Return:
- 428:.\Generated_Source\PSoC5/CAN_Timer.c **** *  void
- 429:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 430:.\Generated_Source\PSoC5/CAN_Timer.c **** *******************************************************************************/
- 431:.\Generated_Source\PSoC5/CAN_Timer.c **** void CAN_Timer_WritePeriod(uint8 period) 
- 432:.\Generated_Source\PSoC5/CAN_Timer.c **** {
+ 413:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 414:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 415:Generated_Source\PSoC5/CAN_Timer.c **** /*******************************************************************************
+ 416:Generated_Source\PSoC5/CAN_Timer.c **** * Function Name: CAN_Timer_WritePeriod
+ 417:Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************
+ 418:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 419:Generated_Source\PSoC5/CAN_Timer.c **** * Summary:
+ 420:Generated_Source\PSoC5/CAN_Timer.c **** *  This function is used to change the period of the counter.  The new period
+ 421:Generated_Source\PSoC5/CAN_Timer.c **** *  will be loaded the next time terminal count is detected.
+ 422:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 423:Generated_Source\PSoC5/CAN_Timer.c **** * Parameters:
+ 424:Generated_Source\PSoC5/CAN_Timer.c **** *  period: This value may be between 1 and (2^Resolution)-1.  A value of 0 will
+ 425:Generated_Source\PSoC5/CAN_Timer.c **** *          result in the counter remaining at zero.
+ 426:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 427:Generated_Source\PSoC5/CAN_Timer.c **** * Return:
+ 428:Generated_Source\PSoC5/CAN_Timer.c **** *  void
+ 429:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 430:Generated_Source\PSoC5/CAN_Timer.c **** *******************************************************************************/
+ 431:Generated_Source\PSoC5/CAN_Timer.c **** void CAN_Timer_WritePeriod(uint8 period) 
+ 432:Generated_Source\PSoC5/CAN_Timer.c **** {
  249              		.loc 1 432 0
  250              		.cfi_startproc
  251              		@ args = 0, pretend = 0, frame = 0
  252              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 13
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 13
 
 
  253              		@ link register save eliminated.
  254              	.LVL2:
- 433:.\Generated_Source\PSoC5/CAN_Timer.c ****     #if(CAN_Timer_UsingFixedFunction)
- 434:.\Generated_Source\PSoC5/CAN_Timer.c ****         uint16 period_temp = (uint16)period;
- 435:.\Generated_Source\PSoC5/CAN_Timer.c ****         CY_SET_REG16(CAN_Timer_PERIOD_LSB_PTR, period_temp);
+ 433:Generated_Source\PSoC5/CAN_Timer.c ****     #if(CAN_Timer_UsingFixedFunction)
+ 434:Generated_Source\PSoC5/CAN_Timer.c ****         uint16 period_temp = (uint16)period;
+ 435:Generated_Source\PSoC5/CAN_Timer.c ****         CY_SET_REG16(CAN_Timer_PERIOD_LSB_PTR, period_temp);
  255              		.loc 1 435 0
  256 0000 014B     		ldr	r3, .L26
  257 0002 1880     		strh	r0, [r3]	@ movhi
@@ -745,45 +745,45 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  271              		.type	CAN_Timer_ReadCapture, %function
  272              	CAN_Timer_ReadCapture:
  273              	.LFB11:
- 436:.\Generated_Source\PSoC5/CAN_Timer.c ****     #else
- 437:.\Generated_Source\PSoC5/CAN_Timer.c ****         CY_SET_REG8(CAN_Timer_PERIOD_LSB_PTR, period);
- 438:.\Generated_Source\PSoC5/CAN_Timer.c ****     #endif /*Write Period value with appropriate resolution suffix depending on UDB or fixed functi
- 439:.\Generated_Source\PSoC5/CAN_Timer.c **** }
- 440:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 441:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 442:.\Generated_Source\PSoC5/CAN_Timer.c **** /*******************************************************************************
- 443:.\Generated_Source\PSoC5/CAN_Timer.c **** * Function Name: CAN_Timer_ReadCapture
- 444:.\Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************
- 445:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 446:.\Generated_Source\PSoC5/CAN_Timer.c **** * Summary:
- 447:.\Generated_Source\PSoC5/CAN_Timer.c **** *  This function returns the last value captured.
- 448:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 449:.\Generated_Source\PSoC5/CAN_Timer.c **** * Parameters:
- 450:.\Generated_Source\PSoC5/CAN_Timer.c **** *  void
- 451:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 452:.\Generated_Source\PSoC5/CAN_Timer.c **** * Return:
- 453:.\Generated_Source\PSoC5/CAN_Timer.c **** *  Present Capture value.
- 454:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 455:.\Generated_Source\PSoC5/CAN_Timer.c **** *******************************************************************************/
- 456:.\Generated_Source\PSoC5/CAN_Timer.c **** uint8 CAN_Timer_ReadCapture(void) 
- 457:.\Generated_Source\PSoC5/CAN_Timer.c **** {
+ 436:Generated_Source\PSoC5/CAN_Timer.c ****     #else
+ 437:Generated_Source\PSoC5/CAN_Timer.c ****         CY_SET_REG8(CAN_Timer_PERIOD_LSB_PTR, period);
+ 438:Generated_Source\PSoC5/CAN_Timer.c ****     #endif /*Write Period value with appropriate resolution suffix depending on UDB or fixed functi
+ 439:Generated_Source\PSoC5/CAN_Timer.c **** }
+ 440:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 441:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 442:Generated_Source\PSoC5/CAN_Timer.c **** /*******************************************************************************
+ 443:Generated_Source\PSoC5/CAN_Timer.c **** * Function Name: CAN_Timer_ReadCapture
+ 444:Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************
+ 445:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 446:Generated_Source\PSoC5/CAN_Timer.c **** * Summary:
+ 447:Generated_Source\PSoC5/CAN_Timer.c **** *  This function returns the last value captured.
+ 448:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 449:Generated_Source\PSoC5/CAN_Timer.c **** * Parameters:
+ 450:Generated_Source\PSoC5/CAN_Timer.c **** *  void
+ 451:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 452:Generated_Source\PSoC5/CAN_Timer.c **** * Return:
+ 453:Generated_Source\PSoC5/CAN_Timer.c **** *  Present Capture value.
+ 454:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 455:Generated_Source\PSoC5/CAN_Timer.c **** *******************************************************************************/
+ 456:Generated_Source\PSoC5/CAN_Timer.c **** uint8 CAN_Timer_ReadCapture(void) 
+ 457:Generated_Source\PSoC5/CAN_Timer.c **** {
  274              		.loc 1 457 0
  275              		.cfi_startproc
  276              		@ args = 0, pretend = 0, frame = 0
  277              		@ frame_needed = 0, uses_anonymous_args = 0
  278              		@ link register save eliminated.
- 458:.\Generated_Source\PSoC5/CAN_Timer.c ****    #if(CAN_Timer_UsingFixedFunction)
- 459:.\Generated_Source\PSoC5/CAN_Timer.c ****        return ((uint8)CY_GET_REG16(CAN_Timer_CAPTURE_LSB_PTR));
+ 458:Generated_Source\PSoC5/CAN_Timer.c ****    #if(CAN_Timer_UsingFixedFunction)
+ 459:Generated_Source\PSoC5/CAN_Timer.c ****        return ((uint8)CY_GET_REG16(CAN_Timer_CAPTURE_LSB_PTR));
  279              		.loc 1 459 0
  280 0000 014B     		ldr	r3, .L29
  281 0002 1888     		ldrh	r0, [r3]
- 460:.\Generated_Source\PSoC5/CAN_Timer.c ****    #else
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 14
+ 460:Generated_Source\PSoC5/CAN_Timer.c ****    #else
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 14
 
 
- 461:.\Generated_Source\PSoC5/CAN_Timer.c ****        return (CY_GET_REG8(CAN_Timer_CAPTURE_LSB_PTR));
- 462:.\Generated_Source\PSoC5/CAN_Timer.c ****    #endif /* (CAN_Timer_UsingFixedFunction) */
- 463:.\Generated_Source\PSoC5/CAN_Timer.c **** }
+ 461:Generated_Source\PSoC5/CAN_Timer.c ****        return (CY_GET_REG8(CAN_Timer_CAPTURE_LSB_PTR));
+ 462:Generated_Source\PSoC5/CAN_Timer.c ****    #endif /* (CAN_Timer_UsingFixedFunction) */
+ 463:Generated_Source\PSoC5/CAN_Timer.c **** }
  282              		.loc 1 463 0
  283 0004 C0B2     		uxtb	r0, r0
  284 0006 7047     		bx	lr
@@ -802,35 +802,35 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  297              		.type	CAN_Timer_WriteCounter, %function
  298              	CAN_Timer_WriteCounter:
  299              	.LFB12:
- 464:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 465:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 466:.\Generated_Source\PSoC5/CAN_Timer.c **** /*******************************************************************************
- 467:.\Generated_Source\PSoC5/CAN_Timer.c **** * Function Name: CAN_Timer_WriteCounter
- 468:.\Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************
- 469:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 470:.\Generated_Source\PSoC5/CAN_Timer.c **** * Summary:
- 471:.\Generated_Source\PSoC5/CAN_Timer.c **** *  This funtion is used to set the counter to a specific value
- 472:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 473:.\Generated_Source\PSoC5/CAN_Timer.c **** * Parameters:
- 474:.\Generated_Source\PSoC5/CAN_Timer.c **** *  counter:  New counter value.
- 475:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 476:.\Generated_Source\PSoC5/CAN_Timer.c **** * Return:
- 477:.\Generated_Source\PSoC5/CAN_Timer.c **** *  void
- 478:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 479:.\Generated_Source\PSoC5/CAN_Timer.c **** *******************************************************************************/
- 480:.\Generated_Source\PSoC5/CAN_Timer.c **** void CAN_Timer_WriteCounter(uint8 counter) 
- 481:.\Generated_Source\PSoC5/CAN_Timer.c **** {
+ 464:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 465:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 466:Generated_Source\PSoC5/CAN_Timer.c **** /*******************************************************************************
+ 467:Generated_Source\PSoC5/CAN_Timer.c **** * Function Name: CAN_Timer_WriteCounter
+ 468:Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************
+ 469:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 470:Generated_Source\PSoC5/CAN_Timer.c **** * Summary:
+ 471:Generated_Source\PSoC5/CAN_Timer.c **** *  This funtion is used to set the counter to a specific value
+ 472:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 473:Generated_Source\PSoC5/CAN_Timer.c **** * Parameters:
+ 474:Generated_Source\PSoC5/CAN_Timer.c **** *  counter:  New counter value.
+ 475:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 476:Generated_Source\PSoC5/CAN_Timer.c **** * Return:
+ 477:Generated_Source\PSoC5/CAN_Timer.c **** *  void
+ 478:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 479:Generated_Source\PSoC5/CAN_Timer.c **** *******************************************************************************/
+ 480:Generated_Source\PSoC5/CAN_Timer.c **** void CAN_Timer_WriteCounter(uint8 counter) 
+ 481:Generated_Source\PSoC5/CAN_Timer.c **** {
  300              		.loc 1 481 0
  301              		.cfi_startproc
  302              		@ args = 0, pretend = 0, frame = 0
  303              		@ frame_needed = 0, uses_anonymous_args = 0
  304              		@ link register save eliminated.
  305              	.LVL3:
- 482:.\Generated_Source\PSoC5/CAN_Timer.c ****    #if(CAN_Timer_UsingFixedFunction)
- 483:.\Generated_Source\PSoC5/CAN_Timer.c ****         /* This functionality is removed until a FixedFunction HW update to
- 484:.\Generated_Source\PSoC5/CAN_Timer.c ****          * allow this register to be written
- 485:.\Generated_Source\PSoC5/CAN_Timer.c ****          */
- 486:.\Generated_Source\PSoC5/CAN_Timer.c ****         CY_SET_REG16(CAN_Timer_COUNTER_LSB_PTR, (uint16)counter);
+ 482:Generated_Source\PSoC5/CAN_Timer.c ****    #if(CAN_Timer_UsingFixedFunction)
+ 483:Generated_Source\PSoC5/CAN_Timer.c ****         /* This functionality is removed until a FixedFunction HW update to
+ 484:Generated_Source\PSoC5/CAN_Timer.c ****          * allow this register to be written
+ 485:Generated_Source\PSoC5/CAN_Timer.c ****          */
+ 486:Generated_Source\PSoC5/CAN_Timer.c ****         CY_SET_REG16(CAN_Timer_COUNTER_LSB_PTR, (uint16)counter);
  306              		.loc 1 486 0
  307 0000 014B     		ldr	r3, .L32
  308 0002 1880     		strh	r0, [r3]	@ movhi
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  310              	.L33:
  311 0006 00BF     		.align	2
  312              	.L32:
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 15
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 15
 
 
  313 0008 064F0040 		.word	1073762054
@@ -853,7 +853,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  322              		.type	CAN_Timer_Init, %function
  323              	CAN_Timer_Init:
  324              	.LFB0:
-  44:.\Generated_Source\PSoC5/CAN_Timer.c ****     #if(!CAN_Timer_UsingFixedFunction)
+  44:Generated_Source\PSoC5/CAN_Timer.c ****     #if(!CAN_Timer_UsingFixedFunction)
  325              		.loc 1 44 0
  326              		.cfi_startproc
  327              		@ args = 0, pretend = 0, frame = 0
@@ -862,59 +862,59 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  330              		.cfi_def_cfa_offset 8
  331              		.cfi_offset 3, -8
  332              		.cfi_offset 14, -4
-  52:.\Generated_Source\PSoC5/CAN_Timer.c **** 
+  52:Generated_Source\PSoC5/CAN_Timer.c **** 
  333              		.loc 1 52 0
  334 0002 154A     		ldr	r2, .L36
  335 0004 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
  336 0006 03F00103 		and	r3, r3, #1
  337 000a 1370     		strb	r3, [r2]
-  60:.\Generated_Source\PSoC5/CAN_Timer.c ****         #endif /* CONTROL3 register exists only in PSoC3 OR PSoC5LP */
+  60:Generated_Source\PSoC5/CAN_Timer.c ****         #endif /* CONTROL3 register exists only in PSoC3 OR PSoC5LP */
  338              		.loc 1 60 0
  339 000c 0232     		adds	r2, r2, #2
  340 000e 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
  341 0010 03F0FC03 		and	r3, r3, #252
  342 0014 1370     		strb	r3, [r2]
- 106:.\Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_RT1 |= CAN_Timer_SYNC;
+ 106:Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_RT1 |= CAN_Timer_SYNC;
  343              		.loc 1 106 0
  344 0016 114B     		ldr	r3, .L36+4
  345 0018 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
  346 001a 02F0CF02 		and	r2, r2, #207
  347 001e 1A70     		strb	r2, [r3]
- 107:.\Generated_Source\PSoC5/CAN_Timer.c **** 
+ 107:Generated_Source\PSoC5/CAN_Timer.c **** 
  348              		.loc 1 107 0
  349 0020 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
  350 0022 42F03002 		orr	r2, r2, #48
  351 0026 1A70     		strb	r2, [r3]
- 110:.\Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_RT1 |= CAN_Timer_SYNCDSI_EN;
+ 110:Generated_Source\PSoC5/CAN_Timer.c ****         CAN_Timer_RT1 |= CAN_Timer_SYNCDSI_EN;
  352              		.loc 1 110 0
  353 0028 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
  354 002a 02F0F002 		and	r2, r2, #240
  355 002e 1A70     		strb	r2, [r3]
- 111:.\Generated_Source\PSoC5/CAN_Timer.c **** 
+ 111:Generated_Source\PSoC5/CAN_Timer.c **** 
  356              		.loc 1 111 0
  357 0030 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
  358 0032 42F00F02 		orr	r2, r2, #15
  359 0036 1A70     		strb	r2, [r3]
- 114:.\Generated_Source\PSoC5/CAN_Timer.c ****     #endif /* Configuring registers of fixed function implementation */
+ 114:Generated_Source\PSoC5/CAN_Timer.c ****     #endif /* Configuring registers of fixed function implementation */
  360              		.loc 1 114 0
  361 0038 094A     		ldr	r2, .L36+8
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 16
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 16
 
 
  362 003a 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
  363 003c 43F00103 		orr	r3, r3, #1
  364 0040 1370     		strb	r3, [r2]
- 118:.\Generated_Source\PSoC5/CAN_Timer.c ****     CAN_Timer_WriteCounter(CAN_Timer_INIT_PERIOD);
+ 118:Generated_Source\PSoC5/CAN_Timer.c ****     CAN_Timer_WriteCounter(CAN_Timer_INIT_PERIOD);
  365              		.loc 1 118 0
  366 0042 0920     		movs	r0, #9
  367 0044 FFF7FEFF 		bl	CAN_Timer_WritePeriod
  368              	.LVL4:
- 119:.\Generated_Source\PSoC5/CAN_Timer.c **** 
+ 119:Generated_Source\PSoC5/CAN_Timer.c **** 
  369              		.loc 1 119 0
  370 0048 0920     		movs	r0, #9
  371 004a FFF7FEFF 		bl	CAN_Timer_WriteCounter
  372              	.LVL5:
- 162:.\Generated_Source\PSoC5/CAN_Timer.c **** }
+ 162:Generated_Source\PSoC5/CAN_Timer.c **** }
  373              		.loc 1 162 0
  374 004e 0020     		movs	r0, #0
  375 0050 FFF7FEFF 		bl	CAN_Timer_SetInterruptMode
@@ -937,7 +937,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  392              		.type	CAN_Timer_Start, %function
  393              	CAN_Timer_Start:
  394              	.LFB2:
- 216:.\Generated_Source\PSoC5/CAN_Timer.c ****     if(CAN_Timer_initVar == 0u)
+ 216:Generated_Source\PSoC5/CAN_Timer.c ****     if(CAN_Timer_initVar == 0u)
  395              		.loc 1 216 0
  396              		.cfi_startproc
  397              		@ args = 0, pretend = 0, frame = 0
@@ -946,25 +946,25 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  400              		.cfi_def_cfa_offset 8
  401              		.cfi_offset 3, -8
  402              		.cfi_offset 14, -4
- 217:.\Generated_Source\PSoC5/CAN_Timer.c ****     {
+ 217:Generated_Source\PSoC5/CAN_Timer.c ****     {
  403              		.loc 1 217 0
  404 0002 054B     		ldr	r3, .L41
  405 0004 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  406 0006 23B9     		cbnz	r3, .L39
- 219:.\Generated_Source\PSoC5/CAN_Timer.c **** 
+ 219:Generated_Source\PSoC5/CAN_Timer.c **** 
  407              		.loc 1 219 0
  408 0008 FFF7FEFF 		bl	CAN_Timer_Init
  409              	.LVL7:
- 221:.\Generated_Source\PSoC5/CAN_Timer.c ****     }
+ 221:Generated_Source\PSoC5/CAN_Timer.c ****     }
  410              		.loc 1 221 0
  411 000c 0122     		movs	r2, #1
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 17
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 17
 
 
  412 000e 024B     		ldr	r3, .L41
  413 0010 1A70     		strb	r2, [r3]
  414              	.L39:
- 225:.\Generated_Source\PSoC5/CAN_Timer.c **** }
+ 225:Generated_Source\PSoC5/CAN_Timer.c **** }
  415              		.loc 1 225 0
  416 0012 FFF7FEFF 		bl	CAN_Timer_Enable
  417              	.LVL8:
@@ -984,59 +984,59 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  431              		.type	CAN_Timer_ReadCounter, %function
  432              	CAN_Timer_ReadCounter:
  433              	.LFB13:
- 487:.\Generated_Source\PSoC5/CAN_Timer.c ****         
- 488:.\Generated_Source\PSoC5/CAN_Timer.c ****     #else
- 489:.\Generated_Source\PSoC5/CAN_Timer.c ****         CY_SET_REG8(CAN_Timer_COUNTER_LSB_PTR, counter);
- 490:.\Generated_Source\PSoC5/CAN_Timer.c ****     #endif /* Set Write Counter only for the UDB implementation (Write Counter not available in fix
- 491:.\Generated_Source\PSoC5/CAN_Timer.c **** }
- 492:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 493:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 494:.\Generated_Source\PSoC5/CAN_Timer.c **** /*******************************************************************************
- 495:.\Generated_Source\PSoC5/CAN_Timer.c **** * Function Name: CAN_Timer_ReadCounter
- 496:.\Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************
- 497:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 498:.\Generated_Source\PSoC5/CAN_Timer.c **** * Summary:
- 499:.\Generated_Source\PSoC5/CAN_Timer.c **** *  This function returns the current counter value.
- 500:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 501:.\Generated_Source\PSoC5/CAN_Timer.c **** * Parameters:
- 502:.\Generated_Source\PSoC5/CAN_Timer.c **** *  void
- 503:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 504:.\Generated_Source\PSoC5/CAN_Timer.c **** * Return:
- 505:.\Generated_Source\PSoC5/CAN_Timer.c **** *  Present compare value.
- 506:.\Generated_Source\PSoC5/CAN_Timer.c **** *
- 507:.\Generated_Source\PSoC5/CAN_Timer.c **** *******************************************************************************/
- 508:.\Generated_Source\PSoC5/CAN_Timer.c **** uint8 CAN_Timer_ReadCounter(void) 
- 509:.\Generated_Source\PSoC5/CAN_Timer.c **** {
+ 487:Generated_Source\PSoC5/CAN_Timer.c ****         
+ 488:Generated_Source\PSoC5/CAN_Timer.c ****     #else
+ 489:Generated_Source\PSoC5/CAN_Timer.c ****         CY_SET_REG8(CAN_Timer_COUNTER_LSB_PTR, counter);
+ 490:Generated_Source\PSoC5/CAN_Timer.c ****     #endif /* Set Write Counter only for the UDB implementation (Write Counter not available in fix
+ 491:Generated_Source\PSoC5/CAN_Timer.c **** }
+ 492:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 493:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 494:Generated_Source\PSoC5/CAN_Timer.c **** /*******************************************************************************
+ 495:Generated_Source\PSoC5/CAN_Timer.c **** * Function Name: CAN_Timer_ReadCounter
+ 496:Generated_Source\PSoC5/CAN_Timer.c **** ********************************************************************************
+ 497:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 498:Generated_Source\PSoC5/CAN_Timer.c **** * Summary:
+ 499:Generated_Source\PSoC5/CAN_Timer.c **** *  This function returns the current counter value.
+ 500:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 501:Generated_Source\PSoC5/CAN_Timer.c **** * Parameters:
+ 502:Generated_Source\PSoC5/CAN_Timer.c **** *  void
+ 503:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 504:Generated_Source\PSoC5/CAN_Timer.c **** * Return:
+ 505:Generated_Source\PSoC5/CAN_Timer.c **** *  Present compare value.
+ 506:Generated_Source\PSoC5/CAN_Timer.c **** *
+ 507:Generated_Source\PSoC5/CAN_Timer.c **** *******************************************************************************/
+ 508:Generated_Source\PSoC5/CAN_Timer.c **** uint8 CAN_Timer_ReadCounter(void) 
+ 509:Generated_Source\PSoC5/CAN_Timer.c **** {
  434              		.loc 1 509 0
  435              		.cfi_startproc
  436              		@ args = 0, pretend = 0, frame = 0
  437              		@ frame_needed = 0, uses_anonymous_args = 0
  438              		@ link register save eliminated.
- 510:.\Generated_Source\PSoC5/CAN_Timer.c ****     /* Force capture by reading Accumulator */
- 511:.\Generated_Source\PSoC5/CAN_Timer.c ****     /* Must first do a software capture to be able to read the counter */
- 512:.\Generated_Source\PSoC5/CAN_Timer.c ****     /* It is up to the user code to make sure there isn't already captured data in the FIFO */
- 513:.\Generated_Source\PSoC5/CAN_Timer.c ****     #if(CAN_Timer_UsingFixedFunction)
- 514:.\Generated_Source\PSoC5/CAN_Timer.c ****         (void)CY_GET_REG16(CAN_Timer_COUNTER_LSB_PTR);
+ 510:Generated_Source\PSoC5/CAN_Timer.c ****     /* Force capture by reading Accumulator */
+ 511:Generated_Source\PSoC5/CAN_Timer.c ****     /* Must first do a software capture to be able to read the counter */
+ 512:Generated_Source\PSoC5/CAN_Timer.c ****     /* It is up to the user code to make sure there isn't already captured data in the FIFO */
+ 513:Generated_Source\PSoC5/CAN_Timer.c ****     #if(CAN_Timer_UsingFixedFunction)
+ 514:Generated_Source\PSoC5/CAN_Timer.c ****         (void)CY_GET_REG16(CAN_Timer_COUNTER_LSB_PTR);
  439              		.loc 1 514 0
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 18
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 18
 
 
  440 0000 024B     		ldr	r3, .L44
  441 0002 1B88     		ldrh	r3, [r3]
- 515:.\Generated_Source\PSoC5/CAN_Timer.c ****     #else
- 516:.\Generated_Source\PSoC5/CAN_Timer.c ****         (void)CY_GET_REG8(CAN_Timer_COUNTER_LSB_PTR_8BIT);
- 517:.\Generated_Source\PSoC5/CAN_Timer.c ****     #endif/* (CAN_Timer_UsingFixedFunction) */
- 518:.\Generated_Source\PSoC5/CAN_Timer.c **** 
- 519:.\Generated_Source\PSoC5/CAN_Timer.c ****     /* Read the data from the FIFO (or capture register for Fixed Function)*/
- 520:.\Generated_Source\PSoC5/CAN_Timer.c ****     #if(CAN_Timer_UsingFixedFunction)
- 521:.\Generated_Source\PSoC5/CAN_Timer.c ****         return ((uint8)CY_GET_REG16(CAN_Timer_CAPTURE_LSB_PTR));
+ 515:Generated_Source\PSoC5/CAN_Timer.c ****     #else
+ 516:Generated_Source\PSoC5/CAN_Timer.c ****         (void)CY_GET_REG8(CAN_Timer_COUNTER_LSB_PTR_8BIT);
+ 517:Generated_Source\PSoC5/CAN_Timer.c ****     #endif/* (CAN_Timer_UsingFixedFunction) */
+ 518:Generated_Source\PSoC5/CAN_Timer.c **** 
+ 519:Generated_Source\PSoC5/CAN_Timer.c ****     /* Read the data from the FIFO (or capture register for Fixed Function)*/
+ 520:Generated_Source\PSoC5/CAN_Timer.c ****     #if(CAN_Timer_UsingFixedFunction)
+ 521:Generated_Source\PSoC5/CAN_Timer.c ****         return ((uint8)CY_GET_REG16(CAN_Timer_CAPTURE_LSB_PTR));
  442              		.loc 1 521 0
  443 0004 024B     		ldr	r3, .L44+4
  444 0006 1888     		ldrh	r0, [r3]
- 522:.\Generated_Source\PSoC5/CAN_Timer.c ****     #else
- 523:.\Generated_Source\PSoC5/CAN_Timer.c ****         return (CY_GET_REG8(CAN_Timer_CAPTURE_LSB_PTR));
- 524:.\Generated_Source\PSoC5/CAN_Timer.c ****     #endif /* (CAN_Timer_UsingFixedFunction) */
- 525:.\Generated_Source\PSoC5/CAN_Timer.c **** }
+ 522:Generated_Source\PSoC5/CAN_Timer.c ****     #else
+ 523:Generated_Source\PSoC5/CAN_Timer.c ****         return (CY_GET_REG8(CAN_Timer_CAPTURE_LSB_PTR));
+ 524:Generated_Source\PSoC5/CAN_Timer.c ****     #endif /* (CAN_Timer_UsingFixedFunction) */
+ 525:Generated_Source\PSoC5/CAN_Timer.c **** }
  445              		.loc 1 525 0
  446 0008 C0B2     		uxtb	r0, r0
  447 000a 7047     		bx	lr
@@ -1057,7 +1057,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  462 0000 00       		.space	1
  463              		.text
  464              	.Letext0:
- 465              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
+ 465              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
  466              		.section	.debug_info,"",%progbits
  467              	.Ldebug_info0:
  468 0000 86020000 		.4byte	0x286
@@ -1065,48 +1065,48 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  470 0006 00000000 		.4byte	.Ldebug_abbrev0
  471 000a 04       		.byte	0x4
  472 000b 01       		.uleb128 0x1
- 473 000c 57010000 		.4byte	.LASF35
+ 473 000c 8F010000 		.4byte	.LASF35
  474 0010 01       		.byte	0x1
- 475 0011 67020000 		.4byte	.LASF36
- 476 0015 06000000 		.4byte	.LASF37
+ 475 0011 2C000000 		.4byte	.LASF36
+ 476 0015 BA000000 		.4byte	.LASF37
  477 0019 00000000 		.4byte	.Ldebug_ranges0+0
  478 001d 00000000 		.4byte	0
  479 0021 00000000 		.4byte	.Ldebug_line0
  480 0025 02       		.uleb128 0x2
  481 0026 01       		.byte	0x1
  482 0027 06       		.byte	0x6
- 483 0028 C3020000 		.4byte	.LASF0
+ 483 0028 D6020000 		.4byte	.LASF0
  484 002c 02       		.uleb128 0x2
  485 002d 01       		.byte	0x1
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 19
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 19
 
 
  486 002e 08       		.byte	0x8
- 487 002f C9000000 		.4byte	.LASF1
+ 487 002f 01010000 		.4byte	.LASF1
  488 0033 02       		.uleb128 0x2
  489 0034 02       		.byte	0x2
  490 0035 05       		.byte	0x5
- 491 0036 8C020000 		.4byte	.LASF2
+ 491 0036 9F020000 		.4byte	.LASF2
  492 003a 02       		.uleb128 0x2
  493 003b 02       		.byte	0x2
  494 003c 07       		.byte	0x7
- 495 003d 7B000000 		.4byte	.LASF3
+ 495 003d 6C000000 		.4byte	.LASF3
  496 0041 02       		.uleb128 0x2
  497 0042 04       		.byte	0x4
  498 0043 05       		.byte	0x5
- 499 0044 A6020000 		.4byte	.LASF4
+ 499 0044 B9020000 		.4byte	.LASF4
  500 0048 02       		.uleb128 0x2
  501 0049 04       		.byte	0x4
  502 004a 07       		.byte	0x7
- 503 004b DC000000 		.4byte	.LASF5
+ 503 004b 14010000 		.4byte	.LASF5
  504 004f 02       		.uleb128 0x2
  505 0050 08       		.byte	0x8
  506 0051 05       		.byte	0x5
- 507 0052 4B020000 		.4byte	.LASF6
+ 507 0052 83020000 		.4byte	.LASF6
  508 0056 02       		.uleb128 0x2
  509 0057 08       		.byte	0x8
  510 0058 07       		.byte	0x7
- 511 0059 1F020000 		.4byte	.LASF7
+ 511 0059 57020000 		.4byte	.LASF7
  512 005d 03       		.uleb128 0x3
  513 005e 04       		.byte	0x4
  514 005f 05       		.byte	0x5
@@ -1114,34 +1114,34 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  516 0064 02       		.uleb128 0x2
  517 0065 04       		.byte	0x4
  518 0066 07       		.byte	0x7
- 519 0067 F4010000 		.4byte	.LASF8
+ 519 0067 2C020000 		.4byte	.LASF8
  520 006b 04       		.uleb128 0x4
- 521 006c EE000000 		.4byte	.LASF9
+ 521 006c 26010000 		.4byte	.LASF9
  522 0070 02       		.byte	0x2
  523 0071 3801     		.2byte	0x138
  524 0073 2C000000 		.4byte	0x2c
  525 0077 04       		.uleb128 0x4
- 526 0078 36010000 		.4byte	.LASF10
+ 526 0078 6E010000 		.4byte	.LASF10
  527 007c 02       		.byte	0x2
  528 007d 3901     		.2byte	0x139
  529 007f 3A000000 		.4byte	0x3a
  530 0083 02       		.uleb128 0x2
  531 0084 04       		.byte	0x4
  532 0085 04       		.byte	0x4
- 533 0086 BB000000 		.4byte	.LASF11
+ 533 0086 AC000000 		.4byte	.LASF11
  534 008a 02       		.uleb128 0x2
  535 008b 08       		.byte	0x8
  536 008c 04       		.byte	0x4
- 537 008d 2F010000 		.4byte	.LASF12
+ 537 008d 67010000 		.4byte	.LASF12
  538 0091 02       		.uleb128 0x2
  539 0092 01       		.byte	0x1
  540 0093 08       		.byte	0x8
- 541 0094 AF020000 		.4byte	.LASF13
+ 541 0094 C2020000 		.4byte	.LASF13
  542 0098 04       		.uleb128 0x4
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 20
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 20
 
 
- 543 0099 D7000000 		.4byte	.LASF14
+ 543 0099 0F010000 		.4byte	.LASF14
  544 009d 02       		.byte	0x2
  545 009e E201     		.2byte	0x1e2
  546 00a0 A4000000 		.4byte	0xa4
@@ -1157,9 +1157,9 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  556 00ba 02       		.uleb128 0x2
  557 00bb 04       		.byte	0x4
  558 00bc 07       		.byte	0x7
- 559 00bd 42020000 		.4byte	.LASF16
+ 559 00bd 7A020000 		.4byte	.LASF16
  560 00c1 06       		.uleb128 0x6
- 561 00c2 38000000 		.4byte	.LASF17
+ 561 00c2 06000000 		.4byte	.LASF17
  562 00c6 01       		.byte	0x1
  563 00c7 B4       		.byte	0xb4
  564 00c8 00000000 		.4byte	.LFB1
@@ -1167,7 +1167,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  566 00d0 01       		.uleb128 0x1
  567 00d1 9C       		.byte	0x9c
  568 00d2 06       		.uleb128 0x6
- 569 00d3 B4020000 		.4byte	.LASF18
+ 569 00d3 C7020000 		.4byte	.LASF18
  570 00d7 01       		.byte	0x1
  571 00d8 F7       		.byte	0xf7
  572 00d9 00000000 		.4byte	.LFB3
@@ -1175,7 +1175,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  574 00e1 01       		.uleb128 0x1
  575 00e2 9C       		.byte	0x9c
  576 00e3 07       		.uleb128 0x7
- 577 00e4 8E000000 		.4byte	.LASF22
+ 577 00e4 7F000000 		.4byte	.LASF22
  578 00e8 01       		.byte	0x1
  579 00e9 1701     		.2byte	0x117
  580 00eb 00000000 		.4byte	.LFB4
@@ -1184,7 +1184,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  583 00f4 9C       		.byte	0x9c
  584 00f5 08010000 		.4byte	0x108
  585 00f9 08       		.uleb128 0x8
- 586 00fa 59020000 		.4byte	.LASF24
+ 586 00fa 91020000 		.4byte	.LASF24
  587 00fe 01       		.byte	0x1
  588 00ff 1701     		.2byte	0x117
  589 0101 6B000000 		.4byte	0x6b
@@ -1192,18 +1192,18 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  591 0106 50       		.byte	0x50
  592 0107 00       		.byte	0
  593 0108 09       		.uleb128 0x9
- 594 0109 3D010000 		.4byte	.LASF19
+ 594 0109 75010000 		.4byte	.LASF19
  595 010d 01       		.byte	0x1
  596 010e 2E01     		.2byte	0x12e
  597 0110 00000000 		.4byte	.LFB5
  598 0114 0C000000 		.4byte	.LFE5-.LFB5
  599 0118 01       		.uleb128 0x1
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 21
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 21
 
 
  600 0119 9C       		.byte	0x9c
  601 011a 0A       		.uleb128 0xa
- 602 011b 12010000 		.4byte	.LASF20
+ 602 011b 4A010000 		.4byte	.LASF20
  603 011f 01       		.byte	0x1
  604 0120 4D01     		.2byte	0x14d
  605 0122 6B000000 		.4byte	0x6b
@@ -1212,7 +1212,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  608 012e 01       		.uleb128 0x1
  609 012f 9C       		.byte	0x9c
  610 0130 0A       		.uleb128 0xa
- 611 0131 01020000 		.4byte	.LASF21
+ 611 0131 39020000 		.4byte	.LASF21
  612 0135 01       		.byte	0x1
  613 0136 6401     		.2byte	0x164
  614 0138 6B000000 		.4byte	0x6b
@@ -1221,7 +1221,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  617 0144 01       		.uleb128 0x1
  618 0145 9C       		.byte	0x9c
  619 0146 07       		.uleb128 0x7
- 620 0147 CF020000 		.4byte	.LASF23
+ 620 0147 E2020000 		.4byte	.LASF23
  621 014b 01       		.byte	0x1
  622 014c 7B01     		.2byte	0x17b
  623 014e 00000000 		.4byte	.LFB8
@@ -1230,7 +1230,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  626 0157 9C       		.byte	0x9c
  627 0158 6B010000 		.4byte	0x16b
  628 015c 08       		.uleb128 0x8
- 629 015d F4000000 		.4byte	.LASF25
+ 629 015d 2C010000 		.4byte	.LASF25
  630 0161 01       		.byte	0x1
  631 0162 7B01     		.2byte	0x17b
  632 0164 6B000000 		.4byte	0x6b
@@ -1238,7 +1238,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  634 0169 50       		.byte	0x50
  635 016a 00       		.byte	0
  636 016b 0A       		.uleb128 0xa
- 637 016c 49000000 		.4byte	.LASF26
+ 637 016c 17000000 		.4byte	.LASF26
  638 0170 01       		.byte	0x1
  639 0171 9501     		.2byte	0x195
  640 0173 6B000000 		.4byte	0x6b
@@ -1247,7 +1247,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  643 017f 01       		.uleb128 0x1
  644 0180 9C       		.byte	0x9c
  645 0181 07       		.uleb128 0x7
- 646 0182 FC000000 		.4byte	.LASF27
+ 646 0182 34010000 		.4byte	.LASF27
  647 0186 01       		.byte	0x1
  648 0187 AF01     		.2byte	0x1af
  649 0189 00000000 		.4byte	.LFB10
@@ -1256,9 +1256,9 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  652 0192 9C       		.byte	0x9c
  653 0193 B4010000 		.4byte	0x1b4
  654 0197 08       		.uleb128 0x8
- 655 0198 74000000 		.4byte	.LASF28
+ 655 0198 65000000 		.4byte	.LASF28
  656 019c 01       		.byte	0x1
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 22
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 22
 
 
  657 019d AF01     		.2byte	0x1af
@@ -1266,7 +1266,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  659 01a3 01       		.uleb128 0x1
  660 01a4 50       		.byte	0x50
  661 01a5 0B       		.uleb128 0xb
- 662 01a6 36020000 		.4byte	.LASF38
+ 662 01a6 6E020000 		.4byte	.LASF38
  663 01aa 01       		.byte	0x1
  664 01ab B201     		.2byte	0x1b2
  665 01ad 77000000 		.4byte	0x77
@@ -1274,7 +1274,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  667 01b2 50       		.byte	0x50
  668 01b3 00       		.byte	0
  669 01b4 0A       		.uleb128 0xa
- 670 01b5 EE020000 		.4byte	.LASF29
+ 670 01b5 01030000 		.4byte	.LASF29
  671 01b9 01       		.byte	0x1
  672 01ba C801     		.2byte	0x1c8
  673 01bc 6B000000 		.4byte	0x6b
@@ -1283,7 +1283,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  676 01c8 01       		.uleb128 0x1
  677 01c9 9C       		.byte	0x9c
  678 01ca 07       		.uleb128 0x7
- 679 01cb 04030000 		.4byte	.LASF30
+ 679 01cb 17030000 		.4byte	.LASF30
  680 01cf 01       		.byte	0x1
  681 01d0 E001     		.2byte	0x1e0
  682 01d2 00000000 		.4byte	.LFB12
@@ -1292,7 +1292,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  685 01db 9C       		.byte	0x9c
  686 01dc EF010000 		.4byte	0x1ef
  687 01e0 08       		.uleb128 0x8
- 688 01e1 C1000000 		.4byte	.LASF31
+ 688 01e1 B2000000 		.4byte	.LASF31
  689 01e5 01       		.byte	0x1
  690 01e6 E001     		.2byte	0x1e0
  691 01e8 6B000000 		.4byte	0x6b
@@ -1300,7 +1300,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  693 01ed 50       		.byte	0x50
  694 01ee 00       		.byte	0
  695 01ef 0C       		.uleb128 0xc
- 696 01f0 E5010000 		.4byte	.LASF32
+ 696 01f0 1D020000 		.4byte	.LASF32
  697 01f4 01       		.byte	0x1
  698 01f5 2B       		.byte	0x2b
  699 01f6 00000000 		.4byte	.LFB0
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  711 0214 01       		.uleb128 0x1
  712 0215 39       		.byte	0x39
  713 0216 00       		.byte	0
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 23
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 23
 
 
  714 0217 0D       		.uleb128 0xd
@@ -1342,7 +1342,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  732 0238 00       		.byte	0
  733 0239 00       		.byte	0
  734 023a 0C       		.uleb128 0xc
- 735 023b 96020000 		.4byte	.LASF33
+ 735 023b A9020000 		.4byte	.LASF33
  736 023f 01       		.byte	0x1
  737 0240 D7       		.byte	0xd7
  738 0241 00000000 		.4byte	.LFB2
@@ -1358,7 +1358,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  748 025d C1000000 		.4byte	0xc1
  749 0261 00       		.byte	0
  750 0262 0A       		.uleb128 0xa
- 751 0263 5E000000 		.4byte	.LASF34
+ 751 0263 4F000000 		.4byte	.LASF34
  752 0267 01       		.byte	0x1
  753 0268 FC01     		.2byte	0x1fc
  754 026a 6B000000 		.4byte	0x6b
@@ -1367,7 +1367,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  757 0276 01       		.uleb128 0x1
  758 0277 9C       		.byte	0x9c
  759 0278 11       		.uleb128 0x11
- 760 0279 A9000000 		.4byte	.LASF39
+ 760 0279 9A000000 		.4byte	.LASF39
  761 027d 01       		.byte	0x1
  762 027e 1A       		.byte	0x1a
  763 027f 6B000000 		.4byte	0x6b
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  768              		.section	.debug_abbrev,"",%progbits
  769              	.Ldebug_abbrev0:
  770 0000 01       		.uleb128 0x1
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 24
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 24
 
 
  771 0001 11       		.uleb128 0x11
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  825 0037 35       		.uleb128 0x35
  826 0038 00       		.byte	0
  827 0039 49       		.uleb128 0x49
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 25
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 25
 
 
  828 003a 13       		.uleb128 0x13
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  882 0072 03       		.uleb128 0x3
  883 0073 0E       		.uleb128 0xe
  884 0074 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 26
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 26
 
 
  885 0075 0B       		.uleb128 0xb
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  939 00ad 19       		.uleb128 0x19
  940 00ae 00       		.byte	0
  941 00af 00       		.byte	0
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 27
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 27
 
 
  942 00b0 0B       		.uleb128 0xb
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  996 00eb 02       		.uleb128 0x2
  997 00ec 18       		.uleb128 0x18
  998 00ed 9142     		.uleb128 0x2111
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 28
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 28
 
 
  999 00ef 18       		.uleb128 0x18
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  1053 002c 0C000000 		.4byte	.LFE5-.LFB5
  1054 0030 00000000 		.4byte	.LFB6
  1055 0034 0C000000 		.4byte	.LFE6-.LFB6
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 29
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 29
 
 
  1056 0038 00000000 		.4byte	.LFB7
@@ -1735,10 +1735,10 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  1107 0074 00000000 		.4byte	0
  1108              		.section	.debug_line,"",%progbits
  1109              	.Ldebug_line0:
- 1110 0000 55010000 		.section	.debug_str,"MS",%progbits,1
- 1110      02004800 
+ 1110 0000 53010000 		.section	.debug_str,"MS",%progbits,1
+ 1110      02004600 
  1110      00000201 
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 30
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 30
 
 
  1110      FB0E0D00 
@@ -1746,212 +1746,216 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 1
  1111              	.LASF15:
  1112 0000 72656731 		.ascii	"reg16\000"
  1112      3600
- 1113              	.LASF37:
- 1114 0006 433A5C55 		.ascii	"C:\\Users\\Sirius\\Desktop\\Dashboard\\Dashboard.cy"
- 1114      73657273 
- 1114      5C536972 
- 1114      6975735C 
- 1114      4465736B 
- 1115 0034 64736E00 		.ascii	"dsn\000"
- 1116              	.LASF17:
- 1117 0038 43414E5F 		.ascii	"CAN_Timer_Enable\000"
- 1117      54696D65 
- 1117      725F456E 
- 1117      61626C65 
- 1117      00
- 1118              	.LASF26:
- 1119 0049 43414E5F 		.ascii	"CAN_Timer_ReadPeriod\000"
- 1119      54696D65 
- 1119      725F5265 
- 1119      61645065 
- 1119      72696F64 
- 1120              	.LASF34:
- 1121 005e 43414E5F 		.ascii	"CAN_Timer_ReadCounter\000"
- 1121      54696D65 
- 1121      725F5265 
- 1121      6164436F 
- 1121      756E7465 
- 1122              	.LASF28:
- 1123 0074 70657269 		.ascii	"period\000"
- 1123      6F6400
- 1124              	.LASF3:
- 1125 007b 73686F72 		.ascii	"short unsigned int\000"
- 1125      7420756E 
- 1125      7369676E 
- 1125      65642069 
- 1125      6E7400
- 1126              	.LASF22:
- 1127 008e 43414E5F 		.ascii	"CAN_Timer_SetInterruptMode\000"
- 1127      54696D65 
- 1127      725F5365 
- 1127      74496E74 
- 1127      65727275 
- 1128              	.LASF39:
- 1129 00a9 43414E5F 		.ascii	"CAN_Timer_initVar\000"
- 1129      54696D65 
- 1129      725F696E 
- 1129      69745661 
- 1129      7200
- 1130              	.LASF11:
- 1131 00bb 666C6F61 		.ascii	"float\000"
- 1131      7400
- 1132              	.LASF31:
- 1133 00c1 636F756E 		.ascii	"counter\000"
- 1133      74657200 
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 31
+ 1113              	.LASF17:
+ 1114 0006 43414E5F 		.ascii	"CAN_Timer_Enable\000"
+ 1114      54696D65 
+ 1114      725F456E 
+ 1114      61626C65 
+ 1114      00
+ 1115              	.LASF26:
+ 1116 0017 43414E5F 		.ascii	"CAN_Timer_ReadPeriod\000"
+ 1116      54696D65 
+ 1116      725F5265 
+ 1116      61645065 
+ 1116      72696F64 
+ 1117              	.LASF36:
+ 1118 002c 47656E65 		.ascii	"Generated_Source\\PSoC5\\CAN_Timer.c\000"
+ 1118      72617465 
+ 1118      645F536F 
+ 1118      75726365 
+ 1118      5C50536F 
+ 1119              	.LASF34:
+ 1120 004f 43414E5F 		.ascii	"CAN_Timer_ReadCounter\000"
+ 1120      54696D65 
+ 1120      725F5265 
+ 1120      6164436F 
+ 1120      756E7465 
+ 1121              	.LASF28:
+ 1122 0065 70657269 		.ascii	"period\000"
+ 1122      6F6400
+ 1123              	.LASF3:
+ 1124 006c 73686F72 		.ascii	"short unsigned int\000"
+ 1124      7420756E 
+ 1124      7369676E 
+ 1124      65642069 
+ 1124      6E7400
+ 1125              	.LASF22:
+ 1126 007f 43414E5F 		.ascii	"CAN_Timer_SetInterruptMode\000"
+ 1126      54696D65 
+ 1126      725F5365 
+ 1126      74496E74 
+ 1126      65727275 
+ 1127              	.LASF39:
+ 1128 009a 43414E5F 		.ascii	"CAN_Timer_initVar\000"
+ 1128      54696D65 
+ 1128      725F696E 
+ 1128      69745661 
+ 1128      7200
+ 1129              	.LASF11:
+ 1130 00ac 666C6F61 		.ascii	"float\000"
+ 1130      7400
+ 1131              	.LASF31:
+ 1132 00b2 636F756E 		.ascii	"counter\000"
+ 1132      74657200 
+ 1133              	.LASF37:
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 31
 
 
- 1134              	.LASF1:
- 1135 00c9 756E7369 		.ascii	"unsigned char\000"
- 1135      676E6564 
- 1135      20636861 
- 1135      7200
- 1136              	.LASF14:
- 1137 00d7 72656738 		.ascii	"reg8\000"
- 1137      00
- 1138              	.LASF5:
- 1139 00dc 6C6F6E67 		.ascii	"long unsigned int\000"
- 1139      20756E73 
- 1139      69676E65 
- 1139      6420696E 
- 1139      7400
- 1140              	.LASF9:
- 1141 00ee 75696E74 		.ascii	"uint8\000"
- 1141      3800
- 1142              	.LASF25:
- 1143 00f4 636F6E74 		.ascii	"control\000"
- 1143      726F6C00 
- 1144              	.LASF27:
- 1145 00fc 43414E5F 		.ascii	"CAN_Timer_WritePeriod\000"
- 1145      54696D65 
- 1145      725F5772 
- 1145      69746550 
- 1145      6572696F 
- 1146              	.LASF20:
- 1147 0112 43414E5F 		.ascii	"CAN_Timer_ReadStatusRegister\000"
+ 1134 00ba 433A5C55 		.ascii	"C:\\Users\\Schuyler\\Documents\\PSoC Creator\\FE3-D"
+ 1134      73657273 
+ 1134      5C536368 
+ 1134      75796C65 
+ 1134      725C446F 
+ 1135 00e8 61736862 		.ascii	"ashboard\\Dashboard.cydsn\000"
+ 1135      6F617264 
+ 1135      5C446173 
+ 1135      68626F61 
+ 1135      72642E63 
+ 1136              	.LASF1:
+ 1137 0101 756E7369 		.ascii	"unsigned char\000"
+ 1137      676E6564 
+ 1137      20636861 
+ 1137      7200
+ 1138              	.LASF14:
+ 1139 010f 72656738 		.ascii	"reg8\000"
+ 1139      00
+ 1140              	.LASF5:
+ 1141 0114 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1141      20756E73 
+ 1141      69676E65 
+ 1141      6420696E 
+ 1141      7400
+ 1142              	.LASF9:
+ 1143 0126 75696E74 		.ascii	"uint8\000"
+ 1143      3800
+ 1144              	.LASF25:
+ 1145 012c 636F6E74 		.ascii	"control\000"
+ 1145      726F6C00 
+ 1146              	.LASF27:
+ 1147 0134 43414E5F 		.ascii	"CAN_Timer_WritePeriod\000"
  1147      54696D65 
- 1147      725F5265 
- 1147      61645374 
- 1147      61747573 
- 1148              	.LASF12:
- 1149 012f 646F7562 		.ascii	"double\000"
- 1149      6C6500
- 1150              	.LASF10:
- 1151 0136 75696E74 		.ascii	"uint16\000"
- 1151      313600
- 1152              	.LASF19:
- 1153 013d 43414E5F 		.ascii	"CAN_Timer_SoftwareCapture\000"
- 1153      54696D65 
- 1153      725F536F 
- 1153      66747761 
- 1153      72654361 
- 1154              	.LASF35:
- 1155 0157 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 1155      4320342E 
- 1155      392E3320 
- 1155      32303135 
- 1155      30333033 
- 1156 018a 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 1156      20726576 
- 1156      6973696F 
- 1156      6E203232 
- 1156      31323230 
- 1157 01bd 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1157      66756E63 
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 32
+ 1147      725F5772 
+ 1147      69746550 
+ 1147      6572696F 
+ 1148              	.LASF20:
+ 1149 014a 43414E5F 		.ascii	"CAN_Timer_ReadStatusRegister\000"
+ 1149      54696D65 
+ 1149      725F5265 
+ 1149      61645374 
+ 1149      61747573 
+ 1150              	.LASF12:
+ 1151 0167 646F7562 		.ascii	"double\000"
+ 1151      6C6500
+ 1152              	.LASF10:
+ 1153 016e 75696E74 		.ascii	"uint16\000"
+ 1153      313600
+ 1154              	.LASF19:
+ 1155 0175 43414E5F 		.ascii	"CAN_Timer_SoftwareCapture\000"
+ 1155      54696D65 
+ 1155      725F536F 
+ 1155      66747761 
+ 1155      72654361 
+ 1156              	.LASF35:
+ 1157 018f 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1157      4320342E 
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 32
 
 
- 1157      74696F6E 
- 1157      2D736563 
- 1157      74696F6E 
- 1158              	.LASF32:
- 1159 01e5 43414E5F 		.ascii	"CAN_Timer_Init\000"
- 1159      54696D65 
- 1159      725F496E 
- 1159      697400
- 1160              	.LASF8:
- 1161 01f4 756E7369 		.ascii	"unsigned int\000"
- 1161      676E6564 
- 1161      20696E74 
- 1161      00
- 1162              	.LASF21:
- 1163 0201 43414E5F 		.ascii	"CAN_Timer_ReadControlRegister\000"
- 1163      54696D65 
- 1163      725F5265 
- 1163      6164436F 
- 1163      6E74726F 
- 1164              	.LASF7:
- 1165 021f 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1165      206C6F6E 
- 1165      6720756E 
- 1165      7369676E 
- 1165      65642069 
- 1166              	.LASF38:
- 1167 0236 70657269 		.ascii	"period_temp\000"
- 1167      6F645F74 
- 1167      656D7000 
- 1168              	.LASF16:
- 1169 0242 73697A65 		.ascii	"sizetype\000"
- 1169      74797065 
- 1169      00
- 1170              	.LASF6:
- 1171 024b 6C6F6E67 		.ascii	"long long int\000"
- 1171      206C6F6E 
- 1171      6720696E 
- 1171      7400
- 1172              	.LASF24:
- 1173 0259 696E7465 		.ascii	"interruptMode\000"
- 1173      72727570 
- 1173      744D6F64 
- 1173      6500
- 1174              	.LASF36:
- 1175 0267 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\CAN_Timer.c\000"
- 1175      6E657261 
- 1175      7465645F 
- 1175      536F7572 
- 1175      63655C50 
+ 1157      392E3320 
+ 1157      32303135 
+ 1157      30333033 
+ 1158 01c2 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1158      20726576 
+ 1158      6973696F 
+ 1158      6E203232 
+ 1158      31323230 
+ 1159 01f5 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1159      66756E63 
+ 1159      74696F6E 
+ 1159      2D736563 
+ 1159      74696F6E 
+ 1160              	.LASF32:
+ 1161 021d 43414E5F 		.ascii	"CAN_Timer_Init\000"
+ 1161      54696D65 
+ 1161      725F496E 
+ 1161      697400
+ 1162              	.LASF8:
+ 1163 022c 756E7369 		.ascii	"unsigned int\000"
+ 1163      676E6564 
+ 1163      20696E74 
+ 1163      00
+ 1164              	.LASF21:
+ 1165 0239 43414E5F 		.ascii	"CAN_Timer_ReadControlRegister\000"
+ 1165      54696D65 
+ 1165      725F5265 
+ 1165      6164436F 
+ 1165      6E74726F 
+ 1166              	.LASF7:
+ 1167 0257 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1167      206C6F6E 
+ 1167      6720756E 
+ 1167      7369676E 
+ 1167      65642069 
+ 1168              	.LASF38:
+ 1169 026e 70657269 		.ascii	"period_temp\000"
+ 1169      6F645F74 
+ 1169      656D7000 
+ 1170              	.LASF16:
+ 1171 027a 73697A65 		.ascii	"sizetype\000"
+ 1171      74797065 
+ 1171      00
+ 1172              	.LASF6:
+ 1173 0283 6C6F6E67 		.ascii	"long long int\000"
+ 1173      206C6F6E 
+ 1173      6720696E 
+ 1173      7400
+ 1174              	.LASF24:
+ 1175 0291 696E7465 		.ascii	"interruptMode\000"
+ 1175      72727570 
+ 1175      744D6F64 
+ 1175      6500
  1176              	.LASF2:
- 1177 028c 73686F72 		.ascii	"short int\000"
+ 1177 029f 73686F72 		.ascii	"short int\000"
  1177      7420696E 
  1177      7400
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccAwZXvL.s 			page 33
+
+
  1178              	.LASF33:
- 1179 0296 43414E5F 		.ascii	"CAN_Timer_Start\000"
+ 1179 02a9 43414E5F 		.ascii	"CAN_Timer_Start\000"
  1179      54696D65 
  1179      725F5374 
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccY9F6Mf.s 			page 33
-
-
  1179      61727400 
  1180              	.LASF4:
- 1181 02a6 6C6F6E67 		.ascii	"long int\000"
+ 1181 02b9 6C6F6E67 		.ascii	"long int\000"
  1181      20696E74 
  1181      00
  1182              	.LASF13:
- 1183 02af 63686172 		.ascii	"char\000"
+ 1183 02c2 63686172 		.ascii	"char\000"
  1183      00
  1184              	.LASF18:
- 1185 02b4 43414E5F 		.ascii	"CAN_Timer_Stop\000"
+ 1185 02c7 43414E5F 		.ascii	"CAN_Timer_Stop\000"
  1185      54696D65 
  1185      725F5374 
  1185      6F7000
  1186              	.LASF0:
- 1187 02c3 7369676E 		.ascii	"signed char\000"
+ 1187 02d6 7369676E 		.ascii	"signed char\000"
  1187      65642063 
  1187      68617200 
  1188              	.LASF23:
- 1189 02cf 43414E5F 		.ascii	"CAN_Timer_WriteControlRegister\000"
+ 1189 02e2 43414E5F 		.ascii	"CAN_Timer_WriteControlRegister\000"
  1189      54696D65 
  1189      725F5772 
  1189      69746543 
  1189      6F6E7472 
  1190              	.LASF29:
- 1191 02ee 43414E5F 		.ascii	"CAN_Timer_ReadCapture\000"
+ 1191 0301 43414E5F 		.ascii	"CAN_Timer_ReadCapture\000"
  1191      54696D65 
  1191      725F5265 
  1191      61644361 
  1191      70747572 
  1192              	.LASF30:
- 1193 0304 43414E5F 		.ascii	"CAN_Timer_WriteCounter\000"
+ 1193 0317 43414E5F 		.ascii	"CAN_Timer_WriteCounter\000"
  1193      54696D65 
  1193      725F5772 
  1193      69746543 

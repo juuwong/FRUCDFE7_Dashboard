@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccs8HW0b.s 			page 1
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc92ayod.s 			page 1
 
 
    1              		.syntax unified
@@ -26,63 +26,63 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccs8HW0b.s 			page 1
   23              		.type	RGB1_2_Write, %function
   24              	RGB1_2_Write:
   25              	.LFB0:
-  26              		.file 1 ".\\Generated_Source\\PSoC5\\RGB1_2.c"
-   1:.\Generated_Source\PSoC5/RGB1_2.c **** /*******************************************************************************
-   2:.\Generated_Source\PSoC5/RGB1_2.c **** * File Name: RGB1_2.c  
-   3:.\Generated_Source\PSoC5/RGB1_2.c **** * Version 2.10
-   4:.\Generated_Source\PSoC5/RGB1_2.c **** *
-   5:.\Generated_Source\PSoC5/RGB1_2.c **** * Description:
-   6:.\Generated_Source\PSoC5/RGB1_2.c **** *  This file contains API to enable firmware control of a Pins component.
-   7:.\Generated_Source\PSoC5/RGB1_2.c **** *
-   8:.\Generated_Source\PSoC5/RGB1_2.c **** * Note:
-   9:.\Generated_Source\PSoC5/RGB1_2.c **** *
-  10:.\Generated_Source\PSoC5/RGB1_2.c **** ********************************************************************************
-  11:.\Generated_Source\PSoC5/RGB1_2.c **** * Copyright 2008-2014, Cypress Semiconductor Corporation.  All rights reserved.
-  12:.\Generated_Source\PSoC5/RGB1_2.c **** * You may use this file only in accordance with the license, terms, conditions, 
-  13:.\Generated_Source\PSoC5/RGB1_2.c **** * disclaimers, and limitations in the end user license agreement accompanying 
-  14:.\Generated_Source\PSoC5/RGB1_2.c **** * the software package with which this file was provided.
-  15:.\Generated_Source\PSoC5/RGB1_2.c **** *******************************************************************************/
-  16:.\Generated_Source\PSoC5/RGB1_2.c **** 
-  17:.\Generated_Source\PSoC5/RGB1_2.c **** #include "cytypes.h"
-  18:.\Generated_Source\PSoC5/RGB1_2.c **** #include "RGB1_2.h"
-  19:.\Generated_Source\PSoC5/RGB1_2.c **** 
-  20:.\Generated_Source\PSoC5/RGB1_2.c **** /* APIs are not generated for P15[7:6] on PSoC 5 */
-  21:.\Generated_Source\PSoC5/RGB1_2.c **** #if !(CY_PSOC5A &&\
-  22:.\Generated_Source\PSoC5/RGB1_2.c **** 	 RGB1_2__PORT == 15 && ((RGB1_2__MASK & 0xC0) != 0))
-  23:.\Generated_Source\PSoC5/RGB1_2.c **** 
-  24:.\Generated_Source\PSoC5/RGB1_2.c **** 
-  25:.\Generated_Source\PSoC5/RGB1_2.c **** /*******************************************************************************
-  26:.\Generated_Source\PSoC5/RGB1_2.c **** * Function Name: RGB1_2_Write
-  27:.\Generated_Source\PSoC5/RGB1_2.c **** ********************************************************************************
-  28:.\Generated_Source\PSoC5/RGB1_2.c **** *
-  29:.\Generated_Source\PSoC5/RGB1_2.c **** * Summary:
-  30:.\Generated_Source\PSoC5/RGB1_2.c **** *  Assign a new value to the digital port's data output register.  
-  31:.\Generated_Source\PSoC5/RGB1_2.c **** *
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccs8HW0b.s 			page 2
+  26              		.file 1 "Generated_Source\\PSoC5\\RGB1_2.c"
+   1:Generated_Source\PSoC5/RGB1_2.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/RGB1_2.c **** * File Name: RGB1_2.c  
+   3:Generated_Source\PSoC5/RGB1_2.c **** * Version 2.10
+   4:Generated_Source\PSoC5/RGB1_2.c **** *
+   5:Generated_Source\PSoC5/RGB1_2.c **** * Description:
+   6:Generated_Source\PSoC5/RGB1_2.c **** *  This file contains API to enable firmware control of a Pins component.
+   7:Generated_Source\PSoC5/RGB1_2.c **** *
+   8:Generated_Source\PSoC5/RGB1_2.c **** * Note:
+   9:Generated_Source\PSoC5/RGB1_2.c **** *
+  10:Generated_Source\PSoC5/RGB1_2.c **** ********************************************************************************
+  11:Generated_Source\PSoC5/RGB1_2.c **** * Copyright 2008-2014, Cypress Semiconductor Corporation.  All rights reserved.
+  12:Generated_Source\PSoC5/RGB1_2.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  13:Generated_Source\PSoC5/RGB1_2.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  14:Generated_Source\PSoC5/RGB1_2.c **** * the software package with which this file was provided.
+  15:Generated_Source\PSoC5/RGB1_2.c **** *******************************************************************************/
+  16:Generated_Source\PSoC5/RGB1_2.c **** 
+  17:Generated_Source\PSoC5/RGB1_2.c **** #include "cytypes.h"
+  18:Generated_Source\PSoC5/RGB1_2.c **** #include "RGB1_2.h"
+  19:Generated_Source\PSoC5/RGB1_2.c **** 
+  20:Generated_Source\PSoC5/RGB1_2.c **** /* APIs are not generated for P15[7:6] on PSoC 5 */
+  21:Generated_Source\PSoC5/RGB1_2.c **** #if !(CY_PSOC5A &&\
+  22:Generated_Source\PSoC5/RGB1_2.c **** 	 RGB1_2__PORT == 15 && ((RGB1_2__MASK & 0xC0) != 0))
+  23:Generated_Source\PSoC5/RGB1_2.c **** 
+  24:Generated_Source\PSoC5/RGB1_2.c **** 
+  25:Generated_Source\PSoC5/RGB1_2.c **** /*******************************************************************************
+  26:Generated_Source\PSoC5/RGB1_2.c **** * Function Name: RGB1_2_Write
+  27:Generated_Source\PSoC5/RGB1_2.c **** ********************************************************************************
+  28:Generated_Source\PSoC5/RGB1_2.c **** *
+  29:Generated_Source\PSoC5/RGB1_2.c **** * Summary:
+  30:Generated_Source\PSoC5/RGB1_2.c **** *  Assign a new value to the digital port's data output register.  
+  31:Generated_Source\PSoC5/RGB1_2.c **** *
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc92ayod.s 			page 2
 
 
-  32:.\Generated_Source\PSoC5/RGB1_2.c **** * Parameters:  
-  33:.\Generated_Source\PSoC5/RGB1_2.c **** *  prtValue:  The value to be assigned to the Digital Port. 
-  34:.\Generated_Source\PSoC5/RGB1_2.c **** *
-  35:.\Generated_Source\PSoC5/RGB1_2.c **** * Return: 
-  36:.\Generated_Source\PSoC5/RGB1_2.c **** *  None
-  37:.\Generated_Source\PSoC5/RGB1_2.c **** *  
-  38:.\Generated_Source\PSoC5/RGB1_2.c **** *******************************************************************************/
-  39:.\Generated_Source\PSoC5/RGB1_2.c **** void RGB1_2_Write(uint8 value) 
-  40:.\Generated_Source\PSoC5/RGB1_2.c **** {
+  32:Generated_Source\PSoC5/RGB1_2.c **** * Parameters:  
+  33:Generated_Source\PSoC5/RGB1_2.c **** *  prtValue:  The value to be assigned to the Digital Port. 
+  34:Generated_Source\PSoC5/RGB1_2.c **** *
+  35:Generated_Source\PSoC5/RGB1_2.c **** * Return: 
+  36:Generated_Source\PSoC5/RGB1_2.c **** *  None
+  37:Generated_Source\PSoC5/RGB1_2.c **** *  
+  38:Generated_Source\PSoC5/RGB1_2.c **** *******************************************************************************/
+  39:Generated_Source\PSoC5/RGB1_2.c **** void RGB1_2_Write(uint8 value) 
+  40:Generated_Source\PSoC5/RGB1_2.c **** {
   27              		.loc 1 40 0
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
   30              		@ frame_needed = 0, uses_anonymous_args = 0
   31              		@ link register save eliminated.
   32              	.LVL0:
-  41:.\Generated_Source\PSoC5/RGB1_2.c ****     uint8 staticBits = (RGB1_2_DR & (uint8)(~RGB1_2_MASK));
+  41:Generated_Source\PSoC5/RGB1_2.c ****     uint8 staticBits = (RGB1_2_DR & (uint8)(~RGB1_2_MASK));
   33              		.loc 1 41 0
   34 0000 044A     		ldr	r2, .L2
   35 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
   36 0004 03F07F03 		and	r3, r3, #127
   37              	.LVL1:
-  42:.\Generated_Source\PSoC5/RGB1_2.c ****     RGB1_2_DR = staticBits | ((uint8)(value << RGB1_2_SHIFT) & RGB1_2_MASK);
+  42:Generated_Source\PSoC5/RGB1_2.c ****     RGB1_2_DR = staticBits | ((uint8)(value << RGB1_2_SHIFT) & RGB1_2_MASK);
   38              		.loc 1 42 0
   39 0008 C001     		lsls	r0, r0, #7
   40              	.LVL2:
@@ -106,44 +106,44 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccs8HW0b.s 			page 1
   58              		.type	RGB1_2_SetDriveMode, %function
   59              	RGB1_2_SetDriveMode:
   60              	.LFB1:
-  43:.\Generated_Source\PSoC5/RGB1_2.c **** }
-  44:.\Generated_Source\PSoC5/RGB1_2.c **** 
-  45:.\Generated_Source\PSoC5/RGB1_2.c **** 
-  46:.\Generated_Source\PSoC5/RGB1_2.c **** /*******************************************************************************
-  47:.\Generated_Source\PSoC5/RGB1_2.c **** * Function Name: RGB1_2_SetDriveMode
-  48:.\Generated_Source\PSoC5/RGB1_2.c **** ********************************************************************************
-  49:.\Generated_Source\PSoC5/RGB1_2.c **** *
-  50:.\Generated_Source\PSoC5/RGB1_2.c **** * Summary:
-  51:.\Generated_Source\PSoC5/RGB1_2.c **** *  Change the drive mode on the pins of the port.
-  52:.\Generated_Source\PSoC5/RGB1_2.c **** * 
-  53:.\Generated_Source\PSoC5/RGB1_2.c **** * Parameters:  
-  54:.\Generated_Source\PSoC5/RGB1_2.c **** *  mode:  Change the pins to one of the following drive modes.
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccs8HW0b.s 			page 3
+  43:Generated_Source\PSoC5/RGB1_2.c **** }
+  44:Generated_Source\PSoC5/RGB1_2.c **** 
+  45:Generated_Source\PSoC5/RGB1_2.c **** 
+  46:Generated_Source\PSoC5/RGB1_2.c **** /*******************************************************************************
+  47:Generated_Source\PSoC5/RGB1_2.c **** * Function Name: RGB1_2_SetDriveMode
+  48:Generated_Source\PSoC5/RGB1_2.c **** ********************************************************************************
+  49:Generated_Source\PSoC5/RGB1_2.c **** *
+  50:Generated_Source\PSoC5/RGB1_2.c **** * Summary:
+  51:Generated_Source\PSoC5/RGB1_2.c **** *  Change the drive mode on the pins of the port.
+  52:Generated_Source\PSoC5/RGB1_2.c **** * 
+  53:Generated_Source\PSoC5/RGB1_2.c **** * Parameters:  
+  54:Generated_Source\PSoC5/RGB1_2.c **** *  mode:  Change the pins to one of the following drive modes.
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc92ayod.s 			page 3
 
 
-  55:.\Generated_Source\PSoC5/RGB1_2.c **** *
-  56:.\Generated_Source\PSoC5/RGB1_2.c **** *  RGB1_2_DM_STRONG     Strong Drive 
-  57:.\Generated_Source\PSoC5/RGB1_2.c **** *  RGB1_2_DM_OD_HI      Open Drain, Drives High 
-  58:.\Generated_Source\PSoC5/RGB1_2.c **** *  RGB1_2_DM_OD_LO      Open Drain, Drives Low 
-  59:.\Generated_Source\PSoC5/RGB1_2.c **** *  RGB1_2_DM_RES_UP     Resistive Pull Up 
-  60:.\Generated_Source\PSoC5/RGB1_2.c **** *  RGB1_2_DM_RES_DWN    Resistive Pull Down 
-  61:.\Generated_Source\PSoC5/RGB1_2.c **** *  RGB1_2_DM_RES_UPDWN  Resistive Pull Up/Down 
-  62:.\Generated_Source\PSoC5/RGB1_2.c **** *  RGB1_2_DM_DIG_HIZ    High Impedance Digital 
-  63:.\Generated_Source\PSoC5/RGB1_2.c **** *  RGB1_2_DM_ALG_HIZ    High Impedance Analog 
-  64:.\Generated_Source\PSoC5/RGB1_2.c **** *
-  65:.\Generated_Source\PSoC5/RGB1_2.c **** * Return: 
-  66:.\Generated_Source\PSoC5/RGB1_2.c **** *  None
-  67:.\Generated_Source\PSoC5/RGB1_2.c **** *
-  68:.\Generated_Source\PSoC5/RGB1_2.c **** *******************************************************************************/
-  69:.\Generated_Source\PSoC5/RGB1_2.c **** void RGB1_2_SetDriveMode(uint8 mode) 
-  70:.\Generated_Source\PSoC5/RGB1_2.c **** {
+  55:Generated_Source\PSoC5/RGB1_2.c **** *
+  56:Generated_Source\PSoC5/RGB1_2.c **** *  RGB1_2_DM_STRONG     Strong Drive 
+  57:Generated_Source\PSoC5/RGB1_2.c **** *  RGB1_2_DM_OD_HI      Open Drain, Drives High 
+  58:Generated_Source\PSoC5/RGB1_2.c **** *  RGB1_2_DM_OD_LO      Open Drain, Drives Low 
+  59:Generated_Source\PSoC5/RGB1_2.c **** *  RGB1_2_DM_RES_UP     Resistive Pull Up 
+  60:Generated_Source\PSoC5/RGB1_2.c **** *  RGB1_2_DM_RES_DWN    Resistive Pull Down 
+  61:Generated_Source\PSoC5/RGB1_2.c **** *  RGB1_2_DM_RES_UPDWN  Resistive Pull Up/Down 
+  62:Generated_Source\PSoC5/RGB1_2.c **** *  RGB1_2_DM_DIG_HIZ    High Impedance Digital 
+  63:Generated_Source\PSoC5/RGB1_2.c **** *  RGB1_2_DM_ALG_HIZ    High Impedance Analog 
+  64:Generated_Source\PSoC5/RGB1_2.c **** *
+  65:Generated_Source\PSoC5/RGB1_2.c **** * Return: 
+  66:Generated_Source\PSoC5/RGB1_2.c **** *  None
+  67:Generated_Source\PSoC5/RGB1_2.c **** *
+  68:Generated_Source\PSoC5/RGB1_2.c **** *******************************************************************************/
+  69:Generated_Source\PSoC5/RGB1_2.c **** void RGB1_2_SetDriveMode(uint8 mode) 
+  70:Generated_Source\PSoC5/RGB1_2.c **** {
   61              		.loc 1 70 0
   62              		.cfi_startproc
   63              		@ args = 0, pretend = 0, frame = 0
   64              		@ frame_needed = 0, uses_anonymous_args = 0
   65              		@ link register save eliminated.
   66              	.LVL4:
-  71:.\Generated_Source\PSoC5/RGB1_2.c **** 	CyPins_SetPinDriveMode(RGB1_2_0, mode);
+  71:Generated_Source\PSoC5/RGB1_2.c **** 	CyPins_SetPinDriveMode(RGB1_2_0, mode);
   67              		.loc 1 71 0
   68 0000 044A     		ldr	r2, .L5
   69 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
@@ -168,42 +168,42 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccs8HW0b.s 			page 1
   88              		.type	RGB1_2_Read, %function
   89              	RGB1_2_Read:
   90              	.LFB2:
-  72:.\Generated_Source\PSoC5/RGB1_2.c **** }
-  73:.\Generated_Source\PSoC5/RGB1_2.c **** 
-  74:.\Generated_Source\PSoC5/RGB1_2.c **** 
-  75:.\Generated_Source\PSoC5/RGB1_2.c **** /*******************************************************************************
-  76:.\Generated_Source\PSoC5/RGB1_2.c **** * Function Name: RGB1_2_Read
-  77:.\Generated_Source\PSoC5/RGB1_2.c **** ********************************************************************************
-  78:.\Generated_Source\PSoC5/RGB1_2.c **** *
-  79:.\Generated_Source\PSoC5/RGB1_2.c **** * Summary:
-  80:.\Generated_Source\PSoC5/RGB1_2.c **** *  Read the current value on the pins of the Digital Port in right justified 
-  81:.\Generated_Source\PSoC5/RGB1_2.c **** *  form.
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccs8HW0b.s 			page 4
+  72:Generated_Source\PSoC5/RGB1_2.c **** }
+  73:Generated_Source\PSoC5/RGB1_2.c **** 
+  74:Generated_Source\PSoC5/RGB1_2.c **** 
+  75:Generated_Source\PSoC5/RGB1_2.c **** /*******************************************************************************
+  76:Generated_Source\PSoC5/RGB1_2.c **** * Function Name: RGB1_2_Read
+  77:Generated_Source\PSoC5/RGB1_2.c **** ********************************************************************************
+  78:Generated_Source\PSoC5/RGB1_2.c **** *
+  79:Generated_Source\PSoC5/RGB1_2.c **** * Summary:
+  80:Generated_Source\PSoC5/RGB1_2.c **** *  Read the current value on the pins of the Digital Port in right justified 
+  81:Generated_Source\PSoC5/RGB1_2.c **** *  form.
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc92ayod.s 			page 4
 
 
-  82:.\Generated_Source\PSoC5/RGB1_2.c **** *
-  83:.\Generated_Source\PSoC5/RGB1_2.c **** * Parameters:  
-  84:.\Generated_Source\PSoC5/RGB1_2.c **** *  None
-  85:.\Generated_Source\PSoC5/RGB1_2.c **** *
-  86:.\Generated_Source\PSoC5/RGB1_2.c **** * Return: 
-  87:.\Generated_Source\PSoC5/RGB1_2.c **** *  Returns the current value of the Digital Port as a right justified number
-  88:.\Generated_Source\PSoC5/RGB1_2.c **** *  
-  89:.\Generated_Source\PSoC5/RGB1_2.c **** * Note:
-  90:.\Generated_Source\PSoC5/RGB1_2.c **** *  Macro RGB1_2_ReadPS calls this function. 
-  91:.\Generated_Source\PSoC5/RGB1_2.c **** *  
-  92:.\Generated_Source\PSoC5/RGB1_2.c **** *******************************************************************************/
-  93:.\Generated_Source\PSoC5/RGB1_2.c **** uint8 RGB1_2_Read(void) 
-  94:.\Generated_Source\PSoC5/RGB1_2.c **** {
+  82:Generated_Source\PSoC5/RGB1_2.c **** *
+  83:Generated_Source\PSoC5/RGB1_2.c **** * Parameters:  
+  84:Generated_Source\PSoC5/RGB1_2.c **** *  None
+  85:Generated_Source\PSoC5/RGB1_2.c **** *
+  86:Generated_Source\PSoC5/RGB1_2.c **** * Return: 
+  87:Generated_Source\PSoC5/RGB1_2.c **** *  Returns the current value of the Digital Port as a right justified number
+  88:Generated_Source\PSoC5/RGB1_2.c **** *  
+  89:Generated_Source\PSoC5/RGB1_2.c **** * Note:
+  90:Generated_Source\PSoC5/RGB1_2.c **** *  Macro RGB1_2_ReadPS calls this function. 
+  91:Generated_Source\PSoC5/RGB1_2.c **** *  
+  92:Generated_Source\PSoC5/RGB1_2.c **** *******************************************************************************/
+  93:Generated_Source\PSoC5/RGB1_2.c **** uint8 RGB1_2_Read(void) 
+  94:Generated_Source\PSoC5/RGB1_2.c **** {
   91              		.loc 1 94 0
   92              		.cfi_startproc
   93              		@ args = 0, pretend = 0, frame = 0
   94              		@ frame_needed = 0, uses_anonymous_args = 0
   95              		@ link register save eliminated.
-  95:.\Generated_Source\PSoC5/RGB1_2.c ****     return (RGB1_2_PS & RGB1_2_MASK) >> RGB1_2_SHIFT;
+  95:Generated_Source\PSoC5/RGB1_2.c ****     return (RGB1_2_PS & RGB1_2_MASK) >> RGB1_2_SHIFT;
   96              		.loc 1 95 0
   97 0000 014B     		ldr	r3, .L8
   98 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
-  96:.\Generated_Source\PSoC5/RGB1_2.c **** }
+  96:Generated_Source\PSoC5/RGB1_2.c **** }
   99              		.loc 1 96 0
  100 0004 C009     		lsrs	r0, r0, #7
  101 0006 7047     		bx	lr
@@ -222,37 +222,37 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccs8HW0b.s 			page 1
  114              		.type	RGB1_2_ReadDataReg, %function
  115              	RGB1_2_ReadDataReg:
  116              	.LFB3:
-  97:.\Generated_Source\PSoC5/RGB1_2.c **** 
-  98:.\Generated_Source\PSoC5/RGB1_2.c **** 
-  99:.\Generated_Source\PSoC5/RGB1_2.c **** /*******************************************************************************
- 100:.\Generated_Source\PSoC5/RGB1_2.c **** * Function Name: RGB1_2_ReadDataReg
- 101:.\Generated_Source\PSoC5/RGB1_2.c **** ********************************************************************************
- 102:.\Generated_Source\PSoC5/RGB1_2.c **** *
- 103:.\Generated_Source\PSoC5/RGB1_2.c **** * Summary:
- 104:.\Generated_Source\PSoC5/RGB1_2.c **** *  Read the current value assigned to a Digital Port's data output register
- 105:.\Generated_Source\PSoC5/RGB1_2.c **** *
- 106:.\Generated_Source\PSoC5/RGB1_2.c **** * Parameters:  
- 107:.\Generated_Source\PSoC5/RGB1_2.c **** *  None 
- 108:.\Generated_Source\PSoC5/RGB1_2.c **** *
- 109:.\Generated_Source\PSoC5/RGB1_2.c **** * Return: 
- 110:.\Generated_Source\PSoC5/RGB1_2.c **** *  Returns the current value assigned to the Digital Port's data output register
- 111:.\Generated_Source\PSoC5/RGB1_2.c **** *  
- 112:.\Generated_Source\PSoC5/RGB1_2.c **** *******************************************************************************/
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccs8HW0b.s 			page 5
+  97:Generated_Source\PSoC5/RGB1_2.c **** 
+  98:Generated_Source\PSoC5/RGB1_2.c **** 
+  99:Generated_Source\PSoC5/RGB1_2.c **** /*******************************************************************************
+ 100:Generated_Source\PSoC5/RGB1_2.c **** * Function Name: RGB1_2_ReadDataReg
+ 101:Generated_Source\PSoC5/RGB1_2.c **** ********************************************************************************
+ 102:Generated_Source\PSoC5/RGB1_2.c **** *
+ 103:Generated_Source\PSoC5/RGB1_2.c **** * Summary:
+ 104:Generated_Source\PSoC5/RGB1_2.c **** *  Read the current value assigned to a Digital Port's data output register
+ 105:Generated_Source\PSoC5/RGB1_2.c **** *
+ 106:Generated_Source\PSoC5/RGB1_2.c **** * Parameters:  
+ 107:Generated_Source\PSoC5/RGB1_2.c **** *  None 
+ 108:Generated_Source\PSoC5/RGB1_2.c **** *
+ 109:Generated_Source\PSoC5/RGB1_2.c **** * Return: 
+ 110:Generated_Source\PSoC5/RGB1_2.c **** *  Returns the current value assigned to the Digital Port's data output register
+ 111:Generated_Source\PSoC5/RGB1_2.c **** *  
+ 112:Generated_Source\PSoC5/RGB1_2.c **** *******************************************************************************/
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc92ayod.s 			page 5
 
 
- 113:.\Generated_Source\PSoC5/RGB1_2.c **** uint8 RGB1_2_ReadDataReg(void) 
- 114:.\Generated_Source\PSoC5/RGB1_2.c **** {
+ 113:Generated_Source\PSoC5/RGB1_2.c **** uint8 RGB1_2_ReadDataReg(void) 
+ 114:Generated_Source\PSoC5/RGB1_2.c **** {
  117              		.loc 1 114 0
  118              		.cfi_startproc
  119              		@ args = 0, pretend = 0, frame = 0
  120              		@ frame_needed = 0, uses_anonymous_args = 0
  121              		@ link register save eliminated.
- 115:.\Generated_Source\PSoC5/RGB1_2.c ****     return (RGB1_2_DR & RGB1_2_MASK) >> RGB1_2_SHIFT;
+ 115:Generated_Source\PSoC5/RGB1_2.c ****     return (RGB1_2_DR & RGB1_2_MASK) >> RGB1_2_SHIFT;
  122              		.loc 1 115 0
  123 0000 014B     		ldr	r3, .L11
  124 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
- 116:.\Generated_Source\PSoC5/RGB1_2.c **** }
+ 116:Generated_Source\PSoC5/RGB1_2.c **** }
  125              		.loc 1 116 0
  126 0004 C009     		lsrs	r0, r0, #7
  127 0006 7047     		bx	lr
@@ -265,7 +265,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccs8HW0b.s 			page 1
  134              		.size	RGB1_2_ReadDataReg, .-RGB1_2_ReadDataReg
  135              		.text
  136              	.Letext0:
- 137              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
+ 137              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
  138              		.section	.debug_info,"",%progbits
  139              	.Ldebug_info0:
  140 0000 1D010000 		.4byte	0x11d
@@ -273,48 +273,48 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccs8HW0b.s 			page 1
  142 0006 00000000 		.4byte	.Ldebug_abbrev0
  143 000a 04       		.byte	0x4
  144 000b 01       		.uleb128 0x1
- 145 000c BB000000 		.4byte	.LASF20
+ 145 000c F0000000 		.4byte	.LASF20
  146 0010 01       		.byte	0x1
- 147 0011 6D010000 		.4byte	.LASF21
- 148 0015 00000000 		.4byte	.LASF22
+ 147 0011 C9000000 		.4byte	.LASF21
+ 148 0015 4A000000 		.4byte	.LASF22
  149 0019 00000000 		.4byte	.Ldebug_ranges0+0
  150 001d 00000000 		.4byte	0
  151 0021 00000000 		.4byte	.Ldebug_line0
  152 0025 02       		.uleb128 0x2
  153 0026 01       		.byte	0x1
  154 0027 06       		.byte	0x6
- 155 0028 CD010000 		.4byte	.LASF0
+ 155 0028 E0010000 		.4byte	.LASF0
  156 002c 02       		.uleb128 0x2
  157 002d 01       		.byte	0x1
  158 002e 08       		.byte	0x8
- 159 002f 7C000000 		.4byte	.LASF1
+ 159 002f 91000000 		.4byte	.LASF1
  160 0033 02       		.uleb128 0x2
  161 0034 02       		.byte	0x2
  162 0035 05       		.byte	0x5
- 163 0036 A7010000 		.4byte	.LASF2
+ 163 0036 BA010000 		.4byte	.LASF2
  164 003a 02       		.uleb128 0x2
  165 003b 02       		.byte	0x2
  166 003c 07       		.byte	0x7
- 167 003d A1000000 		.4byte	.LASF3
+ 167 003d B6000000 		.4byte	.LASF3
  168 0041 02       		.uleb128 0x2
  169 0042 04       		.byte	0x4
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccs8HW0b.s 			page 6
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc92ayod.s 			page 6
 
 
  170 0043 05       		.byte	0x5
- 171 0044 B7010000 		.4byte	.LASF4
+ 171 0044 CA010000 		.4byte	.LASF4
  172 0048 02       		.uleb128 0x2
  173 0049 04       		.byte	0x4
  174 004a 07       		.byte	0x7
- 175 004b 8F000000 		.4byte	.LASF5
+ 175 004b A4000000 		.4byte	.LASF5
  176 004f 02       		.uleb128 0x2
  177 0050 08       		.byte	0x8
  178 0051 05       		.byte	0x5
- 179 0052 94010000 		.4byte	.LASF6
+ 179 0052 A7010000 		.4byte	.LASF6
  180 0056 02       		.uleb128 0x2
  181 0057 08       		.byte	0x8
  182 0058 07       		.byte	0x7
- 183 0059 56010000 		.4byte	.LASF7
+ 183 0059 8B010000 		.4byte	.LASF7
  184 005d 03       		.uleb128 0x3
  185 005e 04       		.byte	0x4
  186 005f 05       		.byte	0x5
@@ -322,33 +322,33 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccs8HW0b.s 			page 1
  188 0064 02       		.uleb128 0x2
  189 0065 04       		.byte	0x4
  190 0066 07       		.byte	0x7
- 191 0067 49010000 		.4byte	.LASF8
+ 191 0067 7E010000 		.4byte	.LASF8
  192 006b 04       		.uleb128 0x4
- 193 006c B1010000 		.4byte	.LASF12
+ 193 006c C4010000 		.4byte	.LASF12
  194 0070 02       		.byte	0x2
  195 0071 3801     		.2byte	0x138
  196 0073 2C000000 		.4byte	0x2c
  197 0077 02       		.uleb128 0x2
  198 0078 04       		.byte	0x4
  199 0079 04       		.byte	0x4
- 200 007a 76000000 		.4byte	.LASF9
+ 200 007a 44000000 		.4byte	.LASF9
  201 007e 02       		.uleb128 0x2
  202 007f 08       		.byte	0x8
  203 0080 04       		.byte	0x4
- 204 0081 B4000000 		.4byte	.LASF10
+ 204 0081 E9000000 		.4byte	.LASF10
  205 0085 02       		.uleb128 0x2
  206 0086 01       		.byte	0x1
  207 0087 08       		.byte	0x8
- 208 0088 A2010000 		.4byte	.LASF11
+ 208 0088 B5010000 		.4byte	.LASF11
  209 008c 04       		.uleb128 0x4
- 210 008d 8A000000 		.4byte	.LASF13
+ 210 008d 9F000000 		.4byte	.LASF13
  211 0091 02       		.byte	0x2
  212 0092 E201     		.2byte	0x1e2
  213 0094 98000000 		.4byte	0x98
  214 0098 05       		.uleb128 0x5
  215 0099 6B000000 		.4byte	0x6b
  216 009d 06       		.uleb128 0x6
- 217 009e C0010000 		.4byte	.LASF14
+ 217 009e D3010000 		.4byte	.LASF14
  218 00a2 01       		.byte	0x1
  219 00a3 27       		.byte	0x27
  220 00a4 00000000 		.4byte	.LFB0
@@ -357,8 +357,8 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccs8HW0b.s 			page 1
  223 00ad 9C       		.byte	0x9c
  224 00ae D1000000 		.4byte	0xd1
  225 00b2 07       		.uleb128 0x7
- 226 00b3 59000000 		.4byte	.LASF16
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccs8HW0b.s 			page 7
+ 226 00b3 27000000 		.4byte	.LASF16
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc92ayod.s 			page 7
 
 
  227 00b7 01       		.byte	0x1
@@ -366,14 +366,14 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccs8HW0b.s 			page 1
  229 00b9 6B000000 		.4byte	0x6b
  230 00bd 00000000 		.4byte	.LLST0
  231 00c1 08       		.uleb128 0x8
- 232 00c2 5F000000 		.4byte	.LASF23
+ 232 00c2 2D000000 		.4byte	.LASF23
  233 00c6 01       		.byte	0x1
  234 00c7 29       		.byte	0x29
  235 00c8 6B000000 		.4byte	0x6b
  236 00cc 21000000 		.4byte	.LLST1
  237 00d0 00       		.byte	0
  238 00d1 06       		.uleb128 0x6
- 239 00d2 32000000 		.4byte	.LASF15
+ 239 00d2 00000000 		.4byte	.LASF15
  240 00d6 01       		.byte	0x1
  241 00d7 45       		.byte	0x45
  242 00d8 00000000 		.4byte	.LFB1
@@ -382,14 +382,14 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccs8HW0b.s 			page 1
  245 00e1 9C       		.byte	0x9c
  246 00e2 F6000000 		.4byte	0xf6
  247 00e6 07       		.uleb128 0x7
- 248 00e7 8F010000 		.4byte	.LASF17
+ 248 00e7 A2010000 		.4byte	.LASF17
  249 00eb 01       		.byte	0x1
  250 00ec 45       		.byte	0x45
  251 00ed 6B000000 		.4byte	0x6b
  252 00f1 34000000 		.4byte	.LLST2
  253 00f5 00       		.byte	0
  254 00f6 09       		.uleb128 0x9
- 255 00f7 6A000000 		.4byte	.LASF18
+ 255 00f7 38000000 		.4byte	.LASF18
  256 00fb 01       		.byte	0x1
  257 00fc 5D       		.byte	0x5d
  258 00fd 6B000000 		.4byte	0x6b
@@ -398,7 +398,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccs8HW0b.s 			page 1
  261 0109 01       		.uleb128 0x1
  262 010a 9C       		.byte	0x9c
  263 010b 09       		.uleb128 0x9
- 264 010c 46000000 		.4byte	.LASF19
+ 264 010c 14000000 		.4byte	.LASF19
  265 0110 01       		.byte	0x1
  266 0111 71       		.byte	0x71
  267 0112 6B000000 		.4byte	0x6b
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccs8HW0b.s 			page 1
  281 0006 0B       		.uleb128 0xb
  282 0007 03       		.uleb128 0x3
  283 0008 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccs8HW0b.s 			page 8
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc92ayod.s 			page 8
 
 
  284 0009 1B       		.uleb128 0x1b
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccs8HW0b.s 			page 1
  338 003f 01       		.byte	0x1
  339 0040 3F       		.uleb128 0x3f
  340 0041 19       		.uleb128 0x19
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccs8HW0b.s 			page 9
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc92ayod.s 			page 9
 
 
  341 0042 03       		.uleb128 0x3
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccs8HW0b.s 			page 1
  395 0079 19       		.uleb128 0x19
  396 007a 03       		.uleb128 0x3
  397 007b 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccs8HW0b.s 			page 10
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc92ayod.s 			page 10
 
 
  398 007c 3A       		.uleb128 0x3a
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccs8HW0b.s 			page 1
  452 004d 00000000 		.4byte	0
  453 0051 00000000 		.4byte	0
  454              		.section	.debug_aranges,"",%progbits
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccs8HW0b.s 			page 11
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc92ayod.s 			page 11
 
 
  455 0000 34000000 		.4byte	0x34
@@ -632,135 +632,139 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccs8HW0b.s 			page 1
  483 0024 00000000 		.4byte	0
  484              		.section	.debug_line,"",%progbits
  485              	.Ldebug_line0:
- 486 0000 91000000 		.section	.debug_str,"MS",%progbits,1
- 486      02004500 
+ 486 0000 8F000000 		.section	.debug_str,"MS",%progbits,1
+ 486      02004300 
  486      00000201 
  486      FB0E0D00 
  486      01010101 
- 487              	.LASF22:
- 488 0000 433A5C55 		.ascii	"C:\\Users\\Sirius\\Desktop\\Dashboard\\Dashboard.cy"
- 488      73657273 
- 488      5C536972 
- 488      6975735C 
- 488      4465736B 
- 489 002e 64736E00 		.ascii	"dsn\000"
- 490              	.LASF15:
- 491 0032 52474231 		.ascii	"RGB1_2_SetDriveMode\000"
- 491      5F325F53 
- 491      65744472 
- 491      6976654D 
- 491      6F646500 
- 492              	.LASF19:
- 493 0046 52474231 		.ascii	"RGB1_2_ReadDataReg\000"
- 493      5F325F52 
- 493      65616444 
- 493      61746152 
- 493      656700
- 494              	.LASF16:
- 495 0059 76616C75 		.ascii	"value\000"
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccs8HW0b.s 			page 12
+ 487              	.LASF15:
+ 488 0000 52474231 		.ascii	"RGB1_2_SetDriveMode\000"
+ 488      5F325F53 
+ 488      65744472 
+ 488      6976654D 
+ 488      6F646500 
+ 489              	.LASF19:
+ 490 0014 52474231 		.ascii	"RGB1_2_ReadDataReg\000"
+ 490      5F325F52 
+ 490      65616444 
+ 490      61746152 
+ 490      656700
+ 491              	.LASF16:
+ 492 0027 76616C75 		.ascii	"value\000"
+ 492      6500
+ 493              	.LASF23:
+ 494 002d 73746174 		.ascii	"staticBits\000"
+ 494      69634269 
+ 494      747300
+ 495              	.LASF18:
+ 496 0038 52474231 		.ascii	"RGB1_2_Read\000"
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc92ayod.s 			page 12
 
 
- 495      6500
- 496              	.LASF23:
- 497 005f 73746174 		.ascii	"staticBits\000"
- 497      69634269 
- 497      747300
- 498              	.LASF18:
- 499 006a 52474231 		.ascii	"RGB1_2_Read\000"
- 499      5F325F52 
- 499      65616400 
- 500              	.LASF9:
- 501 0076 666C6F61 		.ascii	"float\000"
- 501      7400
+ 496      5F325F52 
+ 496      65616400 
+ 497              	.LASF9:
+ 498 0044 666C6F61 		.ascii	"float\000"
+ 498      7400
+ 499              	.LASF22:
+ 500 004a 433A5C55 		.ascii	"C:\\Users\\Schuyler\\Documents\\PSoC Creator\\FE3-D"
+ 500      73657273 
+ 500      5C536368 
+ 500      75796C65 
+ 500      725C446F 
+ 501 0078 61736862 		.ascii	"ashboard\\Dashboard.cydsn\000"
+ 501      6F617264 
+ 501      5C446173 
+ 501      68626F61 
+ 501      72642E63 
  502              	.LASF1:
- 503 007c 756E7369 		.ascii	"unsigned char\000"
+ 503 0091 756E7369 		.ascii	"unsigned char\000"
  503      676E6564 
  503      20636861 
  503      7200
  504              	.LASF13:
- 505 008a 72656738 		.ascii	"reg8\000"
+ 505 009f 72656738 		.ascii	"reg8\000"
  505      00
  506              	.LASF5:
- 507 008f 6C6F6E67 		.ascii	"long unsigned int\000"
+ 507 00a4 6C6F6E67 		.ascii	"long unsigned int\000"
  507      20756E73 
  507      69676E65 
  507      6420696E 
  507      7400
  508              	.LASF3:
- 509 00a1 73686F72 		.ascii	"short unsigned int\000"
+ 509 00b6 73686F72 		.ascii	"short unsigned int\000"
  509      7420756E 
  509      7369676E 
  509      65642069 
  509      6E7400
- 510              	.LASF10:
- 511 00b4 646F7562 		.ascii	"double\000"
- 511      6C6500
- 512              	.LASF20:
- 513 00bb 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 513      4320342E 
- 513      392E3320 
- 513      32303135 
- 513      30333033 
- 514 00ee 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 514      20726576 
- 514      6973696F 
- 514      6E203232 
- 514      31323230 
- 515 0121 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 515      66756E63 
- 515      74696F6E 
- 515      2D736563 
- 515      74696F6E 
- 516              	.LASF8:
- 517 0149 756E7369 		.ascii	"unsigned int\000"
- 517      676E6564 
- 517      20696E74 
- 517      00
- 518              	.LASF7:
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccs8HW0b.s 			page 13
+ 510              	.LASF21:
+ 511 00c9 47656E65 		.ascii	"Generated_Source\\PSoC5\\RGB1_2.c\000"
+ 511      72617465 
+ 511      645F536F 
+ 511      75726365 
+ 511      5C50536F 
+ 512              	.LASF10:
+ 513 00e9 646F7562 		.ascii	"double\000"
+ 513      6C6500
+ 514              	.LASF20:
+ 515 00f0 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 515      4320342E 
+ 515      392E3320 
+ 515      32303135 
+ 515      30333033 
+ 516 0123 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 516      20726576 
+ 516      6973696F 
+ 516      6E203232 
+ 516      31323230 
+ 517 0156 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc92ayod.s 			page 13
 
 
- 519 0156 6C6F6E67 		.ascii	"long long unsigned int\000"
- 519      206C6F6E 
- 519      6720756E 
- 519      7369676E 
- 519      65642069 
- 520              	.LASF21:
- 521 016d 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\RGB1_2.c\000"
- 521      6E657261 
- 521      7465645F 
- 521      536F7572 
- 521      63655C50 
+ 517      66756E63 
+ 517      74696F6E 
+ 517      2D736563 
+ 517      74696F6E 
+ 518              	.LASF8:
+ 519 017e 756E7369 		.ascii	"unsigned int\000"
+ 519      676E6564 
+ 519      20696E74 
+ 519      00
+ 520              	.LASF7:
+ 521 018b 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 521      206C6F6E 
+ 521      6720756E 
+ 521      7369676E 
+ 521      65642069 
  522              	.LASF17:
- 523 018f 6D6F6465 		.ascii	"mode\000"
+ 523 01a2 6D6F6465 		.ascii	"mode\000"
  523      00
  524              	.LASF6:
- 525 0194 6C6F6E67 		.ascii	"long long int\000"
+ 525 01a7 6C6F6E67 		.ascii	"long long int\000"
  525      206C6F6E 
  525      6720696E 
  525      7400
  526              	.LASF11:
- 527 01a2 63686172 		.ascii	"char\000"
+ 527 01b5 63686172 		.ascii	"char\000"
  527      00
  528              	.LASF2:
- 529 01a7 73686F72 		.ascii	"short int\000"
+ 529 01ba 73686F72 		.ascii	"short int\000"
  529      7420696E 
  529      7400
  530              	.LASF12:
- 531 01b1 75696E74 		.ascii	"uint8\000"
+ 531 01c4 75696E74 		.ascii	"uint8\000"
  531      3800
  532              	.LASF4:
- 533 01b7 6C6F6E67 		.ascii	"long int\000"
+ 533 01ca 6C6F6E67 		.ascii	"long int\000"
  533      20696E74 
  533      00
  534              	.LASF14:
- 535 01c0 52474231 		.ascii	"RGB1_2_Write\000"
+ 535 01d3 52474231 		.ascii	"RGB1_2_Write\000"
  535      5F325F57 
  535      72697465 
  535      00
  536              	.LASF0:
- 537 01cd 7369676E 		.ascii	"signed char\000"
+ 537 01e0 7369676E 		.ascii	"signed char\000"
  537      65642063 
  537      68617200 
  538              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

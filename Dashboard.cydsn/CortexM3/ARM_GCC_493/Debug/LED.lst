@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccERmHqv.s 			page 1
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccUdJeXh.s 			page 1
 
 
    1              		.syntax unified
@@ -26,63 +26,63 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccERmHqv.s 			page 1
   23              		.type	LED_Write, %function
   24              	LED_Write:
   25              	.LFB0:
-  26              		.file 1 ".\\Generated_Source\\PSoC5\\LED.c"
-   1:.\Generated_Source\PSoC5/LED.c **** /*******************************************************************************
-   2:.\Generated_Source\PSoC5/LED.c **** * File Name: LED.c  
-   3:.\Generated_Source\PSoC5/LED.c **** * Version 2.10
-   4:.\Generated_Source\PSoC5/LED.c **** *
-   5:.\Generated_Source\PSoC5/LED.c **** * Description:
-   6:.\Generated_Source\PSoC5/LED.c **** *  This file contains API to enable firmware control of a Pins component.
-   7:.\Generated_Source\PSoC5/LED.c **** *
-   8:.\Generated_Source\PSoC5/LED.c **** * Note:
-   9:.\Generated_Source\PSoC5/LED.c **** *
-  10:.\Generated_Source\PSoC5/LED.c **** ********************************************************************************
-  11:.\Generated_Source\PSoC5/LED.c **** * Copyright 2008-2014, Cypress Semiconductor Corporation.  All rights reserved.
-  12:.\Generated_Source\PSoC5/LED.c **** * You may use this file only in accordance with the license, terms, conditions, 
-  13:.\Generated_Source\PSoC5/LED.c **** * disclaimers, and limitations in the end user license agreement accompanying 
-  14:.\Generated_Source\PSoC5/LED.c **** * the software package with which this file was provided.
-  15:.\Generated_Source\PSoC5/LED.c **** *******************************************************************************/
-  16:.\Generated_Source\PSoC5/LED.c **** 
-  17:.\Generated_Source\PSoC5/LED.c **** #include "cytypes.h"
-  18:.\Generated_Source\PSoC5/LED.c **** #include "LED.h"
-  19:.\Generated_Source\PSoC5/LED.c **** 
-  20:.\Generated_Source\PSoC5/LED.c **** /* APIs are not generated for P15[7:6] on PSoC 5 */
-  21:.\Generated_Source\PSoC5/LED.c **** #if !(CY_PSOC5A &&\
-  22:.\Generated_Source\PSoC5/LED.c **** 	 LED__PORT == 15 && ((LED__MASK & 0xC0) != 0))
-  23:.\Generated_Source\PSoC5/LED.c **** 
-  24:.\Generated_Source\PSoC5/LED.c **** 
-  25:.\Generated_Source\PSoC5/LED.c **** /*******************************************************************************
-  26:.\Generated_Source\PSoC5/LED.c **** * Function Name: LED_Write
-  27:.\Generated_Source\PSoC5/LED.c **** ********************************************************************************
-  28:.\Generated_Source\PSoC5/LED.c **** *
-  29:.\Generated_Source\PSoC5/LED.c **** * Summary:
-  30:.\Generated_Source\PSoC5/LED.c **** *  Assign a new value to the digital port's data output register.  
-  31:.\Generated_Source\PSoC5/LED.c **** *
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccERmHqv.s 			page 2
+  26              		.file 1 "Generated_Source\\PSoC5\\LED.c"
+   1:Generated_Source\PSoC5/LED.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/LED.c **** * File Name: LED.c  
+   3:Generated_Source\PSoC5/LED.c **** * Version 2.10
+   4:Generated_Source\PSoC5/LED.c **** *
+   5:Generated_Source\PSoC5/LED.c **** * Description:
+   6:Generated_Source\PSoC5/LED.c **** *  This file contains API to enable firmware control of a Pins component.
+   7:Generated_Source\PSoC5/LED.c **** *
+   8:Generated_Source\PSoC5/LED.c **** * Note:
+   9:Generated_Source\PSoC5/LED.c **** *
+  10:Generated_Source\PSoC5/LED.c **** ********************************************************************************
+  11:Generated_Source\PSoC5/LED.c **** * Copyright 2008-2014, Cypress Semiconductor Corporation.  All rights reserved.
+  12:Generated_Source\PSoC5/LED.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  13:Generated_Source\PSoC5/LED.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  14:Generated_Source\PSoC5/LED.c **** * the software package with which this file was provided.
+  15:Generated_Source\PSoC5/LED.c **** *******************************************************************************/
+  16:Generated_Source\PSoC5/LED.c **** 
+  17:Generated_Source\PSoC5/LED.c **** #include "cytypes.h"
+  18:Generated_Source\PSoC5/LED.c **** #include "LED.h"
+  19:Generated_Source\PSoC5/LED.c **** 
+  20:Generated_Source\PSoC5/LED.c **** /* APIs are not generated for P15[7:6] on PSoC 5 */
+  21:Generated_Source\PSoC5/LED.c **** #if !(CY_PSOC5A &&\
+  22:Generated_Source\PSoC5/LED.c **** 	 LED__PORT == 15 && ((LED__MASK & 0xC0) != 0))
+  23:Generated_Source\PSoC5/LED.c **** 
+  24:Generated_Source\PSoC5/LED.c **** 
+  25:Generated_Source\PSoC5/LED.c **** /*******************************************************************************
+  26:Generated_Source\PSoC5/LED.c **** * Function Name: LED_Write
+  27:Generated_Source\PSoC5/LED.c **** ********************************************************************************
+  28:Generated_Source\PSoC5/LED.c **** *
+  29:Generated_Source\PSoC5/LED.c **** * Summary:
+  30:Generated_Source\PSoC5/LED.c **** *  Assign a new value to the digital port's data output register.  
+  31:Generated_Source\PSoC5/LED.c **** *
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccUdJeXh.s 			page 2
 
 
-  32:.\Generated_Source\PSoC5/LED.c **** * Parameters:  
-  33:.\Generated_Source\PSoC5/LED.c **** *  prtValue:  The value to be assigned to the Digital Port. 
-  34:.\Generated_Source\PSoC5/LED.c **** *
-  35:.\Generated_Source\PSoC5/LED.c **** * Return: 
-  36:.\Generated_Source\PSoC5/LED.c **** *  None
-  37:.\Generated_Source\PSoC5/LED.c **** *  
-  38:.\Generated_Source\PSoC5/LED.c **** *******************************************************************************/
-  39:.\Generated_Source\PSoC5/LED.c **** void LED_Write(uint8 value) 
-  40:.\Generated_Source\PSoC5/LED.c **** {
+  32:Generated_Source\PSoC5/LED.c **** * Parameters:  
+  33:Generated_Source\PSoC5/LED.c **** *  prtValue:  The value to be assigned to the Digital Port. 
+  34:Generated_Source\PSoC5/LED.c **** *
+  35:Generated_Source\PSoC5/LED.c **** * Return: 
+  36:Generated_Source\PSoC5/LED.c **** *  None
+  37:Generated_Source\PSoC5/LED.c **** *  
+  38:Generated_Source\PSoC5/LED.c **** *******************************************************************************/
+  39:Generated_Source\PSoC5/LED.c **** void LED_Write(uint8 value) 
+  40:Generated_Source\PSoC5/LED.c **** {
   27              		.loc 1 40 0
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
   30              		@ frame_needed = 0, uses_anonymous_args = 0
   31              		@ link register save eliminated.
   32              	.LVL0:
-  41:.\Generated_Source\PSoC5/LED.c ****     uint8 staticBits = (LED_DR & (uint8)(~LED_MASK));
+  41:Generated_Source\PSoC5/LED.c ****     uint8 staticBits = (LED_DR & (uint8)(~LED_MASK));
   33              		.loc 1 41 0
   34 0000 044A     		ldr	r2, .L2
   35 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
   36 0004 03F0FE03 		and	r3, r3, #254
   37              	.LVL1:
-  42:.\Generated_Source\PSoC5/LED.c ****     LED_DR = staticBits | ((uint8)(value << LED_SHIFT) & LED_MASK);
+  42:Generated_Source\PSoC5/LED.c ****     LED_DR = staticBits | ((uint8)(value << LED_SHIFT) & LED_MASK);
   38              		.loc 1 42 0
   39 0008 00F00100 		and	r0, r0, #1
   40              	.LVL2:
@@ -104,44 +104,44 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccERmHqv.s 			page 1
   56              		.type	LED_SetDriveMode, %function
   57              	LED_SetDriveMode:
   58              	.LFB1:
-  43:.\Generated_Source\PSoC5/LED.c **** }
-  44:.\Generated_Source\PSoC5/LED.c **** 
-  45:.\Generated_Source\PSoC5/LED.c **** 
-  46:.\Generated_Source\PSoC5/LED.c **** /*******************************************************************************
-  47:.\Generated_Source\PSoC5/LED.c **** * Function Name: LED_SetDriveMode
-  48:.\Generated_Source\PSoC5/LED.c **** ********************************************************************************
-  49:.\Generated_Source\PSoC5/LED.c **** *
-  50:.\Generated_Source\PSoC5/LED.c **** * Summary:
-  51:.\Generated_Source\PSoC5/LED.c **** *  Change the drive mode on the pins of the port.
-  52:.\Generated_Source\PSoC5/LED.c **** * 
-  53:.\Generated_Source\PSoC5/LED.c **** * Parameters:  
-  54:.\Generated_Source\PSoC5/LED.c **** *  mode:  Change the pins to one of the following drive modes.
-  55:.\Generated_Source\PSoC5/LED.c **** *
-  56:.\Generated_Source\PSoC5/LED.c **** *  LED_DM_STRONG     Strong Drive 
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccERmHqv.s 			page 3
+  43:Generated_Source\PSoC5/LED.c **** }
+  44:Generated_Source\PSoC5/LED.c **** 
+  45:Generated_Source\PSoC5/LED.c **** 
+  46:Generated_Source\PSoC5/LED.c **** /*******************************************************************************
+  47:Generated_Source\PSoC5/LED.c **** * Function Name: LED_SetDriveMode
+  48:Generated_Source\PSoC5/LED.c **** ********************************************************************************
+  49:Generated_Source\PSoC5/LED.c **** *
+  50:Generated_Source\PSoC5/LED.c **** * Summary:
+  51:Generated_Source\PSoC5/LED.c **** *  Change the drive mode on the pins of the port.
+  52:Generated_Source\PSoC5/LED.c **** * 
+  53:Generated_Source\PSoC5/LED.c **** * Parameters:  
+  54:Generated_Source\PSoC5/LED.c **** *  mode:  Change the pins to one of the following drive modes.
+  55:Generated_Source\PSoC5/LED.c **** *
+  56:Generated_Source\PSoC5/LED.c **** *  LED_DM_STRONG     Strong Drive 
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccUdJeXh.s 			page 3
 
 
-  57:.\Generated_Source\PSoC5/LED.c **** *  LED_DM_OD_HI      Open Drain, Drives High 
-  58:.\Generated_Source\PSoC5/LED.c **** *  LED_DM_OD_LO      Open Drain, Drives Low 
-  59:.\Generated_Source\PSoC5/LED.c **** *  LED_DM_RES_UP     Resistive Pull Up 
-  60:.\Generated_Source\PSoC5/LED.c **** *  LED_DM_RES_DWN    Resistive Pull Down 
-  61:.\Generated_Source\PSoC5/LED.c **** *  LED_DM_RES_UPDWN  Resistive Pull Up/Down 
-  62:.\Generated_Source\PSoC5/LED.c **** *  LED_DM_DIG_HIZ    High Impedance Digital 
-  63:.\Generated_Source\PSoC5/LED.c **** *  LED_DM_ALG_HIZ    High Impedance Analog 
-  64:.\Generated_Source\PSoC5/LED.c **** *
-  65:.\Generated_Source\PSoC5/LED.c **** * Return: 
-  66:.\Generated_Source\PSoC5/LED.c **** *  None
-  67:.\Generated_Source\PSoC5/LED.c **** *
-  68:.\Generated_Source\PSoC5/LED.c **** *******************************************************************************/
-  69:.\Generated_Source\PSoC5/LED.c **** void LED_SetDriveMode(uint8 mode) 
-  70:.\Generated_Source\PSoC5/LED.c **** {
+  57:Generated_Source\PSoC5/LED.c **** *  LED_DM_OD_HI      Open Drain, Drives High 
+  58:Generated_Source\PSoC5/LED.c **** *  LED_DM_OD_LO      Open Drain, Drives Low 
+  59:Generated_Source\PSoC5/LED.c **** *  LED_DM_RES_UP     Resistive Pull Up 
+  60:Generated_Source\PSoC5/LED.c **** *  LED_DM_RES_DWN    Resistive Pull Down 
+  61:Generated_Source\PSoC5/LED.c **** *  LED_DM_RES_UPDWN  Resistive Pull Up/Down 
+  62:Generated_Source\PSoC5/LED.c **** *  LED_DM_DIG_HIZ    High Impedance Digital 
+  63:Generated_Source\PSoC5/LED.c **** *  LED_DM_ALG_HIZ    High Impedance Analog 
+  64:Generated_Source\PSoC5/LED.c **** *
+  65:Generated_Source\PSoC5/LED.c **** * Return: 
+  66:Generated_Source\PSoC5/LED.c **** *  None
+  67:Generated_Source\PSoC5/LED.c **** *
+  68:Generated_Source\PSoC5/LED.c **** *******************************************************************************/
+  69:Generated_Source\PSoC5/LED.c **** void LED_SetDriveMode(uint8 mode) 
+  70:Generated_Source\PSoC5/LED.c **** {
   59              		.loc 1 70 0
   60              		.cfi_startproc
   61              		@ args = 0, pretend = 0, frame = 0
   62              		@ frame_needed = 0, uses_anonymous_args = 0
   63              		@ link register save eliminated.
   64              	.LVL3:
-  71:.\Generated_Source\PSoC5/LED.c **** 	CyPins_SetPinDriveMode(LED_0, mode);
+  71:Generated_Source\PSoC5/LED.c **** 	CyPins_SetPinDriveMode(LED_0, mode);
   65              		.loc 1 71 0
   66 0000 044A     		ldr	r2, .L5
   67 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
@@ -166,42 +166,42 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccERmHqv.s 			page 1
   86              		.type	LED_Read, %function
   87              	LED_Read:
   88              	.LFB2:
-  72:.\Generated_Source\PSoC5/LED.c **** }
-  73:.\Generated_Source\PSoC5/LED.c **** 
-  74:.\Generated_Source\PSoC5/LED.c **** 
-  75:.\Generated_Source\PSoC5/LED.c **** /*******************************************************************************
-  76:.\Generated_Source\PSoC5/LED.c **** * Function Name: LED_Read
-  77:.\Generated_Source\PSoC5/LED.c **** ********************************************************************************
-  78:.\Generated_Source\PSoC5/LED.c **** *
-  79:.\Generated_Source\PSoC5/LED.c **** * Summary:
-  80:.\Generated_Source\PSoC5/LED.c **** *  Read the current value on the pins of the Digital Port in right justified 
-  81:.\Generated_Source\PSoC5/LED.c **** *  form.
-  82:.\Generated_Source\PSoC5/LED.c **** *
-  83:.\Generated_Source\PSoC5/LED.c **** * Parameters:  
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccERmHqv.s 			page 4
+  72:Generated_Source\PSoC5/LED.c **** }
+  73:Generated_Source\PSoC5/LED.c **** 
+  74:Generated_Source\PSoC5/LED.c **** 
+  75:Generated_Source\PSoC5/LED.c **** /*******************************************************************************
+  76:Generated_Source\PSoC5/LED.c **** * Function Name: LED_Read
+  77:Generated_Source\PSoC5/LED.c **** ********************************************************************************
+  78:Generated_Source\PSoC5/LED.c **** *
+  79:Generated_Source\PSoC5/LED.c **** * Summary:
+  80:Generated_Source\PSoC5/LED.c **** *  Read the current value on the pins of the Digital Port in right justified 
+  81:Generated_Source\PSoC5/LED.c **** *  form.
+  82:Generated_Source\PSoC5/LED.c **** *
+  83:Generated_Source\PSoC5/LED.c **** * Parameters:  
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccUdJeXh.s 			page 4
 
 
-  84:.\Generated_Source\PSoC5/LED.c **** *  None
-  85:.\Generated_Source\PSoC5/LED.c **** *
-  86:.\Generated_Source\PSoC5/LED.c **** * Return: 
-  87:.\Generated_Source\PSoC5/LED.c **** *  Returns the current value of the Digital Port as a right justified number
-  88:.\Generated_Source\PSoC5/LED.c **** *  
-  89:.\Generated_Source\PSoC5/LED.c **** * Note:
-  90:.\Generated_Source\PSoC5/LED.c **** *  Macro LED_ReadPS calls this function. 
-  91:.\Generated_Source\PSoC5/LED.c **** *  
-  92:.\Generated_Source\PSoC5/LED.c **** *******************************************************************************/
-  93:.\Generated_Source\PSoC5/LED.c **** uint8 LED_Read(void) 
-  94:.\Generated_Source\PSoC5/LED.c **** {
+  84:Generated_Source\PSoC5/LED.c **** *  None
+  85:Generated_Source\PSoC5/LED.c **** *
+  86:Generated_Source\PSoC5/LED.c **** * Return: 
+  87:Generated_Source\PSoC5/LED.c **** *  Returns the current value of the Digital Port as a right justified number
+  88:Generated_Source\PSoC5/LED.c **** *  
+  89:Generated_Source\PSoC5/LED.c **** * Note:
+  90:Generated_Source\PSoC5/LED.c **** *  Macro LED_ReadPS calls this function. 
+  91:Generated_Source\PSoC5/LED.c **** *  
+  92:Generated_Source\PSoC5/LED.c **** *******************************************************************************/
+  93:Generated_Source\PSoC5/LED.c **** uint8 LED_Read(void) 
+  94:Generated_Source\PSoC5/LED.c **** {
   89              		.loc 1 94 0
   90              		.cfi_startproc
   91              		@ args = 0, pretend = 0, frame = 0
   92              		@ frame_needed = 0, uses_anonymous_args = 0
   93              		@ link register save eliminated.
-  95:.\Generated_Source\PSoC5/LED.c ****     return (LED_PS & LED_MASK) >> LED_SHIFT;
+  95:Generated_Source\PSoC5/LED.c ****     return (LED_PS & LED_MASK) >> LED_SHIFT;
   94              		.loc 1 95 0
   95 0000 024B     		ldr	r3, .L8
   96 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
-  96:.\Generated_Source\PSoC5/LED.c **** }
+  96:Generated_Source\PSoC5/LED.c **** }
   97              		.loc 1 96 0
   98 0004 00F00100 		and	r0, r0, #1
   99 0008 7047     		bx	lr
@@ -220,25 +220,25 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccERmHqv.s 			page 1
  112              		.type	LED_ReadDataReg, %function
  113              	LED_ReadDataReg:
  114              	.LFB3:
-  97:.\Generated_Source\PSoC5/LED.c **** 
-  98:.\Generated_Source\PSoC5/LED.c **** 
-  99:.\Generated_Source\PSoC5/LED.c **** /*******************************************************************************
- 100:.\Generated_Source\PSoC5/LED.c **** * Function Name: LED_ReadDataReg
- 101:.\Generated_Source\PSoC5/LED.c **** ********************************************************************************
- 102:.\Generated_Source\PSoC5/LED.c **** *
- 103:.\Generated_Source\PSoC5/LED.c **** * Summary:
- 104:.\Generated_Source\PSoC5/LED.c **** *  Read the current value assigned to a Digital Port's data output register
- 105:.\Generated_Source\PSoC5/LED.c **** *
- 106:.\Generated_Source\PSoC5/LED.c **** * Parameters:  
- 107:.\Generated_Source\PSoC5/LED.c **** *  None 
- 108:.\Generated_Source\PSoC5/LED.c **** *
- 109:.\Generated_Source\PSoC5/LED.c **** * Return: 
- 110:.\Generated_Source\PSoC5/LED.c **** *  Returns the current value assigned to the Digital Port's data output register
- 111:.\Generated_Source\PSoC5/LED.c **** *  
- 112:.\Generated_Source\PSoC5/LED.c **** *******************************************************************************/
- 113:.\Generated_Source\PSoC5/LED.c **** uint8 LED_ReadDataReg(void) 
- 114:.\Generated_Source\PSoC5/LED.c **** {
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccERmHqv.s 			page 5
+  97:Generated_Source\PSoC5/LED.c **** 
+  98:Generated_Source\PSoC5/LED.c **** 
+  99:Generated_Source\PSoC5/LED.c **** /*******************************************************************************
+ 100:Generated_Source\PSoC5/LED.c **** * Function Name: LED_ReadDataReg
+ 101:Generated_Source\PSoC5/LED.c **** ********************************************************************************
+ 102:Generated_Source\PSoC5/LED.c **** *
+ 103:Generated_Source\PSoC5/LED.c **** * Summary:
+ 104:Generated_Source\PSoC5/LED.c **** *  Read the current value assigned to a Digital Port's data output register
+ 105:Generated_Source\PSoC5/LED.c **** *
+ 106:Generated_Source\PSoC5/LED.c **** * Parameters:  
+ 107:Generated_Source\PSoC5/LED.c **** *  None 
+ 108:Generated_Source\PSoC5/LED.c **** *
+ 109:Generated_Source\PSoC5/LED.c **** * Return: 
+ 110:Generated_Source\PSoC5/LED.c **** *  Returns the current value assigned to the Digital Port's data output register
+ 111:Generated_Source\PSoC5/LED.c **** *  
+ 112:Generated_Source\PSoC5/LED.c **** *******************************************************************************/
+ 113:Generated_Source\PSoC5/LED.c **** uint8 LED_ReadDataReg(void) 
+ 114:Generated_Source\PSoC5/LED.c **** {
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccUdJeXh.s 			page 5
 
 
  115              		.loc 1 114 0
@@ -246,11 +246,11 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccERmHqv.s 			page 1
  117              		@ args = 0, pretend = 0, frame = 0
  118              		@ frame_needed = 0, uses_anonymous_args = 0
  119              		@ link register save eliminated.
- 115:.\Generated_Source\PSoC5/LED.c ****     return (LED_DR & LED_MASK) >> LED_SHIFT;
+ 115:Generated_Source\PSoC5/LED.c ****     return (LED_DR & LED_MASK) >> LED_SHIFT;
  120              		.loc 1 115 0
  121 0000 024B     		ldr	r3, .L11
  122 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
- 116:.\Generated_Source\PSoC5/LED.c **** }
+ 116:Generated_Source\PSoC5/LED.c **** }
  123              		.loc 1 116 0
  124 0004 00F00100 		and	r0, r0, #1
  125 0008 7047     		bx	lr
@@ -263,7 +263,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccERmHqv.s 			page 1
  132              		.size	LED_ReadDataReg, .-LED_ReadDataReg
  133              		.text
  134              	.Letext0:
- 135              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
+ 135              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
  136              		.section	.debug_info,"",%progbits
  137              	.Ldebug_info0:
  138 0000 1B010000 		.4byte	0x11b
@@ -271,48 +271,48 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccERmHqv.s 			page 1
  140 0006 00000000 		.4byte	.Ldebug_abbrev0
  141 000a 04       		.byte	0x4
  142 000b 01       		.uleb128 0x1
- 143 000c D2000000 		.4byte	.LASF20
+ 143 000c EE000000 		.4byte	.LASF20
  144 0010 01       		.byte	0x1
- 145 0011 9C000000 		.4byte	.LASF21
- 146 0015 00000000 		.4byte	.LASF22
+ 145 0011 11000000 		.4byte	.LASF21
+ 146 0015 4F000000 		.4byte	.LASF22
  147 0019 00000000 		.4byte	.Ldebug_ranges0+0
  148 001d 00000000 		.4byte	0
  149 0021 00000000 		.4byte	.Ldebug_line0
  150 0025 02       		.uleb128 0x2
  151 0026 01       		.byte	0x1
  152 0027 06       		.byte	0x6
- 153 0028 BE010000 		.4byte	.LASF0
+ 153 0028 D1010000 		.4byte	.LASF0
  154 002c 02       		.uleb128 0x2
  155 002d 01       		.byte	0x1
  156 002e 08       		.byte	0x8
- 157 002f 64000000 		.4byte	.LASF1
+ 157 002f 96000000 		.4byte	.LASF1
  158 0033 02       		.uleb128 0x2
  159 0034 02       		.byte	0x2
  160 0035 05       		.byte	0x5
- 161 0036 9C010000 		.4byte	.LASF2
+ 161 0036 B8010000 		.4byte	.LASF2
  162 003a 02       		.uleb128 0x2
  163 003b 02       		.byte	0x2
  164 003c 07       		.byte	0x7
- 165 003d 89000000 		.4byte	.LASF3
+ 165 003d BB000000 		.4byte	.LASF3
  166 0041 02       		.uleb128 0x2
  167 0042 04       		.byte	0x4
  168 0043 05       		.byte	0x5
- 169 0044 B5010000 		.4byte	.LASF4
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccERmHqv.s 			page 6
+ 169 0044 C8010000 		.4byte	.LASF4
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccUdJeXh.s 			page 6
 
 
  170 0048 02       		.uleb128 0x2
  171 0049 04       		.byte	0x4
  172 004a 07       		.byte	0x7
- 173 004b 77000000 		.4byte	.LASF5
+ 173 004b A9000000 		.4byte	.LASF5
  174 004f 02       		.uleb128 0x2
  175 0050 08       		.byte	0x8
  176 0051 05       		.byte	0x5
- 177 0052 89010000 		.4byte	.LASF6
+ 177 0052 A5010000 		.4byte	.LASF6
  178 0056 02       		.uleb128 0x2
  179 0057 08       		.byte	0x8
  180 0058 07       		.byte	0x7
- 181 0059 6D010000 		.4byte	.LASF7
+ 181 0059 89010000 		.4byte	.LASF7
  182 005d 03       		.uleb128 0x3
  183 005e 04       		.byte	0x4
  184 005f 05       		.byte	0x5
@@ -320,33 +320,33 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccERmHqv.s 			page 1
  186 0064 02       		.uleb128 0x2
  187 0065 04       		.byte	0x4
  188 0066 07       		.byte	0x7
- 189 0067 60010000 		.4byte	.LASF8
+ 189 0067 7C010000 		.4byte	.LASF8
  190 006b 04       		.uleb128 0x4
- 191 006c AF010000 		.4byte	.LASF12
+ 191 006c C2010000 		.4byte	.LASF12
  192 0070 02       		.byte	0x2
  193 0071 3801     		.2byte	0x138
  194 0073 2C000000 		.4byte	0x2c
  195 0077 02       		.uleb128 0x2
  196 0078 04       		.byte	0x4
  197 0079 04       		.byte	0x4
- 198 007a 5E000000 		.4byte	.LASF9
+ 198 007a 49000000 		.4byte	.LASF9
  199 007e 02       		.uleb128 0x2
  200 007f 08       		.byte	0x8
  201 0080 04       		.byte	0x4
- 202 0081 CB000000 		.4byte	.LASF10
+ 202 0081 E7000000 		.4byte	.LASF10
  203 0085 02       		.uleb128 0x2
  204 0086 01       		.byte	0x1
  205 0087 08       		.byte	0x8
- 206 0088 97010000 		.4byte	.LASF11
+ 206 0088 B3010000 		.4byte	.LASF11
  207 008c 04       		.uleb128 0x4
- 208 008d 72000000 		.4byte	.LASF13
+ 208 008d A4000000 		.4byte	.LASF13
  209 0091 02       		.byte	0x2
  210 0092 E201     		.2byte	0x1e2
  211 0094 98000000 		.4byte	0x98
  212 0098 05       		.uleb128 0x5
  213 0099 6B000000 		.4byte	0x6b
  214 009d 06       		.uleb128 0x6
- 215 009e 43000000 		.4byte	.LASF14
+ 215 009e 2E000000 		.4byte	.LASF14
  216 00a2 01       		.byte	0x1
  217 00a3 27       		.byte	0x27
  218 00a4 00000000 		.4byte	.LFB0
@@ -355,16 +355,16 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccERmHqv.s 			page 1
  221 00ad 9C       		.byte	0x9c
  222 00ae CF000000 		.4byte	0xcf
  223 00b2 07       		.uleb128 0x7
- 224 00b3 4D000000 		.4byte	.LASF16
+ 224 00b3 38000000 		.4byte	.LASF16
  225 00b7 01       		.byte	0x1
  226 00b8 27       		.byte	0x27
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccERmHqv.s 			page 7
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccUdJeXh.s 			page 7
 
 
  227 00b9 6B000000 		.4byte	0x6b
  228 00bd 00000000 		.4byte	.LLST0
  229 00c1 08       		.uleb128 0x8
- 230 00c2 53000000 		.4byte	.LASF23
+ 230 00c2 3E000000 		.4byte	.LASF23
  231 00c6 01       		.byte	0x1
  232 00c7 29       		.byte	0x29
  233 00c8 6B000000 		.4byte	0x6b
@@ -372,7 +372,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccERmHqv.s 			page 1
  235 00cd 53       		.byte	0x53
  236 00ce 00       		.byte	0
  237 00cf 06       		.uleb128 0x6
- 238 00d0 32000000 		.4byte	.LASF15
+ 238 00d0 00000000 		.4byte	.LASF15
  239 00d4 01       		.byte	0x1
  240 00d5 45       		.byte	0x45
  241 00d6 00000000 		.4byte	.LFB1
@@ -381,14 +381,14 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccERmHqv.s 			page 1
  244 00df 9C       		.byte	0x9c
  245 00e0 F4000000 		.4byte	0xf4
  246 00e4 07       		.uleb128 0x7
- 247 00e5 84010000 		.4byte	.LASF17
+ 247 00e5 A0010000 		.4byte	.LASF17
  248 00e9 01       		.byte	0x1
  249 00ea 45       		.byte	0x45
  250 00eb 6B000000 		.4byte	0x6b
  251 00ef 21000000 		.4byte	.LLST1
  252 00f3 00       		.byte	0
  253 00f4 09       		.uleb128 0x9
- 254 00f5 A6010000 		.4byte	.LASF18
+ 254 00f5 CE000000 		.4byte	.LASF18
  255 00f9 01       		.byte	0x1
  256 00fa 5D       		.byte	0x5d
  257 00fb 6B000000 		.4byte	0x6b
@@ -397,7 +397,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccERmHqv.s 			page 1
  260 0107 01       		.uleb128 0x1
  261 0108 9C       		.byte	0x9c
  262 0109 09       		.uleb128 0x9
- 263 010a BB000000 		.4byte	.LASF19
+ 263 010a D7000000 		.4byte	.LASF19
  264 010e 01       		.byte	0x1
  265 010f 71       		.byte	0x71
  266 0110 6B000000 		.4byte	0x6b
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccERmHqv.s 			page 1
  281 0007 03       		.uleb128 0x3
  282 0008 0E       		.uleb128 0xe
  283 0009 1B       		.uleb128 0x1b
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccERmHqv.s 			page 8
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccUdJeXh.s 			page 8
 
 
  284 000a 0E       		.uleb128 0xe
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccERmHqv.s 			page 1
  338 0040 3F       		.uleb128 0x3f
  339 0041 19       		.uleb128 0x19
  340 0042 03       		.uleb128 0x3
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccERmHqv.s 			page 9
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccUdJeXh.s 			page 9
 
 
  341 0043 0E       		.uleb128 0xe
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccERmHqv.s 			page 1
  395 007a 03       		.uleb128 0x3
  396 007b 0E       		.uleb128 0xe
  397 007c 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccERmHqv.s 			page 10
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccUdJeXh.s 			page 10
 
 
  398 007d 0B       		.uleb128 0xb
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccERmHqv.s 			page 1
  452 000c 0000     		.2byte	0
  453 000e 0000     		.2byte	0
  454 0010 00000000 		.4byte	.LFB0
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccERmHqv.s 			page 11
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccUdJeXh.s 			page 11
 
 
  455 0014 18000000 		.4byte	.LFE0-.LFB0
@@ -624,133 +624,137 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccERmHqv.s 			page 1
  475 0024 00000000 		.4byte	0
  476              		.section	.debug_line,"",%progbits
  477              	.Ldebug_line0:
- 478 0000 8E000000 		.section	.debug_str,"MS",%progbits,1
- 478      02004200 
+ 478 0000 8C000000 		.section	.debug_str,"MS",%progbits,1
+ 478      02004000 
  478      00000201 
  478      FB0E0D00 
  478      01010101 
- 479              	.LASF22:
- 480 0000 433A5C55 		.ascii	"C:\\Users\\Sirius\\Desktop\\Dashboard\\Dashboard.cy"
- 480      73657273 
- 480      5C536972 
- 480      6975735C 
- 480      4465736B 
- 481 002e 64736E00 		.ascii	"dsn\000"
- 482              	.LASF15:
- 483 0032 4C45445F 		.ascii	"LED_SetDriveMode\000"
- 483      53657444 
- 483      72697665 
- 483      4D6F6465 
- 483      00
- 484              	.LASF14:
- 485 0043 4C45445F 		.ascii	"LED_Write\000"
- 485      57726974 
- 485      6500
- 486              	.LASF16:
- 487 004d 76616C75 		.ascii	"value\000"
- 487      6500
- 488              	.LASF23:
- 489 0053 73746174 		.ascii	"staticBits\000"
- 489      69634269 
- 489      747300
- 490              	.LASF9:
- 491 005e 666C6F61 		.ascii	"float\000"
- 491      7400
- 492              	.LASF1:
- 493 0064 756E7369 		.ascii	"unsigned char\000"
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccERmHqv.s 			page 12
+ 479              	.LASF15:
+ 480 0000 4C45445F 		.ascii	"LED_SetDriveMode\000"
+ 480      53657444 
+ 480      72697665 
+ 480      4D6F6465 
+ 480      00
+ 481              	.LASF21:
+ 482 0011 47656E65 		.ascii	"Generated_Source\\PSoC5\\LED.c\000"
+ 482      72617465 
+ 482      645F536F 
+ 482      75726365 
+ 482      5C50536F 
+ 483              	.LASF14:
+ 484 002e 4C45445F 		.ascii	"LED_Write\000"
+ 484      57726974 
+ 484      6500
+ 485              	.LASF16:
+ 486 0038 76616C75 		.ascii	"value\000"
+ 486      6500
+ 487              	.LASF23:
+ 488 003e 73746174 		.ascii	"staticBits\000"
+ 488      69634269 
+ 488      747300
+ 489              	.LASF9:
+ 490 0049 666C6F61 		.ascii	"float\000"
+ 490      7400
+ 491              	.LASF22:
+ 492 004f 433A5C55 		.ascii	"C:\\Users\\Schuyler\\Documents\\PSoC Creator\\FE3-D"
+ 492      73657273 
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccUdJeXh.s 			page 12
 
 
- 493      676E6564 
- 493      20636861 
- 493      7200
- 494              	.LASF13:
- 495 0072 72656738 		.ascii	"reg8\000"
- 495      00
- 496              	.LASF5:
- 497 0077 6C6F6E67 		.ascii	"long unsigned int\000"
- 497      20756E73 
- 497      69676E65 
- 497      6420696E 
- 497      7400
- 498              	.LASF3:
- 499 0089 73686F72 		.ascii	"short unsigned int\000"
- 499      7420756E 
- 499      7369676E 
- 499      65642069 
- 499      6E7400
- 500              	.LASF21:
- 501 009c 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\LED.c\000"
- 501      6E657261 
- 501      7465645F 
- 501      536F7572 
- 501      63655C50 
- 502              	.LASF19:
- 503 00bb 4C45445F 		.ascii	"LED_ReadDataReg\000"
+ 492      5C536368 
+ 492      75796C65 
+ 492      725C446F 
+ 493 007d 61736862 		.ascii	"ashboard\\Dashboard.cydsn\000"
+ 493      6F617264 
+ 493      5C446173 
+ 493      68626F61 
+ 493      72642E63 
+ 494              	.LASF1:
+ 495 0096 756E7369 		.ascii	"unsigned char\000"
+ 495      676E6564 
+ 495      20636861 
+ 495      7200
+ 496              	.LASF13:
+ 497 00a4 72656738 		.ascii	"reg8\000"
+ 497      00
+ 498              	.LASF5:
+ 499 00a9 6C6F6E67 		.ascii	"long unsigned int\000"
+ 499      20756E73 
+ 499      69676E65 
+ 499      6420696E 
+ 499      7400
+ 500              	.LASF3:
+ 501 00bb 73686F72 		.ascii	"short unsigned int\000"
+ 501      7420756E 
+ 501      7369676E 
+ 501      65642069 
+ 501      6E7400
+ 502              	.LASF18:
+ 503 00ce 4C45445F 		.ascii	"LED_Read\000"
  503      52656164 
- 503      44617461 
- 503      52656700 
- 504              	.LASF10:
- 505 00cb 646F7562 		.ascii	"double\000"
- 505      6C6500
- 506              	.LASF20:
- 507 00d2 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 507      4320342E 
- 507      392E3320 
- 507      32303135 
- 507      30333033 
- 508 0105 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 508      20726576 
- 508      6973696F 
- 508      6E203232 
- 508      31323230 
- 509 0138 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 509      66756E63 
- 509      74696F6E 
- 509      2D736563 
- 509      74696F6E 
- 510              	.LASF8:
- 511 0160 756E7369 		.ascii	"unsigned int\000"
- 511      676E6564 
- 511      20696E74 
- 511      00
- 512              	.LASF7:
- 513 016d 6C6F6E67 		.ascii	"long long unsigned int\000"
- 513      206C6F6E 
- 513      6720756E 
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccERmHqv.s 			page 13
+ 503      00
+ 504              	.LASF19:
+ 505 00d7 4C45445F 		.ascii	"LED_ReadDataReg\000"
+ 505      52656164 
+ 505      44617461 
+ 505      52656700 
+ 506              	.LASF10:
+ 507 00e7 646F7562 		.ascii	"double\000"
+ 507      6C6500
+ 508              	.LASF20:
+ 509 00ee 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 509      4320342E 
+ 509      392E3320 
+ 509      32303135 
+ 509      30333033 
+ 510 0121 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 510      20726576 
+ 510      6973696F 
+ 510      6E203232 
+ 510      31323230 
+ 511 0154 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 511      66756E63 
+ 511      74696F6E 
+ 511      2D736563 
+ 511      74696F6E 
+ 512              	.LASF8:
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccUdJeXh.s 			page 13
 
 
- 513      7369676E 
- 513      65642069 
- 514              	.LASF17:
- 515 0184 6D6F6465 		.ascii	"mode\000"
- 515      00
- 516              	.LASF6:
- 517 0189 6C6F6E67 		.ascii	"long long int\000"
- 517      206C6F6E 
- 517      6720696E 
- 517      7400
- 518              	.LASF11:
- 519 0197 63686172 		.ascii	"char\000"
- 519      00
- 520              	.LASF2:
- 521 019c 73686F72 		.ascii	"short int\000"
- 521      7420696E 
- 521      7400
- 522              	.LASF18:
- 523 01a6 4C45445F 		.ascii	"LED_Read\000"
- 523      52656164 
- 523      00
+ 513 017c 756E7369 		.ascii	"unsigned int\000"
+ 513      676E6564 
+ 513      20696E74 
+ 513      00
+ 514              	.LASF7:
+ 515 0189 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 515      206C6F6E 
+ 515      6720756E 
+ 515      7369676E 
+ 515      65642069 
+ 516              	.LASF17:
+ 517 01a0 6D6F6465 		.ascii	"mode\000"
+ 517      00
+ 518              	.LASF6:
+ 519 01a5 6C6F6E67 		.ascii	"long long int\000"
+ 519      206C6F6E 
+ 519      6720696E 
+ 519      7400
+ 520              	.LASF11:
+ 521 01b3 63686172 		.ascii	"char\000"
+ 521      00
+ 522              	.LASF2:
+ 523 01b8 73686F72 		.ascii	"short int\000"
+ 523      7420696E 
+ 523      7400
  524              	.LASF12:
- 525 01af 75696E74 		.ascii	"uint8\000"
+ 525 01c2 75696E74 		.ascii	"uint8\000"
  525      3800
  526              	.LASF4:
- 527 01b5 6C6F6E67 		.ascii	"long int\000"
+ 527 01c8 6C6F6E67 		.ascii	"long int\000"
  527      20696E74 
  527      00
  528              	.LASF0:
- 529 01be 7369676E 		.ascii	"signed char\000"
+ 529 01d1 7369676E 		.ascii	"signed char\000"
  529      65642063 
  529      68617200 
  530              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

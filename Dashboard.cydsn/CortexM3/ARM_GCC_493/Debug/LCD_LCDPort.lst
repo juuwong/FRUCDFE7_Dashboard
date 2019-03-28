@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccDYnIwo.s 			page 1
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccnkVm9m.s 			page 1
 
 
    1              		.syntax unified
@@ -26,81 +26,81 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccDYnIwo.s 			page 1
   23              		.type	LCD_LCDPort_Write, %function
   24              	LCD_LCDPort_Write:
   25              	.LFB0:
-  26              		.file 1 ".\\Generated_Source\\PSoC5\\LCD_LCDPort.c"
-   1:.\Generated_Source\PSoC5/LCD_LCDPort.c **** /*******************************************************************************
-   2:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * File Name: LCD_LCDPort.c  
-   3:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * Version 2.20
-   4:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *
-   5:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * Description:
-   6:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *  This file contains API to enable firmware control of a Pins component.
-   7:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *
-   8:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * Note:
-   9:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *
-  10:.\Generated_Source\PSoC5/LCD_LCDPort.c **** ********************************************************************************
-  11:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
-  12:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * You may use this file only in accordance with the license, terms, conditions, 
-  13:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * disclaimers, and limitations in the end user license agreement accompanying 
-  14:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * the software package with which this file was provided.
-  15:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *******************************************************************************/
-  16:.\Generated_Source\PSoC5/LCD_LCDPort.c **** 
-  17:.\Generated_Source\PSoC5/LCD_LCDPort.c **** #include "cytypes.h"
-  18:.\Generated_Source\PSoC5/LCD_LCDPort.c **** #include "LCD_LCDPort.h"
-  19:.\Generated_Source\PSoC5/LCD_LCDPort.c **** 
-  20:.\Generated_Source\PSoC5/LCD_LCDPort.c **** /* APIs are not generated for P15[7:6] on PSoC 5 */
-  21:.\Generated_Source\PSoC5/LCD_LCDPort.c **** #if !(CY_PSOC5A &&\
-  22:.\Generated_Source\PSoC5/LCD_LCDPort.c **** 	 LCD_LCDPort__PORT == 15 && ((LCD_LCDPort__MASK & 0xC0) != 0))
-  23:.\Generated_Source\PSoC5/LCD_LCDPort.c **** 
-  24:.\Generated_Source\PSoC5/LCD_LCDPort.c **** 
-  25:.\Generated_Source\PSoC5/LCD_LCDPort.c **** /*******************************************************************************
-  26:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * Function Name: LCD_LCDPort_Write
-  27:.\Generated_Source\PSoC5/LCD_LCDPort.c **** ****************************************************************************//**
-  28:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *
-  29:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * \brief Writes the value to the physical port (data output register), masking
-  30:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *  and shifting the bits appropriately. 
-  31:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccDYnIwo.s 			page 2
+  26              		.file 1 "Generated_Source\\PSoC5\\LCD_LCDPort.c"
+   1:Generated_Source\PSoC5/LCD_LCDPort.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/LCD_LCDPort.c **** * File Name: LCD_LCDPort.c  
+   3:Generated_Source\PSoC5/LCD_LCDPort.c **** * Version 2.20
+   4:Generated_Source\PSoC5/LCD_LCDPort.c **** *
+   5:Generated_Source\PSoC5/LCD_LCDPort.c **** * Description:
+   6:Generated_Source\PSoC5/LCD_LCDPort.c **** *  This file contains API to enable firmware control of a Pins component.
+   7:Generated_Source\PSoC5/LCD_LCDPort.c **** *
+   8:Generated_Source\PSoC5/LCD_LCDPort.c **** * Note:
+   9:Generated_Source\PSoC5/LCD_LCDPort.c **** *
+  10:Generated_Source\PSoC5/LCD_LCDPort.c **** ********************************************************************************
+  11:Generated_Source\PSoC5/LCD_LCDPort.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  12:Generated_Source\PSoC5/LCD_LCDPort.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  13:Generated_Source\PSoC5/LCD_LCDPort.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  14:Generated_Source\PSoC5/LCD_LCDPort.c **** * the software package with which this file was provided.
+  15:Generated_Source\PSoC5/LCD_LCDPort.c **** *******************************************************************************/
+  16:Generated_Source\PSoC5/LCD_LCDPort.c **** 
+  17:Generated_Source\PSoC5/LCD_LCDPort.c **** #include "cytypes.h"
+  18:Generated_Source\PSoC5/LCD_LCDPort.c **** #include "LCD_LCDPort.h"
+  19:Generated_Source\PSoC5/LCD_LCDPort.c **** 
+  20:Generated_Source\PSoC5/LCD_LCDPort.c **** /* APIs are not generated for P15[7:6] on PSoC 5 */
+  21:Generated_Source\PSoC5/LCD_LCDPort.c **** #if !(CY_PSOC5A &&\
+  22:Generated_Source\PSoC5/LCD_LCDPort.c **** 	 LCD_LCDPort__PORT == 15 && ((LCD_LCDPort__MASK & 0xC0) != 0))
+  23:Generated_Source\PSoC5/LCD_LCDPort.c **** 
+  24:Generated_Source\PSoC5/LCD_LCDPort.c **** 
+  25:Generated_Source\PSoC5/LCD_LCDPort.c **** /*******************************************************************************
+  26:Generated_Source\PSoC5/LCD_LCDPort.c **** * Function Name: LCD_LCDPort_Write
+  27:Generated_Source\PSoC5/LCD_LCDPort.c **** ****************************************************************************//**
+  28:Generated_Source\PSoC5/LCD_LCDPort.c **** *
+  29:Generated_Source\PSoC5/LCD_LCDPort.c **** * \brief Writes the value to the physical port (data output register), masking
+  30:Generated_Source\PSoC5/LCD_LCDPort.c **** *  and shifting the bits appropriately. 
+  31:Generated_Source\PSoC5/LCD_LCDPort.c **** *
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccnkVm9m.s 			page 2
 
 
-  32:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * The data output register controls the signal applied to the physical pin in 
-  33:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * conjunction with the drive mode parameter. This function avoids changing 
-  34:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * other bits in the port by using the appropriate method (read-modify-write or
-  35:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * bit banding).
-  36:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *
-  37:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * <b>Note</b> This function should not be used on a hardware digital output pin 
-  38:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * as it is driven by the hardware signal attached to it.
-  39:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *
-  40:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * \param value
-  41:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *  Value to write to the component instance.
-  42:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *
-  43:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * \return 
-  44:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *  None 
-  45:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *
-  46:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * \sideeffect
-  47:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *  If you use read-modify-write operations that are not atomic; the Interrupt 
-  48:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *  Service Routines (ISR) can cause corruption of this function. An ISR that 
-  49:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *  interrupts this function and performs writes to the Pins component data 
-  50:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *  register can cause corrupted port data. To avoid this issue, you should 
-  51:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *  either use the Per-Pin APIs (primary method) or disable interrupts around 
-  52:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *  this function.
-  53:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *
-  54:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * \funcusage
-  55:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *  \snippet LCD_LCDPort_SUT.c usage_LCD_LCDPort_Write
-  56:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *******************************************************************************/
-  57:.\Generated_Source\PSoC5/LCD_LCDPort.c **** void LCD_LCDPort_Write(uint8 value)
-  58:.\Generated_Source\PSoC5/LCD_LCDPort.c **** {
+  32:Generated_Source\PSoC5/LCD_LCDPort.c **** * The data output register controls the signal applied to the physical pin in 
+  33:Generated_Source\PSoC5/LCD_LCDPort.c **** * conjunction with the drive mode parameter. This function avoids changing 
+  34:Generated_Source\PSoC5/LCD_LCDPort.c **** * other bits in the port by using the appropriate method (read-modify-write or
+  35:Generated_Source\PSoC5/LCD_LCDPort.c **** * bit banding).
+  36:Generated_Source\PSoC5/LCD_LCDPort.c **** *
+  37:Generated_Source\PSoC5/LCD_LCDPort.c **** * <b>Note</b> This function should not be used on a hardware digital output pin 
+  38:Generated_Source\PSoC5/LCD_LCDPort.c **** * as it is driven by the hardware signal attached to it.
+  39:Generated_Source\PSoC5/LCD_LCDPort.c **** *
+  40:Generated_Source\PSoC5/LCD_LCDPort.c **** * \param value
+  41:Generated_Source\PSoC5/LCD_LCDPort.c **** *  Value to write to the component instance.
+  42:Generated_Source\PSoC5/LCD_LCDPort.c **** *
+  43:Generated_Source\PSoC5/LCD_LCDPort.c **** * \return 
+  44:Generated_Source\PSoC5/LCD_LCDPort.c **** *  None 
+  45:Generated_Source\PSoC5/LCD_LCDPort.c **** *
+  46:Generated_Source\PSoC5/LCD_LCDPort.c **** * \sideeffect
+  47:Generated_Source\PSoC5/LCD_LCDPort.c **** *  If you use read-modify-write operations that are not atomic; the Interrupt 
+  48:Generated_Source\PSoC5/LCD_LCDPort.c **** *  Service Routines (ISR) can cause corruption of this function. An ISR that 
+  49:Generated_Source\PSoC5/LCD_LCDPort.c **** *  interrupts this function and performs writes to the Pins component data 
+  50:Generated_Source\PSoC5/LCD_LCDPort.c **** *  register can cause corrupted port data. To avoid this issue, you should 
+  51:Generated_Source\PSoC5/LCD_LCDPort.c **** *  either use the Per-Pin APIs (primary method) or disable interrupts around 
+  52:Generated_Source\PSoC5/LCD_LCDPort.c **** *  this function.
+  53:Generated_Source\PSoC5/LCD_LCDPort.c **** *
+  54:Generated_Source\PSoC5/LCD_LCDPort.c **** * \funcusage
+  55:Generated_Source\PSoC5/LCD_LCDPort.c **** *  \snippet LCD_LCDPort_SUT.c usage_LCD_LCDPort_Write
+  56:Generated_Source\PSoC5/LCD_LCDPort.c **** *******************************************************************************/
+  57:Generated_Source\PSoC5/LCD_LCDPort.c **** void LCD_LCDPort_Write(uint8 value)
+  58:Generated_Source\PSoC5/LCD_LCDPort.c **** {
   27              		.loc 1 58 0
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
   30              		@ frame_needed = 0, uses_anonymous_args = 0
   31              		@ link register save eliminated.
   32              	.LVL0:
-  59:.\Generated_Source\PSoC5/LCD_LCDPort.c ****     uint8 staticBits = (LCD_LCDPort_DR & (uint8)(~LCD_LCDPort_MASK));
+  59:Generated_Source\PSoC5/LCD_LCDPort.c ****     uint8 staticBits = (LCD_LCDPort_DR & (uint8)(~LCD_LCDPort_MASK));
   33              		.loc 1 59 0
   34 0000 044A     		ldr	r2, .L2
   35 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
   36 0004 03F08003 		and	r3, r3, #128
   37              	.LVL1:
-  60:.\Generated_Source\PSoC5/LCD_LCDPort.c ****     LCD_LCDPort_DR = staticBits | ((uint8)(value << LCD_LCDPort_SHIFT) & LCD_LCDPort_MASK);
+  60:Generated_Source\PSoC5/LCD_LCDPort.c ****     LCD_LCDPort_DR = staticBits | ((uint8)(value << LCD_LCDPort_SHIFT) & LCD_LCDPort_MASK);
   38              		.loc 1 60 0
   39 0008 00F07F00 		and	r0, r0, #127
   40              	.LVL2:
@@ -118,51 +118,51 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccDYnIwo.s 			page 1
   52              		.align	2
   53              		.global	LCD_LCDPort_SetDriveMode
   54              		.thumb
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccDYnIwo.s 			page 3
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccnkVm9m.s 			page 3
 
 
   55              		.thumb_func
   56              		.type	LCD_LCDPort_SetDriveMode, %function
   57              	LCD_LCDPort_SetDriveMode:
   58              	.LFB1:
-  61:.\Generated_Source\PSoC5/LCD_LCDPort.c **** }
-  62:.\Generated_Source\PSoC5/LCD_LCDPort.c **** 
-  63:.\Generated_Source\PSoC5/LCD_LCDPort.c **** 
-  64:.\Generated_Source\PSoC5/LCD_LCDPort.c **** /*******************************************************************************
-  65:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * Function Name: LCD_LCDPort_SetDriveMode
-  66:.\Generated_Source\PSoC5/LCD_LCDPort.c **** ****************************************************************************//**
-  67:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *
-  68:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * \brief Sets the drive mode for each of the Pins component's pins.
-  69:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * 
-  70:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * <b>Note</b> This affects all pins in the Pins component instance. Use the
-  71:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * Per-Pin APIs if you wish to control individual pin's drive modes.
-  72:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *
-  73:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * \param mode
-  74:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *  Mode for the selected signals. Valid options are documented in 
-  75:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *  \ref driveMode.
-  76:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *
-  77:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * \return
-  78:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *  None
-  79:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *
-  80:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * \sideeffect
-  81:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *  If you use read-modify-write operations that are not atomic, the ISR can
-  82:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *  cause corruption of this function. An ISR that interrupts this function 
-  83:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *  and performs writes to the Pins component Drive Mode registers can cause 
-  84:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *  corrupted port data. To avoid this issue, you should either use the Per-Pin
-  85:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *  APIs (primary method) or disable interrupts around this function.
-  86:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *
-  87:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * \funcusage
-  88:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *  \snippet LCD_LCDPort_SUT.c usage_LCD_LCDPort_SetDriveMode
-  89:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *******************************************************************************/
-  90:.\Generated_Source\PSoC5/LCD_LCDPort.c **** void LCD_LCDPort_SetDriveMode(uint8 mode)
-  91:.\Generated_Source\PSoC5/LCD_LCDPort.c **** {
+  61:Generated_Source\PSoC5/LCD_LCDPort.c **** }
+  62:Generated_Source\PSoC5/LCD_LCDPort.c **** 
+  63:Generated_Source\PSoC5/LCD_LCDPort.c **** 
+  64:Generated_Source\PSoC5/LCD_LCDPort.c **** /*******************************************************************************
+  65:Generated_Source\PSoC5/LCD_LCDPort.c **** * Function Name: LCD_LCDPort_SetDriveMode
+  66:Generated_Source\PSoC5/LCD_LCDPort.c **** ****************************************************************************//**
+  67:Generated_Source\PSoC5/LCD_LCDPort.c **** *
+  68:Generated_Source\PSoC5/LCD_LCDPort.c **** * \brief Sets the drive mode for each of the Pins component's pins.
+  69:Generated_Source\PSoC5/LCD_LCDPort.c **** * 
+  70:Generated_Source\PSoC5/LCD_LCDPort.c **** * <b>Note</b> This affects all pins in the Pins component instance. Use the
+  71:Generated_Source\PSoC5/LCD_LCDPort.c **** * Per-Pin APIs if you wish to control individual pin's drive modes.
+  72:Generated_Source\PSoC5/LCD_LCDPort.c **** *
+  73:Generated_Source\PSoC5/LCD_LCDPort.c **** * \param mode
+  74:Generated_Source\PSoC5/LCD_LCDPort.c **** *  Mode for the selected signals. Valid options are documented in 
+  75:Generated_Source\PSoC5/LCD_LCDPort.c **** *  \ref driveMode.
+  76:Generated_Source\PSoC5/LCD_LCDPort.c **** *
+  77:Generated_Source\PSoC5/LCD_LCDPort.c **** * \return
+  78:Generated_Source\PSoC5/LCD_LCDPort.c **** *  None
+  79:Generated_Source\PSoC5/LCD_LCDPort.c **** *
+  80:Generated_Source\PSoC5/LCD_LCDPort.c **** * \sideeffect
+  81:Generated_Source\PSoC5/LCD_LCDPort.c **** *  If you use read-modify-write operations that are not atomic, the ISR can
+  82:Generated_Source\PSoC5/LCD_LCDPort.c **** *  cause corruption of this function. An ISR that interrupts this function 
+  83:Generated_Source\PSoC5/LCD_LCDPort.c **** *  and performs writes to the Pins component Drive Mode registers can cause 
+  84:Generated_Source\PSoC5/LCD_LCDPort.c **** *  corrupted port data. To avoid this issue, you should either use the Per-Pin
+  85:Generated_Source\PSoC5/LCD_LCDPort.c **** *  APIs (primary method) or disable interrupts around this function.
+  86:Generated_Source\PSoC5/LCD_LCDPort.c **** *
+  87:Generated_Source\PSoC5/LCD_LCDPort.c **** * \funcusage
+  88:Generated_Source\PSoC5/LCD_LCDPort.c **** *  \snippet LCD_LCDPort_SUT.c usage_LCD_LCDPort_SetDriveMode
+  89:Generated_Source\PSoC5/LCD_LCDPort.c **** *******************************************************************************/
+  90:Generated_Source\PSoC5/LCD_LCDPort.c **** void LCD_LCDPort_SetDriveMode(uint8 mode)
+  91:Generated_Source\PSoC5/LCD_LCDPort.c **** {
   59              		.loc 1 91 0
   60              		.cfi_startproc
   61              		@ args = 0, pretend = 0, frame = 0
   62              		@ frame_needed = 0, uses_anonymous_args = 0
   63              		@ link register save eliminated.
   64              	.LVL3:
-  92:.\Generated_Source\PSoC5/LCD_LCDPort.c **** 	CyPins_SetPinDriveMode(LCD_LCDPort_0, mode);
+  92:Generated_Source\PSoC5/LCD_LCDPort.c **** 	CyPins_SetPinDriveMode(LCD_LCDPort_0, mode);
   65              		.loc 1 92 0
   66 0000 164A     		ldr	r2, .L5
   67 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
@@ -171,45 +171,45 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccDYnIwo.s 			page 1
   70 0008 03F0F103 		and	r3, r3, #241
   71 000c 0343     		orrs	r3, r3, r0
   72 000e 1370     		strb	r3, [r2]
-  93:.\Generated_Source\PSoC5/LCD_LCDPort.c **** 	CyPins_SetPinDriveMode(LCD_LCDPort_1, mode);
+  93:Generated_Source\PSoC5/LCD_LCDPort.c **** 	CyPins_SetPinDriveMode(LCD_LCDPort_1, mode);
   73              		.loc 1 93 0
   74 0010 0132     		adds	r2, r2, #1
   75 0012 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
   76 0014 03F0F103 		and	r3, r3, #241
   77 0018 0343     		orrs	r3, r3, r0
   78 001a 1370     		strb	r3, [r2]
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccDYnIwo.s 			page 4
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccnkVm9m.s 			page 4
 
 
-  94:.\Generated_Source\PSoC5/LCD_LCDPort.c **** 	CyPins_SetPinDriveMode(LCD_LCDPort_2, mode);
+  94:Generated_Source\PSoC5/LCD_LCDPort.c **** 	CyPins_SetPinDriveMode(LCD_LCDPort_2, mode);
   79              		.loc 1 94 0
   80 001c 0132     		adds	r2, r2, #1
   81 001e 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
   82 0020 03F0F103 		and	r3, r3, #241
   83 0024 0343     		orrs	r3, r3, r0
   84 0026 1370     		strb	r3, [r2]
-  95:.\Generated_Source\PSoC5/LCD_LCDPort.c **** 	CyPins_SetPinDriveMode(LCD_LCDPort_3, mode);
+  95:Generated_Source\PSoC5/LCD_LCDPort.c **** 	CyPins_SetPinDriveMode(LCD_LCDPort_3, mode);
   85              		.loc 1 95 0
   86 0028 0132     		adds	r2, r2, #1
   87 002a 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
   88 002c 03F0F103 		and	r3, r3, #241
   89 0030 0343     		orrs	r3, r3, r0
   90 0032 1370     		strb	r3, [r2]
-  96:.\Generated_Source\PSoC5/LCD_LCDPort.c **** 	CyPins_SetPinDriveMode(LCD_LCDPort_4, mode);
+  96:Generated_Source\PSoC5/LCD_LCDPort.c **** 	CyPins_SetPinDriveMode(LCD_LCDPort_4, mode);
   91              		.loc 1 96 0
   92 0034 0132     		adds	r2, r2, #1
   93 0036 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
   94 0038 03F0F103 		and	r3, r3, #241
   95 003c 0343     		orrs	r3, r3, r0
   96 003e 1370     		strb	r3, [r2]
-  97:.\Generated_Source\PSoC5/LCD_LCDPort.c **** 	CyPins_SetPinDriveMode(LCD_LCDPort_5, mode);
+  97:Generated_Source\PSoC5/LCD_LCDPort.c **** 	CyPins_SetPinDriveMode(LCD_LCDPort_5, mode);
   97              		.loc 1 97 0
   98 0040 0132     		adds	r2, r2, #1
   99 0042 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
  100 0044 03F0F103 		and	r3, r3, #241
  101 0048 0343     		orrs	r3, r3, r0
  102 004a 1370     		strb	r3, [r2]
-  98:.\Generated_Source\PSoC5/LCD_LCDPort.c **** 	CyPins_SetPinDriveMode(LCD_LCDPort_6, mode);
+  98:Generated_Source\PSoC5/LCD_LCDPort.c **** 	CyPins_SetPinDriveMode(LCD_LCDPort_6, mode);
  103              		.loc 1 98 0
  104 004c 0132     		adds	r2, r2, #1
  105 004e 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
@@ -232,41 +232,41 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccDYnIwo.s 			page 1
  122              		.type	LCD_LCDPort_Read, %function
  123              	LCD_LCDPort_Read:
  124              	.LFB2:
-  99:.\Generated_Source\PSoC5/LCD_LCDPort.c **** }
- 100:.\Generated_Source\PSoC5/LCD_LCDPort.c **** 
- 101:.\Generated_Source\PSoC5/LCD_LCDPort.c **** 
- 102:.\Generated_Source\PSoC5/LCD_LCDPort.c **** /*******************************************************************************
- 103:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * Function Name: LCD_LCDPort_Read
- 104:.\Generated_Source\PSoC5/LCD_LCDPort.c **** ****************************************************************************//**
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccDYnIwo.s 			page 5
+  99:Generated_Source\PSoC5/LCD_LCDPort.c **** }
+ 100:Generated_Source\PSoC5/LCD_LCDPort.c **** 
+ 101:Generated_Source\PSoC5/LCD_LCDPort.c **** 
+ 102:Generated_Source\PSoC5/LCD_LCDPort.c **** /*******************************************************************************
+ 103:Generated_Source\PSoC5/LCD_LCDPort.c **** * Function Name: LCD_LCDPort_Read
+ 104:Generated_Source\PSoC5/LCD_LCDPort.c **** ****************************************************************************//**
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccnkVm9m.s 			page 5
 
 
- 105:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *
- 106:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * \brief Reads the associated physical port (pin status register) and masks 
- 107:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *  the required bits according to the width and bit position of the component
- 108:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *  instance. 
- 109:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *
- 110:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * The pin's status register returns the current logic level present on the 
- 111:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * physical pin.
- 112:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *
- 113:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * \return 
- 114:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *  The current value for the pins in the component as a right justified number.
- 115:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *
- 116:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * \funcusage
- 117:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *  \snippet LCD_LCDPort_SUT.c usage_LCD_LCDPort_Read  
- 118:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *******************************************************************************/
- 119:.\Generated_Source\PSoC5/LCD_LCDPort.c **** uint8 LCD_LCDPort_Read(void)
- 120:.\Generated_Source\PSoC5/LCD_LCDPort.c **** {
+ 105:Generated_Source\PSoC5/LCD_LCDPort.c **** *
+ 106:Generated_Source\PSoC5/LCD_LCDPort.c **** * \brief Reads the associated physical port (pin status register) and masks 
+ 107:Generated_Source\PSoC5/LCD_LCDPort.c **** *  the required bits according to the width and bit position of the component
+ 108:Generated_Source\PSoC5/LCD_LCDPort.c **** *  instance. 
+ 109:Generated_Source\PSoC5/LCD_LCDPort.c **** *
+ 110:Generated_Source\PSoC5/LCD_LCDPort.c **** * The pin's status register returns the current logic level present on the 
+ 111:Generated_Source\PSoC5/LCD_LCDPort.c **** * physical pin.
+ 112:Generated_Source\PSoC5/LCD_LCDPort.c **** *
+ 113:Generated_Source\PSoC5/LCD_LCDPort.c **** * \return 
+ 114:Generated_Source\PSoC5/LCD_LCDPort.c **** *  The current value for the pins in the component as a right justified number.
+ 115:Generated_Source\PSoC5/LCD_LCDPort.c **** *
+ 116:Generated_Source\PSoC5/LCD_LCDPort.c **** * \funcusage
+ 117:Generated_Source\PSoC5/LCD_LCDPort.c **** *  \snippet LCD_LCDPort_SUT.c usage_LCD_LCDPort_Read  
+ 118:Generated_Source\PSoC5/LCD_LCDPort.c **** *******************************************************************************/
+ 119:Generated_Source\PSoC5/LCD_LCDPort.c **** uint8 LCD_LCDPort_Read(void)
+ 120:Generated_Source\PSoC5/LCD_LCDPort.c **** {
  125              		.loc 1 120 0
  126              		.cfi_startproc
  127              		@ args = 0, pretend = 0, frame = 0
  128              		@ frame_needed = 0, uses_anonymous_args = 0
  129              		@ link register save eliminated.
- 121:.\Generated_Source\PSoC5/LCD_LCDPort.c ****     return (LCD_LCDPort_PS & LCD_LCDPort_MASK) >> LCD_LCDPort_SHIFT;
+ 121:Generated_Source\PSoC5/LCD_LCDPort.c ****     return (LCD_LCDPort_PS & LCD_LCDPort_MASK) >> LCD_LCDPort_SHIFT;
  130              		.loc 1 121 0
  131 0000 024B     		ldr	r3, .L8
  132 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
- 122:.\Generated_Source\PSoC5/LCD_LCDPort.c **** }
+ 122:Generated_Source\PSoC5/LCD_LCDPort.c **** }
  133              		.loc 1 122 0
  134 0004 00F07F00 		and	r0, r0, #127
  135 0008 7047     		bx	lr
@@ -285,45 +285,45 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccDYnIwo.s 			page 1
  148              		.type	LCD_LCDPort_ReadDataReg, %function
  149              	LCD_LCDPort_ReadDataReg:
  150              	.LFB3:
- 123:.\Generated_Source\PSoC5/LCD_LCDPort.c **** 
- 124:.\Generated_Source\PSoC5/LCD_LCDPort.c **** 
- 125:.\Generated_Source\PSoC5/LCD_LCDPort.c **** /*******************************************************************************
- 126:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * Function Name: LCD_LCDPort_ReadDataReg
- 127:.\Generated_Source\PSoC5/LCD_LCDPort.c **** ****************************************************************************//**
- 128:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *
- 129:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * \brief Reads the associated physical port's data output register and masks 
- 130:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *  the correct bits according to the width and bit position of the component 
- 131:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *  instance. 
- 132:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *
- 133:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * The data output register controls the signal applied to the physical pin in 
- 134:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * conjunction with the drive mode parameter. This is not the same as the 
- 135:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * preferred LCD_LCDPort_Read() API because the 
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccDYnIwo.s 			page 6
+ 123:Generated_Source\PSoC5/LCD_LCDPort.c **** 
+ 124:Generated_Source\PSoC5/LCD_LCDPort.c **** 
+ 125:Generated_Source\PSoC5/LCD_LCDPort.c **** /*******************************************************************************
+ 126:Generated_Source\PSoC5/LCD_LCDPort.c **** * Function Name: LCD_LCDPort_ReadDataReg
+ 127:Generated_Source\PSoC5/LCD_LCDPort.c **** ****************************************************************************//**
+ 128:Generated_Source\PSoC5/LCD_LCDPort.c **** *
+ 129:Generated_Source\PSoC5/LCD_LCDPort.c **** * \brief Reads the associated physical port's data output register and masks 
+ 130:Generated_Source\PSoC5/LCD_LCDPort.c **** *  the correct bits according to the width and bit position of the component 
+ 131:Generated_Source\PSoC5/LCD_LCDPort.c **** *  instance. 
+ 132:Generated_Source\PSoC5/LCD_LCDPort.c **** *
+ 133:Generated_Source\PSoC5/LCD_LCDPort.c **** * The data output register controls the signal applied to the physical pin in 
+ 134:Generated_Source\PSoC5/LCD_LCDPort.c **** * conjunction with the drive mode parameter. This is not the same as the 
+ 135:Generated_Source\PSoC5/LCD_LCDPort.c **** * preferred LCD_LCDPort_Read() API because the 
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccnkVm9m.s 			page 6
 
 
- 136:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * LCD_LCDPort_ReadDataReg() reads the data register instead of the status 
- 137:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * register. For output pins this is a useful function to determine the value 
- 138:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * just written to the pin.
- 139:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *
- 140:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * \return 
- 141:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *  The current value of the data register masked and shifted into a right 
- 142:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *  justified number for the component instance.
- 143:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *
- 144:.\Generated_Source\PSoC5/LCD_LCDPort.c **** * \funcusage
- 145:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *  \snippet LCD_LCDPort_SUT.c usage_LCD_LCDPort_ReadDataReg 
- 146:.\Generated_Source\PSoC5/LCD_LCDPort.c **** *******************************************************************************/
- 147:.\Generated_Source\PSoC5/LCD_LCDPort.c **** uint8 LCD_LCDPort_ReadDataReg(void)
- 148:.\Generated_Source\PSoC5/LCD_LCDPort.c **** {
+ 136:Generated_Source\PSoC5/LCD_LCDPort.c **** * LCD_LCDPort_ReadDataReg() reads the data register instead of the status 
+ 137:Generated_Source\PSoC5/LCD_LCDPort.c **** * register. For output pins this is a useful function to determine the value 
+ 138:Generated_Source\PSoC5/LCD_LCDPort.c **** * just written to the pin.
+ 139:Generated_Source\PSoC5/LCD_LCDPort.c **** *
+ 140:Generated_Source\PSoC5/LCD_LCDPort.c **** * \return 
+ 141:Generated_Source\PSoC5/LCD_LCDPort.c **** *  The current value of the data register masked and shifted into a right 
+ 142:Generated_Source\PSoC5/LCD_LCDPort.c **** *  justified number for the component instance.
+ 143:Generated_Source\PSoC5/LCD_LCDPort.c **** *
+ 144:Generated_Source\PSoC5/LCD_LCDPort.c **** * \funcusage
+ 145:Generated_Source\PSoC5/LCD_LCDPort.c **** *  \snippet LCD_LCDPort_SUT.c usage_LCD_LCDPort_ReadDataReg 
+ 146:Generated_Source\PSoC5/LCD_LCDPort.c **** *******************************************************************************/
+ 147:Generated_Source\PSoC5/LCD_LCDPort.c **** uint8 LCD_LCDPort_ReadDataReg(void)
+ 148:Generated_Source\PSoC5/LCD_LCDPort.c **** {
  151              		.loc 1 148 0
  152              		.cfi_startproc
  153              		@ args = 0, pretend = 0, frame = 0
  154              		@ frame_needed = 0, uses_anonymous_args = 0
  155              		@ link register save eliminated.
- 149:.\Generated_Source\PSoC5/LCD_LCDPort.c ****     return (LCD_LCDPort_DR & LCD_LCDPort_MASK) >> LCD_LCDPort_SHIFT;
+ 149:Generated_Source\PSoC5/LCD_LCDPort.c ****     return (LCD_LCDPort_DR & LCD_LCDPort_MASK) >> LCD_LCDPort_SHIFT;
  156              		.loc 1 149 0
  157 0000 024B     		ldr	r3, .L11
  158 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
- 150:.\Generated_Source\PSoC5/LCD_LCDPort.c **** }
+ 150:Generated_Source\PSoC5/LCD_LCDPort.c **** }
  159              		.loc 1 150 0
  160 0004 00F07F00 		and	r0, r0, #127
  161 0008 7047     		bx	lr
@@ -336,7 +336,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccDYnIwo.s 			page 1
  168              		.size	LCD_LCDPort_ReadDataReg, .-LCD_LCDPort_ReadDataReg
  169              		.text
  170              	.Letext0:
- 171              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
+ 171              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
  172              		.section	.debug_info,"",%progbits
  173              	.Ldebug_info0:
  174 0000 1B010000 		.4byte	0x11b
@@ -344,48 +344,48 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccDYnIwo.s 			page 1
  176 0006 00000000 		.4byte	.Ldebug_abbrev0
  177 000a 04       		.byte	0x4
  178 000b 01       		.uleb128 0x1
- 179 000c CB000000 		.4byte	.LASF20
+ 179 000c 05010000 		.4byte	.LASF20
  180 0010 01       		.byte	0x1
- 181 0011 82010000 		.4byte	.LASF21
- 182 0015 00000000 		.4byte	.LASF22
+ 181 0011 C0000000 		.4byte	.LASF21
+ 182 0015 49000000 		.4byte	.LASF22
  183 0019 00000000 		.4byte	.Ldebug_ranges0+0
  184 001d 00000000 		.4byte	0
  185 0021 00000000 		.4byte	.Ldebug_line0
  186 0025 02       		.uleb128 0x2
  187 0026 01       		.byte	0x1
  188 0027 06       		.byte	0x6
- 189 0028 E6010000 		.4byte	.LASF0
+ 189 0028 F9010000 		.4byte	.LASF0
  190 002c 02       		.uleb128 0x2
  191 002d 01       		.byte	0x1
  192 002e 08       		.byte	0x8
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccDYnIwo.s 			page 7
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccnkVm9m.s 			page 7
 
 
- 193 002f 68000000 		.4byte	.LASF1
+ 193 002f 90000000 		.4byte	.LASF1
  194 0033 02       		.uleb128 0x2
  195 0034 02       		.byte	0x2
  196 0035 05       		.byte	0x5
- 197 0036 BC010000 		.4byte	.LASF2
+ 197 0036 CF010000 		.4byte	.LASF2
  198 003a 02       		.uleb128 0x2
  199 003b 02       		.byte	0x2
  200 003c 07       		.byte	0x7
- 201 003d 98000000 		.4byte	.LASF3
+ 201 003d 18000000 		.4byte	.LASF3
  202 0041 02       		.uleb128 0x2
  203 0042 04       		.byte	0x4
  204 0043 05       		.byte	0x5
- 205 0044 DD010000 		.4byte	.LASF4
+ 205 0044 F0010000 		.4byte	.LASF4
  206 0048 02       		.uleb128 0x2
  207 0049 04       		.byte	0x4
  208 004a 07       		.byte	0x7
- 209 004b 86000000 		.4byte	.LASF5
+ 209 004b AE000000 		.4byte	.LASF5
  210 004f 02       		.uleb128 0x2
  211 0050 08       		.byte	0x8
  212 0051 05       		.byte	0x5
- 213 0052 A9010000 		.4byte	.LASF6
+ 213 0052 BC010000 		.4byte	.LASF6
  214 0056 02       		.uleb128 0x2
  215 0057 08       		.byte	0x8
  216 0058 07       		.byte	0x7
- 217 0059 66010000 		.4byte	.LASF7
+ 217 0059 A0010000 		.4byte	.LASF7
  218 005d 03       		.uleb128 0x3
  219 005e 04       		.byte	0x4
  220 005f 05       		.byte	0x5
@@ -393,36 +393,36 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccDYnIwo.s 			page 1
  222 0064 02       		.uleb128 0x2
  223 0065 04       		.byte	0x4
  224 0066 07       		.byte	0x7
- 225 0067 59010000 		.4byte	.LASF8
+ 225 0067 93010000 		.4byte	.LASF8
  226 006b 04       		.uleb128 0x4
- 227 006c C6010000 		.4byte	.LASF12
+ 227 006c D9010000 		.4byte	.LASF12
  228 0070 02       		.byte	0x2
  229 0071 3801     		.2byte	0x138
  230 0073 2C000000 		.4byte	0x2c
  231 0077 02       		.uleb128 0x2
  232 0078 04       		.byte	0x4
  233 0079 04       		.byte	0x4
- 234 007a 62000000 		.4byte	.LASF9
+ 234 007a 43000000 		.4byte	.LASF9
  235 007e 02       		.uleb128 0x2
  236 007f 08       		.byte	0x8
  237 0080 04       		.byte	0x4
- 238 0081 C4000000 		.4byte	.LASF10
+ 238 0081 FE000000 		.4byte	.LASF10
  239 0085 02       		.uleb128 0x2
  240 0086 01       		.byte	0x1
  241 0087 08       		.byte	0x8
- 242 0088 B7010000 		.4byte	.LASF11
+ 242 0088 CA010000 		.4byte	.LASF11
  243 008c 04       		.uleb128 0x4
- 244 008d 81000000 		.4byte	.LASF13
+ 244 008d A9000000 		.4byte	.LASF13
  245 0091 02       		.byte	0x2
  246 0092 E201     		.2byte	0x1e2
  247 0094 98000000 		.4byte	0x98
  248 0098 05       		.uleb128 0x5
  249 0099 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccDYnIwo.s 			page 8
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccnkVm9m.s 			page 8
 
 
  250 009d 06       		.uleb128 0x6
- 251 009e 38000000 		.4byte	.LASF14
+ 251 009e 06000000 		.4byte	.LASF14
  252 00a2 01       		.byte	0x1
  253 00a3 39       		.byte	0x39
  254 00a4 00000000 		.4byte	.LFB0
@@ -431,13 +431,13 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccDYnIwo.s 			page 1
  257 00ad 9C       		.byte	0x9c
  258 00ae CF000000 		.4byte	0xcf
  259 00b2 07       		.uleb128 0x7
- 260 00b3 32000000 		.4byte	.LASF16
+ 260 00b3 00000000 		.4byte	.LASF16
  261 00b7 01       		.byte	0x1
  262 00b8 39       		.byte	0x39
  263 00b9 6B000000 		.4byte	0x6b
  264 00bd 00000000 		.4byte	.LLST0
  265 00c1 08       		.uleb128 0x8
- 266 00c2 76000000 		.4byte	.LASF23
+ 266 00c2 9E000000 		.4byte	.LASF23
  267 00c6 01       		.byte	0x1
  268 00c7 3B       		.byte	0x3b
  269 00c8 6B000000 		.4byte	0x6b
@@ -445,7 +445,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccDYnIwo.s 			page 1
  271 00cd 53       		.byte	0x53
  272 00ce 00       		.byte	0
  273 00cf 06       		.uleb128 0x6
- 274 00d0 AB000000 		.4byte	.LASF15
+ 274 00d0 E5000000 		.4byte	.LASF15
  275 00d4 01       		.byte	0x1
  276 00d5 5A       		.byte	0x5a
  277 00d6 00000000 		.4byte	.LFB1
@@ -454,14 +454,14 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccDYnIwo.s 			page 1
  280 00df 9C       		.byte	0x9c
  281 00e0 F4000000 		.4byte	0xf4
  282 00e4 07       		.uleb128 0x7
- 283 00e5 7D010000 		.4byte	.LASF17
+ 283 00e5 B7010000 		.4byte	.LASF17
  284 00e9 01       		.byte	0x1
  285 00ea 5A       		.byte	0x5a
  286 00eb 6B000000 		.4byte	0x6b
  287 00ef 21000000 		.4byte	.LLST1
  288 00f3 00       		.byte	0
  289 00f4 09       		.uleb128 0x9
- 290 00f5 CC010000 		.4byte	.LASF18
+ 290 00f5 DF010000 		.4byte	.LASF18
  291 00f9 01       		.byte	0x1
  292 00fa 77       		.byte	0x77
  293 00fb 6B000000 		.4byte	0x6b
@@ -470,7 +470,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccDYnIwo.s 			page 1
  296 0107 01       		.uleb128 0x1
  297 0108 9C       		.byte	0x9c
  298 0109 09       		.uleb128 0x9
- 299 010a 4A000000 		.4byte	.LASF19
+ 299 010a 2B000000 		.4byte	.LASF19
  300 010e 01       		.byte	0x1
  301 010f 93       		.byte	0x93
  302 0110 6B000000 		.4byte	0x6b
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccDYnIwo.s 			page 1
  304 0118 10000000 		.4byte	.LFE3-.LFB3
  305 011c 01       		.uleb128 0x1
  306 011d 9C       		.byte	0x9c
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccDYnIwo.s 			page 9
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccnkVm9m.s 			page 9
 
 
  307 011e 00       		.byte	0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccDYnIwo.s 			page 1
  361 0033 13       		.uleb128 0x13
  362 0034 00       		.byte	0
  363 0035 00       		.byte	0
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccDYnIwo.s 			page 10
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccnkVm9m.s 			page 10
 
 
  364 0036 05       		.uleb128 0x5
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccDYnIwo.s 			page 1
  418 006d 3B       		.uleb128 0x3b
  419 006e 0B       		.uleb128 0xb
  420 006f 49       		.uleb128 0x49
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccDYnIwo.s 			page 11
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccnkVm9m.s 			page 11
 
 
  421 0070 13       		.uleb128 0x13
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccDYnIwo.s 			page 1
  475 0034 0400     		.2byte	0x4
  476 0036 F3       		.byte	0xf3
  477 0037 01       		.uleb128 0x1
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccDYnIwo.s 			page 12
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccnkVm9m.s 			page 12
 
 
  478 0038 50       		.byte	0x50
@@ -697,138 +697,142 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccDYnIwo.s 			page 1
  511 0024 00000000 		.4byte	0
  512              		.section	.debug_line,"",%progbits
  513              	.Ldebug_line0:
- 514 0000 9C000000 		.section	.debug_str,"MS",%progbits,1
- 514      02004A00 
+ 514 0000 9A000000 		.section	.debug_str,"MS",%progbits,1
+ 514      02004800 
  514      00000201 
  514      FB0E0D00 
  514      01010101 
- 515              	.LASF22:
- 516 0000 433A5C55 		.ascii	"C:\\Users\\Sirius\\Desktop\\Dashboard\\Dashboard.cy"
- 516      73657273 
- 516      5C536972 
- 516      6975735C 
- 516      4465736B 
- 517 002e 64736E00 		.ascii	"dsn\000"
- 518              	.LASF16:
- 519 0032 76616C75 		.ascii	"value\000"
- 519      6500
- 520              	.LASF14:
- 521 0038 4C43445F 		.ascii	"LCD_LCDPort_Write\000"
- 521      4C434450 
- 521      6F72745F 
- 521      57726974 
- 521      6500
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccDYnIwo.s 			page 13
+ 515              	.LASF16:
+ 516 0000 76616C75 		.ascii	"value\000"
+ 516      6500
+ 517              	.LASF14:
+ 518 0006 4C43445F 		.ascii	"LCD_LCDPort_Write\000"
+ 518      4C434450 
+ 518      6F72745F 
+ 518      57726974 
+ 518      6500
+ 519              	.LASF3:
+ 520 0018 73686F72 		.ascii	"short unsigned int\000"
+ 520      7420756E 
+ 520      7369676E 
+ 520      65642069 
+ 520      6E7400
+ 521              	.LASF19:
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccnkVm9m.s 			page 13
 
 
- 522              	.LASF19:
- 523 004a 4C43445F 		.ascii	"LCD_LCDPort_ReadDataReg\000"
- 523      4C434450 
- 523      6F72745F 
- 523      52656164 
- 523      44617461 
- 524              	.LASF9:
- 525 0062 666C6F61 		.ascii	"float\000"
- 525      7400
- 526              	.LASF1:
- 527 0068 756E7369 		.ascii	"unsigned char\000"
- 527      676E6564 
- 527      20636861 
- 527      7200
- 528              	.LASF23:
- 529 0076 73746174 		.ascii	"staticBits\000"
- 529      69634269 
- 529      747300
- 530              	.LASF13:
- 531 0081 72656738 		.ascii	"reg8\000"
- 531      00
- 532              	.LASF5:
- 533 0086 6C6F6E67 		.ascii	"long unsigned int\000"
- 533      20756E73 
- 533      69676E65 
- 533      6420696E 
- 533      7400
- 534              	.LASF3:
- 535 0098 73686F72 		.ascii	"short unsigned int\000"
- 535      7420756E 
- 535      7369676E 
- 535      65642069 
- 535      6E7400
- 536              	.LASF15:
- 537 00ab 4C43445F 		.ascii	"LCD_LCDPort_SetDriveMode\000"
- 537      4C434450 
- 537      6F72745F 
- 537      53657444 
- 537      72697665 
- 538              	.LASF10:
- 539 00c4 646F7562 		.ascii	"double\000"
- 539      6C6500
- 540              	.LASF20:
- 541 00cb 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 541      4320342E 
- 541      392E3320 
- 541      32303135 
- 541      30333033 
- 542 00fe 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 542      20726576 
- 542      6973696F 
- 542      6E203232 
- 542      31323230 
- 543 0131 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 543      66756E63 
- 543      74696F6E 
- 543      2D736563 
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccDYnIwo.s 			page 14
+ 522 002b 4C43445F 		.ascii	"LCD_LCDPort_ReadDataReg\000"
+ 522      4C434450 
+ 522      6F72745F 
+ 522      52656164 
+ 522      44617461 
+ 523              	.LASF9:
+ 524 0043 666C6F61 		.ascii	"float\000"
+ 524      7400
+ 525              	.LASF22:
+ 526 0049 433A5C55 		.ascii	"C:\\Users\\Schuyler\\Documents\\PSoC Creator\\FE3-D"
+ 526      73657273 
+ 526      5C536368 
+ 526      75796C65 
+ 526      725C446F 
+ 527 0077 61736862 		.ascii	"ashboard\\Dashboard.cydsn\000"
+ 527      6F617264 
+ 527      5C446173 
+ 527      68626F61 
+ 527      72642E63 
+ 528              	.LASF1:
+ 529 0090 756E7369 		.ascii	"unsigned char\000"
+ 529      676E6564 
+ 529      20636861 
+ 529      7200
+ 530              	.LASF23:
+ 531 009e 73746174 		.ascii	"staticBits\000"
+ 531      69634269 
+ 531      747300
+ 532              	.LASF13:
+ 533 00a9 72656738 		.ascii	"reg8\000"
+ 533      00
+ 534              	.LASF5:
+ 535 00ae 6C6F6E67 		.ascii	"long unsigned int\000"
+ 535      20756E73 
+ 535      69676E65 
+ 535      6420696E 
+ 535      7400
+ 536              	.LASF21:
+ 537 00c0 47656E65 		.ascii	"Generated_Source\\PSoC5\\LCD_LCDPort.c\000"
+ 537      72617465 
+ 537      645F536F 
+ 537      75726365 
+ 537      5C50536F 
+ 538              	.LASF15:
+ 539 00e5 4C43445F 		.ascii	"LCD_LCDPort_SetDriveMode\000"
+ 539      4C434450 
+ 539      6F72745F 
+ 539      53657444 
+ 539      72697665 
+ 540              	.LASF10:
+ 541 00fe 646F7562 		.ascii	"double\000"
+ 541      6C6500
+ 542              	.LASF20:
+ 543 0105 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 543      4320342E 
+ 543      392E3320 
+ 543      32303135 
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccnkVm9m.s 			page 14
 
 
- 543      74696F6E 
- 544              	.LASF8:
- 545 0159 756E7369 		.ascii	"unsigned int\000"
- 545      676E6564 
- 545      20696E74 
- 545      00
- 546              	.LASF7:
- 547 0166 6C6F6E67 		.ascii	"long long unsigned int\000"
- 547      206C6F6E 
- 547      6720756E 
- 547      7369676E 
- 547      65642069 
- 548              	.LASF17:
- 549 017d 6D6F6465 		.ascii	"mode\000"
- 549      00
- 550              	.LASF21:
- 551 0182 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\LCD_LCDPort.c\000"
- 551      6E657261 
- 551      7465645F 
- 551      536F7572 
- 551      63655C50 
+ 543      30333033 
+ 544 0138 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 544      20726576 
+ 544      6973696F 
+ 544      6E203232 
+ 544      31323230 
+ 545 016b 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 545      66756E63 
+ 545      74696F6E 
+ 545      2D736563 
+ 545      74696F6E 
+ 546              	.LASF8:
+ 547 0193 756E7369 		.ascii	"unsigned int\000"
+ 547      676E6564 
+ 547      20696E74 
+ 547      00
+ 548              	.LASF7:
+ 549 01a0 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 549      206C6F6E 
+ 549      6720756E 
+ 549      7369676E 
+ 549      65642069 
+ 550              	.LASF17:
+ 551 01b7 6D6F6465 		.ascii	"mode\000"
+ 551      00
  552              	.LASF6:
- 553 01a9 6C6F6E67 		.ascii	"long long int\000"
+ 553 01bc 6C6F6E67 		.ascii	"long long int\000"
  553      206C6F6E 
  553      6720696E 
  553      7400
  554              	.LASF11:
- 555 01b7 63686172 		.ascii	"char\000"
+ 555 01ca 63686172 		.ascii	"char\000"
  555      00
  556              	.LASF2:
- 557 01bc 73686F72 		.ascii	"short int\000"
+ 557 01cf 73686F72 		.ascii	"short int\000"
  557      7420696E 
  557      7400
  558              	.LASF12:
- 559 01c6 75696E74 		.ascii	"uint8\000"
+ 559 01d9 75696E74 		.ascii	"uint8\000"
  559      3800
  560              	.LASF18:
- 561 01cc 4C43445F 		.ascii	"LCD_LCDPort_Read\000"
+ 561 01df 4C43445F 		.ascii	"LCD_LCDPort_Read\000"
  561      4C434450 
  561      6F72745F 
  561      52656164 
  561      00
  562              	.LASF4:
- 563 01dd 6C6F6E67 		.ascii	"long int\000"
+ 563 01f0 6C6F6E67 		.ascii	"long int\000"
  563      20696E74 
  563      00
  564              	.LASF0:
- 565 01e6 7369676E 		.ascii	"signed char\000"
+ 565 01f9 7369676E 		.ascii	"signed char\000"
  565      65642063 
  565      68617200 
  566              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

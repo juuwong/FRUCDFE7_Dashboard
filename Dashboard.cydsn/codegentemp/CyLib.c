@@ -2231,7 +2231,7 @@ uint8 CyVdStickyStatus(uint8 mask)
 * Summary:
 *  Reads the real-time voltage detection status bits in the RESET_SR2 register.
 *  The bits are set to 1 by the voltage monitor circuit when the supply is
-*  outside the detector¡¯s trip point, and set to 0 when the supply is inside the
+*  outside the detector’s trip point, and set to 0 when the supply is inside the
 *  trip point.
 *
 * Parameters:

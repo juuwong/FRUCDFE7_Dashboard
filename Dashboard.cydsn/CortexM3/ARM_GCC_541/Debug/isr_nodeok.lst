@@ -1,0 +1,2068 @@
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"isr_nodeok.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.isr_nodeok_Interrupt,"ax",%progbits
+  20              		.align	2
+  21              		.global	isr_nodeok_Interrupt
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	isr_nodeok_Interrupt, %function
+  25              	isr_nodeok_Interrupt:
+  26              	.LFB3:
+  27              		.file 1 "Generated_Source\\PSoC5\\isr_nodeok.c"
+   1:Generated_Source\PSoC5/isr_nodeok.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/isr_nodeok.c **** * File Name: isr_nodeok.c  
+   3:Generated_Source\PSoC5/isr_nodeok.c **** * Version 1.70
+   4:Generated_Source\PSoC5/isr_nodeok.c **** *
+   5:Generated_Source\PSoC5/isr_nodeok.c **** *  Description:
+   6:Generated_Source\PSoC5/isr_nodeok.c **** *   API for controlling the state of an interrupt.
+   7:Generated_Source\PSoC5/isr_nodeok.c **** *
+   8:Generated_Source\PSoC5/isr_nodeok.c **** *
+   9:Generated_Source\PSoC5/isr_nodeok.c **** *  Note:
+  10:Generated_Source\PSoC5/isr_nodeok.c **** *
+  11:Generated_Source\PSoC5/isr_nodeok.c **** ********************************************************************************
+  12:Generated_Source\PSoC5/isr_nodeok.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  13:Generated_Source\PSoC5/isr_nodeok.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  14:Generated_Source\PSoC5/isr_nodeok.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  15:Generated_Source\PSoC5/isr_nodeok.c **** * the software package with which this file was provided.
+  16:Generated_Source\PSoC5/isr_nodeok.c **** *******************************************************************************/
+  17:Generated_Source\PSoC5/isr_nodeok.c **** 
+  18:Generated_Source\PSoC5/isr_nodeok.c **** 
+  19:Generated_Source\PSoC5/isr_nodeok.c **** #include <cydevice_trm.h>
+  20:Generated_Source\PSoC5/isr_nodeok.c **** #include <CyLib.h>
+  21:Generated_Source\PSoC5/isr_nodeok.c **** #include <isr_nodeok.h>
+  22:Generated_Source\PSoC5/isr_nodeok.c **** #include "cyapicallbacks.h"
+  23:Generated_Source\PSoC5/isr_nodeok.c **** 
+  24:Generated_Source\PSoC5/isr_nodeok.c **** #if !defined(isr_nodeok__REMOVED) /* Check for removal by optimization */
+  25:Generated_Source\PSoC5/isr_nodeok.c **** 
+  26:Generated_Source\PSoC5/isr_nodeok.c **** /*******************************************************************************
+  27:Generated_Source\PSoC5/isr_nodeok.c **** *  Place your includes, defines and code here 
+  28:Generated_Source\PSoC5/isr_nodeok.c **** ********************************************************************************/
+  29:Generated_Source\PSoC5/isr_nodeok.c **** /* `#START isr_nodeok_intc` */
+  30:Generated_Source\PSoC5/isr_nodeok.c **** #include "Node_Timer.h"
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 2
+
+
+  31:Generated_Source\PSoC5/isr_nodeok.c **** extern volatile uint32_t pedalOK;
+  32:Generated_Source\PSoC5/isr_nodeok.c **** /* `#END` */
+  33:Generated_Source\PSoC5/isr_nodeok.c **** 
+  34:Generated_Source\PSoC5/isr_nodeok.c **** #ifndef CYINT_IRQ_BASE
+  35:Generated_Source\PSoC5/isr_nodeok.c **** #define CYINT_IRQ_BASE      16
+  36:Generated_Source\PSoC5/isr_nodeok.c **** #endif /* CYINT_IRQ_BASE */
+  37:Generated_Source\PSoC5/isr_nodeok.c **** #ifndef CYINT_VECT_TABLE
+  38:Generated_Source\PSoC5/isr_nodeok.c **** #define CYINT_VECT_TABLE    ((cyisraddress **) CYREG_NVIC_VECT_OFFSET)
+  39:Generated_Source\PSoC5/isr_nodeok.c **** #endif /* CYINT_VECT_TABLE */
+  40:Generated_Source\PSoC5/isr_nodeok.c **** 
+  41:Generated_Source\PSoC5/isr_nodeok.c **** /* Declared in startup, used to set unused interrupts to. */
+  42:Generated_Source\PSoC5/isr_nodeok.c **** CY_ISR_PROTO(IntDefaultHandler);
+  43:Generated_Source\PSoC5/isr_nodeok.c **** 
+  44:Generated_Source\PSoC5/isr_nodeok.c **** 
+  45:Generated_Source\PSoC5/isr_nodeok.c **** /*******************************************************************************
+  46:Generated_Source\PSoC5/isr_nodeok.c **** * Function Name: isr_nodeok_Start
+  47:Generated_Source\PSoC5/isr_nodeok.c **** ********************************************************************************
+  48:Generated_Source\PSoC5/isr_nodeok.c **** *
+  49:Generated_Source\PSoC5/isr_nodeok.c **** * Summary:
+  50:Generated_Source\PSoC5/isr_nodeok.c **** *  Set up the interrupt and enable it. This function disables the interrupt, 
+  51:Generated_Source\PSoC5/isr_nodeok.c **** *  sets the default interrupt vector, sets the priority from the value in the
+  52:Generated_Source\PSoC5/isr_nodeok.c **** *  Design Wide Resources Interrupt Editor, then enables the interrupt to the 
+  53:Generated_Source\PSoC5/isr_nodeok.c **** *  interrupt controller.
+  54:Generated_Source\PSoC5/isr_nodeok.c **** *
+  55:Generated_Source\PSoC5/isr_nodeok.c **** * Parameters:  
+  56:Generated_Source\PSoC5/isr_nodeok.c **** *   None
+  57:Generated_Source\PSoC5/isr_nodeok.c **** *
+  58:Generated_Source\PSoC5/isr_nodeok.c **** * Return:
+  59:Generated_Source\PSoC5/isr_nodeok.c **** *   None
+  60:Generated_Source\PSoC5/isr_nodeok.c **** *
+  61:Generated_Source\PSoC5/isr_nodeok.c **** *******************************************************************************/
+  62:Generated_Source\PSoC5/isr_nodeok.c **** void isr_nodeok_Start(void)
+  63:Generated_Source\PSoC5/isr_nodeok.c **** {
+  64:Generated_Source\PSoC5/isr_nodeok.c ****     /* For all we know the interrupt is active. */
+  65:Generated_Source\PSoC5/isr_nodeok.c ****     isr_nodeok_Disable();
+  66:Generated_Source\PSoC5/isr_nodeok.c **** 
+  67:Generated_Source\PSoC5/isr_nodeok.c ****     /* Set the ISR to point to the isr_nodeok Interrupt. */
+  68:Generated_Source\PSoC5/isr_nodeok.c ****     isr_nodeok_SetVector(&isr_nodeok_Interrupt);
+  69:Generated_Source\PSoC5/isr_nodeok.c **** 
+  70:Generated_Source\PSoC5/isr_nodeok.c ****     /* Set the priority. */
+  71:Generated_Source\PSoC5/isr_nodeok.c ****     isr_nodeok_SetPriority((uint8)isr_nodeok_INTC_PRIOR_NUMBER);
+  72:Generated_Source\PSoC5/isr_nodeok.c **** 
+  73:Generated_Source\PSoC5/isr_nodeok.c ****     /* Enable it. */
+  74:Generated_Source\PSoC5/isr_nodeok.c ****     isr_nodeok_Enable();
+  75:Generated_Source\PSoC5/isr_nodeok.c **** }
+  76:Generated_Source\PSoC5/isr_nodeok.c **** 
+  77:Generated_Source\PSoC5/isr_nodeok.c **** 
+  78:Generated_Source\PSoC5/isr_nodeok.c **** /*******************************************************************************
+  79:Generated_Source\PSoC5/isr_nodeok.c **** * Function Name: isr_nodeok_StartEx
+  80:Generated_Source\PSoC5/isr_nodeok.c **** ********************************************************************************
+  81:Generated_Source\PSoC5/isr_nodeok.c **** *
+  82:Generated_Source\PSoC5/isr_nodeok.c **** * Summary:
+  83:Generated_Source\PSoC5/isr_nodeok.c **** *  Sets up the interrupt and enables it. This function disables the interrupt,
+  84:Generated_Source\PSoC5/isr_nodeok.c **** *  sets the interrupt vector based on the address passed in, sets the priority 
+  85:Generated_Source\PSoC5/isr_nodeok.c **** *  from the value in the Design Wide Resources Interrupt Editor, then enables 
+  86:Generated_Source\PSoC5/isr_nodeok.c **** *  the interrupt to the interrupt controller.
+  87:Generated_Source\PSoC5/isr_nodeok.c **** *  
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 3
+
+
+  88:Generated_Source\PSoC5/isr_nodeok.c **** *  When defining ISR functions, the CY_ISR and CY_ISR_PROTO macros should be 
+  89:Generated_Source\PSoC5/isr_nodeok.c **** *  used to provide consistent definition across compilers:
+  90:Generated_Source\PSoC5/isr_nodeok.c **** *  
+  91:Generated_Source\PSoC5/isr_nodeok.c **** *  Function definition example:
+  92:Generated_Source\PSoC5/isr_nodeok.c **** *   CY_ISR(MyISR)
+  93:Generated_Source\PSoC5/isr_nodeok.c **** *   {
+  94:Generated_Source\PSoC5/isr_nodeok.c **** *   }
+  95:Generated_Source\PSoC5/isr_nodeok.c **** *   Function prototype example:
+  96:Generated_Source\PSoC5/isr_nodeok.c **** *   CY_ISR_PROTO(MyISR);
+  97:Generated_Source\PSoC5/isr_nodeok.c **** *
+  98:Generated_Source\PSoC5/isr_nodeok.c **** * Parameters:  
+  99:Generated_Source\PSoC5/isr_nodeok.c **** *   address: Address of the ISR to set in the interrupt vector table.
+ 100:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 101:Generated_Source\PSoC5/isr_nodeok.c **** * Return:
+ 102:Generated_Source\PSoC5/isr_nodeok.c **** *   None
+ 103:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 104:Generated_Source\PSoC5/isr_nodeok.c **** *******************************************************************************/
+ 105:Generated_Source\PSoC5/isr_nodeok.c **** void isr_nodeok_StartEx(cyisraddress address)
+ 106:Generated_Source\PSoC5/isr_nodeok.c **** {
+ 107:Generated_Source\PSoC5/isr_nodeok.c ****     /* For all we know the interrupt is active. */
+ 108:Generated_Source\PSoC5/isr_nodeok.c ****     isr_nodeok_Disable();
+ 109:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 110:Generated_Source\PSoC5/isr_nodeok.c ****     /* Set the ISR to point to the isr_nodeok Interrupt. */
+ 111:Generated_Source\PSoC5/isr_nodeok.c ****     isr_nodeok_SetVector(address);
+ 112:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 113:Generated_Source\PSoC5/isr_nodeok.c ****     /* Set the priority. */
+ 114:Generated_Source\PSoC5/isr_nodeok.c ****     isr_nodeok_SetPriority((uint8)isr_nodeok_INTC_PRIOR_NUMBER);
+ 115:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 116:Generated_Source\PSoC5/isr_nodeok.c ****     /* Enable it. */
+ 117:Generated_Source\PSoC5/isr_nodeok.c ****     isr_nodeok_Enable();
+ 118:Generated_Source\PSoC5/isr_nodeok.c **** }
+ 119:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 120:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 121:Generated_Source\PSoC5/isr_nodeok.c **** /*******************************************************************************
+ 122:Generated_Source\PSoC5/isr_nodeok.c **** * Function Name: isr_nodeok_Stop
+ 123:Generated_Source\PSoC5/isr_nodeok.c **** ********************************************************************************
+ 124:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 125:Generated_Source\PSoC5/isr_nodeok.c **** * Summary:
+ 126:Generated_Source\PSoC5/isr_nodeok.c **** *   Disables and removes the interrupt.
+ 127:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 128:Generated_Source\PSoC5/isr_nodeok.c **** * Parameters:  
+ 129:Generated_Source\PSoC5/isr_nodeok.c **** *   None
+ 130:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 131:Generated_Source\PSoC5/isr_nodeok.c **** * Return:
+ 132:Generated_Source\PSoC5/isr_nodeok.c **** *   None
+ 133:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 134:Generated_Source\PSoC5/isr_nodeok.c **** *******************************************************************************/
+ 135:Generated_Source\PSoC5/isr_nodeok.c **** void isr_nodeok_Stop(void)
+ 136:Generated_Source\PSoC5/isr_nodeok.c **** {
+ 137:Generated_Source\PSoC5/isr_nodeok.c ****     /* Disable this interrupt. */
+ 138:Generated_Source\PSoC5/isr_nodeok.c ****     isr_nodeok_Disable();
+ 139:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 140:Generated_Source\PSoC5/isr_nodeok.c ****     /* Set the ISR to point to the passive one. */
+ 141:Generated_Source\PSoC5/isr_nodeok.c ****     isr_nodeok_SetVector(&IntDefaultHandler);
+ 142:Generated_Source\PSoC5/isr_nodeok.c **** }
+ 143:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 144:Generated_Source\PSoC5/isr_nodeok.c **** 
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 4
+
+
+ 145:Generated_Source\PSoC5/isr_nodeok.c **** /*******************************************************************************
+ 146:Generated_Source\PSoC5/isr_nodeok.c **** * Function Name: isr_nodeok_Interrupt
+ 147:Generated_Source\PSoC5/isr_nodeok.c **** ********************************************************************************
+ 148:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 149:Generated_Source\PSoC5/isr_nodeok.c **** * Summary:
+ 150:Generated_Source\PSoC5/isr_nodeok.c **** *   The default Interrupt Service Routine for isr_nodeok.
+ 151:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 152:Generated_Source\PSoC5/isr_nodeok.c **** *   Add custom code between the coments to keep the next version of this file
+ 153:Generated_Source\PSoC5/isr_nodeok.c **** *   from over writting your code.
+ 154:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 155:Generated_Source\PSoC5/isr_nodeok.c **** * Parameters:  
+ 156:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 157:Generated_Source\PSoC5/isr_nodeok.c **** * Return:
+ 158:Generated_Source\PSoC5/isr_nodeok.c **** *   None
+ 159:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 160:Generated_Source\PSoC5/isr_nodeok.c **** *******************************************************************************/
+ 161:Generated_Source\PSoC5/isr_nodeok.c **** CY_ISR(isr_nodeok_Interrupt)
+ 162:Generated_Source\PSoC5/isr_nodeok.c **** {
+  28              		.loc 1 162 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 08B5     		push	{r3, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 3, -8
+  35              		.cfi_offset 14, -4
+ 163:Generated_Source\PSoC5/isr_nodeok.c ****     #ifdef isr_nodeok_INTERRUPT_INTERRUPT_CALLBACK
+ 164:Generated_Source\PSoC5/isr_nodeok.c ****         isr_nodeok_Interrupt_InterruptCallback();
+ 165:Generated_Source\PSoC5/isr_nodeok.c ****     #endif /* isr_nodeok_INTERRUPT_INTERRUPT_CALLBACK */ 
+ 166:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 167:Generated_Source\PSoC5/isr_nodeok.c ****     /*  Place your Interrupt code here. */
+ 168:Generated_Source\PSoC5/isr_nodeok.c ****     /* `#START isr_nodeok_Interrupt` */
+ 169:Generated_Source\PSoC5/isr_nodeok.c ****     uint8 InterruptState = CyEnterCriticalSection();
+  36              		.loc 1 169 0
+  37 0002 FFF7FEFF 		bl	CyEnterCriticalSection
+  38              	.LVL0:
+ 170:Generated_Source\PSoC5/isr_nodeok.c ****     pedalOK++;
+  39              		.loc 1 170 0
+  40 0006 044A     		ldr	r2, .L3
+  41 0008 1368     		ldr	r3, [r2]
+  42 000a 0133     		adds	r3, r3, #1
+  43 000c 1360     		str	r3, [r2]
+ 171:Generated_Source\PSoC5/isr_nodeok.c ****     CyExitCriticalSection(InterruptState);
+  44              		.loc 1 171 0
+  45 000e FFF7FEFF 		bl	CyExitCriticalSection
+  46              	.LVL1:
+ 172:Generated_Source\PSoC5/isr_nodeok.c ****     Node_Timer_ReadStatusRegister();
+  47              		.loc 1 172 0
+  48 0012 FFF7FEFF 		bl	Node_Timer_ReadStatusRegister
+  49              	.LVL2:
+  50 0016 08BD     		pop	{r3, pc}
+  51              	.L4:
+  52              		.align	2
+  53              	.L3:
+  54 0018 00000000 		.word	pedalOK
+  55              		.cfi_endproc
+  56              	.LFE3:
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 5
+
+
+  57              		.size	isr_nodeok_Interrupt, .-isr_nodeok_Interrupt
+  58              		.section	.text.isr_nodeok_SetVector,"ax",%progbits
+  59              		.align	2
+  60              		.global	isr_nodeok_SetVector
+  61              		.thumb
+  62              		.thumb_func
+  63              		.type	isr_nodeok_SetVector, %function
+  64              	isr_nodeok_SetVector:
+  65              	.LFB4:
+ 173:Generated_Source\PSoC5/isr_nodeok.c ****     /* `#END` */
+ 174:Generated_Source\PSoC5/isr_nodeok.c **** }
+ 175:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 176:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 177:Generated_Source\PSoC5/isr_nodeok.c **** /*******************************************************************************
+ 178:Generated_Source\PSoC5/isr_nodeok.c **** * Function Name: isr_nodeok_SetVector
+ 179:Generated_Source\PSoC5/isr_nodeok.c **** ********************************************************************************
+ 180:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 181:Generated_Source\PSoC5/isr_nodeok.c **** * Summary:
+ 182:Generated_Source\PSoC5/isr_nodeok.c **** *   Change the ISR vector for the Interrupt. Note calling isr_nodeok_Start
+ 183:Generated_Source\PSoC5/isr_nodeok.c **** *   will override any effect this method would have had. To set the vector 
+ 184:Generated_Source\PSoC5/isr_nodeok.c **** *   before the component has been started use isr_nodeok_StartEx instead.
+ 185:Generated_Source\PSoC5/isr_nodeok.c **** * 
+ 186:Generated_Source\PSoC5/isr_nodeok.c **** *   When defining ISR functions, the CY_ISR and CY_ISR_PROTO macros should be 
+ 187:Generated_Source\PSoC5/isr_nodeok.c **** *   used to provide consistent definition across compilers:
+ 188:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 189:Generated_Source\PSoC5/isr_nodeok.c **** *   Function definition example:
+ 190:Generated_Source\PSoC5/isr_nodeok.c **** *   CY_ISR(MyISR)
+ 191:Generated_Source\PSoC5/isr_nodeok.c **** *   {
+ 192:Generated_Source\PSoC5/isr_nodeok.c **** *   }
+ 193:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 194:Generated_Source\PSoC5/isr_nodeok.c **** *   Function prototype example:
+ 195:Generated_Source\PSoC5/isr_nodeok.c **** *     CY_ISR_PROTO(MyISR);
+ 196:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 197:Generated_Source\PSoC5/isr_nodeok.c **** * Parameters:
+ 198:Generated_Source\PSoC5/isr_nodeok.c **** *   address: Address of the ISR to set in the interrupt vector table.
+ 199:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 200:Generated_Source\PSoC5/isr_nodeok.c **** * Return:
+ 201:Generated_Source\PSoC5/isr_nodeok.c **** *   None
+ 202:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 203:Generated_Source\PSoC5/isr_nodeok.c **** *******************************************************************************/
+ 204:Generated_Source\PSoC5/isr_nodeok.c **** void isr_nodeok_SetVector(cyisraddress address)
+ 205:Generated_Source\PSoC5/isr_nodeok.c **** {
+  66              		.loc 1 205 0
+  67              		.cfi_startproc
+  68              		@ args = 0, pretend = 0, frame = 0
+  69              		@ frame_needed = 0, uses_anonymous_args = 0
+  70              		@ link register save eliminated.
+  71              	.LVL3:
+ 206:Generated_Source\PSoC5/isr_nodeok.c ****     cyisraddress * ramVectorTable;
+ 207:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 208:Generated_Source\PSoC5/isr_nodeok.c ****     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
+  72              		.loc 1 208 0
+  73 0000 014B     		ldr	r3, .L6
+  74 0002 1B68     		ldr	r3, [r3]
+  75              	.LVL4:
+ 209:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 210:Generated_Source\PSoC5/isr_nodeok.c ****     ramVectorTable[CYINT_IRQ_BASE + (uint32)isr_nodeok__INTC_NUMBER] = address;
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 6
+
+
+  76              		.loc 1 210 0
+  77 0004 5864     		str	r0, [r3, #68]
+  78 0006 7047     		bx	lr
+  79              	.L7:
+  80              		.align	2
+  81              	.L6:
+  82 0008 08ED00E0 		.word	-536810232
+  83              		.cfi_endproc
+  84              	.LFE4:
+  85              		.size	isr_nodeok_SetVector, .-isr_nodeok_SetVector
+  86              		.section	.text.isr_nodeok_GetVector,"ax",%progbits
+  87              		.align	2
+  88              		.global	isr_nodeok_GetVector
+  89              		.thumb
+  90              		.thumb_func
+  91              		.type	isr_nodeok_GetVector, %function
+  92              	isr_nodeok_GetVector:
+  93              	.LFB5:
+ 211:Generated_Source\PSoC5/isr_nodeok.c **** }
+ 212:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 213:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 214:Generated_Source\PSoC5/isr_nodeok.c **** /*******************************************************************************
+ 215:Generated_Source\PSoC5/isr_nodeok.c **** * Function Name: isr_nodeok_GetVector
+ 216:Generated_Source\PSoC5/isr_nodeok.c **** ********************************************************************************
+ 217:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 218:Generated_Source\PSoC5/isr_nodeok.c **** * Summary:
+ 219:Generated_Source\PSoC5/isr_nodeok.c **** *   Gets the "address" of the current ISR vector for the Interrupt.
+ 220:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 221:Generated_Source\PSoC5/isr_nodeok.c **** * Parameters:
+ 222:Generated_Source\PSoC5/isr_nodeok.c **** *   None
+ 223:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 224:Generated_Source\PSoC5/isr_nodeok.c **** * Return:
+ 225:Generated_Source\PSoC5/isr_nodeok.c **** *   Address of the ISR in the interrupt vector table.
+ 226:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 227:Generated_Source\PSoC5/isr_nodeok.c **** *******************************************************************************/
+ 228:Generated_Source\PSoC5/isr_nodeok.c **** cyisraddress isr_nodeok_GetVector(void)
+ 229:Generated_Source\PSoC5/isr_nodeok.c **** {
+  94              		.loc 1 229 0
+  95              		.cfi_startproc
+  96              		@ args = 0, pretend = 0, frame = 0
+  97              		@ frame_needed = 0, uses_anonymous_args = 0
+  98              		@ link register save eliminated.
+ 230:Generated_Source\PSoC5/isr_nodeok.c ****     cyisraddress * ramVectorTable;
+ 231:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 232:Generated_Source\PSoC5/isr_nodeok.c ****     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
+  99              		.loc 1 232 0
+ 100 0000 014B     		ldr	r3, .L9
+ 101 0002 1B68     		ldr	r3, [r3]
+ 102              	.LVL5:
+ 233:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 234:Generated_Source\PSoC5/isr_nodeok.c ****     return ramVectorTable[CYINT_IRQ_BASE + (uint32)isr_nodeok__INTC_NUMBER];
+ 235:Generated_Source\PSoC5/isr_nodeok.c **** }
+ 103              		.loc 1 235 0
+ 104 0004 586C     		ldr	r0, [r3, #68]
+ 105 0006 7047     		bx	lr
+ 106              	.L10:
+ 107              		.align	2
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 7
+
+
+ 108              	.L9:
+ 109 0008 08ED00E0 		.word	-536810232
+ 110              		.cfi_endproc
+ 111              	.LFE5:
+ 112              		.size	isr_nodeok_GetVector, .-isr_nodeok_GetVector
+ 113              		.section	.text.isr_nodeok_SetPriority,"ax",%progbits
+ 114              		.align	2
+ 115              		.global	isr_nodeok_SetPriority
+ 116              		.thumb
+ 117              		.thumb_func
+ 118              		.type	isr_nodeok_SetPriority, %function
+ 119              	isr_nodeok_SetPriority:
+ 120              	.LFB6:
+ 236:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 237:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 238:Generated_Source\PSoC5/isr_nodeok.c **** /*******************************************************************************
+ 239:Generated_Source\PSoC5/isr_nodeok.c **** * Function Name: isr_nodeok_SetPriority
+ 240:Generated_Source\PSoC5/isr_nodeok.c **** ********************************************************************************
+ 241:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 242:Generated_Source\PSoC5/isr_nodeok.c **** * Summary:
+ 243:Generated_Source\PSoC5/isr_nodeok.c **** *   Sets the Priority of the Interrupt. 
+ 244:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 245:Generated_Source\PSoC5/isr_nodeok.c **** *   Note calling isr_nodeok_Start or isr_nodeok_StartEx will 
+ 246:Generated_Source\PSoC5/isr_nodeok.c **** *   override any effect this API would have had. This API should only be called
+ 247:Generated_Source\PSoC5/isr_nodeok.c **** *   after isr_nodeok_Start or isr_nodeok_StartEx has been called. 
+ 248:Generated_Source\PSoC5/isr_nodeok.c **** *   To set the initial priority for the component, use the Design-Wide Resources
+ 249:Generated_Source\PSoC5/isr_nodeok.c **** *   Interrupt Editor.
+ 250:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 251:Generated_Source\PSoC5/isr_nodeok.c **** *   Note This API has no effect on Non-maskable interrupt NMI).
+ 252:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 253:Generated_Source\PSoC5/isr_nodeok.c **** * Parameters:
+ 254:Generated_Source\PSoC5/isr_nodeok.c **** *   priority: Priority of the interrupt, 0 being the highest priority
+ 255:Generated_Source\PSoC5/isr_nodeok.c **** *             PSoC 3 and PSoC 5LP: Priority is from 0 to 7.
+ 256:Generated_Source\PSoC5/isr_nodeok.c **** *             PSoC 4: Priority is from 0 to 3.
+ 257:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 258:Generated_Source\PSoC5/isr_nodeok.c **** * Return:
+ 259:Generated_Source\PSoC5/isr_nodeok.c **** *   None
+ 260:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 261:Generated_Source\PSoC5/isr_nodeok.c **** *******************************************************************************/
+ 262:Generated_Source\PSoC5/isr_nodeok.c **** void isr_nodeok_SetPriority(uint8 priority)
+ 263:Generated_Source\PSoC5/isr_nodeok.c **** {
+ 121              		.loc 1 263 0
+ 122              		.cfi_startproc
+ 123              		@ args = 0, pretend = 0, frame = 0
+ 124              		@ frame_needed = 0, uses_anonymous_args = 0
+ 125              		@ link register save eliminated.
+ 126              	.LVL6:
+ 264:Generated_Source\PSoC5/isr_nodeok.c ****     *isr_nodeok_INTC_PRIOR = priority << 5;
+ 127              		.loc 1 264 0
+ 128 0000 4001     		lsls	r0, r0, #5
+ 129              	.LVL7:
+ 130 0002 C0B2     		uxtb	r0, r0
+ 131 0004 014B     		ldr	r3, .L12
+ 132 0006 1870     		strb	r0, [r3]
+ 133 0008 7047     		bx	lr
+ 134              	.L13:
+ 135 000a 00BF     		.align	2
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 8
+
+
+ 136              	.L12:
+ 137 000c 01E400E0 		.word	-536812543
+ 138              		.cfi_endproc
+ 139              	.LFE6:
+ 140              		.size	isr_nodeok_SetPriority, .-isr_nodeok_SetPriority
+ 141              		.section	.text.isr_nodeok_GetPriority,"ax",%progbits
+ 142              		.align	2
+ 143              		.global	isr_nodeok_GetPriority
+ 144              		.thumb
+ 145              		.thumb_func
+ 146              		.type	isr_nodeok_GetPriority, %function
+ 147              	isr_nodeok_GetPriority:
+ 148              	.LFB7:
+ 265:Generated_Source\PSoC5/isr_nodeok.c **** }
+ 266:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 267:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 268:Generated_Source\PSoC5/isr_nodeok.c **** /*******************************************************************************
+ 269:Generated_Source\PSoC5/isr_nodeok.c **** * Function Name: isr_nodeok_GetPriority
+ 270:Generated_Source\PSoC5/isr_nodeok.c **** ********************************************************************************
+ 271:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 272:Generated_Source\PSoC5/isr_nodeok.c **** * Summary:
+ 273:Generated_Source\PSoC5/isr_nodeok.c **** *   Gets the Priority of the Interrupt.
+ 274:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 275:Generated_Source\PSoC5/isr_nodeok.c **** * Parameters:
+ 276:Generated_Source\PSoC5/isr_nodeok.c **** *   None
+ 277:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 278:Generated_Source\PSoC5/isr_nodeok.c **** * Return:
+ 279:Generated_Source\PSoC5/isr_nodeok.c **** *   Priority of the interrupt, 0 being the highest priority
+ 280:Generated_Source\PSoC5/isr_nodeok.c **** *    PSoC 3 and PSoC 5LP: Priority is from 0 to 7.
+ 281:Generated_Source\PSoC5/isr_nodeok.c **** *    PSoC 4: Priority is from 0 to 3.
+ 282:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 283:Generated_Source\PSoC5/isr_nodeok.c **** *******************************************************************************/
+ 284:Generated_Source\PSoC5/isr_nodeok.c **** uint8 isr_nodeok_GetPriority(void)
+ 285:Generated_Source\PSoC5/isr_nodeok.c **** {
+ 149              		.loc 1 285 0
+ 150              		.cfi_startproc
+ 151              		@ args = 0, pretend = 0, frame = 0
+ 152              		@ frame_needed = 0, uses_anonymous_args = 0
+ 153              		@ link register save eliminated.
+ 286:Generated_Source\PSoC5/isr_nodeok.c ****     uint8 priority;
+ 287:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 288:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 289:Generated_Source\PSoC5/isr_nodeok.c ****     priority = *isr_nodeok_INTC_PRIOR >> 5;
+ 154              		.loc 1 289 0
+ 155 0000 014B     		ldr	r3, .L15
+ 156 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 157              	.LVL8:
+ 290:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 291:Generated_Source\PSoC5/isr_nodeok.c ****     return priority;
+ 292:Generated_Source\PSoC5/isr_nodeok.c **** }
+ 158              		.loc 1 292 0
+ 159 0004 4009     		lsrs	r0, r0, #5
+ 160              	.LVL9:
+ 161 0006 7047     		bx	lr
+ 162              	.L16:
+ 163              		.align	2
+ 164              	.L15:
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 9
+
+
+ 165 0008 01E400E0 		.word	-536812543
+ 166              		.cfi_endproc
+ 167              	.LFE7:
+ 168              		.size	isr_nodeok_GetPriority, .-isr_nodeok_GetPriority
+ 169              		.section	.text.isr_nodeok_Enable,"ax",%progbits
+ 170              		.align	2
+ 171              		.global	isr_nodeok_Enable
+ 172              		.thumb
+ 173              		.thumb_func
+ 174              		.type	isr_nodeok_Enable, %function
+ 175              	isr_nodeok_Enable:
+ 176              	.LFB8:
+ 293:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 294:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 295:Generated_Source\PSoC5/isr_nodeok.c **** /*******************************************************************************
+ 296:Generated_Source\PSoC5/isr_nodeok.c **** * Function Name: isr_nodeok_Enable
+ 297:Generated_Source\PSoC5/isr_nodeok.c **** ********************************************************************************
+ 298:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 299:Generated_Source\PSoC5/isr_nodeok.c **** * Summary:
+ 300:Generated_Source\PSoC5/isr_nodeok.c **** *   Enables the interrupt to the interrupt controller. Do not call this function
+ 301:Generated_Source\PSoC5/isr_nodeok.c **** *   unless ISR_Start() has been called or the functionality of the ISR_Start() 
+ 302:Generated_Source\PSoC5/isr_nodeok.c **** *   function, which sets the vector and the priority, has been called.
+ 303:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 304:Generated_Source\PSoC5/isr_nodeok.c **** * Parameters:
+ 305:Generated_Source\PSoC5/isr_nodeok.c **** *   None
+ 306:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 307:Generated_Source\PSoC5/isr_nodeok.c **** * Return:
+ 308:Generated_Source\PSoC5/isr_nodeok.c **** *   None
+ 309:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 310:Generated_Source\PSoC5/isr_nodeok.c **** *******************************************************************************/
+ 311:Generated_Source\PSoC5/isr_nodeok.c **** void isr_nodeok_Enable(void)
+ 312:Generated_Source\PSoC5/isr_nodeok.c **** {
+ 177              		.loc 1 312 0
+ 178              		.cfi_startproc
+ 179              		@ args = 0, pretend = 0, frame = 0
+ 180              		@ frame_needed = 0, uses_anonymous_args = 0
+ 181              		@ link register save eliminated.
+ 313:Generated_Source\PSoC5/isr_nodeok.c ****     /* Enable the general interrupt. */
+ 314:Generated_Source\PSoC5/isr_nodeok.c ****     *isr_nodeok_INTC_SET_EN = isr_nodeok__INTC_MASK;
+ 182              		.loc 1 314 0
+ 183 0000 0222     		movs	r2, #2
+ 184 0002 014B     		ldr	r3, .L18
+ 185 0004 1A60     		str	r2, [r3]
+ 186 0006 7047     		bx	lr
+ 187              	.L19:
+ 188              		.align	2
+ 189              	.L18:
+ 190 0008 00E100E0 		.word	-536813312
+ 191              		.cfi_endproc
+ 192              	.LFE8:
+ 193              		.size	isr_nodeok_Enable, .-isr_nodeok_Enable
+ 194              		.section	.text.isr_nodeok_GetState,"ax",%progbits
+ 195              		.align	2
+ 196              		.global	isr_nodeok_GetState
+ 197              		.thumb
+ 198              		.thumb_func
+ 199              		.type	isr_nodeok_GetState, %function
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 10
+
+
+ 200              	isr_nodeok_GetState:
+ 201              	.LFB9:
+ 315:Generated_Source\PSoC5/isr_nodeok.c **** }
+ 316:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 317:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 318:Generated_Source\PSoC5/isr_nodeok.c **** /*******************************************************************************
+ 319:Generated_Source\PSoC5/isr_nodeok.c **** * Function Name: isr_nodeok_GetState
+ 320:Generated_Source\PSoC5/isr_nodeok.c **** ********************************************************************************
+ 321:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 322:Generated_Source\PSoC5/isr_nodeok.c **** * Summary:
+ 323:Generated_Source\PSoC5/isr_nodeok.c **** *   Gets the state (enabled, disabled) of the Interrupt.
+ 324:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 325:Generated_Source\PSoC5/isr_nodeok.c **** * Parameters:
+ 326:Generated_Source\PSoC5/isr_nodeok.c **** *   None
+ 327:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 328:Generated_Source\PSoC5/isr_nodeok.c **** * Return:
+ 329:Generated_Source\PSoC5/isr_nodeok.c **** *   1 if enabled, 0 if disabled.
+ 330:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 331:Generated_Source\PSoC5/isr_nodeok.c **** *******************************************************************************/
+ 332:Generated_Source\PSoC5/isr_nodeok.c **** uint8 isr_nodeok_GetState(void)
+ 333:Generated_Source\PSoC5/isr_nodeok.c **** {
+ 202              		.loc 1 333 0
+ 203              		.cfi_startproc
+ 204              		@ args = 0, pretend = 0, frame = 0
+ 205              		@ frame_needed = 0, uses_anonymous_args = 0
+ 206              		@ link register save eliminated.
+ 334:Generated_Source\PSoC5/isr_nodeok.c ****     /* Get the state of the general interrupt. */
+ 335:Generated_Source\PSoC5/isr_nodeok.c ****     return ((*isr_nodeok_INTC_SET_EN & (uint32)isr_nodeok__INTC_MASK) != 0u) ? 1u:0u;
+ 207              		.loc 1 335 0
+ 208 0000 044B     		ldr	r3, .L23
+ 209 0002 1B68     		ldr	r3, [r3]
+ 210 0004 13F0020F 		tst	r3, #2
+ 211 0008 01D0     		beq	.L22
+ 212 000a 0120     		movs	r0, #1
+ 213 000c 7047     		bx	lr
+ 214              	.L22:
+ 215 000e 0020     		movs	r0, #0
+ 336:Generated_Source\PSoC5/isr_nodeok.c **** }
+ 216              		.loc 1 336 0
+ 217 0010 7047     		bx	lr
+ 218              	.L24:
+ 219 0012 00BF     		.align	2
+ 220              	.L23:
+ 221 0014 00E100E0 		.word	-536813312
+ 222              		.cfi_endproc
+ 223              	.LFE9:
+ 224              		.size	isr_nodeok_GetState, .-isr_nodeok_GetState
+ 225              		.section	.text.isr_nodeok_Disable,"ax",%progbits
+ 226              		.align	2
+ 227              		.global	isr_nodeok_Disable
+ 228              		.thumb
+ 229              		.thumb_func
+ 230              		.type	isr_nodeok_Disable, %function
+ 231              	isr_nodeok_Disable:
+ 232              	.LFB10:
+ 337:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 338:Generated_Source\PSoC5/isr_nodeok.c **** 
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 11
+
+
+ 339:Generated_Source\PSoC5/isr_nodeok.c **** /*******************************************************************************
+ 340:Generated_Source\PSoC5/isr_nodeok.c **** * Function Name: isr_nodeok_Disable
+ 341:Generated_Source\PSoC5/isr_nodeok.c **** ********************************************************************************
+ 342:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 343:Generated_Source\PSoC5/isr_nodeok.c **** * Summary:
+ 344:Generated_Source\PSoC5/isr_nodeok.c **** *   Disables the Interrupt in the interrupt controller.
+ 345:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 346:Generated_Source\PSoC5/isr_nodeok.c **** * Parameters:
+ 347:Generated_Source\PSoC5/isr_nodeok.c **** *   None
+ 348:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 349:Generated_Source\PSoC5/isr_nodeok.c **** * Return:
+ 350:Generated_Source\PSoC5/isr_nodeok.c **** *   None
+ 351:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 352:Generated_Source\PSoC5/isr_nodeok.c **** *******************************************************************************/
+ 353:Generated_Source\PSoC5/isr_nodeok.c **** void isr_nodeok_Disable(void)
+ 354:Generated_Source\PSoC5/isr_nodeok.c **** {
+ 233              		.loc 1 354 0
+ 234              		.cfi_startproc
+ 235              		@ args = 0, pretend = 0, frame = 0
+ 236              		@ frame_needed = 0, uses_anonymous_args = 0
+ 237              		@ link register save eliminated.
+ 355:Generated_Source\PSoC5/isr_nodeok.c ****     /* Disable the general interrupt. */
+ 356:Generated_Source\PSoC5/isr_nodeok.c ****     *isr_nodeok_INTC_CLR_EN = isr_nodeok__INTC_MASK;
+ 238              		.loc 1 356 0
+ 239 0000 0222     		movs	r2, #2
+ 240 0002 014B     		ldr	r3, .L26
+ 241 0004 1A60     		str	r2, [r3]
+ 242 0006 7047     		bx	lr
+ 243              	.L27:
+ 244              		.align	2
+ 245              	.L26:
+ 246 0008 80E100E0 		.word	-536813184
+ 247              		.cfi_endproc
+ 248              	.LFE10:
+ 249              		.size	isr_nodeok_Disable, .-isr_nodeok_Disable
+ 250              		.section	.text.isr_nodeok_Start,"ax",%progbits
+ 251              		.align	2
+ 252              		.global	isr_nodeok_Start
+ 253              		.thumb
+ 254              		.thumb_func
+ 255              		.type	isr_nodeok_Start, %function
+ 256              	isr_nodeok_Start:
+ 257              	.LFB0:
+  63:Generated_Source\PSoC5/isr_nodeok.c ****     /* For all we know the interrupt is active. */
+ 258              		.loc 1 63 0
+ 259              		.cfi_startproc
+ 260              		@ args = 0, pretend = 0, frame = 0
+ 261              		@ frame_needed = 0, uses_anonymous_args = 0
+ 262 0000 08B5     		push	{r3, lr}
+ 263              		.cfi_def_cfa_offset 8
+ 264              		.cfi_offset 3, -8
+ 265              		.cfi_offset 14, -4
+  65:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 266              		.loc 1 65 0
+ 267 0002 FFF7FEFF 		bl	isr_nodeok_Disable
+ 268              	.LVL10:
+  68:Generated_Source\PSoC5/isr_nodeok.c **** 
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 12
+
+
+ 269              		.loc 1 68 0
+ 270 0006 0448     		ldr	r0, .L30
+ 271 0008 FFF7FEFF 		bl	isr_nodeok_SetVector
+ 272              	.LVL11:
+  71:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 273              		.loc 1 71 0
+ 274 000c 0720     		movs	r0, #7
+ 275 000e FFF7FEFF 		bl	isr_nodeok_SetPriority
+ 276              	.LVL12:
+  74:Generated_Source\PSoC5/isr_nodeok.c **** }
+ 277              		.loc 1 74 0
+ 278 0012 FFF7FEFF 		bl	isr_nodeok_Enable
+ 279              	.LVL13:
+ 280 0016 08BD     		pop	{r3, pc}
+ 281              	.L31:
+ 282              		.align	2
+ 283              	.L30:
+ 284 0018 00000000 		.word	isr_nodeok_Interrupt
+ 285              		.cfi_endproc
+ 286              	.LFE0:
+ 287              		.size	isr_nodeok_Start, .-isr_nodeok_Start
+ 288              		.section	.text.isr_nodeok_StartEx,"ax",%progbits
+ 289              		.align	2
+ 290              		.global	isr_nodeok_StartEx
+ 291              		.thumb
+ 292              		.thumb_func
+ 293              		.type	isr_nodeok_StartEx, %function
+ 294              	isr_nodeok_StartEx:
+ 295              	.LFB1:
+ 106:Generated_Source\PSoC5/isr_nodeok.c ****     /* For all we know the interrupt is active. */
+ 296              		.loc 1 106 0
+ 297              		.cfi_startproc
+ 298              		@ args = 0, pretend = 0, frame = 0
+ 299              		@ frame_needed = 0, uses_anonymous_args = 0
+ 300              	.LVL14:
+ 301 0000 10B5     		push	{r4, lr}
+ 302              		.cfi_def_cfa_offset 8
+ 303              		.cfi_offset 4, -8
+ 304              		.cfi_offset 14, -4
+ 305 0002 0446     		mov	r4, r0
+ 108:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 306              		.loc 1 108 0
+ 307 0004 FFF7FEFF 		bl	isr_nodeok_Disable
+ 308              	.LVL15:
+ 111:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 309              		.loc 1 111 0
+ 310 0008 2046     		mov	r0, r4
+ 311 000a FFF7FEFF 		bl	isr_nodeok_SetVector
+ 312              	.LVL16:
+ 114:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 313              		.loc 1 114 0
+ 314 000e 0720     		movs	r0, #7
+ 315 0010 FFF7FEFF 		bl	isr_nodeok_SetPriority
+ 316              	.LVL17:
+ 117:Generated_Source\PSoC5/isr_nodeok.c **** }
+ 317              		.loc 1 117 0
+ 318 0014 FFF7FEFF 		bl	isr_nodeok_Enable
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 13
+
+
+ 319              	.LVL18:
+ 320 0018 10BD     		pop	{r4, pc}
+ 321              		.cfi_endproc
+ 322              	.LFE1:
+ 323              		.size	isr_nodeok_StartEx, .-isr_nodeok_StartEx
+ 324 001a 00BF     		.section	.text.isr_nodeok_Stop,"ax",%progbits
+ 325              		.align	2
+ 326              		.global	isr_nodeok_Stop
+ 327              		.thumb
+ 328              		.thumb_func
+ 329              		.type	isr_nodeok_Stop, %function
+ 330              	isr_nodeok_Stop:
+ 331              	.LFB2:
+ 136:Generated_Source\PSoC5/isr_nodeok.c ****     /* Disable this interrupt. */
+ 332              		.loc 1 136 0
+ 333              		.cfi_startproc
+ 334              		@ args = 0, pretend = 0, frame = 0
+ 335              		@ frame_needed = 0, uses_anonymous_args = 0
+ 336 0000 08B5     		push	{r3, lr}
+ 337              		.cfi_def_cfa_offset 8
+ 338              		.cfi_offset 3, -8
+ 339              		.cfi_offset 14, -4
+ 138:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 340              		.loc 1 138 0
+ 341 0002 FFF7FEFF 		bl	isr_nodeok_Disable
+ 342              	.LVL19:
+ 141:Generated_Source\PSoC5/isr_nodeok.c **** }
+ 343              		.loc 1 141 0
+ 344 0006 0248     		ldr	r0, .L36
+ 345 0008 FFF7FEFF 		bl	isr_nodeok_SetVector
+ 346              	.LVL20:
+ 347 000c 08BD     		pop	{r3, pc}
+ 348              	.L37:
+ 349 000e 00BF     		.align	2
+ 350              	.L36:
+ 351 0010 00000000 		.word	IntDefaultHandler
+ 352              		.cfi_endproc
+ 353              	.LFE2:
+ 354              		.size	isr_nodeok_Stop, .-isr_nodeok_Stop
+ 355              		.section	.text.isr_nodeok_SetPending,"ax",%progbits
+ 356              		.align	2
+ 357              		.global	isr_nodeok_SetPending
+ 358              		.thumb
+ 359              		.thumb_func
+ 360              		.type	isr_nodeok_SetPending, %function
+ 361              	isr_nodeok_SetPending:
+ 362              	.LFB11:
+ 357:Generated_Source\PSoC5/isr_nodeok.c **** }
+ 358:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 359:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 360:Generated_Source\PSoC5/isr_nodeok.c **** /*******************************************************************************
+ 361:Generated_Source\PSoC5/isr_nodeok.c **** * Function Name: isr_nodeok_SetPending
+ 362:Generated_Source\PSoC5/isr_nodeok.c **** ********************************************************************************
+ 363:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 364:Generated_Source\PSoC5/isr_nodeok.c **** * Summary:
+ 365:Generated_Source\PSoC5/isr_nodeok.c **** *   Causes the Interrupt to enter the pending state, a software method of
+ 366:Generated_Source\PSoC5/isr_nodeok.c **** *   generating the interrupt.
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 14
+
+
+ 367:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 368:Generated_Source\PSoC5/isr_nodeok.c **** * Parameters:
+ 369:Generated_Source\PSoC5/isr_nodeok.c **** *   None
+ 370:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 371:Generated_Source\PSoC5/isr_nodeok.c **** * Return:
+ 372:Generated_Source\PSoC5/isr_nodeok.c **** *   None
+ 373:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 374:Generated_Source\PSoC5/isr_nodeok.c **** * Side Effects:
+ 375:Generated_Source\PSoC5/isr_nodeok.c **** *   If interrupts are enabled and the interrupt is set up properly, the ISR is
+ 376:Generated_Source\PSoC5/isr_nodeok.c **** *   entered (depending on the priority of this interrupt and other pending 
+ 377:Generated_Source\PSoC5/isr_nodeok.c **** *   interrupts).
+ 378:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 379:Generated_Source\PSoC5/isr_nodeok.c **** *******************************************************************************/
+ 380:Generated_Source\PSoC5/isr_nodeok.c **** void isr_nodeok_SetPending(void)
+ 381:Generated_Source\PSoC5/isr_nodeok.c **** {
+ 363              		.loc 1 381 0
+ 364              		.cfi_startproc
+ 365              		@ args = 0, pretend = 0, frame = 0
+ 366              		@ frame_needed = 0, uses_anonymous_args = 0
+ 367              		@ link register save eliminated.
+ 382:Generated_Source\PSoC5/isr_nodeok.c ****     *isr_nodeok_INTC_SET_PD = isr_nodeok__INTC_MASK;
+ 368              		.loc 1 382 0
+ 369 0000 0222     		movs	r2, #2
+ 370 0002 014B     		ldr	r3, .L39
+ 371 0004 1A60     		str	r2, [r3]
+ 372 0006 7047     		bx	lr
+ 373              	.L40:
+ 374              		.align	2
+ 375              	.L39:
+ 376 0008 00E200E0 		.word	-536813056
+ 377              		.cfi_endproc
+ 378              	.LFE11:
+ 379              		.size	isr_nodeok_SetPending, .-isr_nodeok_SetPending
+ 380              		.section	.text.isr_nodeok_ClearPending,"ax",%progbits
+ 381              		.align	2
+ 382              		.global	isr_nodeok_ClearPending
+ 383              		.thumb
+ 384              		.thumb_func
+ 385              		.type	isr_nodeok_ClearPending, %function
+ 386              	isr_nodeok_ClearPending:
+ 387              	.LFB12:
+ 383:Generated_Source\PSoC5/isr_nodeok.c **** }
+ 384:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 385:Generated_Source\PSoC5/isr_nodeok.c **** 
+ 386:Generated_Source\PSoC5/isr_nodeok.c **** /*******************************************************************************
+ 387:Generated_Source\PSoC5/isr_nodeok.c **** * Function Name: isr_nodeok_ClearPending
+ 388:Generated_Source\PSoC5/isr_nodeok.c **** ********************************************************************************
+ 389:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 390:Generated_Source\PSoC5/isr_nodeok.c **** * Summary:
+ 391:Generated_Source\PSoC5/isr_nodeok.c **** *   Clears a pending interrupt in the interrupt controller.
+ 392:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 393:Generated_Source\PSoC5/isr_nodeok.c **** *   Note Some interrupt sources are clear-on-read and require the block 
+ 394:Generated_Source\PSoC5/isr_nodeok.c **** *   interrupt/status register to be read/cleared with the appropriate block API 
+ 395:Generated_Source\PSoC5/isr_nodeok.c **** *   (GPIO, UART, and so on). Otherwise the ISR will continue to remain in 
+ 396:Generated_Source\PSoC5/isr_nodeok.c **** *   pending state even though the interrupt itself is cleared using this API.
+ 397:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 398:Generated_Source\PSoC5/isr_nodeok.c **** * Parameters:
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 15
+
+
+ 399:Generated_Source\PSoC5/isr_nodeok.c **** *   None
+ 400:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 401:Generated_Source\PSoC5/isr_nodeok.c **** * Return:
+ 402:Generated_Source\PSoC5/isr_nodeok.c **** *   None
+ 403:Generated_Source\PSoC5/isr_nodeok.c **** *
+ 404:Generated_Source\PSoC5/isr_nodeok.c **** *******************************************************************************/
+ 405:Generated_Source\PSoC5/isr_nodeok.c **** void isr_nodeok_ClearPending(void)
+ 406:Generated_Source\PSoC5/isr_nodeok.c **** {
+ 388              		.loc 1 406 0
+ 389              		.cfi_startproc
+ 390              		@ args = 0, pretend = 0, frame = 0
+ 391              		@ frame_needed = 0, uses_anonymous_args = 0
+ 392              		@ link register save eliminated.
+ 407:Generated_Source\PSoC5/isr_nodeok.c ****     *isr_nodeok_INTC_CLR_PD = isr_nodeok__INTC_MASK;
+ 393              		.loc 1 407 0
+ 394 0000 0222     		movs	r2, #2
+ 395 0002 014B     		ldr	r3, .L42
+ 396 0004 1A60     		str	r2, [r3]
+ 397 0006 7047     		bx	lr
+ 398              	.L43:
+ 399              		.align	2
+ 400              	.L42:
+ 401 0008 80E200E0 		.word	-536812928
+ 402              		.cfi_endproc
+ 403              	.LFE12:
+ 404              		.size	isr_nodeok_ClearPending, .-isr_nodeok_ClearPending
+ 405              		.text
+ 406              	.Letext0:
+ 407              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 408              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 409              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 410              		.file 5 "Generated_Source\\PSoC5/CyLib.h"
+ 411              		.file 6 "Generated_Source\\PSoC5\\Node_Timer.h"
+ 412              		.section	.debug_info,"",%progbits
+ 413              	.Ldebug_info0:
+ 414 0000 44030000 		.4byte	0x344
+ 415 0004 0400     		.2byte	0x4
+ 416 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 417 000a 04       		.byte	0x4
+ 418 000b 01       		.uleb128 0x1
+ 419 000c F9000000 		.4byte	.LASF40
+ 420 0010 0C       		.byte	0xc
+ 421 0011 53000000 		.4byte	.LASF41
+ 422 0015 87020000 		.4byte	.LASF42
+ 423 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 424 001d 00000000 		.4byte	0
+ 425 0021 00000000 		.4byte	.Ldebug_line0
+ 426 0025 02       		.uleb128 0x2
+ 427 0026 04       		.byte	0x4
+ 428 0027 05       		.byte	0x5
+ 429 0028 696E7400 		.ascii	"int\000"
+ 430 002c 03       		.uleb128 0x3
+ 431 002d 04       		.byte	0x4
+ 432 002e 07       		.byte	0x7
+ 433 002f 07020000 		.4byte	.LASF0
+ 434 0033 03       		.uleb128 0x3
+ 435 0034 08       		.byte	0x8
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 16
+
+
+ 436 0035 05       		.byte	0x5
+ 437 0036 65020000 		.4byte	.LASF1
+ 438 003a 03       		.uleb128 0x3
+ 439 003b 08       		.byte	0x8
+ 440 003c 04       		.byte	0x4
+ 441 003d 07030000 		.4byte	.LASF2
+ 442 0041 03       		.uleb128 0x3
+ 443 0042 01       		.byte	0x1
+ 444 0043 06       		.byte	0x6
+ 445 0044 13030000 		.4byte	.LASF3
+ 446 0048 03       		.uleb128 0x3
+ 447 0049 01       		.byte	0x1
+ 448 004a 08       		.byte	0x8
+ 449 004b EB000000 		.4byte	.LASF4
+ 450 004f 03       		.uleb128 0x3
+ 451 0050 02       		.byte	0x2
+ 452 0051 05       		.byte	0x5
+ 453 0052 EB020000 		.4byte	.LASF5
+ 454 0056 03       		.uleb128 0x3
+ 455 0057 02       		.byte	0x2
+ 456 0058 07       		.byte	0x7
+ 457 0059 35030000 		.4byte	.LASF6
+ 458 005d 03       		.uleb128 0x3
+ 459 005e 04       		.byte	0x4
+ 460 005f 05       		.byte	0x5
+ 461 0060 FE020000 		.4byte	.LASF7
+ 462 0064 04       		.uleb128 0x4
+ 463 0065 DE010000 		.4byte	.LASF12
+ 464 0069 02       		.byte	0x2
+ 465 006a 41       		.byte	0x41
+ 466 006b 6F000000 		.4byte	0x6f
+ 467 006f 03       		.uleb128 0x3
+ 468 0070 04       		.byte	0x4
+ 469 0071 07       		.byte	0x7
+ 470 0072 8C010000 		.4byte	.LASF8
+ 471 0076 03       		.uleb128 0x3
+ 472 0077 08       		.byte	0x8
+ 473 0078 07       		.byte	0x7
+ 474 0079 D4000000 		.4byte	.LASF9
+ 475 007d 03       		.uleb128 0x3
+ 476 007e 04       		.byte	0x4
+ 477 007f 07       		.byte	0x7
+ 478 0080 5C020000 		.4byte	.LASF10
+ 479 0084 03       		.uleb128 0x3
+ 480 0085 01       		.byte	0x1
+ 481 0086 08       		.byte	0x8
+ 482 0087 73020000 		.4byte	.LASF11
+ 483 008b 05       		.uleb128 0x5
+ 484 008c 04       		.byte	0x4
+ 485 008d 91000000 		.4byte	0x91
+ 486 0091 06       		.uleb128 0x6
+ 487 0092 04       		.uleb128 0x4
+ 488 0093 F5020000 		.4byte	.LASF13
+ 489 0097 03       		.byte	0x3
+ 490 0098 30       		.byte	0x30
+ 491 0099 64000000 		.4byte	0x64
+ 492 009d 07       		.uleb128 0x7
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 17
+
+
+ 493 009e 9E010000 		.4byte	.LASF14
+ 494 00a2 04       		.byte	0x4
+ 495 00a3 3801     		.2byte	0x138
+ 496 00a5 48000000 		.4byte	0x48
+ 497 00a9 07       		.uleb128 0x7
+ 498 00aa E9010000 		.4byte	.LASF15
+ 499 00ae 04       		.byte	0x4
+ 500 00af 3A01     		.2byte	0x13a
+ 501 00b1 6F000000 		.4byte	0x6f
+ 502 00b5 03       		.uleb128 0x3
+ 503 00b6 04       		.byte	0x4
+ 504 00b7 04       		.byte	0x4
+ 505 00b8 CE000000 		.4byte	.LASF16
+ 506 00bc 03       		.uleb128 0x3
+ 507 00bd 08       		.byte	0x8
+ 508 00be 04       		.byte	0x4
+ 509 00bf C4010000 		.4byte	.LASF17
+ 510 00c3 07       		.uleb128 0x7
+ 511 00c4 87010000 		.4byte	.LASF18
+ 512 00c8 04       		.byte	0x4
+ 513 00c9 E201     		.2byte	0x1e2
+ 514 00cb CF000000 		.4byte	0xcf
+ 515 00cf 08       		.uleb128 0x8
+ 516 00d0 9D000000 		.4byte	0x9d
+ 517 00d4 07       		.uleb128 0x7
+ 518 00d5 15000000 		.4byte	.LASF19
+ 519 00d9 04       		.byte	0x4
+ 520 00da E401     		.2byte	0x1e4
+ 521 00dc E0000000 		.4byte	0xe0
+ 522 00e0 08       		.uleb128 0x8
+ 523 00e1 A9000000 		.4byte	0xa9
+ 524 00e5 07       		.uleb128 0x7
+ 525 00e6 4F020000 		.4byte	.LASF20
+ 526 00ea 04       		.byte	0x4
+ 527 00eb F401     		.2byte	0x1f4
+ 528 00ed 8B000000 		.4byte	0x8b
+ 529 00f1 09       		.uleb128 0x9
+ 530 00f2 00000000 		.4byte	.LASF21
+ 531 00f6 01       		.byte	0x1
+ 532 00f7 A1       		.byte	0xa1
+ 533 00f8 00000000 		.4byte	.LFB3
+ 534 00fc 1C000000 		.4byte	.LFE3-.LFB3
+ 535 0100 01       		.uleb128 0x1
+ 536 0101 9C       		.byte	0x9c
+ 537 0102 31010000 		.4byte	0x131
+ 538 0106 0A       		.uleb128 0xa
+ 539 0107 BF000000 		.4byte	.LASF23
+ 540 010b 01       		.byte	0x1
+ 541 010c A9       		.byte	0xa9
+ 542 010d 9D000000 		.4byte	0x9d
+ 543 0111 00000000 		.4byte	.LLST0
+ 544 0115 0B       		.uleb128 0xb
+ 545 0116 06000000 		.4byte	.LVL0
+ 546 011a 26030000 		.4byte	0x326
+ 547 011e 0B       		.uleb128 0xb
+ 548 011f 12000000 		.4byte	.LVL1
+ 549 0123 31030000 		.4byte	0x331
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 18
+
+
+ 550 0127 0B       		.uleb128 0xb
+ 551 0128 16000000 		.4byte	.LVL2
+ 552 012c 3C030000 		.4byte	0x33c
+ 553 0130 00       		.byte	0
+ 554 0131 09       		.uleb128 0x9
+ 555 0132 32020000 		.4byte	.LASF22
+ 556 0136 01       		.byte	0x1
+ 557 0137 CC       		.byte	0xcc
+ 558 0138 00000000 		.4byte	.LFB4
+ 559 013c 0C000000 		.4byte	.LFE4-.LFB4
+ 560 0140 01       		.uleb128 0x1
+ 561 0141 9C       		.byte	0x9c
+ 562 0142 61010000 		.4byte	0x161
+ 563 0146 0C       		.uleb128 0xc
+ 564 0147 14020000 		.4byte	.LASF26
+ 565 014b 01       		.byte	0x1
+ 566 014c CC       		.byte	0xcc
+ 567 014d E5000000 		.4byte	0xe5
+ 568 0151 01       		.uleb128 0x1
+ 569 0152 50       		.byte	0x50
+ 570 0153 0D       		.uleb128 0xd
+ 571 0154 78020000 		.4byte	.LASF24
+ 572 0158 01       		.byte	0x1
+ 573 0159 CE       		.byte	0xce
+ 574 015a 61010000 		.4byte	0x161
+ 575 015e 01       		.uleb128 0x1
+ 576 015f 53       		.byte	0x53
+ 577 0160 00       		.byte	0
+ 578 0161 05       		.uleb128 0x5
+ 579 0162 04       		.byte	0x4
+ 580 0163 E5000000 		.4byte	0xe5
+ 581 0167 0E       		.uleb128 0xe
+ 582 0168 5C030000 		.4byte	.LASF28
+ 583 016c 01       		.byte	0x1
+ 584 016d E4       		.byte	0xe4
+ 585 016e E5000000 		.4byte	0xe5
+ 586 0172 00000000 		.4byte	.LFB5
+ 587 0176 0C000000 		.4byte	.LFE5-.LFB5
+ 588 017a 01       		.uleb128 0x1
+ 589 017b 9C       		.byte	0x9c
+ 590 017c 8E010000 		.4byte	0x18e
+ 591 0180 0D       		.uleb128 0xd
+ 592 0181 78020000 		.4byte	.LASF24
+ 593 0185 01       		.byte	0x1
+ 594 0186 E6       		.byte	0xe6
+ 595 0187 61010000 		.4byte	0x161
+ 596 018b 01       		.uleb128 0x1
+ 597 018c 53       		.byte	0x53
+ 598 018d 00       		.byte	0
+ 599 018e 0F       		.uleb128 0xf
+ 600 018f A4010000 		.4byte	.LASF25
+ 601 0193 01       		.byte	0x1
+ 602 0194 0601     		.2byte	0x106
+ 603 0196 00000000 		.4byte	.LFB6
+ 604 019a 10000000 		.4byte	.LFE6-.LFB6
+ 605 019e 01       		.uleb128 0x1
+ 606 019f 9C       		.byte	0x9c
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 19
+
+
+ 607 01a0 B5010000 		.4byte	0x1b5
+ 608 01a4 10       		.uleb128 0x10
+ 609 01a5 BB010000 		.4byte	.LASF27
+ 610 01a9 01       		.byte	0x1
+ 611 01aa 0601     		.2byte	0x106
+ 612 01ac 9D000000 		.4byte	0x9d
+ 613 01b0 13000000 		.4byte	.LLST1
+ 614 01b4 00       		.byte	0
+ 615 01b5 11       		.uleb128 0x11
+ 616 01b6 1B000000 		.4byte	.LASF29
+ 617 01ba 01       		.byte	0x1
+ 618 01bb 1C01     		.2byte	0x11c
+ 619 01bd 9D000000 		.4byte	0x9d
+ 620 01c1 00000000 		.4byte	.LFB7
+ 621 01c5 0C000000 		.4byte	.LFE7-.LFB7
+ 622 01c9 01       		.uleb128 0x1
+ 623 01ca 9C       		.byte	0x9c
+ 624 01cb E0010000 		.4byte	0x1e0
+ 625 01cf 12       		.uleb128 0x12
+ 626 01d0 BB010000 		.4byte	.LASF27
+ 627 01d4 01       		.byte	0x1
+ 628 01d5 1E01     		.2byte	0x11e
+ 629 01d7 9D000000 		.4byte	0x9d
+ 630 01db 34000000 		.4byte	.LLST2
+ 631 01df 00       		.byte	0
+ 632 01e0 13       		.uleb128 0x13
+ 633 01e1 AD000000 		.4byte	.LASF30
+ 634 01e5 01       		.byte	0x1
+ 635 01e6 3701     		.2byte	0x137
+ 636 01e8 00000000 		.4byte	.LFB8
+ 637 01ec 0C000000 		.4byte	.LFE8-.LFB8
+ 638 01f0 01       		.uleb128 0x1
+ 639 01f1 9C       		.byte	0x9c
+ 640 01f2 14       		.uleb128 0x14
+ 641 01f3 48030000 		.4byte	.LASF43
+ 642 01f7 01       		.byte	0x1
+ 643 01f8 4C01     		.2byte	0x14c
+ 644 01fa 9D000000 		.4byte	0x9d
+ 645 01fe 00000000 		.4byte	.LFB9
+ 646 0202 18000000 		.4byte	.LFE9-.LFB9
+ 647 0206 01       		.uleb128 0x1
+ 648 0207 9C       		.byte	0x9c
+ 649 0208 13       		.uleb128 0x13
+ 650 0209 D8020000 		.4byte	.LASF31
+ 651 020d 01       		.byte	0x1
+ 652 020e 6101     		.2byte	0x161
+ 653 0210 00000000 		.4byte	.LFB10
+ 654 0214 0C000000 		.4byte	.LFE10-.LFB10
+ 655 0218 01       		.uleb128 0x1
+ 656 0219 9C       		.byte	0x9c
+ 657 021a 09       		.uleb128 0x9
+ 658 021b 42000000 		.4byte	.LASF32
+ 659 021f 01       		.byte	0x1
+ 660 0220 3E       		.byte	0x3e
+ 661 0221 00000000 		.4byte	.LFB0
+ 662 0225 1C000000 		.4byte	.LFE0-.LFB0
+ 663 0229 01       		.uleb128 0x1
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 20
+
+
+ 664 022a 9C       		.byte	0x9c
+ 665 022b 6C020000 		.4byte	0x26c
+ 666 022f 0B       		.uleb128 0xb
+ 667 0230 06000000 		.4byte	.LVL10
+ 668 0234 08020000 		.4byte	0x208
+ 669 0238 15       		.uleb128 0x15
+ 670 0239 0C000000 		.4byte	.LVL11
+ 671 023d 31010000 		.4byte	0x131
+ 672 0241 4F020000 		.4byte	0x24f
+ 673 0245 16       		.uleb128 0x16
+ 674 0246 01       		.uleb128 0x1
+ 675 0247 50       		.byte	0x50
+ 676 0248 05       		.uleb128 0x5
+ 677 0249 03       		.byte	0x3
+ 678 024a 00000000 		.4byte	isr_nodeok_Interrupt
+ 679 024e 00       		.byte	0
+ 680 024f 15       		.uleb128 0x15
+ 681 0250 12000000 		.4byte	.LVL12
+ 682 0254 8E010000 		.4byte	0x18e
+ 683 0258 62020000 		.4byte	0x262
+ 684 025c 16       		.uleb128 0x16
+ 685 025d 01       		.uleb128 0x1
+ 686 025e 50       		.byte	0x50
+ 687 025f 01       		.uleb128 0x1
+ 688 0260 37       		.byte	0x37
+ 689 0261 00       		.byte	0
+ 690 0262 0B       		.uleb128 0xb
+ 691 0263 16000000 		.4byte	.LVL13
+ 692 0267 E0010000 		.4byte	0x1e0
+ 693 026b 00       		.byte	0
+ 694 026c 09       		.uleb128 0x9
+ 695 026d CB010000 		.4byte	.LASF33
+ 696 0271 01       		.byte	0x1
+ 697 0272 69       		.byte	0x69
+ 698 0273 00000000 		.4byte	.LFB1
+ 699 0277 1A000000 		.4byte	.LFE1-.LFB1
+ 700 027b 01       		.uleb128 0x1
+ 701 027c 9C       		.byte	0x9c
+ 702 027d CA020000 		.4byte	0x2ca
+ 703 0281 17       		.uleb128 0x17
+ 704 0282 14020000 		.4byte	.LASF26
+ 705 0286 01       		.byte	0x1
+ 706 0287 69       		.byte	0x69
+ 707 0288 E5000000 		.4byte	0xe5
+ 708 028c 4B000000 		.4byte	.LLST3
+ 709 0290 0B       		.uleb128 0xb
+ 710 0291 08000000 		.4byte	.LVL15
+ 711 0295 08020000 		.4byte	0x208
+ 712 0299 15       		.uleb128 0x15
+ 713 029a 0E000000 		.4byte	.LVL16
+ 714 029e 31010000 		.4byte	0x131
+ 715 02a2 AD020000 		.4byte	0x2ad
+ 716 02a6 16       		.uleb128 0x16
+ 717 02a7 01       		.uleb128 0x1
+ 718 02a8 50       		.byte	0x50
+ 719 02a9 02       		.uleb128 0x2
+ 720 02aa 74       		.byte	0x74
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 21
+
+
+ 721 02ab 00       		.sleb128 0
+ 722 02ac 00       		.byte	0
+ 723 02ad 15       		.uleb128 0x15
+ 724 02ae 14000000 		.4byte	.LVL17
+ 725 02b2 8E010000 		.4byte	0x18e
+ 726 02b6 C0020000 		.4byte	0x2c0
+ 727 02ba 16       		.uleb128 0x16
+ 728 02bb 01       		.uleb128 0x1
+ 729 02bc 50       		.byte	0x50
+ 730 02bd 01       		.uleb128 0x1
+ 731 02be 37       		.byte	0x37
+ 732 02bf 00       		.byte	0
+ 733 02c0 0B       		.uleb128 0xb
+ 734 02c1 18000000 		.4byte	.LVL18
+ 735 02c5 E0010000 		.4byte	0x1e0
+ 736 02c9 00       		.byte	0
+ 737 02ca 09       		.uleb128 0x9
+ 738 02cb 32000000 		.4byte	.LASF34
+ 739 02cf 01       		.byte	0x1
+ 740 02d0 87       		.byte	0x87
+ 741 02d1 00000000 		.4byte	.LFB2
+ 742 02d5 14000000 		.4byte	.LFE2-.LFB2
+ 743 02d9 01       		.uleb128 0x1
+ 744 02da 9C       		.byte	0x9c
+ 745 02db F2020000 		.4byte	0x2f2
+ 746 02df 0B       		.uleb128 0xb
+ 747 02e0 06000000 		.4byte	.LVL19
+ 748 02e4 08020000 		.4byte	0x208
+ 749 02e8 0B       		.uleb128 0xb
+ 750 02e9 0C000000 		.4byte	.LVL20
+ 751 02ed 31010000 		.4byte	0x131
+ 752 02f1 00       		.byte	0
+ 753 02f2 13       		.uleb128 0x13
+ 754 02f3 1F030000 		.4byte	.LASF35
+ 755 02f7 01       		.byte	0x1
+ 756 02f8 7C01     		.2byte	0x17c
+ 757 02fa 00000000 		.4byte	.LFB11
+ 758 02fe 0C000000 		.4byte	.LFE11-.LFB11
+ 759 0302 01       		.uleb128 0x1
+ 760 0303 9C       		.byte	0x9c
+ 761 0304 13       		.uleb128 0x13
+ 762 0305 77000000 		.4byte	.LASF36
+ 763 0309 01       		.byte	0x1
+ 764 030a 9501     		.2byte	0x195
+ 765 030c 00000000 		.4byte	.LFB12
+ 766 0310 0C000000 		.4byte	.LFE12-.LFB12
+ 767 0314 01       		.uleb128 0x1
+ 768 0315 9C       		.byte	0x9c
+ 769 0316 18       		.uleb128 0x18
+ 770 0317 47020000 		.4byte	.LASF44
+ 771 031b 01       		.byte	0x1
+ 772 031c 1F       		.byte	0x1f
+ 773 031d 21030000 		.4byte	0x321
+ 774 0321 08       		.uleb128 0x8
+ 775 0322 92000000 		.4byte	0x92
+ 776 0326 19       		.uleb128 0x19
+ 777 0327 F0010000 		.4byte	.LASF37
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 22
+
+
+ 778 032b F0010000 		.4byte	.LASF37
+ 779 032f 05       		.byte	0x5
+ 780 0330 7E       		.byte	0x7e
+ 781 0331 19       		.uleb128 0x19
+ 782 0332 1C020000 		.4byte	.LASF38
+ 783 0336 1C020000 		.4byte	.LASF38
+ 784 033a 05       		.byte	0x5
+ 785 033b 7F       		.byte	0x7f
+ 786 033c 19       		.uleb128 0x19
+ 787 033d 8F000000 		.4byte	.LASF39
+ 788 0341 8F000000 		.4byte	.LASF39
+ 789 0345 06       		.byte	0x6
+ 790 0346 5E       		.byte	0x5e
+ 791 0347 00       		.byte	0
+ 792              		.section	.debug_abbrev,"",%progbits
+ 793              	.Ldebug_abbrev0:
+ 794 0000 01       		.uleb128 0x1
+ 795 0001 11       		.uleb128 0x11
+ 796 0002 01       		.byte	0x1
+ 797 0003 25       		.uleb128 0x25
+ 798 0004 0E       		.uleb128 0xe
+ 799 0005 13       		.uleb128 0x13
+ 800 0006 0B       		.uleb128 0xb
+ 801 0007 03       		.uleb128 0x3
+ 802 0008 0E       		.uleb128 0xe
+ 803 0009 1B       		.uleb128 0x1b
+ 804 000a 0E       		.uleb128 0xe
+ 805 000b 55       		.uleb128 0x55
+ 806 000c 17       		.uleb128 0x17
+ 807 000d 11       		.uleb128 0x11
+ 808 000e 01       		.uleb128 0x1
+ 809 000f 10       		.uleb128 0x10
+ 810 0010 17       		.uleb128 0x17
+ 811 0011 00       		.byte	0
+ 812 0012 00       		.byte	0
+ 813 0013 02       		.uleb128 0x2
+ 814 0014 24       		.uleb128 0x24
+ 815 0015 00       		.byte	0
+ 816 0016 0B       		.uleb128 0xb
+ 817 0017 0B       		.uleb128 0xb
+ 818 0018 3E       		.uleb128 0x3e
+ 819 0019 0B       		.uleb128 0xb
+ 820 001a 03       		.uleb128 0x3
+ 821 001b 08       		.uleb128 0x8
+ 822 001c 00       		.byte	0
+ 823 001d 00       		.byte	0
+ 824 001e 03       		.uleb128 0x3
+ 825 001f 24       		.uleb128 0x24
+ 826 0020 00       		.byte	0
+ 827 0021 0B       		.uleb128 0xb
+ 828 0022 0B       		.uleb128 0xb
+ 829 0023 3E       		.uleb128 0x3e
+ 830 0024 0B       		.uleb128 0xb
+ 831 0025 03       		.uleb128 0x3
+ 832 0026 0E       		.uleb128 0xe
+ 833 0027 00       		.byte	0
+ 834 0028 00       		.byte	0
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 23
+
+
+ 835 0029 04       		.uleb128 0x4
+ 836 002a 16       		.uleb128 0x16
+ 837 002b 00       		.byte	0
+ 838 002c 03       		.uleb128 0x3
+ 839 002d 0E       		.uleb128 0xe
+ 840 002e 3A       		.uleb128 0x3a
+ 841 002f 0B       		.uleb128 0xb
+ 842 0030 3B       		.uleb128 0x3b
+ 843 0031 0B       		.uleb128 0xb
+ 844 0032 49       		.uleb128 0x49
+ 845 0033 13       		.uleb128 0x13
+ 846 0034 00       		.byte	0
+ 847 0035 00       		.byte	0
+ 848 0036 05       		.uleb128 0x5
+ 849 0037 0F       		.uleb128 0xf
+ 850 0038 00       		.byte	0
+ 851 0039 0B       		.uleb128 0xb
+ 852 003a 0B       		.uleb128 0xb
+ 853 003b 49       		.uleb128 0x49
+ 854 003c 13       		.uleb128 0x13
+ 855 003d 00       		.byte	0
+ 856 003e 00       		.byte	0
+ 857 003f 06       		.uleb128 0x6
+ 858 0040 15       		.uleb128 0x15
+ 859 0041 00       		.byte	0
+ 860 0042 27       		.uleb128 0x27
+ 861 0043 19       		.uleb128 0x19
+ 862 0044 00       		.byte	0
+ 863 0045 00       		.byte	0
+ 864 0046 07       		.uleb128 0x7
+ 865 0047 16       		.uleb128 0x16
+ 866 0048 00       		.byte	0
+ 867 0049 03       		.uleb128 0x3
+ 868 004a 0E       		.uleb128 0xe
+ 869 004b 3A       		.uleb128 0x3a
+ 870 004c 0B       		.uleb128 0xb
+ 871 004d 3B       		.uleb128 0x3b
+ 872 004e 05       		.uleb128 0x5
+ 873 004f 49       		.uleb128 0x49
+ 874 0050 13       		.uleb128 0x13
+ 875 0051 00       		.byte	0
+ 876 0052 00       		.byte	0
+ 877 0053 08       		.uleb128 0x8
+ 878 0054 35       		.uleb128 0x35
+ 879 0055 00       		.byte	0
+ 880 0056 49       		.uleb128 0x49
+ 881 0057 13       		.uleb128 0x13
+ 882 0058 00       		.byte	0
+ 883 0059 00       		.byte	0
+ 884 005a 09       		.uleb128 0x9
+ 885 005b 2E       		.uleb128 0x2e
+ 886 005c 01       		.byte	0x1
+ 887 005d 3F       		.uleb128 0x3f
+ 888 005e 19       		.uleb128 0x19
+ 889 005f 03       		.uleb128 0x3
+ 890 0060 0E       		.uleb128 0xe
+ 891 0061 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 24
+
+
+ 892 0062 0B       		.uleb128 0xb
+ 893 0063 3B       		.uleb128 0x3b
+ 894 0064 0B       		.uleb128 0xb
+ 895 0065 27       		.uleb128 0x27
+ 896 0066 19       		.uleb128 0x19
+ 897 0067 11       		.uleb128 0x11
+ 898 0068 01       		.uleb128 0x1
+ 899 0069 12       		.uleb128 0x12
+ 900 006a 06       		.uleb128 0x6
+ 901 006b 40       		.uleb128 0x40
+ 902 006c 18       		.uleb128 0x18
+ 903 006d 9742     		.uleb128 0x2117
+ 904 006f 19       		.uleb128 0x19
+ 905 0070 01       		.uleb128 0x1
+ 906 0071 13       		.uleb128 0x13
+ 907 0072 00       		.byte	0
+ 908 0073 00       		.byte	0
+ 909 0074 0A       		.uleb128 0xa
+ 910 0075 34       		.uleb128 0x34
+ 911 0076 00       		.byte	0
+ 912 0077 03       		.uleb128 0x3
+ 913 0078 0E       		.uleb128 0xe
+ 914 0079 3A       		.uleb128 0x3a
+ 915 007a 0B       		.uleb128 0xb
+ 916 007b 3B       		.uleb128 0x3b
+ 917 007c 0B       		.uleb128 0xb
+ 918 007d 49       		.uleb128 0x49
+ 919 007e 13       		.uleb128 0x13
+ 920 007f 02       		.uleb128 0x2
+ 921 0080 17       		.uleb128 0x17
+ 922 0081 00       		.byte	0
+ 923 0082 00       		.byte	0
+ 924 0083 0B       		.uleb128 0xb
+ 925 0084 898201   		.uleb128 0x4109
+ 926 0087 00       		.byte	0
+ 927 0088 11       		.uleb128 0x11
+ 928 0089 01       		.uleb128 0x1
+ 929 008a 31       		.uleb128 0x31
+ 930 008b 13       		.uleb128 0x13
+ 931 008c 00       		.byte	0
+ 932 008d 00       		.byte	0
+ 933 008e 0C       		.uleb128 0xc
+ 934 008f 05       		.uleb128 0x5
+ 935 0090 00       		.byte	0
+ 936 0091 03       		.uleb128 0x3
+ 937 0092 0E       		.uleb128 0xe
+ 938 0093 3A       		.uleb128 0x3a
+ 939 0094 0B       		.uleb128 0xb
+ 940 0095 3B       		.uleb128 0x3b
+ 941 0096 0B       		.uleb128 0xb
+ 942 0097 49       		.uleb128 0x49
+ 943 0098 13       		.uleb128 0x13
+ 944 0099 02       		.uleb128 0x2
+ 945 009a 18       		.uleb128 0x18
+ 946 009b 00       		.byte	0
+ 947 009c 00       		.byte	0
+ 948 009d 0D       		.uleb128 0xd
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 25
+
+
+ 949 009e 34       		.uleb128 0x34
+ 950 009f 00       		.byte	0
+ 951 00a0 03       		.uleb128 0x3
+ 952 00a1 0E       		.uleb128 0xe
+ 953 00a2 3A       		.uleb128 0x3a
+ 954 00a3 0B       		.uleb128 0xb
+ 955 00a4 3B       		.uleb128 0x3b
+ 956 00a5 0B       		.uleb128 0xb
+ 957 00a6 49       		.uleb128 0x49
+ 958 00a7 13       		.uleb128 0x13
+ 959 00a8 02       		.uleb128 0x2
+ 960 00a9 18       		.uleb128 0x18
+ 961 00aa 00       		.byte	0
+ 962 00ab 00       		.byte	0
+ 963 00ac 0E       		.uleb128 0xe
+ 964 00ad 2E       		.uleb128 0x2e
+ 965 00ae 01       		.byte	0x1
+ 966 00af 3F       		.uleb128 0x3f
+ 967 00b0 19       		.uleb128 0x19
+ 968 00b1 03       		.uleb128 0x3
+ 969 00b2 0E       		.uleb128 0xe
+ 970 00b3 3A       		.uleb128 0x3a
+ 971 00b4 0B       		.uleb128 0xb
+ 972 00b5 3B       		.uleb128 0x3b
+ 973 00b6 0B       		.uleb128 0xb
+ 974 00b7 27       		.uleb128 0x27
+ 975 00b8 19       		.uleb128 0x19
+ 976 00b9 49       		.uleb128 0x49
+ 977 00ba 13       		.uleb128 0x13
+ 978 00bb 11       		.uleb128 0x11
+ 979 00bc 01       		.uleb128 0x1
+ 980 00bd 12       		.uleb128 0x12
+ 981 00be 06       		.uleb128 0x6
+ 982 00bf 40       		.uleb128 0x40
+ 983 00c0 18       		.uleb128 0x18
+ 984 00c1 9742     		.uleb128 0x2117
+ 985 00c3 19       		.uleb128 0x19
+ 986 00c4 01       		.uleb128 0x1
+ 987 00c5 13       		.uleb128 0x13
+ 988 00c6 00       		.byte	0
+ 989 00c7 00       		.byte	0
+ 990 00c8 0F       		.uleb128 0xf
+ 991 00c9 2E       		.uleb128 0x2e
+ 992 00ca 01       		.byte	0x1
+ 993 00cb 3F       		.uleb128 0x3f
+ 994 00cc 19       		.uleb128 0x19
+ 995 00cd 03       		.uleb128 0x3
+ 996 00ce 0E       		.uleb128 0xe
+ 997 00cf 3A       		.uleb128 0x3a
+ 998 00d0 0B       		.uleb128 0xb
+ 999 00d1 3B       		.uleb128 0x3b
+ 1000 00d2 05       		.uleb128 0x5
+ 1001 00d3 27       		.uleb128 0x27
+ 1002 00d4 19       		.uleb128 0x19
+ 1003 00d5 11       		.uleb128 0x11
+ 1004 00d6 01       		.uleb128 0x1
+ 1005 00d7 12       		.uleb128 0x12
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 26
+
+
+ 1006 00d8 06       		.uleb128 0x6
+ 1007 00d9 40       		.uleb128 0x40
+ 1008 00da 18       		.uleb128 0x18
+ 1009 00db 9742     		.uleb128 0x2117
+ 1010 00dd 19       		.uleb128 0x19
+ 1011 00de 01       		.uleb128 0x1
+ 1012 00df 13       		.uleb128 0x13
+ 1013 00e0 00       		.byte	0
+ 1014 00e1 00       		.byte	0
+ 1015 00e2 10       		.uleb128 0x10
+ 1016 00e3 05       		.uleb128 0x5
+ 1017 00e4 00       		.byte	0
+ 1018 00e5 03       		.uleb128 0x3
+ 1019 00e6 0E       		.uleb128 0xe
+ 1020 00e7 3A       		.uleb128 0x3a
+ 1021 00e8 0B       		.uleb128 0xb
+ 1022 00e9 3B       		.uleb128 0x3b
+ 1023 00ea 05       		.uleb128 0x5
+ 1024 00eb 49       		.uleb128 0x49
+ 1025 00ec 13       		.uleb128 0x13
+ 1026 00ed 02       		.uleb128 0x2
+ 1027 00ee 17       		.uleb128 0x17
+ 1028 00ef 00       		.byte	0
+ 1029 00f0 00       		.byte	0
+ 1030 00f1 11       		.uleb128 0x11
+ 1031 00f2 2E       		.uleb128 0x2e
+ 1032 00f3 01       		.byte	0x1
+ 1033 00f4 3F       		.uleb128 0x3f
+ 1034 00f5 19       		.uleb128 0x19
+ 1035 00f6 03       		.uleb128 0x3
+ 1036 00f7 0E       		.uleb128 0xe
+ 1037 00f8 3A       		.uleb128 0x3a
+ 1038 00f9 0B       		.uleb128 0xb
+ 1039 00fa 3B       		.uleb128 0x3b
+ 1040 00fb 05       		.uleb128 0x5
+ 1041 00fc 27       		.uleb128 0x27
+ 1042 00fd 19       		.uleb128 0x19
+ 1043 00fe 49       		.uleb128 0x49
+ 1044 00ff 13       		.uleb128 0x13
+ 1045 0100 11       		.uleb128 0x11
+ 1046 0101 01       		.uleb128 0x1
+ 1047 0102 12       		.uleb128 0x12
+ 1048 0103 06       		.uleb128 0x6
+ 1049 0104 40       		.uleb128 0x40
+ 1050 0105 18       		.uleb128 0x18
+ 1051 0106 9742     		.uleb128 0x2117
+ 1052 0108 19       		.uleb128 0x19
+ 1053 0109 01       		.uleb128 0x1
+ 1054 010a 13       		.uleb128 0x13
+ 1055 010b 00       		.byte	0
+ 1056 010c 00       		.byte	0
+ 1057 010d 12       		.uleb128 0x12
+ 1058 010e 34       		.uleb128 0x34
+ 1059 010f 00       		.byte	0
+ 1060 0110 03       		.uleb128 0x3
+ 1061 0111 0E       		.uleb128 0xe
+ 1062 0112 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 27
+
+
+ 1063 0113 0B       		.uleb128 0xb
+ 1064 0114 3B       		.uleb128 0x3b
+ 1065 0115 05       		.uleb128 0x5
+ 1066 0116 49       		.uleb128 0x49
+ 1067 0117 13       		.uleb128 0x13
+ 1068 0118 02       		.uleb128 0x2
+ 1069 0119 17       		.uleb128 0x17
+ 1070 011a 00       		.byte	0
+ 1071 011b 00       		.byte	0
+ 1072 011c 13       		.uleb128 0x13
+ 1073 011d 2E       		.uleb128 0x2e
+ 1074 011e 00       		.byte	0
+ 1075 011f 3F       		.uleb128 0x3f
+ 1076 0120 19       		.uleb128 0x19
+ 1077 0121 03       		.uleb128 0x3
+ 1078 0122 0E       		.uleb128 0xe
+ 1079 0123 3A       		.uleb128 0x3a
+ 1080 0124 0B       		.uleb128 0xb
+ 1081 0125 3B       		.uleb128 0x3b
+ 1082 0126 05       		.uleb128 0x5
+ 1083 0127 27       		.uleb128 0x27
+ 1084 0128 19       		.uleb128 0x19
+ 1085 0129 11       		.uleb128 0x11
+ 1086 012a 01       		.uleb128 0x1
+ 1087 012b 12       		.uleb128 0x12
+ 1088 012c 06       		.uleb128 0x6
+ 1089 012d 40       		.uleb128 0x40
+ 1090 012e 18       		.uleb128 0x18
+ 1091 012f 9742     		.uleb128 0x2117
+ 1092 0131 19       		.uleb128 0x19
+ 1093 0132 00       		.byte	0
+ 1094 0133 00       		.byte	0
+ 1095 0134 14       		.uleb128 0x14
+ 1096 0135 2E       		.uleb128 0x2e
+ 1097 0136 00       		.byte	0
+ 1098 0137 3F       		.uleb128 0x3f
+ 1099 0138 19       		.uleb128 0x19
+ 1100 0139 03       		.uleb128 0x3
+ 1101 013a 0E       		.uleb128 0xe
+ 1102 013b 3A       		.uleb128 0x3a
+ 1103 013c 0B       		.uleb128 0xb
+ 1104 013d 3B       		.uleb128 0x3b
+ 1105 013e 05       		.uleb128 0x5
+ 1106 013f 27       		.uleb128 0x27
+ 1107 0140 19       		.uleb128 0x19
+ 1108 0141 49       		.uleb128 0x49
+ 1109 0142 13       		.uleb128 0x13
+ 1110 0143 11       		.uleb128 0x11
+ 1111 0144 01       		.uleb128 0x1
+ 1112 0145 12       		.uleb128 0x12
+ 1113 0146 06       		.uleb128 0x6
+ 1114 0147 40       		.uleb128 0x40
+ 1115 0148 18       		.uleb128 0x18
+ 1116 0149 9742     		.uleb128 0x2117
+ 1117 014b 19       		.uleb128 0x19
+ 1118 014c 00       		.byte	0
+ 1119 014d 00       		.byte	0
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 28
+
+
+ 1120 014e 15       		.uleb128 0x15
+ 1121 014f 898201   		.uleb128 0x4109
+ 1122 0152 01       		.byte	0x1
+ 1123 0153 11       		.uleb128 0x11
+ 1124 0154 01       		.uleb128 0x1
+ 1125 0155 31       		.uleb128 0x31
+ 1126 0156 13       		.uleb128 0x13
+ 1127 0157 01       		.uleb128 0x1
+ 1128 0158 13       		.uleb128 0x13
+ 1129 0159 00       		.byte	0
+ 1130 015a 00       		.byte	0
+ 1131 015b 16       		.uleb128 0x16
+ 1132 015c 8A8201   		.uleb128 0x410a
+ 1133 015f 00       		.byte	0
+ 1134 0160 02       		.uleb128 0x2
+ 1135 0161 18       		.uleb128 0x18
+ 1136 0162 9142     		.uleb128 0x2111
+ 1137 0164 18       		.uleb128 0x18
+ 1138 0165 00       		.byte	0
+ 1139 0166 00       		.byte	0
+ 1140 0167 17       		.uleb128 0x17
+ 1141 0168 05       		.uleb128 0x5
+ 1142 0169 00       		.byte	0
+ 1143 016a 03       		.uleb128 0x3
+ 1144 016b 0E       		.uleb128 0xe
+ 1145 016c 3A       		.uleb128 0x3a
+ 1146 016d 0B       		.uleb128 0xb
+ 1147 016e 3B       		.uleb128 0x3b
+ 1148 016f 0B       		.uleb128 0xb
+ 1149 0170 49       		.uleb128 0x49
+ 1150 0171 13       		.uleb128 0x13
+ 1151 0172 02       		.uleb128 0x2
+ 1152 0173 17       		.uleb128 0x17
+ 1153 0174 00       		.byte	0
+ 1154 0175 00       		.byte	0
+ 1155 0176 18       		.uleb128 0x18
+ 1156 0177 34       		.uleb128 0x34
+ 1157 0178 00       		.byte	0
+ 1158 0179 03       		.uleb128 0x3
+ 1159 017a 0E       		.uleb128 0xe
+ 1160 017b 3A       		.uleb128 0x3a
+ 1161 017c 0B       		.uleb128 0xb
+ 1162 017d 3B       		.uleb128 0x3b
+ 1163 017e 0B       		.uleb128 0xb
+ 1164 017f 49       		.uleb128 0x49
+ 1165 0180 13       		.uleb128 0x13
+ 1166 0181 3F       		.uleb128 0x3f
+ 1167 0182 19       		.uleb128 0x19
+ 1168 0183 3C       		.uleb128 0x3c
+ 1169 0184 19       		.uleb128 0x19
+ 1170 0185 00       		.byte	0
+ 1171 0186 00       		.byte	0
+ 1172 0187 19       		.uleb128 0x19
+ 1173 0188 2E       		.uleb128 0x2e
+ 1174 0189 00       		.byte	0
+ 1175 018a 3F       		.uleb128 0x3f
+ 1176 018b 19       		.uleb128 0x19
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 29
+
+
+ 1177 018c 3C       		.uleb128 0x3c
+ 1178 018d 19       		.uleb128 0x19
+ 1179 018e 6E       		.uleb128 0x6e
+ 1180 018f 0E       		.uleb128 0xe
+ 1181 0190 03       		.uleb128 0x3
+ 1182 0191 0E       		.uleb128 0xe
+ 1183 0192 3A       		.uleb128 0x3a
+ 1184 0193 0B       		.uleb128 0xb
+ 1185 0194 3B       		.uleb128 0x3b
+ 1186 0195 0B       		.uleb128 0xb
+ 1187 0196 00       		.byte	0
+ 1188 0197 00       		.byte	0
+ 1189 0198 00       		.byte	0
+ 1190              		.section	.debug_loc,"",%progbits
+ 1191              	.Ldebug_loc0:
+ 1192              	.LLST0:
+ 1193 0000 06000000 		.4byte	.LVL0
+ 1194 0004 11000000 		.4byte	.LVL1-1
+ 1195 0008 0100     		.2byte	0x1
+ 1196 000a 50       		.byte	0x50
+ 1197 000b 00000000 		.4byte	0
+ 1198 000f 00000000 		.4byte	0
+ 1199              	.LLST1:
+ 1200 0013 00000000 		.4byte	.LVL6
+ 1201 0017 02000000 		.4byte	.LVL7
+ 1202 001b 0100     		.2byte	0x1
+ 1203 001d 50       		.byte	0x50
+ 1204 001e 02000000 		.4byte	.LVL7
+ 1205 0022 10000000 		.4byte	.LFE6
+ 1206 0026 0400     		.2byte	0x4
+ 1207 0028 F3       		.byte	0xf3
+ 1208 0029 01       		.uleb128 0x1
+ 1209 002a 50       		.byte	0x50
+ 1210 002b 9F       		.byte	0x9f
+ 1211 002c 00000000 		.4byte	0
+ 1212 0030 00000000 		.4byte	0
+ 1213              	.LLST2:
+ 1214 0034 04000000 		.4byte	.LVL8
+ 1215 0038 06000000 		.4byte	.LVL9
+ 1216 003c 0500     		.2byte	0x5
+ 1217 003e 70       		.byte	0x70
+ 1218 003f 00       		.sleb128 0
+ 1219 0040 35       		.byte	0x35
+ 1220 0041 25       		.byte	0x25
+ 1221 0042 9F       		.byte	0x9f
+ 1222 0043 00000000 		.4byte	0
+ 1223 0047 00000000 		.4byte	0
+ 1224              	.LLST3:
+ 1225 004b 00000000 		.4byte	.LVL14
+ 1226 004f 07000000 		.4byte	.LVL15-1
+ 1227 0053 0100     		.2byte	0x1
+ 1228 0055 50       		.byte	0x50
+ 1229 0056 07000000 		.4byte	.LVL15-1
+ 1230 005a 1A000000 		.4byte	.LFE1
+ 1231 005e 0100     		.2byte	0x1
+ 1232 0060 54       		.byte	0x54
+ 1233 0061 00000000 		.4byte	0
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 30
+
+
+ 1234 0065 00000000 		.4byte	0
+ 1235              		.section	.debug_aranges,"",%progbits
+ 1236 0000 7C000000 		.4byte	0x7c
+ 1237 0004 0200     		.2byte	0x2
+ 1238 0006 00000000 		.4byte	.Ldebug_info0
+ 1239 000a 04       		.byte	0x4
+ 1240 000b 00       		.byte	0
+ 1241 000c 0000     		.2byte	0
+ 1242 000e 0000     		.2byte	0
+ 1243 0010 00000000 		.4byte	.LFB3
+ 1244 0014 1C000000 		.4byte	.LFE3-.LFB3
+ 1245 0018 00000000 		.4byte	.LFB4
+ 1246 001c 0C000000 		.4byte	.LFE4-.LFB4
+ 1247 0020 00000000 		.4byte	.LFB5
+ 1248 0024 0C000000 		.4byte	.LFE5-.LFB5
+ 1249 0028 00000000 		.4byte	.LFB6
+ 1250 002c 10000000 		.4byte	.LFE6-.LFB6
+ 1251 0030 00000000 		.4byte	.LFB7
+ 1252 0034 0C000000 		.4byte	.LFE7-.LFB7
+ 1253 0038 00000000 		.4byte	.LFB8
+ 1254 003c 0C000000 		.4byte	.LFE8-.LFB8
+ 1255 0040 00000000 		.4byte	.LFB9
+ 1256 0044 18000000 		.4byte	.LFE9-.LFB9
+ 1257 0048 00000000 		.4byte	.LFB10
+ 1258 004c 0C000000 		.4byte	.LFE10-.LFB10
+ 1259 0050 00000000 		.4byte	.LFB0
+ 1260 0054 1C000000 		.4byte	.LFE0-.LFB0
+ 1261 0058 00000000 		.4byte	.LFB1
+ 1262 005c 1A000000 		.4byte	.LFE1-.LFB1
+ 1263 0060 00000000 		.4byte	.LFB2
+ 1264 0064 14000000 		.4byte	.LFE2-.LFB2
+ 1265 0068 00000000 		.4byte	.LFB11
+ 1266 006c 0C000000 		.4byte	.LFE11-.LFB11
+ 1267 0070 00000000 		.4byte	.LFB12
+ 1268 0074 0C000000 		.4byte	.LFE12-.LFB12
+ 1269 0078 00000000 		.4byte	0
+ 1270 007c 00000000 		.4byte	0
+ 1271              		.section	.debug_ranges,"",%progbits
+ 1272              	.Ldebug_ranges0:
+ 1273 0000 00000000 		.4byte	.LFB3
+ 1274 0004 1C000000 		.4byte	.LFE3
+ 1275 0008 00000000 		.4byte	.LFB4
+ 1276 000c 0C000000 		.4byte	.LFE4
+ 1277 0010 00000000 		.4byte	.LFB5
+ 1278 0014 0C000000 		.4byte	.LFE5
+ 1279 0018 00000000 		.4byte	.LFB6
+ 1280 001c 10000000 		.4byte	.LFE6
+ 1281 0020 00000000 		.4byte	.LFB7
+ 1282 0024 0C000000 		.4byte	.LFE7
+ 1283 0028 00000000 		.4byte	.LFB8
+ 1284 002c 0C000000 		.4byte	.LFE8
+ 1285 0030 00000000 		.4byte	.LFB9
+ 1286 0034 18000000 		.4byte	.LFE9
+ 1287 0038 00000000 		.4byte	.LFB10
+ 1288 003c 0C000000 		.4byte	.LFE10
+ 1289 0040 00000000 		.4byte	.LFB0
+ 1290 0044 1C000000 		.4byte	.LFE0
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 31
+
+
+ 1291 0048 00000000 		.4byte	.LFB1
+ 1292 004c 1A000000 		.4byte	.LFE1
+ 1293 0050 00000000 		.4byte	.LFB2
+ 1294 0054 14000000 		.4byte	.LFE2
+ 1295 0058 00000000 		.4byte	.LFB11
+ 1296 005c 0C000000 		.4byte	.LFE11
+ 1297 0060 00000000 		.4byte	.LFB12
+ 1298 0064 0C000000 		.4byte	.LFE12
+ 1299 0068 00000000 		.4byte	0
+ 1300 006c 00000000 		.4byte	0
+ 1301              		.section	.debug_line,"",%progbits
+ 1302              	.Ldebug_line0:
+ 1303 0000 4F020000 		.section	.debug_str,"MS",%progbits,1
+ 1303      02005F01 
+ 1303      00000201 
+ 1303      FB0E0D00 
+ 1303      01010101 
+ 1304              	.LASF21:
+ 1305 0000 6973725F 		.ascii	"isr_nodeok_Interrupt\000"
+ 1305      6E6F6465 
+ 1305      6F6B5F49 
+ 1305      6E746572 
+ 1305      72757074 
+ 1306              	.LASF19:
+ 1307 0015 72656733 		.ascii	"reg32\000"
+ 1307      3200
+ 1308              	.LASF29:
+ 1309 001b 6973725F 		.ascii	"isr_nodeok_GetPriority\000"
+ 1309      6E6F6465 
+ 1309      6F6B5F47 
+ 1309      65745072 
+ 1309      696F7269 
+ 1310              	.LASF34:
+ 1311 0032 6973725F 		.ascii	"isr_nodeok_Stop\000"
+ 1311      6E6F6465 
+ 1311      6F6B5F53 
+ 1311      746F7000 
+ 1312              	.LASF32:
+ 1313 0042 6973725F 		.ascii	"isr_nodeok_Start\000"
+ 1313      6E6F6465 
+ 1313      6F6B5F53 
+ 1313      74617274 
+ 1313      00
+ 1314              	.LASF41:
+ 1315 0053 47656E65 		.ascii	"Generated_Source\\PSoC5\\isr_nodeok.c\000"
+ 1315      72617465 
+ 1315      645F536F 
+ 1315      75726365 
+ 1315      5C50536F 
+ 1316              	.LASF36:
+ 1317 0077 6973725F 		.ascii	"isr_nodeok_ClearPending\000"
+ 1317      6E6F6465 
+ 1317      6F6B5F43 
+ 1317      6C656172 
+ 1317      50656E64 
+ 1318              	.LASF39:
+ 1319 008f 4E6F6465 		.ascii	"Node_Timer_ReadStatusRegister\000"
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 32
+
+
+ 1319      5F54696D 
+ 1319      65725F52 
+ 1319      65616453 
+ 1319      74617475 
+ 1320              	.LASF30:
+ 1321 00ad 6973725F 		.ascii	"isr_nodeok_Enable\000"
+ 1321      6E6F6465 
+ 1321      6F6B5F45 
+ 1321      6E61626C 
+ 1321      6500
+ 1322              	.LASF23:
+ 1323 00bf 496E7465 		.ascii	"InterruptState\000"
+ 1323      72727570 
+ 1323      74537461 
+ 1323      746500
+ 1324              	.LASF16:
+ 1325 00ce 666C6F61 		.ascii	"float\000"
+ 1325      7400
+ 1326              	.LASF9:
+ 1327 00d4 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1327      206C6F6E 
+ 1327      6720756E 
+ 1327      7369676E 
+ 1327      65642069 
+ 1328              	.LASF4:
+ 1329 00eb 756E7369 		.ascii	"unsigned char\000"
+ 1329      676E6564 
+ 1329      20636861 
+ 1329      7200
+ 1330              	.LASF40:
+ 1331 00f9 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1331      43313120 
+ 1331      352E342E 
+ 1331      31203230 
+ 1331      31363036 
+ 1332 012c 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1332      20726576 
+ 1332      6973696F 
+ 1332      6E203233 
+ 1332      37373135 
+ 1333 015f 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1333      66756E63 
+ 1333      74696F6E 
+ 1333      2D736563 
+ 1333      74696F6E 
+ 1334              	.LASF18:
+ 1335 0187 72656738 		.ascii	"reg8\000"
+ 1335      00
+ 1336              	.LASF8:
+ 1337 018c 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1337      20756E73 
+ 1337      69676E65 
+ 1337      6420696E 
+ 1337      7400
+ 1338              	.LASF14:
+ 1339 019e 75696E74 		.ascii	"uint8\000"
+ 1339      3800
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 33
+
+
+ 1340              	.LASF25:
+ 1341 01a4 6973725F 		.ascii	"isr_nodeok_SetPriority\000"
+ 1341      6E6F6465 
+ 1341      6F6B5F53 
+ 1341      65745072 
+ 1341      696F7269 
+ 1342              	.LASF27:
+ 1343 01bb 7072696F 		.ascii	"priority\000"
+ 1343      72697479 
+ 1343      00
+ 1344              	.LASF17:
+ 1345 01c4 646F7562 		.ascii	"double\000"
+ 1345      6C6500
+ 1346              	.LASF33:
+ 1347 01cb 6973725F 		.ascii	"isr_nodeok_StartEx\000"
+ 1347      6E6F6465 
+ 1347      6F6B5F53 
+ 1347      74617274 
+ 1347      457800
+ 1348              	.LASF12:
+ 1349 01de 5F5F7569 		.ascii	"__uint32_t\000"
+ 1349      6E743332 
+ 1349      5F7400
+ 1350              	.LASF15:
+ 1351 01e9 75696E74 		.ascii	"uint32\000"
+ 1351      333200
+ 1352              	.LASF37:
+ 1353 01f0 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1353      74657243 
+ 1353      72697469 
+ 1353      63616C53 
+ 1353      65637469 
+ 1354              	.LASF0:
+ 1355 0207 756E7369 		.ascii	"unsigned int\000"
+ 1355      676E6564 
+ 1355      20696E74 
+ 1355      00
+ 1356              	.LASF26:
+ 1357 0214 61646472 		.ascii	"address\000"
+ 1357      65737300 
+ 1358              	.LASF38:
+ 1359 021c 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1359      69744372 
+ 1359      69746963 
+ 1359      616C5365 
+ 1359      6374696F 
+ 1360              	.LASF22:
+ 1361 0232 6973725F 		.ascii	"isr_nodeok_SetVector\000"
+ 1361      6E6F6465 
+ 1361      6F6B5F53 
+ 1361      65745665 
+ 1361      63746F72 
+ 1362              	.LASF44:
+ 1363 0247 70656461 		.ascii	"pedalOK\000"
+ 1363      6C4F4B00 
+ 1364              	.LASF20:
+ 1365 024f 63796973 		.ascii	"cyisraddress\000"
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 34
+
+
+ 1365      72616464 
+ 1365      72657373 
+ 1365      00
+ 1366              	.LASF10:
+ 1367 025c 73697A65 		.ascii	"sizetype\000"
+ 1367      74797065 
+ 1367      00
+ 1368              	.LASF1:
+ 1369 0265 6C6F6E67 		.ascii	"long long int\000"
+ 1369      206C6F6E 
+ 1369      6720696E 
+ 1369      7400
+ 1370              	.LASF11:
+ 1371 0273 63686172 		.ascii	"char\000"
+ 1371      00
+ 1372              	.LASF24:
+ 1373 0278 72616D56 		.ascii	"ramVectorTable\000"
+ 1373      6563746F 
+ 1373      72546162 
+ 1373      6C6500
+ 1374              	.LASF42:
+ 1375 0287 433A5C55 		.ascii	"C:\\Users\\Schuyler\\Documents\\PSoC Creator\\Dashb"
+ 1375      73657273 
+ 1375      5C536368 
+ 1375      75796C65 
+ 1375      725C446F 
+ 1376 02b5 6F617264 		.ascii	"oard\\FE3-Dashboard\\Dashboard.cydsn\000"
+ 1376      5C464533 
+ 1376      2D446173 
+ 1376      68626F61 
+ 1376      72645C44 
+ 1377              	.LASF31:
+ 1378 02d8 6973725F 		.ascii	"isr_nodeok_Disable\000"
+ 1378      6E6F6465 
+ 1378      6F6B5F44 
+ 1378      69736162 
+ 1378      6C6500
+ 1379              	.LASF5:
+ 1380 02eb 73686F72 		.ascii	"short int\000"
+ 1380      7420696E 
+ 1380      7400
+ 1381              	.LASF13:
+ 1382 02f5 75696E74 		.ascii	"uint32_t\000"
+ 1382      33325F74 
+ 1382      00
+ 1383              	.LASF7:
+ 1384 02fe 6C6F6E67 		.ascii	"long int\000"
+ 1384      20696E74 
+ 1384      00
+ 1385              	.LASF2:
+ 1386 0307 6C6F6E67 		.ascii	"long double\000"
+ 1386      20646F75 
+ 1386      626C6500 
+ 1387              	.LASF3:
+ 1388 0313 7369676E 		.ascii	"signed char\000"
+ 1388      65642063 
+ 1388      68617200 
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccu5Pqnk.s 			page 35
+
+
+ 1389              	.LASF35:
+ 1390 031f 6973725F 		.ascii	"isr_nodeok_SetPending\000"
+ 1390      6E6F6465 
+ 1390      6F6B5F53 
+ 1390      65745065 
+ 1390      6E64696E 
+ 1391              	.LASF6:
+ 1392 0335 73686F72 		.ascii	"short unsigned int\000"
+ 1392      7420756E 
+ 1392      7369676E 
+ 1392      65642069 
+ 1392      6E7400
+ 1393              	.LASF43:
+ 1394 0348 6973725F 		.ascii	"isr_nodeok_GetState\000"
+ 1394      6E6F6465 
+ 1394      6F6B5F47 
+ 1394      65745374 
+ 1394      61746500 
+ 1395              	.LASF28:
+ 1396 035c 6973725F 		.ascii	"isr_nodeok_GetVector\000"
+ 1396      6E6F6465 
+ 1396      6F6B5F47 
+ 1396      65745665 
+ 1396      63746F72 
+ 1397              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

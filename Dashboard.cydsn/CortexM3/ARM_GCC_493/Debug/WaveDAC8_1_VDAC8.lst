@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccBg3KnU.s 			page 1
 
 
    1              		.syntax unified
@@ -26,122 +26,122 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
   23              		.type	WaveDAC8_1_VDAC8_Enable, %function
   24              	WaveDAC8_1_VDAC8_Enable:
   25              	.LFB1:
-  26              		.file 1 ".\\Generated_Source\\PSoC5\\WaveDAC8_1_VDAC8.c"
-   1:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** /*******************************************************************************
-   2:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * File Name: WaveDAC8_1_VDAC8.c  
-   3:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Version 1.90
-   4:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
-   5:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Description:
-   6:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  This file provides the source code to the API for the 8-bit Voltage DAC 
-   7:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  (VDAC8) User Module.
-   8:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
-   9:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Note:
-  10:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  Any unusual or non-standard behavior should be noted here. Other-
-  11:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  wise, this section should remain blank.
-  12:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
-  13:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** ********************************************************************************
-  14:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
-  15:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * You may use this file only in accordance with the license, terms, conditions, 
-  16:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * disclaimers, and limitations in the end user license agreement accompanying 
-  17:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * the software package with which this file was provided.
-  18:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *******************************************************************************/
-  19:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
-  20:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** #include "cytypes.h"
-  21:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** #include "WaveDAC8_1_VDAC8.h"
-  22:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
-  23:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** #if (CY_PSOC5A)
-  24:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** #include <CyLib.h>
-  25:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** #endif /* CY_PSOC5A */
-  26:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
-  27:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** uint8 WaveDAC8_1_VDAC8_initVar = 0u;
-  28:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
-  29:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** #if (CY_PSOC5A)
-  30:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     static uint8 WaveDAC8_1_VDAC8_restoreVal = 0u;
-  31:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** #endif /* CY_PSOC5A */
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 2
+  26              		.file 1 "Generated_Source\\PSoC5\\WaveDAC8_1_VDAC8.c"
+   1:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * File Name: WaveDAC8_1_VDAC8.c  
+   3:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Version 1.90
+   4:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+   5:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Description:
+   6:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  This file provides the source code to the API for the 8-bit Voltage DAC 
+   7:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  (VDAC8) User Module.
+   8:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+   9:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Note:
+  10:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  Any unusual or non-standard behavior should be noted here. Other-
+  11:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  wise, this section should remain blank.
+  12:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+  13:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** ********************************************************************************
+  14:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
+  15:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  16:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  17:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * the software package with which this file was provided.
+  18:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *******************************************************************************/
+  19:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+  20:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** #include "cytypes.h"
+  21:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** #include "WaveDAC8_1_VDAC8.h"
+  22:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+  23:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** #if (CY_PSOC5A)
+  24:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** #include <CyLib.h>
+  25:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** #endif /* CY_PSOC5A */
+  26:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+  27:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** uint8 WaveDAC8_1_VDAC8_initVar = 0u;
+  28:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+  29:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** #if (CY_PSOC5A)
+  30:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     static uint8 WaveDAC8_1_VDAC8_restoreVal = 0u;
+  31:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** #endif /* CY_PSOC5A */
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccBg3KnU.s 			page 2
 
 
-  32:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
-  33:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** #if (CY_PSOC5A)
-  34:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     static WaveDAC8_1_VDAC8_backupStruct WaveDAC8_1_VDAC8_backup;
-  35:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** #endif /* CY_PSOC5A */
-  36:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
-  37:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
-  38:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** /*******************************************************************************
-  39:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Function Name: WaveDAC8_1_VDAC8_Init
-  40:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** ********************************************************************************
-  41:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Summary:
-  42:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  Initialize to the schematic state.
-  43:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * 
-  44:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Parameters:
-  45:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  void:
-  46:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
-  47:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Return:
-  48:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  void
-  49:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
-  50:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Theory:
-  51:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
-  52:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Side Effects:
-  53:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
-  54:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *******************************************************************************/
-  55:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** void WaveDAC8_1_VDAC8_Init(void) 
-  56:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** {
-  57:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_CR0 = (WaveDAC8_1_VDAC8_MODE_V );
-  58:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
-  59:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     /* Set default data source */
-  60:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     #if(WaveDAC8_1_VDAC8_DEFAULT_DATA_SRC != 0 )
-  61:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****         WaveDAC8_1_VDAC8_CR1 = (WaveDAC8_1_VDAC8_DEFAULT_CNTL | WaveDAC8_1_VDAC8_DACBUS_ENABLE) ;
-  62:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     #else
-  63:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****         WaveDAC8_1_VDAC8_CR1 = (WaveDAC8_1_VDAC8_DEFAULT_CNTL | WaveDAC8_1_VDAC8_DACBUS_DISABLE) ;
-  64:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     #endif /* (WaveDAC8_1_VDAC8_DEFAULT_DATA_SRC != 0 ) */
-  65:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
-  66:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     /* Set default strobe mode */
-  67:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     #if(WaveDAC8_1_VDAC8_DEFAULT_STRB != 0)
-  68:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****         WaveDAC8_1_VDAC8_Strobe |= WaveDAC8_1_VDAC8_STRB_EN ;
-  69:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     #endif/* (WaveDAC8_1_VDAC8_DEFAULT_STRB != 0) */
-  70:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
-  71:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     /* Set default range */
-  72:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_SetRange(WaveDAC8_1_VDAC8_DEFAULT_RANGE); 
-  73:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
-  74:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     /* Set default speed */
-  75:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_SetSpeed(WaveDAC8_1_VDAC8_DEFAULT_SPEED);
-  76:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** }
-  77:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
-  78:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
-  79:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** /*******************************************************************************
-  80:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Function Name: WaveDAC8_1_VDAC8_Enable
-  81:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** ********************************************************************************
-  82:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Summary:
-  83:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  Enable the VDAC8
-  84:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * 
-  85:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Parameters:
-  86:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  void
-  87:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
-  88:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Return:
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 3
+  32:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+  33:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** #if (CY_PSOC5A)
+  34:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     static WaveDAC8_1_VDAC8_backupStruct WaveDAC8_1_VDAC8_backup;
+  35:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** #endif /* CY_PSOC5A */
+  36:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+  37:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+  38:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** /*******************************************************************************
+  39:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Function Name: WaveDAC8_1_VDAC8_Init
+  40:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** ********************************************************************************
+  41:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Summary:
+  42:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  Initialize to the schematic state.
+  43:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * 
+  44:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Parameters:
+  45:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  void:
+  46:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+  47:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Return:
+  48:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  void
+  49:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+  50:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Theory:
+  51:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+  52:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Side Effects:
+  53:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+  54:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *******************************************************************************/
+  55:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** void WaveDAC8_1_VDAC8_Init(void) 
+  56:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** {
+  57:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_CR0 = (WaveDAC8_1_VDAC8_MODE_V );
+  58:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+  59:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     /* Set default data source */
+  60:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     #if(WaveDAC8_1_VDAC8_DEFAULT_DATA_SRC != 0 )
+  61:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****         WaveDAC8_1_VDAC8_CR1 = (WaveDAC8_1_VDAC8_DEFAULT_CNTL | WaveDAC8_1_VDAC8_DACBUS_ENABLE) ;
+  62:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     #else
+  63:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****         WaveDAC8_1_VDAC8_CR1 = (WaveDAC8_1_VDAC8_DEFAULT_CNTL | WaveDAC8_1_VDAC8_DACBUS_DISABLE) ;
+  64:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     #endif /* (WaveDAC8_1_VDAC8_DEFAULT_DATA_SRC != 0 ) */
+  65:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+  66:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     /* Set default strobe mode */
+  67:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     #if(WaveDAC8_1_VDAC8_DEFAULT_STRB != 0)
+  68:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****         WaveDAC8_1_VDAC8_Strobe |= WaveDAC8_1_VDAC8_STRB_EN ;
+  69:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     #endif/* (WaveDAC8_1_VDAC8_DEFAULT_STRB != 0) */
+  70:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+  71:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     /* Set default range */
+  72:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_SetRange(WaveDAC8_1_VDAC8_DEFAULT_RANGE); 
+  73:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+  74:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     /* Set default speed */
+  75:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_SetSpeed(WaveDAC8_1_VDAC8_DEFAULT_SPEED);
+  76:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** }
+  77:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+  78:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+  79:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** /*******************************************************************************
+  80:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Function Name: WaveDAC8_1_VDAC8_Enable
+  81:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** ********************************************************************************
+  82:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Summary:
+  83:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  Enable the VDAC8
+  84:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * 
+  85:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Parameters:
+  86:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  void
+  87:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+  88:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Return:
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccBg3KnU.s 			page 3
 
 
-  89:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  void
-  90:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
-  91:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Theory:
-  92:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
-  93:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Side Effects:
-  94:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
-  95:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *******************************************************************************/
-  96:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** void WaveDAC8_1_VDAC8_Enable(void) 
-  97:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** {
+  89:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  void
+  90:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+  91:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Theory:
+  92:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+  93:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Side Effects:
+  94:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+  95:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *******************************************************************************/
+  96:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** void WaveDAC8_1_VDAC8_Enable(void) 
+  97:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** {
   27              		.loc 1 97 0
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
   30              		@ frame_needed = 0, uses_anonymous_args = 0
   31              		@ link register save eliminated.
-  98:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_PWRMGR |= WaveDAC8_1_VDAC8_ACT_PWR_EN;
+  98:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_PWRMGR |= WaveDAC8_1_VDAC8_ACT_PWR_EN;
   32              		.loc 1 98 0
   33 0000 054A     		ldr	r2, .L2
   34 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
   35 0004 43F00203 		orr	r3, r3, #2
   36 0008 1370     		strb	r3, [r2]
-  99:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_STBY_PWRMGR |= WaveDAC8_1_VDAC8_STBY_PWR_EN;
+  99:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_STBY_PWRMGR |= WaveDAC8_1_VDAC8_STBY_PWR_EN;
   37              		.loc 1 99 0
   38 000a 1032     		adds	r2, r2, #16
   39 000c 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
@@ -163,95 +163,95 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
   55              		.type	WaveDAC8_1_VDAC8_Stop, %function
   56              	WaveDAC8_1_VDAC8_Stop:
   57              	.LFB3:
- 100:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
- 101:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     /*This is to restore the value of register CR0 ,
- 102:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     which is modified  in Stop API , this prevents misbehaviour of VDAC */
- 103:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     #if (CY_PSOC5A)
- 104:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****         if(WaveDAC8_1_VDAC8_restoreVal == 1u) 
- 105:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****         {
- 106:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****              WaveDAC8_1_VDAC8_CR0 = WaveDAC8_1_VDAC8_backup.data_value;
- 107:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****              WaveDAC8_1_VDAC8_restoreVal = 0u;
- 108:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****         }
- 109:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     #endif /* CY_PSOC5A */
- 110:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** }
- 111:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
- 112:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
- 113:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** /*******************************************************************************
- 114:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Function Name: WaveDAC8_1_VDAC8_Start
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 4
+ 100:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+ 101:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     /*This is to restore the value of register CR0 ,
+ 102:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     which is modified  in Stop API , this prevents misbehaviour of VDAC */
+ 103:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     #if (CY_PSOC5A)
+ 104:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****         if(WaveDAC8_1_VDAC8_restoreVal == 1u) 
+ 105:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****         {
+ 106:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****              WaveDAC8_1_VDAC8_CR0 = WaveDAC8_1_VDAC8_backup.data_value;
+ 107:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****              WaveDAC8_1_VDAC8_restoreVal = 0u;
+ 108:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****         }
+ 109:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     #endif /* CY_PSOC5A */
+ 110:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** }
+ 111:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+ 112:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+ 113:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** /*******************************************************************************
+ 114:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Function Name: WaveDAC8_1_VDAC8_Start
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccBg3KnU.s 			page 4
 
 
- 115:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** ********************************************************************************
- 116:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 117:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Summary:
- 118:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  The start function initializes the voltage DAC with the default values, 
- 119:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  and sets the power to the given level.  A power level of 0, is the same as
- 120:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  executing the stop function.
- 121:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 122:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Parameters:
- 123:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  Power: Sets power level between off (0) and (3) high power
- 124:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 125:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Return:
- 126:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  void 
- 127:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 128:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Global variables:
- 129:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  WaveDAC8_1_VDAC8_initVar: Is modified when this function is called for the 
- 130:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  first time. Is used to ensure that initialization happens only once.
- 131:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 132:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *******************************************************************************/
- 133:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** void WaveDAC8_1_VDAC8_Start(void)  
- 134:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** {
- 135:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     /* Hardware initiazation only needs to occure the first time */
- 136:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     if(WaveDAC8_1_VDAC8_initVar == 0u)
- 137:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     { 
- 138:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****         WaveDAC8_1_VDAC8_Init();
- 139:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****         WaveDAC8_1_VDAC8_initVar = 1u;
- 140:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     }
- 141:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
- 142:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     /* Enable power to DAC */
- 143:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_Enable();
- 144:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
- 145:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     /* Set default value */
- 146:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_SetValue(WaveDAC8_1_VDAC8_DEFAULT_DATA); 
- 147:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** }
- 148:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
- 149:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
- 150:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** /*******************************************************************************
- 151:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Function Name: WaveDAC8_1_VDAC8_Stop
- 152:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** ********************************************************************************
- 153:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 154:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Summary:
- 155:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  Powers down DAC to lowest power state.
- 156:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 157:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Parameters:
- 158:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  void
- 159:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 160:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Return:
- 161:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  void
- 162:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 163:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Theory:
- 164:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 165:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Side Effects:
- 166:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 167:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *******************************************************************************/
- 168:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** void WaveDAC8_1_VDAC8_Stop(void) 
- 169:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** {
+ 115:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** ********************************************************************************
+ 116:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 117:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Summary:
+ 118:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  The start function initializes the voltage DAC with the default values, 
+ 119:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  and sets the power to the given level.  A power level of 0, is the same as
+ 120:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  executing the stop function.
+ 121:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 122:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Parameters:
+ 123:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  Power: Sets power level between off (0) and (3) high power
+ 124:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 125:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Return:
+ 126:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  void 
+ 127:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 128:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Global variables:
+ 129:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  WaveDAC8_1_VDAC8_initVar: Is modified when this function is called for the 
+ 130:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  first time. Is used to ensure that initialization happens only once.
+ 131:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 132:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *******************************************************************************/
+ 133:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** void WaveDAC8_1_VDAC8_Start(void)  
+ 134:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** {
+ 135:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     /* Hardware initiazation only needs to occure the first time */
+ 136:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     if(WaveDAC8_1_VDAC8_initVar == 0u)
+ 137:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     { 
+ 138:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****         WaveDAC8_1_VDAC8_Init();
+ 139:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****         WaveDAC8_1_VDAC8_initVar = 1u;
+ 140:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     }
+ 141:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+ 142:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     /* Enable power to DAC */
+ 143:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_Enable();
+ 144:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+ 145:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     /* Set default value */
+ 146:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_SetValue(WaveDAC8_1_VDAC8_DEFAULT_DATA); 
+ 147:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** }
+ 148:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+ 149:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+ 150:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** /*******************************************************************************
+ 151:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Function Name: WaveDAC8_1_VDAC8_Stop
+ 152:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** ********************************************************************************
+ 153:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 154:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Summary:
+ 155:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  Powers down DAC to lowest power state.
+ 156:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 157:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Parameters:
+ 158:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  void
+ 159:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 160:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Return:
+ 161:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  void
+ 162:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 163:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Theory:
+ 164:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 165:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Side Effects:
+ 166:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 167:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *******************************************************************************/
+ 168:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** void WaveDAC8_1_VDAC8_Stop(void) 
+ 169:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** {
   58              		.loc 1 169 0
   59              		.cfi_startproc
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 5
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccBg3KnU.s 			page 5
 
 
   60              		@ args = 0, pretend = 0, frame = 0
   61              		@ frame_needed = 0, uses_anonymous_args = 0
   62              		@ link register save eliminated.
- 170:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     /* Disble power to DAC */
- 171:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_PWRMGR &= (uint8)(~WaveDAC8_1_VDAC8_ACT_PWR_EN);
+ 170:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     /* Disble power to DAC */
+ 171:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_PWRMGR &= (uint8)(~WaveDAC8_1_VDAC8_ACT_PWR_EN);
   63              		.loc 1 171 0
   64 0000 054A     		ldr	r2, .L5
   65 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
   66 0004 03F0FD03 		and	r3, r3, #253
   67 0008 1370     		strb	r3, [r2]
- 172:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_STBY_PWRMGR &= (uint8)(~WaveDAC8_1_VDAC8_STBY_PWR_EN);
+ 172:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_STBY_PWRMGR &= (uint8)(~WaveDAC8_1_VDAC8_STBY_PWR_EN);
   68              		.loc 1 172 0
   69 000a 1032     		adds	r2, r2, #16
   70 000c 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
@@ -273,54 +273,54 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
   86              		.type	WaveDAC8_1_VDAC8_SetSpeed, %function
   87              	WaveDAC8_1_VDAC8_SetSpeed:
   88              	.LFB4:
- 173:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
- 174:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     /* This is a work around for PSoC5A  ,
- 175:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     this sets VDAC to current mode with output off */
- 176:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     #if (CY_PSOC5A)
- 177:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****         WaveDAC8_1_VDAC8_backup.data_value = WaveDAC8_1_VDAC8_CR0;
- 178:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****         WaveDAC8_1_VDAC8_CR0 = WaveDAC8_1_VDAC8_CUR_MODE_OUT_OFF;
- 179:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****         WaveDAC8_1_VDAC8_restoreVal = 1u;
- 180:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     #endif /* CY_PSOC5A */
- 181:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** }
- 182:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
- 183:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
- 184:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** /*******************************************************************************
- 185:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Function Name: WaveDAC8_1_VDAC8_SetSpeed
- 186:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** ********************************************************************************
- 187:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 188:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Summary:
- 189:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  Set DAC speed
- 190:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 191:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Parameters:
- 192:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  power: Sets speed value
- 193:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 194:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Return:
- 195:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  void
- 196:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 197:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Theory:
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 6
+ 173:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+ 174:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     /* This is a work around for PSoC5A  ,
+ 175:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     this sets VDAC to current mode with output off */
+ 176:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     #if (CY_PSOC5A)
+ 177:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****         WaveDAC8_1_VDAC8_backup.data_value = WaveDAC8_1_VDAC8_CR0;
+ 178:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****         WaveDAC8_1_VDAC8_CR0 = WaveDAC8_1_VDAC8_CUR_MODE_OUT_OFF;
+ 179:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****         WaveDAC8_1_VDAC8_restoreVal = 1u;
+ 180:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     #endif /* CY_PSOC5A */
+ 181:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** }
+ 182:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+ 183:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+ 184:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** /*******************************************************************************
+ 185:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Function Name: WaveDAC8_1_VDAC8_SetSpeed
+ 186:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** ********************************************************************************
+ 187:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 188:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Summary:
+ 189:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  Set DAC speed
+ 190:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 191:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Parameters:
+ 192:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  power: Sets speed value
+ 193:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 194:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Return:
+ 195:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  void
+ 196:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 197:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Theory:
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccBg3KnU.s 			page 6
 
 
- 198:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 199:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Side Effects:
- 200:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 201:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *******************************************************************************/
- 202:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** void WaveDAC8_1_VDAC8_SetSpeed(uint8 speed) 
- 203:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** {
+ 198:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 199:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Side Effects:
+ 200:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 201:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *******************************************************************************/
+ 202:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** void WaveDAC8_1_VDAC8_SetSpeed(uint8 speed) 
+ 203:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** {
   89              		.loc 1 203 0
   90              		.cfi_startproc
   91              		@ args = 0, pretend = 0, frame = 0
   92              		@ frame_needed = 0, uses_anonymous_args = 0
   93              		@ link register save eliminated.
   94              	.LVL0:
- 204:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     /* Clear power mask then write in new value */
- 205:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_CR0 &= (uint8)(~WaveDAC8_1_VDAC8_HS_MASK);
+ 204:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     /* Clear power mask then write in new value */
+ 205:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_CR0 &= (uint8)(~WaveDAC8_1_VDAC8_HS_MASK);
   95              		.loc 1 205 0
   96 0000 054B     		ldr	r3, .L8
   97 0002 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
   98 0004 02F0FD02 		and	r2, r2, #253
   99 0008 1A70     		strb	r2, [r3]
- 206:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_CR0 |=  (speed & WaveDAC8_1_VDAC8_HS_MASK);
+ 206:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_CR0 |=  (speed & WaveDAC8_1_VDAC8_HS_MASK);
  100              		.loc 1 206 0
  101 000a 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
  102 000c 00F00200 		and	r0, r0, #2
@@ -343,69 +343,69 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
  119              		.type	WaveDAC8_1_VDAC8_SetValue, %function
  120              	WaveDAC8_1_VDAC8_SetValue:
  121              	.LFB6:
- 207:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** }
- 208:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
- 209:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
- 210:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** /*******************************************************************************
- 211:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Function Name: WaveDAC8_1_VDAC8_SetRange
- 212:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** ********************************************************************************
- 213:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 214:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Summary:
- 215:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  Set one of three current ranges.
- 216:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 217:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Parameters:
- 218:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  Range: Sets one of Three valid ranges.
- 219:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 220:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Return:
- 221:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  void 
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 7
+ 207:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** }
+ 208:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+ 209:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+ 210:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** /*******************************************************************************
+ 211:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Function Name: WaveDAC8_1_VDAC8_SetRange
+ 212:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** ********************************************************************************
+ 213:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 214:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Summary:
+ 215:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  Set one of three current ranges.
+ 216:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 217:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Parameters:
+ 218:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  Range: Sets one of Three valid ranges.
+ 219:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 220:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Return:
+ 221:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  void 
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccBg3KnU.s 			page 7
 
 
- 222:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 223:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Theory:
- 224:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 225:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Side Effects:
- 226:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 227:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *******************************************************************************/
- 228:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** void WaveDAC8_1_VDAC8_SetRange(uint8 range) 
- 229:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** {
- 230:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_CR0 &= (uint8)(~WaveDAC8_1_VDAC8_RANGE_MASK);      /* Clear existing mode */
- 231:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_CR0 |= (range & WaveDAC8_1_VDAC8_RANGE_MASK);      /*  Set Range  */
- 232:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_DacTrim();
- 233:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** }
- 234:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
- 235:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
- 236:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** /*******************************************************************************
- 237:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Function Name: WaveDAC8_1_VDAC8_SetValue
- 238:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** ********************************************************************************
- 239:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 240:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Summary:
- 241:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  Set 8-bit DAC value
- 242:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 243:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Parameters:  
- 244:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  value:  Sets DAC value between 0 and 255.
- 245:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 246:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Return: 
- 247:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  void 
- 248:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 249:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Theory: 
- 250:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 251:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Side Effects:
- 252:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 253:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *******************************************************************************/
- 254:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** void WaveDAC8_1_VDAC8_SetValue(uint8 value) 
- 255:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** {
+ 222:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 223:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Theory:
+ 224:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 225:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Side Effects:
+ 226:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 227:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *******************************************************************************/
+ 228:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** void WaveDAC8_1_VDAC8_SetRange(uint8 range) 
+ 229:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** {
+ 230:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_CR0 &= (uint8)(~WaveDAC8_1_VDAC8_RANGE_MASK);      /* Clear existing mode */
+ 231:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_CR0 |= (range & WaveDAC8_1_VDAC8_RANGE_MASK);      /*  Set Range  */
+ 232:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_DacTrim();
+ 233:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** }
+ 234:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+ 235:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+ 236:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** /*******************************************************************************
+ 237:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Function Name: WaveDAC8_1_VDAC8_SetValue
+ 238:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** ********************************************************************************
+ 239:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 240:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Summary:
+ 241:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  Set 8-bit DAC value
+ 242:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 243:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Parameters:  
+ 244:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  value:  Sets DAC value between 0 and 255.
+ 245:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 246:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Return: 
+ 247:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  void 
+ 248:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 249:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Theory: 
+ 250:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 251:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Side Effects:
+ 252:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 253:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *******************************************************************************/
+ 254:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** void WaveDAC8_1_VDAC8_SetValue(uint8 value) 
+ 255:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** {
  122              		.loc 1 255 0
  123              		.cfi_startproc
  124              		@ args = 0, pretend = 0, frame = 0
  125              		@ frame_needed = 0, uses_anonymous_args = 0
  126              		@ link register save eliminated.
  127              	.LVL2:
- 256:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     #if (CY_PSOC5A)
- 257:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****         uint8 WaveDAC8_1_VDAC8_intrStatus = CyEnterCriticalSection();
- 258:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     #endif /* CY_PSOC5A */
- 259:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
- 260:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_Data = value;                /*  Set Value  */
+ 256:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     #if (CY_PSOC5A)
+ 257:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****         uint8 WaveDAC8_1_VDAC8_intrStatus = CyEnterCriticalSection();
+ 258:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     #endif /* CY_PSOC5A */
+ 259:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+ 260:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_Data = value;                /*  Set Value  */
  128              		.loc 1 260 0
  129 0000 014B     		ldr	r3, .L11
  130 0002 1870     		strb	r0, [r3]
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
  137              	.LFE6:
  138              		.size	WaveDAC8_1_VDAC8_SetValue, .-WaveDAC8_1_VDAC8_SetValue
  139              		.section	.text.WaveDAC8_1_VDAC8_DacTrim,"ax",%progbits
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 8
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccBg3KnU.s 			page 8
 
 
  140              		.align	2
@@ -428,57 +428,57 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
  144              		.type	WaveDAC8_1_VDAC8_DacTrim, %function
  145              	WaveDAC8_1_VDAC8_DacTrim:
  146              	.LFB7:
- 261:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
- 262:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     /* PSOC5A requires a double write */
- 263:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     /* Exit Critical Section */
- 264:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     #if (CY_PSOC5A)
- 265:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****         WaveDAC8_1_VDAC8_Data = value;
- 266:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****         CyExitCriticalSection(WaveDAC8_1_VDAC8_intrStatus);
- 267:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     #endif /* CY_PSOC5A */
- 268:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** }
- 269:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
- 270:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
- 271:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** /*******************************************************************************
- 272:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Function Name: WaveDAC8_1_VDAC8_DacTrim
- 273:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** ********************************************************************************
- 274:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 275:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Summary:
- 276:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  Set the trim value for the given range.
- 277:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 278:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Parameters:
- 279:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  range:  1V or 4V range.  See constants.
- 280:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 281:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Return:
- 282:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  void
- 283:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 284:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Theory: 
- 285:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 286:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Side Effects:
- 287:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
- 288:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *******************************************************************************/
- 289:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** void WaveDAC8_1_VDAC8_DacTrim(void) 
- 290:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** {
+ 261:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+ 262:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     /* PSOC5A requires a double write */
+ 263:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     /* Exit Critical Section */
+ 264:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     #if (CY_PSOC5A)
+ 265:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****         WaveDAC8_1_VDAC8_Data = value;
+ 266:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****         CyExitCriticalSection(WaveDAC8_1_VDAC8_intrStatus);
+ 267:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     #endif /* CY_PSOC5A */
+ 268:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** }
+ 269:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+ 270:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+ 271:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** /*******************************************************************************
+ 272:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Function Name: WaveDAC8_1_VDAC8_DacTrim
+ 273:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** ********************************************************************************
+ 274:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 275:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Summary:
+ 276:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  Set the trim value for the given range.
+ 277:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 278:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Parameters:
+ 279:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  range:  1V or 4V range.  See constants.
+ 280:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 281:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Return:
+ 282:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *  void
+ 283:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 284:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Theory: 
+ 285:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 286:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** * Side Effects:
+ 287:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *
+ 288:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** *******************************************************************************/
+ 289:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** void WaveDAC8_1_VDAC8_DacTrim(void) 
+ 290:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** {
  147              		.loc 1 290 0
  148              		.cfi_startproc
  149              		@ args = 0, pretend = 0, frame = 0
  150              		@ frame_needed = 0, uses_anonymous_args = 0
  151              		@ link register save eliminated.
- 291:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     uint8 mode;
- 292:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
- 293:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     mode = (uint8)((WaveDAC8_1_VDAC8_CR0 & WaveDAC8_1_VDAC8_RANGE_MASK) >> 2) + WaveDAC8_1_VDAC8_TR
+ 291:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     uint8 mode;
+ 292:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+ 293:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     mode = (uint8)((WaveDAC8_1_VDAC8_CR0 & WaveDAC8_1_VDAC8_RANGE_MASK) >> 2) + WaveDAC8_1_VDAC8_TR
  152              		.loc 1 293 0
  153 0000 064B     		ldr	r3, .L14
  154 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  155 0004 C3F38103 		ubfx	r3, r3, #2, #2
  156              	.LVL3:
- 294:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_TR = CY_GET_XTND_REG8((uint8 *)(WaveDAC8_1_VDAC8_DAC_TRIM_BASE + mode));
+ 294:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_TR = CY_GET_XTND_REG8((uint8 *)(WaveDAC8_1_VDAC8_DAC_TRIM_BASE + mode));
  157              		.loc 1 294 0
  158 0008 03F19243 		add	r3, r3, #1224736768
  159              	.LVL4:
  160 000c 0633     		adds	r3, r3, #6
  161              	.LVL5:
  162 000e 93F83031 		ldrb	r3, [r3, #304]	@ zero_extendqisi2
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 9
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccBg3KnU.s 			page 9
 
 
  163              	.LVL6:
@@ -502,7 +502,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
  181              		.type	WaveDAC8_1_VDAC8_SetRange, %function
  182              	WaveDAC8_1_VDAC8_SetRange:
  183              	.LFB5:
- 229:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_CR0 &= (uint8)(~WaveDAC8_1_VDAC8_RANGE_MASK);      /* Clear existing mode */
+ 229:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_CR0 &= (uint8)(~WaveDAC8_1_VDAC8_RANGE_MASK);      /* Clear existing mode */
  184              		.loc 1 229 0
  185              		.cfi_startproc
  186              		@ args = 0, pretend = 0, frame = 0
@@ -512,20 +512,20 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
  190              		.cfi_def_cfa_offset 8
  191              		.cfi_offset 3, -8
  192              		.cfi_offset 14, -4
- 230:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_CR0 |= (range & WaveDAC8_1_VDAC8_RANGE_MASK);      /*  Set Range  */
+ 230:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_CR0 |= (range & WaveDAC8_1_VDAC8_RANGE_MASK);      /*  Set Range  */
  193              		.loc 1 230 0
  194 0002 064B     		ldr	r3, .L18
  195 0004 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
  196 0006 02F0F302 		and	r2, r2, #243
  197 000a 1A70     		strb	r2, [r3]
- 231:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_DacTrim();
+ 231:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_DacTrim();
  198              		.loc 1 231 0
  199 000c 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
  200 000e 00F00C00 		and	r0, r0, #12
  201              	.LVL8:
  202 0012 1043     		orrs	r0, r0, r2
  203 0014 1870     		strb	r0, [r3]
- 232:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** }
+ 232:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** }
  204              		.loc 1 232 0
  205 0016 FFF7FEFF 		bl	WaveDAC8_1_VDAC8_DacTrim
  206              	.LVL9:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
  213              	.LFE5:
  214              		.size	WaveDAC8_1_VDAC8_SetRange, .-WaveDAC8_1_VDAC8_SetRange
  215              		.section	.text.WaveDAC8_1_VDAC8_Init,"ax",%progbits
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 10
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccBg3KnU.s 			page 10
 
 
  216              		.align	2
@@ -548,7 +548,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
  220              		.type	WaveDAC8_1_VDAC8_Init, %function
  221              	WaveDAC8_1_VDAC8_Init:
  222              	.LFB0:
-  56:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_CR0 = (WaveDAC8_1_VDAC8_MODE_V );
+  56:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     WaveDAC8_1_VDAC8_CR0 = (WaveDAC8_1_VDAC8_MODE_V );
  223              		.loc 1 56 0
  224              		.cfi_startproc
  225              		@ args = 0, pretend = 0, frame = 0
@@ -557,26 +557,26 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
  228              		.cfi_def_cfa_offset 8
  229              		.cfi_offset 3, -8
  230              		.cfi_offset 14, -4
-  57:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+  57:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
  231              		.loc 1 57 0
  232 0002 0020     		movs	r0, #0
  233 0004 074B     		ldr	r3, .L22
  234 0006 1870     		strb	r0, [r3]
-  63:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     #endif /* (WaveDAC8_1_VDAC8_DEFAULT_DATA_SRC != 0 ) */
+  63:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     #endif /* (WaveDAC8_1_VDAC8_DEFAULT_DATA_SRC != 0 ) */
  235              		.loc 1 63 0
  236 0008 0133     		adds	r3, r3, #1
  237 000a 1870     		strb	r0, [r3]
-  68:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     #endif/* (WaveDAC8_1_VDAC8_DEFAULT_STRB != 0) */
+  68:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     #endif/* (WaveDAC8_1_VDAC8_DEFAULT_STRB != 0) */
  238              		.loc 1 68 0
  239 000c 064A     		ldr	r2, .L22+4
  240 000e 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
  241 0010 43F00803 		orr	r3, r3, #8
  242 0014 1370     		strb	r3, [r2]
-  72:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+  72:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
  243              		.loc 1 72 0
  244 0016 FFF7FEFF 		bl	WaveDAC8_1_VDAC8_SetRange
  245              	.LVL10:
-  75:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** }
+  75:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** }
  246              		.loc 1 75 0
  247 001a 0220     		movs	r0, #2
  248 001c FFF7FEFF 		bl	WaveDAC8_1_VDAC8_SetSpeed
@@ -598,10 +598,10 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
  264              		.type	WaveDAC8_1_VDAC8_Start, %function
  265              	WaveDAC8_1_VDAC8_Start:
  266              	.LFB2:
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 11
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccBg3KnU.s 			page 11
 
 
- 134:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     /* Hardware initiazation only needs to occure the first time */
+ 134:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     /* Hardware initiazation only needs to occure the first time */
  267              		.loc 1 134 0
  268              		.cfi_startproc
  269              		@ args = 0, pretend = 0, frame = 0
@@ -610,26 +610,26 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
  272              		.cfi_def_cfa_offset 8
  273              		.cfi_offset 3, -8
  274              		.cfi_offset 14, -4
- 136:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     { 
+ 136:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     { 
  275              		.loc 1 136 0
  276 0002 074B     		ldr	r3, .L27
  277 0004 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  278 0006 23B9     		cbnz	r3, .L25
- 138:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****         WaveDAC8_1_VDAC8_initVar = 1u;
+ 138:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****         WaveDAC8_1_VDAC8_initVar = 1u;
  279              		.loc 1 138 0
  280 0008 FFF7FEFF 		bl	WaveDAC8_1_VDAC8_Init
  281              	.LVL12:
- 139:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     }
+ 139:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c ****     }
  282              		.loc 1 139 0
  283 000c 0122     		movs	r2, #1
  284 000e 044B     		ldr	r3, .L27
  285 0010 1A70     		strb	r2, [r3]
  286              	.L25:
- 143:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
+ 143:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** 
  287              		.loc 1 143 0
  288 0012 FFF7FEFF 		bl	WaveDAC8_1_VDAC8_Enable
  289              	.LVL13:
- 146:.\Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** }
+ 146:Generated_Source\PSoC5/WaveDAC8_1_VDAC8.c **** }
  290              		.loc 1 146 0
  291 0016 6420     		movs	r0, #100
  292 0018 FFF7FEFF 		bl	WaveDAC8_1_VDAC8_SetValue
@@ -651,56 +651,56 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
  308 0000 00       		.space	1
  309              		.text
  310              	.Letext0:
- 311              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
+ 311              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
  312              		.section	.debug_info,"",%progbits
  313              	.Ldebug_info0:
  314 0000 DA010000 		.4byte	0x1da
  315 0004 0400     		.2byte	0x4
  316 0006 00000000 		.4byte	.Ldebug_abbrev0
  317 000a 04       		.byte	0x4
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 12
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccBg3KnU.s 			page 12
 
 
  318 000b 01       		.uleb128 0x1
- 319 000c 2F010000 		.4byte	.LASF25
+ 319 000c 54010000 		.4byte	.LASF25
  320 0010 01       		.byte	0x1
- 321 0011 FC010000 		.4byte	.LASF26
- 322 0015 1A000000 		.4byte	.LASF27
+ 321 0011 1A000000 		.4byte	.LASF26
+ 322 0015 82000000 		.4byte	.LASF27
  323 0019 00000000 		.4byte	.Ldebug_ranges0+0
  324 001d 00000000 		.4byte	0
  325 0021 00000000 		.4byte	.Ldebug_line0
  326 0025 02       		.uleb128 0x2
  327 0026 01       		.byte	0x1
  328 0027 06       		.byte	0x6
- 329 0028 73020000 		.4byte	.LASF0
+ 329 0028 86020000 		.4byte	.LASF0
  330 002c 02       		.uleb128 0x2
  331 002d 01       		.byte	0x1
  332 002e 08       		.byte	0x8
- 333 002f A4000000 		.4byte	.LASF1
+ 333 002f C9000000 		.4byte	.LASF1
  334 0033 02       		.uleb128 0x2
  335 0034 02       		.byte	0x2
  336 0035 05       		.byte	0x5
- 337 0036 41020000 		.4byte	.LASF2
+ 337 0036 54020000 		.4byte	.LASF2
  338 003a 02       		.uleb128 0x2
  339 003b 02       		.byte	0x2
  340 003c 07       		.byte	0x7
- 341 003d F8000000 		.4byte	.LASF3
+ 341 003d 1D010000 		.4byte	.LASF3
  342 0041 02       		.uleb128 0x2
  343 0042 04       		.byte	0x4
  344 0043 05       		.byte	0x5
- 345 0044 6A020000 		.4byte	.LASF4
+ 345 0044 7D020000 		.4byte	.LASF4
  346 0048 02       		.uleb128 0x2
  347 0049 04       		.byte	0x4
  348 004a 07       		.byte	0x7
- 349 004b CD000000 		.4byte	.LASF5
+ 349 004b F2000000 		.4byte	.LASF5
  350 004f 02       		.uleb128 0x2
  351 0050 08       		.byte	0x8
  352 0051 05       		.byte	0x5
- 353 0052 2E020000 		.4byte	.LASF6
+ 353 0052 41020000 		.4byte	.LASF6
  354 0056 02       		.uleb128 0x2
  355 0057 08       		.byte	0x8
  356 0058 07       		.byte	0x7
- 357 0059 CA010000 		.4byte	.LASF7
+ 357 0059 EF010000 		.4byte	.LASF7
  358 005d 03       		.uleb128 0x3
  359 005e 04       		.byte	0x4
  360 005f 05       		.byte	0x5
@@ -708,36 +708,36 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
  362 0064 02       		.uleb128 0x2
  363 0065 04       		.byte	0x4
  364 0066 07       		.byte	0x7
- 365 0067 BD010000 		.4byte	.LASF8
+ 365 0067 E2010000 		.4byte	.LASF8
  366 006b 04       		.uleb128 0x4
- 367 006c 4B020000 		.4byte	.LASF12
+ 367 006c 5E020000 		.4byte	.LASF12
  368 0070 02       		.byte	0x2
  369 0071 3801     		.2byte	0x138
  370 0073 2C000000 		.4byte	0x2c
  371 0077 02       		.uleb128 0x2
  372 0078 04       		.byte	0x4
  373 0079 04       		.byte	0x4
- 374 007a 9E000000 		.4byte	.LASF9
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 13
+ 374 007a 7C000000 		.4byte	.LASF9
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccBg3KnU.s 			page 13
 
 
  375 007e 02       		.uleb128 0x2
  376 007f 08       		.byte	0x8
  377 0080 04       		.byte	0x4
- 378 0081 11010000 		.4byte	.LASF10
+ 378 0081 36010000 		.4byte	.LASF10
  379 0085 02       		.uleb128 0x2
  380 0086 01       		.byte	0x1
  381 0087 08       		.byte	0x8
- 382 0088 3C020000 		.4byte	.LASF11
+ 382 0088 4F020000 		.4byte	.LASF11
  383 008c 04       		.uleb128 0x4
- 384 008d C8000000 		.4byte	.LASF13
+ 384 008d ED000000 		.4byte	.LASF13
  385 0091 02       		.byte	0x2
  386 0092 E201     		.2byte	0x1e2
  387 0094 98000000 		.4byte	0x98
  388 0098 05       		.uleb128 0x5
  389 0099 6B000000 		.4byte	0x6b
  390 009d 06       		.uleb128 0x6
- 391 009e 4C000000 		.4byte	.LASF14
+ 391 009e 44000000 		.4byte	.LASF14
  392 00a2 01       		.byte	0x1
  393 00a3 60       		.byte	0x60
  394 00a4 00000000 		.4byte	.LFB1
@@ -745,7 +745,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
  396 00ac 01       		.uleb128 0x1
  397 00ad 9C       		.byte	0x9c
  398 00ae 06       		.uleb128 0x6
- 399 00af E6010000 		.4byte	.LASF15
+ 399 00af 0B020000 		.4byte	.LASF15
  400 00b3 01       		.byte	0x1
  401 00b4 A8       		.byte	0xa8
  402 00b5 00000000 		.4byte	.LFB3
@@ -753,7 +753,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
  404 00bd 01       		.uleb128 0x1
  405 00be 9C       		.byte	0x9c
  406 00bf 07       		.uleb128 0x7
- 407 00c0 84000000 		.4byte	.LASF16
+ 407 00c0 62000000 		.4byte	.LASF16
  408 00c4 01       		.byte	0x1
  409 00c5 CA       		.byte	0xca
  410 00c6 00000000 		.4byte	.LFB4
@@ -762,14 +762,14 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
  413 00cf 9C       		.byte	0x9c
  414 00d0 E4000000 		.4byte	0xe4
  415 00d4 08       		.uleb128 0x8
- 416 00d5 28020000 		.4byte	.LASF18
+ 416 00d5 3B020000 		.4byte	.LASF18
  417 00d9 01       		.byte	0x1
  418 00da CA       		.byte	0xca
  419 00db 6B000000 		.4byte	0x6b
  420 00df 00000000 		.4byte	.LLST0
  421 00e3 00       		.byte	0
  422 00e4 07       		.uleb128 0x7
- 423 00e5 6A000000 		.4byte	.LASF17
+ 423 00e5 21020000 		.4byte	.LASF17
  424 00e9 01       		.byte	0x1
  425 00ea FE       		.byte	0xfe
  426 00eb 00000000 		.4byte	.LFB6
@@ -778,10 +778,10 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
  429 00f4 9C       		.byte	0x9c
  430 00f5 07010000 		.4byte	0x107
  431 00f9 09       		.uleb128 0x9
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 14
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccBg3KnU.s 			page 14
 
 
- 432 00fa 64000000 		.4byte	.LASF19
+ 432 00fa 5C000000 		.4byte	.LASF19
  433 00fe 01       		.byte	0x1
  434 00ff FE       		.byte	0xfe
  435 0100 6B000000 		.4byte	0x6b
@@ -789,7 +789,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
  437 0105 50       		.byte	0x50
  438 0106 00       		.byte	0
  439 0107 0A       		.uleb128 0xa
- 440 0108 DF000000 		.4byte	.LASF20
+ 440 0108 04010000 		.4byte	.LASF20
  441 010c 01       		.byte	0x1
  442 010d 2101     		.2byte	0x121
  443 010f 00000000 		.4byte	.LFB7
@@ -798,7 +798,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
  446 0118 9C       		.byte	0x9c
  447 0119 2E010000 		.4byte	0x12e
  448 011d 0B       		.uleb128 0xb
- 449 011e E1010000 		.4byte	.LASF28
+ 449 011e 06020000 		.4byte	.LASF28
  450 0122 01       		.byte	0x1
  451 0123 2301     		.2byte	0x123
  452 0125 6B000000 		.4byte	0x6b
@@ -814,7 +814,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
  462 013e 9C       		.byte	0x9c
  463 013f 5C010000 		.4byte	0x15c
  464 0143 08       		.uleb128 0x8
- 465 0144 0B010000 		.4byte	.LASF22
+ 465 0144 30010000 		.4byte	.LASF22
  466 0148 01       		.byte	0x1
  467 0149 E4       		.byte	0xe4
  468 014a 6B000000 		.4byte	0x6b
@@ -824,7 +824,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
  472 0157 07010000 		.4byte	0x107
  473 015b 00       		.byte	0
  474 015c 07       		.uleb128 0x7
- 475 015d B2000000 		.4byte	.LASF23
+ 475 015d D7000000 		.4byte	.LASF23
  476 0161 01       		.byte	0x1
  477 0162 37       		.byte	0x37
  478 0163 00000000 		.4byte	.LFB0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
  486 017a 84010000 		.4byte	0x184
  487 017e 0E       		.uleb128 0xe
  488 017f 01       		.uleb128 0x1
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 15
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccBg3KnU.s 			page 15
 
 
  489 0180 50       		.byte	0x50
@@ -856,7 +856,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
  501 0192 00       		.byte	0
  502 0193 00       		.byte	0
  503 0194 07       		.uleb128 0x7
- 504 0195 18010000 		.4byte	.LASF24
+ 504 0195 3D010000 		.4byte	.LASF24
  505 0199 01       		.byte	0x1
  506 019a 85       		.byte	0x85
  507 019b 00000000 		.4byte	.LFB2
@@ -882,7 +882,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
  527 01ca 00       		.byte	0
  528 01cb 00       		.byte	0
  529 01cc 10       		.uleb128 0x10
- 530 01cd 51020000 		.4byte	.LASF29
+ 530 01cd 64020000 		.4byte	.LASF29
  531 01d1 01       		.byte	0x1
  532 01d2 1B       		.byte	0x1b
  533 01d3 6B000000 		.4byte	0x6b
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
  543 0003 25       		.uleb128 0x25
  544 0004 0E       		.uleb128 0xe
  545 0005 13       		.uleb128 0x13
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 16
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccBg3KnU.s 			page 16
 
 
  546 0006 0B       		.uleb128 0xb
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
  600 003c 00       		.byte	0
  601 003d 06       		.uleb128 0x6
  602 003e 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 17
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccBg3KnU.s 			page 17
 
 
  603 003f 00       		.byte	0
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
  657 0077 0B       		.uleb128 0xb
  658 0078 49       		.uleb128 0x49
  659 0079 13       		.uleb128 0x13
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 18
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccBg3KnU.s 			page 18
 
 
  660 007a 02       		.uleb128 0x2
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
  714 00b1 13       		.uleb128 0x13
  715 00b2 02       		.uleb128 0x2
  716 00b3 17       		.uleb128 0x17
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 19
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccBg3KnU.s 			page 19
 
 
  717 00b4 00       		.byte	0
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
  771 00f3 18       		.uleb128 0x18
  772 00f4 00       		.byte	0
  773 00f5 00       		.byte	0
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 20
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccBg3KnU.s 			page 20
 
 
  774 00f6 00       		.byte	0
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
  826              		.section	.debug_aranges,"",%progbits
  827 0000 54000000 		.4byte	0x54
  828 0004 0200     		.2byte	0x2
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 21
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccBg3KnU.s 			page 21
 
 
  829 0006 00000000 		.4byte	.Ldebug_info0
@@ -1246,8 +1246,8 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
  871 0044 00000000 		.4byte	0
  872              		.section	.debug_line,"",%progbits
  873              	.Ldebug_line0:
- 874 0000 EA000000 		.section	.debug_str,"MS",%progbits,1
- 874      02004F00 
+ 874 0000 E8000000 		.section	.debug_str,"MS",%progbits,1
+ 874      02004D00 
  874      00000201 
  874      FB0E0D00 
  874      01010101 
@@ -1257,162 +1257,166 @@ ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 1
  876      5F315F56 
  876      44414338 
  876      5F536574 
- 877              	.LASF27:
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 22
+ 877              	.LASF26:
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccBg3KnU.s 			page 22
 
 
- 878 001a 433A5C55 		.ascii	"C:\\Users\\Sirius\\Desktop\\Dashboard\\Dashboard.cy"
- 878      73657273 
- 878      5C536972 
- 878      6975735C 
- 878      4465736B 
- 879 0048 64736E00 		.ascii	"dsn\000"
- 880              	.LASF14:
- 881 004c 57617665 		.ascii	"WaveDAC8_1_VDAC8_Enable\000"
- 881      44414338 
- 881      5F315F56 
- 881      44414338 
- 881      5F456E61 
- 882              	.LASF19:
- 883 0064 76616C75 		.ascii	"value\000"
- 883      6500
- 884              	.LASF17:
- 885 006a 57617665 		.ascii	"WaveDAC8_1_VDAC8_SetValue\000"
- 885      44414338 
- 885      5F315F56 
- 885      44414338 
- 885      5F536574 
- 886              	.LASF16:
- 887 0084 57617665 		.ascii	"WaveDAC8_1_VDAC8_SetSpeed\000"
- 887      44414338 
- 887      5F315F56 
- 887      44414338 
- 887      5F536574 
- 888              	.LASF9:
- 889 009e 666C6F61 		.ascii	"float\000"
- 889      7400
+ 878 001a 47656E65 		.ascii	"Generated_Source\\PSoC5\\WaveDAC8_1_VDAC8.c\000"
+ 878      72617465 
+ 878      645F536F 
+ 878      75726365 
+ 878      5C50536F 
+ 879              	.LASF14:
+ 880 0044 57617665 		.ascii	"WaveDAC8_1_VDAC8_Enable\000"
+ 880      44414338 
+ 880      5F315F56 
+ 880      44414338 
+ 880      5F456E61 
+ 881              	.LASF19:
+ 882 005c 76616C75 		.ascii	"value\000"
+ 882      6500
+ 883              	.LASF16:
+ 884 0062 57617665 		.ascii	"WaveDAC8_1_VDAC8_SetSpeed\000"
+ 884      44414338 
+ 884      5F315F56 
+ 884      44414338 
+ 884      5F536574 
+ 885              	.LASF9:
+ 886 007c 666C6F61 		.ascii	"float\000"
+ 886      7400
+ 887              	.LASF27:
+ 888 0082 433A5C55 		.ascii	"C:\\Users\\Schuyler\\Documents\\PSoC Creator\\FE3-D"
+ 888      73657273 
+ 888      5C536368 
+ 888      75796C65 
+ 888      725C446F 
+ 889 00b0 61736862 		.ascii	"ashboard\\Dashboard.cydsn\000"
+ 889      6F617264 
+ 889      5C446173 
+ 889      68626F61 
+ 889      72642E63 
  890              	.LASF1:
- 891 00a4 756E7369 		.ascii	"unsigned char\000"
+ 891 00c9 756E7369 		.ascii	"unsigned char\000"
  891      676E6564 
  891      20636861 
  891      7200
  892              	.LASF23:
- 893 00b2 57617665 		.ascii	"WaveDAC8_1_VDAC8_Init\000"
+ 893 00d7 57617665 		.ascii	"WaveDAC8_1_VDAC8_Init\000"
  893      44414338 
  893      5F315F56 
  893      44414338 
  893      5F496E69 
  894              	.LASF13:
- 895 00c8 72656738 		.ascii	"reg8\000"
+ 895 00ed 72656738 		.ascii	"reg8\000"
  895      00
  896              	.LASF5:
- 897 00cd 6C6F6E67 		.ascii	"long unsigned int\000"
+ 897 00f2 6C6F6E67 		.ascii	"long unsigned int\000"
  897      20756E73 
  897      69676E65 
  897      6420696E 
  897      7400
  898              	.LASF20:
- 899 00df 57617665 		.ascii	"WaveDAC8_1_VDAC8_DacTrim\000"
+ 899 0104 57617665 		.ascii	"WaveDAC8_1_VDAC8_DacTrim\000"
  899      44414338 
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccBg3KnU.s 			page 23
+
+
  899      5F315F56 
  899      44414338 
  899      5F446163 
  900              	.LASF3:
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 23
-
-
- 901 00f8 73686F72 		.ascii	"short unsigned int\000"
+ 901 011d 73686F72 		.ascii	"short unsigned int\000"
  901      7420756E 
  901      7369676E 
  901      65642069 
  901      6E7400
  902              	.LASF22:
- 903 010b 72616E67 		.ascii	"range\000"
+ 903 0130 72616E67 		.ascii	"range\000"
  903      6500
  904              	.LASF10:
- 905 0111 646F7562 		.ascii	"double\000"
+ 905 0136 646F7562 		.ascii	"double\000"
  905      6C6500
  906              	.LASF24:
- 907 0118 57617665 		.ascii	"WaveDAC8_1_VDAC8_Start\000"
+ 907 013d 57617665 		.ascii	"WaveDAC8_1_VDAC8_Start\000"
  907      44414338 
  907      5F315F56 
  907      44414338 
  907      5F537461 
  908              	.LASF25:
- 909 012f 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 909 0154 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
  909      4320342E 
  909      392E3320 
  909      32303135 
  909      30333033 
- 910 0162 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 910 0187 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
  910      20726576 
  910      6973696F 
  910      6E203232 
  910      31323230 
- 911 0195 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 911 01ba 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
  911      66756E63 
  911      74696F6E 
  911      2D736563 
  911      74696F6E 
  912              	.LASF8:
- 913 01bd 756E7369 		.ascii	"unsigned int\000"
+ 913 01e2 756E7369 		.ascii	"unsigned int\000"
  913      676E6564 
  913      20696E74 
  913      00
  914              	.LASF7:
- 915 01ca 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 915 01ef 6C6F6E67 		.ascii	"long long unsigned int\000"
  915      206C6F6E 
  915      6720756E 
  915      7369676E 
  915      65642069 
  916              	.LASF28:
- 917 01e1 6D6F6465 		.ascii	"mode\000"
+ 917 0206 6D6F6465 		.ascii	"mode\000"
  917      00
  918              	.LASF15:
- 919 01e6 57617665 		.ascii	"WaveDAC8_1_VDAC8_Stop\000"
+ 919 020b 57617665 		.ascii	"WaveDAC8_1_VDAC8_Stop\000"
  919      44414338 
  919      5F315F56 
  919      44414338 
  919      5F53746F 
- 920              	.LASF26:
- 921 01fc 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\WaveDAC8_1_VDAC8.c\000"
- 921      6E657261 
- 921      7465645F 
-ARM GAS  C:\Users\Sirius\AppData\Local\Temp\ccR8ciwE.s 			page 24
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\ccBg3KnU.s 			page 24
 
 
- 921      536F7572 
- 921      63655C50 
+ 920              	.LASF17:
+ 921 0221 57617665 		.ascii	"WaveDAC8_1_VDAC8_SetValue\000"
+ 921      44414338 
+ 921      5F315F56 
+ 921      44414338 
+ 921      5F536574 
  922              	.LASF18:
- 923 0228 73706565 		.ascii	"speed\000"
+ 923 023b 73706565 		.ascii	"speed\000"
  923      6400
  924              	.LASF6:
- 925 022e 6C6F6E67 		.ascii	"long long int\000"
+ 925 0241 6C6F6E67 		.ascii	"long long int\000"
  925      206C6F6E 
  925      6720696E 
  925      7400
  926              	.LASF11:
- 927 023c 63686172 		.ascii	"char\000"
+ 927 024f 63686172 		.ascii	"char\000"
  927      00
  928              	.LASF2:
- 929 0241 73686F72 		.ascii	"short int\000"
+ 929 0254 73686F72 		.ascii	"short int\000"
  929      7420696E 
  929      7400
  930              	.LASF12:
- 931 024b 75696E74 		.ascii	"uint8\000"
+ 931 025e 75696E74 		.ascii	"uint8\000"
  931      3800
  932              	.LASF29:
- 933 0251 57617665 		.ascii	"WaveDAC8_1_VDAC8_initVar\000"
+ 933 0264 57617665 		.ascii	"WaveDAC8_1_VDAC8_initVar\000"
  933      44414338 
  933      5F315F56 
  933      44414338 
  933      5F696E69 
  934              	.LASF4:
- 935 026a 6C6F6E67 		.ascii	"long int\000"
+ 935 027d 6C6F6E67 		.ascii	"long int\000"
  935      20696E74 
  935      00
  936              	.LASF0:
- 937 0273 7369676E 		.ascii	"signed char\000"
+ 937 0286 7369676E 		.ascii	"signed char\000"
  937      65642063 
  937      68617200 
  938              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

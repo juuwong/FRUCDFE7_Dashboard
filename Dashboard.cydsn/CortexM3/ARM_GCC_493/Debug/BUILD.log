@@ -1,43 +1,16 @@
---------------- Build Started: 07/03/2016 15:54:59 Project: Dashboard, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
+--------------- Build Started: 04/29/2017 10:43:57 Project: Dashboard, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
 The code generation step is up to date.
-arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_493\Debug/main.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\main.c -o .\CortexM3\ARM_GCC_493\Debug\main.o
-.\main.c: In function 'main':
-.\main.c:344:29: warning: unused variable 'NomialVolt' [-Wunused-variable]
-                     uint8_t NomialVolt =  can_read(data_queue, data_head, data_tail, 0x0566, 2);
-                             ^
-.\main.c:342:29: warning: unused variable 'MainState' [-Wunused-variable]
-                     uint8_t MainState = can_read(data_queue, data_head, data_tail, 0x0566, 0);
-                             ^
-.\main.c:410:87: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
-                 if(!HV_Read() | can_read(data_queue, data_head, data_tail, 0x0566, 0) < 0x1A)
-                                                                                       ^
-.\main.c:556:24: warning: suggest parentheses around operand of '!' or change '&' to '&&' or '!' to '~' [-Wparentheses]
-                     if(!(Curtis_Fault_Check(data_queue,data_head,data_tail)) 
-                        ^
-.\main.c:122:12: warning: unused variable 'direction' [-Wunused-variable]
-     int8_t direction=1;
-            ^
-.\main.c:121:13: warning: unused variable 'value' [-Wunused-variable]
-     uint8_t value=0; // replace the value with 
-             ^
-In file included from .\main.c:3:0:
-.\main.c: At top level:
-.\can_manager.h:4:17: warning: 'CANID_Recv_list' defined but not used [-Wunused-variable]
- static uint16_t CANID_Recv_list[] =
-                 ^
-.\main.c:59:15: warning: 'ReadSwSwitch' declared 'static' but never defined [-Wunused-function]
- static uint32 ReadSwSwitch(void);
-               ^
-.\main.c: In function 'main':
-.\main.c:551:21: warning: 'Throttle_Low' may be used uninitialized in this function [-Wmaybe-uninitialized]
-                     can_send_cmd(1,Throttle_High,Throttle_Low); // setInterlock
-                     ^
-.\main.c:551:21: warning: 'Throttle_High' may be used uninitialized in this function [-Wmaybe-uninitialized]
-arm-none-eabi-ar.exe -rs .\CortexM3\ARM_GCC_493\Debug\Dashboard.a .\CortexM3\ARM_GCC_493\Debug\cyfitter_cfg.o .\CortexM3\ARM_GCC_493\Debug\RX.o .\CortexM3\ARM_GCC_493\Debug\TX.o .\CortexM3\ARM_GCC_493\Debug\CAN.o .\CortexM3\ARM_GCC_493\Debug\CAN_INT.o .\CortexM3\ARM_GCC_493\Debug\CAN_PM.o .\CortexM3\ARM_GCC_493\Debug\CAN_TX_RX_func.o .\CortexM3\ARM_GCC_493\Debug\LCD.o .\CortexM3\ARM_GCC_493\Debug\LCD_PM.o .\CortexM3\ARM_GCC_493\Debug\LCD_LCDPort.o .\CortexM3\ARM_GCC_493\Debug\CyBootAsmGnu.o .\CortexM3\ARM_GCC_493\Debug\CyDmac.o .\CortexM3\ARM_GCC_493\Debug\CyFlash.o .\CortexM3\ARM_GCC_493\Debug\CyLib.o .\CortexM3\ARM_GCC_493\Debug\cyPm.o .\CortexM3\ARM_GCC_493\Debug\CySpc.o .\CortexM3\ARM_GCC_493\Debug\cyutils.o .\CortexM3\ARM_GCC_493\Debug\LED.o .\CortexM3\ARM_GCC_493\Debug\Buzzer.o .\CortexM3\ARM_GCC_493\Debug\HV.o .\CortexM3\ARM_GCC_493\Debug\Drive.o .\CortexM3\ARM_GCC_493\Debug\WaveDAC8_1.o .\CortexM3\ARM_GCC_493\Debug\WaveDAC8_1_PM.o .\CortexM3\ARM_GCC_493\Debug\WaveDAC8_1_DacClk.o .\CortexM3\ARM_GCC_493\Debug\WaveDAC8_1_Wave1_DMA_dma.o .\CortexM3\ARM_GCC_493\Debug\WaveDAC8_1_Wave2_DMA_dma.o .\CortexM3\ARM_GCC_493\Debug\WaveDAC8_1_VDAC8.o .\CortexM3\ARM_GCC_493\Debug\WaveDAC8_1_VDAC8_PM.o .\CortexM3\ARM_GCC_493\Debug\Tach.o .\CortexM3\ARM_GCC_493\Debug\RGB3_1.o .\CortexM3\ARM_GCC_493\Debug\RGB2_1.o .\CortexM3\ARM_GCC_493\Debug\RGB1_1.o .\CortexM3\ARM_GCC_493\Debug\RGB3_2.o .\CortexM3\ARM_GCC_493\Debug\RGB2_2.o .\CortexM3\ARM_GCC_493\Debug\RGB1_2.o .\CortexM3\ARM_GCC_493\Debug\timer_clock.o .\CortexM3\ARM_GCC_493\Debug\CAN_Timer.o .\CortexM3\ARM_GCC_493\Debug\CAN_Timer_PM.o .\CortexM3\ARM_GCC_493\Debug\isr_can.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_493\Debug/can_manga.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c can_manga.c -o .\CortexM3\ARM_GCC_493\Debug\can_manga.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_493\Debug/CAN_TX_RX_func.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c Generated_Source\PSoC5\CAN_TX_RX_func.c -o .\CortexM3\ARM_GCC_493\Debug\CAN_TX_RX_func.o
+Generated_Source\PSoC5\CAN_TX_RX_func.c: In function 'CAN_ReceiveMsg':
+Generated_Source\PSoC5\CAN_TX_RX_func.c:643:27: warning: unused variable 'test' [-Wunused-variable]
+             CAN_RX_STRUCT test = CAN_RX[rxMailbox]; // is test always 0s?
+                           ^
+arm-none-eabi-ar.exe -rs .\CortexM3\ARM_GCC_493\Debug\Dashboard.a .\CortexM3\ARM_GCC_493\Debug\cyfitter_cfg.o .\CortexM3\ARM_GCC_493\Debug\RX.o .\CortexM3\ARM_GCC_493\Debug\TX.o .\CortexM3\ARM_GCC_493\Debug\CAN.o .\CortexM3\ARM_GCC_493\Debug\CAN_INT.o .\CortexM3\ARM_GCC_493\Debug\CAN_PM.o .\CortexM3\ARM_GCC_493\Debug\CAN_TX_RX_func.o .\CortexM3\ARM_GCC_493\Debug\LCD.o .\CortexM3\ARM_GCC_493\Debug\LCD_PM.o .\CortexM3\ARM_GCC_493\Debug\LCD_LCDPort.o .\CortexM3\ARM_GCC_493\Debug\CyDmac.o .\CortexM3\ARM_GCC_493\Debug\CyFlash.o .\CortexM3\ARM_GCC_493\Debug\CyLib.o .\CortexM3\ARM_GCC_493\Debug\cyPm.o .\CortexM3\ARM_GCC_493\Debug\CySpc.o .\CortexM3\ARM_GCC_493\Debug\cyutils.o .\CortexM3\ARM_GCC_493\Debug\LED.o .\CortexM3\ARM_GCC_493\Debug\Buzzer.o .\CortexM3\ARM_GCC_493\Debug\HV.o .\CortexM3\ARM_GCC_493\Debug\Drive.o .\CortexM3\ARM_GCC_493\Debug\WaveDAC8_1.o .\CortexM3\ARM_GCC_493\Debug\WaveDAC8_1_PM.o .\CortexM3\ARM_GCC_493\Debug\WaveDAC8_1_DacClk.o .\CortexM3\ARM_GCC_493\Debug\WaveDAC8_1_Wave1_DMA_dma.o .\CortexM3\ARM_GCC_493\Debug\WaveDAC8_1_Wave2_DMA_dma.o .\CortexM3\ARM_GCC_493\Debug\WaveDAC8_1_VDAC8.o .\CortexM3\ARM_GCC_493\Debug\WaveDAC8_1_VDAC8_PM.o .\CortexM3\ARM_GCC_493\Debug\Tach.o .\CortexM3\ARM_GCC_493\Debug\RGB3_1.o .\CortexM3\ARM_GCC_493\Debug\RGB2_1.o .\CortexM3\ARM_GCC_493\Debug\RGB1_1.o .\CortexM3\ARM_GCC_493\Debug\RGB3_2.o .\CortexM3\ARM_GCC_493\Debug\RGB2_2.o .\CortexM3\ARM_GCC_493\Debug\RGB1_2.o .\CortexM3\ARM_GCC_493\Debug\timer_clock.o .\CortexM3\ARM_GCC_493\Debug\CAN_Timer.o .\CortexM3\ARM_GCC_493\Debug\CAN_Timer_PM.o .\CortexM3\ARM_GCC_493\Debug\isr_can.o .\CortexM3\ARM_GCC_493\Debug\Node_Timer.o .\CortexM3\ARM_GCC_493\Debug\Node_Timer_PM.o .\CortexM3\ARM_GCC_493\Debug\isr_nodeok.o .\CortexM3\ARM_GCC_493\Debug\CyBootAsmGnu.o
 arm-none-eabi-ar.exe: creating .\CortexM3\ARM_GCC_493\Debug\Dashboard.a
-arm-none-eabi-gcc.exe -Wl,--start-group -o .\CortexM3\ARM_GCC_493\Debug\Dashboard.elf .\CortexM3\ARM_GCC_493\Debug\main.o .\CortexM3\ARM_GCC_493\Debug\can_manager.o .\CortexM3\ARM_GCC_493\Debug\cymetadata.o .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o .\CortexM3\ARM_GCC_493\Debug\Dashboard.a "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_493\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -g -ffunction-sections -Og -ffat-lto-objects -L Generated_Source\PSoC5 -Wl,-Map,.\CortexM3\ARM_GCC_493\Debug/Dashboard.map -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -Wl,--gc-sections -Wl,--end-group
-cyelftool.exe -C C:\Users\Sirius\Desktop\Dashboard\Dashboard.cydsn\CortexM3\ARM_GCC_493\Debug\Dashboard.elf --flash_row_size 256 --flash_size 262144
-cyelftool.exe -S C:\Users\Sirius\Desktop\Dashboard\Dashboard.cydsn\CortexM3\ARM_GCC_493\Debug\Dashboard.elf
-Flash used: 6912 of 262144 bytes (2.6 %).
-SRAM used: 18901 of 65536 bytes (28.8 %). Stack: 2048 bytes. Heap: 128 bytes.
---------------- Build Succeeded: 07/03/2016 15:55:01 ---------------
+arm-none-eabi-gcc.exe -Wl,--start-group -o .\CortexM3\ARM_GCC_493\Debug\Dashboard.elf .\CortexM3\ARM_GCC_493\Debug\main.o .\CortexM3\ARM_GCC_493\Debug\can_manga.o .\CortexM3\ARM_GCC_493\Debug\cymetadata.o .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o .\CortexM3\ARM_GCC_493\Debug\Dashboard.a "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_493\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -g -ffunction-sections -Og -ffat-lto-objects -L Generated_Source\PSoC5 -Wl,-Map,.\CortexM3\ARM_GCC_493\Debug/Dashboard.map -T "C:\Users\Schuyler\Documents\PSoC Creator\Dashboard\FE3-Dashboard\Dashboard.cydsn\Generated_Source\PSoC5\cm3gcc.ld" -specs=nano.specs -Wl,--gc-sections -Wl,--end-group
+cyelftool.exe -C "C:\Users\Schuyler\Documents\PSoC Creator\Dashboard\FE3-Dashboard\Dashboard.cydsn\CortexM3\ARM_GCC_493\Debug\Dashboard.elf" --flash_row_size 256 --flash_size 262144
+cyelftool.exe -S "C:\Users\Schuyler\Documents\PSoC Creator\Dashboard\FE3-Dashboard\Dashboard.cydsn\CortexM3\ARM_GCC_493\Debug\Dashboard.elf"
+Flash used: 6774 of 262144 bytes (2.6 %).
+SRAM used: 2525 of 65536 bytes (3.9 %). Stack: 2048 bytes. Heap: 128 bytes.
+--------------- Build Succeeded: 04/29/2017 10:44:00 ---------------

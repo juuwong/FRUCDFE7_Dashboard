@@ -1,5 +1,7 @@
-C:\Users\Sirius\Desktop\Dashboard\Dashboard.cydsn\Dashboard.cyprj|93f9265c-a2bd-4aa9-8ad2-4a389c6d6040
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|f3ec8744-9dfa-4efd-9100-536d1b9be0be
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|10763e5a-445b-494e-af9b-5cdfeaf0a019
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|3dace6ec-ce4d-4695-94bf-536aec400513
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|b4dfb0da-3fa0-4c62-9b81-395b3afd6f45
+C:\Users\Schuyler\Documents\PSoC Creator\Dashboard\FE3-Dashboard\Dashboard.cydsn\Dashboard.cyprj|18989cf4-0658-4a18-92a5-272f85b62445
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|fafd2e8b-2067-4fad-80a5-5784929c90ae
+C:\Users\Schuyler\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|fe01c903-1bcd-439c-adea-f7a7dd85227e
+C:\Users\Schuyler\Documents\PSoC Creator\4.1\Downloads ( 4.1).cylib\Downloads ( 4.1).cyprj|75b9446d-b4ae-4a67-ba28-8f59b5477fab
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|9d008e9b-84d7-46fc-9b5c-74989baf6ee3
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|33d45772-a72c-46e4-bafb-a8dc9a398e5d
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|a5588527-0dd4-41dd-a3b9-480d8914f03c

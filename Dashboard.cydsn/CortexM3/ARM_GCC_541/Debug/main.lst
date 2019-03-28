@@ -1,0 +1,4496 @@
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.nodeCheckStart,"ax",%progbits
+  20              		.align	2
+  21              		.global	nodeCheckStart
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	nodeCheckStart, %function
+  25              	nodeCheckStart:
+  26              	.LFB64:
+  27              		.file 1 "main.c"
+   1:main.c        **** #include <project.h>
+   2:main.c        **** #include <stdio.h>
+   3:main.c        **** #include "can_manga.h"
+   4:main.c        **** 
+   5:main.c        **** // Uncomment THROTTLE_LIMITING to enable power reduction at high temperatures
+   6:main.c        **** #define THROTTLE_LIMITING
+   7:main.c        **** volatile double THROTTLE_MULTIPLIER = 1;
+   8:main.c        **** const double THROTTLE_MAP[8] = { 95, 71, 59, 47, 35, 23, 11, 5 };
+   9:main.c        **** 
+  10:main.c        **** #define PWM_PULSE_WIDTH_STEP        (10u)
+  11:main.c        **** #define SWITCH_PRESSED              (0u)
+  12:main.c        **** #define PWM_MESSAGE_ID              (0x1AAu)
+  13:main.c        **** #define PWM_MESSAGE_IDE             (0u)    /* Standard message */
+  14:main.c        **** #define PWM_MESSAGE_IRQ             (0u)    /* No transmit IRQ */
+  15:main.c        **** #define PWM_MESSAGE_RTR             (0u)    /* No RTR */
+  16:main.c        **** #define CAN_RX_MAILBOX_0_SHIFT      (1u)
+  17:main.c        **** #define CAN_RX_MAILBOX_1_SHIFT      (2u)
+  18:main.c        **** #define DATA_SIZE                   (6u)
+  19:main.c        **** #define ONE_BYTE_OFFSET             (8u)
+  20:main.c        **** 
+  21:main.c        **** #define PEDAL_TIMEOUT 100 // Timeout after (PEDAL_TIMEOUT * 10)ms
+  22:main.c        **** 
+  23:main.c        **** /* Function prototypes */
+  24:main.c        **** //CY_ISR_PROTO(ISR_CAN);
+  25:main.c        **** 
+  26:main.c        **** /* Global variables used to store configuration and data for BASIC CAN mailbox */
+  27:main.c        **** //CAN_DATA_BYTES_MSG dataPWM;
+  28:main.c        **** //CAN_TX_MSG messagePWM;
+  29:main.c        **** 
+  30:main.c        **** /* Global variable used to store PWM pulse width value */
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 2
+
+
+  31:main.c        **** //uint8 pulseWidthValue = 0u;
+  32:main.c        **** 
+  33:main.c        **** /* Global variable used to store receive message mailbox number */
+  34:main.c        **** //volatile uint8 receiveMailboxNumber = 0xFFu;
+  35:main.c        **** 
+  36:main.c        **** void nodeCheckStart()
+  37:main.c        **** {
+  28              		.loc 1 37 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 08B5     		push	{r3, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 3, -8
+  35              		.cfi_offset 14, -4
+  38:main.c        ****     Node_Timer_Start();
+  36              		.loc 1 38 0
+  37 0002 FFF7FEFF 		bl	Node_Timer_Start
+  38              	.LVL0:
+  39:main.c        ****     isr_nodeok_Start();
+  39              		.loc 1 39 0
+  40 0006 FFF7FEFF 		bl	isr_nodeok_Start
+  41              	.LVL1:
+  42 000a 08BD     		pop	{r3, pc}
+  43              		.cfi_endproc
+  44              	.LFE64:
+  45              		.size	nodeCheckStart, .-nodeCheckStart
+  46              		.global	__aeabi_ui2d
+  47              		.global	__aeabi_dmul
+  48              		.global	__aeabi_d2uiz
+  49              		.section	.text.main,"ax",%progbits
+  50              		.align	2
+  51              		.global	main
+  52              		.thumb
+  53              		.thumb_func
+  54              		.type	main, %function
+  55              	main:
+  56              	.LFB65:
+  40:main.c        **** }
+  41:main.c        **** 
+  42:main.c        **** typedef enum 
+  43:main.c        **** {
+  44:main.c        **** 	Startup,
+  45:main.c        **** 	LV,
+  46:main.c        **** 	Precharging,
+  47:main.c        **** 	HV_Enabled,
+  48:main.c        **** 	Drive,
+  49:main.c        **** 	Fault
+  50:main.c        ****     
+  51:main.c        **** }Dash_State;
+  52:main.c        **** 
+  53:main.c        **** typedef enum 
+  54:main.c        **** {
+  55:main.c        **** 	OK,
+  56:main.c        **** 	fromLV,
+  57:main.c        **** 	fromPrecharging,
+  58:main.c        **** 	fromHV_Enabled,
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 3
+
+
+  59:main.c        **** 	fromDrive,
+  60:main.c        ****     fromFault,
+  61:main.c        ****     nodeFailure
+  62:main.c        ****     
+  63:main.c        **** }Error_State;
+  64:main.c        **** 
+  65:main.c        **** /* Switch state defines -- Active High*/ 
+  66:main.c        **** #define SWITCH_ON         (1u)
+  67:main.c        **** #define SWITCH_OFF        (0u)
+  68:main.c        **** /* Switch debounce delay in milliseconds */
+  69:main.c        **** #define SWITCH_DEBOUNCE_UNIT   (1u)
+  70:main.c        **** /* Number of debounce units to count delay, before consider that switch is pressed */
+  71:main.c        **** #define SWITCH_DEBOUNCE_PERIOD (10u)
+  72:main.c        **** /* Function prototypes */
+  73:main.c        **** static uint32 ReadSwSwitch(void);
+  74:main.c        **** 
+  75:main.c        **** /* Global variable used to store switch state */
+  76:main.c        **** uint8 HVSwitch = SWITCH_OFF;
+  77:main.c        **** uint8 DriveSwitch = SWITCH_OFF;
+  78:main.c        **** //volatile Dash_State state = Startup;
+  79:main.c        **** 
+  80:main.c        **** // Global variables used to track status of nodes
+  81:main.c        **** volatile uint32_t pedalOK = 0; // for pedal node
+  82:main.c        **** 
+  83:main.c        **** //CY_ISR(isr_can_handler){
+  84:main.c        ****     
+  85:main.c        **** //    can_send_status(state);
+  86:main.c        ****     
+  87:main.c        **** //}
+  88:main.c        **** 
+  89:main.c        **** /*******************************************************************************
+  90:main.c        **** * Function Name: main
+  91:main.c        **** ********************************************************************************
+  92:main.c        **** *
+  93:main.c        **** * Summary:
+  94:main.c        **** *  main() performs the following functions:
+  95:main.c        **** *  1: Initializes a structure for the Basic CAN mailbox to send messages.
+  96:main.c        **** *  2: Starts the CAN and LCD components.
+  97:main.c        **** *  3: When received Message 1, sends the PWM pulse width and displays
+  98:main.c        **** *     received switch status and value of PWM pulse width on an LCD; 
+  99:main.c        **** *     When received Message 2, display received ADC data on an LCD.
+ 100:main.c        **** *
+ 101:main.c        **** * Parameters:
+ 102:main.c        **** *  None.
+ 103:main.c        **** *
+ 104:main.c        **** * Return:
+ 105:main.c        **** *  None.
+ 106:main.c        **** *
+ 107:main.c        **** *******************************************************************************/
+ 108:main.c        **** 
+ 109:main.c        **** int main()
+ 110:main.c        **** {   
+  57              		.loc 1 110 0
+  58              		.cfi_startproc
+  59              		@ args = 0, pretend = 0, frame = 8
+  60              		@ frame_needed = 0, uses_anonymous_args = 0
+  61 0000 2DE9F043 		push	{r4, r5, r6, r7, r8, r9, lr}
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 4
+
+
+  62              		.cfi_def_cfa_offset 28
+  63              		.cfi_offset 4, -28
+  64              		.cfi_offset 5, -24
+  65              		.cfi_offset 6, -20
+  66              		.cfi_offset 7, -16
+  67              		.cfi_offset 8, -12
+  68              		.cfi_offset 9, -8
+  69              		.cfi_offset 14, -4
+  70 0004 83B0     		sub	sp, sp, #12
+  71              		.cfi_def_cfa_offset 40
+  72              	.LVL2:
+ 111:main.c        ****     
+ 112:main.c        ****     Dash_State state = Startup;
+ 113:main.c        ****     Error_State error_state = OK;
+ 114:main.c        ****     
+ 115:main.c        ****     //Tach Meter Stuff
+ 116:main.c        ****     uint8_t value=0; // replace the value with 
+ 117:main.c        ****     int8_t direction=1;
+ 118:main.c        ****     //WaveDAC8_1_Start();
+ 119:main.c        ****     
+ 120:main.c        ****     //precharging time counter
+ 121:main.c        ****     volatile uint32_t PrechargingTimeCount = 0;
+  73              		.loc 1 121 0
+  74 0006 0024     		movs	r4, #0
+  75 0008 0194     		str	r4, [sp, #4]
+  76              	.LVL3:
+ 122:main.c        ****     uint32_t DriveTimeCount = 0;
+ 123:main.c        **** 
+ 124:main.c        ****     CyGlobalIntEnable;
+  77              		.loc 1 124 0
+  78              		.syntax unified
+  79              	@ 124 "main.c" 1
+  80 000a 62B6     		CPSIE   i
+  81              	@ 0 "" 2
+ 125:main.c        ****    
+ 126:main.c        **** 
+ 127:main.c        ****     nodeCheckStart();
+  82              		.loc 1 127 0
+  83              		.thumb
+  84              		.syntax unified
+  85 000c FFF7FEFF 		bl	nodeCheckStart
+  86              	.LVL4:
+ 122:main.c        ****     uint32_t DriveTimeCount = 0;
+  87              		.loc 1 122 0
+  88 0010 2746     		mov	r7, r4
+ 113:main.c        ****     
+  89              		.loc 1 113 0
+  90 0012 2546     		mov	r5, r4
+  91 0014 1DE0     		b	.L4
+  92              	.LVL5:
+  93              	.L23:
+  94              	.LBB2:
+ 128:main.c        ****     
+ 129:main.c        ****     for(;;)
+ 130:main.c        ****     {
+ 131:main.c        ****         /*
+ 132:main.c        ****         for (;;) { //1 0 0 0
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 5
+
+
+ 133:main.c        ****             Hex1Reg_Write(0x2);
+ 134:main.c        ****             Hex2Reg_Write(0x3);
+ 135:main.c        ****             Hex3Reg_Write(0x4);
+ 136:main.c        ****             Hex4Reg_Write(0x5);
+ 137:main.c        ****         
+ 138:main.c        ****             RGB3_1_Write(1);
+ 139:main.c        ****             RGB2_1_Write(1);
+ 140:main.c        ****             RGB1_1_Write(0);
+ 141:main.c        ****                 
+ 142:main.c        ****             RGB3_2_Write(1);
+ 143:main.c        ****             RGB2_2_Write(0);
+ 144:main.c        ****             RGB1_2_Write(1);
+ 145:main.c        ****             
+ 146:main.c        ****         }
+ 147:main.c        ****         */
+ 148:main.c        ****         LED_Write(1);
+ 149:main.c        ****         
+ 150:main.c        ****         // Check if all nodes are OK
+ 151:main.c        ****         if (pedalOK > PEDAL_TIMEOUT)
+ 152:main.c        ****         {
+ 153:main.c        ****             can_send_cmd(0, 0, 0); // setInterlock. 
+ 154:main.c        ****             state = Fault;
+ 155:main.c        ****             error_state = nodeFailure;
+ 156:main.c        ****         }
+ 157:main.c        ****         
+ 158:main.c        ****         switch(state)
+ 159:main.c        ****         {    
+ 160:main.c        ****             //CyDelay(1000);
+ 161:main.c        ****             case Startup:
+ 162:main.c        ****                 Hex1Reg_Write(0x8);
+ 163:main.c        ****                 Hex2Reg_Write(0x0);
+ 164:main.c        ****                 Hex3Reg_Write(0x0);
+ 165:main.c        ****                 Hex4Reg_Write(0x8);
+ 166:main.c        ****   
+ 167:main.c        ****                 //CyDelay(5000);
+ 168:main.c        ****                 //Initialize CAN
+ 169:main.c        ****                 CAN_GlobalIntEnable();
+ 170:main.c        ****                 CAN_Init();
+ 171:main.c        ****                 CAN_Start();
+ 172:main.c        ****                 CyDelay(1000);
+ 173:main.c        ****                 
+ 174:main.c        ****                 //CyDelay(5000);
+ 175:main.c        ****                 can_send_status(state, error_state);
+ 176:main.c        **** 
+ 177:main.c        ****                 //CyGlobalIntEnable;
+ 178:main.c        ****                 //CAN_GlobalIntDisable();
+ 179:main.c        ****                 //CyGlobalIntDisable;
+ 180:main.c        ****                 //LCD_Start();
+ 181:main.c        ****                 
+ 182:main.c        ****                 //UI
+ 183:main.c        ****                 
+ 184:main.c        ****                 Buzzer_Write(1);
+ 185:main.c        ****                 //WaveDAC8_1_SetValue(253);
+ 186:main.c        ****                 CyDelay(50);
+ 187:main.c        ****                 
+ 188:main.c        ****                 
+ 189:main.c        ****                 /*
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 6
+
+
+ 190:main.c        ****                 //Active Low
+ 191:main.c        ****                 RGB3_1_Write(1);
+ 192:main.c        ****                 RGB2_1_Write(1);
+ 193:main.c        ****                 RGB1_1_Write(1);
+ 194:main.c        ****                 
+ 195:main.c        ****                 RGB3_2_Write(1);
+ 196:main.c        ****                 RGB2_2_Write(1);
+ 197:main.c        ****                 RGB1_2_Write(1);
+ 198:main.c        ****                 
+ 199:main.c        ****                 //RGB Testing
+ 200:main.c        ****                 RGB3_1_Write(0);
+ 201:main.c        ****                 CyDelay(2000);
+ 202:main.c        ****                 RGB3_1_Write(1);
+ 203:main.c        ****                 RGB2_1_Write(0);
+ 204:main.c        ****                 CyDelay(2000);
+ 205:main.c        ****                 RGB2_1_Write(1);
+ 206:main.c        ****                 RGB1_1_Write(0);
+ 207:main.c        ****                 CyDelay(2000);
+ 208:main.c        ****                 RGB1_1_Write(1);
+ 209:main.c        ****                 RGB3_2_Write(0);
+ 210:main.c        ****                 CyDelay(2000);
+ 211:main.c        ****                 RGB3_2_Write(1);
+ 212:main.c        ****                 RGB2_2_Write(0);
+ 213:main.c        ****                 CyDelay(2000);
+ 214:main.c        ****                 RGB2_2_Write(1);
+ 215:main.c        ****                 RGB1_2_Write(0);
+ 216:main.c        ****                 CyDelay(2000);
+ 217:main.c        ****                 RGB1_2_Write(1);
+ 218:main.c        ****                 */
+ 219:main.c        ****                 
+ 220:main.c        ****                 
+ 221:main.c        ****                 Buzzer_Write(0);
+ 222:main.c        ****                 //WaveDAC8_1_SetValue(250);
+ 223:main.c        ****                 //CyDelay(5000);
+ 224:main.c        ****                 //WaveDAC8_1_SetValue(0);
+ 225:main.c        ****                 
+ 226:main.c        ****                 state = LV;
+ 227:main.c        ****                 
+ 228:main.c        ****             break;
+ 229:main.c        ****                 
+ 230:main.c        ****             case LV:
+ 231:main.c        ****                 
+ 232:main.c        ****                 CAN_GlobalIntEnable();
+ 233:main.c        ****                 CAN_Init();
+ 234:main.c        ****                 CAN_Start();
+ 235:main.c        ****                 
+ 236:main.c        ****                 can_send_cmd(0, 0, 0);
+ 237:main.c        ****                 //nodeCheckStart();
+ 238:main.c        ****           
+ 239:main.c        ****                 can_send_status(state, error_state);
+ 240:main.c        **** 
+ 241:main.c        ****                 /*
+ 242:main.c        ****                 LCD_Position(1u, 10u);
+ 243:main.c        ****                 LCD_PrintInt16(data_queue[0].id);
+ 244:main.c        ****                 
+ 245:main.c        ****                 uint16_t temp = can_read(data_queue, data_head, data_tail, 0x07FF, 0);
+ 246:main.c        ****                 
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 7
+
+
+ 247:main.c        ****                 LCD_Position(0u, 0u);
+ 248:main.c        ****                 LCD_PrintInt16(temp);
+ 249:main.c        ****                 
+ 250:main.c        ****                 temp = can_read(data_queue, data_head, data_tail, 0x07FF, 1);
+ 251:main.c        ****                 LCD_Position(1u, 0u);
+ 252:main.c        ****                 LCD_PrintInt8(temp);
+ 253:main.c        ****                 
+ 254:main.c        ****                 temp = can_read(data_queue, data_head, data_tail, 0x07FF, 2);
+ 255:main.c        ****                 LCD_Position(0u, 10u);
+ 256:main.c        ****                 LCD_PrintInt8(temp);
+ 257:main.c        ****                 */
+ 258:main.c        ****                 
+ 259:main.c        ****                 
+ 260:main.c        ****                 //UI
+ 261:main.c        ****                 
+ 262:main.c        ****                 Buzzer_Write(0);
+ 263:main.c        ****                 
+ 264:main.c        ****                 
+ 265:main.c        ****                 //
+ 266:main.c        ****                 // RGB code goes here
+ 267:main.c        ****                 // pick a color
+ 268:main.c        ****                 // all on. 
+ 269:main.c        ****                 
+ 270:main.c        ****                 RGB3_1_Write(0);
+ 271:main.c        ****                 RGB2_1_Write(0);
+ 272:main.c        ****                 RGB1_1_Write(0);
+ 273:main.c        ****                 
+ 274:main.c        ****                 RGB3_2_Write(1);
+ 275:main.c        ****                 RGB2_2_Write(1);
+ 276:main.c        ****                 RGB1_2_Write(1);
+ 277:main.c        ****                 
+ 278:main.c        ****                 if (Drive_Read())
+ 279:main.c        ****                 {
+ 280:main.c        ****                     state = Fault;
+ 281:main.c        ****                     error_state = fromLV;
+  95              		.loc 1 281 0
+  96 0016 0125     		movs	r5, #1
+  97              	.LVL6:
+ 280:main.c        ****                     error_state = fromLV;
+  98              		.loc 1 280 0
+  99 0018 0524     		movs	r4, #5
+ 100              	.LVL7:
+ 101 001a 1AE0     		b	.L4
+ 102              	.LVL8:
+ 103              	.L24:
+ 282:main.c        ****                     break;
+ 283:main.c        ****                 }
+ 284:main.c        ****             
+ 285:main.c        ****                 if (HV_Read())    /* Switch state changed status */
+ 286:main.c        ****                 {
+ 287:main.c        ****                     state = Precharging;
+ 104              		.loc 1 287 0
+ 105 001c 0224     		movs	r4, #2
+ 106              	.LVL9:
+ 107 001e 18E0     		b	.L4
+ 108              	.LVL10:
+ 109              	.L25:
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 8
+
+
+ 110              	.LBB3:
+ 288:main.c        ****                     break;
+ 289:main.c        ****                 } 
+ 290:main.c        ****                 
+ 291:main.c        ****             break;
+ 292:main.c        ****                 
+ 293:main.c        ****             case Precharging:
+ 294:main.c        ****                 CAN_GlobalIntEnable();
+ 295:main.c        ****                 CAN_Init();
+ 296:main.c        ****                 CAN_Start();
+ 297:main.c        ****                 //nodeCheckStart();
+ 298:main.c        ****                 
+ 299:main.c        ****                 can_send_status(state, error_state);
+ 300:main.c        ****                 
+ 301:main.c        ****                 RGB3_1_Write(1);
+ 302:main.c        ****                 RGB2_1_Write(0);
+ 303:main.c        ****                 RGB1_1_Write(0);
+ 304:main.c        ****                 /*
+ 305:main.c        ****                 RGB3_2_Write(1);
+ 306:main.c        ****                 RGB2_2_Write(1);
+ 307:main.c        ****                 RGB1_2_Write(1);
+ 308:main.c        ****                 */
+ 309:main.c        ****                 Buzzer_Write(0);
+ 310:main.c        ****                 
+ 311:main.c        ****                 
+ 312:main.c        ****                 PrechargingTimeCount = 0;
+ 313:main.c        ****                 
+ 314:main.c        ****                 while(1)
+ 315:main.c        ****                 {
+ 316:main.c        ****                     can_send_cmd(1, 0, 0); // setInterlock
+ 317:main.c        ****                 
+ 318:main.c        ****                     // UNUSED //uint8_t MainState = can_read(data_queue, data_head, data_tail, 0x05
+ 319:main.c        ****                     uint8_t CapacitorVolt = getCapacitorVoltage(); //can_read(data_queue, data_head
+ 320:main.c        ****                     // UNUSED //uint8_t NomialVolt =  can_read(data_queue, data_head, data_tail, 0x
+ 321:main.c        ****                 
+ 322:main.c        ****                     if(CapacitorVolt >= 0x16) // need to be tuned
+ 323:main.c        ****                     {
+ 324:main.c        ****                         state = HV_Enabled;
+ 111              		.loc 1 324 0
+ 112 0020 0324     		movs	r4, #3
+ 113              	.LVL11:
+ 114 0022 16E0     		b	.L4
+ 115              	.LVL12:
+ 116              	.L26:
+ 325:main.c        ****                         break;
+ 326:main.c        ****                     }
+ 327:main.c        ****                 
+ 328:main.c        ****                 
+ 329:main.c        ****                     PrechargingTimeCount++;
+ 330:main.c        ****                 
+ 331:main.c        ****                     if (PrechargingTimeCount == 10)
+ 332:main.c        ****                     {
+ 333:main.c        ****                         state = Fault;
+ 334:main.c        ****                         error_state = fromPrecharging;
+ 117              		.loc 1 334 0
+ 118 0024 0225     		movs	r5, #2
+ 119              	.LVL13:
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 9
+
+
+ 333:main.c        ****                         error_state = fromPrecharging;
+ 120              		.loc 1 333 0
+ 121 0026 0524     		movs	r4, #5
+ 122              	.LVL14:
+ 123 0028 13E0     		b	.L4
+ 124              	.LVL15:
+ 125              	.L27:
+ 126              	.LBE3:
+ 335:main.c        ****                         break;
+ 336:main.c        ****                     }
+ 337:main.c        ****                 
+ 338:main.c        ****                     CyDelay(1000);
+ 339:main.c        ****                 }    
+ 340:main.c        ****                 
+ 341:main.c        ****             break;
+ 342:main.c        **** 	        
+ 343:main.c        ****             case HV_Enabled:
+ 344:main.c        **** 
+ 345:main.c        ****                 CAN_GlobalIntEnable();
+ 346:main.c        ****                 CAN_Init();
+ 347:main.c        ****                 CAN_Start();
+ 348:main.c        ****                 
+ 349:main.c        ****                 //nodeCheckStart();
+ 350:main.c        ****                 
+ 351:main.c        ****                 can_send_status(state, error_state);
+ 352:main.c        ****                 
+ 353:main.c        ****                 //
+ 354:main.c        ****                 // RGB code goes here
+ 355:main.c        ****                 // Blue
+ 356:main.c        ****                 RGB3_1_Write(0);
+ 357:main.c        ****                 RGB2_1_Write(0);
+ 358:main.c        ****                 RGB1_1_Write(1);
+ 359:main.c        ****                 
+ 360:main.c        ****                 /*
+ 361:main.c        ****                 RGB3_2_Write(1);
+ 362:main.c        ****                 RGB2_2_Write(1);
+ 363:main.c        ****                 RGB1_2_Write(1);
+ 364:main.c        ****                 */
+ 365:main.c        ****                 //CyDelay(5000); ///for debug
+ 366:main.c        ****                 
+ 367:main.c        ****                 Buzzer_Write(0);
+ 368:main.c        ****                 
+ 369:main.c        ****                 if (Drive_Read())
+ 370:main.c        ****                 {
+ 371:main.c        ****                     CyDelay(1000); // wait for the brake msg to be sent
+ 372:main.c        ****                     if(getErrorTolerance() == 1) // 100 for error tolerance /// needs to be getErro
+ 373:main.c        ****                     {
+ 374:main.c        ****                         Buzzer_Write(1);
+ 375:main.c        ****                         CyDelay(1000);
+ 376:main.c        ****                         Buzzer_Write(0);
+ 377:main.c        ****                         state = Drive;
+ 378:main.c        ****                         break;
+ 379:main.c        ****                     }
+ 380:main.c        ****                     else
+ 381:main.c        ****                     {
+ 382:main.c        ****                         state = Fault;
+ 383:main.c        ****                         error_state = fromHV_Enabled;
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 10
+
+
+ 127              		.loc 1 383 0
+ 128 002a 0325     		movs	r5, #3
+ 129              	.LVL16:
+ 382:main.c        ****                         error_state = fromHV_Enabled;
+ 130              		.loc 1 382 0
+ 131 002c 0524     		movs	r4, #5
+ 132              	.LVL17:
+ 133 002e 10E0     		b	.L4
+ 134              	.LVL18:
+ 135              	.L28:
+ 384:main.c        ****                         break;
+ 385:main.c        ****                     }                     
+ 386:main.c        ****                 }
+ 387:main.c        ****                 
+ 388:main.c        ****                 // if capacitor voltage is undervoltage, change the threshold 0x16
+ 389:main.c        ****                 if(!HV_Read() | getCapacitorVoltage() < 0x16)
+ 390:main.c        ****                 {
+ 391:main.c        ****                     state = LV;
+ 392:main.c        ****                     DriveTimeCount = 0;
+ 136              		.loc 1 392 0
+ 137 0030 0027     		movs	r7, #0
+ 138              	.LVL19:
+ 391:main.c        ****                     DriveTimeCount = 0;
+ 139              		.loc 1 391 0
+ 140 0032 0124     		movs	r4, #1
+ 141              	.LVL20:
+ 142 0034 0DE0     		b	.L4
+ 143              	.LVL21:
+ 144              	.L30:
+ 393:main.c        ****                     break;
+ 394:main.c        ****                 }
+ 395:main.c        ****                 
+ 396:main.c        ****             break;
+ 397:main.c        ****                 
+ 398:main.c        **** 	        case Drive:
+ 399:main.c        ****                 //CAN_GlobalIntEnable();
+ 400:main.c        ****                 //CAN_Init();
+ 401:main.c        ****                 //CAN_Start();
+ 402:main.c        ****                 
+ 403:main.c        ****                 can_send_status(state, error_state);
+ 404:main.c        ****                 //
+ 405:main.c        ****                 // RGB code goes here
+ 406:main.c        ****                 // Green
+ 407:main.c        ****                 RGB3_1_Write(1);
+ 408:main.c        ****                 RGB2_1_Write(0);
+ 409:main.c        ****                 RGB1_1_Write(1);
+ 410:main.c        ****                 /*
+ 411:main.c        ****                 RGB3_2_Write(1);
+ 412:main.c        ****                 RGB2_2_Write(1);
+ 413:main.c        ****                 RGB1_2_Write(1);
+ 414:main.c        ****                 */
+ 415:main.c        ****                 //CyDelay(10000); // debug
+ 416:main.c        ****                 
+ 417:main.c        ****                 //Buzzer_Write(1);
+ 418:main.c        ****                 //CyDelay(5000);
+ 419:main.c        ****                 //Buzzer_Write(0);
+ 420:main.c        ****                 
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 11
+
+
+ 421:main.c        ****                 //CyDelay(500);
+ 422:main.c        ****                 
+ 423:main.c        ****                 
+ 424:main.c        ****                 uint8_t ACK = 0xFF;
+ 425:main.c        ****                 
+ 426:main.c        ****                 DriveTimeCount++;
+ 427:main.c        ****                 if (DriveTimeCount > 100) //EDIT: was 100!
+ 428:main.c        ****                 {
+ 429:main.c        ****                     DriveTimeCount = 0; 
+ 430:main.c        ****                     ACK = getAckRx();
+ 431:main.c        ****                 }
+ 432:main.c        ****    
+ 433:main.c        ****                 uint8_t ABS_Motor_RPM = getABSMotorRPM();
+ 434:main.c        ****                 
+ 435:main.c        ****                 uint16_t Throttle_Total = 0x0;
+ 436:main.c        ****                 Throttle_Total |= getPedalHigh() << 8;
+ 437:main.c        ****                 Throttle_Total |= getPedalLow();
+ 438:main.c        ****                 Throttle_Total = (double)Throttle_Total * THROTTLE_MULTIPLIER;
+ 439:main.c        ****                 
+ 440:main.c        ****                 uint8_t Throttle_High = Throttle_Total >> 8;
+ 441:main.c        ****                 uint8_t Throttle_Low = Throttle_Total & 0x00FF;
+ 442:main.c        ****                 
+ 443:main.c        ****                 //WaveDAC8_1_SetValue(ABS_Motor_RPM);
+ 444:main.c        ****                 
+ 445:main.c        ****                 can_send_cmd(1, Throttle_High, Throttle_Low); // setInterlock 
+ 446:main.c        ****                 
+ 447:main.c        ****                 
+ 448:main.c        ****                 //check if everything is going well
+ 449:main.c        ****                 if (!HV_Read()) {
+ 450:main.c        ****                     can_send_cmd(0, 0, 0);
+ 451:main.c        ****                     state = LV;
+ 452:main.c        ****                 }
+ 453:main.c        ****                 if (!Drive_Read()) {
+ 454:main.c        ****                     state = HV_Enabled;
+ 455:main.c        ****                     can_send_cmd(1, 0, 0);
+ 456:main.c        ****                 }
+ 457:main.c        ****                 if ((ACK != 0xFF) | 
+ 458:main.c        ****                     (!getCurtisHeartBeatCheck())) // TODO: Heart beat message is never cleared
+ 459:main.c        ****                 {
+ 460:main.c        ****                     can_send_cmd(0, 0, 0);
+ 461:main.c        ****                     state = Fault;
+ 462:main.c        ****                     error_state = fromDrive;
+ 463:main.c        ****                     DriveTimeCount = 0;
+ 464:main.c        ****                     break;
+ 465:main.c        ****                 }
+ 466:main.c        ****                 
+ 467:main.c        ****                 
+ 468:main.c        ****                 
+ 469:main.c        ****                     
+ 470:main.c        ****                 // need to map ABS_Motor_RPM into 1-253 scale.
+ 471:main.c        ****                 
+ 472:main.c        ****                 /*
+ 473:main.c        ****                 if (ABS_Motor_RPM>=253)
+ 474:main.c        ****                 {
+ 475:main.c        ****                     direction=-1;
+ 476:main.c        ****                 }
+ 477:main.c        ****                 else if (ABS_Motor_RPM<=1)
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 12
+
+
+ 478:main.c        ****                 {
+ 479:main.c        ****                     direction=1;
+ 480:main.c        ****                 }
+ 481:main.c        ****                 value+=direction;
+ 482:main.c        ****                 //CyDelay(100);
+ 483:main.c        ****                 */
+ 484:main.c        ****             break;
+ 485:main.c        ****                 
+ 486:main.c        **** 	        case Fault:
+ 487:main.c        ****                 
+ 488:main.c        ****                 CAN_GlobalIntEnable();
+ 489:main.c        ****                 CAN_Init();
+ 490:main.c        ****                 CAN_Start();
+ 491:main.c        ****                 //nodeCheckStart();
+ 492:main.c        ****                 
+ 493:main.c        ****                 can_send_status(state, error_state);
+ 494:main.c        ****                 
+ 495:main.c        ****                 //
+ 496:main.c        ****                 // RGB code goes here
+ 497:main.c        ****                 // flashing red
+ 498:main.c        ****                 RGB3_1_Write(1);
+ 499:main.c        ****                 RGB2_1_Write(1);
+ 500:main.c        ****                 RGB1_1_Write(1);
+ 501:main.c        ****                 /*
+ 502:main.c        ****                 RGB3_2_Write(0);
+ 503:main.c        ****                 RGB2_2_Write(0);
+ 504:main.c        ****                 RGB1_2_Write(0);
+ 505:main.c        ****                 */
+ 506:main.c        ****                 RGB1_1_Write(0);
+ 507:main.c        ****                 CyDelay(1000);
+ 508:main.c        ****                 RGB1_1_Write(1);
+ 509:main.c        ****                 CyDelay(1000);
+ 510:main.c        ****                 
+ 511:main.c        ****                 Buzzer_Write(0);
+ 512:main.c        ****                 
+ 513:main.c        ****                 if(error_state == fromLV)
+ 514:main.c        ****                 {
+ 515:main.c        ****                     if(!Drive_Read())
+ 516:main.c        ****                     {
+ 517:main.c        ****                         state = LV;
+ 518:main.c        ****                         error_state = OK;
+ 145              		.loc 1 518 0
+ 146 0036 0025     		movs	r5, #0
+ 147              	.LVL22:
+ 517:main.c        ****                         error_state = OK;
+ 148              		.loc 1 517 0
+ 149 0038 0124     		movs	r4, #1
+ 150              	.LVL23:
+ 151 003a 0AE0     		b	.L4
+ 152              	.LVL24:
+ 153              	.L31:
+ 519:main.c        ****                     }
+ 520:main.c        ****                 }
+ 521:main.c        ****                 else if (error_state == fromPrecharging)
+ 522:main.c        ****                 {
+ 523:main.c        ****                     if(!Drive_Read() && !HV_Read())
+ 524:main.c        ****                     {
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 13
+
+
+ 525:main.c        ****                         state = LV;
+ 526:main.c        ****                         error_state = OK;
+ 154              		.loc 1 526 0
+ 155 003c 0025     		movs	r5, #0
+ 156              	.LVL25:
+ 525:main.c        ****                         error_state = OK;
+ 157              		.loc 1 525 0
+ 158 003e 0124     		movs	r4, #1
+ 159              	.LVL26:
+ 160 0040 07E0     		b	.L4
+ 161              	.LVL27:
+ 162              	.L32:
+ 527:main.c        ****                     }
+ 528:main.c        ****                 }
+ 529:main.c        ****                 else if (error_state == fromHV_Enabled)
+ 530:main.c        ****                 {
+ 531:main.c        ****                     if(!Drive_Read())
+ 532:main.c        ****                     {
+ 533:main.c        ****                         state = HV_Enabled;
+ 534:main.c        ****                         error_state = OK;
+ 163              		.loc 1 534 0
+ 164 0042 0025     		movs	r5, #0
+ 165              	.LVL28:
+ 533:main.c        ****                         error_state = OK;
+ 166              		.loc 1 533 0
+ 167 0044 0324     		movs	r4, #3
+ 168              	.LVL29:
+ 169 0046 04E0     		b	.L4
+ 170              	.LVL30:
+ 171              	.L33:
+ 535:main.c        ****                     }
+ 536:main.c        ****                 }
+ 537:main.c        ****                 else if (error_state == fromDrive)
+ 538:main.c        ****                 {   
+ 539:main.c        ****                     can_send_cmd(1, Throttle_High, Throttle_Low); // setInterlock
+ 540:main.c        ****                     
+ 541:main.c        ****                     CyDelay(200);
+ 542:main.c        ****                     
+ 543:main.c        ****                     // Curtis Come back online again without error
+ 544:main.c        ****                     if((getCurtisHeartBeatCheck())) // EDIT: Removed !(Curtis_Fault_Check(data_queu
+ 545:main.c        ****                     {
+ 546:main.c        ****                         state = LV;
+ 547:main.c        ****                         error_state = OK;
+ 172              		.loc 1 547 0
+ 173 0048 0025     		movs	r5, #0
+ 174              	.LVL31:
+ 546:main.c        ****                         error_state = OK;
+ 175              		.loc 1 546 0
+ 176 004a 0124     		movs	r4, #1
+ 177              	.LVL32:
+ 178 004c 01E0     		b	.L4
+ 179              	.LVL33:
+ 180              	.L34:
+ 548:main.c        ****                     }
+ 549:main.c        ****                     else if(0xFF == getAckRx()) //ACK received
+ 550:main.c        ****                     {
+ 551:main.c        ****                         state = HV_Enabled;
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 14
+
+
+ 552:main.c        ****                         error_state = OK;
+ 181              		.loc 1 552 0
+ 182 004e 0025     		movs	r5, #0
+ 183              	.LVL34:
+ 551:main.c        ****                         error_state = OK;
+ 184              		.loc 1 551 0
+ 185 0050 0324     		movs	r4, #3
+ 186              	.LVL35:
+ 187              	.L4:
+ 188              	.LBE2:
+ 148:main.c        ****         
+ 189              		.loc 1 148 0
+ 190 0052 0120     		movs	r0, #1
+ 191 0054 FFF7FEFF 		bl	LED_Write
+ 192              	.LVL36:
+ 151:main.c        ****         {
+ 193              		.loc 1 151 0
+ 194 0058 C64B     		ldr	r3, .L36
+ 195 005a 1B68     		ldr	r3, [r3]
+ 196 005c 642B     		cmp	r3, #100
+ 197 005e 06D9     		bls	.L5
+ 153:main.c        ****             state = Fault;
+ 198              		.loc 1 153 0
+ 199 0060 0022     		movs	r2, #0
+ 200 0062 1146     		mov	r1, r2
+ 201 0064 1046     		mov	r0, r2
+ 202 0066 FFF7FEFF 		bl	can_send_cmd
+ 203              	.LVL37:
+ 155:main.c        ****         }
+ 204              		.loc 1 155 0
+ 205 006a 0625     		movs	r5, #6
+ 154:main.c        ****             error_state = nodeFailure;
+ 206              		.loc 1 154 0
+ 207 006c 0524     		movs	r4, #5
+ 208              	.LVL38:
+ 209              	.L5:
+ 158:main.c        ****         {    
+ 210              		.loc 1 158 0
+ 211 006e 052C     		cmp	r4, #5
+ 212 0070 00F27681 		bhi	.L6
+ 213 0074 DFE814F0 		tbh	[pc, r4, lsl #1]
+ 214              	.L8:
+ 215 0078 0600     		.2byte	(.L7-.L8)/2
+ 216 007a 2B00     		.2byte	(.L9-.L8)/2
+ 217 007c 5A00     		.2byte	(.L10-.L8)/2
+ 218 007e 8800     		.2byte	(.L11-.L8)/2
+ 219 0080 C100     		.2byte	(.L12-.L8)/2
+ 220 0082 1C01     		.2byte	(.L13-.L8)/2
+ 221              		.p2align 1
+ 222              	.L7:
+ 223              	.LBB5:
+ 162:main.c        ****                 Hex2Reg_Write(0x0);
+ 224              		.loc 1 162 0
+ 225 0084 0820     		movs	r0, #8
+ 226 0086 FFF7FEFF 		bl	Hex1Reg_Write
+ 227              	.LVL39:
+ 163:main.c        ****                 Hex3Reg_Write(0x0);
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 15
+
+
+ 228              		.loc 1 163 0
+ 229 008a 0020     		movs	r0, #0
+ 230 008c FFF7FEFF 		bl	Hex2Reg_Write
+ 231              	.LVL40:
+ 164:main.c        ****                 Hex4Reg_Write(0x8);
+ 232              		.loc 1 164 0
+ 233 0090 0020     		movs	r0, #0
+ 234 0092 FFF7FEFF 		bl	Hex3Reg_Write
+ 235              	.LVL41:
+ 165:main.c        ****   
+ 236              		.loc 1 165 0
+ 237 0096 0820     		movs	r0, #8
+ 238 0098 FFF7FEFF 		bl	Hex4Reg_Write
+ 239              	.LVL42:
+ 169:main.c        ****                 CAN_Init();
+ 240              		.loc 1 169 0
+ 241 009c FFF7FEFF 		bl	CAN_GlobalIntEnable
+ 242              	.LVL43:
+ 170:main.c        ****                 CAN_Start();
+ 243              		.loc 1 170 0
+ 244 00a0 FFF7FEFF 		bl	CAN_Init
+ 245              	.LVL44:
+ 171:main.c        ****                 CyDelay(1000);
+ 246              		.loc 1 171 0
+ 247 00a4 FFF7FEFF 		bl	CAN_Start
+ 248              	.LVL45:
+ 172:main.c        ****                 
+ 249              		.loc 1 172 0
+ 250 00a8 4FF47A70 		mov	r0, #1000
+ 251 00ac FFF7FEFF 		bl	CyDelay
+ 252              	.LVL46:
+ 175:main.c        **** 
+ 253              		.loc 1 175 0
+ 254 00b0 2946     		mov	r1, r5
+ 255 00b2 2046     		mov	r0, r4
+ 256 00b4 FFF7FEFF 		bl	can_send_status
+ 257              	.LVL47:
+ 184:main.c        ****                 //WaveDAC8_1_SetValue(253);
+ 258              		.loc 1 184 0
+ 259 00b8 0120     		movs	r0, #1
+ 260 00ba FFF7FEFF 		bl	Buzzer_Write
+ 261              	.LVL48:
+ 186:main.c        ****                 
+ 262              		.loc 1 186 0
+ 263 00be 3220     		movs	r0, #50
+ 264 00c0 FFF7FEFF 		bl	CyDelay
+ 265              	.LVL49:
+ 221:main.c        ****                 //WaveDAC8_1_SetValue(250);
+ 266              		.loc 1 221 0
+ 267 00c4 0020     		movs	r0, #0
+ 268 00c6 FFF7FEFF 		bl	Buzzer_Write
+ 269              	.LVL50:
+ 226:main.c        ****                 
+ 270              		.loc 1 226 0
+ 271 00ca 0124     		movs	r4, #1
+ 228:main.c        ****                 
+ 272              		.loc 1 228 0
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 16
+
+
+ 273 00cc C1E7     		b	.L4
+ 274              	.LVL51:
+ 275              	.L9:
+ 232:main.c        ****                 CAN_Init();
+ 276              		.loc 1 232 0
+ 277 00ce FFF7FEFF 		bl	CAN_GlobalIntEnable
+ 278              	.LVL52:
+ 233:main.c        ****                 CAN_Start();
+ 279              		.loc 1 233 0
+ 280 00d2 FFF7FEFF 		bl	CAN_Init
+ 281              	.LVL53:
+ 234:main.c        ****                 
+ 282              		.loc 1 234 0
+ 283 00d6 FFF7FEFF 		bl	CAN_Start
+ 284              	.LVL54:
+ 236:main.c        ****                 //nodeCheckStart();
+ 285              		.loc 1 236 0
+ 286 00da 0022     		movs	r2, #0
+ 287 00dc 1146     		mov	r1, r2
+ 288 00de 1046     		mov	r0, r2
+ 289 00e0 FFF7FEFF 		bl	can_send_cmd
+ 290              	.LVL55:
+ 239:main.c        **** 
+ 291              		.loc 1 239 0
+ 292 00e4 2946     		mov	r1, r5
+ 293 00e6 2046     		mov	r0, r4
+ 294 00e8 FFF7FEFF 		bl	can_send_status
+ 295              	.LVL56:
+ 262:main.c        ****                 
+ 296              		.loc 1 262 0
+ 297 00ec 0020     		movs	r0, #0
+ 298 00ee FFF7FEFF 		bl	Buzzer_Write
+ 299              	.LVL57:
+ 270:main.c        ****                 RGB2_1_Write(0);
+ 300              		.loc 1 270 0
+ 301 00f2 0020     		movs	r0, #0
+ 302 00f4 FFF7FEFF 		bl	RGB3_1_Write
+ 303              	.LVL58:
+ 271:main.c        ****                 RGB1_1_Write(0);
+ 304              		.loc 1 271 0
+ 305 00f8 0020     		movs	r0, #0
+ 306 00fa FFF7FEFF 		bl	RGB2_1_Write
+ 307              	.LVL59:
+ 272:main.c        ****                 
+ 308              		.loc 1 272 0
+ 309 00fe 0020     		movs	r0, #0
+ 310 0100 FFF7FEFF 		bl	RGB1_1_Write
+ 311              	.LVL60:
+ 274:main.c        ****                 RGB2_2_Write(1);
+ 312              		.loc 1 274 0
+ 313 0104 0120     		movs	r0, #1
+ 314 0106 FFF7FEFF 		bl	RGB3_2_Write
+ 315              	.LVL61:
+ 275:main.c        ****                 RGB1_2_Write(1);
+ 316              		.loc 1 275 0
+ 317 010a 0120     		movs	r0, #1
+ 318 010c FFF7FEFF 		bl	RGB2_2_Write
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 17
+
+
+ 319              	.LVL62:
+ 276:main.c        ****                 
+ 320              		.loc 1 276 0
+ 321 0110 0120     		movs	r0, #1
+ 322 0112 FFF7FEFF 		bl	RGB1_2_Write
+ 323              	.LVL63:
+ 278:main.c        ****                 {
+ 324              		.loc 1 278 0
+ 325 0116 FFF7FEFF 		bl	Drive_Read
+ 326              	.LVL64:
+ 327 011a 0028     		cmp	r0, #0
+ 328 011c 7FF47BAF 		bne	.L23
+ 285:main.c        ****                 {
+ 329              		.loc 1 285 0
+ 330 0120 FFF7FEFF 		bl	HV_Read
+ 331              	.LVL65:
+ 332 0124 0028     		cmp	r0, #0
+ 333 0126 7FF479AF 		bne	.L24
+ 334 012a 92E7     		b	.L4
+ 335              	.L10:
+ 294:main.c        ****                 CAN_Init();
+ 336              		.loc 1 294 0
+ 337 012c FFF7FEFF 		bl	CAN_GlobalIntEnable
+ 338              	.LVL66:
+ 295:main.c        ****                 CAN_Start();
+ 339              		.loc 1 295 0
+ 340 0130 FFF7FEFF 		bl	CAN_Init
+ 341              	.LVL67:
+ 296:main.c        ****                 //nodeCheckStart();
+ 342              		.loc 1 296 0
+ 343 0134 FFF7FEFF 		bl	CAN_Start
+ 344              	.LVL68:
+ 299:main.c        ****                 
+ 345              		.loc 1 299 0
+ 346 0138 2946     		mov	r1, r5
+ 347 013a 2046     		mov	r0, r4
+ 348 013c FFF7FEFF 		bl	can_send_status
+ 349              	.LVL69:
+ 301:main.c        ****                 RGB2_1_Write(0);
+ 350              		.loc 1 301 0
+ 351 0140 0120     		movs	r0, #1
+ 352 0142 FFF7FEFF 		bl	RGB3_1_Write
+ 353              	.LVL70:
+ 302:main.c        ****                 RGB1_1_Write(0);
+ 354              		.loc 1 302 0
+ 355 0146 0020     		movs	r0, #0
+ 356 0148 FFF7FEFF 		bl	RGB2_1_Write
+ 357              	.LVL71:
+ 303:main.c        ****                 /*
+ 358              		.loc 1 303 0
+ 359 014c 0020     		movs	r0, #0
+ 360 014e FFF7FEFF 		bl	RGB1_1_Write
+ 361              	.LVL72:
+ 309:main.c        ****                 
+ 362              		.loc 1 309 0
+ 363 0152 0020     		movs	r0, #0
+ 364 0154 FFF7FEFF 		bl	Buzzer_Write
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 18
+
+
+ 365              	.LVL73:
+ 312:main.c        ****                 
+ 366              		.loc 1 312 0
+ 367 0158 0023     		movs	r3, #0
+ 368 015a 0193     		str	r3, [sp, #4]
+ 369              	.L15:
+ 370              	.LBB4:
+ 316:main.c        ****                 
+ 371              		.loc 1 316 0
+ 372 015c 0022     		movs	r2, #0
+ 373 015e 1146     		mov	r1, r2
+ 374 0160 0120     		movs	r0, #1
+ 375 0162 FFF7FEFF 		bl	can_send_cmd
+ 376              	.LVL74:
+ 319:main.c        ****                     // UNUSED //uint8_t NomialVolt =  can_read(data_queue, data_head, data_tail, 0x
+ 377              		.loc 1 319 0
+ 378 0166 FFF7FEFF 		bl	getCapacitorVoltage
+ 379              	.LVL75:
+ 322:main.c        ****                     {
+ 380              		.loc 1 322 0
+ 381 016a 1528     		cmp	r0, #21
+ 382 016c 3FF658AF 		bhi	.L25
+ 329:main.c        ****                 
+ 383              		.loc 1 329 0
+ 384 0170 019B     		ldr	r3, [sp, #4]
+ 385 0172 0133     		adds	r3, r3, #1
+ 386 0174 0193     		str	r3, [sp, #4]
+ 331:main.c        ****                     {
+ 387              		.loc 1 331 0
+ 388 0176 019B     		ldr	r3, [sp, #4]
+ 389 0178 0A2B     		cmp	r3, #10
+ 390 017a 3FF453AF 		beq	.L26
+ 338:main.c        ****                 }    
+ 391              		.loc 1 338 0
+ 392 017e 4FF47A70 		mov	r0, #1000
+ 393              	.LVL76:
+ 394 0182 FFF7FEFF 		bl	CyDelay
+ 395              	.LVL77:
+ 396              	.LBE4:
+ 339:main.c        ****                 
+ 397              		.loc 1 339 0
+ 398 0186 E9E7     		b	.L15
+ 399              	.L11:
+ 345:main.c        ****                 CAN_Init();
+ 400              		.loc 1 345 0
+ 401 0188 FFF7FEFF 		bl	CAN_GlobalIntEnable
+ 402              	.LVL78:
+ 346:main.c        ****                 CAN_Start();
+ 403              		.loc 1 346 0
+ 404 018c FFF7FEFF 		bl	CAN_Init
+ 405              	.LVL79:
+ 347:main.c        ****                 
+ 406              		.loc 1 347 0
+ 407 0190 FFF7FEFF 		bl	CAN_Start
+ 408              	.LVL80:
+ 351:main.c        ****                 
+ 409              		.loc 1 351 0
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 19
+
+
+ 410 0194 2946     		mov	r1, r5
+ 411 0196 2046     		mov	r0, r4
+ 412 0198 FFF7FEFF 		bl	can_send_status
+ 413              	.LVL81:
+ 356:main.c        ****                 RGB2_1_Write(0);
+ 414              		.loc 1 356 0
+ 415 019c 0020     		movs	r0, #0
+ 416 019e FFF7FEFF 		bl	RGB3_1_Write
+ 417              	.LVL82:
+ 357:main.c        ****                 RGB1_1_Write(1);
+ 418              		.loc 1 357 0
+ 419 01a2 0020     		movs	r0, #0
+ 420 01a4 FFF7FEFF 		bl	RGB2_1_Write
+ 421              	.LVL83:
+ 358:main.c        ****                 
+ 422              		.loc 1 358 0
+ 423 01a8 0120     		movs	r0, #1
+ 424 01aa FFF7FEFF 		bl	RGB1_1_Write
+ 425              	.LVL84:
+ 367:main.c        ****                 
+ 426              		.loc 1 367 0
+ 427 01ae 0020     		movs	r0, #0
+ 428 01b0 FFF7FEFF 		bl	Buzzer_Write
+ 429              	.LVL85:
+ 369:main.c        ****                 {
+ 430              		.loc 1 369 0
+ 431 01b4 FFF7FEFF 		bl	Drive_Read
+ 432              	.LVL86:
+ 433 01b8 98B1     		cbz	r0, .L16
+ 371:main.c        ****                     if(getErrorTolerance() == 1) // 100 for error tolerance /// needs to be getErro
+ 434              		.loc 1 371 0
+ 435 01ba 4FF47A70 		mov	r0, #1000
+ 436 01be FFF7FEFF 		bl	CyDelay
+ 437              	.LVL87:
+ 372:main.c        ****                     {
+ 438              		.loc 1 372 0
+ 439 01c2 FFF7FEFF 		bl	getErrorTolerance
+ 440              	.LVL88:
+ 441 01c6 0128     		cmp	r0, #1
+ 442 01c8 7FF42FAF 		bne	.L27
+ 374:main.c        ****                         CyDelay(1000);
+ 443              		.loc 1 374 0
+ 444 01cc FFF7FEFF 		bl	Buzzer_Write
+ 445              	.LVL89:
+ 375:main.c        ****                         Buzzer_Write(0);
+ 446              		.loc 1 375 0
+ 447 01d0 4FF47A70 		mov	r0, #1000
+ 448 01d4 FFF7FEFF 		bl	CyDelay
+ 449              	.LVL90:
+ 376:main.c        ****                         state = Drive;
+ 450              		.loc 1 376 0
+ 451 01d8 0020     		movs	r0, #0
+ 452 01da FFF7FEFF 		bl	Buzzer_Write
+ 453              	.LVL91:
+ 377:main.c        ****                         break;
+ 454              		.loc 1 377 0
+ 455 01de 0424     		movs	r4, #4
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 20
+
+
+ 378:main.c        ****                     }
+ 456              		.loc 1 378 0
+ 457 01e0 37E7     		b	.L4
+ 458              	.LVL92:
+ 459              	.L16:
+ 389:main.c        ****                 {
+ 460              		.loc 1 389 0
+ 461 01e2 FFF7FEFF 		bl	HV_Read
+ 462              	.LVL93:
+ 463 01e6 8146     		mov	r9, r0
+ 464 01e8 FFF7FEFF 		bl	getCapacitorVoltage
+ 465              	.LVL94:
+ 466 01ec B9F1000F 		cmp	r9, #0
+ 467 01f0 18BF     		it	ne
+ 468 01f2 1528     		cmpne	r0, #21
+ 469 01f4 7FF61CAF 		bls	.L28
+ 470 01f8 2BE7     		b	.L4
+ 471              	.L12:
+ 403:main.c        ****                 //
+ 472              		.loc 1 403 0
+ 473 01fa 2946     		mov	r1, r5
+ 474 01fc 2046     		mov	r0, r4
+ 475 01fe FFF7FEFF 		bl	can_send_status
+ 476              	.LVL95:
+ 407:main.c        ****                 RGB2_1_Write(0);
+ 477              		.loc 1 407 0
+ 478 0202 0120     		movs	r0, #1
+ 479 0204 FFF7FEFF 		bl	RGB3_1_Write
+ 480              	.LVL96:
+ 408:main.c        ****                 RGB1_1_Write(1);
+ 481              		.loc 1 408 0
+ 482 0208 0020     		movs	r0, #0
+ 483 020a FFF7FEFF 		bl	RGB2_1_Write
+ 484              	.LVL97:
+ 409:main.c        ****                 /*
+ 485              		.loc 1 409 0
+ 486 020e 0120     		movs	r0, #1
+ 487 0210 FFF7FEFF 		bl	RGB1_1_Write
+ 488              	.LVL98:
+ 426:main.c        ****                 if (DriveTimeCount > 100) //EDIT: was 100!
+ 489              		.loc 1 426 0
+ 490 0214 0137     		adds	r7, r7, #1
+ 491              	.LVL99:
+ 427:main.c        ****                 {
+ 492              		.loc 1 427 0
+ 493 0216 642F     		cmp	r7, #100
+ 494 0218 04D9     		bls	.L29
+ 495              	.LVL100:
+ 430:main.c        ****                 }
+ 496              		.loc 1 430 0
+ 497 021a FFF7FEFF 		bl	getAckRx
+ 498              	.LVL101:
+ 499 021e 8146     		mov	r9, r0
+ 500              	.LVL102:
+ 429:main.c        ****                     ACK = getAckRx();
+ 501              		.loc 1 429 0
+ 502 0220 0027     		movs	r7, #0
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 21
+
+
+ 503 0222 01E0     		b	.L17
+ 504              	.LVL103:
+ 505              	.L29:
+ 424:main.c        ****                 
+ 506              		.loc 1 424 0
+ 507 0224 4FF0FF09 		mov	r9, #255
+ 508              	.LVL104:
+ 509              	.L17:
+ 433:main.c        ****                 
+ 510              		.loc 1 433 0
+ 511 0228 FFF7FEFF 		bl	getABSMotorRPM
+ 512              	.LVL105:
+ 436:main.c        ****                 Throttle_Total |= getPedalLow();
+ 513              		.loc 1 436 0
+ 514 022c FFF7FEFF 		bl	getPedalHigh
+ 515              	.LVL106:
+ 516 0230 0002     		lsls	r0, r0, #8
+ 517 0232 86B2     		uxth	r6, r0
+ 518              	.LVL107:
+ 437:main.c        ****                 Throttle_Total = (double)Throttle_Total * THROTTLE_MULTIPLIER;
+ 519              		.loc 1 437 0
+ 520 0234 FFF7FEFF 		bl	getPedalLow
+ 521              	.LVL108:
+ 522 0238 3043     		orrs	r0, r0, r6
+ 523              	.LVL109:
+ 438:main.c        ****                 
+ 524              		.loc 1 438 0
+ 525 023a 80B2     		uxth	r0, r0
+ 526 023c FFF7FEFF 		bl	__aeabi_ui2d
+ 527              	.LVL110:
+ 528 0240 4D4B     		ldr	r3, .L36+4
+ 529 0242 D3E90023 		ldrd	r2, [r3]
+ 530 0246 FFF7FEFF 		bl	__aeabi_dmul
+ 531              	.LVL111:
+ 532 024a FFF7FEFF 		bl	__aeabi_d2uiz
+ 533              	.LVL112:
+ 534 024e 80B2     		uxth	r0, r0
+ 535              	.LVL113:
+ 440:main.c        ****                 uint8_t Throttle_Low = Throttle_Total & 0x00FF;
+ 536              		.loc 1 440 0
+ 537 0250 010A     		lsrs	r1, r0, #8
+ 538 0252 5FFA81F8 		uxtb	r8, r1
+ 539              	.LVL114:
+ 441:main.c        ****                 
+ 540              		.loc 1 441 0
+ 541 0256 C6B2     		uxtb	r6, r0
+ 542              	.LVL115:
+ 445:main.c        ****                 
+ 543              		.loc 1 445 0
+ 544 0258 3246     		mov	r2, r6
+ 545 025a 0120     		movs	r0, #1
+ 546              	.LVL116:
+ 547 025c FFF7FEFF 		bl	can_send_cmd
+ 548              	.LVL117:
+ 449:main.c        ****                     can_send_cmd(0, 0, 0);
+ 549              		.loc 1 449 0
+ 550 0260 FFF7FEFF 		bl	HV_Read
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 22
+
+
+ 551              	.LVL118:
+ 552 0264 28B9     		cbnz	r0, .L18
+ 450:main.c        ****                     state = LV;
+ 553              		.loc 1 450 0
+ 554 0266 0022     		movs	r2, #0
+ 555 0268 1146     		mov	r1, r2
+ 556 026a 1046     		mov	r0, r2
+ 557 026c FFF7FEFF 		bl	can_send_cmd
+ 558              	.LVL119:
+ 451:main.c        ****                 }
+ 559              		.loc 1 451 0
+ 560 0270 0124     		movs	r4, #1
+ 561              	.LVL120:
+ 562              	.L18:
+ 453:main.c        ****                     state = HV_Enabled;
+ 563              		.loc 1 453 0
+ 564 0272 FFF7FEFF 		bl	Drive_Read
+ 565              	.LVL121:
+ 566 0276 28B9     		cbnz	r0, .L19
+ 567              	.LVL122:
+ 455:main.c        ****                 }
+ 568              		.loc 1 455 0
+ 569 0278 0022     		movs	r2, #0
+ 570 027a 1146     		mov	r1, r2
+ 571 027c 0120     		movs	r0, #1
+ 572 027e FFF7FEFF 		bl	can_send_cmd
+ 573              	.LVL123:
+ 454:main.c        ****                     can_send_cmd(1, 0, 0);
+ 574              		.loc 1 454 0
+ 575 0282 0324     		movs	r4, #3
+ 576              	.LVL124:
+ 577              	.L19:
+ 458:main.c        ****                 {
+ 578              		.loc 1 458 0
+ 579 0284 FFF7FEFF 		bl	getCurtisHeartBeatCheck
+ 580              	.LVL125:
+ 457:main.c        ****                     (!getCurtisHeartBeatCheck())) // TODO: Heart beat message is never cleared
+ 581              		.loc 1 457 0
+ 582 0288 B0FA80F0 		clz	r0, r0
+ 583 028c 4009     		lsrs	r0, r0, #5
+ 584 028e B9F1FF0F 		cmp	r9, #255
+ 585 0292 18BF     		it	ne
+ 586 0294 40F00100 		orrne	r0, r0, #1
+ 587 0298 0028     		cmp	r0, #0
+ 588 029a 3FF4DAAE 		beq	.L4
+ 460:main.c        ****                     state = Fault;
+ 589              		.loc 1 460 0
+ 590 029e 0022     		movs	r2, #0
+ 591 02a0 1146     		mov	r1, r2
+ 592 02a2 1046     		mov	r0, r2
+ 593 02a4 FFF7FEFF 		bl	can_send_cmd
+ 594              	.LVL126:
+ 463:main.c        ****                     break;
+ 595              		.loc 1 463 0
+ 596 02a8 0027     		movs	r7, #0
+ 462:main.c        ****                     DriveTimeCount = 0;
+ 597              		.loc 1 462 0
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 23
+
+
+ 598 02aa 0425     		movs	r5, #4
+ 461:main.c        ****                     error_state = fromDrive;
+ 599              		.loc 1 461 0
+ 600 02ac 0524     		movs	r4, #5
+ 464:main.c        ****                 }
+ 601              		.loc 1 464 0
+ 602 02ae D0E6     		b	.L4
+ 603              	.LVL127:
+ 604              	.L13:
+ 488:main.c        ****                 CAN_Init();
+ 605              		.loc 1 488 0
+ 606 02b0 FFF7FEFF 		bl	CAN_GlobalIntEnable
+ 607              	.LVL128:
+ 489:main.c        ****                 CAN_Start();
+ 608              		.loc 1 489 0
+ 609 02b4 FFF7FEFF 		bl	CAN_Init
+ 610              	.LVL129:
+ 490:main.c        ****                 //nodeCheckStart();
+ 611              		.loc 1 490 0
+ 612 02b8 FFF7FEFF 		bl	CAN_Start
+ 613              	.LVL130:
+ 493:main.c        ****                 
+ 614              		.loc 1 493 0
+ 615 02bc 2946     		mov	r1, r5
+ 616 02be 2046     		mov	r0, r4
+ 617 02c0 FFF7FEFF 		bl	can_send_status
+ 618              	.LVL131:
+ 498:main.c        ****                 RGB2_1_Write(1);
+ 619              		.loc 1 498 0
+ 620 02c4 0120     		movs	r0, #1
+ 621 02c6 FFF7FEFF 		bl	RGB3_1_Write
+ 622              	.LVL132:
+ 499:main.c        ****                 RGB1_1_Write(1);
+ 623              		.loc 1 499 0
+ 624 02ca 0120     		movs	r0, #1
+ 625 02cc FFF7FEFF 		bl	RGB2_1_Write
+ 626              	.LVL133:
+ 500:main.c        ****                 /*
+ 627              		.loc 1 500 0
+ 628 02d0 0120     		movs	r0, #1
+ 629 02d2 FFF7FEFF 		bl	RGB1_1_Write
+ 630              	.LVL134:
+ 506:main.c        ****                 CyDelay(1000);
+ 631              		.loc 1 506 0
+ 632 02d6 0020     		movs	r0, #0
+ 633 02d8 FFF7FEFF 		bl	RGB1_1_Write
+ 634              	.LVL135:
+ 507:main.c        ****                 RGB1_1_Write(1);
+ 635              		.loc 1 507 0
+ 636 02dc 4FF47A70 		mov	r0, #1000
+ 637 02e0 FFF7FEFF 		bl	CyDelay
+ 638              	.LVL136:
+ 508:main.c        ****                 CyDelay(1000);
+ 639              		.loc 1 508 0
+ 640 02e4 0120     		movs	r0, #1
+ 641 02e6 FFF7FEFF 		bl	RGB1_1_Write
+ 642              	.LVL137:
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 24
+
+
+ 509:main.c        ****                 
+ 643              		.loc 1 509 0
+ 644 02ea 4FF47A70 		mov	r0, #1000
+ 645 02ee FFF7FEFF 		bl	CyDelay
+ 646              	.LVL138:
+ 511:main.c        ****                 
+ 647              		.loc 1 511 0
+ 648 02f2 0020     		movs	r0, #0
+ 649 02f4 FFF7FEFF 		bl	Buzzer_Write
+ 650              	.LVL139:
+ 513:main.c        ****                 {
+ 651              		.loc 1 513 0
+ 652 02f8 012D     		cmp	r5, #1
+ 653 02fa 05D1     		bne	.L20
+ 515:main.c        ****                     {
+ 654              		.loc 1 515 0
+ 655 02fc FFF7FEFF 		bl	Drive_Read
+ 656              	.LVL140:
+ 657 0300 0028     		cmp	r0, #0
+ 658 0302 3FF498AE 		beq	.L30
+ 659 0306 A4E6     		b	.L4
+ 660              	.L20:
+ 521:main.c        ****                 {
+ 661              		.loc 1 521 0
+ 662 0308 022D     		cmp	r5, #2
+ 663 030a 0AD1     		bne	.L21
+ 523:main.c        ****                     {
+ 664              		.loc 1 523 0
+ 665 030c FFF7FEFF 		bl	Drive_Read
+ 666              	.LVL141:
+ 667 0310 0028     		cmp	r0, #0
+ 668 0312 7FF49EAE 		bne	.L4
+ 523:main.c        ****                     {
+ 669              		.loc 1 523 0 is_stmt 0 discriminator 1
+ 670 0316 FFF7FEFF 		bl	HV_Read
+ 671              	.LVL142:
+ 672 031a 0028     		cmp	r0, #0
+ 673 031c 3FF48EAE 		beq	.L31
+ 674 0320 97E6     		b	.L4
+ 675              	.L21:
+ 529:main.c        ****                 {
+ 676              		.loc 1 529 0 is_stmt 1
+ 677 0322 032D     		cmp	r5, #3
+ 678 0324 05D1     		bne	.L22
+ 531:main.c        ****                     {
+ 679              		.loc 1 531 0
+ 680 0326 FFF7FEFF 		bl	Drive_Read
+ 681              	.LVL143:
+ 682 032a 0028     		cmp	r0, #0
+ 683 032c 3FF489AE 		beq	.L32
+ 684 0330 8FE6     		b	.L4
+ 685              	.L22:
+ 537:main.c        ****                 {   
+ 686              		.loc 1 537 0
+ 687 0332 042D     		cmp	r5, #4
+ 688 0334 7FF48DAE 		bne	.L4
+ 539:main.c        ****                     
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 25
+
+
+ 689              		.loc 1 539 0
+ 690 0338 B2B2     		uxth	r2, r6
+ 691 033a 1FFA88F1 		uxth	r1, r8
+ 692 033e 0120     		movs	r0, #1
+ 693 0340 FFF7FEFF 		bl	can_send_cmd
+ 694              	.LVL144:
+ 541:main.c        ****                     
+ 695              		.loc 1 541 0
+ 696 0344 C820     		movs	r0, #200
+ 697 0346 FFF7FEFF 		bl	CyDelay
+ 698              	.LVL145:
+ 544:main.c        ****                     {
+ 699              		.loc 1 544 0
+ 700 034a FFF7FEFF 		bl	getCurtisHeartBeatCheck
+ 701              	.LVL146:
+ 702 034e 0028     		cmp	r0, #0
+ 703 0350 7FF47AAE 		bne	.L33
+ 549:main.c        ****                     {
+ 704              		.loc 1 549 0
+ 705 0354 FFF7FEFF 		bl	getAckRx
+ 706              	.LVL147:
+ 707 0358 FF28     		cmp	r0, #255
+ 708 035a 7FF47AAE 		bne	.L4
+ 709 035e 76E6     		b	.L34
+ 710              	.L6:
+ 553:main.c        ****                     }                   
+ 554:main.c        ****                 }
+ 555:main.c        ****                 else if (error_state == nodeFailure)
+ 556:main.c        ****                 {
+ 557:main.c        ****                     state = Fault;
+ 558:main.c        ****                 }
+ 559:main.c        ****             break;
+ 560:main.c        ****                 
+ 561:main.c        ****             default:
+ 562:main.c        ****                 RGB3_1_Write(1);
+ 711              		.loc 1 562 0
+ 712 0360 0120     		movs	r0, #1
+ 713 0362 FFF7FEFF 		bl	RGB3_1_Write
+ 714              	.LVL148:
+ 563:main.c        ****                 RGB2_1_Write(1);
+ 715              		.loc 1 563 0
+ 716 0366 0120     		movs	r0, #1
+ 717 0368 FFF7FEFF 		bl	RGB2_1_Write
+ 718              	.LVL149:
+ 564:main.c        ****                 RGB1_1_Write(1);
+ 719              		.loc 1 564 0
+ 720 036c 0120     		movs	r0, #1
+ 721 036e FFF7FEFF 		bl	RGB1_1_Write
+ 722              	.LVL150:
+ 723 0372 6EE6     		b	.L4
+ 724              	.L37:
+ 725              		.align	2
+ 726              	.L36:
+ 727 0374 00000000 		.word	.LANCHOR0
+ 728 0378 00000000 		.word	.LANCHOR1
+ 729              	.LBE5:
+ 730              		.cfi_endproc
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 26
+
+
+ 731              	.LFE65:
+ 732              		.size	main, .-main
+ 733              		.section	.text.ISR_CAN,"ax",%progbits
+ 734              		.align	2
+ 735              		.global	ISR_CAN
+ 736              		.thumb
+ 737              		.thumb_func
+ 738              		.type	ISR_CAN, %function
+ 739              	ISR_CAN:
+ 740              	.LFB66:
+ 565:main.c        ****                 /*
+ 566:main.c        ****                 RGB3_2_Write(1);
+ 567:main.c        ****                 RGB2_2_Write(1);
+ 568:main.c        ****                 RGB1_2_Write(1);
+ 569:main.c        ****                 */
+ 570:main.c        ****         }// end of switch
+ 571:main.c        ****         
+ 572:main.c        ****         
+ 573:main.c        ****         //if (receiveMailboxNumber == CAN_RX_MAILBOX_switchStatus)
+ 574:main.c        ****         //{
+ 575:main.c        ****             //LCD_Position(1u, 3u);
+ 576:main.c        ****             //send
+ 577:main.c        ****             //if (CAN_RX_DATA_BYTE1(CAN_RX_MAILBOX_switchStatus) == SWITCH_PRESSED)
+ 578:main.c        ****             //{
+ 579:main.c        ****                 /* Display received switch status on LCD */
+ 580:main.c        ****             
+ 581:main.c        ****                 //LCD_PrintString("pressed ");
+ 582:main.c        **** 
+ 583:main.c        ****                 /* Increase the PWM pulse width */
+ 584:main.c        ****                 //pulseWidthValue += PWM_PULSE_WIDTH_STEP;
+ 585:main.c        **** 
+ 586:main.c        ****                 /* Send message with the new PWM pulse width */
+ 587:main.c        ****                 //dataPWM.byte[0u] = pulseWidthValue;
+ 588:main.c        ****                 //CAN_SendMsg(&messagePWM);
+ 589:main.c        **** 
+ 590:main.c        ****                 /* Display value of PWM pulse width on LCD */
+ 591:main.c        ****                 //LCD_Position(0u, 14u);
+ 592:main.c        ****                 //LCD_PrintInt8(pulseWidthValue);
+ 593:main.c        **** 
+ 594:main.c        ****             //}
+ 595:main.c        ****             //else
+ 596:main.c        ****             //{
+ 597:main.c        ****                 /* Display received switch status on LCD */
+ 598:main.c        ****             //    LCD_PrintString("released");
+ 599:main.c        ****             //}
+ 600:main.c        ****             //receiveMailboxNumber = 0xFFu;
+ 601:main.c        ****         //}
+ 602:main.c        ****         
+ 603:main.c        ****         //received
+ 604:main.c        **** 
+ 605:main.c        ****         //if (receiveMailboxNumber == CAN_RX_MAILBOX_ADCdata)
+ 606:main.c        ****         //{
+ 607:main.c        ****         //    adcData = ((uint16) ((uint16) CAN_RX_DATA_BYTE1(CAN_RX_MAILBOX_ADCdata) << ONE_BYTE_O
+ 608:main.c        ****         //    CAN_RX_DATA_BYTE2(CAN_RX_MAILBOX_ADCdata);
+ 609:main.c        ****             
+ 610:main.c        ****             /* Display received ADC data on LCD */
+ 611:main.c        ****        //     sprintf(txData, "%u.%.3u", (adcData / 1000u), (adcData % 1000u));
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 27
+
+
+ 612:main.c        ****         //    txData[DATA_SIZE - 1u] = (char8) '\0';
+ 613:main.c        ****             
+ 614:main.c        ****         //    LCD_Position(0u, 4u);
+ 615:main.c        ****          //   LCD_PrintString(txData);
+ 616:main.c        ****          //   receiveMailboxNumber = 0xFFu;
+ 617:main.c        ****         //}
+ 618:main.c        ****     } 
+ 619:main.c        **** }
+ 620:main.c        **** 
+ 621:main.c        **** /*
+ 622:main.c        **** // 0 for HV, 1 for Drive
+ 623:main.c        **** static uint32 ReadSwSwitch(uint8_t choice)
+ 624:main.c        **** {
+ 625:main.c        ****     uint32 heldDown;
+ 626:main.c        ****     uint32 swStatus;
+ 627:main.c        **** 
+ 628:main.c        ****     swStatus = 0u;  // Switch is not active 
+ 629:main.c        ****     heldDown = 0u;  // Reset debounce counter
+ 630:main.c        **** 
+ 631:main.c        ****     
+ 632:main.c        ****     if (choice)
+ 633:main.c        ****         swStatus = Drive_Read();
+ 634:main.c        ****     else
+ 635:main.c        ****         swStatus = HV_Read();
+ 636:main.c        **** 
+ 637:main.c        ****     return (swStatus);
+ 638:main.c        **** }
+ 639:main.c        **** */
+ 640:main.c        **** /*******************************************************************************
+ 641:main.c        **** * Function Name: ISR_CAN
+ 642:main.c        **** ********************************************************************************
+ 643:main.c        **** *
+ 644:main.c        **** * Summary:
+ 645:main.c        **** *  This ISR is executed at a Receive Message event and set receiveMailboxNumber
+ 646:main.c        **** *  global variable with receive message mailbox number.
+ 647:main.c        **** *
+ 648:main.c        **** * Parameters:
+ 649:main.c        **** *  None.
+ 650:main.c        **** *
+ 651:main.c        **** * Return:
+ 652:main.c        **** *  None.
+ 653:main.c        **** *
+ 654:main.c        **** *******************************************************************************/
+ 655:main.c        **** CY_ISR(ISR_CAN)
+ 656:main.c        **** {   
+ 741              		.loc 1 656 0
+ 742              		.cfi_startproc
+ 743              		@ args = 0, pretend = 0, frame = 0
+ 744              		@ frame_needed = 0, uses_anonymous_args = 0
+ 745              		@ link register save eliminated.
+ 657:main.c        ****     /* Clear Receive Message flag */
+ 658:main.c        ****     CAN_INT_SR_REG.byte[1u] = CAN_RX_MESSAGE_MASK;
+ 746              		.loc 1 658 0
+ 747 0000 1022     		movs	r2, #16
+ 748 0002 044B     		ldr	r3, .L39
+ 749 0004 5A70     		strb	r2, [r3, #1]
+ 659:main.c        **** 
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 28
+
+
+ 660:main.c        ****     /* Set the isrFlag */
+ 661:main.c        ****     //isrFlag = 1u;    
+ 662:main.c        **** 
+ 663:main.c        ****     /* Acknowledges receipt of new message */
+ 664:main.c        ****     CAN_RX_ACK_MESSAGE(CAN_RX_MAILBOX_0);
+ 750              		.loc 1 664 0
+ 751 0006 044A     		ldr	r2, .L39+4
+ 752 0008 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 753 000a 43F00103 		orr	r3, r3, #1
+ 754 000e 1370     		strb	r3, [r2]
+ 755 0010 7047     		bx	lr
+ 756              	.L40:
+ 757 0012 00BF     		.align	2
+ 758              	.L39:
+ 759 0014 00A00040 		.word	1073782784
+ 760 0018 A0A00040 		.word	1073782944
+ 761              		.cfi_endproc
+ 762              	.LFE66:
+ 763              		.size	ISR_CAN, .-ISR_CAN
+ 764              		.global	pedalOK
+ 765              		.global	DriveSwitch
+ 766              		.global	HVSwitch
+ 767              		.global	THROTTLE_MAP
+ 768              		.global	THROTTLE_MULTIPLIER
+ 769              		.section	.rodata
+ 770              		.align	3
+ 771              		.type	THROTTLE_MAP, %object
+ 772              		.size	THROTTLE_MAP, 64
+ 773              	THROTTLE_MAP:
+ 774 0000 00000000 		.word	0
+ 775 0004 00C05740 		.word	1079492608
+ 776 0008 00000000 		.word	0
+ 777 000c 00C05140 		.word	1079099392
+ 778 0010 00000000 		.word	0
+ 779 0014 00804D40 		.word	1078820864
+ 780 0018 00000000 		.word	0
+ 781 001c 00804740 		.word	1078427648
+ 782 0020 00000000 		.word	0
+ 783 0024 00804140 		.word	1078034432
+ 784 0028 00000000 		.word	0
+ 785 002c 00003740 		.word	1077346304
+ 786 0030 00000000 		.word	0
+ 787 0034 00002640 		.word	1076232192
+ 788 0038 00000000 		.word	0
+ 789 003c 00001440 		.word	1075052544
+ 790              		.data
+ 791              		.align	3
+ 792              		.set	.LANCHOR1,. + 0
+ 793              		.type	THROTTLE_MULTIPLIER, %object
+ 794              		.size	THROTTLE_MULTIPLIER, 8
+ 795              	THROTTLE_MULTIPLIER:
+ 796 0000 00000000 		.word	0
+ 797 0004 0000F03F 		.word	1072693248
+ 798              		.bss
+ 799              		.align	2
+ 800              		.set	.LANCHOR0,. + 0
+ 801              		.type	pedalOK, %object
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 29
+
+
+ 802              		.size	pedalOK, 4
+ 803              	pedalOK:
+ 804 0000 00000000 		.space	4
+ 805              		.type	DriveSwitch, %object
+ 806              		.size	DriveSwitch, 1
+ 807              	DriveSwitch:
+ 808 0004 00       		.space	1
+ 809              		.type	HVSwitch, %object
+ 810              		.size	HVSwitch, 1
+ 811              	HVSwitch:
+ 812 0005 00       		.space	1
+ 813              		.text
+ 814              	.Letext0:
+ 815              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 816              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 817              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 818              		.file 5 "Generated_Source\\PSoC5/CAN.h"
+ 819              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
+ 820              		.file 7 "Generated_Source\\PSoC5/Node_Timer.h"
+ 821              		.file 8 "Generated_Source\\PSoC5/isr_nodeok.h"
+ 822              		.file 9 "can_manga.h"
+ 823              		.file 10 "Generated_Source\\PSoC5/CyLib.h"
+ 824              		.file 11 "Generated_Source\\PSoC5/Hex1Reg.h"
+ 825              		.file 12 "Generated_Source\\PSoC5/Hex2Reg.h"
+ 826              		.file 13 "Generated_Source\\PSoC5/Hex3Reg.h"
+ 827              		.file 14 "Generated_Source\\PSoC5/Hex4Reg.h"
+ 828              		.file 15 "Generated_Source\\PSoC5/Buzzer.h"
+ 829              		.file 16 "Generated_Source\\PSoC5/RGB3_1.h"
+ 830              		.file 17 "Generated_Source\\PSoC5/RGB2_1.h"
+ 831              		.file 18 "Generated_Source\\PSoC5/RGB1_1.h"
+ 832              		.file 19 "Generated_Source\\PSoC5/RGB3_2.h"
+ 833              		.file 20 "Generated_Source\\PSoC5/RGB2_2.h"
+ 834              		.file 21 "Generated_Source\\PSoC5/RGB1_2.h"
+ 835              		.file 22 "Generated_Source\\PSoC5/Drive.h"
+ 836              		.file 23 "Generated_Source\\PSoC5/HV.h"
+ 837              		.file 24 "Generated_Source\\PSoC5/LED.h"
+ 838              		.section	.debug_info,"",%progbits
+ 839              	.Ldebug_info0:
+ 840 0000 440B0000 		.4byte	0xb44
+ 841 0004 0400     		.2byte	0x4
+ 842 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 843 000a 04       		.byte	0x4
+ 844 000b 01       		.uleb128 0x1
+ 845 000c B0040000 		.4byte	.LASF95
+ 846 0010 0C       		.byte	0xc
+ 847 0011 D4030000 		.4byte	.LASF96
+ 848 0015 11000000 		.4byte	.LASF97
+ 849 0019 30000000 		.4byte	.Ldebug_ranges0+0x30
+ 850 001d 00000000 		.4byte	0
+ 851 0021 00000000 		.4byte	.Ldebug_line0
+ 852 0025 02       		.uleb128 0x2
+ 853 0026 7A030000 		.4byte	.LASF0
+ 854 002a 02       		.byte	0x2
+ 855 002b 1B       		.byte	0x1b
+ 856 002c 30000000 		.4byte	0x30
+ 857 0030 03       		.uleb128 0x3
+ 858 0031 01       		.byte	0x1
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 30
+
+
+ 859 0032 06       		.byte	0x6
+ 860 0033 92010000 		.4byte	.LASF2
+ 861 0037 02       		.uleb128 0x2
+ 862 0038 3D030000 		.4byte	.LASF1
+ 863 003c 02       		.byte	0x2
+ 864 003d 1D       		.byte	0x1d
+ 865 003e 42000000 		.4byte	0x42
+ 866 0042 03       		.uleb128 0x3
+ 867 0043 01       		.byte	0x1
+ 868 0044 08       		.byte	0x8
+ 869 0045 49020000 		.4byte	.LASF3
+ 870 0049 03       		.uleb128 0x3
+ 871 004a 02       		.byte	0x2
+ 872 004b 05       		.byte	0x5
+ 873 004c A2000000 		.4byte	.LASF4
+ 874 0050 02       		.uleb128 0x2
+ 875 0051 07010000 		.4byte	.LASF5
+ 876 0055 02       		.byte	0x2
+ 877 0056 2B       		.byte	0x2b
+ 878 0057 5B000000 		.4byte	0x5b
+ 879 005b 03       		.uleb128 0x3
+ 880 005c 02       		.byte	0x2
+ 881 005d 07       		.byte	0x7
+ 882 005e 5A030000 		.4byte	.LASF6
+ 883 0062 02       		.uleb128 0x2
+ 884 0063 37040000 		.4byte	.LASF7
+ 885 0067 02       		.byte	0x2
+ 886 0068 3F       		.byte	0x3f
+ 887 0069 6D000000 		.4byte	0x6d
+ 888 006d 03       		.uleb128 0x3
+ 889 006e 04       		.byte	0x4
+ 890 006f 05       		.byte	0x5
+ 891 0070 E6010000 		.4byte	.LASF8
+ 892 0074 02       		.uleb128 0x2
+ 893 0075 2C020000 		.4byte	.LASF9
+ 894 0079 02       		.byte	0x2
+ 895 007a 41       		.byte	0x41
+ 896 007b 7F000000 		.4byte	0x7f
+ 897 007f 03       		.uleb128 0x3
+ 898 0080 04       		.byte	0x4
+ 899 0081 07       		.byte	0x7
+ 900 0082 E0030000 		.4byte	.LASF10
+ 901 0086 03       		.uleb128 0x3
+ 902 0087 08       		.byte	0x8
+ 903 0088 05       		.byte	0x5
+ 904 0089 A4010000 		.4byte	.LASF11
+ 905 008d 03       		.uleb128 0x3
+ 906 008e 08       		.byte	0x8
+ 907 008f 07       		.byte	0x7
+ 908 0090 EB020000 		.4byte	.LASF12
+ 909 0094 04       		.uleb128 0x4
+ 910 0095 04       		.byte	0x4
+ 911 0096 05       		.byte	0x5
+ 912 0097 696E7400 		.ascii	"int\000"
+ 913 009b 03       		.uleb128 0x3
+ 914 009c 04       		.byte	0x4
+ 915 009d 07       		.byte	0x7
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 31
+
+
+ 916 009e 1A030000 		.4byte	.LASF13
+ 917 00a2 02       		.uleb128 0x2
+ 918 00a3 71000000 		.4byte	.LASF14
+ 919 00a7 03       		.byte	0x3
+ 920 00a8 14       		.byte	0x14
+ 921 00a9 25000000 		.4byte	0x25
+ 922 00ad 02       		.uleb128 0x2
+ 923 00ae 3E010000 		.4byte	.LASF15
+ 924 00b2 03       		.byte	0x3
+ 925 00b3 18       		.byte	0x18
+ 926 00b4 37000000 		.4byte	0x37
+ 927 00b8 02       		.uleb128 0x2
+ 928 00b9 27030000 		.4byte	.LASF16
+ 929 00bd 03       		.byte	0x3
+ 930 00be 24       		.byte	0x24
+ 931 00bf 50000000 		.4byte	0x50
+ 932 00c3 02       		.uleb128 0x2
+ 933 00c4 A9030000 		.4byte	.LASF17
+ 934 00c8 03       		.byte	0x3
+ 935 00c9 2C       		.byte	0x2c
+ 936 00ca 62000000 		.4byte	0x62
+ 937 00ce 02       		.uleb128 0x2
+ 938 00cf 02030000 		.4byte	.LASF18
+ 939 00d3 03       		.byte	0x3
+ 940 00d4 30       		.byte	0x30
+ 941 00d5 74000000 		.4byte	0x74
+ 942 00d9 05       		.uleb128 0x5
+ 943 00da 55010000 		.4byte	.LASF19
+ 944 00de 04       		.byte	0x4
+ 945 00df 3801     		.2byte	0x138
+ 946 00e1 42000000 		.4byte	0x42
+ 947 00e5 03       		.uleb128 0x3
+ 948 00e6 04       		.byte	0x4
+ 949 00e7 04       		.byte	0x4
+ 950 00e8 9E010000 		.4byte	.LASF20
+ 951 00ec 03       		.uleb128 0x3
+ 952 00ed 08       		.byte	0x8
+ 953 00ee 04       		.byte	0x4
+ 954 00ef F2030000 		.4byte	.LASF21
+ 955 00f3 03       		.uleb128 0x3
+ 956 00f4 01       		.byte	0x1
+ 957 00f5 08       		.byte	0x8
+ 958 00f6 8A030000 		.4byte	.LASF22
+ 959 00fa 05       		.uleb128 0x5
+ 960 00fb DB030000 		.4byte	.LASF23
+ 961 00ff 04       		.byte	0x4
+ 962 0100 E201     		.2byte	0x1e2
+ 963 0102 06010000 		.4byte	0x106
+ 964 0106 06       		.uleb128 0x6
+ 965 0107 D9000000 		.4byte	0xd9
+ 966 010b 03       		.uleb128 0x3
+ 967 010c 08       		.byte	0x8
+ 968 010d 04       		.byte	0x4
+ 969 010e 66020000 		.4byte	.LASF24
+ 970 0112 03       		.uleb128 0x3
+ 971 0113 04       		.byte	0x4
+ 972 0114 07       		.byte	0x7
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 32
+
+
+ 973 0115 C1000000 		.4byte	.LASF25
+ 974 0119 07       		.uleb128 0x7
+ 975 011a 08       		.byte	0x8
+ 976 011b 05       		.byte	0x5
+ 977 011c 75       		.byte	0x75
+ 978 011d 2E010000 		.4byte	0x12e
+ 979 0121 08       		.uleb128 0x8
+ 980 0122 37020000 		.4byte	.LASF27
+ 981 0126 05       		.byte	0x5
+ 982 0127 77       		.byte	0x77
+ 983 0128 3E010000 		.4byte	0x13e
+ 984 012c 00       		.byte	0
+ 985 012d 00       		.byte	0
+ 986 012e 09       		.uleb128 0x9
+ 987 012f FA000000 		.4byte	0xfa
+ 988 0133 3E010000 		.4byte	0x13e
+ 989 0137 0A       		.uleb128 0xa
+ 990 0138 12010000 		.4byte	0x112
+ 991 013c 07       		.byte	0x7
+ 992 013d 00       		.byte	0
+ 993 013e 06       		.uleb128 0x6
+ 994 013f 2E010000 		.4byte	0x12e
+ 995 0143 02       		.uleb128 0x2
+ 996 0144 62000000 		.4byte	.LASF26
+ 997 0148 05       		.byte	0x5
+ 998 0149 78       		.byte	0x78
+ 999 014a 19010000 		.4byte	0x119
+ 1000 014e 07       		.uleb128 0x7
+ 1001 014f 04       		.byte	0x4
+ 1002 0150 05       		.byte	0x5
+ 1003 0151 7B       		.byte	0x7b
+ 1004 0152 63010000 		.4byte	0x163
+ 1005 0156 08       		.uleb128 0x8
+ 1006 0157 37020000 		.4byte	.LASF27
+ 1007 015b 05       		.byte	0x5
+ 1008 015c 7D       		.byte	0x7d
+ 1009 015d 73010000 		.4byte	0x173
+ 1010 0161 00       		.byte	0
+ 1011 0162 00       		.byte	0
+ 1012 0163 09       		.uleb128 0x9
+ 1013 0164 FA000000 		.4byte	0xfa
+ 1014 0168 73010000 		.4byte	0x173
+ 1015 016c 0A       		.uleb128 0xa
+ 1016 016d 12010000 		.4byte	0x112
+ 1017 0171 03       		.byte	0x3
+ 1018 0172 00       		.byte	0
+ 1019 0173 06       		.uleb128 0x6
+ 1020 0174 63010000 		.4byte	0x163
+ 1021 0178 02       		.uleb128 0x2
+ 1022 0179 C9030000 		.4byte	.LASF28
+ 1023 017d 05       		.byte	0x5
+ 1024 017e 7E       		.byte	0x7e
+ 1025 017f 4E010000 		.4byte	0x14e
+ 1026 0183 07       		.uleb128 0x7
+ 1027 0184 20       		.byte	0x20
+ 1028 0185 05       		.byte	0x5
+ 1029 0186 A0       		.byte	0xa0
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 33
+
+
+ 1030 0187 E0010000 		.4byte	0x1e0
+ 1031 018b 08       		.uleb128 0x8
+ 1032 018c B1030000 		.4byte	.LASF29
+ 1033 0190 05       		.byte	0x5
+ 1034 0191 A2       		.byte	0xa2
+ 1035 0192 78010000 		.4byte	0x178
+ 1036 0196 00       		.byte	0
+ 1037 0197 08       		.uleb128 0x8
+ 1038 0198 5B010000 		.4byte	.LASF30
+ 1039 019c 05       		.byte	0x5
+ 1040 019d A3       		.byte	0xa3
+ 1041 019e 78010000 		.4byte	0x178
+ 1042 01a2 04       		.byte	0x4
+ 1043 01a3 08       		.uleb128 0x8
+ 1044 01a4 00010000 		.4byte	.LASF31
+ 1045 01a8 05       		.byte	0x5
+ 1046 01a9 A4       		.byte	0xa4
+ 1047 01aa 43010000 		.4byte	0x143
+ 1048 01ae 08       		.byte	0x8
+ 1049 01af 08       		.uleb128 0x8
+ 1050 01b0 46050000 		.4byte	.LASF32
+ 1051 01b4 05       		.byte	0x5
+ 1052 01b5 A5       		.byte	0xa5
+ 1053 01b6 78010000 		.4byte	0x178
+ 1054 01ba 10       		.byte	0x10
+ 1055 01bb 08       		.uleb128 0x8
+ 1056 01bc 7C010000 		.4byte	.LASF33
+ 1057 01c0 05       		.byte	0x5
+ 1058 01c1 A6       		.byte	0xa6
+ 1059 01c2 78010000 		.4byte	0x178
+ 1060 01c6 14       		.byte	0x14
+ 1061 01c7 08       		.uleb128 0x8
+ 1062 01c8 00000000 		.4byte	.LASF34
+ 1063 01cc 05       		.byte	0x5
+ 1064 01cd A7       		.byte	0xa7
+ 1065 01ce 78010000 		.4byte	0x178
+ 1066 01d2 18       		.byte	0x18
+ 1067 01d3 08       		.uleb128 0x8
+ 1068 01d4 83030000 		.4byte	.LASF35
+ 1069 01d8 05       		.byte	0x5
+ 1070 01d9 A8       		.byte	0xa8
+ 1071 01da 78010000 		.4byte	0x178
+ 1072 01de 1C       		.byte	0x1c
+ 1073 01df 00       		.byte	0
+ 1074 01e0 02       		.uleb128 0x2
+ 1075 01e1 8F030000 		.4byte	.LASF36
+ 1076 01e5 05       		.byte	0x5
+ 1077 01e6 A9       		.byte	0xa9
+ 1078 01e7 83010000 		.4byte	0x183
+ 1079 01eb 06       		.uleb128 0x6
+ 1080 01ec CE000000 		.4byte	0xce
+ 1081 01f0 0B       		.uleb128 0xb
+ 1082 01f1 01       		.byte	0x1
+ 1083 01f2 42000000 		.4byte	0x42
+ 1084 01f6 01       		.byte	0x1
+ 1085 01f7 2B       		.byte	0x2b
+ 1086 01f8 20020000 		.4byte	0x220
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 34
+
+
+ 1087 01fc 0C       		.uleb128 0xc
+ 1088 01fd 78000000 		.4byte	.LASF37
+ 1089 0201 00       		.byte	0
+ 1090 0202 0D       		.uleb128 0xd
+ 1091 0203 4C5600   		.ascii	"LV\000"
+ 1092 0206 01       		.byte	0x1
+ 1093 0207 0C       		.uleb128 0xc
+ 1094 0208 20020000 		.4byte	.LASF38
+ 1095 020c 02       		.byte	0x2
+ 1096 020d 0C       		.uleb128 0xc
+ 1097 020e DB010000 		.4byte	.LASF39
+ 1098 0212 03       		.byte	0x3
+ 1099 0213 0C       		.uleb128 0xc
+ 1100 0214 12010000 		.4byte	.LASF40
+ 1101 0218 04       		.byte	0x4
+ 1102 0219 0C       		.uleb128 0xc
+ 1103 021a 9A020000 		.4byte	.LASF41
+ 1104 021e 05       		.byte	0x5
+ 1105 021f 00       		.byte	0
+ 1106 0220 02       		.uleb128 0x2
+ 1107 0221 BE030000 		.4byte	.LASF42
+ 1108 0225 01       		.byte	0x1
+ 1109 0226 33       		.byte	0x33
+ 1110 0227 F0010000 		.4byte	0x1f0
+ 1111 022b 0B       		.uleb128 0xb
+ 1112 022c 01       		.byte	0x1
+ 1113 022d 42000000 		.4byte	0x42
+ 1114 0231 01       		.byte	0x1
+ 1115 0232 36       		.byte	0x36
+ 1116 0233 61020000 		.4byte	0x261
+ 1117 0237 0D       		.uleb128 0xd
+ 1118 0238 4F4B00   		.ascii	"OK\000"
+ 1119 023b 00       		.byte	0
+ 1120 023c 0C       		.uleb128 0xc
+ 1121 023d B7030000 		.4byte	.LASF43
+ 1122 0241 01       		.byte	0x1
+ 1123 0242 0C       		.uleb128 0xc
+ 1124 0243 82010000 		.4byte	.LASF44
+ 1125 0247 02       		.byte	0x2
+ 1126 0248 0C       		.uleb128 0xc
+ 1127 0249 0B030000 		.4byte	.LASF45
+ 1128 024d 03       		.byte	0x3
+ 1129 024e 0C       		.uleb128 0xc
+ 1130 024f 47030000 		.4byte	.LASF46
+ 1131 0253 04       		.byte	0x4
+ 1132 0254 0C       		.uleb128 0xc
+ 1133 0255 7D040000 		.4byte	.LASF47
+ 1134 0259 05       		.byte	0x5
+ 1135 025a 0C       		.uleb128 0xc
+ 1136 025b B2010000 		.4byte	.LASF48
+ 1137 025f 06       		.byte	0x6
+ 1138 0260 00       		.byte	0
+ 1139 0261 02       		.uleb128 0x2
+ 1140 0262 BD020000 		.4byte	.LASF49
+ 1141 0266 01       		.byte	0x1
+ 1142 0267 3F       		.byte	0x3f
+ 1143 0268 2B020000 		.4byte	0x22b
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 35
+
+
+ 1144 026c 0E       		.uleb128 0xe
+ 1145 026d DA000000 		.4byte	.LASF98
+ 1146 0271 01       		.byte	0x1
+ 1147 0272 24       		.byte	0x24
+ 1148 0273 00000000 		.4byte	.LFB64
+ 1149 0277 0C000000 		.4byte	.LFE64-.LFB64
+ 1150 027b 01       		.uleb128 0x1
+ 1151 027c 9C       		.byte	0x9c
+ 1152 027d 94020000 		.4byte	0x294
+ 1153 0281 0F       		.uleb128 0xf
+ 1154 0282 06000000 		.4byte	.LVL0
+ 1155 0286 080A0000 		.4byte	0xa08
+ 1156 028a 0F       		.uleb128 0xf
+ 1157 028b 0A000000 		.4byte	.LVL1
+ 1158 028f 130A0000 		.4byte	0xa13
+ 1159 0293 00       		.byte	0
+ 1160 0294 10       		.uleb128 0x10
+ 1161 0295 F3000000 		.4byte	.LASF99
+ 1162 0299 01       		.byte	0x1
+ 1163 029a 6D       		.byte	0x6d
+ 1164 029b 94000000 		.4byte	0x94
+ 1165 029f 00000000 		.4byte	.LFB65
+ 1166 02a3 7C030000 		.4byte	.LFE65-.LFB65
+ 1167 02a7 01       		.uleb128 0x1
+ 1168 02a8 9C       		.byte	0x9c
+ 1169 02a9 71090000 		.4byte	0x971
+ 1170 02ad 11       		.uleb128 0x11
+ 1171 02ae 8A000000 		.4byte	.LASF50
+ 1172 02b2 01       		.byte	0x1
+ 1173 02b3 70       		.byte	0x70
+ 1174 02b4 20020000 		.4byte	0x220
+ 1175 02b8 00000000 		.4byte	.LLST0
+ 1176 02bc 11       		.uleb128 0x11
+ 1177 02bd 9D030000 		.4byte	.LASF51
+ 1178 02c1 01       		.byte	0x1
+ 1179 02c2 71       		.byte	0x71
+ 1180 02c3 61020000 		.4byte	0x261
+ 1181 02c7 17010000 		.4byte	.LLST1
+ 1182 02cb 12       		.uleb128 0x12
+ 1183 02cc 2D010000 		.4byte	.LASF52
+ 1184 02d0 01       		.byte	0x1
+ 1185 02d1 74       		.byte	0x74
+ 1186 02d2 AD000000 		.4byte	0xad
+ 1187 02d6 00       		.byte	0
+ 1188 02d7 12       		.uleb128 0x12
+ 1189 02d8 E9000000 		.4byte	.LASF53
+ 1190 02dc 01       		.byte	0x1
+ 1191 02dd 75       		.byte	0x75
+ 1192 02de A2000000 		.4byte	0xa2
+ 1193 02e2 01       		.byte	0x1
+ 1194 02e3 13       		.uleb128 0x13
+ 1195 02e4 AC000000 		.4byte	.LASF54
+ 1196 02e8 01       		.byte	0x1
+ 1197 02e9 79       		.byte	0x79
+ 1198 02ea EB010000 		.4byte	0x1eb
+ 1199 02ee 02       		.uleb128 0x2
+ 1200 02ef 91       		.byte	0x91
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 36
+
+
+ 1201 02f0 5C       		.sleb128 -36
+ 1202 02f1 11       		.uleb128 0x11
+ 1203 02f2 57020000 		.4byte	.LASF55
+ 1204 02f6 01       		.byte	0x1
+ 1205 02f7 7A       		.byte	0x7a
+ 1206 02f8 CE000000 		.4byte	0xce
+ 1207 02fc BC010000 		.4byte	.LLST2
+ 1208 0300 14       		.uleb128 0x14
+ 1209 0301 00000000 		.4byte	.Ldebug_ranges0+0
+ 1210 0305 3B090000 		.4byte	0x93b
+ 1211 0309 15       		.uleb128 0x15
+ 1212 030a 41434B00 		.ascii	"ACK\000"
+ 1213 030e 01       		.byte	0x1
+ 1214 030f A801     		.2byte	0x1a8
+ 1215 0311 AD000000 		.4byte	0xad
+ 1216 0315 14020000 		.4byte	.LLST3
+ 1217 0319 16       		.uleb128 0x16
+ 1218 031a 60010000 		.4byte	.LASF100
+ 1219 031e 01       		.byte	0x1
+ 1220 031f B101     		.2byte	0x1b1
+ 1221 0321 AD000000 		.4byte	0xad
+ 1222 0325 17       		.uleb128 0x17
+ 1223 0326 94040000 		.4byte	.LASF56
+ 1224 032a 01       		.byte	0x1
+ 1225 032b B301     		.2byte	0x1b3
+ 1226 032d B8000000 		.4byte	0xb8
+ 1227 0331 4C020000 		.4byte	.LLST4
+ 1228 0335 18       		.uleb128 0x18
+ 1229 0336 49040000 		.4byte	.LASF57
+ 1230 033a 01       		.byte	0x1
+ 1231 033b B801     		.2byte	0x1b8
+ 1232 033d AD000000 		.4byte	0xad
+ 1233 0341 01       		.uleb128 0x1
+ 1234 0342 58       		.byte	0x58
+ 1235 0343 17       		.uleb128 0x17
+ 1236 0344 2A040000 		.4byte	.LASF58
+ 1237 0348 01       		.byte	0x1
+ 1238 0349 B901     		.2byte	0x1b9
+ 1239 034b AD000000 		.4byte	0xad
+ 1240 034f 81020000 		.4byte	.LLST5
+ 1241 0353 14       		.uleb128 0x14
+ 1242 0354 18000000 		.4byte	.Ldebug_ranges0+0x18
+ 1243 0358 A4030000 		.4byte	0x3a4
+ 1244 035c 17       		.uleb128 0x17
+ 1245 035d C9020000 		.4byte	.LASF59
+ 1246 0361 01       		.byte	0x1
+ 1247 0362 3F01     		.2byte	0x13f
+ 1248 0364 AD000000 		.4byte	0xad
+ 1249 0368 9F020000 		.4byte	.LLST6
+ 1250 036c 19       		.uleb128 0x19
+ 1251 036d 66010000 		.4byte	.LVL74
+ 1252 0371 1E0A0000 		.4byte	0xa1e
+ 1253 0375 89030000 		.4byte	0x389
+ 1254 0379 1A       		.uleb128 0x1a
+ 1255 037a 01       		.uleb128 0x1
+ 1256 037b 50       		.byte	0x50
+ 1257 037c 01       		.uleb128 0x1
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 37
+
+
+ 1258 037d 31       		.byte	0x31
+ 1259 037e 1A       		.uleb128 0x1a
+ 1260 037f 01       		.uleb128 0x1
+ 1261 0380 51       		.byte	0x51
+ 1262 0381 01       		.uleb128 0x1
+ 1263 0382 30       		.byte	0x30
+ 1264 0383 1A       		.uleb128 0x1a
+ 1265 0384 01       		.uleb128 0x1
+ 1266 0385 52       		.byte	0x52
+ 1267 0386 01       		.uleb128 0x1
+ 1268 0387 30       		.byte	0x30
+ 1269 0388 00       		.byte	0
+ 1270 0389 0F       		.uleb128 0xf
+ 1271 038a 6A010000 		.4byte	.LVL75
+ 1272 038e 290A0000 		.4byte	0xa29
+ 1273 0392 1B       		.uleb128 0x1b
+ 1274 0393 86010000 		.4byte	.LVL77
+ 1275 0397 340A0000 		.4byte	0xa34
+ 1276 039b 1A       		.uleb128 0x1a
+ 1277 039c 01       		.uleb128 0x1
+ 1278 039d 50       		.byte	0x50
+ 1279 039e 03       		.uleb128 0x3
+ 1280 039f 0A       		.byte	0xa
+ 1281 03a0 E803     		.2byte	0x3e8
+ 1282 03a2 00       		.byte	0
+ 1283 03a3 00       		.byte	0
+ 1284 03a4 19       		.uleb128 0x19
+ 1285 03a5 8A000000 		.4byte	.LVL39
+ 1286 03a9 3F0A0000 		.4byte	0xa3f
+ 1287 03ad B7030000 		.4byte	0x3b7
+ 1288 03b1 1A       		.uleb128 0x1a
+ 1289 03b2 01       		.uleb128 0x1
+ 1290 03b3 50       		.byte	0x50
+ 1291 03b4 01       		.uleb128 0x1
+ 1292 03b5 38       		.byte	0x38
+ 1293 03b6 00       		.byte	0
+ 1294 03b7 19       		.uleb128 0x19
+ 1295 03b8 90000000 		.4byte	.LVL40
+ 1296 03bc 4A0A0000 		.4byte	0xa4a
+ 1297 03c0 CA030000 		.4byte	0x3ca
+ 1298 03c4 1A       		.uleb128 0x1a
+ 1299 03c5 01       		.uleb128 0x1
+ 1300 03c6 50       		.byte	0x50
+ 1301 03c7 01       		.uleb128 0x1
+ 1302 03c8 30       		.byte	0x30
+ 1303 03c9 00       		.byte	0
+ 1304 03ca 19       		.uleb128 0x19
+ 1305 03cb 96000000 		.4byte	.LVL41
+ 1306 03cf 550A0000 		.4byte	0xa55
+ 1307 03d3 DD030000 		.4byte	0x3dd
+ 1308 03d7 1A       		.uleb128 0x1a
+ 1309 03d8 01       		.uleb128 0x1
+ 1310 03d9 50       		.byte	0x50
+ 1311 03da 01       		.uleb128 0x1
+ 1312 03db 30       		.byte	0x30
+ 1313 03dc 00       		.byte	0
+ 1314 03dd 19       		.uleb128 0x19
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 38
+
+
+ 1315 03de 9C000000 		.4byte	.LVL42
+ 1316 03e2 600A0000 		.4byte	0xa60
+ 1317 03e6 F0030000 		.4byte	0x3f0
+ 1318 03ea 1A       		.uleb128 0x1a
+ 1319 03eb 01       		.uleb128 0x1
+ 1320 03ec 50       		.byte	0x50
+ 1321 03ed 01       		.uleb128 0x1
+ 1322 03ee 38       		.byte	0x38
+ 1323 03ef 00       		.byte	0
+ 1324 03f0 0F       		.uleb128 0xf
+ 1325 03f1 A0000000 		.4byte	.LVL43
+ 1326 03f5 6B0A0000 		.4byte	0xa6b
+ 1327 03f9 0F       		.uleb128 0xf
+ 1328 03fa A4000000 		.4byte	.LVL44
+ 1329 03fe 760A0000 		.4byte	0xa76
+ 1330 0402 0F       		.uleb128 0xf
+ 1331 0403 A8000000 		.4byte	.LVL45
+ 1332 0407 810A0000 		.4byte	0xa81
+ 1333 040b 19       		.uleb128 0x19
+ 1334 040c B0000000 		.4byte	.LVL46
+ 1335 0410 340A0000 		.4byte	0xa34
+ 1336 0414 20040000 		.4byte	0x420
+ 1337 0418 1A       		.uleb128 0x1a
+ 1338 0419 01       		.uleb128 0x1
+ 1339 041a 50       		.byte	0x50
+ 1340 041b 03       		.uleb128 0x3
+ 1341 041c 0A       		.byte	0xa
+ 1342 041d E803     		.2byte	0x3e8
+ 1343 041f 00       		.byte	0
+ 1344 0420 19       		.uleb128 0x19
+ 1345 0421 B8000000 		.4byte	.LVL47
+ 1346 0425 8C0A0000 		.4byte	0xa8c
+ 1347 0429 3A040000 		.4byte	0x43a
+ 1348 042d 1A       		.uleb128 0x1a
+ 1349 042e 01       		.uleb128 0x1
+ 1350 042f 50       		.byte	0x50
+ 1351 0430 02       		.uleb128 0x2
+ 1352 0431 74       		.byte	0x74
+ 1353 0432 00       		.sleb128 0
+ 1354 0433 1A       		.uleb128 0x1a
+ 1355 0434 01       		.uleb128 0x1
+ 1356 0435 51       		.byte	0x51
+ 1357 0436 02       		.uleb128 0x2
+ 1358 0437 75       		.byte	0x75
+ 1359 0438 00       		.sleb128 0
+ 1360 0439 00       		.byte	0
+ 1361 043a 19       		.uleb128 0x19
+ 1362 043b BE000000 		.4byte	.LVL48
+ 1363 043f 970A0000 		.4byte	0xa97
+ 1364 0443 4D040000 		.4byte	0x44d
+ 1365 0447 1A       		.uleb128 0x1a
+ 1366 0448 01       		.uleb128 0x1
+ 1367 0449 50       		.byte	0x50
+ 1368 044a 01       		.uleb128 0x1
+ 1369 044b 31       		.byte	0x31
+ 1370 044c 00       		.byte	0
+ 1371 044d 19       		.uleb128 0x19
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 39
+
+
+ 1372 044e C4000000 		.4byte	.LVL49
+ 1373 0452 340A0000 		.4byte	0xa34
+ 1374 0456 61040000 		.4byte	0x461
+ 1375 045a 1A       		.uleb128 0x1a
+ 1376 045b 01       		.uleb128 0x1
+ 1377 045c 50       		.byte	0x50
+ 1378 045d 02       		.uleb128 0x2
+ 1379 045e 08       		.byte	0x8
+ 1380 045f 32       		.byte	0x32
+ 1381 0460 00       		.byte	0
+ 1382 0461 19       		.uleb128 0x19
+ 1383 0462 CA000000 		.4byte	.LVL50
+ 1384 0466 970A0000 		.4byte	0xa97
+ 1385 046a 74040000 		.4byte	0x474
+ 1386 046e 1A       		.uleb128 0x1a
+ 1387 046f 01       		.uleb128 0x1
+ 1388 0470 50       		.byte	0x50
+ 1389 0471 01       		.uleb128 0x1
+ 1390 0472 30       		.byte	0x30
+ 1391 0473 00       		.byte	0
+ 1392 0474 0F       		.uleb128 0xf
+ 1393 0475 D2000000 		.4byte	.LVL52
+ 1394 0479 6B0A0000 		.4byte	0xa6b
+ 1395 047d 0F       		.uleb128 0xf
+ 1396 047e D6000000 		.4byte	.LVL53
+ 1397 0482 760A0000 		.4byte	0xa76
+ 1398 0486 0F       		.uleb128 0xf
+ 1399 0487 DA000000 		.4byte	.LVL54
+ 1400 048b 810A0000 		.4byte	0xa81
+ 1401 048f 19       		.uleb128 0x19
+ 1402 0490 E4000000 		.4byte	.LVL55
+ 1403 0494 1E0A0000 		.4byte	0xa1e
+ 1404 0498 AC040000 		.4byte	0x4ac
+ 1405 049c 1A       		.uleb128 0x1a
+ 1406 049d 01       		.uleb128 0x1
+ 1407 049e 50       		.byte	0x50
+ 1408 049f 01       		.uleb128 0x1
+ 1409 04a0 30       		.byte	0x30
+ 1410 04a1 1A       		.uleb128 0x1a
+ 1411 04a2 01       		.uleb128 0x1
+ 1412 04a3 51       		.byte	0x51
+ 1413 04a4 01       		.uleb128 0x1
+ 1414 04a5 30       		.byte	0x30
+ 1415 04a6 1A       		.uleb128 0x1a
+ 1416 04a7 01       		.uleb128 0x1
+ 1417 04a8 52       		.byte	0x52
+ 1418 04a9 01       		.uleb128 0x1
+ 1419 04aa 30       		.byte	0x30
+ 1420 04ab 00       		.byte	0
+ 1421 04ac 19       		.uleb128 0x19
+ 1422 04ad EC000000 		.4byte	.LVL56
+ 1423 04b1 8C0A0000 		.4byte	0xa8c
+ 1424 04b5 C6040000 		.4byte	0x4c6
+ 1425 04b9 1A       		.uleb128 0x1a
+ 1426 04ba 01       		.uleb128 0x1
+ 1427 04bb 50       		.byte	0x50
+ 1428 04bc 02       		.uleb128 0x2
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 40
+
+
+ 1429 04bd 74       		.byte	0x74
+ 1430 04be 00       		.sleb128 0
+ 1431 04bf 1A       		.uleb128 0x1a
+ 1432 04c0 01       		.uleb128 0x1
+ 1433 04c1 51       		.byte	0x51
+ 1434 04c2 02       		.uleb128 0x2
+ 1435 04c3 75       		.byte	0x75
+ 1436 04c4 00       		.sleb128 0
+ 1437 04c5 00       		.byte	0
+ 1438 04c6 19       		.uleb128 0x19
+ 1439 04c7 F2000000 		.4byte	.LVL57
+ 1440 04cb 970A0000 		.4byte	0xa97
+ 1441 04cf D9040000 		.4byte	0x4d9
+ 1442 04d3 1A       		.uleb128 0x1a
+ 1443 04d4 01       		.uleb128 0x1
+ 1444 04d5 50       		.byte	0x50
+ 1445 04d6 01       		.uleb128 0x1
+ 1446 04d7 30       		.byte	0x30
+ 1447 04d8 00       		.byte	0
+ 1448 04d9 19       		.uleb128 0x19
+ 1449 04da F8000000 		.4byte	.LVL58
+ 1450 04de A20A0000 		.4byte	0xaa2
+ 1451 04e2 EC040000 		.4byte	0x4ec
+ 1452 04e6 1A       		.uleb128 0x1a
+ 1453 04e7 01       		.uleb128 0x1
+ 1454 04e8 50       		.byte	0x50
+ 1455 04e9 01       		.uleb128 0x1
+ 1456 04ea 30       		.byte	0x30
+ 1457 04eb 00       		.byte	0
+ 1458 04ec 19       		.uleb128 0x19
+ 1459 04ed FE000000 		.4byte	.LVL59
+ 1460 04f1 AD0A0000 		.4byte	0xaad
+ 1461 04f5 FF040000 		.4byte	0x4ff
+ 1462 04f9 1A       		.uleb128 0x1a
+ 1463 04fa 01       		.uleb128 0x1
+ 1464 04fb 50       		.byte	0x50
+ 1465 04fc 01       		.uleb128 0x1
+ 1466 04fd 30       		.byte	0x30
+ 1467 04fe 00       		.byte	0
+ 1468 04ff 19       		.uleb128 0x19
+ 1469 0500 04010000 		.4byte	.LVL60
+ 1470 0504 B80A0000 		.4byte	0xab8
+ 1471 0508 12050000 		.4byte	0x512
+ 1472 050c 1A       		.uleb128 0x1a
+ 1473 050d 01       		.uleb128 0x1
+ 1474 050e 50       		.byte	0x50
+ 1475 050f 01       		.uleb128 0x1
+ 1476 0510 30       		.byte	0x30
+ 1477 0511 00       		.byte	0
+ 1478 0512 19       		.uleb128 0x19
+ 1479 0513 0A010000 		.4byte	.LVL61
+ 1480 0517 C30A0000 		.4byte	0xac3
+ 1481 051b 25050000 		.4byte	0x525
+ 1482 051f 1A       		.uleb128 0x1a
+ 1483 0520 01       		.uleb128 0x1
+ 1484 0521 50       		.byte	0x50
+ 1485 0522 01       		.uleb128 0x1
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 41
+
+
+ 1486 0523 31       		.byte	0x31
+ 1487 0524 00       		.byte	0
+ 1488 0525 19       		.uleb128 0x19
+ 1489 0526 10010000 		.4byte	.LVL62
+ 1490 052a CE0A0000 		.4byte	0xace
+ 1491 052e 38050000 		.4byte	0x538
+ 1492 0532 1A       		.uleb128 0x1a
+ 1493 0533 01       		.uleb128 0x1
+ 1494 0534 50       		.byte	0x50
+ 1495 0535 01       		.uleb128 0x1
+ 1496 0536 31       		.byte	0x31
+ 1497 0537 00       		.byte	0
+ 1498 0538 19       		.uleb128 0x19
+ 1499 0539 16010000 		.4byte	.LVL63
+ 1500 053d D90A0000 		.4byte	0xad9
+ 1501 0541 4B050000 		.4byte	0x54b
+ 1502 0545 1A       		.uleb128 0x1a
+ 1503 0546 01       		.uleb128 0x1
+ 1504 0547 50       		.byte	0x50
+ 1505 0548 01       		.uleb128 0x1
+ 1506 0549 31       		.byte	0x31
+ 1507 054a 00       		.byte	0
+ 1508 054b 0F       		.uleb128 0xf
+ 1509 054c 1A010000 		.4byte	.LVL64
+ 1510 0550 E40A0000 		.4byte	0xae4
+ 1511 0554 0F       		.uleb128 0xf
+ 1512 0555 24010000 		.4byte	.LVL65
+ 1513 0559 EF0A0000 		.4byte	0xaef
+ 1514 055d 0F       		.uleb128 0xf
+ 1515 055e 30010000 		.4byte	.LVL66
+ 1516 0562 6B0A0000 		.4byte	0xa6b
+ 1517 0566 0F       		.uleb128 0xf
+ 1518 0567 34010000 		.4byte	.LVL67
+ 1519 056b 760A0000 		.4byte	0xa76
+ 1520 056f 0F       		.uleb128 0xf
+ 1521 0570 38010000 		.4byte	.LVL68
+ 1522 0574 810A0000 		.4byte	0xa81
+ 1523 0578 19       		.uleb128 0x19
+ 1524 0579 40010000 		.4byte	.LVL69
+ 1525 057d 8C0A0000 		.4byte	0xa8c
+ 1526 0581 92050000 		.4byte	0x592
+ 1527 0585 1A       		.uleb128 0x1a
+ 1528 0586 01       		.uleb128 0x1
+ 1529 0587 50       		.byte	0x50
+ 1530 0588 02       		.uleb128 0x2
+ 1531 0589 74       		.byte	0x74
+ 1532 058a 00       		.sleb128 0
+ 1533 058b 1A       		.uleb128 0x1a
+ 1534 058c 01       		.uleb128 0x1
+ 1535 058d 51       		.byte	0x51
+ 1536 058e 02       		.uleb128 0x2
+ 1537 058f 75       		.byte	0x75
+ 1538 0590 00       		.sleb128 0
+ 1539 0591 00       		.byte	0
+ 1540 0592 19       		.uleb128 0x19
+ 1541 0593 46010000 		.4byte	.LVL70
+ 1542 0597 A20A0000 		.4byte	0xaa2
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 42
+
+
+ 1543 059b A5050000 		.4byte	0x5a5
+ 1544 059f 1A       		.uleb128 0x1a
+ 1545 05a0 01       		.uleb128 0x1
+ 1546 05a1 50       		.byte	0x50
+ 1547 05a2 01       		.uleb128 0x1
+ 1548 05a3 31       		.byte	0x31
+ 1549 05a4 00       		.byte	0
+ 1550 05a5 19       		.uleb128 0x19
+ 1551 05a6 4C010000 		.4byte	.LVL71
+ 1552 05aa AD0A0000 		.4byte	0xaad
+ 1553 05ae B8050000 		.4byte	0x5b8
+ 1554 05b2 1A       		.uleb128 0x1a
+ 1555 05b3 01       		.uleb128 0x1
+ 1556 05b4 50       		.byte	0x50
+ 1557 05b5 01       		.uleb128 0x1
+ 1558 05b6 30       		.byte	0x30
+ 1559 05b7 00       		.byte	0
+ 1560 05b8 19       		.uleb128 0x19
+ 1561 05b9 52010000 		.4byte	.LVL72
+ 1562 05bd B80A0000 		.4byte	0xab8
+ 1563 05c1 CB050000 		.4byte	0x5cb
+ 1564 05c5 1A       		.uleb128 0x1a
+ 1565 05c6 01       		.uleb128 0x1
+ 1566 05c7 50       		.byte	0x50
+ 1567 05c8 01       		.uleb128 0x1
+ 1568 05c9 30       		.byte	0x30
+ 1569 05ca 00       		.byte	0
+ 1570 05cb 19       		.uleb128 0x19
+ 1571 05cc 58010000 		.4byte	.LVL73
+ 1572 05d0 970A0000 		.4byte	0xa97
+ 1573 05d4 DE050000 		.4byte	0x5de
+ 1574 05d8 1A       		.uleb128 0x1a
+ 1575 05d9 01       		.uleb128 0x1
+ 1576 05da 50       		.byte	0x50
+ 1577 05db 01       		.uleb128 0x1
+ 1578 05dc 30       		.byte	0x30
+ 1579 05dd 00       		.byte	0
+ 1580 05de 0F       		.uleb128 0xf
+ 1581 05df 8C010000 		.4byte	.LVL78
+ 1582 05e3 6B0A0000 		.4byte	0xa6b
+ 1583 05e7 0F       		.uleb128 0xf
+ 1584 05e8 90010000 		.4byte	.LVL79
+ 1585 05ec 760A0000 		.4byte	0xa76
+ 1586 05f0 0F       		.uleb128 0xf
+ 1587 05f1 94010000 		.4byte	.LVL80
+ 1588 05f5 810A0000 		.4byte	0xa81
+ 1589 05f9 19       		.uleb128 0x19
+ 1590 05fa 9C010000 		.4byte	.LVL81
+ 1591 05fe 8C0A0000 		.4byte	0xa8c
+ 1592 0602 13060000 		.4byte	0x613
+ 1593 0606 1A       		.uleb128 0x1a
+ 1594 0607 01       		.uleb128 0x1
+ 1595 0608 50       		.byte	0x50
+ 1596 0609 02       		.uleb128 0x2
+ 1597 060a 74       		.byte	0x74
+ 1598 060b 00       		.sleb128 0
+ 1599 060c 1A       		.uleb128 0x1a
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 43
+
+
+ 1600 060d 01       		.uleb128 0x1
+ 1601 060e 51       		.byte	0x51
+ 1602 060f 02       		.uleb128 0x2
+ 1603 0610 75       		.byte	0x75
+ 1604 0611 00       		.sleb128 0
+ 1605 0612 00       		.byte	0
+ 1606 0613 19       		.uleb128 0x19
+ 1607 0614 A2010000 		.4byte	.LVL82
+ 1608 0618 A20A0000 		.4byte	0xaa2
+ 1609 061c 26060000 		.4byte	0x626
+ 1610 0620 1A       		.uleb128 0x1a
+ 1611 0621 01       		.uleb128 0x1
+ 1612 0622 50       		.byte	0x50
+ 1613 0623 01       		.uleb128 0x1
+ 1614 0624 30       		.byte	0x30
+ 1615 0625 00       		.byte	0
+ 1616 0626 19       		.uleb128 0x19
+ 1617 0627 A8010000 		.4byte	.LVL83
+ 1618 062b AD0A0000 		.4byte	0xaad
+ 1619 062f 39060000 		.4byte	0x639
+ 1620 0633 1A       		.uleb128 0x1a
+ 1621 0634 01       		.uleb128 0x1
+ 1622 0635 50       		.byte	0x50
+ 1623 0636 01       		.uleb128 0x1
+ 1624 0637 30       		.byte	0x30
+ 1625 0638 00       		.byte	0
+ 1626 0639 19       		.uleb128 0x19
+ 1627 063a AE010000 		.4byte	.LVL84
+ 1628 063e B80A0000 		.4byte	0xab8
+ 1629 0642 4C060000 		.4byte	0x64c
+ 1630 0646 1A       		.uleb128 0x1a
+ 1631 0647 01       		.uleb128 0x1
+ 1632 0648 50       		.byte	0x50
+ 1633 0649 01       		.uleb128 0x1
+ 1634 064a 31       		.byte	0x31
+ 1635 064b 00       		.byte	0
+ 1636 064c 19       		.uleb128 0x19
+ 1637 064d B4010000 		.4byte	.LVL85
+ 1638 0651 970A0000 		.4byte	0xa97
+ 1639 0655 5F060000 		.4byte	0x65f
+ 1640 0659 1A       		.uleb128 0x1a
+ 1641 065a 01       		.uleb128 0x1
+ 1642 065b 50       		.byte	0x50
+ 1643 065c 01       		.uleb128 0x1
+ 1644 065d 30       		.byte	0x30
+ 1645 065e 00       		.byte	0
+ 1646 065f 0F       		.uleb128 0xf
+ 1647 0660 B8010000 		.4byte	.LVL86
+ 1648 0664 E40A0000 		.4byte	0xae4
+ 1649 0668 19       		.uleb128 0x19
+ 1650 0669 C2010000 		.4byte	.LVL87
+ 1651 066d 340A0000 		.4byte	0xa34
+ 1652 0671 7D060000 		.4byte	0x67d
+ 1653 0675 1A       		.uleb128 0x1a
+ 1654 0676 01       		.uleb128 0x1
+ 1655 0677 50       		.byte	0x50
+ 1656 0678 03       		.uleb128 0x3
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 44
+
+
+ 1657 0679 0A       		.byte	0xa
+ 1658 067a E803     		.2byte	0x3e8
+ 1659 067c 00       		.byte	0
+ 1660 067d 0F       		.uleb128 0xf
+ 1661 067e C6010000 		.4byte	.LVL88
+ 1662 0682 FA0A0000 		.4byte	0xafa
+ 1663 0686 0F       		.uleb128 0xf
+ 1664 0687 D0010000 		.4byte	.LVL89
+ 1665 068b 970A0000 		.4byte	0xa97
+ 1666 068f 19       		.uleb128 0x19
+ 1667 0690 D8010000 		.4byte	.LVL90
+ 1668 0694 340A0000 		.4byte	0xa34
+ 1669 0698 A4060000 		.4byte	0x6a4
+ 1670 069c 1A       		.uleb128 0x1a
+ 1671 069d 01       		.uleb128 0x1
+ 1672 069e 50       		.byte	0x50
+ 1673 069f 03       		.uleb128 0x3
+ 1674 06a0 0A       		.byte	0xa
+ 1675 06a1 E803     		.2byte	0x3e8
+ 1676 06a3 00       		.byte	0
+ 1677 06a4 19       		.uleb128 0x19
+ 1678 06a5 DE010000 		.4byte	.LVL91
+ 1679 06a9 970A0000 		.4byte	0xa97
+ 1680 06ad B7060000 		.4byte	0x6b7
+ 1681 06b1 1A       		.uleb128 0x1a
+ 1682 06b2 01       		.uleb128 0x1
+ 1683 06b3 50       		.byte	0x50
+ 1684 06b4 01       		.uleb128 0x1
+ 1685 06b5 30       		.byte	0x30
+ 1686 06b6 00       		.byte	0
+ 1687 06b7 0F       		.uleb128 0xf
+ 1688 06b8 E6010000 		.4byte	.LVL93
+ 1689 06bc EF0A0000 		.4byte	0xaef
+ 1690 06c0 0F       		.uleb128 0xf
+ 1691 06c1 EC010000 		.4byte	.LVL94
+ 1692 06c5 290A0000 		.4byte	0xa29
+ 1693 06c9 19       		.uleb128 0x19
+ 1694 06ca 02020000 		.4byte	.LVL95
+ 1695 06ce 8C0A0000 		.4byte	0xa8c
+ 1696 06d2 E3060000 		.4byte	0x6e3
+ 1697 06d6 1A       		.uleb128 0x1a
+ 1698 06d7 01       		.uleb128 0x1
+ 1699 06d8 50       		.byte	0x50
+ 1700 06d9 02       		.uleb128 0x2
+ 1701 06da 74       		.byte	0x74
+ 1702 06db 00       		.sleb128 0
+ 1703 06dc 1A       		.uleb128 0x1a
+ 1704 06dd 01       		.uleb128 0x1
+ 1705 06de 51       		.byte	0x51
+ 1706 06df 02       		.uleb128 0x2
+ 1707 06e0 75       		.byte	0x75
+ 1708 06e1 00       		.sleb128 0
+ 1709 06e2 00       		.byte	0
+ 1710 06e3 19       		.uleb128 0x19
+ 1711 06e4 08020000 		.4byte	.LVL96
+ 1712 06e8 A20A0000 		.4byte	0xaa2
+ 1713 06ec F6060000 		.4byte	0x6f6
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 45
+
+
+ 1714 06f0 1A       		.uleb128 0x1a
+ 1715 06f1 01       		.uleb128 0x1
+ 1716 06f2 50       		.byte	0x50
+ 1717 06f3 01       		.uleb128 0x1
+ 1718 06f4 31       		.byte	0x31
+ 1719 06f5 00       		.byte	0
+ 1720 06f6 19       		.uleb128 0x19
+ 1721 06f7 0E020000 		.4byte	.LVL97
+ 1722 06fb AD0A0000 		.4byte	0xaad
+ 1723 06ff 09070000 		.4byte	0x709
+ 1724 0703 1A       		.uleb128 0x1a
+ 1725 0704 01       		.uleb128 0x1
+ 1726 0705 50       		.byte	0x50
+ 1727 0706 01       		.uleb128 0x1
+ 1728 0707 30       		.byte	0x30
+ 1729 0708 00       		.byte	0
+ 1730 0709 19       		.uleb128 0x19
+ 1731 070a 14020000 		.4byte	.LVL98
+ 1732 070e B80A0000 		.4byte	0xab8
+ 1733 0712 1C070000 		.4byte	0x71c
+ 1734 0716 1A       		.uleb128 0x1a
+ 1735 0717 01       		.uleb128 0x1
+ 1736 0718 50       		.byte	0x50
+ 1737 0719 01       		.uleb128 0x1
+ 1738 071a 31       		.byte	0x31
+ 1739 071b 00       		.byte	0
+ 1740 071c 0F       		.uleb128 0xf
+ 1741 071d 1E020000 		.4byte	.LVL101
+ 1742 0721 050B0000 		.4byte	0xb05
+ 1743 0725 0F       		.uleb128 0xf
+ 1744 0726 2C020000 		.4byte	.LVL105
+ 1745 072a 100B0000 		.4byte	0xb10
+ 1746 072e 0F       		.uleb128 0xf
+ 1747 072f 30020000 		.4byte	.LVL106
+ 1748 0733 1B0B0000 		.4byte	0xb1b
+ 1749 0737 0F       		.uleb128 0xf
+ 1750 0738 38020000 		.4byte	.LVL108
+ 1751 073c 260B0000 		.4byte	0xb26
+ 1752 0740 19       		.uleb128 0x19
+ 1753 0741 60020000 		.4byte	.LVL117
+ 1754 0745 1E0A0000 		.4byte	0xa1e
+ 1755 0749 59070000 		.4byte	0x759
+ 1756 074d 1A       		.uleb128 0x1a
+ 1757 074e 01       		.uleb128 0x1
+ 1758 074f 50       		.byte	0x50
+ 1759 0750 01       		.uleb128 0x1
+ 1760 0751 31       		.byte	0x31
+ 1761 0752 1A       		.uleb128 0x1a
+ 1762 0753 01       		.uleb128 0x1
+ 1763 0754 52       		.byte	0x52
+ 1764 0755 02       		.uleb128 0x2
+ 1765 0756 76       		.byte	0x76
+ 1766 0757 00       		.sleb128 0
+ 1767 0758 00       		.byte	0
+ 1768 0759 0F       		.uleb128 0xf
+ 1769 075a 64020000 		.4byte	.LVL118
+ 1770 075e EF0A0000 		.4byte	0xaef
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 46
+
+
+ 1771 0762 19       		.uleb128 0x19
+ 1772 0763 70020000 		.4byte	.LVL119
+ 1773 0767 1E0A0000 		.4byte	0xa1e
+ 1774 076b 7F070000 		.4byte	0x77f
+ 1775 076f 1A       		.uleb128 0x1a
+ 1776 0770 01       		.uleb128 0x1
+ 1777 0771 50       		.byte	0x50
+ 1778 0772 01       		.uleb128 0x1
+ 1779 0773 30       		.byte	0x30
+ 1780 0774 1A       		.uleb128 0x1a
+ 1781 0775 01       		.uleb128 0x1
+ 1782 0776 51       		.byte	0x51
+ 1783 0777 01       		.uleb128 0x1
+ 1784 0778 30       		.byte	0x30
+ 1785 0779 1A       		.uleb128 0x1a
+ 1786 077a 01       		.uleb128 0x1
+ 1787 077b 52       		.byte	0x52
+ 1788 077c 01       		.uleb128 0x1
+ 1789 077d 30       		.byte	0x30
+ 1790 077e 00       		.byte	0
+ 1791 077f 0F       		.uleb128 0xf
+ 1792 0780 76020000 		.4byte	.LVL121
+ 1793 0784 E40A0000 		.4byte	0xae4
+ 1794 0788 19       		.uleb128 0x19
+ 1795 0789 82020000 		.4byte	.LVL123
+ 1796 078d 1E0A0000 		.4byte	0xa1e
+ 1797 0791 A5070000 		.4byte	0x7a5
+ 1798 0795 1A       		.uleb128 0x1a
+ 1799 0796 01       		.uleb128 0x1
+ 1800 0797 50       		.byte	0x50
+ 1801 0798 01       		.uleb128 0x1
+ 1802 0799 31       		.byte	0x31
+ 1803 079a 1A       		.uleb128 0x1a
+ 1804 079b 01       		.uleb128 0x1
+ 1805 079c 51       		.byte	0x51
+ 1806 079d 01       		.uleb128 0x1
+ 1807 079e 30       		.byte	0x30
+ 1808 079f 1A       		.uleb128 0x1a
+ 1809 07a0 01       		.uleb128 0x1
+ 1810 07a1 52       		.byte	0x52
+ 1811 07a2 01       		.uleb128 0x1
+ 1812 07a3 30       		.byte	0x30
+ 1813 07a4 00       		.byte	0
+ 1814 07a5 0F       		.uleb128 0xf
+ 1815 07a6 88020000 		.4byte	.LVL125
+ 1816 07aa 310B0000 		.4byte	0xb31
+ 1817 07ae 19       		.uleb128 0x19
+ 1818 07af A8020000 		.4byte	.LVL126
+ 1819 07b3 1E0A0000 		.4byte	0xa1e
+ 1820 07b7 CB070000 		.4byte	0x7cb
+ 1821 07bb 1A       		.uleb128 0x1a
+ 1822 07bc 01       		.uleb128 0x1
+ 1823 07bd 50       		.byte	0x50
+ 1824 07be 01       		.uleb128 0x1
+ 1825 07bf 30       		.byte	0x30
+ 1826 07c0 1A       		.uleb128 0x1a
+ 1827 07c1 01       		.uleb128 0x1
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 47
+
+
+ 1828 07c2 51       		.byte	0x51
+ 1829 07c3 01       		.uleb128 0x1
+ 1830 07c4 30       		.byte	0x30
+ 1831 07c5 1A       		.uleb128 0x1a
+ 1832 07c6 01       		.uleb128 0x1
+ 1833 07c7 52       		.byte	0x52
+ 1834 07c8 01       		.uleb128 0x1
+ 1835 07c9 30       		.byte	0x30
+ 1836 07ca 00       		.byte	0
+ 1837 07cb 0F       		.uleb128 0xf
+ 1838 07cc B4020000 		.4byte	.LVL128
+ 1839 07d0 6B0A0000 		.4byte	0xa6b
+ 1840 07d4 0F       		.uleb128 0xf
+ 1841 07d5 B8020000 		.4byte	.LVL129
+ 1842 07d9 760A0000 		.4byte	0xa76
+ 1843 07dd 0F       		.uleb128 0xf
+ 1844 07de BC020000 		.4byte	.LVL130
+ 1845 07e2 810A0000 		.4byte	0xa81
+ 1846 07e6 19       		.uleb128 0x19
+ 1847 07e7 C4020000 		.4byte	.LVL131
+ 1848 07eb 8C0A0000 		.4byte	0xa8c
+ 1849 07ef 00080000 		.4byte	0x800
+ 1850 07f3 1A       		.uleb128 0x1a
+ 1851 07f4 01       		.uleb128 0x1
+ 1852 07f5 50       		.byte	0x50
+ 1853 07f6 02       		.uleb128 0x2
+ 1854 07f7 74       		.byte	0x74
+ 1855 07f8 00       		.sleb128 0
+ 1856 07f9 1A       		.uleb128 0x1a
+ 1857 07fa 01       		.uleb128 0x1
+ 1858 07fb 51       		.byte	0x51
+ 1859 07fc 02       		.uleb128 0x2
+ 1860 07fd 75       		.byte	0x75
+ 1861 07fe 00       		.sleb128 0
+ 1862 07ff 00       		.byte	0
+ 1863 0800 19       		.uleb128 0x19
+ 1864 0801 CA020000 		.4byte	.LVL132
+ 1865 0805 A20A0000 		.4byte	0xaa2
+ 1866 0809 13080000 		.4byte	0x813
+ 1867 080d 1A       		.uleb128 0x1a
+ 1868 080e 01       		.uleb128 0x1
+ 1869 080f 50       		.byte	0x50
+ 1870 0810 01       		.uleb128 0x1
+ 1871 0811 31       		.byte	0x31
+ 1872 0812 00       		.byte	0
+ 1873 0813 19       		.uleb128 0x19
+ 1874 0814 D0020000 		.4byte	.LVL133
+ 1875 0818 AD0A0000 		.4byte	0xaad
+ 1876 081c 26080000 		.4byte	0x826
+ 1877 0820 1A       		.uleb128 0x1a
+ 1878 0821 01       		.uleb128 0x1
+ 1879 0822 50       		.byte	0x50
+ 1880 0823 01       		.uleb128 0x1
+ 1881 0824 31       		.byte	0x31
+ 1882 0825 00       		.byte	0
+ 1883 0826 19       		.uleb128 0x19
+ 1884 0827 D6020000 		.4byte	.LVL134
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 48
+
+
+ 1885 082b B80A0000 		.4byte	0xab8
+ 1886 082f 39080000 		.4byte	0x839
+ 1887 0833 1A       		.uleb128 0x1a
+ 1888 0834 01       		.uleb128 0x1
+ 1889 0835 50       		.byte	0x50
+ 1890 0836 01       		.uleb128 0x1
+ 1891 0837 31       		.byte	0x31
+ 1892 0838 00       		.byte	0
+ 1893 0839 19       		.uleb128 0x19
+ 1894 083a DC020000 		.4byte	.LVL135
+ 1895 083e B80A0000 		.4byte	0xab8
+ 1896 0842 4C080000 		.4byte	0x84c
+ 1897 0846 1A       		.uleb128 0x1a
+ 1898 0847 01       		.uleb128 0x1
+ 1899 0848 50       		.byte	0x50
+ 1900 0849 01       		.uleb128 0x1
+ 1901 084a 30       		.byte	0x30
+ 1902 084b 00       		.byte	0
+ 1903 084c 19       		.uleb128 0x19
+ 1904 084d E4020000 		.4byte	.LVL136
+ 1905 0851 340A0000 		.4byte	0xa34
+ 1906 0855 61080000 		.4byte	0x861
+ 1907 0859 1A       		.uleb128 0x1a
+ 1908 085a 01       		.uleb128 0x1
+ 1909 085b 50       		.byte	0x50
+ 1910 085c 03       		.uleb128 0x3
+ 1911 085d 0A       		.byte	0xa
+ 1912 085e E803     		.2byte	0x3e8
+ 1913 0860 00       		.byte	0
+ 1914 0861 19       		.uleb128 0x19
+ 1915 0862 EA020000 		.4byte	.LVL137
+ 1916 0866 B80A0000 		.4byte	0xab8
+ 1917 086a 74080000 		.4byte	0x874
+ 1918 086e 1A       		.uleb128 0x1a
+ 1919 086f 01       		.uleb128 0x1
+ 1920 0870 50       		.byte	0x50
+ 1921 0871 01       		.uleb128 0x1
+ 1922 0872 31       		.byte	0x31
+ 1923 0873 00       		.byte	0
+ 1924 0874 19       		.uleb128 0x19
+ 1925 0875 F2020000 		.4byte	.LVL138
+ 1926 0879 340A0000 		.4byte	0xa34
+ 1927 087d 89080000 		.4byte	0x889
+ 1928 0881 1A       		.uleb128 0x1a
+ 1929 0882 01       		.uleb128 0x1
+ 1930 0883 50       		.byte	0x50
+ 1931 0884 03       		.uleb128 0x3
+ 1932 0885 0A       		.byte	0xa
+ 1933 0886 E803     		.2byte	0x3e8
+ 1934 0888 00       		.byte	0
+ 1935 0889 19       		.uleb128 0x19
+ 1936 088a F8020000 		.4byte	.LVL139
+ 1937 088e 970A0000 		.4byte	0xa97
+ 1938 0892 9C080000 		.4byte	0x89c
+ 1939 0896 1A       		.uleb128 0x1a
+ 1940 0897 01       		.uleb128 0x1
+ 1941 0898 50       		.byte	0x50
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 49
+
+
+ 1942 0899 01       		.uleb128 0x1
+ 1943 089a 30       		.byte	0x30
+ 1944 089b 00       		.byte	0
+ 1945 089c 0F       		.uleb128 0xf
+ 1946 089d 00030000 		.4byte	.LVL140
+ 1947 08a1 E40A0000 		.4byte	0xae4
+ 1948 08a5 0F       		.uleb128 0xf
+ 1949 08a6 10030000 		.4byte	.LVL141
+ 1950 08aa E40A0000 		.4byte	0xae4
+ 1951 08ae 0F       		.uleb128 0xf
+ 1952 08af 1A030000 		.4byte	.LVL142
+ 1953 08b3 EF0A0000 		.4byte	0xaef
+ 1954 08b7 0F       		.uleb128 0xf
+ 1955 08b8 2A030000 		.4byte	.LVL143
+ 1956 08bc E40A0000 		.4byte	0xae4
+ 1957 08c0 19       		.uleb128 0x19
+ 1958 08c1 44030000 		.4byte	.LVL144
+ 1959 08c5 1E0A0000 		.4byte	0xa1e
+ 1960 08c9 DF080000 		.4byte	0x8df
+ 1961 08cd 1A       		.uleb128 0x1a
+ 1962 08ce 01       		.uleb128 0x1
+ 1963 08cf 50       		.byte	0x50
+ 1964 08d0 01       		.uleb128 0x1
+ 1965 08d1 31       		.byte	0x31
+ 1966 08d2 1A       		.uleb128 0x1a
+ 1967 08d3 01       		.uleb128 0x1
+ 1968 08d4 51       		.byte	0x51
+ 1969 08d5 02       		.uleb128 0x2
+ 1970 08d6 78       		.byte	0x78
+ 1971 08d7 00       		.sleb128 0
+ 1972 08d8 1A       		.uleb128 0x1a
+ 1973 08d9 01       		.uleb128 0x1
+ 1974 08da 52       		.byte	0x52
+ 1975 08db 02       		.uleb128 0x2
+ 1976 08dc 76       		.byte	0x76
+ 1977 08dd 00       		.sleb128 0
+ 1978 08de 00       		.byte	0
+ 1979 08df 19       		.uleb128 0x19
+ 1980 08e0 4A030000 		.4byte	.LVL145
+ 1981 08e4 340A0000 		.4byte	0xa34
+ 1982 08e8 F3080000 		.4byte	0x8f3
+ 1983 08ec 1A       		.uleb128 0x1a
+ 1984 08ed 01       		.uleb128 0x1
+ 1985 08ee 50       		.byte	0x50
+ 1986 08ef 02       		.uleb128 0x2
+ 1987 08f0 08       		.byte	0x8
+ 1988 08f1 C8       		.byte	0xc8
+ 1989 08f2 00       		.byte	0
+ 1990 08f3 0F       		.uleb128 0xf
+ 1991 08f4 4E030000 		.4byte	.LVL146
+ 1992 08f8 310B0000 		.4byte	0xb31
+ 1993 08fc 0F       		.uleb128 0xf
+ 1994 08fd 58030000 		.4byte	.LVL147
+ 1995 0901 050B0000 		.4byte	0xb05
+ 1996 0905 19       		.uleb128 0x19
+ 1997 0906 66030000 		.4byte	.LVL148
+ 1998 090a A20A0000 		.4byte	0xaa2
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 50
+
+
+ 1999 090e 18090000 		.4byte	0x918
+ 2000 0912 1A       		.uleb128 0x1a
+ 2001 0913 01       		.uleb128 0x1
+ 2002 0914 50       		.byte	0x50
+ 2003 0915 01       		.uleb128 0x1
+ 2004 0916 31       		.byte	0x31
+ 2005 0917 00       		.byte	0
+ 2006 0918 19       		.uleb128 0x19
+ 2007 0919 6C030000 		.4byte	.LVL149
+ 2008 091d AD0A0000 		.4byte	0xaad
+ 2009 0921 2B090000 		.4byte	0x92b
+ 2010 0925 1A       		.uleb128 0x1a
+ 2011 0926 01       		.uleb128 0x1
+ 2012 0927 50       		.byte	0x50
+ 2013 0928 01       		.uleb128 0x1
+ 2014 0929 31       		.byte	0x31
+ 2015 092a 00       		.byte	0
+ 2016 092b 1B       		.uleb128 0x1b
+ 2017 092c 72030000 		.4byte	.LVL150
+ 2018 0930 B80A0000 		.4byte	0xab8
+ 2019 0934 1A       		.uleb128 0x1a
+ 2020 0935 01       		.uleb128 0x1
+ 2021 0936 50       		.byte	0x50
+ 2022 0937 01       		.uleb128 0x1
+ 2023 0938 31       		.byte	0x31
+ 2024 0939 00       		.byte	0
+ 2025 093a 00       		.byte	0
+ 2026 093b 0F       		.uleb128 0xf
+ 2027 093c 10000000 		.4byte	.LVL4
+ 2028 0940 6C020000 		.4byte	0x26c
+ 2029 0944 19       		.uleb128 0x19
+ 2030 0945 58000000 		.4byte	.LVL36
+ 2031 0949 3C0B0000 		.4byte	0xb3c
+ 2032 094d 57090000 		.4byte	0x957
+ 2033 0951 1A       		.uleb128 0x1a
+ 2034 0952 01       		.uleb128 0x1
+ 2035 0953 50       		.byte	0x50
+ 2036 0954 01       		.uleb128 0x1
+ 2037 0955 31       		.byte	0x31
+ 2038 0956 00       		.byte	0
+ 2039 0957 1B       		.uleb128 0x1b
+ 2040 0958 6A000000 		.4byte	.LVL37
+ 2041 095c 1E0A0000 		.4byte	0xa1e
+ 2042 0960 1A       		.uleb128 0x1a
+ 2043 0961 01       		.uleb128 0x1
+ 2044 0962 50       		.byte	0x50
+ 2045 0963 01       		.uleb128 0x1
+ 2046 0964 30       		.byte	0x30
+ 2047 0965 1A       		.uleb128 0x1a
+ 2048 0966 01       		.uleb128 0x1
+ 2049 0967 51       		.byte	0x51
+ 2050 0968 01       		.uleb128 0x1
+ 2051 0969 30       		.byte	0x30
+ 2052 096a 1A       		.uleb128 0x1a
+ 2053 096b 01       		.uleb128 0x1
+ 2054 096c 52       		.byte	0x52
+ 2055 096d 01       		.uleb128 0x1
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 51
+
+
+ 2056 096e 30       		.byte	0x30
+ 2057 096f 00       		.byte	0
+ 2058 0970 00       		.byte	0
+ 2059 0971 1C       		.uleb128 0x1c
+ 2060 0972 41040000 		.4byte	.LASF101
+ 2061 0976 01       		.byte	0x1
+ 2062 0977 8F02     		.2byte	0x28f
+ 2063 0979 00000000 		.4byte	.LFB66
+ 2064 097d 1C000000 		.4byte	.LFE66-.LFB66
+ 2065 0981 01       		.uleb128 0x1
+ 2066 0982 9C       		.byte	0x9c
+ 2067 0983 1D       		.uleb128 0x1d
+ 2068 0984 A3040000 		.4byte	.LASF60
+ 2069 0988 06       		.byte	0x6
+ 2070 0989 5506     		.2byte	0x655
+ 2071 098b 8F090000 		.4byte	0x98f
+ 2072 098f 06       		.uleb128 0x6
+ 2073 0990 C3000000 		.4byte	0xc3
+ 2074 0994 1E       		.uleb128 0x1e
+ 2075 0995 D7020000 		.4byte	.LASF61
+ 2076 0999 01       		.byte	0x1
+ 2077 099a 07       		.byte	0x7
+ 2078 099b A5090000 		.4byte	0x9a5
+ 2079 099f 05       		.uleb128 0x5
+ 2080 09a0 03       		.byte	0x3
+ 2081 09a1 00000000 		.4byte	THROTTLE_MULTIPLIER
+ 2082 09a5 06       		.uleb128 0x6
+ 2083 09a6 EC000000 		.4byte	0xec
+ 2084 09aa 09       		.uleb128 0x9
+ 2085 09ab BA090000 		.4byte	0x9ba
+ 2086 09af BA090000 		.4byte	0x9ba
+ 2087 09b3 0A       		.uleb128 0xa
+ 2088 09b4 12010000 		.4byte	0x112
+ 2089 09b8 07       		.byte	0x7
+ 2090 09b9 00       		.byte	0
+ 2091 09ba 1F       		.uleb128 0x1f
+ 2092 09bb EC000000 		.4byte	0xec
+ 2093 09bf 1E       		.uleb128 0x1e
+ 2094 09c0 8D020000 		.4byte	.LASF62
+ 2095 09c4 01       		.byte	0x1
+ 2096 09c5 08       		.byte	0x8
+ 2097 09c6 D0090000 		.4byte	0x9d0
+ 2098 09ca 05       		.uleb128 0x5
+ 2099 09cb 03       		.byte	0x3
+ 2100 09cc 00000000 		.4byte	THROTTLE_MAP
+ 2101 09d0 1F       		.uleb128 0x1f
+ 2102 09d1 AA090000 		.4byte	0x9aa
+ 2103 09d5 1E       		.uleb128 0x1e
+ 2104 09d6 FC010000 		.4byte	.LASF63
+ 2105 09da 01       		.byte	0x1
+ 2106 09db 4C       		.byte	0x4c
+ 2107 09dc D9000000 		.4byte	0xd9
+ 2108 09e0 05       		.uleb128 0x5
+ 2109 09e1 03       		.byte	0x3
+ 2110 09e2 00000000 		.4byte	HVSwitch
+ 2111 09e6 1E       		.uleb128 0x1e
+ 2112 09e7 0A040000 		.4byte	.LASF64
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 52
+
+
+ 2113 09eb 01       		.byte	0x1
+ 2114 09ec 4D       		.byte	0x4d
+ 2115 09ed D9000000 		.4byte	0xd9
+ 2116 09f1 05       		.uleb128 0x5
+ 2117 09f2 03       		.byte	0x3
+ 2118 09f3 00000000 		.4byte	DriveSwitch
+ 2119 09f7 1E       		.uleb128 0x1e
+ 2120 09f8 18010000 		.4byte	.LASF65
+ 2121 09fc 01       		.byte	0x1
+ 2122 09fd 51       		.byte	0x51
+ 2123 09fe EB010000 		.4byte	0x1eb
+ 2124 0a02 05       		.uleb128 0x5
+ 2125 0a03 03       		.byte	0x3
+ 2126 0a04 00000000 		.4byte	pedalOK
+ 2127 0a08 20       		.uleb128 0x20
+ 2128 0a09 F9030000 		.4byte	.LASF66
+ 2129 0a0d F9030000 		.4byte	.LASF66
+ 2130 0a11 07       		.byte	0x7
+ 2131 0a12 5A       		.byte	0x5a
+ 2132 0a13 20       		.uleb128 0x20
+ 2133 0a14 CA010000 		.4byte	.LASF67
+ 2134 0a18 CA010000 		.4byte	.LASF67
+ 2135 0a1c 08       		.byte	0x8
+ 2136 0a1d 17       		.byte	0x17
+ 2137 0a1e 20       		.uleb128 0x20
+ 2138 0a1f 20010000 		.4byte	.LASF68
+ 2139 0a23 20010000 		.4byte	.LASF68
+ 2140 0a27 09       		.byte	0x9
+ 2141 0a28 14       		.byte	0x14
+ 2142 0a29 20       		.uleb128 0x20
+ 2143 0a2a A0020000 		.4byte	.LASF69
+ 2144 0a2e A0020000 		.4byte	.LASF69
+ 2145 0a32 09       		.byte	0x9
+ 2146 0a33 17       		.byte	0x17
+ 2147 0a34 20       		.uleb128 0x20
+ 2148 0a35 3E050000 		.4byte	.LASF70
+ 2149 0a39 3E050000 		.4byte	.LASF70
+ 2150 0a3d 0A       		.byte	0xa
+ 2151 0a3e 77       		.byte	0x77
+ 2152 0a3f 20       		.uleb128 0x20
+ 2153 0a40 05020000 		.4byte	.LASF71
+ 2154 0a44 05020000 		.4byte	.LASF71
+ 2155 0a48 0B       		.byte	0xb
+ 2156 0a49 2F       		.byte	0x2f
+ 2157 0a4a 20       		.uleb128 0x20
+ 2158 0a4b 72020000 		.4byte	.LASF72
+ 2159 0a4f 72020000 		.4byte	.LASF72
+ 2160 0a53 0C       		.byte	0xc
+ 2161 0a54 2F       		.byte	0x2f
+ 2162 0a55 20       		.uleb128 0x20
+ 2163 0a56 57040000 		.4byte	.LASF73
+ 2164 0a5a 57040000 		.4byte	.LASF73
+ 2165 0a5e 0D       		.byte	0xd
+ 2166 0a5f 2F       		.byte	0x2f
+ 2167 0a60 20       		.uleb128 0x20
+ 2168 0a61 6E010000 		.4byte	.LASF74
+ 2169 0a65 6E010000 		.4byte	.LASF74
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 53
+
+
+ 2170 0a69 0E       		.byte	0xe
+ 2171 0a6a 2F       		.byte	0x2f
+ 2172 0a6b 20       		.uleb128 0x20
+ 2173 0a6c 16040000 		.4byte	.LASF75
+ 2174 0a70 16040000 		.4byte	.LASF75
+ 2175 0a74 05       		.byte	0x5
+ 2176 0a75 C8       		.byte	0xc8
+ 2177 0a76 20       		.uleb128 0x20
+ 2178 0a77 51030000 		.4byte	.LASF76
+ 2179 0a7b 51030000 		.4byte	.LASF76
+ 2180 0a7f 05       		.byte	0x5
+ 2181 0a80 C4       		.byte	0xc4
+ 2182 0a81 20       		.uleb128 0x20
+ 2183 0a82 07000000 		.4byte	.LASF77
+ 2184 0a86 07000000 		.4byte	.LASF77
+ 2185 0a8a 05       		.byte	0x5
+ 2186 0a8b C5       		.byte	0xc5
+ 2187 0a8c 20       		.uleb128 0x20
+ 2188 0a8d CA000000 		.4byte	.LASF78
+ 2189 0a91 CA000000 		.4byte	.LASF78
+ 2190 0a95 09       		.byte	0x9
+ 2191 0a96 15       		.byte	0x15
+ 2192 0a97 20       		.uleb128 0x20
+ 2193 0a98 80020000 		.4byte	.LASF79
+ 2194 0a9c 80020000 		.4byte	.LASF79
+ 2195 0aa0 0F       		.byte	0xf
+ 2196 0aa1 26       		.byte	0x26
+ 2197 0aa2 20       		.uleb128 0x20
+ 2198 0aa3 3C020000 		.4byte	.LASF80
+ 2199 0aa7 3C020000 		.4byte	.LASF80
+ 2200 0aab 10       		.byte	0x10
+ 2201 0aac 28       		.byte	0x28
+ 2202 0aad 20       		.uleb128 0x20
+ 2203 0aae 13020000 		.4byte	.LASF81
+ 2204 0ab2 13020000 		.4byte	.LASF81
+ 2205 0ab6 11       		.byte	0x11
+ 2206 0ab7 28       		.byte	0x28
+ 2207 0ab8 20       		.uleb128 0x20
+ 2208 0ab9 EF010000 		.4byte	.LASF82
+ 2209 0abd EF010000 		.4byte	.LASF82
+ 2210 0ac1 12       		.byte	0x12
+ 2211 0ac2 28       		.byte	0x28
+ 2212 0ac3 20       		.uleb128 0x20
+ 2213 0ac4 4C050000 		.4byte	.LASF83
+ 2214 0ac8 4C050000 		.4byte	.LASF83
+ 2215 0acc 13       		.byte	0x13
+ 2216 0acd 28       		.byte	0x28
+ 2217 0ace 20       		.uleb128 0x20
+ 2218 0acf 30030000 		.4byte	.LASF84
+ 2219 0ad3 30030000 		.4byte	.LASF84
+ 2220 0ad7 14       		.byte	0x14
+ 2221 0ad8 28       		.byte	0x28
+ 2222 0ad9 20       		.uleb128 0x20
+ 2223 0ada 87040000 		.4byte	.LASF85
+ 2224 0ade 87040000 		.4byte	.LASF85
+ 2225 0ae2 15       		.byte	0x15
+ 2226 0ae3 28       		.byte	0x28
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 54
+
+
+ 2227 0ae4 20       		.uleb128 0x20
+ 2228 0ae5 33010000 		.4byte	.LASF86
+ 2229 0ae9 33010000 		.4byte	.LASF86
+ 2230 0aed 16       		.byte	0x16
+ 2231 0aee 29       		.byte	0x29
+ 2232 0aef 20       		.uleb128 0x20
+ 2233 0af0 F8000000 		.4byte	.LASF87
+ 2234 0af4 F8000000 		.4byte	.LASF87
+ 2235 0af8 17       		.byte	0x17
+ 2236 0af9 29       		.byte	0x29
+ 2237 0afa 20       		.uleb128 0x20
+ 2238 0afb 90000000 		.4byte	.LASF88
+ 2239 0aff 90000000 		.4byte	.LASF88
+ 2240 0b03 09       		.byte	0x9
+ 2241 0b04 1B       		.byte	0x1b
+ 2242 0b05 20       		.uleb128 0x20
+ 2243 0b06 B4020000 		.4byte	.LASF89
+ 2244 0b0a B4020000 		.4byte	.LASF89
+ 2245 0b0e 09       		.byte	0x9
+ 2246 0b0f 1A       		.byte	0x1a
+ 2247 0b10 20       		.uleb128 0x20
+ 2248 0b11 46010000 		.4byte	.LASF90
+ 2249 0b15 46010000 		.4byte	.LASF90
+ 2250 0b19 09       		.byte	0x9
+ 2251 0b1a 1C       		.byte	0x1c
+ 2252 0b1b 20       		.uleb128 0x20
+ 2253 0b1c 6D030000 		.4byte	.LASF91
+ 2254 0b20 6D030000 		.4byte	.LASF91
+ 2255 0b24 09       		.byte	0x9
+ 2256 0b25 1E       		.byte	0x1e
+ 2257 0b26 20       		.uleb128 0x20
+ 2258 0b27 BE010000 		.4byte	.LASF92
+ 2259 0b2b BE010000 		.4byte	.LASF92
+ 2260 0b2f 09       		.byte	0x9
+ 2261 0b30 1D       		.byte	0x1d
+ 2262 0b31 20       		.uleb128 0x20
+ 2263 0b32 65040000 		.4byte	.LASF93
+ 2264 0b36 65040000 		.4byte	.LASF93
+ 2265 0b3a 09       		.byte	0x9
+ 2266 0b3b 19       		.byte	0x19
+ 2267 0b3c 20       		.uleb128 0x20
+ 2268 0b3d 80000000 		.4byte	.LASF94
+ 2269 0b41 80000000 		.4byte	.LASF94
+ 2270 0b45 18       		.byte	0x18
+ 2271 0b46 28       		.byte	0x28
+ 2272 0b47 00       		.byte	0
+ 2273              		.section	.debug_abbrev,"",%progbits
+ 2274              	.Ldebug_abbrev0:
+ 2275 0000 01       		.uleb128 0x1
+ 2276 0001 11       		.uleb128 0x11
+ 2277 0002 01       		.byte	0x1
+ 2278 0003 25       		.uleb128 0x25
+ 2279 0004 0E       		.uleb128 0xe
+ 2280 0005 13       		.uleb128 0x13
+ 2281 0006 0B       		.uleb128 0xb
+ 2282 0007 03       		.uleb128 0x3
+ 2283 0008 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 55
+
+
+ 2284 0009 1B       		.uleb128 0x1b
+ 2285 000a 0E       		.uleb128 0xe
+ 2286 000b 55       		.uleb128 0x55
+ 2287 000c 17       		.uleb128 0x17
+ 2288 000d 11       		.uleb128 0x11
+ 2289 000e 01       		.uleb128 0x1
+ 2290 000f 10       		.uleb128 0x10
+ 2291 0010 17       		.uleb128 0x17
+ 2292 0011 00       		.byte	0
+ 2293 0012 00       		.byte	0
+ 2294 0013 02       		.uleb128 0x2
+ 2295 0014 16       		.uleb128 0x16
+ 2296 0015 00       		.byte	0
+ 2297 0016 03       		.uleb128 0x3
+ 2298 0017 0E       		.uleb128 0xe
+ 2299 0018 3A       		.uleb128 0x3a
+ 2300 0019 0B       		.uleb128 0xb
+ 2301 001a 3B       		.uleb128 0x3b
+ 2302 001b 0B       		.uleb128 0xb
+ 2303 001c 49       		.uleb128 0x49
+ 2304 001d 13       		.uleb128 0x13
+ 2305 001e 00       		.byte	0
+ 2306 001f 00       		.byte	0
+ 2307 0020 03       		.uleb128 0x3
+ 2308 0021 24       		.uleb128 0x24
+ 2309 0022 00       		.byte	0
+ 2310 0023 0B       		.uleb128 0xb
+ 2311 0024 0B       		.uleb128 0xb
+ 2312 0025 3E       		.uleb128 0x3e
+ 2313 0026 0B       		.uleb128 0xb
+ 2314 0027 03       		.uleb128 0x3
+ 2315 0028 0E       		.uleb128 0xe
+ 2316 0029 00       		.byte	0
+ 2317 002a 00       		.byte	0
+ 2318 002b 04       		.uleb128 0x4
+ 2319 002c 24       		.uleb128 0x24
+ 2320 002d 00       		.byte	0
+ 2321 002e 0B       		.uleb128 0xb
+ 2322 002f 0B       		.uleb128 0xb
+ 2323 0030 3E       		.uleb128 0x3e
+ 2324 0031 0B       		.uleb128 0xb
+ 2325 0032 03       		.uleb128 0x3
+ 2326 0033 08       		.uleb128 0x8
+ 2327 0034 00       		.byte	0
+ 2328 0035 00       		.byte	0
+ 2329 0036 05       		.uleb128 0x5
+ 2330 0037 16       		.uleb128 0x16
+ 2331 0038 00       		.byte	0
+ 2332 0039 03       		.uleb128 0x3
+ 2333 003a 0E       		.uleb128 0xe
+ 2334 003b 3A       		.uleb128 0x3a
+ 2335 003c 0B       		.uleb128 0xb
+ 2336 003d 3B       		.uleb128 0x3b
+ 2337 003e 05       		.uleb128 0x5
+ 2338 003f 49       		.uleb128 0x49
+ 2339 0040 13       		.uleb128 0x13
+ 2340 0041 00       		.byte	0
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 56
+
+
+ 2341 0042 00       		.byte	0
+ 2342 0043 06       		.uleb128 0x6
+ 2343 0044 35       		.uleb128 0x35
+ 2344 0045 00       		.byte	0
+ 2345 0046 49       		.uleb128 0x49
+ 2346 0047 13       		.uleb128 0x13
+ 2347 0048 00       		.byte	0
+ 2348 0049 00       		.byte	0
+ 2349 004a 07       		.uleb128 0x7
+ 2350 004b 13       		.uleb128 0x13
+ 2351 004c 01       		.byte	0x1
+ 2352 004d 0B       		.uleb128 0xb
+ 2353 004e 0B       		.uleb128 0xb
+ 2354 004f 3A       		.uleb128 0x3a
+ 2355 0050 0B       		.uleb128 0xb
+ 2356 0051 3B       		.uleb128 0x3b
+ 2357 0052 0B       		.uleb128 0xb
+ 2358 0053 01       		.uleb128 0x1
+ 2359 0054 13       		.uleb128 0x13
+ 2360 0055 00       		.byte	0
+ 2361 0056 00       		.byte	0
+ 2362 0057 08       		.uleb128 0x8
+ 2363 0058 0D       		.uleb128 0xd
+ 2364 0059 00       		.byte	0
+ 2365 005a 03       		.uleb128 0x3
+ 2366 005b 0E       		.uleb128 0xe
+ 2367 005c 3A       		.uleb128 0x3a
+ 2368 005d 0B       		.uleb128 0xb
+ 2369 005e 3B       		.uleb128 0x3b
+ 2370 005f 0B       		.uleb128 0xb
+ 2371 0060 49       		.uleb128 0x49
+ 2372 0061 13       		.uleb128 0x13
+ 2373 0062 38       		.uleb128 0x38
+ 2374 0063 0B       		.uleb128 0xb
+ 2375 0064 00       		.byte	0
+ 2376 0065 00       		.byte	0
+ 2377 0066 09       		.uleb128 0x9
+ 2378 0067 01       		.uleb128 0x1
+ 2379 0068 01       		.byte	0x1
+ 2380 0069 49       		.uleb128 0x49
+ 2381 006a 13       		.uleb128 0x13
+ 2382 006b 01       		.uleb128 0x1
+ 2383 006c 13       		.uleb128 0x13
+ 2384 006d 00       		.byte	0
+ 2385 006e 00       		.byte	0
+ 2386 006f 0A       		.uleb128 0xa
+ 2387 0070 21       		.uleb128 0x21
+ 2388 0071 00       		.byte	0
+ 2389 0072 49       		.uleb128 0x49
+ 2390 0073 13       		.uleb128 0x13
+ 2391 0074 2F       		.uleb128 0x2f
+ 2392 0075 0B       		.uleb128 0xb
+ 2393 0076 00       		.byte	0
+ 2394 0077 00       		.byte	0
+ 2395 0078 0B       		.uleb128 0xb
+ 2396 0079 04       		.uleb128 0x4
+ 2397 007a 01       		.byte	0x1
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 57
+
+
+ 2398 007b 0B       		.uleb128 0xb
+ 2399 007c 0B       		.uleb128 0xb
+ 2400 007d 49       		.uleb128 0x49
+ 2401 007e 13       		.uleb128 0x13
+ 2402 007f 3A       		.uleb128 0x3a
+ 2403 0080 0B       		.uleb128 0xb
+ 2404 0081 3B       		.uleb128 0x3b
+ 2405 0082 0B       		.uleb128 0xb
+ 2406 0083 01       		.uleb128 0x1
+ 2407 0084 13       		.uleb128 0x13
+ 2408 0085 00       		.byte	0
+ 2409 0086 00       		.byte	0
+ 2410 0087 0C       		.uleb128 0xc
+ 2411 0088 28       		.uleb128 0x28
+ 2412 0089 00       		.byte	0
+ 2413 008a 03       		.uleb128 0x3
+ 2414 008b 0E       		.uleb128 0xe
+ 2415 008c 1C       		.uleb128 0x1c
+ 2416 008d 0B       		.uleb128 0xb
+ 2417 008e 00       		.byte	0
+ 2418 008f 00       		.byte	0
+ 2419 0090 0D       		.uleb128 0xd
+ 2420 0091 28       		.uleb128 0x28
+ 2421 0092 00       		.byte	0
+ 2422 0093 03       		.uleb128 0x3
+ 2423 0094 08       		.uleb128 0x8
+ 2424 0095 1C       		.uleb128 0x1c
+ 2425 0096 0B       		.uleb128 0xb
+ 2426 0097 00       		.byte	0
+ 2427 0098 00       		.byte	0
+ 2428 0099 0E       		.uleb128 0xe
+ 2429 009a 2E       		.uleb128 0x2e
+ 2430 009b 01       		.byte	0x1
+ 2431 009c 3F       		.uleb128 0x3f
+ 2432 009d 19       		.uleb128 0x19
+ 2433 009e 03       		.uleb128 0x3
+ 2434 009f 0E       		.uleb128 0xe
+ 2435 00a0 3A       		.uleb128 0x3a
+ 2436 00a1 0B       		.uleb128 0xb
+ 2437 00a2 3B       		.uleb128 0x3b
+ 2438 00a3 0B       		.uleb128 0xb
+ 2439 00a4 11       		.uleb128 0x11
+ 2440 00a5 01       		.uleb128 0x1
+ 2441 00a6 12       		.uleb128 0x12
+ 2442 00a7 06       		.uleb128 0x6
+ 2443 00a8 40       		.uleb128 0x40
+ 2444 00a9 18       		.uleb128 0x18
+ 2445 00aa 9742     		.uleb128 0x2117
+ 2446 00ac 19       		.uleb128 0x19
+ 2447 00ad 01       		.uleb128 0x1
+ 2448 00ae 13       		.uleb128 0x13
+ 2449 00af 00       		.byte	0
+ 2450 00b0 00       		.byte	0
+ 2451 00b1 0F       		.uleb128 0xf
+ 2452 00b2 898201   		.uleb128 0x4109
+ 2453 00b5 00       		.byte	0
+ 2454 00b6 11       		.uleb128 0x11
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 58
+
+
+ 2455 00b7 01       		.uleb128 0x1
+ 2456 00b8 31       		.uleb128 0x31
+ 2457 00b9 13       		.uleb128 0x13
+ 2458 00ba 00       		.byte	0
+ 2459 00bb 00       		.byte	0
+ 2460 00bc 10       		.uleb128 0x10
+ 2461 00bd 2E       		.uleb128 0x2e
+ 2462 00be 01       		.byte	0x1
+ 2463 00bf 3F       		.uleb128 0x3f
+ 2464 00c0 19       		.uleb128 0x19
+ 2465 00c1 03       		.uleb128 0x3
+ 2466 00c2 0E       		.uleb128 0xe
+ 2467 00c3 3A       		.uleb128 0x3a
+ 2468 00c4 0B       		.uleb128 0xb
+ 2469 00c5 3B       		.uleb128 0x3b
+ 2470 00c6 0B       		.uleb128 0xb
+ 2471 00c7 49       		.uleb128 0x49
+ 2472 00c8 13       		.uleb128 0x13
+ 2473 00c9 8701     		.uleb128 0x87
+ 2474 00cb 19       		.uleb128 0x19
+ 2475 00cc 11       		.uleb128 0x11
+ 2476 00cd 01       		.uleb128 0x1
+ 2477 00ce 12       		.uleb128 0x12
+ 2478 00cf 06       		.uleb128 0x6
+ 2479 00d0 40       		.uleb128 0x40
+ 2480 00d1 18       		.uleb128 0x18
+ 2481 00d2 9642     		.uleb128 0x2116
+ 2482 00d4 19       		.uleb128 0x19
+ 2483 00d5 01       		.uleb128 0x1
+ 2484 00d6 13       		.uleb128 0x13
+ 2485 00d7 00       		.byte	0
+ 2486 00d8 00       		.byte	0
+ 2487 00d9 11       		.uleb128 0x11
+ 2488 00da 34       		.uleb128 0x34
+ 2489 00db 00       		.byte	0
+ 2490 00dc 03       		.uleb128 0x3
+ 2491 00dd 0E       		.uleb128 0xe
+ 2492 00de 3A       		.uleb128 0x3a
+ 2493 00df 0B       		.uleb128 0xb
+ 2494 00e0 3B       		.uleb128 0x3b
+ 2495 00e1 0B       		.uleb128 0xb
+ 2496 00e2 49       		.uleb128 0x49
+ 2497 00e3 13       		.uleb128 0x13
+ 2498 00e4 02       		.uleb128 0x2
+ 2499 00e5 17       		.uleb128 0x17
+ 2500 00e6 00       		.byte	0
+ 2501 00e7 00       		.byte	0
+ 2502 00e8 12       		.uleb128 0x12
+ 2503 00e9 34       		.uleb128 0x34
+ 2504 00ea 00       		.byte	0
+ 2505 00eb 03       		.uleb128 0x3
+ 2506 00ec 0E       		.uleb128 0xe
+ 2507 00ed 3A       		.uleb128 0x3a
+ 2508 00ee 0B       		.uleb128 0xb
+ 2509 00ef 3B       		.uleb128 0x3b
+ 2510 00f0 0B       		.uleb128 0xb
+ 2511 00f1 49       		.uleb128 0x49
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 59
+
+
+ 2512 00f2 13       		.uleb128 0x13
+ 2513 00f3 1C       		.uleb128 0x1c
+ 2514 00f4 0B       		.uleb128 0xb
+ 2515 00f5 00       		.byte	0
+ 2516 00f6 00       		.byte	0
+ 2517 00f7 13       		.uleb128 0x13
+ 2518 00f8 34       		.uleb128 0x34
+ 2519 00f9 00       		.byte	0
+ 2520 00fa 03       		.uleb128 0x3
+ 2521 00fb 0E       		.uleb128 0xe
+ 2522 00fc 3A       		.uleb128 0x3a
+ 2523 00fd 0B       		.uleb128 0xb
+ 2524 00fe 3B       		.uleb128 0x3b
+ 2525 00ff 0B       		.uleb128 0xb
+ 2526 0100 49       		.uleb128 0x49
+ 2527 0101 13       		.uleb128 0x13
+ 2528 0102 02       		.uleb128 0x2
+ 2529 0103 18       		.uleb128 0x18
+ 2530 0104 00       		.byte	0
+ 2531 0105 00       		.byte	0
+ 2532 0106 14       		.uleb128 0x14
+ 2533 0107 0B       		.uleb128 0xb
+ 2534 0108 01       		.byte	0x1
+ 2535 0109 55       		.uleb128 0x55
+ 2536 010a 17       		.uleb128 0x17
+ 2537 010b 01       		.uleb128 0x1
+ 2538 010c 13       		.uleb128 0x13
+ 2539 010d 00       		.byte	0
+ 2540 010e 00       		.byte	0
+ 2541 010f 15       		.uleb128 0x15
+ 2542 0110 34       		.uleb128 0x34
+ 2543 0111 00       		.byte	0
+ 2544 0112 03       		.uleb128 0x3
+ 2545 0113 08       		.uleb128 0x8
+ 2546 0114 3A       		.uleb128 0x3a
+ 2547 0115 0B       		.uleb128 0xb
+ 2548 0116 3B       		.uleb128 0x3b
+ 2549 0117 05       		.uleb128 0x5
+ 2550 0118 49       		.uleb128 0x49
+ 2551 0119 13       		.uleb128 0x13
+ 2552 011a 02       		.uleb128 0x2
+ 2553 011b 17       		.uleb128 0x17
+ 2554 011c 00       		.byte	0
+ 2555 011d 00       		.byte	0
+ 2556 011e 16       		.uleb128 0x16
+ 2557 011f 34       		.uleb128 0x34
+ 2558 0120 00       		.byte	0
+ 2559 0121 03       		.uleb128 0x3
+ 2560 0122 0E       		.uleb128 0xe
+ 2561 0123 3A       		.uleb128 0x3a
+ 2562 0124 0B       		.uleb128 0xb
+ 2563 0125 3B       		.uleb128 0x3b
+ 2564 0126 05       		.uleb128 0x5
+ 2565 0127 49       		.uleb128 0x49
+ 2566 0128 13       		.uleb128 0x13
+ 2567 0129 00       		.byte	0
+ 2568 012a 00       		.byte	0
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 60
+
+
+ 2569 012b 17       		.uleb128 0x17
+ 2570 012c 34       		.uleb128 0x34
+ 2571 012d 00       		.byte	0
+ 2572 012e 03       		.uleb128 0x3
+ 2573 012f 0E       		.uleb128 0xe
+ 2574 0130 3A       		.uleb128 0x3a
+ 2575 0131 0B       		.uleb128 0xb
+ 2576 0132 3B       		.uleb128 0x3b
+ 2577 0133 05       		.uleb128 0x5
+ 2578 0134 49       		.uleb128 0x49
+ 2579 0135 13       		.uleb128 0x13
+ 2580 0136 02       		.uleb128 0x2
+ 2581 0137 17       		.uleb128 0x17
+ 2582 0138 00       		.byte	0
+ 2583 0139 00       		.byte	0
+ 2584 013a 18       		.uleb128 0x18
+ 2585 013b 34       		.uleb128 0x34
+ 2586 013c 00       		.byte	0
+ 2587 013d 03       		.uleb128 0x3
+ 2588 013e 0E       		.uleb128 0xe
+ 2589 013f 3A       		.uleb128 0x3a
+ 2590 0140 0B       		.uleb128 0xb
+ 2591 0141 3B       		.uleb128 0x3b
+ 2592 0142 05       		.uleb128 0x5
+ 2593 0143 49       		.uleb128 0x49
+ 2594 0144 13       		.uleb128 0x13
+ 2595 0145 02       		.uleb128 0x2
+ 2596 0146 18       		.uleb128 0x18
+ 2597 0147 00       		.byte	0
+ 2598 0148 00       		.byte	0
+ 2599 0149 19       		.uleb128 0x19
+ 2600 014a 898201   		.uleb128 0x4109
+ 2601 014d 01       		.byte	0x1
+ 2602 014e 11       		.uleb128 0x11
+ 2603 014f 01       		.uleb128 0x1
+ 2604 0150 31       		.uleb128 0x31
+ 2605 0151 13       		.uleb128 0x13
+ 2606 0152 01       		.uleb128 0x1
+ 2607 0153 13       		.uleb128 0x13
+ 2608 0154 00       		.byte	0
+ 2609 0155 00       		.byte	0
+ 2610 0156 1A       		.uleb128 0x1a
+ 2611 0157 8A8201   		.uleb128 0x410a
+ 2612 015a 00       		.byte	0
+ 2613 015b 02       		.uleb128 0x2
+ 2614 015c 18       		.uleb128 0x18
+ 2615 015d 9142     		.uleb128 0x2111
+ 2616 015f 18       		.uleb128 0x18
+ 2617 0160 00       		.byte	0
+ 2618 0161 00       		.byte	0
+ 2619 0162 1B       		.uleb128 0x1b
+ 2620 0163 898201   		.uleb128 0x4109
+ 2621 0166 01       		.byte	0x1
+ 2622 0167 11       		.uleb128 0x11
+ 2623 0168 01       		.uleb128 0x1
+ 2624 0169 31       		.uleb128 0x31
+ 2625 016a 13       		.uleb128 0x13
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 61
+
+
+ 2626 016b 00       		.byte	0
+ 2627 016c 00       		.byte	0
+ 2628 016d 1C       		.uleb128 0x1c
+ 2629 016e 2E       		.uleb128 0x2e
+ 2630 016f 00       		.byte	0
+ 2631 0170 3F       		.uleb128 0x3f
+ 2632 0171 19       		.uleb128 0x19
+ 2633 0172 03       		.uleb128 0x3
+ 2634 0173 0E       		.uleb128 0xe
+ 2635 0174 3A       		.uleb128 0x3a
+ 2636 0175 0B       		.uleb128 0xb
+ 2637 0176 3B       		.uleb128 0x3b
+ 2638 0177 05       		.uleb128 0x5
+ 2639 0178 27       		.uleb128 0x27
+ 2640 0179 19       		.uleb128 0x19
+ 2641 017a 11       		.uleb128 0x11
+ 2642 017b 01       		.uleb128 0x1
+ 2643 017c 12       		.uleb128 0x12
+ 2644 017d 06       		.uleb128 0x6
+ 2645 017e 40       		.uleb128 0x40
+ 2646 017f 18       		.uleb128 0x18
+ 2647 0180 9742     		.uleb128 0x2117
+ 2648 0182 19       		.uleb128 0x19
+ 2649 0183 00       		.byte	0
+ 2650 0184 00       		.byte	0
+ 2651 0185 1D       		.uleb128 0x1d
+ 2652 0186 34       		.uleb128 0x34
+ 2653 0187 00       		.byte	0
+ 2654 0188 03       		.uleb128 0x3
+ 2655 0189 0E       		.uleb128 0xe
+ 2656 018a 3A       		.uleb128 0x3a
+ 2657 018b 0B       		.uleb128 0xb
+ 2658 018c 3B       		.uleb128 0x3b
+ 2659 018d 05       		.uleb128 0x5
+ 2660 018e 49       		.uleb128 0x49
+ 2661 018f 13       		.uleb128 0x13
+ 2662 0190 3F       		.uleb128 0x3f
+ 2663 0191 19       		.uleb128 0x19
+ 2664 0192 3C       		.uleb128 0x3c
+ 2665 0193 19       		.uleb128 0x19
+ 2666 0194 00       		.byte	0
+ 2667 0195 00       		.byte	0
+ 2668 0196 1E       		.uleb128 0x1e
+ 2669 0197 34       		.uleb128 0x34
+ 2670 0198 00       		.byte	0
+ 2671 0199 03       		.uleb128 0x3
+ 2672 019a 0E       		.uleb128 0xe
+ 2673 019b 3A       		.uleb128 0x3a
+ 2674 019c 0B       		.uleb128 0xb
+ 2675 019d 3B       		.uleb128 0x3b
+ 2676 019e 0B       		.uleb128 0xb
+ 2677 019f 49       		.uleb128 0x49
+ 2678 01a0 13       		.uleb128 0x13
+ 2679 01a1 3F       		.uleb128 0x3f
+ 2680 01a2 19       		.uleb128 0x19
+ 2681 01a3 02       		.uleb128 0x2
+ 2682 01a4 18       		.uleb128 0x18
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 62
+
+
+ 2683 01a5 00       		.byte	0
+ 2684 01a6 00       		.byte	0
+ 2685 01a7 1F       		.uleb128 0x1f
+ 2686 01a8 26       		.uleb128 0x26
+ 2687 01a9 00       		.byte	0
+ 2688 01aa 49       		.uleb128 0x49
+ 2689 01ab 13       		.uleb128 0x13
+ 2690 01ac 00       		.byte	0
+ 2691 01ad 00       		.byte	0
+ 2692 01ae 20       		.uleb128 0x20
+ 2693 01af 2E       		.uleb128 0x2e
+ 2694 01b0 00       		.byte	0
+ 2695 01b1 3F       		.uleb128 0x3f
+ 2696 01b2 19       		.uleb128 0x19
+ 2697 01b3 3C       		.uleb128 0x3c
+ 2698 01b4 19       		.uleb128 0x19
+ 2699 01b5 6E       		.uleb128 0x6e
+ 2700 01b6 0E       		.uleb128 0xe
+ 2701 01b7 03       		.uleb128 0x3
+ 2702 01b8 0E       		.uleb128 0xe
+ 2703 01b9 3A       		.uleb128 0x3a
+ 2704 01ba 0B       		.uleb128 0xb
+ 2705 01bb 3B       		.uleb128 0x3b
+ 2706 01bc 0B       		.uleb128 0xb
+ 2707 01bd 00       		.byte	0
+ 2708 01be 00       		.byte	0
+ 2709 01bf 00       		.byte	0
+ 2710              		.section	.debug_loc,"",%progbits
+ 2711              	.Ldebug_loc0:
+ 2712              	.LLST0:
+ 2713 0000 06000000 		.4byte	.LVL2
+ 2714 0004 16000000 		.4byte	.LVL5
+ 2715 0008 0200     		.2byte	0x2
+ 2716 000a 30       		.byte	0x30
+ 2717 000b 9F       		.byte	0x9f
+ 2718 000c 16000000 		.4byte	.LVL5
+ 2719 0010 1A000000 		.4byte	.LVL7
+ 2720 0014 0100     		.2byte	0x1
+ 2721 0016 54       		.byte	0x54
+ 2722 0017 1C000000 		.4byte	.LVL8
+ 2723 001b 1E000000 		.4byte	.LVL9
+ 2724 001f 0100     		.2byte	0x1
+ 2725 0021 54       		.byte	0x54
+ 2726 0022 20000000 		.4byte	.LVL10
+ 2727 0026 22000000 		.4byte	.LVL11
+ 2728 002a 0100     		.2byte	0x1
+ 2729 002c 54       		.byte	0x54
+ 2730 002d 24000000 		.4byte	.LVL12
+ 2731 0031 28000000 		.4byte	.LVL14
+ 2732 0035 0100     		.2byte	0x1
+ 2733 0037 54       		.byte	0x54
+ 2734 0038 2A000000 		.4byte	.LVL15
+ 2735 003c 2E000000 		.4byte	.LVL17
+ 2736 0040 0100     		.2byte	0x1
+ 2737 0042 54       		.byte	0x54
+ 2738 0043 30000000 		.4byte	.LVL18
+ 2739 0047 34000000 		.4byte	.LVL20
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 63
+
+
+ 2740 004b 0100     		.2byte	0x1
+ 2741 004d 54       		.byte	0x54
+ 2742 004e 36000000 		.4byte	.LVL21
+ 2743 0052 3A000000 		.4byte	.LVL23
+ 2744 0056 0100     		.2byte	0x1
+ 2745 0058 54       		.byte	0x54
+ 2746 0059 3C000000 		.4byte	.LVL24
+ 2747 005d 40000000 		.4byte	.LVL26
+ 2748 0061 0100     		.2byte	0x1
+ 2749 0063 54       		.byte	0x54
+ 2750 0064 42000000 		.4byte	.LVL27
+ 2751 0068 46000000 		.4byte	.LVL29
+ 2752 006c 0100     		.2byte	0x1
+ 2753 006e 54       		.byte	0x54
+ 2754 006f 48000000 		.4byte	.LVL30
+ 2755 0073 4C000000 		.4byte	.LVL32
+ 2756 0077 0100     		.2byte	0x1
+ 2757 0079 54       		.byte	0x54
+ 2758 007a 4E000000 		.4byte	.LVL33
+ 2759 007e 6A000000 		.4byte	.LVL37
+ 2760 0082 0100     		.2byte	0x1
+ 2761 0084 54       		.byte	0x54
+ 2762 0085 6A000000 		.4byte	.LVL37
+ 2763 0089 6E000000 		.4byte	.LVL38
+ 2764 008d 0200     		.2byte	0x2
+ 2765 008f 35       		.byte	0x35
+ 2766 0090 9F       		.byte	0x9f
+ 2767 0091 6E000000 		.4byte	.LVL38
+ 2768 0095 CA000000 		.4byte	.LVL50
+ 2769 0099 0100     		.2byte	0x1
+ 2770 009b 54       		.byte	0x54
+ 2771 009c CA000000 		.4byte	.LVL50
+ 2772 00a0 CE000000 		.4byte	.LVL51
+ 2773 00a4 0200     		.2byte	0x2
+ 2774 00a6 31       		.byte	0x31
+ 2775 00a7 9F       		.byte	0x9f
+ 2776 00a8 CE000000 		.4byte	.LVL51
+ 2777 00ac DE010000 		.4byte	.LVL91
+ 2778 00b0 0100     		.2byte	0x1
+ 2779 00b2 54       		.byte	0x54
+ 2780 00b3 DE010000 		.4byte	.LVL91
+ 2781 00b7 E2010000 		.4byte	.LVL92
+ 2782 00bb 0200     		.2byte	0x2
+ 2783 00bd 34       		.byte	0x34
+ 2784 00be 9F       		.byte	0x9f
+ 2785 00bf E2010000 		.4byte	.LVL92
+ 2786 00c3 70020000 		.4byte	.LVL119
+ 2787 00c7 0100     		.2byte	0x1
+ 2788 00c9 54       		.byte	0x54
+ 2789 00ca 70020000 		.4byte	.LVL119
+ 2790 00ce 72020000 		.4byte	.LVL120
+ 2791 00d2 0200     		.2byte	0x2
+ 2792 00d4 31       		.byte	0x31
+ 2793 00d5 9F       		.byte	0x9f
+ 2794 00d6 72020000 		.4byte	.LVL120
+ 2795 00da 78020000 		.4byte	.LVL122
+ 2796 00de 0100     		.2byte	0x1
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 64
+
+
+ 2797 00e0 54       		.byte	0x54
+ 2798 00e1 78020000 		.4byte	.LVL122
+ 2799 00e5 84020000 		.4byte	.LVL124
+ 2800 00e9 0200     		.2byte	0x2
+ 2801 00eb 33       		.byte	0x33
+ 2802 00ec 9F       		.byte	0x9f
+ 2803 00ed 84020000 		.4byte	.LVL124
+ 2804 00f1 A8020000 		.4byte	.LVL126
+ 2805 00f5 0100     		.2byte	0x1
+ 2806 00f7 54       		.byte	0x54
+ 2807 00f8 A8020000 		.4byte	.LVL126
+ 2808 00fc B0020000 		.4byte	.LVL127
+ 2809 0100 0200     		.2byte	0x2
+ 2810 0102 35       		.byte	0x35
+ 2811 0103 9F       		.byte	0x9f
+ 2812 0104 B0020000 		.4byte	.LVL127
+ 2813 0108 7C030000 		.4byte	.LFE65
+ 2814 010c 0100     		.2byte	0x1
+ 2815 010e 54       		.byte	0x54
+ 2816 010f 00000000 		.4byte	0
+ 2817 0113 00000000 		.4byte	0
+ 2818              	.LLST1:
+ 2819 0117 06000000 		.4byte	.LVL2
+ 2820 011b 16000000 		.4byte	.LVL5
+ 2821 011f 0200     		.2byte	0x2
+ 2822 0121 30       		.byte	0x30
+ 2823 0122 9F       		.byte	0x9f
+ 2824 0123 16000000 		.4byte	.LVL5
+ 2825 0127 18000000 		.4byte	.LVL6
+ 2826 012b 0100     		.2byte	0x1
+ 2827 012d 55       		.byte	0x55
+ 2828 012e 1C000000 		.4byte	.LVL8
+ 2829 0132 26000000 		.4byte	.LVL13
+ 2830 0136 0100     		.2byte	0x1
+ 2831 0138 55       		.byte	0x55
+ 2832 0139 2A000000 		.4byte	.LVL15
+ 2833 013d 2C000000 		.4byte	.LVL16
+ 2834 0141 0100     		.2byte	0x1
+ 2835 0143 55       		.byte	0x55
+ 2836 0144 30000000 		.4byte	.LVL18
+ 2837 0148 38000000 		.4byte	.LVL22
+ 2838 014c 0100     		.2byte	0x1
+ 2839 014e 55       		.byte	0x55
+ 2840 014f 3C000000 		.4byte	.LVL24
+ 2841 0153 3E000000 		.4byte	.LVL25
+ 2842 0157 0100     		.2byte	0x1
+ 2843 0159 55       		.byte	0x55
+ 2844 015a 42000000 		.4byte	.LVL27
+ 2845 015e 44000000 		.4byte	.LVL28
+ 2846 0162 0100     		.2byte	0x1
+ 2847 0164 55       		.byte	0x55
+ 2848 0165 48000000 		.4byte	.LVL30
+ 2849 0169 4A000000 		.4byte	.LVL31
+ 2850 016d 0100     		.2byte	0x1
+ 2851 016f 55       		.byte	0x55
+ 2852 0170 4E000000 		.4byte	.LVL33
+ 2853 0174 50000000 		.4byte	.LVL34
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 65
+
+
+ 2854 0178 0100     		.2byte	0x1
+ 2855 017a 55       		.byte	0x55
+ 2856 017b 52000000 		.4byte	.LVL35
+ 2857 017f 6A000000 		.4byte	.LVL37
+ 2858 0183 0100     		.2byte	0x1
+ 2859 0185 55       		.byte	0x55
+ 2860 0186 6A000000 		.4byte	.LVL37
+ 2861 018a 6E000000 		.4byte	.LVL38
+ 2862 018e 0200     		.2byte	0x2
+ 2863 0190 36       		.byte	0x36
+ 2864 0191 9F       		.byte	0x9f
+ 2865 0192 6E000000 		.4byte	.LVL38
+ 2866 0196 A8020000 		.4byte	.LVL126
+ 2867 019a 0100     		.2byte	0x1
+ 2868 019c 55       		.byte	0x55
+ 2869 019d A8020000 		.4byte	.LVL126
+ 2870 01a1 B0020000 		.4byte	.LVL127
+ 2871 01a5 0200     		.2byte	0x2
+ 2872 01a7 34       		.byte	0x34
+ 2873 01a8 9F       		.byte	0x9f
+ 2874 01a9 B0020000 		.4byte	.LVL127
+ 2875 01ad 7C030000 		.4byte	.LFE65
+ 2876 01b1 0100     		.2byte	0x1
+ 2877 01b3 55       		.byte	0x55
+ 2878 01b4 00000000 		.4byte	0
+ 2879 01b8 00000000 		.4byte	0
+ 2880              	.LLST2:
+ 2881 01bc 0A000000 		.4byte	.LVL3
+ 2882 01c0 16000000 		.4byte	.LVL5
+ 2883 01c4 0200     		.2byte	0x2
+ 2884 01c6 30       		.byte	0x30
+ 2885 01c7 9F       		.byte	0x9f
+ 2886 01c8 16000000 		.4byte	.LVL5
+ 2887 01cc 32000000 		.4byte	.LVL19
+ 2888 01d0 0100     		.2byte	0x1
+ 2889 01d2 57       		.byte	0x57
+ 2890 01d3 36000000 		.4byte	.LVL21
+ 2891 01d7 1A020000 		.4byte	.LVL100
+ 2892 01db 0100     		.2byte	0x1
+ 2893 01dd 57       		.byte	0x57
+ 2894 01de 1A020000 		.4byte	.LVL100
+ 2895 01e2 24020000 		.4byte	.LVL103
+ 2896 01e6 0200     		.2byte	0x2
+ 2897 01e8 30       		.byte	0x30
+ 2898 01e9 9F       		.byte	0x9f
+ 2899 01ea 24020000 		.4byte	.LVL103
+ 2900 01ee A8020000 		.4byte	.LVL126
+ 2901 01f2 0100     		.2byte	0x1
+ 2902 01f4 57       		.byte	0x57
+ 2903 01f5 A8020000 		.4byte	.LVL126
+ 2904 01f9 B0020000 		.4byte	.LVL127
+ 2905 01fd 0200     		.2byte	0x2
+ 2906 01ff 30       		.byte	0x30
+ 2907 0200 9F       		.byte	0x9f
+ 2908 0201 B0020000 		.4byte	.LVL127
+ 2909 0205 7C030000 		.4byte	.LFE65
+ 2910 0209 0100     		.2byte	0x1
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 66
+
+
+ 2911 020b 57       		.byte	0x57
+ 2912 020c 00000000 		.4byte	0
+ 2913 0210 00000000 		.4byte	0
+ 2914              	.LLST3:
+ 2915 0214 14020000 		.4byte	.LVL98
+ 2916 0218 20020000 		.4byte	.LVL102
+ 2917 021c 0300     		.2byte	0x3
+ 2918 021e 09       		.byte	0x9
+ 2919 021f FF       		.byte	0xff
+ 2920 0220 9F       		.byte	0x9f
+ 2921 0221 20020000 		.4byte	.LVL102
+ 2922 0225 24020000 		.4byte	.LVL103
+ 2923 0229 0100     		.2byte	0x1
+ 2924 022b 59       		.byte	0x59
+ 2925 022c 24020000 		.4byte	.LVL103
+ 2926 0230 28020000 		.4byte	.LVL104
+ 2927 0234 0300     		.2byte	0x3
+ 2928 0236 09       		.byte	0x9
+ 2929 0237 FF       		.byte	0xff
+ 2930 0238 9F       		.byte	0x9f
+ 2931 0239 28020000 		.4byte	.LVL104
+ 2932 023d B0020000 		.4byte	.LVL127
+ 2933 0241 0100     		.2byte	0x1
+ 2934 0243 59       		.byte	0x59
+ 2935 0244 00000000 		.4byte	0
+ 2936 0248 00000000 		.4byte	0
+ 2937              	.LLST4:
+ 2938 024c 2C020000 		.4byte	.LVL105
+ 2939 0250 34020000 		.4byte	.LVL107
+ 2940 0254 0200     		.2byte	0x2
+ 2941 0256 30       		.byte	0x30
+ 2942 0257 9F       		.byte	0x9f
+ 2943 0258 34020000 		.4byte	.LVL107
+ 2944 025c 3A020000 		.4byte	.LVL109
+ 2945 0260 0100     		.2byte	0x1
+ 2946 0262 56       		.byte	0x56
+ 2947 0263 3A020000 		.4byte	.LVL109
+ 2948 0267 3F020000 		.4byte	.LVL110-1
+ 2949 026b 0100     		.2byte	0x1
+ 2950 026d 50       		.byte	0x50
+ 2951 026e 50020000 		.4byte	.LVL113
+ 2952 0272 5C020000 		.4byte	.LVL116
+ 2953 0276 0100     		.2byte	0x1
+ 2954 0278 50       		.byte	0x50
+ 2955 0279 00000000 		.4byte	0
+ 2956 027d 00000000 		.4byte	0
+ 2957              	.LLST5:
+ 2958 0281 16000000 		.4byte	.LVL5
+ 2959 0285 34020000 		.4byte	.LVL107
+ 2960 0289 0100     		.2byte	0x1
+ 2961 028b 56       		.byte	0x56
+ 2962 028c 58020000 		.4byte	.LVL115
+ 2963 0290 7C030000 		.4byte	.LFE65
+ 2964 0294 0100     		.2byte	0x1
+ 2965 0296 56       		.byte	0x56
+ 2966 0297 00000000 		.4byte	0
+ 2967 029b 00000000 		.4byte	0
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 67
+
+
+ 2968              	.LLST6:
+ 2969 029f 20000000 		.4byte	.LVL10
+ 2970 02a3 2A000000 		.4byte	.LVL15
+ 2971 02a7 0100     		.2byte	0x1
+ 2972 02a9 50       		.byte	0x50
+ 2973 02aa 6A010000 		.4byte	.LVL75
+ 2974 02ae 82010000 		.4byte	.LVL76
+ 2975 02b2 0100     		.2byte	0x1
+ 2976 02b4 50       		.byte	0x50
+ 2977 02b5 00000000 		.4byte	0
+ 2978 02b9 00000000 		.4byte	0
+ 2979              		.section	.debug_aranges,"",%progbits
+ 2980 0000 2C000000 		.4byte	0x2c
+ 2981 0004 0200     		.2byte	0x2
+ 2982 0006 00000000 		.4byte	.Ldebug_info0
+ 2983 000a 04       		.byte	0x4
+ 2984 000b 00       		.byte	0
+ 2985 000c 0000     		.2byte	0
+ 2986 000e 0000     		.2byte	0
+ 2987 0010 00000000 		.4byte	.LFB64
+ 2988 0014 0C000000 		.4byte	.LFE64-.LFB64
+ 2989 0018 00000000 		.4byte	.LFB65
+ 2990 001c 7C030000 		.4byte	.LFE65-.LFB65
+ 2991 0020 00000000 		.4byte	.LFB66
+ 2992 0024 1C000000 		.4byte	.LFE66-.LFB66
+ 2993 0028 00000000 		.4byte	0
+ 2994 002c 00000000 		.4byte	0
+ 2995              		.section	.debug_ranges,"",%progbits
+ 2996              	.Ldebug_ranges0:
+ 2997 0000 16000000 		.4byte	.LBB2
+ 2998 0004 52000000 		.4byte	.LBE2
+ 2999 0008 84000000 		.4byte	.LBB5
+ 3000 000c 7C030000 		.4byte	.LBE5
+ 3001 0010 00000000 		.4byte	0
+ 3002 0014 00000000 		.4byte	0
+ 3003 0018 20000000 		.4byte	.LBB3
+ 3004 001c 2A000000 		.4byte	.LBE3
+ 3005 0020 5C010000 		.4byte	.LBB4
+ 3006 0024 86010000 		.4byte	.LBE4
+ 3007 0028 00000000 		.4byte	0
+ 3008 002c 00000000 		.4byte	0
+ 3009 0030 00000000 		.4byte	.LFB64
+ 3010 0034 0C000000 		.4byte	.LFE64
+ 3011 0038 00000000 		.4byte	.LFB65
+ 3012 003c 7C030000 		.4byte	.LFE65
+ 3013 0040 00000000 		.4byte	.LFB66
+ 3014 0044 1C000000 		.4byte	.LFE66
+ 3015 0048 00000000 		.4byte	0
+ 3016 004c 00000000 		.4byte	0
+ 3017              		.section	.debug_line,"",%progbits
+ 3018              	.Ldebug_line0:
+ 3019 0000 37030000 		.section	.debug_str,"MS",%progbits,1
+ 3019      02003302 
+ 3019      00000201 
+ 3019      FB0E0D00 
+ 3019      01010101 
+ 3020              	.LASF34:
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 68
+
+
+ 3021 0000 7278616D 		.ascii	"rxamrd\000"
+ 3021      726400
+ 3022              	.LASF77:
+ 3023 0007 43414E5F 		.ascii	"CAN_Start\000"
+ 3023      53746172 
+ 3023      7400
+ 3024              	.LASF97:
+ 3025 0011 433A5C55 		.ascii	"C:\\Users\\Schuyler\\Documents\\PSoC Creator\\Dashb"
+ 3025      73657273 
+ 3025      5C536368 
+ 3025      75796C65 
+ 3025      725C446F 
+ 3026 003f 6F617264 		.ascii	"oard\\FE3-Dashboard\\Dashboard.cydsn\000"
+ 3026      5C464533 
+ 3026      2D446173 
+ 3026      68626F61 
+ 3026      72645C44 
+ 3027              	.LASF26:
+ 3028 0062 43414E5F 		.ascii	"CAN_DATA_BYTES\000"
+ 3028      44415441 
+ 3028      5F425954 
+ 3028      455300
+ 3029              	.LASF14:
+ 3030 0071 696E7438 		.ascii	"int8_t\000"
+ 3030      5F7400
+ 3031              	.LASF37:
+ 3032 0078 53746172 		.ascii	"Startup\000"
+ 3032      74757000 
+ 3033              	.LASF94:
+ 3034 0080 4C45445F 		.ascii	"LED_Write\000"
+ 3034      57726974 
+ 3034      6500
+ 3035              	.LASF50:
+ 3036 008a 73746174 		.ascii	"state\000"
+ 3036      6500
+ 3037              	.LASF88:
+ 3038 0090 67657445 		.ascii	"getErrorTolerance\000"
+ 3038      72726F72 
+ 3038      546F6C65 
+ 3038      72616E63 
+ 3038      6500
+ 3039              	.LASF4:
+ 3040 00a2 73686F72 		.ascii	"short int\000"
+ 3040      7420696E 
+ 3040      7400
+ 3041              	.LASF54:
+ 3042 00ac 50726563 		.ascii	"PrechargingTimeCount\000"
+ 3042      68617267 
+ 3042      696E6754 
+ 3042      696D6543 
+ 3042      6F756E74 
+ 3043              	.LASF25:
+ 3044 00c1 73697A65 		.ascii	"sizetype\000"
+ 3044      74797065 
+ 3044      00
+ 3045              	.LASF78:
+ 3046 00ca 63616E5F 		.ascii	"can_send_status\000"
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 69
+
+
+ 3046      73656E64 
+ 3046      5F737461 
+ 3046      74757300 
+ 3047              	.LASF98:
+ 3048 00da 6E6F6465 		.ascii	"nodeCheckStart\000"
+ 3048      43686563 
+ 3048      6B537461 
+ 3048      727400
+ 3049              	.LASF53:
+ 3050 00e9 64697265 		.ascii	"direction\000"
+ 3050      6374696F 
+ 3050      6E00
+ 3051              	.LASF99:
+ 3052 00f3 6D61696E 		.ascii	"main\000"
+ 3052      00
+ 3053              	.LASF87:
+ 3054 00f8 48565F52 		.ascii	"HV_Read\000"
+ 3054      65616400 
+ 3055              	.LASF31:
+ 3056 0100 72786461 		.ascii	"rxdata\000"
+ 3056      746100
+ 3057              	.LASF5:
+ 3058 0107 5F5F7569 		.ascii	"__uint16_t\000"
+ 3058      6E743136 
+ 3058      5F7400
+ 3059              	.LASF40:
+ 3060 0112 44726976 		.ascii	"Drive\000"
+ 3060      6500
+ 3061              	.LASF65:
+ 3062 0118 70656461 		.ascii	"pedalOK\000"
+ 3062      6C4F4B00 
+ 3063              	.LASF68:
+ 3064 0120 63616E5F 		.ascii	"can_send_cmd\000"
+ 3064      73656E64 
+ 3064      5F636D64 
+ 3064      00
+ 3065              	.LASF52:
+ 3066 012d 76616C75 		.ascii	"value\000"
+ 3066      6500
+ 3067              	.LASF86:
+ 3068 0133 44726976 		.ascii	"Drive_Read\000"
+ 3068      655F5265 
+ 3068      616400
+ 3069              	.LASF15:
+ 3070 013e 75696E74 		.ascii	"uint8_t\000"
+ 3070      385F7400 
+ 3071              	.LASF90:
+ 3072 0146 67657441 		.ascii	"getABSMotorRPM\000"
+ 3072      42534D6F 
+ 3072      746F7252 
+ 3072      504D00
+ 3073              	.LASF19:
+ 3074 0155 75696E74 		.ascii	"uint8\000"
+ 3074      3800
+ 3075              	.LASF30:
+ 3076 015b 72786964 		.ascii	"rxid\000"
+ 3076      00
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 70
+
+
+ 3077              	.LASF100:
+ 3078 0160 4142535F 		.ascii	"ABS_Motor_RPM\000"
+ 3078      4D6F746F 
+ 3078      725F5250 
+ 3078      4D00
+ 3079              	.LASF74:
+ 3080 016e 48657834 		.ascii	"Hex4Reg_Write\000"
+ 3080      5265675F 
+ 3080      57726974 
+ 3080      6500
+ 3081              	.LASF33:
+ 3082 017c 72786163 		.ascii	"rxacr\000"
+ 3082      7200
+ 3083              	.LASF44:
+ 3084 0182 66726F6D 		.ascii	"fromPrecharging\000"
+ 3084      50726563 
+ 3084      68617267 
+ 3084      696E6700 
+ 3085              	.LASF2:
+ 3086 0192 7369676E 		.ascii	"signed char\000"
+ 3086      65642063 
+ 3086      68617200 
+ 3087              	.LASF20:
+ 3088 019e 666C6F61 		.ascii	"float\000"
+ 3088      7400
+ 3089              	.LASF11:
+ 3090 01a4 6C6F6E67 		.ascii	"long long int\000"
+ 3090      206C6F6E 
+ 3090      6720696E 
+ 3090      7400
+ 3091              	.LASF48:
+ 3092 01b2 6E6F6465 		.ascii	"nodeFailure\000"
+ 3092      4661696C 
+ 3092      75726500 
+ 3093              	.LASF92:
+ 3094 01be 67657450 		.ascii	"getPedalLow\000"
+ 3094      6564616C 
+ 3094      4C6F7700 
+ 3095              	.LASF67:
+ 3096 01ca 6973725F 		.ascii	"isr_nodeok_Start\000"
+ 3096      6E6F6465 
+ 3096      6F6B5F53 
+ 3096      74617274 
+ 3096      00
+ 3097              	.LASF39:
+ 3098 01db 48565F45 		.ascii	"HV_Enabled\000"
+ 3098      6E61626C 
+ 3098      656400
+ 3099              	.LASF8:
+ 3100 01e6 6C6F6E67 		.ascii	"long int\000"
+ 3100      20696E74 
+ 3100      00
+ 3101              	.LASF82:
+ 3102 01ef 52474231 		.ascii	"RGB1_1_Write\000"
+ 3102      5F315F57 
+ 3102      72697465 
+ 3102      00
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 71
+
+
+ 3103              	.LASF63:
+ 3104 01fc 48565377 		.ascii	"HVSwitch\000"
+ 3104      69746368 
+ 3104      00
+ 3105              	.LASF71:
+ 3106 0205 48657831 		.ascii	"Hex1Reg_Write\000"
+ 3106      5265675F 
+ 3106      57726974 
+ 3106      6500
+ 3107              	.LASF81:
+ 3108 0213 52474232 		.ascii	"RGB2_1_Write\000"
+ 3108      5F315F57 
+ 3108      72697465 
+ 3108      00
+ 3109              	.LASF38:
+ 3110 0220 50726563 		.ascii	"Precharging\000"
+ 3110      68617267 
+ 3110      696E6700 
+ 3111              	.LASF9:
+ 3112 022c 5F5F7569 		.ascii	"__uint32_t\000"
+ 3112      6E743332 
+ 3112      5F7400
+ 3113              	.LASF27:
+ 3114 0237 62797465 		.ascii	"byte\000"
+ 3114      00
+ 3115              	.LASF80:
+ 3116 023c 52474233 		.ascii	"RGB3_1_Write\000"
+ 3116      5F315F57 
+ 3116      72697465 
+ 3116      00
+ 3117              	.LASF3:
+ 3118 0249 756E7369 		.ascii	"unsigned char\000"
+ 3118      676E6564 
+ 3118      20636861 
+ 3118      7200
+ 3119              	.LASF55:
+ 3120 0257 44726976 		.ascii	"DriveTimeCount\000"
+ 3120      6554696D 
+ 3120      65436F75 
+ 3120      6E7400
+ 3121              	.LASF24:
+ 3122 0266 6C6F6E67 		.ascii	"long double\000"
+ 3122      20646F75 
+ 3122      626C6500 
+ 3123              	.LASF72:
+ 3124 0272 48657832 		.ascii	"Hex2Reg_Write\000"
+ 3124      5265675F 
+ 3124      57726974 
+ 3124      6500
+ 3125              	.LASF79:
+ 3126 0280 42757A7A 		.ascii	"Buzzer_Write\000"
+ 3126      65725F57 
+ 3126      72697465 
+ 3126      00
+ 3127              	.LASF62:
+ 3128 028d 5448524F 		.ascii	"THROTTLE_MAP\000"
+ 3128      54544C45 
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 72
+
+
+ 3128      5F4D4150 
+ 3128      00
+ 3129              	.LASF41:
+ 3130 029a 4661756C 		.ascii	"Fault\000"
+ 3130      7400
+ 3131              	.LASF69:
+ 3132 02a0 67657443 		.ascii	"getCapacitorVoltage\000"
+ 3132      61706163 
+ 3132      69746F72 
+ 3132      566F6C74 
+ 3132      61676500 
+ 3133              	.LASF89:
+ 3134 02b4 67657441 		.ascii	"getAckRx\000"
+ 3134      636B5278 
+ 3134      00
+ 3135              	.LASF49:
+ 3136 02bd 4572726F 		.ascii	"Error_State\000"
+ 3136      725F5374 
+ 3136      61746500 
+ 3137              	.LASF59:
+ 3138 02c9 43617061 		.ascii	"CapacitorVolt\000"
+ 3138      6369746F 
+ 3138      72566F6C 
+ 3138      7400
+ 3139              	.LASF61:
+ 3140 02d7 5448524F 		.ascii	"THROTTLE_MULTIPLIER\000"
+ 3140      54544C45 
+ 3140      5F4D554C 
+ 3140      5449504C 
+ 3140      49455200 
+ 3141              	.LASF12:
+ 3142 02eb 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 3142      206C6F6E 
+ 3142      6720756E 
+ 3142      7369676E 
+ 3142      65642069 
+ 3143              	.LASF18:
+ 3144 0302 75696E74 		.ascii	"uint32_t\000"
+ 3144      33325F74 
+ 3144      00
+ 3145              	.LASF45:
+ 3146 030b 66726F6D 		.ascii	"fromHV_Enabled\000"
+ 3146      48565F45 
+ 3146      6E61626C 
+ 3146      656400
+ 3147              	.LASF13:
+ 3148 031a 756E7369 		.ascii	"unsigned int\000"
+ 3148      676E6564 
+ 3148      20696E74 
+ 3148      00
+ 3149              	.LASF16:
+ 3150 0327 75696E74 		.ascii	"uint16_t\000"
+ 3150      31365F74 
+ 3150      00
+ 3151              	.LASF84:
+ 3152 0330 52474232 		.ascii	"RGB2_2_Write\000"
+ 3152      5F325F57 
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 73
+
+
+ 3152      72697465 
+ 3152      00
+ 3153              	.LASF1:
+ 3154 033d 5F5F7569 		.ascii	"__uint8_t\000"
+ 3154      6E74385F 
+ 3154      7400
+ 3155              	.LASF46:
+ 3156 0347 66726F6D 		.ascii	"fromDrive\000"
+ 3156      44726976 
+ 3156      6500
+ 3157              	.LASF76:
+ 3158 0351 43414E5F 		.ascii	"CAN_Init\000"
+ 3158      496E6974 
+ 3158      00
+ 3159              	.LASF6:
+ 3160 035a 73686F72 		.ascii	"short unsigned int\000"
+ 3160      7420756E 
+ 3160      7369676E 
+ 3160      65642069 
+ 3160      6E7400
+ 3161              	.LASF91:
+ 3162 036d 67657450 		.ascii	"getPedalHigh\000"
+ 3162      6564616C 
+ 3162      48696768 
+ 3162      00
+ 3163              	.LASF0:
+ 3164 037a 5F5F696E 		.ascii	"__int8_t\000"
+ 3164      74385F74 
+ 3164      00
+ 3165              	.LASF35:
+ 3166 0383 72786163 		.ascii	"rxacrd\000"
+ 3166      726400
+ 3167              	.LASF22:
+ 3168 038a 63686172 		.ascii	"char\000"
+ 3168      00
+ 3169              	.LASF36:
+ 3170 038f 43414E5F 		.ascii	"CAN_RX_STRUCT\000"
+ 3170      52585F53 
+ 3170      54525543 
+ 3170      5400
+ 3171              	.LASF51:
+ 3172 039d 6572726F 		.ascii	"error_state\000"
+ 3172      725F7374 
+ 3172      61746500 
+ 3173              	.LASF17:
+ 3174 03a9 696E7433 		.ascii	"int32_t\000"
+ 3174      325F7400 
+ 3175              	.LASF29:
+ 3176 03b1 7278636D 		.ascii	"rxcmd\000"
+ 3176      6400
+ 3177              	.LASF43:
+ 3178 03b7 66726F6D 		.ascii	"fromLV\000"
+ 3178      4C5600
+ 3179              	.LASF42:
+ 3180 03be 44617368 		.ascii	"Dash_State\000"
+ 3180      5F537461 
+ 3180      746500
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 74
+
+
+ 3181              	.LASF28:
+ 3182 03c9 43414E5F 		.ascii	"CAN_REG_32\000"
+ 3182      5245475F 
+ 3182      333200
+ 3183              	.LASF96:
+ 3184 03d4 6D61696E 		.ascii	"main.c\000"
+ 3184      2E6300
+ 3185              	.LASF23:
+ 3186 03db 72656738 		.ascii	"reg8\000"
+ 3186      00
+ 3187              	.LASF10:
+ 3188 03e0 6C6F6E67 		.ascii	"long unsigned int\000"
+ 3188      20756E73 
+ 3188      69676E65 
+ 3188      6420696E 
+ 3188      7400
+ 3189              	.LASF21:
+ 3190 03f2 646F7562 		.ascii	"double\000"
+ 3190      6C6500
+ 3191              	.LASF66:
+ 3192 03f9 4E6F6465 		.ascii	"Node_Timer_Start\000"
+ 3192      5F54696D 
+ 3192      65725F53 
+ 3192      74617274 
+ 3192      00
+ 3193              	.LASF64:
+ 3194 040a 44726976 		.ascii	"DriveSwitch\000"
+ 3194      65537769 
+ 3194      74636800 
+ 3195              	.LASF75:
+ 3196 0416 43414E5F 		.ascii	"CAN_GlobalIntEnable\000"
+ 3196      476C6F62 
+ 3196      616C496E 
+ 3196      74456E61 
+ 3196      626C6500 
+ 3197              	.LASF58:
+ 3198 042a 5468726F 		.ascii	"Throttle_Low\000"
+ 3198      74746C65 
+ 3198      5F4C6F77 
+ 3198      00
+ 3199              	.LASF7:
+ 3200 0437 5F5F696E 		.ascii	"__int32_t\000"
+ 3200      7433325F 
+ 3200      7400
+ 3201              	.LASF101:
+ 3202 0441 4953525F 		.ascii	"ISR_CAN\000"
+ 3202      43414E00 
+ 3203              	.LASF57:
+ 3204 0449 5468726F 		.ascii	"Throttle_High\000"
+ 3204      74746C65 
+ 3204      5F486967 
+ 3204      6800
+ 3205              	.LASF73:
+ 3206 0457 48657833 		.ascii	"Hex3Reg_Write\000"
+ 3206      5265675F 
+ 3206      57726974 
+ 3206      6500
+ARM GAS  C:\Users\Schuyler\AppData\Local\Temp\cc6QF1Hy.s 			page 75
+
+
+ 3207              	.LASF93:
+ 3208 0465 67657443 		.ascii	"getCurtisHeartBeatCheck\000"
+ 3208      75727469 
+ 3208      73486561 
+ 3208      72744265 
+ 3208      61744368 
+ 3209              	.LASF47:
+ 3210 047d 66726F6D 		.ascii	"fromFault\000"
+ 3210      4661756C 
+ 3210      7400
+ 3211              	.LASF85:
+ 3212 0487 52474231 		.ascii	"RGB1_2_Write\000"
+ 3212      5F325F57 
+ 3212      72697465 
+ 3212      00
+ 3213              	.LASF56:
+ 3214 0494 5468726F 		.ascii	"Throttle_Total\000"
+ 3214      74746C65 
+ 3214      5F546F74 
+ 3214      616C00
+ 3215              	.LASF60:
+ 3216 04a3 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 3216      52784275 
+ 3216      66666572 
+ 3216      00
+ 3217              	.LASF95:
+ 3218 04b0 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 3218      43313120 
+ 3218      352E342E 
+ 3218      31203230 
+ 3218      31363036 
+ 3219 04e3 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 3219      20726576 
+ 3219      6973696F 
+ 3219      6E203233 
+ 3219      37373135 
+ 3220 0516 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 3220      66756E63 
+ 3220      74696F6E 
+ 3220      2D736563 
+ 3220      74696F6E 
+ 3221              	.LASF70:
+ 3222 053e 43794465 		.ascii	"CyDelay\000"
+ 3222      6C617900 
+ 3223              	.LASF32:
+ 3224 0546 7278616D 		.ascii	"rxamr\000"
+ 3224      7200
+ 3225              	.LASF83:
+ 3226 054c 52474233 		.ascii	"RGB3_2_Write\000"
+ 3226      5F325F57 
+ 3226      72697465 
+ 3226      00
+ 3227              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

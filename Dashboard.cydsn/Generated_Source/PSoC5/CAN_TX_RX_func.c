@@ -25,10 +25,7 @@
 #include "cyapicallbacks.h"
 
 /* `#START TX_RX_FUNCTION` */
-#include "can_manager.h"
-
-extern DataPacket can_queue[];
-extern uint16_t can_head, can_tail;
+#include "can_manga.h"
 
 #define buffer_LEN 8
 extern uint8_t can_buffer[];
@@ -641,6 +638,17 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
         {
             /* `#START MESSAGE_BASIC_RECEIVED` */
             
+            
+            int ID = CAN_GET_RX_ID(rxMailbox);
+            CAN_RX_STRUCT test = CAN_RX[rxMailbox]; // is test always 0s?
+            uint8_t data[8];
+            int i = 0;
+            for (i = 0; i < 8; i++)
+                data[i] = CAN_RX[rxMailbox].rxdata.byte[i];
+            
+            can_receive(data, ID);
+            
+            /*
             uint8_t rx_length, rx_index;
 
 			rx_length = CAN_GET_DLC(rxMailbox); // gets length of message
@@ -659,7 +667,7 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
 
 			if(can_tail == can_head) // if need to roll queue
 				can_head = (can_head + 1) % CAN_QUEUE_LENGTH;
-                
+             */
             /* `#END` */
 
             #ifdef CAN_RECEIVE_MSG_CALLBACK
