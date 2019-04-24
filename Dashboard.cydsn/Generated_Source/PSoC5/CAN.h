@@ -77,7 +77,7 @@ extern uint8 CAN_initVar;
 /* TX/RX Function Enable */
 #define CAN_TX0_FUNC_ENABLE            (1u)
 #define CAN_TX1_FUNC_ENABLE            (1u)
-#define CAN_TX2_FUNC_ENABLE            (0u)
+#define CAN_TX2_FUNC_ENABLE            (1u)
 #define CAN_TX3_FUNC_ENABLE            (0u)
 #define CAN_TX4_FUNC_ENABLE            (0u)
 #define CAN_TX5_FUNC_ENABLE            (0u)
@@ -100,7 +100,7 @@ extern uint8 CAN_initVar;
 #define CAN_RX14_FUNC_ENABLE           (0u)
 #define CAN_RX15_FUNC_ENABLE           (0u)
 #define CAN_RX_MAILBOX_TYPE            (0x0u)
-#define CAN_TX_MAILBOX_TYPE            (0x3u)
+#define CAN_TX_MAILBOX_TYPE            (0x7u)
 
 
 /***************************************
@@ -288,7 +288,7 @@ void  CAN_ReceiveMsg(uint8 rxMailbox) ;
     uint8 CAN_SendMsgDash_cmd(void) ;
 #endif /* CAN_TX1_FUNC_ENABLE */
 #if (CAN_TX2_FUNC_ENABLE)
-    uint8 CAN_SendMsg2(void) ;
+    uint8 CAN_SendMsgSOC(void) ;
 #endif /* CAN_TX2_FUNC_ENABLE */
 #if (CAN_TX3_FUNC_ENABLE)
     uint8 CAN_SendMsg3(void) ;
@@ -413,7 +413,7 @@ void  CAN_ReceiveMsg(uint8 rxMailbox) ;
 /* TX Defines to link mailbox names with mailbox numbers */
 #define CAN_TX_MAILBOX_Dash_status     (0u)
 #define CAN_TX_MAILBOX_Dash_cmd        (1u)
-#define CAN_TX_MAILBOX_2               (2u)
+#define CAN_TX_MAILBOX_SOC             (2u)
 #define CAN_TX_MAILBOX_3               (3u)
 #define CAN_TX_MAILBOX_4               (4u)
 #define CAN_TX_MAILBOX_5               (5u)
@@ -450,7 +450,7 @@ void  CAN_ReceiveMsg(uint8 rxMailbox) ;
 #define CAN_CFG_REG_SJW               (1u - 1u)
 #define CAN_SAMPLING_MODE             (0u)
 #define CAN_ARBITER                   (0u)
-#define CAN_RESET_TYPE                (0u)
+#define CAN_RESET_TYPE                (1u)
 #define CAN_SYNC_EDGE                 (0u)
 
 #if (!(CY_PSOC3 || CY_PSOC5))

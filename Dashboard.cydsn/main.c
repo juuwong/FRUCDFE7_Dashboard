@@ -1,10 +1,15 @@
 #include <project.h>
 #include <stdio.h>
 #include "can_manga.h"
+#include "data.h"
 
 // Uncomment THROTTLE_LIMITING to enable power reduction at high temperatures
 #define THROTTLE_LIMITING
+
+int charge;
 volatile double THROTTLE_MULTIPLIER = 1;
+volatile uint8 PACK_TEMP = 0;
+volatile int32 CURRENT = 0;
 const double THROTTLE_MAP[8] = { 95, 71, 59, 47, 35, 23, 11, 5 };
 
 #define PWM_PULSE_WIDTH_STEP        (10u)
@@ -80,6 +85,8 @@ uint8 DriveSwitch = SWITCH_OFF;
 // Global variables used to track status of nodes
 volatile uint32_t pedalOK = 0; // for pedal node
 
+volatile int previous_state = -1; // used for SOC writing
+
 //CY_ISR(isr_can_handler){
     
 //    can_send_status(state);
@@ -108,6 +115,7 @@ volatile uint32_t pedalOK = 0; // for pedal node
 
 int main()
 {   
+    EEPROM_1_Start();
     
     Dash_State state = Startup;
     Error_State error_state = OK;
@@ -128,23 +136,7 @@ int main()
     
     for(;;)
     {
-        /*
-        for (;;) { //1 0 0 0
-            Hex1Reg_Write(0x2);
-            Hex2Reg_Write(0x3);
-            Hex3Reg_Write(0x4);
-            Hex4Reg_Write(0x5);
-        
-            RGB3_1_Write(1);
-            RGB2_1_Write(1);
-            RGB1_1_Write(0);
-                
-            RGB3_2_Write(1);
-            RGB2_2_Write(0);
-            RGB1_2_Write(1);
-            
-        }
-        */
+    
         LED_Write(1);
         
         // Check if all nodes are OK
@@ -174,49 +166,9 @@ int main()
                 //CyDelay(5000);
                 can_send_status(state, error_state);
 
-                //CyGlobalIntEnable;
-                //CAN_GlobalIntDisable();
-                //CyGlobalIntDisable;
-                //LCD_Start();
-                
-                //UI
-                
                 Buzzer_Write(1);
                 //WaveDAC8_1_SetValue(253);
                 CyDelay(50);
-                
-                
-                /*
-                //Active Low
-                RGB3_1_Write(1);
-                RGB2_1_Write(1);
-                RGB1_1_Write(1);
-                
-                RGB3_2_Write(1);
-                RGB2_2_Write(1);
-                RGB1_2_Write(1);
-                
-                //RGB Testing
-                RGB3_1_Write(0);
-                CyDelay(2000);
-                RGB3_1_Write(1);
-                RGB2_1_Write(0);
-                CyDelay(2000);
-                RGB2_1_Write(1);
-                RGB1_1_Write(0);
-                CyDelay(2000);
-                RGB1_1_Write(1);
-                RGB3_2_Write(0);
-                CyDelay(2000);
-                RGB3_2_Write(1);
-                RGB2_2_Write(0);
-                CyDelay(2000);
-                RGB2_2_Write(1);
-                RGB1_2_Write(0);
-                CyDelay(2000);
-                RGB1_2_Write(1);
-                */
-                
                 
                 Buzzer_Write(0);
                 //WaveDAC8_1_SetValue(250);
@@ -357,6 +309,20 @@ int main()
                 RGB2_1_Write(0);
                 RGB1_1_Write(1);
                 
+                
+                // should not write to ROM, instead send to CAN
+                if(previous_state == Drive) {
+                    // store 16 bits in ROM
+                    uint8 charge_L1 = charge & 0xFF;
+                    uint8 charge_L2 = charge >> 8;
+                    uint8 chage_H1 = charge >> 16;
+                    uint8 charge_H2 = charge >> 24;
+                    EEPROM_1_WriteByte(charge_L1, 0x0);
+                    EEPROM_1_WriteByte(charge_L2, 1);
+                    EEPROM_1_WriteByte(chage_H1, 2);
+                    EEPROM_1_WriteByte(charge_H2, 3);
+                }
+                
                 /*
                 RGB3_2_Write(1);
                 RGB2_2_Write(1);
@@ -386,7 +352,7 @@ int main()
                 }
                 
                 // if capacitor voltage is undervoltage, change the threshold 0x16
-                if(!HV_Read() | getCapacitorVoltage() < 0x16)
+                if(!HV_Read() | (getCapacitorVoltage() < 0x16))
                 {
                     state = LV;
                     DriveTimeCount = 0;
@@ -444,6 +410,17 @@ int main()
                 
                 can_send_cmd(1, Throttle_High, Throttle_Low); // setInterlock 
                 
+                // calcualte SOC
+                charge = SOC_LUT[PACK_TEMP - 93] / 100;
+                
+                // only update if not drawing large amounts of power
+                if(CURRENT <= 2500){
+                    int charge_low = CURRENT / 10;
+                    int charge_high = CURRENT - (CURRENT / 10);
+                    
+                    Hex1Reg_Write(charge_high);
+                    Hex2Reg_Write(charge_low);
+                } 
                 
                 //check if everything is going well
                 if (!HV_Read()) {
@@ -464,23 +441,7 @@ int main()
                     break;
                 }
                 
-                
-                
-                    
-                // need to map ABS_Motor_RPM into 1-253 scale.
-                
-                /*
-                if (ABS_Motor_RPM>=253)
-                {
-                    direction=-1;
-                }
-                else if (ABS_Motor_RPM<=1)
-                {
-                    direction=1;
-                }
-                value+=direction;
-                //CyDelay(100);
-                */
+                previous_state = Drive;
             break;
                 
 	        case Fault:

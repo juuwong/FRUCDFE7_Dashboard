@@ -10,6 +10,8 @@
 extern volatile uint32_t pedalOK;
 extern volatile double THROTTLE_MULTIPLIER;
 extern const double THROTTLE_MAP[8];
+extern volatile uint8_t PACK_TEMP;
+extern volatile int32 CURRENT;
 
 volatile uint8_t CAPACITOR_VOLT = 0;
 volatile uint8_t CURTIS_FAULT_CHECK = 0;
@@ -19,7 +21,9 @@ volatile uint8_t ERROR_TOLERANCE = 0;
 volatile uint8_t ABS_MOTOR_RPM = 0;
 volatile uint8_t THROTTLE_HIGH = 0;
 volatile uint8_t THROTTLE_LOW = 0;
-volatile uint8_t PACK_TEMP = 0;
+
+
+uint8 current_bytes[4] = {0};
 
 uint8_t getCapacitorVoltage()
 {
@@ -100,6 +104,14 @@ void can_receive(uint8_t *msg, int ID)
             hex1Display(PACK_TEMP);
             tempAttenuate();
             break;
+        case 0x521: // current data from IVT
+            current_bytes[0] = data[CAN_DATA_BYTE_3];
+            current_bytes[1] = data[CAN_DATA_BYTE_4];
+            current_bytes[2] = data[CAN_DATA_BYTE_5];
+            current_bytes[3] = data[CAN_DATA_BYTE_6];
+            CURRENT = (current_bytes[0] << 24) + (current_bytes[1] << 16) + (current_bytes[2] << 8) + current_bytes[3]; // check CAN to be sure
+            break;
+            
     }
     
     CyExitCriticalSection(InterruptState);
@@ -194,6 +206,13 @@ void can_send_cmd(
         CyDelay(1); // Wtf is this shit?
 
 } // can_send_cmd()
+
+void can_send_charge(uint8_t charge) {
+    uint8_t data[8] = {0};
+    data[0] = charge;
+    
+    can_send(data, 0x389);
+}
 
 void tempAttenuate() {
     int t = PACK_TEMP - 50;

@@ -11,6 +11,8 @@
 #include "CAN.h"
 #include "HexDisplays.h"
 
+//volatile uint32 CURRENT = 0; 
+    
 // Basic CAN functionality
 void can_receive(uint8_t *msg, int ID);
 void can_test_send();

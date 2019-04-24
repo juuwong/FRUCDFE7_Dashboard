@@ -87,6 +87,7 @@
 #include "Hex1Reg.h"
 #include "LED_1_aliases.h"
 #include "LED_1.h"
+#include "EEPROM_1.h"
 #include "core_cm3_psoc5.h"
 #include "core_cm3.h"
 #include "CyDmac.h"

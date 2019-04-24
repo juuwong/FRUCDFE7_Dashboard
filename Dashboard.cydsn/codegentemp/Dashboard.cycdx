@@ -1,37 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <blockRegMap version="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cypress.com/xsd/cyblockregmap cyblockregmap.xsd" xmlns="http://cypress.com/xsd/cyblockregmap">
+  <block name="Digit3Bit4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Digit3Bit3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Digit3Bit2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Digit3Bit1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Digit2Bit2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Digit2Bit1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Hex3Reg" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
     <register name="Hex3Reg_CONTROL_REG" address="0x40006471" bitWidth="8" desc="" hidden="false" />
   </block>
-  <block name="Digit3Bit4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Digit4Bit3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Digit4Bit2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Digit4Bit1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="isr_nodeok" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Digit3Bit1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Hex4Reg" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
     <register name="Hex4Reg_CONTROL_REG" address="0x40006472" bitWidth="8" desc="" hidden="false" />
   </block>
   <block name="Digit4Bit4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Digit4Bit3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="LED_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Hex1Reg" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
     <register name="Hex1Reg_CONTROL_REG" address="0x4000647B" bitWidth="8" desc="" hidden="false" />
   </block>
   <block name="Digit1Bit4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Digit1Bit3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Em_EEPROM_Dynamic" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="cy_boot" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="LED_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Digit2Bit4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Digit2Bit3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Digit2Bit2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Digit1Bit2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Digit1Bit1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="EEPROM_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Hex2Reg" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
     <register name="Hex2Reg_CONTROL_REG" address="0x4000647A" bitWidth="8" desc="" hidden="false" />
   </block>
+  <block name="Digit2Bit4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Digit2Bit3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Digit1Bit3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Digit1Bit2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Digit1Bit1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="isr_nodeok" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Buzzer" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="HVGND" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="GND_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
