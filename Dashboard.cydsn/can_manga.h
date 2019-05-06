@@ -9,7 +9,8 @@
 
 #include "project.h"
 #include "CAN.h"
-#include "HexDisplays.h"
+#include "T6963C.h"
+#include "graphic.h"
 
 //volatile uint32 CURRENT = 0; 
     

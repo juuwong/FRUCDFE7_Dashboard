@@ -71,7 +71,7 @@ uint8 CAN_RxTxBuffersConfig(void)
     {
         { 0u, 0x10000u, 0xC4C00000u },
         { 1u, 0x80000u, 0xECC00000u },
-        { 2u, 0x80000u, 0x71200000u },
+        { 2u, 0x0u, 0x0u },
         { 3u, 0x0u, 0x0u },
         { 4u, 0x0u, 0x0u },
         { 5u, 0x0u, 0x0u },

@@ -1,4 +1,4 @@
-    #include <project.h>
+#include <project.h>
 #include <stdio.h>
 #include "can_manga.h"
 #include "data.h"
@@ -130,6 +130,11 @@ int main()
 
     CyGlobalIntEnable;
     
+    GLCD_Initalize();
+    GLCD_Clear_Graphic();
+    GLCD_Clear_Text();
+    GLCD_Clear_CG();
+    
     nodeCheckStart();
     
     for(;;)
@@ -149,10 +154,12 @@ int main()
         {    
             // startup -- 
             case Startup:
-                Hex1Reg_Write(0x8);
-                Hex2Reg_Write(0x0);
-                Hex3Reg_Write(0xF);
-                Hex4Reg_Write(0xF);
+                //Hex1Reg_Write(0x8);
+                //Hex2Reg_Write(0x0);
+                //Hex3Reg_Write(0x0);
+                //Hex4Reg_Write(0x8);
+                GLCD_Clear_Graphic();
+                GLCD_DrawString(0,0,"Startup",4);
   
                 //Initialize CAN
                 CAN_GlobalIntEnable();
@@ -363,7 +370,8 @@ int main()
                 // calcualte SOC
                 if(CURRENT > 2500) {
                     charge = SOC_LUT[(voltage - 93400) / 100] / 100;
-                    hex2Display(charge);
+                    //hex2Display(charge);
+                    // add display print
                 }
                 
                 // check if everything is going well
@@ -420,6 +428,13 @@ int main()
                 CyDelay(1000);
                 
                 Buzzer_Write(0);
+                
+                
+                char error_state_str[2] = "";
+                itoa(error_state, error_state_str, 10);
+                GLCD_Clear_Graphic();
+                GLCD_DrawString(0,0,"Fault",4);
+                GLCD_DrawString(0,32,error_state_str,2);
                 
                 if(error_state == fromLV)
                 {
