@@ -16,6 +16,8 @@ typedef struct
 	uint8_t data[8];
 } DataPacket;
 
+// mimiced in charger code
+// so master board can send SOC back and forth
 // 240 values taken from data sheet
 // used to approximate state of charge
 int SOC_LUT[240] =  {

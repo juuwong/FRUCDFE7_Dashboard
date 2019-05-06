@@ -22,5 +22,15 @@ void hex1Display(uint8_t value)
     
 }
 
+void hex2Display(uint8_t value)
+{
+    uint8_t Digit_1 = ((value)%10);
+    uint8_t Digit_2 = ((value/10)%10);
+    
+    Hex1Reg_Write(Digit_1);
+    Hex2Reg_Write(Digit_2);
+    
+}
+
 
 /* [] END OF FILE */

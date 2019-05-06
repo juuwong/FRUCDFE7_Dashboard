@@ -13,6 +13,7 @@
 #include "Hex4Reg.h"
     
 void hex1Display(uint8_t value);    
+void hex2Display(uint8_t value);   
 
 #endif
 /* [] END OF FILE */

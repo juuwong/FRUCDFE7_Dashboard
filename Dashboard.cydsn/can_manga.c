@@ -4,6 +4,13 @@
  * ========================================
 */
 
+/*******************************************
+ * Used to interface dashboard with CAN bus
+ * some functinality can be found in CAN_TX_RX_func.c
+ * which is a generated source file
+ * see the can component of the top design for specific mailboxes
+ ******************************************/
+
 #include "CAN.h"
 #include "can_manga.h"
 
@@ -22,39 +29,56 @@ volatile uint8_t ABS_MOTOR_RPM = 0;
 volatile uint8_t THROTTLE_HIGH = 0;
 volatile uint8_t THROTTLE_LOW = 0;
 
+volatile uint8_t VOLT_B1;
+volatile uint8_t VOLT_B2;
+volatile uint8_t VOLT_B3;
+volatile uint8_t VOLT_B4;
+extern volatile uint32_t voltage;
+
 
 uint8 current_bytes[4] = {0};
 
+// returns voltage of capacitor from motor controller
 uint8_t getCapacitorVoltage()
 {
     return CAPACITOR_VOLT;
 }
 
+// returns true if there is a fault in motor controller
 uint8_t getCurtisFaultCheck()
 {
     return CURTIS_FAULT_CHECK;
 }
 
+// returns true if motor controller node is still active
+// if node is in active check the fault code using 1314
 uint8_t getCurtisHeartBeatCheck()
 {
     return CURTIS_HEART_BEAT_CHECK;
 }
 
+// returns 1 always... not sure whats up in the motor controller
 uint8_t getAckRx()
 {
     return ACK_RX;
 }
 
+// true if break depressed more than 10%
+// this value typically used for drive request
 uint8_t getErrorTolerance()
 {
     return ERROR_TOLERANCE;
 }
 
+// from motor controller
+// look this one up in 1239E manual, im not super sure
 uint8_t getABSMotorRPM()
 {
     return ABS_MOTOR_RPM;
 }
 
+// throttle is sent in two 8 bit values to create one 16 bit value
+// hight and low refer to high and low bit sequences of the whole value
 uint8_t getPedalLow()
 {
     return THROTTLE_LOW;
@@ -65,7 +89,8 @@ uint8_t getPedalHigh()
     return THROTTLE_HIGH;
 }
 
-
+// called from CAN_TX_RX_func.c in the generic RX func
+// tldr: part of an interrupt service routine
 void can_receive(uint8_t *msg, int ID)
 {
     uint8 InterruptState = CyEnterCriticalSection();
@@ -82,24 +107,31 @@ void can_receive(uint8_t *msg, int ID)
             CAPACITOR_VOLT = msg[CAN_DATA_BYTE_1];
             ABS_MOTOR_RPM = msg[CAN_DATA_BYTE_5];
             break;
-        case 0xA6:
+        case 0xA6:  // errors sent from MC node
             CURTIS_FAULT_CHECK = 0x1;
             break;
-        case 0x726:
+        case 0x726:     // from motor controller to confirm that node is still active
             CURTIS_HEART_BEAT_CHECK = 0x1;
             break;
-        case 0x0666:
+        case 0x0666:    // pdoAwk from motor controller
             ACK_RX = msg[CAN_DATA_BYTE_1];
             break;
-         case 0x0201:
+        case 0x0201:    // BSPD (error from pedal node)
             ERROR_TOLERANCE = msg[CAN_DATA_BYTE_1];
             break;
-        case 0x0200: 
+        case 0x0200:    // throttle
             pedalOK = 0x0;
             THROTTLE_HIGH = data[CAN_DATA_BYTE_2];
             THROTTLE_LOW = data[CAN_DATA_BYTE_3];
             break;
-        case 0x0488: // BMS Temp data
+        case 0x388:    // BMS voltage data 
+            VOLT_B4 = data[CAN_DATA_BYTE_5];
+            VOLT_B3 = data[CAN_DATA_BYTE_6];
+            VOLT_B2 = data[CAN_DATA_BYTE_7];
+            VOLT_B1 = data[CAN_DATA_BYTE_8];
+            voltage = (VOLT_B4 << 24) & (VOLT_B3 << 16) & (VOLT_B2 << 8) & VOLT_B1; 
+            break;
+        case 0x0488:   // BMS Temp data
             PACK_TEMP = data[CAN_DATA_BYTE_8];
             hex1Display(PACK_TEMP);
             tempAttenuate();
@@ -207,9 +239,10 @@ void can_send_cmd(
 
 } // can_send_cmd()
 
-void can_send_charge(uint8_t charge) {
+void can_send_charge(uint8_t charge, uint8_t save_soc) {
     uint8_t data[8] = {0};
     data[0] = charge;
+    data[1] = save_soc;
     
     can_send(data, 0x389);
 }

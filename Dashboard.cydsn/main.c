@@ -1,4 +1,4 @@
-#include <project.h>
+    #include <project.h>
 #include <stdio.h>
 #include "can_manga.h"
 #include "data.h"
@@ -6,11 +6,17 @@
 // Uncomment THROTTLE_LIMITING to enable power reduction at high temperatures
 #define THROTTLE_LIMITING
 
-int charge;
 volatile double THROTTLE_MULTIPLIER = 1;
+
+// declared external in can_manga.c
 volatile uint8 PACK_TEMP = 0;
 volatile int32 CURRENT = 0;
+volatile uint32_t voltage = 0;
+uint8_t charge = 0;
+
 const double THROTTLE_MAP[8] = { 95, 71, 59, 47, 35, 23, 11, 5 };
+
+uint16_t curr_voltage = 0;
 
 #define PWM_PULSE_WIDTH_STEP        (10u)
 #define SWITCH_PRESSED              (0u)
@@ -87,12 +93,6 @@ volatile uint32_t pedalOK = 0; // for pedal node
 
 volatile int previous_state = -1; // used for SOC writing
 
-//CY_ISR(isr_can_handler){
-    
-//    can_send_status(state);
-    
-//}
-
 /*******************************************************************************
 * Function Name: main
 ********************************************************************************
@@ -123,15 +123,13 @@ int main()
     //Tach Meter Stuff
     uint8_t value=0; // replace the value with 
     int8_t direction=1;
-    //WaveDAC8_1_Start();
     
     //precharging time counter
     volatile uint32_t PrechargingTimeCount = 0;
     uint32_t DriveTimeCount = 0;
 
     CyGlobalIntEnable;
-   
-
+    
     nodeCheckStart();
     
     for(;;)
@@ -149,31 +147,25 @@ int main()
         
         switch(state)
         {    
-            //CyDelay(1000);
+            // startup -- 
             case Startup:
                 Hex1Reg_Write(0x8);
                 Hex2Reg_Write(0x0);
-                Hex3Reg_Write(0x0);
-                Hex4Reg_Write(0x8);
+                Hex3Reg_Write(0xF);
+                Hex4Reg_Write(0xF);
   
-                //CyDelay(5000);
                 //Initialize CAN
                 CAN_GlobalIntEnable();
                 CAN_Init();
                 CAN_Start();
                 CyDelay(1000);
                 
-                //CyDelay(5000);
                 can_send_status(state, error_state);
 
                 Buzzer_Write(1);
-                //WaveDAC8_1_SetValue(253);
                 CyDelay(50);
                 
                 Buzzer_Write(0);
-                //WaveDAC8_1_SetValue(250);
-                //CyDelay(5000);
-                //WaveDAC8_1_SetValue(0);
                 
                 state = LV;
                 
@@ -190,27 +182,10 @@ int main()
           
                 can_send_status(state, error_state);
 
-                /*
-                LCD_Position(1u, 10u);
-                LCD_PrintInt16(data_queue[0].id);
-                
-                uint16_t temp = can_read(data_queue, data_head, data_tail, 0x07FF, 0);
-                
-                LCD_Position(0u, 0u);
-                LCD_PrintInt16(temp);
-                
-                temp = can_read(data_queue, data_head, data_tail, 0x07FF, 1);
-                LCD_Position(1u, 0u);
-                LCD_PrintInt8(temp);
-                
-                temp = can_read(data_queue, data_head, data_tail, 0x07FF, 2);
-                LCD_Position(0u, 10u);
-                LCD_PrintInt8(temp);
-                */
-                
-                
-                //UI
-                
+                // calcualte SOC and display SOC
+                charge = SOC_LUT[(voltage - 93400) / 100] / 100;
+                //hex2Display(charge);
+
                 Buzzer_Write(0);
                 
                 
@@ -260,17 +235,14 @@ int main()
                 */
                 Buzzer_Write(0);
                 
-                
                 PrechargingTimeCount = 0;
                 
                 while(1)
                 {
                     can_send_cmd(1, 0, 0); // setInterlock
                 
-                    // UNUSED //uint8_t MainState = can_read(data_queue, data_head, data_tail, 0x0566, 0);
                     uint8_t CapacitorVolt = getCapacitorVoltage(); //can_read(data_queue, data_head, data_tail, 0x0566, 0);
-                    // UNUSED //uint8_t NomialVolt =  can_read(data_queue, data_head, data_tail, 0x0566, 2);
-                
+                   
                     if(CapacitorVolt >= 0x16) // need to be tuned
                     {
                         state = HV_Enabled;
@@ -309,20 +281,6 @@ int main()
                 RGB2_1_Write(0);
                 RGB1_1_Write(1);
                 
-                
-                // should not write to ROM, instead send to CAN
-                if(previous_state == Drive) {
-                    // store 16 bits in ROM
-                    uint8 charge_L1 = charge & 0xFF;
-                    uint8 charge_L2 = charge >> 8;
-                    uint8 chage_H1 = charge >> 16;
-                    uint8 charge_H2 = charge >> 24;
-                    EEPROM_1_WriteByte(charge_L1, 0x0);
-                    EEPROM_1_WriteByte(charge_L2, 1);
-                    EEPROM_1_WriteByte(chage_H1, 2);
-                    EEPROM_1_WriteByte(charge_H2, 3);
-                }
-                
                 /*
                 RGB3_2_Write(1);
                 RGB2_2_Write(1);
@@ -331,6 +289,9 @@ int main()
                 //CyDelay(5000); ///for debug
                 
                 Buzzer_Write(0);
+                
+                //charge = SOC_LUT[(voltage - 93400) / 100] / 100;
+                //hex1Display(charge);
                 
                 if (Drive_Read())
                 {
@@ -366,6 +327,8 @@ int main()
                 //CAN_Init();
                 //CAN_Start();
                 
+                can_send_charge(charge, 0);
+                
                 can_send_status(state, error_state);
                 //
                 // RGB code goes here
@@ -373,18 +336,6 @@ int main()
                 RGB3_1_Write(1);
                 RGB2_1_Write(0);
                 RGB1_1_Write(1);
-                /*
-                RGB3_2_Write(1);
-                RGB2_2_Write(1);
-                RGB1_2_Write(1);
-                */
-                //CyDelay(10000); // debug
-                
-                //Buzzer_Write(1);
-                //CyDelay(5000);
-                //Buzzer_Write(0);
-                
-                //CyDelay(500);
                 
                 
                 uint8_t ACK = 0xFF;
@@ -406,30 +357,29 @@ int main()
                 uint8_t Throttle_High = Throttle_Total >> 8;
                 uint8_t Throttle_Low = Throttle_Total & 0x00FF;
                 
-                //WaveDAC8_1_SetValue(ABS_Motor_RPM);
-                
+                // send attenuated throttle and interlock to motor controller
                 can_send_cmd(1, Throttle_High, Throttle_Low); // setInterlock 
                 
                 // calcualte SOC
-                charge = SOC_LUT[PACK_TEMP - 93] / 100;
+                if(CURRENT > 2500) {
+                    charge = SOC_LUT[(voltage - 93400) / 100] / 100;
+                    hex2Display(charge);
+                }
                 
-                // only update if not drawing large amounts of power
-                if(CURRENT <= 2500){
-                    int charge_low = CURRENT / 10;
-                    int charge_high = CURRENT - (CURRENT / 10);
-                    
-                    Hex1Reg_Write(charge_high);
-                    Hex2Reg_Write(charge_low);
-                } 
-                
-                //check if everything is going well
+                // check if everything is going well
+                // if exiting drive improperly also send charge
+                // probably kyle just turing the car off wrong
                 if (!HV_Read()) {
-                    can_send_cmd(0, 0, 0);
+                    can_send_cmd(0, 0, 0);   
+                    can_send_charge(charge, 1); 
                     state = LV;
                 }
+                // if exiting drive mode send SOC to BMS
+                // likely that car is about to shut down
                 if (!Drive_Read()) {
                     state = HV_Enabled;
                     can_send_cmd(1, 0, 0);
+                    can_send_charge(charge, 1);
                 }
                 if ((ACK != 0xFF) | 
                     (!getCurtisHeartBeatCheck())) // TODO: Heart beat message is never cleared
