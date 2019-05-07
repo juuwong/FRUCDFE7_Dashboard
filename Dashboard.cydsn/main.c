@@ -1,5 +1,8 @@
 #include <project.h>
 #include <stdio.h>
+#include "T6963C.h"
+#include "graphic.h"
+#include "LED.h"
 #include "can_manga.h"
 #include "data.h"
 
@@ -154,18 +157,14 @@ int main()
         {    
             // startup -- 
             case Startup:
-                //Hex1Reg_Write(0x8);
-                //Hex2Reg_Write(0x0);
-                //Hex3Reg_Write(0x0);
-                //Hex4Reg_Write(0x8);
                 GLCD_Clear_Graphic();
-                GLCD_DrawString(0,0,"Startup",4);
+                GLCD_DrawString(0,0,"START",8);
   
                 //Initialize CAN
                 CAN_GlobalIntEnable();
                 CAN_Init();
                 CAN_Start();
-                CyDelay(1000);
+                LED_color_wheel(200);
                 
                 can_send_status(state, error_state);
 
@@ -200,14 +199,7 @@ int main()
                 // RGB code goes here
                 // pick a color
                 // all on. 
-                
-                RGB3_1_Write(0);
-                RGB2_1_Write(0);
-                RGB1_1_Write(0);
-                
-                RGB3_2_Write(1);
-                RGB2_2_Write(1);
-                RGB1_2_Write(1);
+                LED_color(YELLOW);
                 
                 if (Drive_Read())
                 {
@@ -232,14 +224,7 @@ int main()
                 
                 can_send_status(state, error_state);
                 
-                RGB3_1_Write(1);
-                RGB2_1_Write(0);
-                RGB1_1_Write(0);
-                /*
-                RGB3_2_Write(1);
-                RGB2_2_Write(1);
-                RGB1_2_Write(1);
-                */
+                LED_color(MAGENTA);
                 Buzzer_Write(0);
                 
                 PrechargingTimeCount = 0;
@@ -284,9 +269,7 @@ int main()
                 //
                 // RGB code goes here
                 // Blue
-                RGB3_1_Write(0);
-                RGB2_1_Write(0);
-                RGB1_1_Write(1);
+                LED_color(BLUE);
                 
                 /*
                 RGB3_2_Write(1);
@@ -340,9 +323,7 @@ int main()
                 //
                 // RGB code goes here
                 // Green
-                RGB3_1_Write(1);
-                RGB2_1_Write(0);
-                RGB1_1_Write(1);
+                LED_color(GREEN);
                 
                 
                 uint8_t ACK = 0xFF;
@@ -367,11 +348,14 @@ int main()
                 // send attenuated throttle and interlock to motor controller
                 can_send_cmd(1, Throttle_High, Throttle_Low); // setInterlock 
                 
+                // Display Pack Temp
+                GLCD_Clear_Graphic();
+                GLCD_DrawInt(0,0,PACK_TEMP,8);
+                
                 // calcualte SOC
                 if(CURRENT > 2500) {
                     charge = SOC_LUT[(voltage - 93400) / 100] / 100;
-                    //hex2Display(charge);
-                    // add display print
+                    GLCD_DrawInt(80,0,charge,8);
                 }
                 
                 // check if everything is going well
@@ -414,27 +398,17 @@ int main()
                 //
                 // RGB code goes here
                 // flashing red
-                RGB3_1_Write(1);
-                RGB2_1_Write(1);
-                RGB1_1_Write(1);
-                /*
-                RGB3_2_Write(0);
-                RGB2_2_Write(0);
-                RGB1_2_Write(0);
-                */
-                RGB1_1_Write(0);
+                LED_color(RED);
                 CyDelay(1000);
-                RGB1_1_Write(1);
+                LED_color(OFF);
                 CyDelay(1000);
                 
                 Buzzer_Write(0);
                 
-                
-                char error_state_str[2] = "";
-                itoa(error_state, error_state_str, 10);
                 GLCD_Clear_Graphic();
-                GLCD_DrawString(0,0,"Fault",4);
-                GLCD_DrawString(0,32,error_state_str,2);
+                GLCD_DrawString(0,0,"FAULT",4);
+                GLCD_DrawString(0,32,"ERROR:",4);
+                GLCD_DrawInt(220,32,error_state,4);
                 
                 if(error_state == fromLV)
                 {

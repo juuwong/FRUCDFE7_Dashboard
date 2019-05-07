@@ -172,3 +172,9 @@ void GLCD_DrawString(int x, int y, char * str, unsigned char size) {
 		x += 6*size;
 	}
 }
+
+void GLCD_DrawInt(int x, int y, int i, unsigned char size) {
+    char i_str[8]= "";
+    itoa(i,i_str,10);
+    GLCD_DrawString(x,y,i_str,size);
+}

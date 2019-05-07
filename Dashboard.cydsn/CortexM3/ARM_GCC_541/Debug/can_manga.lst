@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
   28:can_manga.c   **** volatile uint8_t ABS_MOTOR_RPM = 0;
   29:can_manga.c   **** volatile uint8_t THROTTLE_HIGH = 0;
   30:can_manga.c   **** volatile uint8_t THROTTLE_LOW = 0;
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 2
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 2
 
 
   31:can_manga.c   **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
   61              		.loc 1 51 0
   62 0004 7047     		bx	lr
   63              	.L6:
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 3
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 3
 
 
   64 0006 00BF     		.align	2
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  107              		@ link register save eliminated.
   63:can_manga.c   ****     return ACK_RX;
  108              		.loc 1 63 0
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 4
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 4
 
 
  109 0000 014B     		ldr	r3, .L11
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
   74:can_manga.c   **** // look this one up in 1239E manual, im not super sure
   75:can_manga.c   **** uint8_t getABSMotorRPM()
   76:can_manga.c   **** {
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 5
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 5
 
 
  153              		.loc 1 76 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  198              		.thumb
  199              		.thumb_func
  200              		.type	getPedalHigh, %function
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 6
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 6
 
 
  201              	getPedalHigh:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  113:can_manga.c   ****         case 0x726:     // from motor controller to confirm that node is still active
  114:can_manga.c   ****             CURTIS_HEART_BEAT_CHECK = 0x1;
  115:can_manga.c   ****             break;
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 7
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 7
 
 
  116:can_manga.c   ****         case 0x0666:    // pdoAwk from motor controller
@@ -381,25 +381,24 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  133:can_manga.c   ****             break;
  134:can_manga.c   ****         case 0x0488:   // BMS Temp data
  135:can_manga.c   ****             PACK_TEMP = data[CAN_DATA_BYTE_8];
- 136:can_manga.c   ****             //hex1Display(PACK_TEMP);
- 137:can_manga.c   ****             tempAttenuate();
- 138:can_manga.c   ****             break;
- 139:can_manga.c   ****         case 0x521: // current data from IVT
- 140:can_manga.c   ****             current_bytes[0] = data[CAN_DATA_BYTE_3];
- 141:can_manga.c   ****             current_bytes[1] = data[CAN_DATA_BYTE_4];
- 142:can_manga.c   ****             current_bytes[2] = data[CAN_DATA_BYTE_5];
- 143:can_manga.c   ****             current_bytes[3] = data[CAN_DATA_BYTE_6];
- 144:can_manga.c   ****             CURRENT = (current_bytes[0] << 24) + (current_bytes[1] << 16) + (current_bytes[2] << 8)
- 145:can_manga.c   ****             break;
- 146:can_manga.c   ****             
- 147:can_manga.c   ****     }
- 148:can_manga.c   ****     
- 149:can_manga.c   ****     CyExitCriticalSection(InterruptState);
- 150:can_manga.c   **** }
- 151:can_manga.c   **** 
- 152:can_manga.c   **** void can_test_send()
- 153:can_manga.c   **** {
- 228              		.loc 1 153 0
+ 136:can_manga.c   ****             tempAttenuate();
+ 137:can_manga.c   ****             break;
+ 138:can_manga.c   ****         case 0x521: // current data from IVT
+ 139:can_manga.c   ****             current_bytes[0] = data[CAN_DATA_BYTE_3];
+ 140:can_manga.c   ****             current_bytes[1] = data[CAN_DATA_BYTE_4];
+ 141:can_manga.c   ****             current_bytes[2] = data[CAN_DATA_BYTE_5];
+ 142:can_manga.c   ****             current_bytes[3] = data[CAN_DATA_BYTE_6];
+ 143:can_manga.c   ****             CURRENT = (current_bytes[0] << 24) + (current_bytes[1] << 16) + (current_bytes[2] << 8)
+ 144:can_manga.c   ****             break;
+ 145:can_manga.c   ****             
+ 146:can_manga.c   ****     }
+ 147:can_manga.c   ****     
+ 148:can_manga.c   ****     CyExitCriticalSection(InterruptState);
+ 149:can_manga.c   **** }
+ 150:can_manga.c   **** 
+ 151:can_manga.c   **** void can_test_send()
+ 152:can_manga.c   **** {
+ 228              		.loc 1 152 0
  229              		.cfi_startproc
  230              		@ args = 0, pretend = 0, frame = 16
  231              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -408,80 +407,80 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  234              		.cfi_offset 14, -4
  235 0002 85B0     		sub	sp, sp, #20
  236              		.cfi_def_cfa_offset 24
- 154:can_manga.c   ****     //CAN_1_DATA_BYTES_MSG msg;
- 155:can_manga.c   ****     CAN_TX_MSG HeartB;
- 156:can_manga.c   ****     
- 157:can_manga.c   ****     HeartB.id = 0x300;
- 237              		.loc 1 157 0
+ 153:can_manga.c   ****     //CAN_1_DATA_BYTES_MSG msg;
+ 154:can_manga.c   ****     CAN_TX_MSG HeartB;
+ 155:can_manga.c   ****     
+ 156:can_manga.c   ****     HeartB.id = 0x300;
+ 237              		.loc 1 156 0
  238 0004 4FF44073 		mov	r3, #768
  239 0008 0193     		str	r3, [sp, #4]
- 158:can_manga.c   ****     HeartB.rtr = 0;
- 240              		.loc 1 158 0
+ 157:can_manga.c   ****     HeartB.rtr = 0;
+ 240              		.loc 1 157 0
  241 000a 0022     		movs	r2, #0
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 8
-
-
  242 000c 8DF80820 		strb	r2, [sp, #8]
- 159:can_manga.c   ****     HeartB.ide = 0;
- 243              		.loc 1 159 0
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 8
+
+
+ 158:can_manga.c   ****     HeartB.ide = 0;
+ 243              		.loc 1 158 0
  244 0010 8DF80920 		strb	r2, [sp, #9]
- 160:can_manga.c   ****     HeartB.dlc = 1;
- 245              		.loc 1 160 0
+ 159:can_manga.c   ****     HeartB.dlc = 1;
+ 245              		.loc 1 159 0
  246 0014 0123     		movs	r3, #1
  247 0016 8DF80A30 		strb	r3, [sp, #10]
- 161:can_manga.c   ****     
- 162:can_manga.c   ****     HeartB.irq = 0;
- 248              		.loc 1 162 0
+ 160:can_manga.c   ****     
+ 161:can_manga.c   ****     HeartB.irq = 0;
+ 248              		.loc 1 161 0
  249 001a 8DF80B20 		strb	r2, [sp, #11]
- 163:can_manga.c   ****     
- 164:can_manga.c   ****     HeartB.msg->byte[0] = (uint8) 1;
- 250              		.loc 1 164 0
+ 162:can_manga.c   ****     
+ 163:can_manga.c   ****     HeartB.msg->byte[0] = (uint8) 1;
+ 250              		.loc 1 163 0
  251 001e 039A     		ldr	r2, [sp, #12]
  252 0020 1370     		strb	r3, [r2]
- 165:can_manga.c   ****     HeartB.msg->byte[1] = (uint8) 1;
- 253              		.loc 1 165 0
+ 164:can_manga.c   ****     HeartB.msg->byte[1] = (uint8) 1;
+ 253              		.loc 1 164 0
  254 0022 039A     		ldr	r2, [sp, #12]
  255 0024 5370     		strb	r3, [r2, #1]
- 166:can_manga.c   ****     HeartB.msg->byte[2] = (uint8) 1;
- 256              		.loc 1 166 0
+ 165:can_manga.c   ****     HeartB.msg->byte[2] = (uint8) 1;
+ 256              		.loc 1 165 0
  257 0026 039A     		ldr	r2, [sp, #12]
  258 0028 9370     		strb	r3, [r2, #2]
- 167:can_manga.c   ****     HeartB.msg->byte[3] = (uint8) 1;
- 259              		.loc 1 167 0
+ 166:can_manga.c   ****     HeartB.msg->byte[3] = (uint8) 1;
+ 259              		.loc 1 166 0
  260 002a 039A     		ldr	r2, [sp, #12]
  261 002c D370     		strb	r3, [r2, #3]
- 168:can_manga.c   ****     HeartB.msg->byte[4] = (uint8) 1;
- 262              		.loc 1 168 0
+ 167:can_manga.c   ****     HeartB.msg->byte[4] = (uint8) 1;
+ 262              		.loc 1 167 0
  263 002e 039A     		ldr	r2, [sp, #12]
  264 0030 1371     		strb	r3, [r2, #4]
- 169:can_manga.c   ****     HeartB.msg->byte[5] = (uint8) 1;
- 265              		.loc 1 169 0
+ 168:can_manga.c   ****     HeartB.msg->byte[5] = (uint8) 1;
+ 265              		.loc 1 168 0
  266 0032 039A     		ldr	r2, [sp, #12]
  267 0034 5371     		strb	r3, [r2, #5]
- 170:can_manga.c   ****     HeartB.msg->byte[6] = (uint8) 1;
- 268              		.loc 1 170 0
+ 169:can_manga.c   ****     HeartB.msg->byte[6] = (uint8) 1;
+ 268              		.loc 1 169 0
  269 0036 039A     		ldr	r2, [sp, #12]
  270 0038 9371     		strb	r3, [r2, #6]
- 171:can_manga.c   ****     HeartB.msg->byte[7] = (uint8) 1;
- 271              		.loc 1 171 0
+ 170:can_manga.c   ****     HeartB.msg->byte[7] = (uint8) 1;
+ 271              		.loc 1 170 0
  272 003a 039A     		ldr	r2, [sp, #12]
  273 003c D371     		strb	r3, [r2, #7]
- 172:can_manga.c   ****     
- 173:can_manga.c   ****     CAN_SendMsg(&HeartB);
- 274              		.loc 1 173 0
+ 171:can_manga.c   ****     
+ 172:can_manga.c   ****     CAN_SendMsg(&HeartB);
+ 274              		.loc 1 172 0
  275 003e 01A8     		add	r0, sp, #4
  276 0040 FFF7FEFF 		bl	CAN_SendMsg
  277              	.LVL0:
- 174:can_manga.c   **** }
- 278              		.loc 1 174 0
+ 173:can_manga.c   **** }
+ 278              		.loc 1 173 0
  279 0044 05B0     		add	sp, sp, #20
  280              		.cfi_def_cfa_offset 4
  281              		@ sp needed
  282 0046 5DF804FB 		ldr	pc, [sp], #4
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 9
-
-
  283              		.cfi_endproc
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 9
+
+
  284              	.LFE72:
  285              		.size	can_test_send, .-can_test_send
  286 004a 00BF     		.section	.text.can_send,"ax",%progbits
@@ -492,10 +491,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  291              		.type	can_send, %function
  292              	can_send:
  293              	.LFB73:
- 175:can_manga.c   **** 
- 176:can_manga.c   **** void can_send(uint8_t data[8], uint32_t ID)
- 177:can_manga.c   **** {
- 294              		.loc 1 177 0
+ 174:can_manga.c   **** 
+ 175:can_manga.c   **** void can_send(uint8_t data[8], uint32_t ID)
+ 176:can_manga.c   **** {
+ 294              		.loc 1 176 0
  295              		.cfi_startproc
  296              		@ args = 0, pretend = 0, frame = 24
  297              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -505,64 +504,64 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  301              		.cfi_offset 14, -4
  302 0002 87B0     		sub	sp, sp, #28
  303              		.cfi_def_cfa_offset 32
- 178:can_manga.c   ****     uint8_t i;
- 179:can_manga.c   **** 	CAN_TX_MSG message;
- 180:can_manga.c   **** 	CAN_DATA_BYTES_MSG payload;
- 181:can_manga.c   **** 	message.id = ID; 
- 304              		.loc 1 181 0
+ 177:can_manga.c   ****     uint8_t i;
+ 178:can_manga.c   **** 	CAN_TX_MSG message;
+ 179:can_manga.c   **** 	CAN_DATA_BYTES_MSG payload;
+ 180:can_manga.c   **** 	message.id = ID; 
+ 304              		.loc 1 180 0
  305 0004 0391     		str	r1, [sp, #12]
- 182:can_manga.c   **** 	message.rtr = 0;
- 306              		.loc 1 182 0
+ 181:can_manga.c   **** 	message.rtr = 0;
+ 306              		.loc 1 181 0
  307 0006 0023     		movs	r3, #0
  308 0008 8DF81030 		strb	r3, [sp, #16]
- 183:can_manga.c   **** 	message.ide = 0;
- 309              		.loc 1 183 0
+ 182:can_manga.c   **** 	message.ide = 0;
+ 309              		.loc 1 182 0
  310 000c 8DF81130 		strb	r3, [sp, #17]
- 184:can_manga.c   **** 	message.dlc = 0x08;
- 311              		.loc 1 184 0
+ 183:can_manga.c   **** 	message.dlc = 0x08;
+ 311              		.loc 1 183 0
  312 0010 0822     		movs	r2, #8
  313 0012 8DF81220 		strb	r2, [sp, #18]
- 185:can_manga.c   **** 	message.irq = 0;
- 314              		.loc 1 185 0
+ 184:can_manga.c   **** 	message.irq = 0;
+ 314              		.loc 1 184 0
  315 0016 8DF81330 		strb	r3, [sp, #19]
- 186:can_manga.c   **** 	message.msg = &payload;
- 316              		.loc 1 186 0
+ 185:can_manga.c   **** 	message.msg = &payload;
+ 316              		.loc 1 185 0
  317 001a 01AA     		add	r2, sp, #4
  318 001c 0592     		str	r2, [sp, #20]
  319              	.LVL2:
- 187:can_manga.c   **** 	for(i=0;i<8;i++)
- 320              		.loc 1 187 0
+ 186:can_manga.c   **** 	for(i=0;i<8;i++)
+ 320              		.loc 1 186 0
  321 001e 06E0     		b	.L28
  322              	.LVL3:
  323              	.L29:
- 188:can_manga.c   **** 		payload.byte[i] = data[i];
- 324              		.loc 1 188 0 discriminator 3
+ 187:can_manga.c   **** 		payload.byte[i] = data[i];
+ 324              		.loc 1 187 0 discriminator 3
  325 0020 C15C     		ldrb	r1, [r0, r3]	@ zero_extendqisi2
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 10
-
-
  326 0022 06AA     		add	r2, sp, #24
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 10
+
+
  327 0024 1A44     		add	r2, r2, r3
  328 0026 02F8141C 		strb	r1, [r2, #-20]
- 187:can_manga.c   **** 	for(i=0;i<8;i++)
- 329              		.loc 1 187 0 discriminator 3
+ 186:can_manga.c   **** 	for(i=0;i<8;i++)
+ 329              		.loc 1 186 0 discriminator 3
  330 002a 0133     		adds	r3, r3, #1
  331              	.LVL4:
  332 002c DBB2     		uxtb	r3, r3
  333              	.LVL5:
  334              	.L28:
- 187:can_manga.c   **** 	for(i=0;i<8;i++)
- 335              		.loc 1 187 0 is_stmt 0 discriminator 1
+ 186:can_manga.c   **** 	for(i=0;i<8;i++)
+ 335              		.loc 1 186 0 is_stmt 0 discriminator 1
  336 002e 072B     		cmp	r3, #7
  337 0030 F6D9     		bls	.L29
- 189:can_manga.c   **** 	CAN_SendMsg(&message); 
- 338              		.loc 1 189 0 is_stmt 1
+ 188:can_manga.c   **** 	CAN_SendMsg(&message); 
+ 338              		.loc 1 188 0 is_stmt 1
  339 0032 03A8     		add	r0, sp, #12
  340              	.LVL6:
  341 0034 FFF7FEFF 		bl	CAN_SendMsg
  342              	.LVL7:
- 190:can_manga.c   **** }
- 343              		.loc 1 190 0
+ 189:can_manga.c   **** }
+ 343              		.loc 1 189 0
  344 0038 07B0     		add	sp, sp, #28
  345              		.cfi_def_cfa_offset 4
  346              		@ sp needed
@@ -578,12 +577,12 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  356              		.type	can_send_status, %function
  357              	can_send_status:
  358              	.LFB74:
- 191:can_manga.c   **** 
- 192:can_manga.c   **** void can_send_status(
- 193:can_manga.c   ****     uint8_t state,
- 194:can_manga.c   ****     uint8_t errorState)
- 195:can_manga.c   **** {
- 359              		.loc 1 195 0
+ 190:can_manga.c   **** 
+ 191:can_manga.c   **** void can_send_status(
+ 192:can_manga.c   ****     uint8_t state,
+ 193:can_manga.c   ****     uint8_t errorState)
+ 194:can_manga.c   **** {
+ 359              		.loc 1 194 0
  360              		.cfi_startproc
  361              		@ args = 0, pretend = 0, frame = 8
  362              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -593,52 +592,52 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  366              		.cfi_offset 14, -4
  367 0002 83B0     		sub	sp, sp, #12
  368              		.cfi_def_cfa_offset 16
- 196:can_manga.c   ****     //max and min voltage means the voltage of single cell
- 197:can_manga.c   ****         uint8_t data[8];
- 198:can_manga.c   ****         
- 199:can_manga.c   ****         data[0] = state;
- 369              		.loc 1 199 0
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 11
-
-
+ 195:can_manga.c   ****     //max and min voltage means the voltage of single cell
+ 196:can_manga.c   ****         uint8_t data[8];
+ 197:can_manga.c   ****         
+ 198:can_manga.c   ****         data[0] = state;
+ 369              		.loc 1 198 0
  370 0004 8DF80000 		strb	r0, [sp]
- 200:can_manga.c   ****         data[1] = errorState;
- 371              		.loc 1 200 0
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 11
+
+
+ 199:can_manga.c   ****         data[1] = errorState;
+ 371              		.loc 1 199 0
  372 0008 8DF80110 		strb	r1, [sp, #1]
- 201:can_manga.c   ****         
- 202:can_manga.c   ****         data[2] = 0;
- 373              		.loc 1 202 0
+ 200:can_manga.c   ****         
+ 201:can_manga.c   ****         data[2] = 0;
+ 373              		.loc 1 201 0
  374 000c 0023     		movs	r3, #0
  375 000e 8DF80230 		strb	r3, [sp, #2]
- 203:can_manga.c   ****         data[3] = 0;
- 376              		.loc 1 203 0
+ 202:can_manga.c   ****         data[3] = 0;
+ 376              		.loc 1 202 0
  377 0012 8DF80330 		strb	r3, [sp, #3]
- 204:can_manga.c   ****         
- 205:can_manga.c   ****         data[4] = 0;
- 378              		.loc 1 205 0
+ 203:can_manga.c   ****         
+ 204:can_manga.c   ****         data[4] = 0;
+ 378              		.loc 1 204 0
  379 0016 8DF80430 		strb	r3, [sp, #4]
- 206:can_manga.c   ****         data[5] = 0;
- 380              		.loc 1 206 0
+ 205:can_manga.c   ****         data[5] = 0;
+ 380              		.loc 1 205 0
  381 001a 8DF80530 		strb	r3, [sp, #5]
- 207:can_manga.c   ****         data[6] = 0;
- 382              		.loc 1 207 0
+ 206:can_manga.c   ****         data[6] = 0;
+ 382              		.loc 1 206 0
  383 001e 8DF80630 		strb	r3, [sp, #6]
- 208:can_manga.c   ****         data[7] = 0;
- 384              		.loc 1 208 0
+ 207:can_manga.c   ****         data[7] = 0;
+ 384              		.loc 1 207 0
  385 0022 8DF80730 		strb	r3, [sp, #7]
- 209:can_manga.c   **** 
- 210:can_manga.c   ****         can_send(data, 0x626);
- 386              		.loc 1 210 0
+ 208:can_manga.c   **** 
+ 209:can_manga.c   ****         can_send(data, 0x626);
+ 386              		.loc 1 209 0
  387 0026 40F22661 		movw	r1, #1574
  388              	.LVL9:
  389 002a 6846     		mov	r0, sp
  390              	.LVL10:
  391 002c FFF7FEFF 		bl	can_send
  392              	.LVL11:
- 211:can_manga.c   **** 
- 212:can_manga.c   ****         
- 213:can_manga.c   **** } // can_send_status()
- 393              		.loc 1 213 0
+ 210:can_manga.c   **** 
+ 211:can_manga.c   ****         
+ 212:can_manga.c   **** } // can_send_status()
+ 393              		.loc 1 212 0
  394 0030 03B0     		add	sp, sp, #12
  395              		.cfi_def_cfa_offset 4
  396              		@ sp needed
@@ -654,17 +653,17 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  406              		.type	can_send_cmd, %function
  407              	can_send_cmd:
  408              	.LFB75:
- 214:can_manga.c   **** 
- 215:can_manga.c   **** void can_send_cmd(
- 216:can_manga.c   ****     uint8_t SetInterlock,
- 217:can_manga.c   ****     uint16_t VCL_Throttle_High,
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 12
+ 213:can_manga.c   **** 
+ 214:can_manga.c   **** void can_send_cmd(
+ 215:can_manga.c   ****     uint8_t SetInterlock,
+ 216:can_manga.c   ****     uint16_t VCL_Throttle_High,
+ 217:can_manga.c   ****     uint16_t VCL_Throttle_Low
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 12
 
 
- 218:can_manga.c   ****     uint16_t VCL_Throttle_Low
- 219:can_manga.c   **** )
- 220:can_manga.c   **** {
- 409              		.loc 1 220 0
+ 218:can_manga.c   **** )
+ 219:can_manga.c   **** {
+ 409              		.loc 1 219 0
  410              		.cfi_startproc
  411              		@ args = 0, pretend = 0, frame = 8
  412              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -674,58 +673,58 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  416              		.cfi_offset 14, -4
  417 0002 83B0     		sub	sp, sp, #12
  418              		.cfi_def_cfa_offset 16
- 221:can_manga.c   ****     //max and min voltage means the voltage of single cell
- 222:can_manga.c   ****         
- 223:can_manga.c   ****         uint8_t data[8];
- 224:can_manga.c   ****         
- 225:can_manga.c   ****         data[0] = SetInterlock;
- 419              		.loc 1 225 0
+ 220:can_manga.c   ****     //max and min voltage means the voltage of single cell
+ 221:can_manga.c   ****         
+ 222:can_manga.c   ****         uint8_t data[8];
+ 223:can_manga.c   ****         
+ 224:can_manga.c   ****         data[0] = SetInterlock;
+ 419              		.loc 1 224 0
  420 0004 8DF80000 		strb	r0, [sp]
- 226:can_manga.c   ****         
- 227:can_manga.c   ****         data[1] = VCL_Throttle_High;
- 421              		.loc 1 227 0
+ 225:can_manga.c   ****         
+ 226:can_manga.c   ****         data[1] = VCL_Throttle_High;
+ 421              		.loc 1 226 0
  422 0008 8DF80110 		strb	r1, [sp, #1]
- 228:can_manga.c   ****         data[2] = VCL_Throttle_Low;
- 423              		.loc 1 228 0
+ 227:can_manga.c   ****         data[2] = VCL_Throttle_Low;
+ 423              		.loc 1 227 0
  424 000c 8DF80220 		strb	r2, [sp, #2]
- 229:can_manga.c   ****         
- 230:can_manga.c   ****         data[3] = 0;
- 425              		.loc 1 230 0
+ 228:can_manga.c   ****         
+ 229:can_manga.c   ****         data[3] = 0;
+ 425              		.loc 1 229 0
  426 0010 0023     		movs	r3, #0
  427 0012 8DF80330 		strb	r3, [sp, #3]
- 231:can_manga.c   ****         data[4] = 0;
- 428              		.loc 1 231 0
+ 230:can_manga.c   ****         data[4] = 0;
+ 428              		.loc 1 230 0
  429 0016 8DF80430 		strb	r3, [sp, #4]
- 232:can_manga.c   ****         
- 233:can_manga.c   ****         data[5] = 0;
- 430              		.loc 1 233 0
+ 231:can_manga.c   ****         
+ 232:can_manga.c   ****         data[5] = 0;
+ 430              		.loc 1 232 0
  431 001a 8DF80530 		strb	r3, [sp, #5]
- 234:can_manga.c   ****         data[6] = 0;
- 432              		.loc 1 234 0
+ 233:can_manga.c   ****         data[6] = 0;
+ 432              		.loc 1 233 0
  433 001e 8DF80630 		strb	r3, [sp, #6]
- 235:can_manga.c   ****         data[7] = 0;
- 434              		.loc 1 235 0
+ 234:can_manga.c   ****         data[7] = 0;
+ 434              		.loc 1 234 0
  435 0022 8DF80730 		strb	r3, [sp, #7]
- 236:can_manga.c   **** 
- 237:can_manga.c   ****         can_send(data, 0x766);
- 436              		.loc 1 237 0
+ 235:can_manga.c   **** 
+ 236:can_manga.c   ****         can_send(data, 0x766);
+ 436              		.loc 1 236 0
  437 0026 40F26671 		movw	r1, #1894
  438              	.LVL13:
  439 002a 6846     		mov	r0, sp
  440              	.LVL14:
  441 002c FFF7FEFF 		bl	can_send
  442              	.LVL15:
- 238:can_manga.c   ****         CyDelay(1); // Wtf is this shit?
- 443              		.loc 1 238 0
+ 237:can_manga.c   ****         CyDelay(1); // Wtf is this shit?
+ 443              		.loc 1 237 0
  444 0030 0120     		movs	r0, #1
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 13
-
-
  445 0032 FFF7FEFF 		bl	CyDelay
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 13
+
+
  446              	.LVL16:
- 239:can_manga.c   **** 
- 240:can_manga.c   **** } // can_send_cmd()
- 447              		.loc 1 240 0
+ 238:can_manga.c   **** 
+ 239:can_manga.c   **** } // can_send_cmd()
+ 447              		.loc 1 239 0
  448 0036 03B0     		add	sp, sp, #12
  449              		.cfi_def_cfa_offset 4
  450              		@ sp needed
@@ -741,9 +740,9 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  460              		.type	can_send_charge, %function
  461              	can_send_charge:
  462              	.LFB76:
- 241:can_manga.c   **** 
- 242:can_manga.c   **** void can_send_charge(uint8_t charge, uint8_t save_soc) {
- 463              		.loc 1 242 0
+ 240:can_manga.c   **** 
+ 241:can_manga.c   **** void can_send_charge(uint8_t charge, uint8_t save_soc) {
+ 463              		.loc 1 241 0
  464              		.cfi_startproc
  465              		@ args = 0, pretend = 0, frame = 8
  466              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -753,35 +752,35 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  470              		.cfi_offset 14, -4
  471 0002 83B0     		sub	sp, sp, #12
  472              		.cfi_def_cfa_offset 16
- 243:can_manga.c   ****     uint8_t data[8] = {0};
- 473              		.loc 1 243 0
+ 242:can_manga.c   ****     uint8_t data[8] = {0};
+ 473              		.loc 1 242 0
  474 0004 0023     		movs	r3, #0
  475 0006 0093     		str	r3, [sp]
  476 0008 0193     		str	r3, [sp, #4]
- 244:can_manga.c   ****     data[0] = charge;
- 477              		.loc 1 244 0
+ 243:can_manga.c   ****     data[0] = charge;
+ 477              		.loc 1 243 0
  478 000a 8DF80000 		strb	r0, [sp]
- 245:can_manga.c   ****     data[1] = save_soc;
- 479              		.loc 1 245 0
+ 244:can_manga.c   ****     data[1] = save_soc;
+ 479              		.loc 1 244 0
  480 000e 8DF80110 		strb	r1, [sp, #1]
- 246:can_manga.c   ****     
- 247:can_manga.c   ****     can_send(data, 0x389);
- 481              		.loc 1 247 0
+ 245:can_manga.c   ****     
+ 246:can_manga.c   ****     can_send(data, 0x389);
+ 481              		.loc 1 246 0
  482 0012 40F28931 		movw	r1, #905
  483              	.LVL18:
  484 0016 6846     		mov	r0, sp
  485              	.LVL19:
  486 0018 FFF7FEFF 		bl	can_send
  487              	.LVL20:
- 248:can_manga.c   **** }
- 488              		.loc 1 248 0
+ 247:can_manga.c   **** }
+ 488              		.loc 1 247 0
  489 001c 03B0     		add	sp, sp, #12
  490              		.cfi_def_cfa_offset 4
  491              		@ sp needed
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 14
-
-
  492 001e 5DF804FB 		ldr	pc, [sp], #4
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 14
+
+
  493              		.cfi_endproc
  494              	.LFE76:
  495              		.size	can_send_charge, .-can_send_charge
@@ -794,9 +793,9 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  502              		.type	tempAttenuate, %function
  503              	tempAttenuate:
  504              	.LFB77:
- 249:can_manga.c   **** 
- 250:can_manga.c   **** void tempAttenuate() {
- 505              		.loc 1 250 0
+ 248:can_manga.c   **** 
+ 249:can_manga.c   **** void tempAttenuate() {
+ 505              		.loc 1 249 0
  506              		.cfi_startproc
  507              		@ args = 0, pretend = 0, frame = 0
  508              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -804,18 +803,18 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  510              		.cfi_def_cfa_offset 8
  511              		.cfi_offset 3, -8
  512              		.cfi_offset 14, -4
- 251:can_manga.c   ****     int t = PACK_TEMP - 50;
- 513              		.loc 1 251 0
+ 250:can_manga.c   ****     int t = PACK_TEMP - 50;
+ 513              		.loc 1 250 0
  514 0002 134B     		ldr	r3, .L42
  515 0004 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  516              	.LVL21:
- 252:can_manga.c   ****     if (t < 0) {
- 517              		.loc 1 252 0
+ 251:can_manga.c   ****     if (t < 0) {
+ 517              		.loc 1 251 0
  518 0006 323B     		subs	r3, r3, #50
  519              	.LVL22:
  520 0008 05D5     		bpl	.L38
- 253:can_manga.c   ****         THROTTLE_MULTIPLIER = 1;   
- 521              		.loc 1 253 0
+ 252:can_manga.c   ****         THROTTLE_MULTIPLIER = 1;   
+ 521              		.loc 1 252 0
  522 000a 0020     		movs	r0, #0
  523 000c 1149     		ldr	r1, .L42+4
  524 000e 124B     		ldr	r3, .L42+8
@@ -824,12 +823,12 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  527 0014 08BD     		pop	{r3, pc}
  528              	.LVL24:
  529              	.L38:
- 254:can_manga.c   ****     } else if (t < 8) {
- 530              		.loc 1 254 0
+ 253:can_manga.c   ****     } else if (t < 8) {
+ 530              		.loc 1 253 0
  531 0016 072B     		cmp	r3, #7
  532 0018 0CDC     		bgt	.L40
- 255:can_manga.c   ****         THROTTLE_MULTIPLIER = THROTTLE_MAP[t] / 100.0; 
- 533              		.loc 1 255 0
+ 254:can_manga.c   ****         THROTTLE_MULTIPLIER = THROTTLE_MAP[t] / 100.0; 
+ 533              		.loc 1 254 0
  534 001a 1049     		ldr	r1, .L42+12
  535 001c 01EBC301 		add	r1, r1, r3, lsl #3
  536 0020 0022     		movs	r2, #0
@@ -838,20 +837,20 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  539 0024 D1E90001 		ldrd	r0, [r1]
  540 0028 FFF7FEFF 		bl	__aeabi_ddiv
  541              	.LVL26:
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 15
-
-
  542 002c 0A4B     		ldr	r3, .L42+8
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 15
+
+
  543 002e C3E90001 		strd	r0, [r3]
  544 0032 08BD     		pop	{r3, pc}
  545              	.LVL27:
  546              	.L40:
- 256:can_manga.c   ****     } else if (t >= 8) {
- 547              		.loc 1 256 0
+ 255:can_manga.c   ****     } else if (t >= 8) {
+ 547              		.loc 1 255 0
  548 0034 072B     		cmp	r3, #7
  549 0036 09DD     		ble	.L37
- 257:can_manga.c   ****         THROTTLE_MULTIPLIER = THROTTLE_MAP[7] / 100.0; 
- 550              		.loc 1 257 0
+ 256:can_manga.c   ****         THROTTLE_MULTIPLIER = THROTTLE_MAP[7] / 100.0; 
+ 550              		.loc 1 256 0
  551 0038 0022     		movs	r2, #0
  552 003a 094B     		ldr	r3, .L42+16
  553              	.LVL28:
@@ -898,10 +897,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  593              		.cfi_def_cfa_offset 24
  594 0004 0446     		mov	r4, r0
  595 0006 0D46     		mov	r5, r1
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 16
-
-
   96:can_manga.c   ****     
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 16
+
+
  596              		.loc 1 96 0
  597 0008 FFF7FEFF 		bl	CyEnterCriticalSection
  598              	.LVL31:
@@ -958,10 +957,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  644 0056 9D42     		cmp	r5, r3
  645 0058 49D0     		beq	.L57
  646 005a 5DE0     		b	.L47
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 17
-
-
  647              	.L56:
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 17
+
+
  648 005c 40F26663 		movw	r3, #1638
  649 0060 9D42     		cmp	r5, r3
  650 0062 12D0     		beq	.L58
@@ -1018,10 +1017,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  691 0094 234B     		ldr	r3, .L61
  692 0096 1A71     		strb	r2, [r3, #4]
  121:can_manga.c   ****         case 0x0200:    // throttle
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 18
-
-
  693              		.loc 1 121 0
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 18
+
+
  694 0098 3EE0     		b	.L47
  695              	.LVL40:
  696              	.L50:
@@ -1078,44 +1077,44 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  737              		.loc 1 133 0
  738 00de 1BE0     		b	.L47
  739              	.LVL43:
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 19
-
-
  740              	.L48:
- 135:can_manga.c   ****             //hex1Display(PACK_TEMP);
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 19
+
+
+ 135:can_manga.c   ****             tempAttenuate();
  741              		.loc 1 135 0
  742 00e0 9DF80420 		ldrb	r2, [sp, #4]	@ zero_extendqisi2
  743 00e4 164B     		ldr	r3, .L61+28
  744              	.LVL44:
  745 00e6 1A70     		strb	r2, [r3]
- 137:can_manga.c   ****             break;
- 746              		.loc 1 137 0
+ 136:can_manga.c   ****             break;
+ 746              		.loc 1 136 0
  747 00e8 FFF7FEFF 		bl	tempAttenuate
  748              	.LVL45:
- 138:can_manga.c   ****         case 0x521: // current data from IVT
- 749              		.loc 1 138 0
+ 137:can_manga.c   ****         case 0x521: // current data from IVT
+ 749              		.loc 1 137 0
  750 00ec 14E0     		b	.L47
  751              	.L57:
- 140:can_manga.c   ****             current_bytes[1] = data[CAN_DATA_BYTE_4];
- 752              		.loc 1 140 0
+ 139:can_manga.c   ****             current_bytes[1] = data[CAN_DATA_BYTE_4];
+ 752              		.loc 1 139 0
  753 00ee 9DF80140 		ldrb	r4, [sp, #1]	@ zero_extendqisi2
  754              	.LVL46:
  755 00f2 0C49     		ldr	r1, .L61
  756 00f4 0C72     		strb	r4, [r1, #8]
- 141:can_manga.c   ****             current_bytes[2] = data[CAN_DATA_BYTE_5];
- 757              		.loc 1 141 0
+ 140:can_manga.c   ****             current_bytes[2] = data[CAN_DATA_BYTE_5];
+ 757              		.loc 1 140 0
  758 00f6 9DF80030 		ldrb	r3, [sp]	@ zero_extendqisi2
  759 00fa 4B72     		strb	r3, [r1, #9]
- 142:can_manga.c   ****             current_bytes[3] = data[CAN_DATA_BYTE_6];
- 760              		.loc 1 142 0
+ 141:can_manga.c   ****             current_bytes[3] = data[CAN_DATA_BYTE_6];
+ 760              		.loc 1 141 0
  761 00fc 9DF80700 		ldrb	r0, [sp, #7]	@ zero_extendqisi2
  762 0100 8872     		strb	r0, [r1, #10]
- 143:can_manga.c   ****             CURRENT = (current_bytes[0] << 24) + (current_bytes[1] << 16) + (current_bytes[2] << 8)
- 763              		.loc 1 143 0
+ 142:can_manga.c   ****             CURRENT = (current_bytes[0] << 24) + (current_bytes[1] << 16) + (current_bytes[2] << 8)
+ 763              		.loc 1 142 0
  764 0102 9DF80620 		ldrb	r2, [sp, #6]	@ zero_extendqisi2
  765 0106 CA72     		strb	r2, [r1, #11]
- 144:can_manga.c   ****             break;
- 766              		.loc 1 144 0
+ 143:can_manga.c   ****             break;
+ 766              		.loc 1 143 0
  767 0108 1B04     		lsls	r3, r3, #16
  768 010a 03EB0463 		add	r3, r3, r4, lsl #24
  769 010e 03EB0023 		add	r3, r3, r0, lsl #8
@@ -1123,13 +1122,13 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  771 0114 0B4A     		ldr	r2, .L61+32
  772 0116 1360     		str	r3, [r2]
  773              	.L47:
- 149:can_manga.c   **** }
- 774              		.loc 1 149 0
+ 148:can_manga.c   **** }
+ 774              		.loc 1 148 0
  775 0118 3046     		mov	r0, r6
  776 011a FFF7FEFF 		bl	CyExitCriticalSection
  777              	.LVL47:
- 150:can_manga.c   **** 
- 778              		.loc 1 150 0
+ 149:can_manga.c   **** 
+ 778              		.loc 1 149 0
  779 011e 02B0     		add	sp, sp, #8
  780              		.cfi_def_cfa_offset 16
  781              		@ sp needed
@@ -1138,10 +1137,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  784              	.L62:
  785 0122 00BF     		.align	2
  786              	.L61:
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 20
-
-
  787 0124 00000000 		.word	.LANCHOR0
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 20
+
+
  788 0128 00000000 		.word	pedalOK
  789 012c 00000000 		.word	VOLT_B4
  790 0130 00000000 		.word	VOLT_B3
@@ -1198,10 +1197,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  841              	THROTTLE_LOW:
  842 0006 00       		.space	1
  843              		.type	THROTTLE_HIGH, %object
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 21
-
-
  844              		.size	THROTTLE_HIGH, 1
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 21
+
+
  845              	THROTTLE_HIGH:
  846 0007 00       		.space	1
  847              		.type	current_bytes, %object
@@ -1258,10 +1257,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  898 0052 07       		.byte	0x7
  899 0053 EB020000 		.4byte	.LASF5
  900 0057 03       		.uleb128 0x3
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 22
-
-
  901 0058 BA030000 		.4byte	.LASF6
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 22
+
+
  902 005c 02       		.byte	0x2
  903 005d 3F       		.byte	0x3f
  904 005e 62000000 		.4byte	0x62
@@ -1318,10 +1317,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  955 00c4 53010000 		.4byte	.LASF17
  956 00c8 04       		.byte	0x4
  957 00c9 3801     		.2byte	0x138
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 23
-
-
  958 00cb 37000000 		.4byte	0x37
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 23
+
+
  959 00cf 05       		.uleb128 0x5
  960 00d0 6E030000 		.4byte	.LASF18
  961 00d4 04       		.byte	0x4
@@ -1378,10 +1377,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  1012 0136 0A010000 		.4byte	0x10a
  1013 013a 06       		.uleb128 0x6
  1014 013b 0C       		.byte	0xc
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 24
-
-
  1015 013c 05       		.byte	0x5
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 24
+
+
  1016 013d 81       		.byte	0x81
  1017 013e 8A010000 		.4byte	0x18a
  1018 0142 0A       		.uleb128 0xa
@@ -1438,10 +1437,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  1069 01aa 01       		.byte	0x1
  1070 01ab 2A       		.byte	0x2a
  1071 01ac 97000000 		.4byte	0x97
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 25
-
-
  1072 01b0 00000000 		.4byte	.LFB63
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 25
+
+
  1073 01b4 0C000000 		.4byte	.LFE63-.LFB63
  1074 01b8 01       		.uleb128 0x1
  1075 01b9 9C       		.byte	0x9c
@@ -1498,10 +1497,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  1126 022e 00000000 		.4byte	.LFB69
  1127 0232 0C000000 		.4byte	.LFE69-.LFB69
  1128 0236 01       		.uleb128 0x1
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 26
-
-
  1129 0237 9C       		.byte	0x9c
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 26
+
+
  1130 0238 0D       		.uleb128 0xd
  1131 0239 FE020000 		.4byte	.LASF35
  1132 023d 01       		.byte	0x1
@@ -1514,7 +1513,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  1139 024d 0E       		.uleb128 0xe
  1140 024e 44000000 		.4byte	.LASF51
  1141 0252 01       		.byte	0x1
- 1142 0253 98       		.byte	0x98
+ 1142 0253 97       		.byte	0x97
  1143 0254 00000000 		.4byte	.LFB72
  1144 0258 4A000000 		.4byte	.LFE72-.LFB72
  1145 025c 01       		.uleb128 0x1
@@ -1523,7 +1522,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  1148 0262 0F       		.uleb128 0xf
  1149 0263 E9010000 		.4byte	.LASF37
  1150 0267 01       		.byte	0x1
- 1151 0268 9B       		.byte	0x9b
+ 1151 0268 9A       		.byte	0x9a
  1152 0269 90010000 		.4byte	0x190
  1153 026d 02       		.uleb128 0x2
  1154 026e 91       		.byte	0x91
@@ -1542,7 +1541,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  1167 0281 12       		.uleb128 0x12
  1168 0282 0B000000 		.4byte	.LASF40
  1169 0286 01       		.byte	0x1
- 1170 0287 B0       		.byte	0xb0
+ 1170 0287 AF       		.byte	0xaf
  1171 0288 00000000 		.4byte	.LFB73
  1172 028c 3E000000 		.4byte	.LFE73-.LFB73
  1173 0290 01       		.uleb128 0x1
@@ -1551,28 +1550,28 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  1176 0296 13       		.uleb128 0x13
  1177 0297 58030000 		.4byte	.LASF36
  1178 029b 01       		.byte	0x1
- 1179 029c B0       		.byte	0xb0
+ 1179 029c AF       		.byte	0xaf
  1180 029d ED020000 		.4byte	0x2ed
  1181 02a1 00000000 		.4byte	.LLST0
  1182 02a5 14       		.uleb128 0x14
  1183 02a6 494400   		.ascii	"ID\000"
  1184 02a9 01       		.byte	0x1
- 1185 02aa B0       		.byte	0xb0
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 27
-
-
+ 1185 02aa AF       		.byte	0xaf
  1186 02ab B8000000 		.4byte	0xb8
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 27
+
+
  1187 02af 21000000 		.4byte	.LLST1
  1188 02b3 15       		.uleb128 0x15
  1189 02b4 6900     		.ascii	"i\000"
  1190 02b6 01       		.byte	0x1
- 1191 02b7 B2       		.byte	0xb2
+ 1191 02b7 B1       		.byte	0xb1
  1192 02b8 97000000 		.4byte	0x97
  1193 02bc 5A000000 		.4byte	.LLST2
  1194 02c0 0F       		.uleb128 0xf
  1195 02c1 75030000 		.4byte	.LASF38
  1196 02c5 01       		.byte	0x1
- 1197 02c6 B3       		.byte	0xb3
+ 1197 02c6 B2       		.byte	0xb2
  1198 02c7 90010000 		.4byte	0x190
  1199 02cb 02       		.uleb128 0x2
  1200 02cc 91       		.byte	0x91
@@ -1580,7 +1579,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  1202 02ce 0F       		.uleb128 0xf
  1203 02cf D5040000 		.4byte	.LASF39
  1204 02d3 01       		.byte	0x1
- 1205 02d4 B4       		.byte	0xb4
+ 1205 02d4 B3       		.byte	0xb3
  1206 02d5 2F010000 		.4byte	0x12f
  1207 02d9 02       		.uleb128 0x2
  1208 02da 91       		.byte	0x91
@@ -1602,7 +1601,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  1224 02f3 12       		.uleb128 0x12
  1225 02f4 0B030000 		.4byte	.LASF41
  1226 02f8 01       		.byte	0x1
- 1227 02f9 C0       		.byte	0xc0
+ 1227 02f9 BF       		.byte	0xbf
  1228 02fa 00000000 		.4byte	.LFB74
  1229 02fe 36000000 		.4byte	.LFE74-.LFB74
  1230 0302 01       		.uleb128 0x1
@@ -1611,22 +1610,22 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  1233 0308 13       		.uleb128 0x13
  1234 0309 52000000 		.4byte	.LASF42
  1235 030d 01       		.byte	0x1
- 1236 030e C1       		.byte	0xc1
+ 1236 030e C0       		.byte	0xc0
  1237 030f 97000000 		.4byte	0x97
  1238 0313 84000000 		.4byte	.LLST3
  1239 0317 13       		.uleb128 0x13
  1240 0318 00000000 		.4byte	.LASF43
  1241 031c 01       		.byte	0x1
- 1242 031d C2       		.byte	0xc2
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 28
-
-
+ 1242 031d C1       		.byte	0xc1
  1243 031e 97000000 		.4byte	0x97
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 28
+
+
  1244 0322 B1000000 		.4byte	.LLST4
  1245 0326 0F       		.uleb128 0xf
  1246 0327 58030000 		.4byte	.LASF36
  1247 032b 01       		.byte	0x1
- 1248 032c C5       		.byte	0xc5
+ 1248 032c C4       		.byte	0xc4
  1249 032d 4C030000 		.4byte	0x34c
  1250 0331 02       		.uleb128 0x2
  1251 0332 91       		.byte	0x91
@@ -1658,7 +1657,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  1277 035c 12       		.uleb128 0x12
  1278 035d 1D010000 		.4byte	.LASF44
  1279 0361 01       		.byte	0x1
- 1280 0362 D7       		.byte	0xd7
+ 1280 0362 D6       		.byte	0xd6
  1281 0363 00000000 		.4byte	.LFB75
  1282 0367 3C000000 		.4byte	.LFE75-.LFB75
  1283 036b 01       		.uleb128 0x1
@@ -1667,28 +1666,28 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  1286 0371 13       		.uleb128 0x13
  1287 0372 70000000 		.4byte	.LASF45
  1288 0376 01       		.byte	0x1
- 1289 0377 D8       		.byte	0xd8
+ 1289 0377 D7       		.byte	0xd7
  1290 0378 97000000 		.4byte	0x97
  1291 037c DE000000 		.4byte	.LLST5
  1292 0380 13       		.uleb128 0x13
  1293 0381 2A010000 		.4byte	.LASF46
  1294 0385 01       		.byte	0x1
- 1295 0386 D9       		.byte	0xd9
+ 1295 0386 D8       		.byte	0xd8
  1296 0387 A2000000 		.4byte	0xa2
  1297 038b 0B010000 		.4byte	.LLST6
  1298 038f 13       		.uleb128 0x13
  1299 0390 5D030000 		.4byte	.LASF47
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 29
-
-
  1300 0394 01       		.byte	0x1
- 1301 0395 DA       		.byte	0xda
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 29
+
+
+ 1301 0395 D9       		.byte	0xd9
  1302 0396 A2000000 		.4byte	0xa2
  1303 039a 2C010000 		.4byte	.LLST7
  1304 039e 0F       		.uleb128 0xf
  1305 039f 58030000 		.4byte	.LASF36
  1306 03a3 01       		.byte	0x1
- 1307 03a4 DF       		.byte	0xdf
+ 1307 03a4 DE       		.byte	0xde
  1308 03a5 4C030000 		.4byte	0x34c
  1309 03a9 02       		.uleb128 0x2
  1310 03aa 91       		.byte	0x91
@@ -1723,7 +1722,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  1339 03d7 12       		.uleb128 0x12
  1340 03d8 BD040000 		.4byte	.LASF48
  1341 03dc 01       		.byte	0x1
- 1342 03dd F2       		.byte	0xf2
+ 1342 03dd F1       		.byte	0xf1
  1343 03de 00000000 		.4byte	.LFB76
  1344 03e2 22000000 		.4byte	.LFE76-.LFB76
  1345 03e6 01       		.uleb128 0x1
@@ -1732,22 +1731,22 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  1348 03ec 13       		.uleb128 0x13
  1349 03ed 1D020000 		.4byte	.LASF49
  1350 03f1 01       		.byte	0x1
- 1351 03f2 F2       		.byte	0xf2
+ 1351 03f2 F1       		.byte	0xf1
  1352 03f3 97000000 		.4byte	0x97
  1353 03f7 4D010000 		.4byte	.LLST8
  1354 03fb 13       		.uleb128 0x13
  1355 03fc 94030000 		.4byte	.LASF50
  1356 0400 01       		.byte	0x1
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 30
+ 1357 0401 F1       		.byte	0xf1
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 30
 
 
- 1357 0401 F2       		.byte	0xf2
  1358 0402 97000000 		.4byte	0x97
  1359 0406 7A010000 		.4byte	.LLST9
  1360 040a 0F       		.uleb128 0xf
  1361 040b 58030000 		.4byte	.LASF36
  1362 040f 01       		.byte	0x1
- 1363 0410 F3       		.byte	0xf3
+ 1363 0410 F2       		.byte	0xf2
  1364 0411 4C030000 		.4byte	0x34c
  1365 0415 02       		.uleb128 0x2
  1366 0416 91       		.byte	0x91
@@ -1772,7 +1771,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  1385 0430 17       		.uleb128 0x17
  1386 0431 31020000 		.4byte	.LASF52
  1387 0435 01       		.byte	0x1
- 1388 0436 FA       		.byte	0xfa
+ 1388 0436 F9       		.byte	0xf9
  1389 0437 00000000 		.4byte	.LFB77
  1390 043b 64000000 		.4byte	.LFE77-.LFB77
  1391 043f 01       		.uleb128 0x1
@@ -1781,7 +1780,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  1394 0445 15       		.uleb128 0x15
  1395 0446 7400     		.ascii	"t\000"
  1396 0448 01       		.byte	0x1
- 1397 0449 FB       		.byte	0xfb
+ 1397 0449 FA       		.byte	0xfa
  1398 044a 89000000 		.4byte	0x89
  1399 044e A7010000 		.4byte	.LLST10
  1400 0452 00       		.byte	0
@@ -1798,10 +1797,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  1411 0469 6D736700 		.ascii	"msg\000"
  1412 046d 01       		.byte	0x1
  1413 046e 5E       		.byte	0x5e
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 31
-
-
  1414 046f ED020000 		.4byte	0x2ed
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 31
+
+
  1415 0473 DD010000 		.4byte	.LLST11
  1416 0477 14       		.uleb128 0x14
  1417 0478 494400   		.ascii	"ID\000"
@@ -1858,10 +1857,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  1468 04e8 1C       		.uleb128 0x1c
  1469 04e9 58000000 		.4byte	.LASF55
  1470 04ed 06       		.byte	0x6
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 32
-
-
  1471 04ee 06       		.byte	0x6
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 32
+
+
  1472 04ef F0090000 		.4byte	0x9f0
  1473 04f3 FB04     		.2byte	0x4fb
  1474 04f5 00       		.byte	0
@@ -1918,10 +1917,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  1525 0528 E7       		.byte	0xe7
  1526 0529 DB       		.byte	0xdb
  1527 052a E7       		.byte	0xe7
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 33
-
-
  1528 052b FF       		.byte	0xff
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 33
+
+
  1529 052c 30       		.byte	0x30
  1530 052d 48       		.byte	0x48
  1531 052e 3A       		.byte	0x3a
@@ -1978,10 +1977,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  1582 0561 95       		.byte	0x95
  1583 0562 6A       		.byte	0x6a
  1584 0563 60       		.byte	0x60
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 34
-
-
  1585 0564 60       		.byte	0x60
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 34
+
+
  1586 0565 60       		.byte	0x60
  1587 0566 60       		.byte	0x60
  1588 0567 60       		.byte	0x60
@@ -2038,10 +2037,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  1639 059a 00       		.byte	0
  1640 059b 00       		.byte	0
  1641 059c 5F       		.byte	0x5f
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 35
-
-
  1642 059d 00       		.byte	0
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 35
+
+
  1643 059e 00       		.byte	0
  1644 059f 00       		.byte	0
  1645 05a0 07       		.byte	0x7
@@ -2098,10 +2097,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  1696 05d3 70       		.byte	0x70
  1697 05d4 30       		.byte	0x30
  1698 05d5 00       		.byte	0
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 36
-
-
  1699 05d6 08       		.byte	0x8
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 36
+
+
  1700 05d7 08       		.byte	0x8
  1701 05d8 08       		.byte	0x8
  1702 05d9 08       		.byte	0x8
@@ -2158,10 +2157,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  1753 060c 07       		.byte	0x7
  1754 060d 36       		.byte	0x36
  1755 060e 49       		.byte	0x49
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 37
-
-
  1756 060f 49       		.byte	0x49
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 37
+
+
  1757 0610 49       		.byte	0x49
  1758 0611 36       		.byte	0x36
  1759 0612 46       		.byte	0x46
@@ -2218,10 +2217,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  1810 0645 41       		.byte	0x41
  1811 0646 41       		.byte	0x41
  1812 0647 41       		.byte	0x41
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 38
-
-
  1813 0648 22       		.byte	0x22
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 38
+
+
  1814 0649 7F       		.byte	0x7f
  1815 064a 41       		.byte	0x41
  1816 064b 41       		.byte	0x41
@@ -2278,10 +2277,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  1867 067e 10       		.byte	0x10
  1868 067f 7F       		.byte	0x7f
  1869 0680 3E       		.byte	0x3e
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 39
-
-
  1870 0681 41       		.byte	0x41
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 39
+
+
  1871 0682 41       		.byte	0x41
  1872 0683 41       		.byte	0x41
  1873 0684 3E       		.byte	0x3e
@@ -2338,10 +2337,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  1924 06b7 61       		.byte	0x61
  1925 06b8 59       		.byte	0x59
  1926 06b9 49       		.byte	0x49
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 40
-
-
  1927 06ba 4D       		.byte	0x4d
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 40
+
+
  1928 06bb 43       		.byte	0x43
  1929 06bc 00       		.byte	0
  1930 06bd 7F       		.byte	0x7f
@@ -2398,10 +2397,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  1981 06f0 54       		.byte	0x54
  1982 06f1 54       		.byte	0x54
  1983 06f2 18       		.byte	0x18
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 41
-
-
  1984 06f3 00       		.byte	0
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 41
+
+
  1985 06f4 08       		.byte	0x8
  1986 06f5 7E       		.byte	0x7e
  1987 06f6 09       		.byte	0x9
@@ -2458,10 +2457,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  2038 0729 18       		.byte	0x18
  2039 072a 18       		.byte	0x18
  2040 072b 24       		.byte	0x24
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 42
-
-
  2041 072c 24       		.byte	0x24
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 42
+
+
  2042 072d 18       		.byte	0x18
  2043 072e FC       		.byte	0xfc
  2044 072f 7C       		.byte	0x7c
@@ -2518,10 +2517,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  2095 0762 00       		.byte	0
  2096 0763 77       		.byte	0x77
  2097 0764 00       		.byte	0
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 43
-
-
  2098 0765 00       		.byte	0
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 43
+
+
  2099 0766 00       		.byte	0
  2100 0767 41       		.byte	0x41
  2101 0768 36       		.byte	0x36
@@ -2578,10 +2577,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  2152 079b 72       		.byte	0x72
  2153 079c 12       		.byte	0x12
  2154 079d 39       		.byte	0x39
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 44
-
-
  2155 079e 55       		.byte	0x55
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 44
+
+
  2156 079f 55       		.byte	0x55
  2157 07a0 55       		.byte	0x55
  2158 07a1 59       		.byte	0x59
@@ -2638,10 +2637,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  2209 07d4 32       		.byte	0x32
  2210 07d5 49       		.byte	0x49
  2211 07d6 49       		.byte	0x49
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 45
-
-
  2212 07d7 49       		.byte	0x49
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 45
+
+
  2213 07d8 32       		.byte	0x32
  2214 07d9 3A       		.byte	0x3a
  2215 07da 44       		.byte	0x44
@@ -2698,10 +2697,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  2266 080d 29       		.byte	0x29
  2267 080e F6       		.byte	0xf6
  2268 080f 20       		.byte	0x20
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 46
-
-
  2269 0810 C0       		.byte	0xc0
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 46
+
+
  2270 0811 88       		.byte	0x88
  2271 0812 7E       		.byte	0x7e
  2272 0813 09       		.byte	0x9
@@ -2758,10 +2757,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  2323 0846 08       		.byte	0x8
  2324 0847 08       		.byte	0x8
  2325 0848 08       		.byte	0x8
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 47
-
-
  2326 0849 08       		.byte	0x8
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 47
+
+
  2327 084a 08       		.byte	0x8
  2328 084b 38       		.byte	0x38
  2329 084c 2F       		.byte	0x2f
@@ -2818,10 +2817,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  2380 087f 10       		.byte	0x10
  2381 0880 FF       		.byte	0xff
  2382 0881 00       		.byte	0
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 48
-
-
  2383 0882 FF       		.byte	0xff
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 48
+
+
  2384 0883 10       		.byte	0x10
  2385 0884 10       		.byte	0x10
  2386 0885 F0       		.byte	0xf0
@@ -2878,10 +2877,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  2437 08b8 1F       		.byte	0x1f
  2438 08b9 10       		.byte	0x10
  2439 08ba 10       		.byte	0x10
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 49
-
-
  2440 08bb 10       		.byte	0x10
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 49
+
+
  2441 08bc 10       		.byte	0x10
  2442 08bd F0       		.byte	0xf0
  2443 08be 10       		.byte	0x10
@@ -2938,10 +2937,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  2494 08f1 14       		.byte	0x14
  2495 08f2 14       		.byte	0x14
  2496 08f3 14       		.byte	0x14
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 50
-
-
  2497 08f4 14       		.byte	0x14
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 50
+
+
  2498 08f5 14       		.byte	0x14
  2499 08f6 14       		.byte	0x14
  2500 08f7 14       		.byte	0x14
@@ -2998,10 +2997,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  2551 092a 14       		.byte	0x14
  2552 092b FF       		.byte	0xff
  2553 092c 14       		.byte	0x14
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 51
-
-
  2554 092d 10       		.byte	0x10
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 51
+
+
  2555 092e 10       		.byte	0x10
  2556 092f 10       		.byte	0x10
  2557 0930 1F       		.byte	0x1f
@@ -3058,10 +3057,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  2608 0963 02       		.byte	0x2
  2609 0964 63       		.byte	0x63
  2610 0965 55       		.byte	0x55
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 52
-
-
  2611 0966 49       		.byte	0x49
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 52
+
+
  2612 0967 41       		.byte	0x41
  2613 0968 63       		.byte	0x63
  2614 0969 38       		.byte	0x38
@@ -3118,10 +3117,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  2665 099c 01       		.byte	0x1
  2666 099d 01       		.byte	0x1
  2667 099e 01       		.byte	0x1
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 53
-
-
  2668 099f 7E       		.byte	0x7e
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 53
+
+
  2669 09a0 2A       		.byte	0x2a
  2670 09a1 2A       		.byte	0x2a
  2671 09a2 2A       		.byte	0x2a
@@ -3178,10 +3177,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  2722 09d5 10       		.byte	0x10
  2723 09d6 00       		.byte	0
  2724 09d7 30       		.byte	0x30
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 54
-
-
  2725 09d8 40       		.byte	0x40
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 54
+
+
  2726 09d9 FF       		.byte	0xff
  2727 09da 01       		.byte	0x1
  2728 09db 01       		.byte	0x1
@@ -3238,10 +3237,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  2779 0a36 1E       		.uleb128 0x1e
  2780 0a37 24020000 		.4byte	.LASF59
  2781 0a3b 01       		.byte	0x1
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 55
-
-
  2782 0a3c 13       		.byte	0x13
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 55
+
+
  2783 0a3d 410A0000 		.4byte	0xa41
  2784 0a41 1B       		.uleb128 0x1b
  2785 0a42 210A0000 		.4byte	0xa21
@@ -3298,10 +3297,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  2836 0ab1 03       		.byte	0x3
  2837 0ab2 00000000 		.4byte	ERROR_TOLERANCE
  2838 0ab6 1F       		.uleb128 0x1f
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 56
-
-
  2839 0ab7 F0030000 		.4byte	.LASF67
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 56
+
+
  2840 0abb 01       		.byte	0x1
  2841 0abc 1C       		.byte	0x1c
  2842 0abd A0010000 		.4byte	0x1a0
@@ -3358,10 +3357,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  2893 0b29 00000000 		.4byte	VOLT_B4
  2894 0b2d 1E       		.uleb128 0x1e
  2895 0b2e B6010000 		.4byte	.LASF74
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 57
-
-
  2896 0b32 01       		.byte	0x1
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 57
+
+
  2897 0b33 24       		.byte	0x24
  2898 0b34 9B010000 		.4byte	0x19b
  2899 0b38 08       		.uleb128 0x8
@@ -3418,10 +3417,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  2950 000d 11       		.uleb128 0x11
  2951 000e 01       		.uleb128 0x1
  2952 000f 10       		.uleb128 0x10
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 58
-
-
  2953 0010 17       		.uleb128 0x17
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 58
+
+
  2954 0011 00       		.byte	0
  2955 0012 00       		.byte	0
  2956 0013 02       		.uleb128 0x2
@@ -3478,10 +3477,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  3007 0046 0B       		.uleb128 0xb
  3008 0047 0B       		.uleb128 0xb
  3009 0048 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 59
-
-
  3010 0049 0B       		.uleb128 0xb
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 59
+
+
  3011 004a 3B       		.uleb128 0x3b
  3012 004b 0B       		.uleb128 0xb
  3013 004c 01       		.uleb128 0x1
@@ -3538,10 +3537,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  3064 007f 00       		.byte	0
  3065 0080 0B       		.uleb128 0xb
  3066 0081 0F       		.uleb128 0xf
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 60
-
-
  3067 0082 00       		.byte	0
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 60
+
+
  3068 0083 0B       		.uleb128 0xb
  3069 0084 0B       		.uleb128 0xb
  3070 0085 49       		.uleb128 0x49
@@ -3598,10 +3597,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  3121 00b9 9742     		.uleb128 0x2117
  3122 00bb 19       		.uleb128 0x19
  3123 00bc 01       		.uleb128 0x1
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 61
-
-
  3124 00bd 13       		.uleb128 0x13
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 61
+
+
  3125 00be 00       		.byte	0
  3126 00bf 00       		.byte	0
  3127 00c0 0F       		.uleb128 0xf
@@ -3658,10 +3657,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  3178 00f8 18       		.uleb128 0x18
  3179 00f9 9742     		.uleb128 0x2117
  3180 00fb 19       		.uleb128 0x19
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 62
-
-
  3181 00fc 01       		.uleb128 0x1
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 62
+
+
  3182 00fd 13       		.uleb128 0x13
  3183 00fe 00       		.byte	0
  3184 00ff 00       		.byte	0
@@ -3718,10 +3717,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  3235 0134 31       		.uleb128 0x31
  3236 0135 13       		.uleb128 0x13
  3237 0136 01       		.uleb128 0x1
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 63
-
-
  3238 0137 13       		.uleb128 0x13
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 63
+
+
  3239 0138 00       		.byte	0
  3240 0139 00       		.byte	0
  3241 013a 17       		.uleb128 0x17
@@ -3778,10 +3777,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  3292 0170 13       		.uleb128 0x13
  3293 0171 2F       		.uleb128 0x2f
  3294 0172 05       		.uleb128 0x5
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 64
-
-
  3295 0173 00       		.byte	0
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 64
+
+
  3296 0174 00       		.byte	0
  3297 0175 1B       		.uleb128 0x1b
  3298 0176 26       		.uleb128 0x26
@@ -3838,10 +3837,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  3349 01a9 3C       		.uleb128 0x3c
  3350 01aa 19       		.uleb128 0x19
  3351 01ab 00       		.byte	0
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 65
-
-
  3352 01ac 00       		.byte	0
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 65
+
+
  3353 01ad 1F       		.uleb128 0x1f
  3354 01ae 34       		.uleb128 0x34
  3355 01af 00       		.byte	0
@@ -3898,10 +3897,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  3406              	.Ldebug_loc0:
  3407              	.LLST0:
  3408 0000 00000000 		.4byte	.LVL1
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 66
-
-
  3409 0004 34000000 		.4byte	.LVL6
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 66
+
+
  3410 0008 0100     		.2byte	0x1
  3411 000a 50       		.byte	0x50
  3412 000b 34000000 		.4byte	.LVL6
@@ -3958,10 +3957,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  3463 0088 2C000000 		.4byte	.LVL10
  3464 008c 0100     		.2byte	0x1
  3465 008e 50       		.byte	0x50
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 67
-
-
  3466 008f 2C000000 		.4byte	.LVL10
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 67
+
+
  3467 0093 2F000000 		.4byte	.LVL11-1
  3468 0097 0200     		.2byte	0x2
  3469 0099 70       		.byte	0x70
@@ -4018,10 +4017,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  3520 010f 2A000000 		.4byte	.LVL13
  3521 0113 0100     		.2byte	0x1
  3522 0115 51       		.byte	0x51
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 68
-
-
  3523 0116 2A000000 		.4byte	.LVL13
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 68
+
+
  3524 011a 3C000000 		.4byte	.LFE75
  3525 011e 0400     		.2byte	0x4
  3526 0120 F3       		.byte	0xf3
@@ -4078,10 +4077,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  3577 0199 0400     		.2byte	0x4
  3578 019b F3       		.byte	0xf3
  3579 019c 01       		.uleb128 0x1
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 69
-
-
  3580 019d 51       		.byte	0x51
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 69
+
+
  3581 019e 9F       		.byte	0x9f
  3582 019f 00000000 		.4byte	0
  3583 01a3 00000000 		.4byte	0
@@ -4138,10 +4137,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  3634              	.LLST12:
  3635 0222 00000000 		.4byte	.LVL30
  3636 0226 0B000000 		.4byte	.LVL31-1
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 70
-
-
  3637 022a 0100     		.2byte	0x1
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 70
+
+
  3638 022c 51       		.byte	0x51
  3639 022d 0B000000 		.4byte	.LVL31-1
  3640 0231 22010000 		.4byte	.LVL48
@@ -4198,10 +4197,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  3691 000a 04       		.byte	0x4
  3692 000b 00       		.byte	0
  3693 000c 0000     		.2byte	0
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 71
-
-
  3694 000e 0000     		.2byte	0
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 71
+
+
  3695 0010 00000000 		.4byte	.LFB63
  3696 0014 0C000000 		.4byte	.LFE63-.LFB63
  3697 0018 00000000 		.4byte	.LFB64
@@ -4258,10 +4257,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  3748 004c 3E000000 		.4byte	.LFE73
  3749 0050 00000000 		.4byte	.LFB74
  3750 0054 36000000 		.4byte	.LFE74
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 72
-
-
  3751 0058 00000000 		.4byte	.LFB75
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 72
+
+
  3752 005c 3C000000 		.4byte	.LFE75
  3753 0060 00000000 		.4byte	.LFB76
  3754 0064 22000000 		.4byte	.LFE76
@@ -4318,10 +4317,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  3781      7400
  3782              	.LASF24:
  3783 0067 73697A65 		.ascii	"sizetype\000"
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 73
-
-
  3783      74797065 
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 73
+
+
  3783      00
  3784              	.LASF45:
  3785 0070 53657449 		.ascii	"SetInterlock\000"
@@ -4378,10 +4377,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  3805      746F7252 
  3805      504D00
  3806              	.LASF17:
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 74
-
-
  3807 0153 75696E74 		.ascii	"uint8\000"
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 74
+
+
  3807      3800
  3808              	.LASF68:
  3809 0159 5448524F 		.ascii	"THROTTLE_HIGH\000"
@@ -4438,10 +4437,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  3833 01df 5F5F7569 		.ascii	"__uint8_t\000"
  3833      6E74385F 
  3833      7400
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 75
-
-
  3834              	.LASF37:
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 75
+
+
  3835 01e9 48656172 		.ascii	"HeartB\000"
  3835      744200
  3836              	.LASF62:
@@ -4498,10 +4497,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  3857      7369676E 
  3857      65642069 
  3858              	.LASF16:
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 76
-
-
  3859 028d 75696E74 		.ascii	"uint32_t\000"
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 76
+
+
  3859      33325F74 
  3859      00
  3860              	.LASF12:
@@ -4558,10 +4557,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  3879      6C744368 
  3879      65636B00 
  3880              	.LASF15:
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 77
-
-
  3881 0339 696E7433 		.ascii	"int32_t\000"
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 77
+
+
  3881      325F7400 
  3882              	.LASF78:
  3883 0341 4379456E 		.ascii	"CyEnterCriticalSection\000"
@@ -4618,10 +4617,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  3907      5F423100 
  3908              	.LASF71:
  3909 03d8 564F4C54 		.ascii	"VOLT_B2\000"
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 78
-
-
  3909      5F423200 
+ARM GAS  C:\Users\willy\AppData\Local\Temp\ccZVamUu.s 			page 78
+
+
  3910              	.LASF72:
  3911 03e0 564F4C54 		.ascii	"VOLT_B3\000"
  3911      5F423300 
@@ -4678,6 +4677,3 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 1
  3933 04d5 7061796C 		.ascii	"payload\000"
  3933      6F616400 
  3934              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccntQ8Cx.s 			page 79
-
-

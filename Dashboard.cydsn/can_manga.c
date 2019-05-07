@@ -133,7 +133,6 @@ void can_receive(uint8_t *msg, int ID)
             break;
         case 0x0488:   // BMS Temp data
             PACK_TEMP = data[CAN_DATA_BYTE_8];
-            //hex1Display(PACK_TEMP);
             tempAttenuate();
             break;
         case 0x521: // current data from IVT

@@ -40,11 +40,12 @@
           <File BuildType="BUILD" Toolchain="">data.h</File>
           <File BuildType="BUILD" Toolchain="">can_manga.c</File>
           <File BuildType="BUILD" Toolchain="">can_manga.h</File>
-          <File BuildType="BUILD" Toolchain="">..\DisplayDrivers\glcdfont.h</File>
-          <File BuildType="BUILD" Toolchain="">..\DisplayDrivers\graphic.c</File>
-          <File BuildType="BUILD" Toolchain="">..\DisplayDrivers\graphic.h</File>
-          <File BuildType="BUILD" Toolchain="">..\DisplayDrivers\T6963C.c</File>
-          <File BuildType="BUILD" Toolchain="">..\DisplayDrivers\T6963C.h</File>
+          <File BuildType="BUILD" Toolchain="">glcdfont.h</File>
+          <File BuildType="BUILD" Toolchain="">graphic.c</File>
+          <File BuildType="BUILD" Toolchain="">graphic.h</File>
+          <File BuildType="BUILD" Toolchain="">T6963C.c</File>
+          <File BuildType="BUILD" Toolchain="">T6963C.h</File>
+          <File BuildType="BUILD" Toolchain="">LED.h</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
         </Files>
       </Folder>
