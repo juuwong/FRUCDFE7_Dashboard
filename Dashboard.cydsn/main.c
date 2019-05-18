@@ -157,8 +157,9 @@ int main()
         {    
             // startup -- 
             case Startup:
-                GLCD_Clear_Graphic();
+                GLCD_Clear_Frame();
                 GLCD_DrawString(0,0,"START",8);
+                GLCD_Write_Frame();
   
                 //Initialize CAN
                 CAN_GlobalIntEnable();
@@ -347,16 +348,17 @@ int main()
                 
                 // send attenuated throttle and interlock to motor controller
                 can_send_cmd(1, Throttle_High, Throttle_Low); // setInterlock 
-                
-                // Display Pack Temp
-                GLCD_Clear_Graphic();
-                GLCD_DrawInt(0,0,PACK_TEMP,8);
-                
+
                 // calcualte SOC
                 if(CURRENT > 2500) {
                     charge = SOC_LUT[(voltage - 93400) / 100] / 100;
-                    GLCD_DrawInt(80,0,charge,8);
                 }
+                
+                // Display pack temp and soc on display
+                GLCD_Clear_Frame();
+                GLCD_DrawInt(0,0,PACK_TEMP,8);
+                GLCD_DrawInt(80,0,charge,8);
+                GLCD_Write_Frame();
                 
                 // check if everything is going well
                 // if exiting drive improperly also send charge
@@ -405,10 +407,11 @@ int main()
                 
                 Buzzer_Write(0);
                 
-                GLCD_Clear_Graphic();
+                GLCD_Clear_Frame();
                 GLCD_DrawString(0,0,"FAULT",4);
                 GLCD_DrawString(0,32,"ERROR:",4);
                 GLCD_DrawInt(220,32,error_state,4);
+                GLCD_Write_Frame();
                 
                 if(error_state == fromLV)
                 {

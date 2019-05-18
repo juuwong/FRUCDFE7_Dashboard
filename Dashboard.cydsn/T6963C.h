@@ -3,6 +3,7 @@
 // Kompilator : arm-elf-gcc
 
 #include "project.h"
+#include <string.h>
 
 #if !defined(T6963C_H)
 #define T6963C_H
@@ -23,7 +24,7 @@
 // parametry wyœwietlacza
 #define GLCD_NUMBER_OF_LINES				64
 #define GLCD_PIXELS_PER_LINE				240
-#define GLCD_FONT_WIDTH						6
+#define GLCD_FONT_WIDTH						8
 
 #define GLCD_GRAPHIC_AREA					(GLCD_PIXELS_PER_LINE / GLCD_FONT_WIDTH)
 #define GLCD_TEXT_AREA						(GLCD_PIXELS_PER_LINE / GLCD_FONT_WIDTH)
@@ -81,6 +82,9 @@
 
 #define T6963_SCREEN_PEEK					0xE0
 #define T6963_SCREEN_COPY					0xE8
+    
+// Frame Buffer
+uint8_t FRAME[GLCD_GRAPHIC_AREA];
 
 void GLCD_Initalize_Interface(void);
 int GLCD_Check_Status(void);
@@ -91,6 +95,8 @@ void GLCD_Clear_Text(void);
 void GLCD_Clear_CG(void);
 void GLCD_Clear_Graphic(void);
 void GLCD_Clear_Area(unsigned char x, unsigned char y, unsigned char l, unsigned char h);
+void GLCD_Clear_Frame(void);
+void GLCD_Write_Frame(void);
 void GLCD_Write_Char(char ch);
 void GLCD_Write_String(char * str);
 //void GLCD_Write_StringPgm(prog_char * str);

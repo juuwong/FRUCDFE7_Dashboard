@@ -184,6 +184,27 @@ void GLCD_Clear_Area(unsigned char x, unsigned char y, unsigned char l, unsigned
     }
 }
 
+void GLCD_Clear_Frame(void)
+{
+    int i;
+    for(i = 0; i < GLCD_GRAPHIC_SIZE; i++) {
+        FRAME[i] = 0x00;
+    }
+}
+
+void GLCD_Write_Frame(void)
+{
+    int i;
+    GLCD_Write_Data(GLCD_GRAPHIC_HOME & 0xFF);
+    GLCD_Write_Data(GLCD_GRAPHIC_HOME >> 8);
+    GLCD_Write_Command(T6963_SET_ADDRESS_POINTER);
+
+    for(i = 0; i < GLCD_GRAPHIC_SIZE; i++) {
+        GLCD_Write_Data(FRAME[i]);
+        GLCD_Write_Command(T6963_DATA_WRITE_AND_INCREMENT);
+    }
+}
+
 void GLCD_Write_Char(char ch)
 {
     GLCD_Write_Data(ch - 32);
@@ -288,6 +309,23 @@ void GLCD_Initalize(void)
 
 void GLCD_SetPixel(int x, int y, int color)
 {
+    uint8_t tmp;
+    int byte;
+    
+    byte = (x / GLCD_FONT_WIDTH) + (GLCD_GRAPHIC_AREA * y);
+    tmp = FRAME[byte];
+    
+    
+    if (color) 
+        FRAME[byte] = (1 <<  (GLCD_FONT_WIDTH - 1 - (x % GLCD_FONT_WIDTH))) | tmp;
+    else
+        FRAME[byte] = ~(1 <<  (GLCD_FONT_WIDTH - 1 - (x % GLCD_FONT_WIDTH))) & tmp;
+        
+}
+
+/*
+void GLCD_SetPixel(int x, int y, int color)
+{
     int tmp;
     int address;
     
@@ -309,3 +347,4 @@ void GLCD_SetPixel(int x, int y, int color)
     GLCD_Write_Data(tmp);
     GLCD_Write_Command(T6963_DATA_WRITE_AND_INCREMENT);
 }
+*/
