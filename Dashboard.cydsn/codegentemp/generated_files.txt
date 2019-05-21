@@ -82,6 +82,14 @@
   <file name="C:\Users\willy\OneDrive - UC Davis\Documents\_FRUCD\Dashboard\PSoC5_Projects\FRUCD-Dashboard-master_github\Dashboard.cydsn\codegentemp\LED_1.h" value="HEADER;;;;;LED_1" />
   <file name="C:\Users\willy\OneDrive - UC Davis\Documents\_FRUCD\Dashboard\PSoC5_Projects\FRUCD-Dashboard-master_github\Dashboard.cydsn\codegentemp\EEPROM_1.c" value="SOURCE_C;CortexM3;;;;EEPROM_1" />
   <file name="C:\Users\willy\OneDrive - UC Davis\Documents\_FRUCD\Dashboard\PSoC5_Projects\FRUCD-Dashboard-master_github\Dashboard.cydsn\codegentemp\EEPROM_1.h" value="HEADER;;;;;EEPROM_1" />
+  <file name="C:\Users\willy\OneDrive - UC Davis\Documents\_FRUCD\Dashboard\PSoC5_Projects\FRUCD-Dashboard-master_github\Dashboard.cydsn\codegentemp\WDT_Reset_aliases.h" value="HEADER;;;;;WDT_Reset" />
+  <file name="C:\Users\willy\OneDrive - UC Davis\Documents\_FRUCD\Dashboard\PSoC5_Projects\FRUCD-Dashboard-master_github\Dashboard.cydsn\codegentemp\WDT_Reset.c" value="SOURCE_C;CortexM3;;;;WDT_Reset" />
+  <file name="C:\Users\willy\OneDrive - UC Davis\Documents\_FRUCD\Dashboard\PSoC5_Projects\FRUCD-Dashboard-master_github\Dashboard.cydsn\codegentemp\WDT_Reset.h" value="HEADER;;;;;WDT_Reset" />
+  <file name="C:\Users\willy\OneDrive - UC Davis\Documents\_FRUCD\Dashboard\PSoC5_Projects\FRUCD-Dashboard-master_github\Dashboard.cydsn\codegentemp\WDT_Timer.c" value="SOURCE_C;CortexM3;;;;WDT_Timer" />
+  <file name="C:\Users\willy\OneDrive - UC Davis\Documents\_FRUCD\Dashboard\PSoC5_Projects\FRUCD-Dashboard-master_github\Dashboard.cydsn\codegentemp\WDT_Timer.h" value="HEADER;;;;;WDT_Timer" />
+  <file name="C:\Users\willy\OneDrive - UC Davis\Documents\_FRUCD\Dashboard\PSoC5_Projects\FRUCD-Dashboard-master_github\Dashboard.cydsn\codegentemp\WDT_Timer_PM.c" value="SOURCE_C;CortexM3;;;;WDT_Timer" />
+  <file name="C:\Users\willy\OneDrive - UC Davis\Documents\_FRUCD\Dashboard\PSoC5_Projects\FRUCD-Dashboard-master_github\Dashboard.cydsn\codegentemp\isr_wdt.c" value="SOURCE_C;CortexM3;;;;isr_wdt" />
+  <file name="C:\Users\willy\OneDrive - UC Davis\Documents\_FRUCD\Dashboard\PSoC5_Projects\FRUCD-Dashboard-master_github\Dashboard.cydsn\codegentemp\isr_wdt.h" value="HEADER;;;;;isr_wdt" />
   <file name="C:\Users\willy\OneDrive - UC Davis\Documents\_FRUCD\Dashboard\PSoC5_Projects\FRUCD-Dashboard-master_github\Dashboard.cydsn\codegentemp\cm3gcc.ld" value="LINKER_SCRIPT;;;b98f980c-3bd1-4fc7-a887-c56a20a46fdd;;cy_boot" />
   <file name="C:\Users\willy\OneDrive - UC Davis\Documents\_FRUCD\Dashboard\PSoC5_Projects\FRUCD-Dashboard-master_github\Dashboard.cydsn\codegentemp\Cm3RealView.scat" value="LINKER_SCRIPT;;;fdb8e1ae-f83a-46cf-9446-1d703716f38a;;cy_boot" />
   <file name="C:\Users\willy\OneDrive - UC Davis\Documents\_FRUCD\Dashboard\PSoC5_Projects\FRUCD-Dashboard-master_github\Dashboard.cydsn\codegentemp\Cm3Start.c" value="SOURCE_C;CortexM3;;;;cy_boot" />

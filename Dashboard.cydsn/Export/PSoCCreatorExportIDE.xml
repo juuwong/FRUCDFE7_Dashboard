@@ -161,6 +161,14 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SD_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SD.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SD.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WDT_Timer.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WDT_Timer.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WDT_Timer_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isr_wdt.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isr_wdt.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WDT_Reset_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WDT_Reset.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WDT_Reset.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\willy\OneDrive - UC Davis\Documents\_FRUCD\Dashboard\PSoC5_Projects\FRUCD-Dashboard-master_github\Dashboard.cydsn\Export\ARM_GCC_Generic">

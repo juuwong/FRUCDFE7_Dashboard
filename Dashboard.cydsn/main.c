@@ -53,6 +53,13 @@ void nodeCheckStart()
     isr_nodeok_Start();
 }
 
+CY_ISR(ISR_WDT){
+    WDT_Timer_STATUS;
+    WDT_Reset_Write(0);
+    CyDelay(100);
+    WDT_Reset_Write(1);
+}
+
 typedef enum 
 {
 	Startup,
@@ -139,6 +146,8 @@ int main()
     GLCD_Clear_CG();
     
     nodeCheckStart();
+    WDT_Timer_Start();
+    isr_wdt_StartEx(ISR_WDT);
     
     for(;;)
     {
@@ -179,6 +188,9 @@ int main()
             break;
                 
             case LV:
+                GLCD_Clear_Frame();
+                GLCD_DrawString(0,0,"LV",8);
+                GLCD_Write_Frame();
                 
                 CAN_GlobalIntEnable();
                 CAN_Init();
@@ -218,6 +230,10 @@ int main()
             break;
                 
             case Precharging:
+                GLCD_Clear_Frame();
+                GLCD_DrawString(0,0,"PRCHGE",8);
+                GLCD_Write_Frame();
+                
                 CAN_GlobalIntEnable();
                 CAN_Init();
                 CAN_Start();
@@ -258,6 +274,9 @@ int main()
             break;
 	        
             case HV_Enabled:
+                GLCD_Clear_Frame();
+                GLCD_DrawString(0,0,"HV",8);
+                GLCD_Write_Frame();
 
                 CAN_GlobalIntEnable();
                 CAN_Init();
@@ -287,7 +306,7 @@ int main()
                 if (Drive_Read())
                 {
                     CyDelay(1000); // wait for the brake msg to be sent
-                    if(getErrorTolerance() == 1) // 100 for error tolerance /// needs to be getErrorTolerance
+                    if(getErrorTolerance() == 0) // 100 for error tolerance /// needs to be getErrorTolerance
                     {
                         Buzzer_Write(1);
                         CyDelay(1000);
@@ -357,7 +376,7 @@ int main()
                 // Display pack temp and soc on display
                 GLCD_Clear_Frame();
                 GLCD_DrawInt(0,0,PACK_TEMP,8);
-                GLCD_DrawInt(80,0,charge,8);
+                GLCD_DrawInt(120,0,charge,8);
                 GLCD_Write_Frame();
                 
                 // check if everything is going well
@@ -586,5 +605,7 @@ CY_ISR(ISR_CAN)
    //     CAN_RX_ACK_MESSAGE(CAN_RX_MAILBOX_ADCdata);
    // }
 }
+
+
 
 /* [] END OF FILE */

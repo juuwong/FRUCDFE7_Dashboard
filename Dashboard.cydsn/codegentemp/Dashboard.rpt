@@ -1,4 +1,4 @@
-Loading plugins phase: Elapsed time ==> 0s.223ms
+Loading plugins phase: Elapsed time ==> 0s.425ms
 <CYPRESSTAG name="CyDsfit arguments...">
 cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\willy\OneDrive - UC Davis\Documents\_FRUCD\Dashboard\PSoC5_Projects\FRUCD-Dashboard-master_github\Dashboard.cydsn\Dashboard.cyprj -d CY8C5868AXI-LP035 -s C:\Users\willy\OneDrive - UC Davis\Documents\_FRUCD\Dashboard\PSoC5_Projects\FRUCD-Dashboard-master_github\Dashboard.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 </CYPRESSTAG>
@@ -7,10 +7,10 @@ ADD: sdb.M0060: warning: Warning in component: CAN. The BUS_CLK clock accuracy s
  * C:\Users\willy\OneDrive - UC Davis\Documents\_FRUCD\Dashboard\PSoC5_Projects\FRUCD-Dashboard-master_github\Dashboard.cydsn\TopDesign\TopDesign.cysch (Instance:CAN)
 
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 2s.610ms
+Elaboration phase: Elapsed time ==> 5s.870ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.097ms
+HDL generation phase: Elapsed time ==> 0s.327ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -44,7 +44,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\willy
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Mon May 06 16:25:35 2019
+Mon May 20 17:34:39 2019
 
 
 ======================================================================
@@ -54,7 +54,7 @@ Options  :    -yv2 -q10 Dashboard.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Mon May 06 16:25:35 2019
+Mon May 20 17:34:39 2019
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'
@@ -63,6 +63,8 @@ Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\ps
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_70\B_Timer_v2_70.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_80\B_Timer_v2_80.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.v'
 
 vpp:  No errors.
 
@@ -81,6 +83,8 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\c
 Using control file 'Dashboard.ctl'.
 C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_70\B_Timer_v2_70.v (line 368, col 46):  Note: Substituting module 'cmp_vv_vv' for '='.
 C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_70\B_Timer_v2_70.v (line 374, col 62):  Note: Substituting module 'add_vv_vv' for '+'.
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_80\B_Timer_v2_80.v (line 368, col 46):  Note: Substituting module 'cmp_vv_vv' for '='.
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_80\B_Timer_v2_80.v (line 374, col 62):  Note: Substituting module 'add_vv_vv' for '+'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3pkg.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif'.
 
@@ -94,7 +98,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\willy
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Mon May 06 16:25:35 2019
+Mon May 20 17:34:40 2019
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -114,6 +118,7 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\conte
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_70\B_Timer_v2_70.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_80\B_Timer_v2_80.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3pkg.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif'.
 
@@ -127,7 +132,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\willy
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Mon May 06 16:25:36 2019
+Mon May 20 17:34:41 2019
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -147,6 +152,7 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\conte
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_70\B_Timer_v2_70.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_80\B_Timer_v2_80.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3pkg.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\lcpsoc3\stdlogic\cpsoc3.vif'.
@@ -171,9 +177,21 @@ Detecting unused logic.
 	\Node_Timer:TimerUDB:zeros_3\
 	\Node_Timer:Net_102\
 	\Node_Timer:Net_266\
+	\WDT_Timer:Net_260\
+	Net_141
+	\WDT_Timer:Net_53\
+	\WDT_Timer:TimerUDB:ctrl_ten\
+	\WDT_Timer:TimerUDB:ctrl_cmode_0\
+	\WDT_Timer:TimerUDB:ctrl_tmode_1\
+	\WDT_Timer:TimerUDB:ctrl_tmode_0\
+	\WDT_Timer:TimerUDB:ctrl_ic_1\
+	\WDT_Timer:TimerUDB:ctrl_ic_0\
+	Net_140
+	\WDT_Timer:Net_102\
+	\WDT_Timer:Net_266\
 
 
-Deleted 16 User equations/components.
+Deleted 28 User equations/components.
 Deleted 0 Synthesized equations/components.
 
 ------------------------------------------------------
@@ -216,9 +234,20 @@ Aliasing tmpOE__SD_net_2 to tmpOE__RX_net_0
 Aliasing tmpOE__SD_net_1 to tmpOE__RX_net_0
 Aliasing tmpOE__SD_net_0 to tmpOE__RX_net_0
 Aliasing tmpOE__LED_1_net_0 to tmpOE__RX_net_0
+Aliasing tmpOE__WDT_Reset_net_0 to tmpOE__RX_net_0
+Aliasing Net_135 to zero
+Aliasing \WDT_Timer:TimerUDB:ctrl_cmode_1\ to zero
+Aliasing \WDT_Timer:TimerUDB:trigger_enable\ to tmpOE__RX_net_0
+Aliasing \WDT_Timer:TimerUDB:status_6\ to zero
+Aliasing \WDT_Timer:TimerUDB:status_5\ to zero
+Aliasing \WDT_Timer:TimerUDB:status_4\ to zero
+Aliasing \WDT_Timer:TimerUDB:status_0\ to \WDT_Timer:TimerUDB:tc_i\
 Aliasing \Node_Timer:TimerUDB:capture_last\\D\ to zero
 Aliasing \Node_Timer:TimerUDB:hwEnable_reg\\D\ to \Node_Timer:TimerUDB:run_mode\
 Aliasing \Node_Timer:TimerUDB:capture_out_reg_i\\D\ to \Node_Timer:TimerUDB:capt_fifo_load_int\
+Aliasing \WDT_Timer:TimerUDB:capture_last\\D\ to zero
+Aliasing \WDT_Timer:TimerUDB:hwEnable_reg\\D\ to \WDT_Timer:TimerUDB:run_mode\
+Aliasing \WDT_Timer:TimerUDB:capture_out_reg_i\\D\ to \WDT_Timer:TimerUDB:capt_fifo_load_int\
 Removing Lhs of wire one[6] = tmpOE__RX_net_0[1]
 Removing Lhs of wire tmpOE__TX_net_0[9] = tmpOE__RX_net_0[1]
 Removing Lhs of wire tmpOE__LED_net_0[24] = tmpOE__RX_net_0[1]
@@ -271,13 +300,38 @@ Removing Lhs of wire tmpOE__SD_net_2[320] = tmpOE__RX_net_0[1]
 Removing Lhs of wire tmpOE__SD_net_1[321] = tmpOE__RX_net_0[1]
 Removing Lhs of wire tmpOE__SD_net_0[322] = tmpOE__RX_net_0[1]
 Removing Lhs of wire tmpOE__LED_1_net_0[342] = tmpOE__RX_net_0[1]
-Removing Lhs of wire \Node_Timer:TimerUDB:capture_last\\D\[347] = zero[2]
-Removing Lhs of wire \Node_Timer:TimerUDB:tc_reg_i\\D\[348] = \Node_Timer:TimerUDB:status_tc\[139]
-Removing Lhs of wire \Node_Timer:TimerUDB:hwEnable_reg\\D\[349] = \Node_Timer:TimerUDB:control_7\[117]
-Removing Lhs of wire \Node_Timer:TimerUDB:capture_out_reg_i\\D\[350] = \Node_Timer:TimerUDB:capt_fifo_load\[135]
+Removing Lhs of wire tmpOE__WDT_Reset_net_0[348] = tmpOE__RX_net_0[1]
+Removing Lhs of wire Net_135[355] = zero[2]
+Removing Rhs of wire Net_136[357] = \WDT_Timer:Net_55\[358]
+Removing Lhs of wire \WDT_Timer:TimerUDB:ctrl_enable\[374] = \WDT_Timer:TimerUDB:control_7\[366]
+Removing Lhs of wire \WDT_Timer:TimerUDB:ctrl_cmode_1\[376] = zero[2]
+Removing Rhs of wire \WDT_Timer:TimerUDB:timer_enable\[385] = \WDT_Timer:TimerUDB:runmode_enable\[397]
+Removing Rhs of wire \WDT_Timer:TimerUDB:run_mode\[386] = \WDT_Timer:TimerUDB:hwEnable\[387]
+Removing Lhs of wire \WDT_Timer:TimerUDB:run_mode\[386] = \WDT_Timer:TimerUDB:control_7\[366]
+Removing Lhs of wire \WDT_Timer:TimerUDB:trigger_enable\[389] = tmpOE__RX_net_0[1]
+Removing Lhs of wire \WDT_Timer:TimerUDB:tc_i\[391] = \WDT_Timer:TimerUDB:status_tc\[388]
+Removing Lhs of wire \WDT_Timer:TimerUDB:capt_fifo_load_int\[396] = \WDT_Timer:TimerUDB:capt_fifo_load\[384]
+Removing Lhs of wire \WDT_Timer:TimerUDB:status_6\[399] = zero[2]
+Removing Lhs of wire \WDT_Timer:TimerUDB:status_5\[400] = zero[2]
+Removing Lhs of wire \WDT_Timer:TimerUDB:status_4\[401] = zero[2]
+Removing Lhs of wire \WDT_Timer:TimerUDB:status_0\[402] = \WDT_Timer:TimerUDB:status_tc\[388]
+Removing Lhs of wire \WDT_Timer:TimerUDB:status_1\[403] = \WDT_Timer:TimerUDB:capt_fifo_load\[384]
+Removing Rhs of wire \WDT_Timer:TimerUDB:status_2\[404] = \WDT_Timer:TimerUDB:fifo_full\[405]
+Removing Rhs of wire \WDT_Timer:TimerUDB:status_3\[406] = \WDT_Timer:TimerUDB:fifo_nempty\[407]
+Removing Lhs of wire \WDT_Timer:TimerUDB:cs_addr_2\[409] = zero[2]
+Removing Lhs of wire \WDT_Timer:TimerUDB:cs_addr_1\[410] = \WDT_Timer:TimerUDB:trig_reg\[398]
+Removing Lhs of wire \WDT_Timer:TimerUDB:cs_addr_0\[411] = \WDT_Timer:TimerUDB:per_zero\[390]
+Removing Lhs of wire \Node_Timer:TimerUDB:capture_last\\D\[589] = zero[2]
+Removing Lhs of wire \Node_Timer:TimerUDB:tc_reg_i\\D\[590] = \Node_Timer:TimerUDB:status_tc\[139]
+Removing Lhs of wire \Node_Timer:TimerUDB:hwEnable_reg\\D\[591] = \Node_Timer:TimerUDB:control_7\[117]
+Removing Lhs of wire \Node_Timer:TimerUDB:capture_out_reg_i\\D\[592] = \Node_Timer:TimerUDB:capt_fifo_load\[135]
+Removing Lhs of wire \WDT_Timer:TimerUDB:capture_last\\D\[593] = zero[2]
+Removing Lhs of wire \WDT_Timer:TimerUDB:tc_reg_i\\D\[594] = \WDT_Timer:TimerUDB:status_tc\[388]
+Removing Lhs of wire \WDT_Timer:TimerUDB:hwEnable_reg\\D\[595] = \WDT_Timer:TimerUDB:control_7\[366]
+Removing Lhs of wire \WDT_Timer:TimerUDB:capture_out_reg_i\\D\[596] = \WDT_Timer:TimerUDB:capt_fifo_load\[384]
 
 ------------------------------------------------------
-Aliased 0 equations, 56 wires.
+Aliased 0 equations, 81 wires.
 ------------------------------------------------------
 
 ----------------------------------------------------------
@@ -298,6 +352,12 @@ Note:  Expanding virtual equation for '\Node_Timer:TimerUDB:fifo_load_polarized\
 Note:  Expanding virtual equation for '\Node_Timer:TimerUDB:timer_enable\' (cost = 0):
 \Node_Timer:TimerUDB:timer_enable\ <= (\Node_Timer:TimerUDB:control_7\);
 
+Note:  Expanding virtual equation for '\WDT_Timer:TimerUDB:fifo_load_polarized\' (cost = 0):
+\WDT_Timer:TimerUDB:fifo_load_polarized\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\WDT_Timer:TimerUDB:timer_enable\' (cost = 0):
+\WDT_Timer:TimerUDB:timer_enable\ <= (\WDT_Timer:TimerUDB:control_7\);
+
 
 Substituting virtuals - pass 2:
 
@@ -305,7 +365,7 @@ Substituting virtuals - pass 2:
 ----------------------------------------------------------
 Circuit simplification results:
 
-	Expanded 4 signals.
+	Expanded 6 signals.
 	Turned 0 signals into soft nodes.
 	Maximum default expansion cost was set at 3.
 ----------------------------------------------------------
@@ -314,11 +374,14 @@ Circuit simplification results:
 Alias Detection
 ------------------------------------------------------
 Aliasing \Node_Timer:TimerUDB:capt_fifo_load\ to zero
+Aliasing \WDT_Timer:TimerUDB:capt_fifo_load\ to zero
 Removing Lhs of wire \Node_Timer:TimerUDB:capt_fifo_load\[135] = zero[2]
 Removing Lhs of wire \Node_Timer:TimerUDB:trig_reg\[149] = \Node_Timer:TimerUDB:control_7\[117]
+Removing Lhs of wire \WDT_Timer:TimerUDB:capt_fifo_load\[384] = zero[2]
+Removing Lhs of wire \WDT_Timer:TimerUDB:trig_reg\[398] = \WDT_Timer:TimerUDB:control_7\[366]
 
 ------------------------------------------------------
-Aliased 0 equations, 2 wires.
+Aliased 0 equations, 4 wires.
 ------------------------------------------------------
 
 ----------------------------------------------------------
@@ -348,21 +411,24 @@ CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\wa
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\bin\warp.exe
 Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\willy\OneDrive - UC Davis\Documents\_FRUCD\Dashboard\PSoC5_Projects\FRUCD-Dashboard-master_github\Dashboard.cydsn\Dashboard.cyprj" -dcpsoc3 Dashboard.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 1s.125ms
+Warp synthesis phase: Elapsed time ==> 2s.940ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V4.2.0.641, Family: PSoC3, Started at: Monday, 06 May 2019 16:25:36
+cyp3fit: V4.2.0.641, Family: PSoC3, Started at: Monday, 20 May 2019 17:34:42
 Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\willy\OneDrive - UC Davis\Documents\_FRUCD\Dashboard\PSoC5_Projects\FRUCD-Dashboard-master_github\Dashboard.cydsn\Dashboard.cyprj -d CY8C5868AXI-LP035 Dashboard.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.017ms
+Design parsing phase: Elapsed time ==> 0s.069ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech Mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
     Converted constant MacroCell: \Node_Timer:TimerUDB:capture_last\ from registered to combinatorial
     Converted constant MacroCell: \Node_Timer:TimerUDB:capture_out_reg_i\ from registered to combinatorial
+    Converted constant MacroCell: \WDT_Timer:TimerUDB:capture_last\ from registered to combinatorial
+    Converted constant MacroCell: \WDT_Timer:TimerUDB:capture_out_reg_i\ from registered to combinatorial
 Assigning clock CAN_Clock to clock BUS_CLK because it is a pass-through
 Assigning clock timer_clock_1 to clock BUS_CLK because it is a pass-through
+Assigning clock timer_clock_2 to clock BUS_CLK because it is a pass-through
 <CYPRESSTAG name="Global Clock Selection" icon="FILE_RPT_TECHM">
     Digital Clock 0: Automatic-assigning  clock 'timer_clock'. Fanout=1, Signal=Net_28
 </CYPRESSTAG>
@@ -375,6 +441,14 @@ Done removing unused cells.
         EnableIn: Constant 1 was determined to be synchronous to ClockIn
         ClockOut: BUS_CLK, EnableOut: Constant 1
     UDB Clk/Enable \Node_Timer:TimerUDB:sCTRLReg:SyncCtl:cy_psoc3_udb_Ctl_Clk_Sync\: with output requested to be synchronous
+        ClockIn: BUS_CLK was determined to be a global clock that is synchronous to BUS_CLK
+        EnableIn: Constant 1 was determined to be synchronous to ClockIn
+        ClockOut: BUS_CLK, EnableOut: Constant 1
+    UDB Clk/Enable \WDT_Timer:TimerUDB:clock_enable_block\: with output requested to be synchronous
+        ClockIn: BUS_CLK was determined to be a global clock that is synchronous to BUS_CLK
+        EnableIn: Constant 1 was determined to be synchronous to ClockIn
+        ClockOut: BUS_CLK, EnableOut: Constant 1
+    UDB Clk/Enable \WDT_Timer:TimerUDB:sCTRLReg:SyncCtl:cy_psoc3_udb_Ctl_Clk_Sync\: with output requested to be synchronous
         ClockIn: BUS_CLK was determined to be a global clock that is synchronous to BUS_CLK
         EnableIn: Constant 1 was determined to be synchronous to ClockIn
         ClockOut: BUS_CLK, EnableOut: Constant 1
@@ -1460,6 +1534,45 @@ Design Equations
         Properties:
         {
         }
+
+    Pin : Name = WDT_Reset(0)
+        Attributes:
+            In Group/Port: True
+            In Sync Option: AUTO
+            Out Sync Option: NOSYNC
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: RES_PULL_DOWN
+            VTrip: EITHER
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilities: DIGITAL
+            Initial Value: 1
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => WDT_Reset(0)__PA ,
+            pad => WDT_Reset(0)_PAD );
+        Properties:
+        {
+        }
     </CYPRESSTAG>
     <CYPRESSTAG name="Macrocell listing" icon="FILE_RPT_EQUATION">
 
@@ -1477,6 +1590,16 @@ Design Equations
               \Node_Timer:TimerUDB:per_zero\
         );
         Output = \Node_Timer:TimerUDB:status_tc\ (fanout=1)
+
+    MacroCell: Name=\WDT_Timer:TimerUDB:status_tc\, Mode=(Combinatorial)
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \WDT_Timer:TimerUDB:control_7\ * \WDT_Timer:TimerUDB:per_zero\
+        );
+        Output = \WDT_Timer:TimerUDB:status_tc\ (fanout=1)
 
     MacroCell: Name=__ONE__, Mode=(Combinatorial)
         Total # of inputs        : 0
@@ -1600,6 +1723,149 @@ Design Equations
         Clock Polarity: Active High
         Clock Enable: True
         Previous in chain : \Node_Timer:TimerUDB:sT24:timerdp:u1\
+
+    datapathcell: Name =\WDT_Timer:TimerUDB:sT32:timerdp:u0\
+        PORT MAP (
+            clock => ClockBlock_BUS_CLK ,
+            cs_addr_1 => \WDT_Timer:TimerUDB:control_7\ ,
+            cs_addr_0 => \WDT_Timer:TimerUDB:per_zero\ ,
+            chain_out => \WDT_Timer:TimerUDB:sT32:timerdp:carry0\ );
+        Properties:
+        {
+            a0_init = "00000000"
+            a1_init = "00000000"
+            ce0_sync = 1
+            ce1_sync = 1
+            cl0_sync = 1
+            cl1_sync = 1
+            cmsb_sync = 1
+            co_msb_sync = 1
+            cy_dpconfig = "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111000000000000000000000001000000000000000000011000"
+            d0_init = "00000000"
+            d1_init = "00000000"
+            f0_blk_sync = 1
+            f0_bus_sync = 1
+            f1_blk_sync = 1
+            f1_bus_sync = 1
+            ff0_sync = 1
+            ff1_sync = 1
+            ov_msb_sync = 1
+            so_sync = 1
+            z0_sync = 1
+            z1_sync = 1
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+        Next in chain : \WDT_Timer:TimerUDB:sT32:timerdp:u1\
+
+    datapathcell: Name =\WDT_Timer:TimerUDB:sT32:timerdp:u1\
+        PORT MAP (
+            clock => ClockBlock_BUS_CLK ,
+            cs_addr_1 => \WDT_Timer:TimerUDB:control_7\ ,
+            cs_addr_0 => \WDT_Timer:TimerUDB:per_zero\ ,
+            chain_in => \WDT_Timer:TimerUDB:sT32:timerdp:carry0\ ,
+            chain_out => \WDT_Timer:TimerUDB:sT32:timerdp:carry1\ );
+        Properties:
+        {
+            a0_init = "00000000"
+            a1_init = "00000000"
+            ce0_sync = 1
+            ce1_sync = 1
+            cl0_sync = 1
+            cl1_sync = 1
+            cmsb_sync = 1
+            co_msb_sync = 1
+            cy_dpconfig = "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111100000110000000000000001000000110000000000011000"
+            d0_init = "00000000"
+            d1_init = "00000000"
+            f0_blk_sync = 1
+            f0_bus_sync = 1
+            f1_blk_sync = 1
+            f1_bus_sync = 1
+            ff0_sync = 1
+            ff1_sync = 1
+            ov_msb_sync = 1
+            so_sync = 1
+            z0_sync = 1
+            z1_sync = 1
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+        Previous in chain : \WDT_Timer:TimerUDB:sT32:timerdp:u0\
+        Next in chain : \WDT_Timer:TimerUDB:sT32:timerdp:u2\
+
+    datapathcell: Name =\WDT_Timer:TimerUDB:sT32:timerdp:u2\
+        PORT MAP (
+            clock => ClockBlock_BUS_CLK ,
+            cs_addr_1 => \WDT_Timer:TimerUDB:control_7\ ,
+            cs_addr_0 => \WDT_Timer:TimerUDB:per_zero\ ,
+            chain_in => \WDT_Timer:TimerUDB:sT32:timerdp:carry1\ ,
+            chain_out => \WDT_Timer:TimerUDB:sT32:timerdp:carry2\ );
+        Properties:
+        {
+            a0_init = "00000000"
+            a1_init = "00000000"
+            ce0_sync = 1
+            ce1_sync = 1
+            cl0_sync = 1
+            cl1_sync = 1
+            cmsb_sync = 1
+            co_msb_sync = 1
+            cy_dpconfig = "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111100000110000000000000001000000110000000000011000"
+            d0_init = "00000000"
+            d1_init = "00000000"
+            f0_blk_sync = 1
+            f0_bus_sync = 1
+            f1_blk_sync = 1
+            f1_bus_sync = 1
+            ff0_sync = 1
+            ff1_sync = 1
+            ov_msb_sync = 1
+            so_sync = 1
+            z0_sync = 1
+            z1_sync = 1
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+        Previous in chain : \WDT_Timer:TimerUDB:sT32:timerdp:u1\
+        Next in chain : \WDT_Timer:TimerUDB:sT32:timerdp:u3\
+
+    datapathcell: Name =\WDT_Timer:TimerUDB:sT32:timerdp:u3\
+        PORT MAP (
+            clock => ClockBlock_BUS_CLK ,
+            cs_addr_1 => \WDT_Timer:TimerUDB:control_7\ ,
+            cs_addr_0 => \WDT_Timer:TimerUDB:per_zero\ ,
+            z0_comb => \WDT_Timer:TimerUDB:per_zero\ ,
+            f0_bus_stat_comb => \WDT_Timer:TimerUDB:status_3\ ,
+            f0_blk_stat_comb => \WDT_Timer:TimerUDB:status_2\ ,
+            chain_in => \WDT_Timer:TimerUDB:sT32:timerdp:carry2\ );
+        Properties:
+        {
+            a0_init = "00000000"
+            a1_init = "00000000"
+            ce0_sync = 1
+            ce1_sync = 1
+            cl0_sync = 1
+            cl1_sync = 1
+            cmsb_sync = 1
+            co_msb_sync = 1
+            cy_dpconfig = "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111100000110000000000000001000000110000000000011000"
+            d0_init = "00000000"
+            d1_init = "00000000"
+            f0_blk_sync = 1
+            f0_bus_sync = 1
+            f1_blk_sync = 1
+            f1_bus_sync = 1
+            ff0_sync = 1
+            ff1_sync = 1
+            ov_msb_sync = 1
+            so_sync = 1
+            z0_sync = 1
+            z1_sync = 1
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+        Previous in chain : \WDT_Timer:TimerUDB:sT32:timerdp:u2\
     </CYPRESSTAG>
     <CYPRESSTAG name="Status register listing">
     </CYPRESSTAG>
@@ -1616,6 +1882,22 @@ Design Equations
             status_2 => \Node_Timer:TimerUDB:status_2\ ,
             status_0 => \Node_Timer:TimerUDB:status_tc\ ,
             interrupt => Net_57 );
+        Properties:
+        {
+            cy_force_order = 1
+            cy_int_mask = "1111111"
+            cy_md_select = "0000011"
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+
+    statusicell: Name =\WDT_Timer:TimerUDB:rstSts:stsreg\
+        PORT MAP (
+            clock => ClockBlock_BUS_CLK ,
+            status_3 => \WDT_Timer:TimerUDB:status_3\ ,
+            status_2 => \WDT_Timer:TimerUDB:status_2\ ,
+            status_0 => \WDT_Timer:TimerUDB:status_tc\ ,
+            interrupt => Net_136 );
         Properties:
         {
             cy_force_order = 1
@@ -1644,6 +1926,28 @@ Design Equations
             control_2 => \Node_Timer:TimerUDB:control_2\ ,
             control_1 => \Node_Timer:TimerUDB:control_1\ ,
             control_0 => \Node_Timer:TimerUDB:control_0\ );
+        Properties:
+        {
+            cy_ctrl_mode_0 = "11111111"
+            cy_ctrl_mode_1 = "00000000"
+            cy_ext_reset = 0
+            cy_force_order = 1
+            cy_init_value = "00000000"
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+
+    controlcell: Name =\WDT_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\
+        PORT MAP (
+            clock => ClockBlock_BUS_CLK ,
+            control_7 => \WDT_Timer:TimerUDB:control_7\ ,
+            control_6 => \WDT_Timer:TimerUDB:control_6\ ,
+            control_5 => \WDT_Timer:TimerUDB:control_5\ ,
+            control_4 => \WDT_Timer:TimerUDB:control_4\ ,
+            control_3 => \WDT_Timer:TimerUDB:control_3\ ,
+            control_2 => \WDT_Timer:TimerUDB:control_2\ ,
+            control_1 => \WDT_Timer:TimerUDB:control_1\ ,
+            control_0 => \WDT_Timer:TimerUDB:control_0\ );
         Properties:
         {
             cy_ctrl_mode_0 = "11111111"
@@ -1691,6 +1995,15 @@ Design Equations
             int_type = "10"
             is_nmi = 0
         }
+
+    interrupt: Name =isr_wdt
+        PORT MAP (
+            interrupt => Net_136 );
+        Properties:
+        {
+            int_type = "00"
+            is_nmi = 0
+        }
     </CYPRESSTAG>
 </CYPRESSTAG>
 <CYPRESSTAG name="Technology mapping summary" expanded>
@@ -1705,8 +2018,8 @@ Digital Clocks                :    1 :    7 :    8 : 12.50 %
 Analog Clocks                 :    0 :    4 :    4 :  0.00 %
 CapSense Buffers              :    0 :    2 :    2 :  0.00 %
 Digital Filter Block          :    0 :    1 :    1 :  0.00 %
-Interrupts                    :    3 :   29 :   32 :  9.38 %
-IO                            :   30 :   42 :   72 : 41.67 %
+Interrupts                    :    4 :   28 :   32 : 12.50 %
+IO                            :   31 :   41 :   72 : 43.06 %
 Segment LCD                   :    0 :    1 :    1 :  0.00 %
 CAN 2.0b                      :    1 :    0 :    1 : 100.00 %
 I2C                           :    0 :    1 :    1 :  0.00 %
@@ -1714,14 +2027,14 @@ USB                           :    0 :    1 :    1 :  0.00 %
 DMA Channels                  :    0 :   24 :   24 :  0.00 %
 Timer                         :    1 :    3 :    4 : 25.00 %
 UDB                           :      :      :      :        
-  Macrocells                  :    2 :  190 :  192 :  1.04 %
-  Unique P-terms              :    1 :  383 :  384 :  0.26 %
-  Total P-terms               :    1 :      :      :        
-  Datapath Cells              :    3 :   21 :   24 : 12.50 %
-  Status Cells                :    1 :   23 :   24 :  4.17 %
-    StatusI Registers         :    1 :      :      :        
-  Control Cells               :    1 :   23 :   24 :  4.17 %
-    Control Registers         :    1 :      :      :        
+  Macrocells                  :    3 :  189 :  192 :  1.56 %
+  Unique P-terms              :    2 :  382 :  384 :  0.52 %
+  Total P-terms               :    2 :      :      :        
+  Datapath Cells              :    7 :   17 :   24 : 29.17 %
+  Status Cells                :    2 :   22 :   24 :  8.33 %
+    StatusI Registers         :    2 :      :      :        
+  Control Cells               :    2 :   22 :   24 :  8.33 %
+    Control Registers         :    2 :      :      :        
 Opamp                         :    0 :    4 :    4 :  0.00 %
 Comparator                    :    0 :    4 :    4 :  0.00 %
 Delta-Sigma ADC               :    0 :    1 :    1 :  0.00 %
@@ -1731,8 +2044,8 @@ Analog (SC/CT) Blocks         :    0 :    4 :    4 :  0.00 %
 DAC                           :      :      :      :        
   VIDAC                       :    0 :    4 :    4 :  0.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.191ms
-Tech Mapping phase: Elapsed time ==> 0s.500ms
+Technology Mapping: Elapsed time ==> 0s.248ms
+Tech Mapping phase: Elapsed time ==> 0s.524ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 Initial Analog Placement Results:
@@ -1763,7 +2076,8 @@ IO_5@[IOP=(2)][IoId=(5)] : SD(5) (fixed)
 IO_6@[IOP=(2)][IoId=(6)] : SD(6) (fixed)
 IO_7@[IOP=(2)][IoId=(7)] : SD(7) (fixed)
 IO_5@[IOP=(3)][IoId=(5)] : TX(0) (fixed)
-Analog Placement phase: Elapsed time ==> 0s.024ms
+IO_7@[IOP=(6)][IoId=(7)] : WDT_Reset(0) (fixed)
+Analog Placement phase: Elapsed time ==> 0s.174ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 Analog Routing phase: Elapsed time ==> 0s.000ms
@@ -1781,11 +2095,11 @@ Dump of CyP35AnalogRoutingResultsDB
 IsVddaHalfUsedForComp = False
 IsVddaHalfUsedForSar0 = False
 IsVddaHalfUsedForSar1 = False
-Analog Code Generation phase: Elapsed time ==> 0s.378ms
+Analog Code Generation phase: Elapsed time ==> 1s.035ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
-I2076: Total run-time: 0.9 sec.
+I2076: Total run-time: 2.4 sec.
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
@@ -1796,27 +2110,27 @@ PLD Packing Summary
 ------------------------------------------------------------
             Resource Type : Used : Free :  Max :  % Used
     ====================================================
-                     PLDs :    2 :   46 :   48 :   4.17%
+                     PLDs :    3 :   45 :   48 :   6.25%
 
 <CYPRESSTAG name="PLD Statistics">
 
         PLD Resource Type :     Average/LAB
     =======================================
-                   Inputs :            1.00
-                   Pterms :            0.50
+                   Inputs :            1.33
+                   Pterms :            0.67
                Macrocells :            1.00
 </CYPRESSTAG>
 <CYPRESSTAG name="Packed PLD Contents">
 Packed PLD Contents not displayed at this verbose level.</CYPRESSTAG>
 </CYPRESSTAG>
-PLD Packing: Elapsed time ==> 0s.001ms
+PLD Packing: Elapsed time ==> 0s.003ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Partitioning">
 <CYPRESSTAG name="Initial Partitioning Summary">
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.037ms
+Partitioning: Elapsed time ==> 0s.172ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -1826,7 +2140,7 @@ Final Placement Summary
 
        Resource Type :      Count : Avg Inputs : Avg Outputs
     ========================================================
-                 UDB :          4 :       0.50 :       0.50
+                 UDB :          8 :       0.50 :       0.38
 <CYPRESSTAG name="Final Placement Details">
 <CYPRESSTAG name="Component Details">
 
@@ -1836,7 +2150,145 @@ Component Placement Details
 UDB [UDB=(0,0)] is empty.
 UDB [UDB=(0,1)] is empty.
 UDB [UDB=(0,2)] is empty.
-UDB [UDB=(0,3)] contents:
+UDB [UDB=(0,3)] is empty.
+UDB [UDB=(0,4)] is empty.
+UDB [UDB=(0,5)] is empty.
+UDB [UDB=(1,0)] is empty.
+UDB [UDB=(1,1)] is empty.
+UDB [UDB=(1,2)] contents:
+LAB@[UDB=(1,2)][LB=1] #macrocells=1, #inputs=0, #pterms=0
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]: (empty)
+    [McSlotId=2]: (empty)
+    [McSlotId=3]:     MacroCell: Name=__ONE__, Mode=(Combinatorial) @ [UDB=(1,2)][LB=1][MC=3]
+        Total # of inputs        : 0
+        Total # of product terms : 0
+            Clock Enable: True
+        Main Equation            : 0 pterms
+        !(
+            0
+        );
+        Output = __ONE__ (fanout=1)
+        Properties               : 
+        {
+        }
+}
+
+UDB [UDB=(1,3)] is empty.
+UDB [UDB=(1,4)] is empty.
+UDB [UDB=(1,5)] is empty.
+UDB [UDB=(2,0)] contents:
+datapathcell: Name =\WDT_Timer:TimerUDB:sT32:timerdp:u0\
+    PORT MAP (
+        clock => ClockBlock_BUS_CLK ,
+        cs_addr_1 => \WDT_Timer:TimerUDB:control_7\ ,
+        cs_addr_0 => \WDT_Timer:TimerUDB:per_zero\ ,
+        chain_out => \WDT_Timer:TimerUDB:sT32:timerdp:carry0\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111000000000000000000000001000000000000000000011000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Next in chain : \WDT_Timer:TimerUDB:sT32:timerdp:u1\
+
+UDB [UDB=(2,1)] contents:
+LAB@[UDB=(2,1)][LB=1] #macrocells=1, #inputs=2, #pterms=1
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]: (empty)
+    [McSlotId=2]:     MacroCell: Name=\WDT_Timer:TimerUDB:status_tc\, Mode=(Combinatorial) @ [UDB=(2,1)][LB=1][MC=2]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \WDT_Timer:TimerUDB:control_7\ * \WDT_Timer:TimerUDB:per_zero\
+        );
+        Output = \WDT_Timer:TimerUDB:status_tc\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
+datapathcell: Name =\WDT_Timer:TimerUDB:sT32:timerdp:u3\
+    PORT MAP (
+        clock => ClockBlock_BUS_CLK ,
+        cs_addr_1 => \WDT_Timer:TimerUDB:control_7\ ,
+        cs_addr_0 => \WDT_Timer:TimerUDB:per_zero\ ,
+        z0_comb => \WDT_Timer:TimerUDB:per_zero\ ,
+        f0_bus_stat_comb => \WDT_Timer:TimerUDB:status_3\ ,
+        f0_blk_stat_comb => \WDT_Timer:TimerUDB:status_2\ ,
+        chain_in => \WDT_Timer:TimerUDB:sT32:timerdp:carry2\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111100000110000000000000001000000110000000000011000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Previous in chain : \WDT_Timer:TimerUDB:sT32:timerdp:u2\
+
+statusicell: Name =\WDT_Timer:TimerUDB:rstSts:stsreg\
+    PORT MAP (
+        clock => ClockBlock_BUS_CLK ,
+        status_3 => \WDT_Timer:TimerUDB:status_3\ ,
+        status_2 => \WDT_Timer:TimerUDB:status_2\ ,
+        status_0 => \WDT_Timer:TimerUDB:status_tc\ ,
+        interrupt => Net_136 );
+    Properties:
+    {
+        cy_force_order = 1
+        cy_int_mask = "1111111"
+        cy_md_select = "0000011"
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(2,2)] is empty.
+UDB [UDB=(2,3)] contents:
 datapathcell: Name =\Node_Timer:TimerUDB:sT24:timerdp:u0\
     PORT MAP (
         clock => ClockBlock_BUS_CLK ,
@@ -1871,41 +2323,16 @@ datapathcell: Name =\Node_Timer:TimerUDB:sT24:timerdp:u0\
     Clock Enable: True
     Next in chain : \Node_Timer:TimerUDB:sT24:timerdp:u1\
 
-controlcell: Name =\Node_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\
+UDB [UDB=(2,4)] is empty.
+UDB [UDB=(2,5)] is empty.
+UDB [UDB=(3,0)] contents:
+datapathcell: Name =\WDT_Timer:TimerUDB:sT32:timerdp:u1\
     PORT MAP (
         clock => ClockBlock_BUS_CLK ,
-        control_7 => \Node_Timer:TimerUDB:control_7\ ,
-        control_6 => \Node_Timer:TimerUDB:control_6\ ,
-        control_5 => \Node_Timer:TimerUDB:control_5\ ,
-        control_4 => \Node_Timer:TimerUDB:control_4\ ,
-        control_3 => \Node_Timer:TimerUDB:control_3\ ,
-        control_2 => \Node_Timer:TimerUDB:control_2\ ,
-        control_1 => \Node_Timer:TimerUDB:control_1\ ,
-        control_0 => \Node_Timer:TimerUDB:control_0\ );
-    Properties:
-    {
-        cy_ctrl_mode_0 = "11111111"
-        cy_ctrl_mode_1 = "00000000"
-        cy_ext_reset = 0
-        cy_force_order = 1
-        cy_init_value = "00000000"
-    }
-    Clock Polarity: Active High
-    Clock Enable: True
-
-UDB [UDB=(0,4)] is empty.
-UDB [UDB=(0,5)] is empty.
-UDB [UDB=(1,0)] is empty.
-UDB [UDB=(1,1)] is empty.
-UDB [UDB=(1,2)] is empty.
-UDB [UDB=(1,3)] contents:
-datapathcell: Name =\Node_Timer:TimerUDB:sT24:timerdp:u1\
-    PORT MAP (
-        clock => ClockBlock_BUS_CLK ,
-        cs_addr_1 => \Node_Timer:TimerUDB:control_7\ ,
-        cs_addr_0 => \Node_Timer:TimerUDB:per_zero\ ,
-        chain_in => \Node_Timer:TimerUDB:sT24:timerdp:carry0\ ,
-        chain_out => \Node_Timer:TimerUDB:sT24:timerdp:carry1\ );
+        cs_addr_1 => \WDT_Timer:TimerUDB:control_7\ ,
+        cs_addr_0 => \WDT_Timer:TimerUDB:per_zero\ ,
+        chain_in => \WDT_Timer:TimerUDB:sT32:timerdp:carry0\ ,
+        chain_out => \WDT_Timer:TimerUDB:sT32:timerdp:carry1\ );
     Properties:
     {
         a0_init = "00000000"
@@ -1932,13 +2359,72 @@ datapathcell: Name =\Node_Timer:TimerUDB:sT24:timerdp:u1\
     }
     Clock Polarity: Active High
     Clock Enable: True
-    Previous in chain : \Node_Timer:TimerUDB:sT24:timerdp:u0\
-    Next in chain : \Node_Timer:TimerUDB:sT24:timerdp:u2\
+    Previous in chain : \WDT_Timer:TimerUDB:sT32:timerdp:u0\
+    Next in chain : \WDT_Timer:TimerUDB:sT32:timerdp:u2\
 
-UDB [UDB=(1,4)] contents:
-LAB@[UDB=(1,4)][LB=0] #macrocells=1, #inputs=2, #pterms=1
+controlcell: Name =\WDT_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\
+    PORT MAP (
+        clock => ClockBlock_BUS_CLK ,
+        control_7 => \WDT_Timer:TimerUDB:control_7\ ,
+        control_6 => \WDT_Timer:TimerUDB:control_6\ ,
+        control_5 => \WDT_Timer:TimerUDB:control_5\ ,
+        control_4 => \WDT_Timer:TimerUDB:control_4\ ,
+        control_3 => \WDT_Timer:TimerUDB:control_3\ ,
+        control_2 => \WDT_Timer:TimerUDB:control_2\ ,
+        control_1 => \WDT_Timer:TimerUDB:control_1\ ,
+        control_0 => \WDT_Timer:TimerUDB:control_0\ );
+    Properties:
+    {
+        cy_ctrl_mode_0 = "11111111"
+        cy_ctrl_mode_1 = "00000000"
+        cy_ext_reset = 0
+        cy_force_order = 1
+        cy_init_value = "00000000"
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(3,1)] contents:
+datapathcell: Name =\WDT_Timer:TimerUDB:sT32:timerdp:u2\
+    PORT MAP (
+        clock => ClockBlock_BUS_CLK ,
+        cs_addr_1 => \WDT_Timer:TimerUDB:control_7\ ,
+        cs_addr_0 => \WDT_Timer:TimerUDB:per_zero\ ,
+        chain_in => \WDT_Timer:TimerUDB:sT32:timerdp:carry1\ ,
+        chain_out => \WDT_Timer:TimerUDB:sT32:timerdp:carry2\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111100000110000000000000001000000110000000000011000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Previous in chain : \WDT_Timer:TimerUDB:sT32:timerdp:u1\
+    Next in chain : \WDT_Timer:TimerUDB:sT32:timerdp:u3\
+
+UDB [UDB=(3,2)] contents:
+LAB@[UDB=(3,2)][LB=0] #macrocells=1, #inputs=2, #pterms=1
 {
-    [McSlotId=0]:     MacroCell: Name=\Node_Timer:TimerUDB:status_tc\, Mode=(Combinatorial) @ [UDB=(1,4)][LB=0][MC=0]
+    [McSlotId=0]:     MacroCell: Name=\Node_Timer:TimerUDB:status_tc\, Mode=(Combinatorial) @ [UDB=(3,2)][LB=0][MC=0]
         Total # of inputs        : 2
         Total # of product terms : 1
             Clock Enable: True
@@ -2010,36 +2496,65 @@ statusicell: Name =\Node_Timer:TimerUDB:rstSts:stsreg\
     Clock Polarity: Active High
     Clock Enable: True
 
-UDB [UDB=(1,5)] is empty.
-UDB [UDB=(2,0)] is empty.
-UDB [UDB=(2,1)] contents:
-LAB@[UDB=(2,1)][LB=0] #macrocells=1, #inputs=0, #pterms=0
-{
-    [McSlotId=0]: (empty)
-    [McSlotId=1]: (empty)
-    [McSlotId=2]: (empty)
-    [McSlotId=3]:     MacroCell: Name=__ONE__, Mode=(Combinatorial) @ [UDB=(2,1)][LB=0][MC=3]
-        Total # of inputs        : 0
-        Total # of product terms : 0
-            Clock Enable: True
-        Main Equation            : 0 pterms
-        !(
-            0
-        );
-        Output = __ONE__ (fanout=1)
-        Properties               : 
-        {
-        }
-}
+UDB [UDB=(3,3)] contents:
+datapathcell: Name =\Node_Timer:TimerUDB:sT24:timerdp:u1\
+    PORT MAP (
+        clock => ClockBlock_BUS_CLK ,
+        cs_addr_1 => \Node_Timer:TimerUDB:control_7\ ,
+        cs_addr_0 => \Node_Timer:TimerUDB:per_zero\ ,
+        chain_in => \Node_Timer:TimerUDB:sT24:timerdp:carry0\ ,
+        chain_out => \Node_Timer:TimerUDB:sT24:timerdp:carry1\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111100000110000000000000001000000110000000000011000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Previous in chain : \Node_Timer:TimerUDB:sT24:timerdp:u0\
+    Next in chain : \Node_Timer:TimerUDB:sT24:timerdp:u2\
 
-UDB [UDB=(2,2)] is empty.
-UDB [UDB=(2,3)] is empty.
-UDB [UDB=(2,4)] is empty.
-UDB [UDB=(2,5)] is empty.
-UDB [UDB=(3,0)] is empty.
-UDB [UDB=(3,1)] is empty.
-UDB [UDB=(3,2)] is empty.
-UDB [UDB=(3,3)] is empty.
+controlcell: Name =\Node_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\
+    PORT MAP (
+        clock => ClockBlock_BUS_CLK ,
+        control_7 => \Node_Timer:TimerUDB:control_7\ ,
+        control_6 => \Node_Timer:TimerUDB:control_6\ ,
+        control_5 => \Node_Timer:TimerUDB:control_5\ ,
+        control_4 => \Node_Timer:TimerUDB:control_4\ ,
+        control_3 => \Node_Timer:TimerUDB:control_3\ ,
+        control_2 => \Node_Timer:TimerUDB:control_2\ ,
+        control_1 => \Node_Timer:TimerUDB:control_1\ ,
+        control_0 => \Node_Timer:TimerUDB:control_0\ );
+    Properties:
+    {
+        cy_ctrl_mode_0 = "11111111"
+        cy_ctrl_mode_1 = "00000000"
+        cy_ext_reset = 0
+        cy_force_order = 1
+        cy_init_value = "00000000"
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
 UDB [UDB=(3,4)] is empty.
 UDB [UDB=(3,5)] is empty.
 Intr container @ [IntrContainer=(0)]: 
@@ -2059,6 +2574,15 @@ Intr container @ [IntrContainer=(0)]:
         Properties:
         {
             int_type = "10"
+            is_nmi = 0
+        }
+  Intr@ [IntrContainer=(0)][IntrId=(2)] 
+    interrupt: Name =isr_wdt
+        PORT MAP (
+            interrupt => Net_136 );
+        Properties:
+        {
+            int_type = "00"
             is_nmi = 0
         }
   Intr@ [IntrContainer=(0)][IntrId=(16)] 
@@ -2882,6 +3406,46 @@ Pin : Name = LED_1(0)
     }
 
 Port 6 contains the following IO cells:
+[IoId=7]: 
+Pin : Name = WDT_Reset(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: RES_PULL_DOWN
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => WDT_Reset(0)__PA ,
+        pad => WDT_Reset(0)_PAD );
+    Properties:
+    {
+    }
+
 Port 12 contains the following IO cells:
 [IoId=3]: 
 Pin : Name = RGB3_1(0)
@@ -3246,73 +3810,75 @@ PHUB group 0: empty
 ------------------------------------------------------------
 Port Configuration report
 ------------------------------------------------------------
-     |     |       | Interrupt |                  |           | 
-Port | Pin | Fixed |      Type |       Drive Mode |      Name | Connections
------+-----+-------+-----------+------------------+-----------+------------
-   0 |   1 |     * |      NONE |         CMOS_OUT | RGB3_2(0) | 
-     |   2 |     * |      NONE |         CMOS_OUT | RGB2_2(0) | 
-     |   3 |     * |      NONE |         CMOS_OUT | RGB1_2(0) | 
------+-----+-------+-----------+------------------+-----------+------------
-   2 |   0 |     * |      NONE |         CMOS_OUT |     SD(0) | 
-     |   1 |     * |      NONE |         CMOS_OUT |     SD(1) | 
-     |   2 |     * |      NONE |         CMOS_OUT |     SD(2) | 
-     |   3 |     * |      NONE |         CMOS_OUT |     SD(3) | 
-     |   4 |     * |      NONE |         CMOS_OUT |     SD(4) | 
-     |   5 |     * |      NONE |         CMOS_OUT |     SD(5) | 
-     |   6 |     * |      NONE |         CMOS_OUT |     SD(6) | 
-     |   7 |     * |      NONE |         CMOS_OUT |     SD(7) | 
------+-----+-------+-----------+------------------+-----------+------------
-   3 |   0 |     * |      NONE |     HI_Z_DIGITAL |  Drive(0) | 
-     |   1 |     * |      NONE |     HI_Z_DIGITAL |     HV(0) | 
-     |   4 |     * |      NONE |     HI_Z_DIGITAL |     RX(0) | FB(Net_11)
-     |   5 |     * |      NONE |         CMOS_OUT |     TX(0) | In(Net_12)
------+-----+-------+-----------+------------------+-----------+------------
-   4 |   0 |     * |      NONE |         CMOS_OUT | RGB2_1(0) | 
-     |   1 |     * |      NONE |         CMOS_OUT | RGB1_1(0) | 
------+-----+-------+-----------+------------------+-----------+------------
-   5 |   0 |     * |      NONE |         CMOS_OUT | Buzzer(0) | 
-     |   2 |     * |      NONE |         CMOS_OUT |    LED(0) | 
-     |   3 |     * |      NONE |         CMOS_OUT |  LED_1(0) | 
------+-----+-------+-----------+------------------+-----------+------------
-  12 |   3 |     * |      NONE |         CMOS_OUT | RGB3_1(0) | 
------+-----+-------+-----------+------------------+-----------+------------
-  15 |   0 |     * |      NONE |         CMOS_OUT |   CTRL(0) | 
-     |   1 |     * |      NONE |         CMOS_OUT |   CTRL(1) | 
-     |   2 |     * |      NONE |         CMOS_OUT |   CTRL(2) | 
-     |   3 |     * |      NONE |         CMOS_OUT |   CTRL(3) | 
-     |   4 |     * |      NONE |         CMOS_OUT |   CTRL(4) | 
-     |   5 |     * |      NONE |         CMOS_OUT |   CTRL(5) | 
----------------------------------------------------------------------------
+     |     |       | Interrupt |                  |              | 
+Port | Pin | Fixed |      Type |       Drive Mode |         Name | Connections
+-----+-----+-------+-----------+------------------+--------------+------------
+   0 |   1 |     * |      NONE |         CMOS_OUT |    RGB3_2(0) | 
+     |   2 |     * |      NONE |         CMOS_OUT |    RGB2_2(0) | 
+     |   3 |     * |      NONE |         CMOS_OUT |    RGB1_2(0) | 
+-----+-----+-------+-----------+------------------+--------------+------------
+   2 |   0 |     * |      NONE |         CMOS_OUT |        SD(0) | 
+     |   1 |     * |      NONE |         CMOS_OUT |        SD(1) | 
+     |   2 |     * |      NONE |         CMOS_OUT |        SD(2) | 
+     |   3 |     * |      NONE |         CMOS_OUT |        SD(3) | 
+     |   4 |     * |      NONE |         CMOS_OUT |        SD(4) | 
+     |   5 |     * |      NONE |         CMOS_OUT |        SD(5) | 
+     |   6 |     * |      NONE |         CMOS_OUT |        SD(6) | 
+     |   7 |     * |      NONE |         CMOS_OUT |        SD(7) | 
+-----+-----+-------+-----------+------------------+--------------+------------
+   3 |   0 |     * |      NONE |     HI_Z_DIGITAL |     Drive(0) | 
+     |   1 |     * |      NONE |     HI_Z_DIGITAL |        HV(0) | 
+     |   4 |     * |      NONE |     HI_Z_DIGITAL |        RX(0) | FB(Net_11)
+     |   5 |     * |      NONE |         CMOS_OUT |        TX(0) | In(Net_12)
+-----+-----+-------+-----------+------------------+--------------+------------
+   4 |   0 |     * |      NONE |         CMOS_OUT |    RGB2_1(0) | 
+     |   1 |     * |      NONE |         CMOS_OUT |    RGB1_1(0) | 
+-----+-----+-------+-----------+------------------+--------------+------------
+   5 |   0 |     * |      NONE |         CMOS_OUT |    Buzzer(0) | 
+     |   2 |     * |      NONE |         CMOS_OUT |       LED(0) | 
+     |   3 |     * |      NONE |         CMOS_OUT |     LED_1(0) | 
+-----+-----+-------+-----------+------------------+--------------+------------
+   6 |   7 |     * |      NONE |    RES_PULL_DOWN | WDT_Reset(0) | 
+-----+-----+-------+-----------+------------------+--------------+------------
+  12 |   3 |     * |      NONE |         CMOS_OUT |    RGB3_1(0) | 
+-----+-----+-------+-----------+------------------+--------------+------------
+  15 |   0 |     * |      NONE |         CMOS_OUT |      CTRL(0) | 
+     |   1 |     * |      NONE |         CMOS_OUT |      CTRL(1) | 
+     |   2 |     * |      NONE |         CMOS_OUT |      CTRL(2) | 
+     |   3 |     * |      NONE |         CMOS_OUT |      CTRL(3) | 
+     |   4 |     * |      NONE |         CMOS_OUT |      CTRL(4) | 
+     |   5 |     * |      NONE |         CMOS_OUT |      CTRL(5) | 
+------------------------------------------------------------------------------
 </CYPRESSTAG>
 </CYPRESSTAG>
 </CYPRESSTAG>
-Digital component placer commit/Report: Elapsed time ==> 0s.082ms
-Digital Placement phase: Elapsed time ==> 1s.571ms
+Digital component placer commit/Report: Elapsed time ==> 0s.159ms
+Digital Placement phase: Elapsed time ==> 3s.463ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 "C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\psoc5/psoc5lp/route_arch-rrg.cydata" --vh2-path "Dashboard_r.vh2" --pcf-path "Dashboard.pco" --des-name "Dashboard" --dsf-path "Dashboard.dsf" --sdc-path "Dashboard.sdc" --lib-path "Dashboard_r.lib"
 Routing successful.
-Digital Routing phase: Elapsed time ==> 1s.999ms
+Digital Routing phase: Elapsed time ==> 4s.512ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Generation">
-Bitstream Generation phase: Elapsed time ==> 0s.274ms
+Bitstream Generation phase: Elapsed time ==> 0s.801ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Verification">
-Bitstream Verification phase: Elapsed time ==> 0s.060ms
+Bitstream Verification phase: Elapsed time ==> 0s.103ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in Dashboard_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.438ms
+Static timing analysis phase: Elapsed time ==> 0s.944ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
 Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.441ms
+Design database save phase: Elapsed time ==> 0s.722ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 5s.768ms
+cydsfit: Elapsed time ==> 12s.462ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 5s.769ms
-API generation phase: Elapsed time ==> 2s.413ms
-Dependency generation phase: Elapsed time ==> 0s.044ms
-Cleanup phase: Elapsed time ==> 0s.002ms
+Fitter phase: Elapsed time ==> 12s.463ms
+API generation phase: Elapsed time ==> 4s.851ms
+Dependency generation phase: Elapsed time ==> 0s.083ms
+Cleanup phase: Elapsed time ==> 0s.001ms

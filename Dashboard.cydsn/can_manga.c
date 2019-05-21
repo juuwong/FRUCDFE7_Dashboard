@@ -116,7 +116,7 @@ void can_receive(uint8_t *msg, int ID)
         case 0x0666:    // pdoAwk from motor controller
             ACK_RX = msg[CAN_DATA_BYTE_1];
             break;
-        case 0x0201:    // BSPD (error from pedal node)
+        case 0x0201:    // BSPD (brake position from pedal node)
             ERROR_TOLERANCE = msg[CAN_DATA_BYTE_1];
             break;
         case 0x0200:    // throttle
