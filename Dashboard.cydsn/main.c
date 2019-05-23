@@ -21,6 +21,11 @@ const double THROTTLE_MAP[8] = { 95, 71, 59, 47, 35, 23, 11, 5 };
 
 uint16_t curr_voltage = 0;
 
+int firstStart = 0;
+int firstLV = 0;
+int firstHV = 0;
+int firstDrive = 0;
+
 #define PWM_PULSE_WIDTH_STEP        (10u)
 #define SWITCH_PRESSED              (0u)
 #define PWM_MESSAGE_ID              (0x1AAu)
@@ -51,6 +56,13 @@ void nodeCheckStart()
 {
     Node_Timer_Start();
     isr_nodeok_Start();
+}
+
+void displayData() {
+    GLCD_Clear_Frame();
+    GLCD_DrawInt(0,0,PACK_TEMP,8);
+    GLCD_DrawInt(120,0,charge,8);
+    GLCD_Write_Frame();
 }
 
 CY_ISR(ISR_WDT){
@@ -153,7 +165,7 @@ int main()
     
     for(;;)
     {
-    
+        charge = SOC_LUT[(voltage - 93400) / 100] / 100;
         LED_Write(1);
         
         // Check if all nodes are OK
@@ -169,9 +181,13 @@ int main()
             // startup -- 
             case Startup:
                 GLCD_Clear_Frame();
-                GLCD_DrawString(0,0,"START",8);
-                GLCD_Write_Frame();
-  
+                if(firstStart == 0) {
+                    GLCD_DrawString(0,0,"START",8);
+                    GLCD_Write_Frame();
+                } else {
+                    displayData();
+                }
+                
                 //Initialize CAN
                 CAN_GlobalIntEnable();
                 CAN_Init();
@@ -190,9 +206,14 @@ int main()
             break;
                 
             case LV:
-                GLCD_Clear_Frame();
-                GLCD_DrawString(0,0,"LV",8);
-                GLCD_Write_Frame();
+                if(firstLV == 0) {
+                    GLCD_Clear_Frame();
+                    GLCD_DrawString(0,0,"LV",8);
+                    GLCD_Write_Frame();
+                    firstLV = 1;
+                } else {
+                    displayData();
+                }
                 
                 CAN_GlobalIntEnable();
                 CAN_Init();
@@ -204,7 +225,7 @@ int main()
                 can_send_status(state, error_state);
 
                 // calcualte SOC and display SOC
-                charge = SOC_LUT[(voltage - 93400) / 100] / 100;
+                //charge = SOC_LUT[(voltage - 93400) / 100] / 100;
                 //hex2Display(charge);
 
                 Buzzer_Write(0);
@@ -276,9 +297,14 @@ int main()
             break;
 	        
             case HV_Enabled:
-                GLCD_Clear_Frame();
-                GLCD_DrawString(0,0,"HV",8);
-                GLCD_Write_Frame();
+                if(firstHV == 0) {
+                    GLCD_Clear_Frame();
+                    GLCD_DrawString(0,0,"HV",8);
+                    GLCD_Write_Frame();
+                    firstHV = 1;
+                } else {
+                    displayData();
+                }
 
                 CAN_GlobalIntEnable();
                 CAN_Init();
@@ -376,10 +402,7 @@ int main()
                 }
                 
                 // Display pack temp and soc on display
-                GLCD_Clear_Frame();
-                GLCD_DrawInt(0,0,PACK_TEMP,8);
-                GLCD_DrawInt(120,0,charge,8);
-                GLCD_Write_Frame();
+                displayData();
                 
                 // check if everything is going well
                 // if exiting drive improperly also send charge
