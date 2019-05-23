@@ -334,6 +334,7 @@ void CAN_TxCancel(uint8 bufferId)
             {
                 /* `#START MESSAGE_SOC_TRASMITTED` */
 
+                
                 /* `#END` */
 
                 #ifdef CAN_SEND_MSG_SOC_CALLBACK

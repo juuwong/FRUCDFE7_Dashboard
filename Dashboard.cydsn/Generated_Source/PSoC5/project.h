@@ -88,6 +88,7 @@
 #include "LED_1_aliases.h"
 #include "LED_1.h"
 #include "EEPROM_1.h"
+#include "cy_em_eeprom.h"
 #include "core_cm3_psoc5.h"
 #include "core_cm3.h"
 #include "CyDmac.h"
@@ -99,7 +100,6 @@
 #include "cytypes.h"
 #include "core_cmFunc.h"
 #include "core_cmInstr.h"
-#include "cy_em_eeprom.h"
 
 /*[]*/
 

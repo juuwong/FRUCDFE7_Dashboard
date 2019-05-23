@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
   28:can_manga.c   **** volatile uint8_t ABS_MOTOR_RPM = 0;
   29:can_manga.c   **** volatile uint8_t THROTTLE_HIGH = 0;
   30:can_manga.c   **** volatile uint8_t THROTTLE_LOW = 0;
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 2
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 2
 
 
   31:can_manga.c   **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
   61              		.loc 1 51 0
   62 0004 7047     		bx	lr
   63              	.L6:
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 3
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 3
 
 
   64 0006 00BF     		.align	2
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  107              		@ link register save eliminated.
   63:can_manga.c   ****     return ACK_RX;
  108              		.loc 1 63 0
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 4
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 4
 
 
  109 0000 014B     		ldr	r3, .L11
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
   74:can_manga.c   **** // look this one up in 1239E manual, im not super sure
   75:can_manga.c   **** uint8_t getABSMotorRPM()
   76:can_manga.c   **** {
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 5
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 5
 
 
  153              		.loc 1 76 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  198              		.thumb
  199              		.thumb_func
  200              		.type	getPedalHigh, %function
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 6
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 6
 
 
  201              	getPedalHigh:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  113:can_manga.c   ****         case 0x726:     // from motor controller to confirm that node is still active
  114:can_manga.c   ****             CURTIS_HEART_BEAT_CHECK = 0x1;
  115:can_manga.c   ****             break;
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 7
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 7
 
 
  116:can_manga.c   ****         case 0x0666:    // pdoAwk from motor controller
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  158:can_manga.c   ****     HeartB.rtr = 0;
  240              		.loc 1 158 0
  241 000a 0022     		movs	r2, #0
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 8
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 8
 
 
  242 000c 8DF80820 		strb	r2, [sp, #8]
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  280              		.cfi_def_cfa_offset 4
  281              		@ sp needed
  282 0046 5DF804FB 		ldr	pc, [sp], #4
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 9
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 9
 
 
  283              		.cfi_endproc
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  188:can_manga.c   **** 		payload.byte[i] = data[i];
  324              		.loc 1 188 0 discriminator 3
  325 0020 C15C     		ldrb	r1, [r0, r3]	@ zero_extendqisi2
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 10
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 10
 
 
  326 0022 06AA     		add	r2, sp, #24
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  198:can_manga.c   ****         
  199:can_manga.c   ****         data[0] = state;
  369              		.loc 1 199 0
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 11
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 11
 
 
  370 0004 8DF80000 		strb	r0, [sp]
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  215:can_manga.c   **** void can_send_cmd(
  216:can_manga.c   ****     uint8_t SetInterlock,
  217:can_manga.c   ****     uint16_t VCL_Throttle_High,
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 12
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 12
 
 
  218:can_manga.c   ****     uint16_t VCL_Throttle_Low
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  238:can_manga.c   ****         CyDelay(1); // Wtf is this shit?
  443              		.loc 1 238 0
  444 0030 0120     		movs	r0, #1
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 13
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 13
 
 
  445 0032 FFF7FEFF 		bl	CyDelay
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  489 001c 03B0     		add	sp, sp, #12
  490              		.cfi_def_cfa_offset 4
  491              		@ sp needed
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 14
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 14
 
 
  492 001e 5DF804FB 		ldr	pc, [sp], #4
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  539 0024 D1E90001 		ldrd	r0, [r1]
  540 0028 FFF7FEFF 		bl	__aeabi_ddiv
  541              	.LVL26:
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 15
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 15
 
 
  542 002c 0A4B     		ldr	r3, .L42+8
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  593              		.cfi_def_cfa_offset 24
  594 0004 0446     		mov	r4, r0
  595 0006 0D46     		mov	r5, r1
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 16
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 16
 
 
   96:can_manga.c   ****     
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  644 0056 9D42     		cmp	r5, r3
  645 0058 4CD0     		beq	.L57
  646 005a 60E0     		b	.L47
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 17
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 17
 
 
  647              	.L56:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  691 0094 244B     		ldr	r3, .L61
  692 0096 1A71     		strb	r2, [r3, #4]
  121:can_manga.c   ****         case 0x0200:    // throttle
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 18
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 18
 
 
  693              		.loc 1 121 0
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  737              		.loc 1 133 0
  738 00de 1EE0     		b	.L47
  739              	.LVL43:
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 19
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 19
 
 
  740              	.L48:
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  783 0124 02B0     		add	sp, sp, #8
  784              		.cfi_def_cfa_offset 16
  785              		@ sp needed
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 20
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 20
 
 
  786 0126 70BD     		pop	{r4, r5, r6, pc}
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  840              		.size	ABS_MOTOR_RPM, 1
  841              	ABS_MOTOR_RPM:
  842 0005 00       		.space	1
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 21
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 21
 
 
  843              		.type	THROTTLE_LOW, %object
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  897 004a 02       		.byte	0x2
  898 004b 2B       		.byte	0x2b
  899 004c 50000000 		.4byte	0x50
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 22
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 22
 
 
  900 0050 02       		.uleb128 0x2
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  954 00b9 26020000 		.4byte	.LASF16
  955 00bd 03       		.byte	0x3
  956 00be 30       		.byte	0x30
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 23
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 23
 
 
  957 00bf 69000000 		.4byte	0x69
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  1011 012e 00       		.byte	0
  1012 012f 03       		.uleb128 0x3
  1013 0130 45020000 		.4byte	.LASF25
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 24
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 24
 
 
  1014 0134 05       		.byte	0x5
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  1068 019c B8000000 		.4byte	0xb8
  1069 01a0 0C       		.uleb128 0xc
  1070 01a1 97000000 		.4byte	0x97
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 25
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 25
 
 
  1071 01a5 0D       		.uleb128 0xd
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  1125 0223 0D       		.uleb128 0xd
  1126 0224 28010000 		.4byte	.LASF34
  1127 0228 01       		.byte	0x1
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 26
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 26
 
 
  1128 0229 52       		.byte	0x52
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  1182 029b 01       		.byte	0x1
  1183 029c B0       		.byte	0xb0
  1184 029d ED020000 		.4byte	0x2ed
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 27
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 27
 
 
  1185 02a1 00000000 		.4byte	.LLST0
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  1239 030d 01       		.byte	0x1
  1240 030e C1       		.byte	0xc1
  1241 030f 97000000 		.4byte	0x97
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 28
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 28
 
 
  1242 0313 84000000 		.4byte	.LLST3
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  1296 0380 13       		.uleb128 0x13
  1297 0381 B7000000 		.4byte	.LASF46
  1298 0385 01       		.byte	0x1
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 29
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 29
 
 
  1299 0386 D9       		.byte	0xd9
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  1353 03ed B6010000 		.4byte	.LASF49
  1354 03f1 01       		.byte	0x1
  1355 03f2 F2       		.byte	0xf2
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 30
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 30
 
 
  1356 03f3 97000000 		.4byte	0x97
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  1410 045e 4C010000 		.4byte	.LFE71-.LFB71
  1411 0462 01       		.uleb128 0x1
  1412 0463 9C       		.byte	0x9c
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 31
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 31
 
 
  1413 0464 DB040000 		.4byte	0x4db
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  1467 04dc DA030000 		.4byte	.LASF55
  1468 04e0 06       		.byte	0x6
  1469 04e1 5506     		.2byte	0x655
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 32
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 32
 
 
  1470 04e3 E7040000 		.4byte	0x4e7
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  1524 055e 18       		.byte	0x18
  1525 055f A0010000 		.4byte	0x1a0
  1526 0563 05       		.uleb128 0x5
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 33
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 33
 
 
  1527 0564 03       		.byte	0x3
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  1581 05d6 A0010000 		.4byte	0x1a0
  1582 05da 05       		.uleb128 0x5
  1583 05db 03       		.byte	0x3
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 34
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 34
 
 
  1584 05dc 00000000 		.4byte	VOLT_B1
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  1638 0655 77       		.byte	0x77
  1639 0656 1F       		.uleb128 0x1f
  1640 0657 0D030000 		.4byte	.LASF77
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 35
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 35
 
 
  1641 065b 0D030000 		.4byte	.LASF77
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  1695 0026 0B       		.uleb128 0xb
  1696 0027 49       		.uleb128 0x49
  1697 0028 13       		.uleb128 0x13
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 36
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 36
 
 
  1698 0029 00       		.byte	0
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  1752 005f 08       		.uleb128 0x8
  1753 0060 01       		.uleb128 0x1
  1754 0061 01       		.byte	0x1
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 37
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 37
 
 
  1755 0062 49       		.uleb128 0x49
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  1809 0098 0B       		.uleb128 0xb
  1810 0099 3B       		.uleb128 0x3b
  1811 009a 0B       		.uleb128 0xb
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 38
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 38
 
 
  1812 009b 49       		.uleb128 0x49
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  1866 00d5 01       		.uleb128 0x1
  1867 00d6 31       		.uleb128 0x31
  1868 00d7 13       		.uleb128 0x13
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 39
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 39
 
 
  1869 00d8 00       		.byte	0
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  1923 0112 03       		.uleb128 0x3
  1924 0113 08       		.uleb128 0x8
  1925 0114 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 40
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 40
 
 
  1926 0115 0B       		.uleb128 0xb
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  1980 014e 01       		.uleb128 0x1
  1981 014f 13       		.uleb128 0x13
  1982 0150 00       		.byte	0
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 41
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 41
 
 
  1983 0151 00       		.byte	0
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  2037 0189 19       		.uleb128 0x19
  2038 018a 3C       		.uleb128 0x3c
  2039 018b 19       		.uleb128 0x19
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 42
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 42
 
 
  2040 018c 00       		.byte	0
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  2094 01c2 3A       		.uleb128 0x3a
  2095 01c3 0B       		.uleb128 0xb
  2096 01c4 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 43
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 43
 
 
  2097 01c5 0B       		.uleb128 0xb
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  2151 0071 2E000000 		.4byte	.LVL5
  2152 0075 37000000 		.4byte	.LVL7-1
  2153 0079 0100     		.2byte	0x1
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 44
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 44
 
 
  2154 007b 53       		.byte	0x53
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  2208 00ff F3       		.byte	0xf3
  2209 0100 01       		.uleb128 0x1
  2210 0101 50       		.byte	0x50
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 45
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 45
 
 
  2211 0102 9F       		.byte	0x9f
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  2265 0184 51       		.byte	0x51
  2266 0185 16000000 		.4byte	.LVL18
  2267 0189 1B000000 		.4byte	.LVL20-1
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 46
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 46
 
 
  2268 018d 0200     		.2byte	0x2
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  2322 0210 4C010000 		.4byte	.LFE71
  2323 0214 0400     		.2byte	0x4
  2324 0216 F3       		.byte	0xf3
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 47
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 47
 
 
  2325 0217 01       		.uleb128 0x1
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  2379 02a1 0100     		.2byte	0x1
  2380 02a3 53       		.byte	0x53
  2381 02a4 00000000 		.4byte	0
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 48
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 48
 
 
  2382 02a8 00000000 		.4byte	0
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  2436 002c 0C000000 		.4byte	.LFE68
  2437 0030 00000000 		.4byte	.LFB69
  2438 0034 0C000000 		.4byte	.LFE69
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 49
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 49
 
 
  2439 0038 00000000 		.4byte	.LFB70
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  2473 0052 73746174 		.ascii	"state\000"
  2473      6500
  2474              	.LASF2:
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 50
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 50
 
 
  2475 0058 73686F72 		.ascii	"short int\000"
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  2500              	.LASF17:
  2501 00ec 75696E74 		.ascii	"uint8\000"
  2501      3800
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 51
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 51
 
 
  2502              	.LASF67:
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  2527      7400
  2528              	.LASF37:
  2529 0182 48656172 		.ascii	"HeartB\000"
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 52
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 52
 
 
  2529      744200
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  2552              	.LASF16:
  2553 0226 75696E74 		.ascii	"uint32_t\000"
  2553      33325F74 
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 53
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 53
 
 
  2553      00
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  2573              	.LASF29:
  2574 02f1 67657443 		.ascii	"getCurtisFaultCheck\000"
  2574      75727469 
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 54
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 54
 
 
  2574      73466175 
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  2600      6D616E67 
  2600      612E6300 
  2601              	.LASF69:
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 55
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 55
 
 
  2602 039c 564F4C54 		.ascii	"VOLT_B1\000"
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 1
  2625              	.LASF60:
  2626 0499 43555252 		.ascii	"CURRENT\000"
  2626      454E5400 
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc0ymyD0.s 			page 56
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc3rCvfd.s 			page 56
 
 
  2627              	.LASF39:

@@ -21,8 +21,8 @@
     <register name="Hex1Reg_CONTROL_REG" address="0x4000647B" bitWidth="8" desc="" hidden="false" />
   </block>
   <block name="Digit1Bit4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Em_EEPROM_Dynamic" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="cy_boot" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Em_EEPROM_Dynamic" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="EEPROM_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Hex2Reg" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
     <register name="Hex2Reg_CONTROL_REG" address="0x4000647A" bitWidth="8" desc="" hidden="false" />

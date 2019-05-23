@@ -296,7 +296,7 @@ int main()
                 if (Drive_Read())
                 {
                     CyDelay(1000); // wait for the brake msg to be sent
-                    if(getErrorTolerance() == 1) // 100 for error tolerance /// needs to be getErrorTolerance
+                    if(getErrorTolerance() == 0) // 100 for error tolerance /// needs to be getErrorTolerance
                     {
                         Buzzer_Write(1);
                         CyDelay(1000);
@@ -358,7 +358,7 @@ int main()
                 uint8_t Throttle_Low = Throttle_Total & 0x00FF;
                 
                 // send attenuated throttle and interlock to motor controller
-                can_send_cmd(1, Throttle_High, Throttle_Low); // setInterlock 
+                //can_send_cmd(1, Throttle_High, Throttle_Low); // setInterlock 
                 
                 // calcualte SOC
                 if(CURRENT > 2500) {
