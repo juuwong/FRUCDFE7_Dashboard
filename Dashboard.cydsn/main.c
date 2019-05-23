@@ -146,6 +146,8 @@ int main()
     GLCD_Clear_CG();
     
     nodeCheckStart();
+    
+    // WatchDog Timer
     WDT_Timer_Start();
     isr_wdt_StartEx(ISR_WDT);
     
