@@ -310,7 +310,7 @@
       <Data key="63277c7e-8aaa-4456-9cb0-be9709bb575c" value="RGB1_1" />
       <Data key="1425177d-0d0e-4468-8bcc-e638e5509a9b" value="RX" />
       <Data key="6859228a-80ea-4c66-8d88-99945cc5f4f5" value="Digit3Bit1" />
-      <Data key="7993237e-a418-4494-a4de-0f0058916a02" value="WDI_Reset" />
+      <Data key="7993237e-a418-4494-a4de-0f0058916a02" value="WDT_Reset" />
       <Data key="77715107-f8d5-47e5-a629-0fb83101ac6b" value="Tach" />
       <Data key="93647039-822b-46d0-9290-2e205b13cc4c" value="LED_1" />
       <Data key="a5665507-a489-4063-8ce2-fa8bd2118c51" value="Digit1Bit4" />

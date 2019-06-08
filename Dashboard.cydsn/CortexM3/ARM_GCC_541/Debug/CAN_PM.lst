@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 1
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccqy7ZDN.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 1
   28:Generated_Source\PSoC5/CAN_PM.c ****         ((uint32) ((uint32) CAN_SAMPLING_MODE << CAN_SAMPLE_MODE_SHIFT))   |
   29:Generated_Source\PSoC5/CAN_PM.c ****         ((uint32) ((uint32) CAN_CFG_REG_SJW   << CAN_CFG_REG_SJW_SHIFT))   |
   30:Generated_Source\PSoC5/CAN_PM.c ****         ((uint32) ((uint32) CAN_RESET_TYPE    << CAN_RESET_SHIFT))         |
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 2
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccqy7ZDN.s 			page 2
 
 
   31:Generated_Source\PSoC5/CAN_PM.c ****         ((uint32) ((uint32) CAN_CFG_REG_TSEG2 << CAN_CFG_REG_TSEG2_SHIFT)) |
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 1
   47 0014 054A     		ldr	r2, .L2+16
   48 0016 1268     		ldr	r2, [r2]
   49 0018 1A61     		str	r2, [r3, #16]
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 3
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccqy7ZDN.s 			page 3
 
 
   50 001a 7047     		bx	lr
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 1
   95:Generated_Source\PSoC5/CAN_PM.c ****         CY_SET_REG32(CAN_INT_SR_PTR, CAN_backup.intSr);
   75              		.loc 1 95 0
   76 0000 064B     		ldr	r3, .L5
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 4
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccqy7ZDN.s 			page 4
 
 
   77 0002 5968     		ldr	r1, [r3, #4]
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 1
  117:Generated_Source\PSoC5/CAN_PM.c **** *  CAN_backup - Modified when non-retention registers are saved.
  118:Generated_Source\PSoC5/CAN_PM.c **** *
  119:Generated_Source\PSoC5/CAN_PM.c **** * Reentrant:
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 5
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccqy7ZDN.s 			page 5
 
 
  120:Generated_Source\PSoC5/CAN_PM.c **** *  No.
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 1
  143              	.L11:
  144 0024 10A00040 		.word	1073782800
  145 0028 00000000 		.word	.LANCHOR0
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 6
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccqy7ZDN.s 			page 6
 
 
  146              		.cfi_endproc
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 1
  162              		.cfi_def_cfa_offset 8
  163              		.cfi_offset 3, -8
  164              		.cfi_offset 14, -4
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 7
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccqy7ZDN.s 			page 7
 
 
  179:Generated_Source\PSoC5/CAN_PM.c ****     #if (CY_PSOC3 || CY_PSOC5)
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 1
  204 0000 00       		.byte	0
  205 0001 000000   		.space	3
  206 0004 00000000 		.word	0
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 8
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccqy7ZDN.s 			page 8
 
 
  207 0008 01100000 		.word	4097
@@ -437,23 +437,23 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 1
  220 000b 01       		.uleb128 0x1
  221 000c 4F000000 		.4byte	.LASF30
  222 0010 0C       		.byte	0xc
- 223 0011 3B020000 		.4byte	.LASF31
- 224 0015 78010000 		.4byte	.LASF32
+ 223 0011 00010000 		.4byte	.LASF31
+ 224 0015 E0010000 		.4byte	.LASF32
  225 0019 00000000 		.4byte	.Ldebug_ranges0+0
  226 001d 00000000 		.4byte	0
  227 0021 00000000 		.4byte	.Ldebug_line0
  228 0025 02       		.uleb128 0x2
  229 0026 01       		.byte	0x1
  230 0027 06       		.byte	0x6
- 231 0028 7C020000 		.4byte	.LASF0
+ 231 0028 41020000 		.4byte	.LASF0
  232 002c 02       		.uleb128 0x2
  233 002d 01       		.byte	0x1
  234 002e 08       		.byte	0x8
- 235 002f 3D010000 		.4byte	.LASF1
+ 235 002f 5D010000 		.4byte	.LASF1
  236 0033 02       		.uleb128 0x2
  237 0034 02       		.byte	0x2
  238 0035 05       		.byte	0x5
- 239 0036 31020000 		.4byte	.LASF2
+ 239 0036 D6010000 		.4byte	.LASF2
  240 003a 02       		.uleb128 0x2
  241 003b 02       		.byte	0x2
  242 003c 07       		.byte	0x7
@@ -461,7 +461,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 1
  244 0041 02       		.uleb128 0x2
  245 0042 04       		.byte	0x4
  246 0043 05       		.byte	0x5
- 247 0044 5B020000 		.4byte	.LASF4
+ 247 0044 20020000 		.4byte	.LASF4
  248 0048 02       		.uleb128 0x2
  249 0049 04       		.byte	0x4
  250 004a 07       		.byte	0x7
@@ -469,34 +469,34 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 1
  252 004f 02       		.uleb128 0x2
  253 0050 08       		.byte	0x8
  254 0051 05       		.byte	0x5
- 255 0052 F3010000 		.4byte	.LASF6
+ 255 0052 98010000 		.4byte	.LASF6
  256 0056 02       		.uleb128 0x2
  257 0057 08       		.byte	0x8
  258 0058 07       		.byte	0x7
- 259 0059 58010000 		.4byte	.LASF7
+ 259 0059 78010000 		.4byte	.LASF7
  260 005d 03       		.uleb128 0x3
  261 005e 04       		.byte	0x4
  262 005f 05       		.byte	0x5
  263 0060 696E7400 		.ascii	"int\000"
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 9
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccqy7ZDN.s 			page 9
 
 
  264 0064 02       		.uleb128 0x2
  265 0065 04       		.byte	0x4
  266 0066 07       		.byte	0x7
- 267 0067 4B010000 		.4byte	.LASF8
+ 267 0067 6B010000 		.4byte	.LASF8
  268 006b 04       		.uleb128 0x4
  269 006c FA000000 		.4byte	.LASF9
  270 0070 02       		.byte	0x2
  271 0071 3801     		.2byte	0x138
  272 0073 2C000000 		.4byte	0x2c
  273 0077 04       		.uleb128 0x4
- 274 0078 24010000 		.4byte	.LASF10
+ 274 0078 44010000 		.4byte	.LASF10
  275 007c 02       		.byte	0x2
  276 007d 3901     		.2byte	0x139
  277 007f 3A000000 		.4byte	0x3a
  278 0083 04       		.uleb128 0x4
- 279 0084 36010000 		.4byte	.LASF11
+ 279 0084 56010000 		.4byte	.LASF11
  280 0088 02       		.byte	0x2
  281 0089 3A01     		.2byte	0x13a
  282 008b 48000000 		.4byte	0x48
@@ -507,11 +507,11 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 1
  287 0096 02       		.uleb128 0x2
  288 0097 08       		.byte	0x8
  289 0098 04       		.byte	0x4
- 290 0099 0B010000 		.4byte	.LASF13
+ 290 0099 2B010000 		.4byte	.LASF13
  291 009d 02       		.uleb128 0x2
  292 009e 01       		.byte	0x1
  293 009f 08       		.byte	0x8
- 294 00a0 07020000 		.4byte	.LASF14
+ 294 00a0 AC010000 		.4byte	.LASF14
  295 00a4 04       		.uleb128 0x4
  296 00a5 DD000000 		.4byte	.LASF15
  297 00a9 02       		.byte	0x2
@@ -529,27 +529,27 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 1
  309 00c6 02       		.uleb128 0x2
  310 00c7 08       		.byte	0x8
  311 00c8 04       		.byte	0x4
- 312 00c9 70020000 		.4byte	.LASF17
+ 312 00c9 35020000 		.4byte	.LASF17
  313 00cd 02       		.uleb128 0x2
  314 00ce 04       		.byte	0x4
  315 00cf 07       		.byte	0x7
- 316 00d0 6F010000 		.4byte	.LASF18
+ 316 00d0 8F010000 		.4byte	.LASF18
  317 00d4 06       		.uleb128 0x6
  318 00d5 14       		.byte	0x14
  319 00d6 03       		.byte	0x3
  320 00d7 B4       		.byte	0xb4
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 10
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccqy7ZDN.s 			page 10
 
 
  321 00d8 19010000 		.4byte	0x119
  322 00dc 07       		.uleb128 0x7
- 323 00dd 64020000 		.4byte	.LASF19
+ 323 00dd 29020000 		.4byte	.LASF19
  324 00e1 03       		.byte	0x3
  325 00e2 B6       		.byte	0xb6
  326 00e3 6B000000 		.4byte	0x6b
  327 00e7 00       		.byte	0
  328 00e8 07       		.uleb128 0x7
- 329 00e9 01020000 		.4byte	.LASF20
+ 329 00e9 A6010000 		.4byte	.LASF20
  330 00ed 03       		.byte	0x3
  331 00ee B8       		.byte	0xb8
  332 00ef 83000000 		.4byte	0x83
@@ -574,7 +574,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 1
  351 0117 10       		.byte	0x10
  352 0118 00       		.byte	0
  353 0119 09       		.uleb128 0x9
- 354 011a 1F020000 		.4byte	.LASF22
+ 354 011a C4010000 		.4byte	.LASF22
  355 011e 03       		.byte	0x3
  356 011f BD       		.byte	0xbd
  357 0120 D4000000 		.4byte	0xd4
@@ -587,7 +587,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 1
  364 0133 01       		.uleb128 0x1
  365 0134 9C       		.byte	0x9c
  366 0135 0A       		.uleb128 0xa
- 367 0136 12010000 		.4byte	.LASF24
+ 367 0136 32010000 		.4byte	.LASF24
  368 013a 01       		.byte	0x1
  369 013b 5C       		.byte	0x5c
  370 013c 00000000 		.4byte	.LFB1
@@ -595,10 +595,10 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 1
  372 0144 01       		.uleb128 0x1
  373 0145 9C       		.byte	0x9c
  374 0146 0B       		.uleb128 0xb
- 375 0147 15020000 		.4byte	.LASF25
+ 375 0147 BA010000 		.4byte	.LASF25
  376 014b 01       		.byte	0x1
  377 014c 7B       		.byte	0x7b
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 11
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccqy7ZDN.s 			page 11
 
 
  378 014d 00000000 		.4byte	.LFB2
@@ -614,7 +614,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 1
  388 0169 B0010000 		.4byte	0x1b0
  389 016d 00       		.byte	0
  390 016e 0B       		.uleb128 0xb
- 391 016f 2B010000 		.4byte	.LASF26
+ 391 016f 4B010000 		.4byte	.LASF26
  392 0173 01       		.byte	0x1
  393 0174 B1       		.byte	0xb1
  394 0175 00000000 		.4byte	.LFB3
@@ -633,7 +633,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 1
  407 019a C7010000 		.4byte	0x1c7
  408 019e 00       		.byte	0
  409 019f 0D       		.uleb128 0xd
- 410 01a0 00010000 		.4byte	.LASF33
+ 410 01a0 20010000 		.4byte	.LASF33
  411 01a4 01       		.byte	0x1
  412 01a5 14       		.byte	0x14
  413 01a6 19010000 		.4byte	0x119
@@ -641,8 +641,8 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 1
  415 01ab 03       		.byte	0x3
  416 01ac 00000000 		.4byte	CAN_backup
  417 01b0 0E       		.uleb128 0xe
- 418 01b1 0C020000 		.4byte	.LASF27
- 419 01b5 0C020000 		.4byte	.LASF27
+ 418 01b1 B1010000 		.4byte	.LASF27
+ 419 01b5 B1010000 		.4byte	.LASF27
  420 01b9 03       		.byte	0x3
  421 01ba C6       		.byte	0xc6
  422 01bb 0F       		.uleb128 0xf
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 1
  432 01d2 00       		.byte	0
  433              		.section	.debug_abbrev,"",%progbits
  434              	.Ldebug_abbrev0:
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 12
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccqy7ZDN.s 			page 12
 
 
  435 0000 01       		.uleb128 0x1
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 1
  489 0036 05       		.uleb128 0x5
  490 0037 35       		.uleb128 0x35
  491 0038 00       		.byte	0
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 13
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccqy7ZDN.s 			page 13
 
 
  492 0039 49       		.uleb128 0x49
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 1
  546 006f 3B       		.uleb128 0x3b
  547 0070 0B       		.uleb128 0xb
  548 0071 49       		.uleb128 0x49
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 14
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccqy7ZDN.s 			page 14
 
 
  549 0072 13       		.uleb128 0x13
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 1
  603 00ac 11       		.uleb128 0x11
  604 00ad 01       		.uleb128 0x1
  605 00ae 31       		.uleb128 0x31
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 15
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccqy7ZDN.s 			page 15
 
 
  606 00af 13       		.uleb128 0x13
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 1
  660 0000 34000000 		.4byte	0x34
  661 0004 0200     		.2byte	0x2
  662 0006 00000000 		.4byte	.Ldebug_info0
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 16
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccqy7ZDN.s 			page 16
 
 
  663 000a 04       		.byte	0x4
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 1
  702              	.LASF28:
  703 0039 43414E5F 		.ascii	"CAN_RxTxBuffersConfig\000"
  703      52785478 
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 17
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccqy7ZDN.s 			page 17
 
 
  703      42756666 
@@ -995,120 +995,115 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 1
  714              	.LASF9:
  715 00fa 75696E74 		.ascii	"uint8\000"
  715      3800
- 716              	.LASF33:
- 717 0100 43414E5F 		.ascii	"CAN_backup\000"
- 717      6261636B 
- 717      757000
- 718              	.LASF13:
- 719 010b 646F7562 		.ascii	"double\000"
- 719      6C6500
- 720              	.LASF24:
- 721 0112 43414E5F 		.ascii	"CAN_RestoreConfig\000"
- 721      52657374 
- 721      6F726543 
- 721      6F6E6669 
- 721      6700
- 722              	.LASF10:
- 723 0124 75696E74 		.ascii	"uint16\000"
- 723      313600
- 724              	.LASF26:
- 725 012b 43414E5F 		.ascii	"CAN_Wakeup\000"
- 725      57616B65 
- 725      757000
- 726              	.LASF11:
- 727 0136 75696E74 		.ascii	"uint32\000"
- 727      333200
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 18
+ 716              	.LASF31:
+ 717 0100 47656E65 		.ascii	"Generated_Source\\PSoC5\\CAN_PM.c\000"
+ 717      72617465 
+ 717      645F536F 
+ 717      75726365 
+ 717      5C50536F 
+ 718              	.LASF33:
+ 719 0120 43414E5F 		.ascii	"CAN_backup\000"
+ 719      6261636B 
+ 719      757000
+ 720              	.LASF13:
+ 721 012b 646F7562 		.ascii	"double\000"
+ 721      6C6500
+ 722              	.LASF24:
+ 723 0132 43414E5F 		.ascii	"CAN_RestoreConfig\000"
+ 723      52657374 
+ 723      6F726543 
+ 723      6F6E6669 
+ 723      6700
+ 724              	.LASF10:
+ 725 0144 75696E74 		.ascii	"uint16\000"
+ 725      313600
+ 726              	.LASF26:
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccqy7ZDN.s 			page 18
 
 
- 728              	.LASF1:
- 729 013d 756E7369 		.ascii	"unsigned char\000"
- 729      676E6564 
- 729      20636861 
- 729      7200
- 730              	.LASF8:
- 731 014b 756E7369 		.ascii	"unsigned int\000"
+ 727 014b 43414E5F 		.ascii	"CAN_Wakeup\000"
+ 727      57616B65 
+ 727      757000
+ 728              	.LASF11:
+ 729 0156 75696E74 		.ascii	"uint32\000"
+ 729      333200
+ 730              	.LASF1:
+ 731 015d 756E7369 		.ascii	"unsigned char\000"
  731      676E6564 
- 731      20696E74 
- 731      00
- 732              	.LASF7:
- 733 0158 6C6F6E67 		.ascii	"long long unsigned int\000"
- 733      206C6F6E 
- 733      6720756E 
- 733      7369676E 
- 733      65642069 
- 734              	.LASF18:
- 735 016f 73697A65 		.ascii	"sizetype\000"
- 735      74797065 
- 735      00
- 736              	.LASF32:
- 737 0178 433A5C55 		.ascii	"C:\\Users\\willy\\OneDrive - UC Davis\\Documents\\_"
- 737      73657273 
- 737      5C77696C 
- 737      6C795C4F 
- 737      6E654472 
- 738 01a6 46525543 		.ascii	"FRUCD\\Dashboard\\PSoC5_Projects\\FRUCD-Dashboard-m"
- 738      445C4461 
- 738      7368626F 
- 738      6172645C 
- 738      50536F43 
- 739 01d6 61737465 		.ascii	"aster_github\\Dashboard.cydsn\000"
- 739      725F6769 
- 739      74687562 
- 739      5C446173 
- 739      68626F61 
- 740              	.LASF6:
- 741 01f3 6C6F6E67 		.ascii	"long long int\000"
- 741      206C6F6E 
- 741      6720696E 
- 741      7400
- 742              	.LASF20:
- 743 0201 696E7453 		.ascii	"intSr\000"
- 743      7200
- 744              	.LASF14:
- 745 0207 63686172 		.ascii	"char\000"
+ 731      20636861 
+ 731      7200
+ 732              	.LASF8:
+ 733 016b 756E7369 		.ascii	"unsigned int\000"
+ 733      676E6564 
+ 733      20696E74 
+ 733      00
+ 734              	.LASF7:
+ 735 0178 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 735      206C6F6E 
+ 735      6720756E 
+ 735      7369676E 
+ 735      65642069 
+ 736              	.LASF18:
+ 737 018f 73697A65 		.ascii	"sizetype\000"
+ 737      74797065 
+ 737      00
+ 738              	.LASF6:
+ 739 0198 6C6F6E67 		.ascii	"long long int\000"
+ 739      206C6F6E 
+ 739      6720696E 
+ 739      7400
+ 740              	.LASF20:
+ 741 01a6 696E7453 		.ascii	"intSr\000"
+ 741      7200
+ 742              	.LASF14:
+ 743 01ac 63686172 		.ascii	"char\000"
+ 743      00
+ 744              	.LASF27:
+ 745 01b1 43414E5F 		.ascii	"CAN_Stop\000"
+ 745      53746F70 
  745      00
- 746              	.LASF27:
- 747 020c 43414E5F 		.ascii	"CAN_Stop\000"
- 747      53746F70 
- 747      00
- 748              	.LASF25:
- 749 0215 43414E5F 		.ascii	"CAN_Sleep\000"
- 749      536C6565 
- 749      7000
- 750              	.LASF22:
- 751 021f 43414E5F 		.ascii	"CAN_BACKUP_STRUCT\000"
-ARM GAS  C:\Users\willy\AppData\Local\Temp\ccbEKl7Q.s 			page 19
+ 746              	.LASF25:
+ 747 01ba 43414E5F 		.ascii	"CAN_Sleep\000"
+ 747      536C6565 
+ 747      7000
+ 748              	.LASF22:
+ 749 01c4 43414E5F 		.ascii	"CAN_BACKUP_STRUCT\000"
+ 749      4241434B 
+ 749      55505F53 
+ 749      54525543 
+ 749      5400
+ 750              	.LASF2:
+ 751 01d6 73686F72 		.ascii	"short int\000"
+ 751      7420696E 
+ 751      7400
+ 752              	.LASF32:
+ 753 01e0 433A5C55 		.ascii	"C:\\Users\\fiona\\OneDrive\\Documents\\FE3-Dashboar"
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccqy7ZDN.s 			page 19
 
 
- 751      4241434B 
- 751      55505F53 
- 751      54525543 
- 751      5400
- 752              	.LASF2:
- 753 0231 73686F72 		.ascii	"short int\000"
- 753      7420696E 
- 753      7400
- 754              	.LASF31:
- 755 023b 47656E65 		.ascii	"Generated_Source\\PSoC5\\CAN_PM.c\000"
- 755      72617465 
- 755      645F536F 
- 755      75726365 
- 755      5C50536F 
- 756              	.LASF4:
- 757 025b 6C6F6E67 		.ascii	"long int\000"
- 757      20696E74 
- 757      00
- 758              	.LASF19:
- 759 0264 656E6162 		.ascii	"enableState\000"
- 759      6C655374 
- 759      61746500 
- 760              	.LASF17:
- 761 0270 6C6F6E67 		.ascii	"long double\000"
- 761      20646F75 
- 761      626C6500 
- 762              	.LASF0:
- 763 027c 7369676E 		.ascii	"signed char\000"
- 763      65642063 
- 763      68617200 
- 764              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 753      73657273 
+ 753      5C66696F 
+ 753      6E615C4F 
+ 753      6E654472 
+ 754 020e 645C4461 		.ascii	"d\\Dashboard.cydsn\000"
+ 754      7368626F 
+ 754      6172642E 
+ 754      63796473 
+ 754      6E00
+ 755              	.LASF4:
+ 756 0220 6C6F6E67 		.ascii	"long int\000"
+ 756      20696E74 
+ 756      00
+ 757              	.LASF19:
+ 758 0229 656E6162 		.ascii	"enableState\000"
+ 758      6C655374 
+ 758      61746500 
+ 759              	.LASF17:
+ 760 0235 6C6F6E67 		.ascii	"long double\000"
+ 760      20646F75 
+ 760      626C6500 
+ 761              	.LASF0:
+ 762 0241 7369676E 		.ascii	"signed char\000"
+ 762      65642063 
+ 762      68617200 
+ 763              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

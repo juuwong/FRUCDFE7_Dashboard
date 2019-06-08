@@ -13,12 +13,16 @@
 
 #include "CAN.h"
 #include "can_manga.h"
+#include "cytypes.h"
+//#include "data.h"
 
 extern volatile uint32_t pedalOK;
 extern volatile double THROTTLE_MULTIPLIER;
 extern const double THROTTLE_MAP[8];
 extern volatile uint8_t PACK_TEMP;
 extern volatile int32 CURRENT;
+extern volatile int ERROR_NODE;
+extern volatile int ERROR_IDX;
 
 volatile uint8_t CAPACITOR_VOLT = 0;
 volatile uint8_t CURTIS_FAULT_CHECK = 0;
@@ -34,6 +38,7 @@ volatile uint8_t VOLT_B2;
 volatile uint8_t VOLT_B3;
 volatile uint8_t VOLT_B4;
 extern volatile uint32_t voltage;
+extern volatile BMS_STATUS bms_status;
 
 
 uint8 current_bytes[4] = {0};
@@ -129,9 +134,11 @@ void can_receive(uint8_t *msg, int ID)
             VOLT_B3 = data[CAN_DATA_BYTE_6];
             VOLT_B2 = data[CAN_DATA_BYTE_7];
             VOLT_B1 = data[CAN_DATA_BYTE_8];
-            voltage = (VOLT_B4 << 24) & (VOLT_B3 << 16) & (VOLT_B2 << 8) & VOLT_B1; 
+            voltage = (VOLT_B4 << 24) | (VOLT_B3 << 16) | (VOLT_B2 << 8) | VOLT_B1; 
             break;
         case 0x0488:   // BMS Temp data
+            ERROR_IDX = data[CAN_DATA_BYTE_6];
+            ERROR_NODE = data[CAN_DATA_BYTE_7];
             PACK_TEMP = data[CAN_DATA_BYTE_8];
             tempAttenuate();
             break;
@@ -142,7 +149,9 @@ void can_receive(uint8_t *msg, int ID)
             current_bytes[3] = data[CAN_DATA_BYTE_6];
             CURRENT = (current_bytes[0] << 24) + (current_bytes[1] << 16) + (current_bytes[2] << 8) + current_bytes[3]; // check CAN to be sure
             break;
-            
+        case 0x188:
+            bms_status = (data[CAN_DATA_BYTE_3] << 8) | data[CAN_DATA_BYTE_4];  
+            break;
     }
     
     CyExitCriticalSection(InterruptState);

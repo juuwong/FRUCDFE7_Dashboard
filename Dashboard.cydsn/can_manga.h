@@ -11,6 +11,8 @@
 #include "CAN.h"
 #include "T6963C.h"
 #include "graphic.h"
+    
+#include "data.h"
 
 //volatile uint32 CURRENT = 0; 
     

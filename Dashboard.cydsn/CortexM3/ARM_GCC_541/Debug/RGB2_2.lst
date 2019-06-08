@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\willy\AppData\Local\Temp\cc17Pkl0.s 			page 1
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccJWnW5J.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\cc17Pkl0.s 			page 1
   28:Generated_Source\PSoC5/RGB2_2.c **** *
   29:Generated_Source\PSoC5/RGB2_2.c **** * Summary:
   30:Generated_Source\PSoC5/RGB2_2.c **** *  Assign a new value to the digital port's data output register.  
-ARM GAS  C:\Users\willy\AppData\Local\Temp\cc17Pkl0.s 			page 2
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccJWnW5J.s 			page 2
 
 
   31:Generated_Source\PSoC5/RGB2_2.c **** *
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\cc17Pkl0.s 			page 1
   52:Generated_Source\PSoC5/RGB2_2.c **** * 
   53:Generated_Source\PSoC5/RGB2_2.c **** * Parameters:  
   54:Generated_Source\PSoC5/RGB2_2.c **** *  mode:  Change the pins to one of the following drive modes.
-ARM GAS  C:\Users\willy\AppData\Local\Temp\cc17Pkl0.s 			page 3
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccJWnW5J.s 			page 3
 
 
   55:Generated_Source\PSoC5/RGB2_2.c **** *
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\cc17Pkl0.s 			page 1
   79:Generated_Source\PSoC5/RGB2_2.c **** * Summary:
   80:Generated_Source\PSoC5/RGB2_2.c **** *  Read the current value on the pins of the Digital Port in right justified 
   81:Generated_Source\PSoC5/RGB2_2.c **** *  form.
-ARM GAS  C:\Users\willy\AppData\Local\Temp\cc17Pkl0.s 			page 4
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccJWnW5J.s 			page 4
 
 
   82:Generated_Source\PSoC5/RGB2_2.c **** *
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\cc17Pkl0.s 			page 1
  110:Generated_Source\PSoC5/RGB2_2.c **** *  Returns the current value assigned to the Digital Port's data output register
  111:Generated_Source\PSoC5/RGB2_2.c **** *  
  112:Generated_Source\PSoC5/RGB2_2.c **** *******************************************************************************/
-ARM GAS  C:\Users\willy\AppData\Local\Temp\cc17Pkl0.s 			page 5
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccJWnW5J.s 			page 5
 
 
  113:Generated_Source\PSoC5/RGB2_2.c **** uint8 RGB2_2_ReadDataReg(void) 
@@ -276,14 +276,14 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\cc17Pkl0.s 			page 1
  145 000c 51000000 		.4byte	.LASF20
  146 0010 0C       		.byte	0xc
  147 0011 39010000 		.4byte	.LASF21
- 148 0015 59010000 		.4byte	.LASF22
+ 148 0015 7C010000 		.4byte	.LASF22
  149 0019 00000000 		.4byte	.Ldebug_ranges0+0
  150 001d 00000000 		.4byte	0
  151 0021 00000000 		.4byte	.Ldebug_line0
  152 0025 02       		.uleb128 0x2
  153 0026 01       		.byte	0x1
  154 0027 06       		.byte	0x6
- 155 0028 00020000 		.4byte	.LASF0
+ 155 0028 C5010000 		.4byte	.LASF0
  156 002c 02       		.uleb128 0x2
  157 002d 01       		.byte	0x1
  158 002e 08       		.byte	0x8
@@ -291,18 +291,18 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\cc17Pkl0.s 			page 1
  160 0033 02       		.uleb128 0x2
  161 0034 02       		.byte	0x2
  162 0035 05       		.byte	0x5
- 163 0036 E7010000 		.4byte	.LASF2
+ 163 0036 6C010000 		.4byte	.LASF2
  164 003a 02       		.uleb128 0x2
  165 003b 02       		.byte	0x2
  166 003c 07       		.byte	0x7
  167 003d F6000000 		.4byte	.LASF3
  168 0041 02       		.uleb128 0x2
  169 0042 04       		.byte	0x4
-ARM GAS  C:\Users\willy\AppData\Local\Temp\cc17Pkl0.s 			page 6
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccJWnW5J.s 			page 6
 
 
  170 0043 05       		.byte	0x5
- 171 0044 F7010000 		.4byte	.LASF4
+ 171 0044 BC010000 		.4byte	.LASF4
  172 0048 02       		.uleb128 0x2
  173 0049 04       		.byte	0x4
  174 004a 07       		.byte	0x7
@@ -310,7 +310,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\cc17Pkl0.s 			page 1
  176 004f 02       		.uleb128 0x2
  177 0050 08       		.byte	0x8
  178 0051 05       		.byte	0x5
- 179 0052 D4010000 		.4byte	.LASF6
+ 179 0052 59010000 		.4byte	.LASF6
  180 0056 02       		.uleb128 0x2
  181 0057 08       		.byte	0x8
  182 0058 07       		.byte	0x7
@@ -324,7 +324,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\cc17Pkl0.s 			page 1
  190 0066 07       		.byte	0x7
  191 0067 10010000 		.4byte	.LASF8
  192 006b 04       		.uleb128 0x4
- 193 006c F1010000 		.4byte	.LASF12
+ 193 006c 76010000 		.4byte	.LASF12
  194 0070 02       		.byte	0x2
  195 0071 3801     		.2byte	0x138
  196 0073 2C000000 		.4byte	0x2c
@@ -339,7 +339,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\cc17Pkl0.s 			page 1
  205 0085 02       		.uleb128 0x2
  206 0086 01       		.byte	0x1
  207 0087 08       		.byte	0x8
- 208 0088 E2010000 		.4byte	.LASF11
+ 208 0088 67010000 		.4byte	.LASF11
  209 008c 04       		.uleb128 0x4
  210 008d DF000000 		.4byte	.LASF13
  211 0091 02       		.byte	0x2
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\cc17Pkl0.s 			page 1
  224 00ae CF000000 		.4byte	0xcf
  225 00b2 07       		.uleb128 0x7
  226 00b3 0C000000 		.4byte	.LASF16
-ARM GAS  C:\Users\willy\AppData\Local\Temp\cc17Pkl0.s 			page 7
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccJWnW5J.s 			page 7
 
 
  227 00b7 01       		.byte	0x1
@@ -374,7 +374,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\cc17Pkl0.s 			page 1
  237 00cd 53       		.byte	0x53
  238 00ce 00       		.byte	0
  239 00cf 06       		.uleb128 0x6
- 240 00d0 0C020000 		.4byte	.LASF15
+ 240 00d0 D1010000 		.4byte	.LASF15
  241 00d4 01       		.byte	0x1
  242 00d5 45       		.byte	0x45
  243 00d6 00000000 		.4byte	.LFB1
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\cc17Pkl0.s 			page 1
  281 0005 13       		.uleb128 0x13
  282 0006 0B       		.uleb128 0xb
  283 0007 03       		.uleb128 0x3
-ARM GAS  C:\Users\willy\AppData\Local\Temp\cc17Pkl0.s 			page 8
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccJWnW5J.s 			page 8
 
 
  284 0008 0E       		.uleb128 0xe
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\cc17Pkl0.s 			page 1
  338 003e 2E       		.uleb128 0x2e
  339 003f 01       		.byte	0x1
  340 0040 3F       		.uleb128 0x3f
-ARM GAS  C:\Users\willy\AppData\Local\Temp\cc17Pkl0.s 			page 9
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccJWnW5J.s 			page 9
 
 
  341 0041 19       		.uleb128 0x19
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\cc17Pkl0.s 			page 1
  395 0078 3F       		.uleb128 0x3f
  396 0079 19       		.uleb128 0x19
  397 007a 03       		.uleb128 0x3
-ARM GAS  C:\Users\willy\AppData\Local\Temp\cc17Pkl0.s 			page 10
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccJWnW5J.s 			page 10
 
 
  398 007b 0E       		.uleb128 0xe
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\cc17Pkl0.s 			page 1
  452 000a 04       		.byte	0x4
  453 000b 00       		.byte	0
  454 000c 0000     		.2byte	0
-ARM GAS  C:\Users\willy\AppData\Local\Temp\cc17Pkl0.s 			page 11
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccJWnW5J.s 			page 11
 
 
  455 000e 0000     		.2byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\cc17Pkl0.s 			page 1
  492      00
  493              	.LASF1:
  494 0043 756E7369 		.ascii	"unsigned char\000"
-ARM GAS  C:\Users\willy\AppData\Local\Temp\cc17Pkl0.s 			page 12
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccJWnW5J.s 			page 12
 
 
  494      676E6564 
@@ -718,52 +718,47 @@ ARM GAS  C:\Users\willy\AppData\Local\Temp\cc17Pkl0.s 			page 1
  514      645F536F 
  514      75726365 
  514      5C50536F 
-ARM GAS  C:\Users\willy\AppData\Local\Temp\cc17Pkl0.s 			page 13
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccJWnW5J.s 			page 13
 
 
- 515              	.LASF22:
- 516 0159 433A5C55 		.ascii	"C:\\Users\\willy\\OneDrive - UC Davis\\Documents\\_"
- 516      73657273 
- 516      5C77696C 
- 516      6C795C4F 
- 516      6E654472 
- 517 0187 46525543 		.ascii	"FRUCD\\Dashboard\\PSoC5_Projects\\FRUCD-Dashboard-m"
- 517      445C4461 
- 517      7368626F 
- 517      6172645C 
- 517      50536F43 
- 518 01b7 61737465 		.ascii	"aster_github\\Dashboard.cydsn\000"
- 518      725F6769 
- 518      74687562 
- 518      5C446173 
- 518      68626F61 
- 519              	.LASF6:
- 520 01d4 6C6F6E67 		.ascii	"long long int\000"
- 520      206C6F6E 
- 520      6720696E 
+ 515              	.LASF6:
+ 516 0159 6C6F6E67 		.ascii	"long long int\000"
+ 516      206C6F6E 
+ 516      6720696E 
+ 516      7400
+ 517              	.LASF11:
+ 518 0167 63686172 		.ascii	"char\000"
+ 518      00
+ 519              	.LASF2:
+ 520 016c 73686F72 		.ascii	"short int\000"
+ 520      7420696E 
  520      7400
- 521              	.LASF11:
- 522 01e2 63686172 		.ascii	"char\000"
- 522      00
- 523              	.LASF2:
- 524 01e7 73686F72 		.ascii	"short int\000"
- 524      7420696E 
- 524      7400
- 525              	.LASF12:
- 526 01f1 75696E74 		.ascii	"uint8\000"
- 526      3800
- 527              	.LASF4:
- 528 01f7 6C6F6E67 		.ascii	"long int\000"
- 528      20696E74 
- 528      00
- 529              	.LASF0:
- 530 0200 7369676E 		.ascii	"signed char\000"
- 530      65642063 
- 530      68617200 
- 531              	.LASF15:
- 532 020c 52474232 		.ascii	"RGB2_2_SetDriveMode\000"
- 532      5F325F53 
- 532      65744472 
- 532      6976654D 
- 532      6F646500 
- 533              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 521              	.LASF12:
+ 522 0176 75696E74 		.ascii	"uint8\000"
+ 522      3800
+ 523              	.LASF22:
+ 524 017c 433A5C55 		.ascii	"C:\\Users\\fiona\\OneDrive\\Documents\\FE3-Dashboar"
+ 524      73657273 
+ 524      5C66696F 
+ 524      6E615C4F 
+ 524      6E654472 
+ 525 01aa 645C4461 		.ascii	"d\\Dashboard.cydsn\000"
+ 525      7368626F 
+ 525      6172642E 
+ 525      63796473 
+ 525      6E00
+ 526              	.LASF4:
+ 527 01bc 6C6F6E67 		.ascii	"long int\000"
+ 527      20696E74 
+ 527      00
+ 528              	.LASF0:
+ 529 01c5 7369676E 		.ascii	"signed char\000"
+ 529      65642063 
+ 529      68617200 
+ 530              	.LASF15:
+ 531 01d1 52474232 		.ascii	"RGB2_2_SetDriveMode\000"
+ 531      5F325F53 
+ 531      65744472 
+ 531      6976654D 
+ 531      6F646500 
+ 532              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
