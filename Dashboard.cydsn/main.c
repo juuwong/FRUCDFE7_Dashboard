@@ -533,18 +533,22 @@ int main()
                 
                 Buzzer_Write(0);
                 
+                if(error_state == fromBMS) {}
                 GLCD_Clear_Frame();
                 GLCD_DrawString(0,0,"DASH",2);
                 GLCD_DrawString(0,32,"FAULT:",2);
                 GLCD_DrawInt(80,32,error_state,2);
-                GLCD_DrawString(110, 0, "BMS", 2);
+                GLCD_DrawString(110, 0, "T:", 2);
                 GLCD_DrawString(110, 32, "FALUT:", 2);
                 char* bms_f;
                 //sprintf(bms_f, "%x", bms_error);
+                if(error_state == fromBMS) {
+                    GLCD_DrawChar(110, 0, PACK_TEMP, 2);
                 GLCD_DrawInt(180, 32, bms_error, 2);
                 GLCD_DrawInt(180, 0, ERROR_NODE, 2);
                 GLCD_DrawChar(184, 0, ',', 2);
                 GLCD_DrawInt(188, 0, ERROR_IDX, 2);
+                }
                 GLCD_Write_Frame();
                 
                 if(error_state == fromLV)
