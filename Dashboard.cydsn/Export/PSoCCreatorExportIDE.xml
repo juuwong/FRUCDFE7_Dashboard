@@ -40,8 +40,12 @@
           <File BuildType="BUILD" Toolchain="">data.h</File>
           <File BuildType="BUILD" Toolchain="">can_manga.c</File>
           <File BuildType="BUILD" Toolchain="">can_manga.h</File>
-          <File BuildType="BUILD" Toolchain="">HexDisplays.c</File>
-          <File BuildType="BUILD" Toolchain="">HexDisplays.h</File>
+          <File BuildType="BUILD" Toolchain="">glcdfont.h</File>
+          <File BuildType="BUILD" Toolchain="">graphic.c</File>
+          <File BuildType="BUILD" Toolchain="">graphic.h</File>
+          <File BuildType="BUILD" Toolchain="">T6963C.c</File>
+          <File BuildType="BUILD" Toolchain="">T6963C.h</File>
+          <File BuildType="BUILD" Toolchain="">LED.h</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
         </Files>
       </Folder>
@@ -146,71 +150,25 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isr_nodeok.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cy_em_eeprom.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cy_em_eeprom.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit4Bit1_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit4Bit1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit4Bit1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit4Bit2_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit4Bit2.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit4Bit2.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit4Bit3_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit4Bit3.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit4Bit3.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit4Bit4_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit4Bit4.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit4Bit4.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Hex4Reg.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Hex4Reg.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Hex4Reg_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit3Bit1_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit3Bit1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit3Bit1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit3Bit2_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit3Bit2.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit3Bit2.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit3Bit3_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit3Bit3.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit3Bit3.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit3Bit4_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit3Bit4.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit3Bit4.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Hex3Reg.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Hex3Reg.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Hex3Reg_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit2Bit1_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit2Bit1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit2Bit1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit2Bit2_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit2Bit2.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit2Bit2.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit2Bit3_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit2Bit3.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit2Bit3.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit2Bit4_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit2Bit4.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit2Bit4.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Hex2Reg.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Hex2Reg.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Hex2Reg_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit1Bit1_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit1Bit1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit1Bit1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit1Bit2_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit1Bit2.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit1Bit2.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit1Bit3_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit1Bit3.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit1Bit3.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit1Bit4_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit1Bit4.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Digit1Bit4.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Hex1Reg.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Hex1Reg.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Hex1Reg_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LED_1_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LED_1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LED_1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\EEPROM_1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\EEPROM_1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\CTRL_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\CTRL.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\CTRL.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SD_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SD.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SD.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WDT_Timer.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WDT_Timer.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WDT_Timer_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isr_wdt.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isr_wdt.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WDT_Reset_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WDT_Reset.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\WDT_Reset.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\Export\ARM_GCC_Generic">

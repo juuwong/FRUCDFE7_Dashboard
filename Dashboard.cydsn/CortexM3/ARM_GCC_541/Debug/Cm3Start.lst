@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 1
+>>>>>>> whgentry_fe6
 
 
    1              		.syntax unified
@@ -58,7 +62,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
   28:Generated_Source\PSoC5/Cm3Start.c **** #define CY_NVIC_CFG_CTRL_PTR        ((reg32 *) CYREG_NVIC_CFG_CONTROL)
   29:Generated_Source\PSoC5/Cm3Start.c **** #define CY_NVIC_APINT_PRIGROUP_3_5  (0x00000400u)  /* Priority group 3.5 split */
   30:Generated_Source\PSoC5/Cm3Start.c **** #define CY_NVIC_APINT_VECTKEY       (0x05FA0000u)  /* This key is required in order to write the NV
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 2
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 2
+>>>>>>> whgentry_fe6
 
 
   31:Generated_Source\PSoC5/Cm3Start.c **** #define CY_NVIC_CFG_STACKALIGN      (0x00000200u)  /* This specifies that the exception stack must 
@@ -118,7 +126,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
   85:Generated_Source\PSoC5/Cm3Start.c **** *  called before the system is setup.
   86:Generated_Source\PSoC5/Cm3Start.c **** *
   87:Generated_Source\PSoC5/Cm3Start.c **** * Parameters:
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 3
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 3
+>>>>>>> whgentry_fe6
 
 
   88:Generated_Source\PSoC5/Cm3Start.c **** *  None
@@ -178,7 +190,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  123:Generated_Source\PSoC5/Cm3Start.c **** 
  124:Generated_Source\PSoC5/Cm3Start.c **** /* RealView C Library initialization. */
  125:Generated_Source\PSoC5/Cm3Start.c **** extern int __main(void);
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 4
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 4
+>>>>>>> whgentry_fe6
 
 
  126:Generated_Source\PSoC5/Cm3Start.c **** 
@@ -238,7 +254,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  180:Generated_Source\PSoC5/Cm3Start.c **** *******************************************************************************/
  181:Generated_Source\PSoC5/Cm3Start.c **** void $Sub$$main(void)
  182:Generated_Source\PSoC5/Cm3Start.c **** {
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 5
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 5
+>>>>>>> whgentry_fe6
 
 
  183:Generated_Source\PSoC5/Cm3Start.c ****     initialize_psoc();
@@ -298,7 +318,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  237:Generated_Source\PSoC5/Cm3Start.c **** *  status: Status caused program exit.
  238:Generated_Source\PSoC5/Cm3Start.c **** *
  239:Generated_Source\PSoC5/Cm3Start.c **** * Return:
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 6
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 6
+>>>>>>> whgentry_fe6
 
 
  240:Generated_Source\PSoC5/Cm3Start.c **** *  None
@@ -358,7 +382,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  265:Generated_Source\PSoC5/Cm3Start.c **** *  nbytes: The number of bytes requested (if the parameter value is positive)
  266:Generated_Source\PSoC5/Cm3Start.c **** *  from the heap or returned back to the heap (if the parameter value is
  267:Generated_Source\PSoC5/Cm3Start.c **** *  negative).
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 7
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 7
+>>>>>>> whgentry_fe6
 
 
  268:Generated_Source\PSoC5/Cm3Start.c **** *
@@ -418,7 +446,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  107              		.loc 1 290 0
  108 001e 4FF0FF32 		mov	r2, #-1
  109              	.LVL9:
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 8
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 8
+>>>>>>> whgentry_fe6
 
 
  110              	.L8:
@@ -478,7 +510,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  325:Generated_Source\PSoC5/Cm3Start.c **** 
  326:Generated_Source\PSoC5/Cm3Start.c ****     #endif  /* (CYDEV_PROJ_TYPE != CYDEV_PROJ_TYPE_LOADABLE && CYDEV_PROJ_TYPE != CYDEV_PROJ_TYPE_L
  327:Generated_Source\PSoC5/Cm3Start.c **** 
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 9
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 9
+>>>>>>> whgentry_fe6
 
 
  328:Generated_Source\PSoC5/Cm3Start.c ****     #if ((CYDEV_BOOTLOADER_ENABLE) && (CYDEV_PROJ_TYPE != CYDEV_PROJ_TYPE_LOADABLEANDBOOTLOADER))
@@ -538,7 +574,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  149              		.loc 1 361 0
  150 0008 2968     		ldr	r1, [r5]
  151              	.LVL12:
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 10
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 10
+>>>>>>> whgentry_fe6
 
 
  362:Generated_Source\PSoC5/Cm3Start.c ****         uint32 *dst = (uint32 *)rptr->data;
@@ -598,7 +638,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  189              	.LVL22:
  190              	.L16:
  373:Generated_Source\PSoC5/Cm3Start.c ****         for (count = 0u; count != limit; count += sizeof (uint32))
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 11
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 11
+>>>>>>> whgentry_fe6
 
 
  191              		.loc 1 373 0 is_stmt 0 discriminator 1
@@ -658,7 +702,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  233              		@ frame_needed = 0, uses_anonymous_args = 0
  234 0000 08B5     		push	{r3, lr}
  235              		.cfi_def_cfa_offset 8
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 12
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 12
+>>>>>>> whgentry_fe6
 
 
  236              		.cfi_offset 3, -8
@@ -718,7 +766,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  411:Generated_Source\PSoC5/Cm3Start.c **** *    1 - initialize data sections;
  412:Generated_Source\PSoC5/Cm3Start.c **** *
  413:Generated_Source\PSoC5/Cm3Start.c **** *******************************************************************************/
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 13
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 13
+>>>>>>> whgentry_fe6
 
 
  414:Generated_Source\PSoC5/Cm3Start.c **** int __low_level_init(void)
@@ -778,7 +830,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  468:Generated_Source\PSoC5/Cm3Start.c ****     #endif  /* defined (__ICCARM__) */
  469:Generated_Source\PSoC5/Cm3Start.c ****     &IntDefaultHandler,      /* NMI handler            2 */
  470:Generated_Source\PSoC5/Cm3Start.c ****     &IntDefaultHandler,      /* Hard fault handler     3 */
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 14
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 14
+>>>>>>> whgentry_fe6
 
 
  471:Generated_Source\PSoC5/Cm3Start.c **** };
@@ -838,7 +894,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  280              		.loc 1 506 0
  281 0012 0023     		movs	r3, #0
  282 0014 0AE0     		b	.L28
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 15
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 15
+>>>>>>> whgentry_fe6
 
 
  283              	.LVL29:
@@ -898,7 +958,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  319 0042 08BD     		pop	{r3, pc}
  320              	.L34:
  321              		.align	2
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 16
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 16
+>>>>>>> whgentry_fe6
 
 
  322              	.L33:
@@ -958,7 +1022,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  372              		.section	.debug_info,"",%progbits
  373              	.Ldebug_info0:
  374 0000 A3030000 		.4byte	0x3a3
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 17
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 17
+>>>>>>> whgentry_fe6
 
 
  375 0004 0400     		.2byte	0x4
@@ -1018,7 +1086,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  429 0071 D8       		.byte	0xd8
  430 0072 64000000 		.4byte	0x64
  431 0076 02       		.uleb128 0x2
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 18
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 18
+>>>>>>> whgentry_fe6
 
 
  432 0077 08       		.byte	0x8
@@ -1078,7 +1150,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  486 00e8 0A       		.uleb128 0xa
  487 00e9 A3000000 		.4byte	0xa3
  488 00ed 04       		.uleb128 0x4
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 19
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 19
+>>>>>>> whgentry_fe6
 
 
  489 00ee 17020000 		.4byte	.LASF20
@@ -1138,7 +1214,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  543 015d 82010000 		.4byte	0x182
  544 0161 0F       		.uleb128 0xf
  545 0162 71000000 		.4byte	.LASF27
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 20
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 20
+>>>>>>> whgentry_fe6
 
 
  546 0166 01       		.byte	0x1
@@ -1198,7 +1278,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  600 01e3 00       		.byte	0
  601 01e4 18       		.uleb128 0x18
  602 01e5 2F000000 		.4byte	.LASF31
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 21
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 21
+>>>>>>> whgentry_fe6
 
 
  603 01e9 01       		.byte	0x1
@@ -1258,7 +1342,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  657 027a 00       		.byte	0
  658 027b 07       		.uleb128 0x7
  659 027c 04       		.byte	0x4
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 22
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 22
+>>>>>>> whgentry_fe6
 
 
  660 027d 81020000 		.4byte	0x281
@@ -1318,7 +1406,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  714 02fd CC000000 		.4byte	0xcc
  715 0301 0C030000 		.4byte	0x30c
  716 0305 1F       		.uleb128 0x1f
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 23
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 23
+>>>>>>> whgentry_fe6
 
 
  717 0306 DF000000 		.4byte	0xdf
@@ -1378,7 +1470,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  771 037f 53020000 		.4byte	.LASF43
  772 0383 05       		.byte	0x5
  773 0384 0F       		.byte	0xf
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 24
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 24
+>>>>>>> whgentry_fe6
 
 
  774 0385 23       		.uleb128 0x23
@@ -1438,7 +1534,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  828 0024 0B       		.uleb128 0xb
  829 0025 03       		.uleb128 0x3
  830 0026 08       		.uleb128 0x8
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 25
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 25
+>>>>>>> whgentry_fe6
 
 
  831 0027 00       		.byte	0
@@ -1498,7 +1598,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  885 005d 0B       		.uleb128 0xb
  886 005e 0B       		.uleb128 0xb
  887 005f 00       		.byte	0
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 26
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 26
+>>>>>>> whgentry_fe6
 
 
  888 0060 00       		.byte	0
@@ -1558,7 +1662,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  942 0097 01       		.uleb128 0x1
  943 0098 12       		.uleb128 0x12
  944 0099 06       		.uleb128 0x6
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 27
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 27
+>>>>>>> whgentry_fe6
 
 
  945 009a 40       		.uleb128 0x40
@@ -1618,7 +1726,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  999 00d5 13       		.uleb128 0x13
  1000 00d6 00       		.byte	0
  1001 00d7 00       		.byte	0
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 28
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 28
+>>>>>>> whgentry_fe6
 
 
  1002 00d8 11       		.uleb128 0x11
@@ -1678,7 +1790,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  1056 0112 03       		.uleb128 0x3
  1057 0113 08       		.uleb128 0x8
  1058 0114 3A       		.uleb128 0x3a
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 29
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 29
+>>>>>>> whgentry_fe6
 
 
  1059 0115 0B       		.uleb128 0xb
@@ -1738,7 +1854,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  1113 014d 19       		.uleb128 0x19
  1114 014e 03       		.uleb128 0x3
  1115 014f 0E       		.uleb128 0xe
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 30
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 30
+>>>>>>> whgentry_fe6
 
 
  1116 0150 3A       		.uleb128 0x3a
@@ -1798,7 +1918,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  1170 0188 0B       		.uleb128 0xb
  1171 0189 3B       		.uleb128 0x3b
  1172 018a 05       		.uleb128 0x5
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 31
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 31
+>>>>>>> whgentry_fe6
 
 
  1173 018b 27       		.uleb128 0x27
@@ -1858,7 +1982,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  1227 01c2 21       		.uleb128 0x21
  1228 01c3 00       		.byte	0
  1229 01c4 49       		.uleb128 0x49
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 32
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 32
+>>>>>>> whgentry_fe6
 
 
  1230 01c5 13       		.uleb128 0x13
@@ -1918,7 +2046,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  1284 01fb 0E       		.uleb128 0xe
  1285 01fc 3A       		.uleb128 0x3a
  1286 01fd 0B       		.uleb128 0xb
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 33
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 33
+>>>>>>> whgentry_fe6
 
 
  1287 01fe 3B       		.uleb128 0x3b
@@ -1978,7 +2110,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  1341 0071 4C000000 		.4byte	.LFE4
  1342 0075 0100     		.2byte	0x1
  1343 0077 56       		.byte	0x56
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 34
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 34
+>>>>>>> whgentry_fe6
 
 
  1344 0078 00000000 		.4byte	0
@@ -2038,7 +2174,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  1398 0106 22000000 		.4byte	.LVL19
  1399 010a 26000000 		.4byte	.LVL20
  1400 010e 0200     		.2byte	0x2
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 35
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 35
+>>>>>>> whgentry_fe6
 
 
  1401 0110 30       		.byte	0x30
@@ -2098,7 +2238,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  1455 0028 00000000 		.4byte	.LFB5
  1456 002c 68000000 		.4byte	.LFE5
  1457 0030 00000000 		.4byte	0
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 36
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 36
+>>>>>>> whgentry_fe6
 
 
  1458 0034 00000000 		.4byte	0
@@ -2158,7 +2302,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  1486              	.LASF24:
  1487 0078 7A65726F 		.ascii	"zero_size\000"
  1487      5F73697A 
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 37
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 37
+>>>>>>> whgentry_fe6
 
 
  1487      6500
@@ -2218,7 +2366,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  1511 016c 72657475 		.ascii	"returnValue\000"
  1511      726E5661 
  1511      6C756500 
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 38
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 38
+>>>>>>> whgentry_fe6
 
 
  1512              	.LASF25:
@@ -2278,7 +2430,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  1538              	.LASF20:
  1539 0217 5F5F6379 		.ascii	"__cy_byte_align8\000"
  1539      5F627974 
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 39
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 39
+>>>>>>> whgentry_fe6
 
 
  1539      655F616C 
@@ -2338,7 +2494,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 1
  1563              	.LASF51:
  1564 02ce 496E7444 		.ascii	"IntDefaultHandler\000"
  1564      65666175 
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccDkAlvE.s 			page 40
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc9edMiu.s 			page 40
+>>>>>>> whgentry_fe6
 
 
  1564      6C744861 

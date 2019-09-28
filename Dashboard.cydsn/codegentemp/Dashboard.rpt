@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 Loading plugins phase: Elapsed time ==> 0s.195ms
+=======
+Loading plugins phase: Elapsed time ==> 0s.174ms
+>>>>>>> whgentry_fe6
 <CYPRESSTAG name="CyDsfit arguments...">
 cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\Dashboard.cyprj -d CY8C5868AXI-LP035 -s C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 </CYPRESSTAG>
@@ -7,10 +11,17 @@ ADD: sdb.M0060: warning: Warning in component: CAN. The BUS_CLK clock accuracy s
  * C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\TopDesign\TopDesign.cysch (Instance:CAN)
 
 </CYPRESSTAG>
+<<<<<<< HEAD
 Elaboration phase: Elapsed time ==> 2s.089ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
 HDL generation phase: Elapsed time ==> 0s.094ms
+=======
+Elaboration phase: Elapsed time ==> 1s.676ms
+<CYPRESSTAG name="HDL generation results...">
+</CYPRESSTAG>
+HDL generation phase: Elapsed time ==> 0s.054ms
+>>>>>>> whgentry_fe6
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -44,7 +55,11 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\fiona
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
+<<<<<<< HEAD
 Sat May 18 00:36:03 2019
+=======
+Mon Jun 03 15:27:49 2019
+>>>>>>> whgentry_fe6
 
 
 ======================================================================
@@ -54,7 +69,11 @@ Options  :    -yv2 -q10 Dashboard.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
+<<<<<<< HEAD
 Sat May 18 00:36:03 2019
+=======
+Mon Jun 03 15:27:49 2019
+>>>>>>> whgentry_fe6
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'
@@ -63,7 +82,7 @@ Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\ps
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_70\B_Timer_v2_70.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'
-Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\CyControlReg_v1_80\CyControlReg_v1_80.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_80\B_Timer_v2_80.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.v'
 
 vpp:  No errors.
@@ -83,6 +102,8 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\c
 Using control file 'Dashboard.ctl'.
 C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_70\B_Timer_v2_70.v (line 368, col 46):  Note: Substituting module 'cmp_vv_vv' for '='.
 C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_70\B_Timer_v2_70.v (line 374, col 62):  Note: Substituting module 'add_vv_vv' for '+'.
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_80\B_Timer_v2_80.v (line 368, col 46):  Note: Substituting module 'cmp_vv_vv' for '='.
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_80\B_Timer_v2_80.v (line 374, col 62):  Note: Substituting module 'add_vv_vv' for '+'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3pkg.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif'.
 
@@ -96,7 +117,11 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\fiona
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
+<<<<<<< HEAD
 Sat May 18 00:36:03 2019
+=======
+Mon Jun 03 15:27:49 2019
+>>>>>>> whgentry_fe6
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -116,7 +141,7 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\conte
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_70\B_Timer_v2_70.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\CyControlReg_v1_80\CyControlReg_v1_80.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_80\B_Timer_v2_80.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3pkg.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif'.
 
@@ -130,7 +155,11 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\fiona
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
+<<<<<<< HEAD
 Sat May 18 00:36:04 2019
+=======
+Mon Jun 03 15:27:50 2019
+>>>>>>> whgentry_fe6
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -150,7 +179,7 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\conte
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_70\B_Timer_v2_70.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\CyControlReg_v1_80\CyControlReg_v1_80.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_80\B_Timer_v2_80.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3pkg.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\lcpsoc3\stdlogic\cpsoc3.vif'.
@@ -175,25 +204,21 @@ Detecting unused logic.
 	\Node_Timer:TimerUDB:zeros_3\
 	\Node_Timer:Net_102\
 	\Node_Timer:Net_266\
-	Net_92
-	Net_93
-	Net_94
-	Net_95
-	Net_105
-	Net_106
-	Net_107
-	Net_108
-	Net_116
-	Net_117
-	Net_118
-	Net_119
-	Net_126
-	Net_127
-	Net_128
-	Net_129
+	\WDT_Timer:Net_260\
+	Net_141
+	\WDT_Timer:Net_53\
+	\WDT_Timer:TimerUDB:ctrl_ten\
+	\WDT_Timer:TimerUDB:ctrl_cmode_0\
+	\WDT_Timer:TimerUDB:ctrl_tmode_1\
+	\WDT_Timer:TimerUDB:ctrl_tmode_0\
+	\WDT_Timer:TimerUDB:ctrl_ic_1\
+	\WDT_Timer:TimerUDB:ctrl_ic_0\
+	Net_140
+	\WDT_Timer:Net_102\
+	\WDT_Timer:Net_266\
 
 
-Deleted 32 User equations/components.
+Deleted 28 User equations/components.
 Deleted 0 Synthesized equations/components.
 
 ------------------------------------------------------
@@ -221,34 +246,35 @@ Aliasing \Node_Timer:TimerUDB:status_6\ to zero
 Aliasing \Node_Timer:TimerUDB:status_5\ to zero
 Aliasing \Node_Timer:TimerUDB:status_4\ to zero
 Aliasing \Node_Timer:TimerUDB:status_0\ to \Node_Timer:TimerUDB:tc_i\
-Aliasing tmpOE__Digit4Bit1_net_0 to tmpOE__RX_net_0
-Aliasing tmpOE__Digit4Bit2_net_0 to tmpOE__RX_net_0
-Aliasing tmpOE__Digit4Bit3_net_0 to tmpOE__RX_net_0
-Aliasing tmpOE__Digit4Bit4_net_0 to tmpOE__RX_net_0
-Aliasing \Hex4Reg:clk\ to zero
-Aliasing \Hex4Reg:rst\ to zero
-Aliasing tmpOE__Digit3Bit1_net_0 to tmpOE__RX_net_0
-Aliasing tmpOE__Digit3Bit2_net_0 to tmpOE__RX_net_0
-Aliasing tmpOE__Digit3Bit3_net_0 to tmpOE__RX_net_0
-Aliasing tmpOE__Digit3Bit4_net_0 to tmpOE__RX_net_0
-Aliasing \Hex3Reg:clk\ to zero
-Aliasing \Hex3Reg:rst\ to zero
-Aliasing tmpOE__Digit2Bit1_net_0 to tmpOE__RX_net_0
-Aliasing tmpOE__Digit2Bit2_net_0 to tmpOE__RX_net_0
-Aliasing tmpOE__Digit2Bit3_net_0 to tmpOE__RX_net_0
-Aliasing tmpOE__Digit2Bit4_net_0 to tmpOE__RX_net_0
-Aliasing \Hex2Reg:clk\ to zero
-Aliasing \Hex2Reg:rst\ to zero
-Aliasing tmpOE__Digit1Bit1_net_0 to tmpOE__RX_net_0
-Aliasing tmpOE__Digit1Bit2_net_0 to tmpOE__RX_net_0
-Aliasing tmpOE__Digit1Bit3_net_0 to tmpOE__RX_net_0
-Aliasing tmpOE__Digit1Bit4_net_0 to tmpOE__RX_net_0
-Aliasing \Hex1Reg:clk\ to zero
-Aliasing \Hex1Reg:rst\ to zero
+Aliasing tmpOE__CTRL_net_5 to tmpOE__RX_net_0
+Aliasing tmpOE__CTRL_net_4 to tmpOE__RX_net_0
+Aliasing tmpOE__CTRL_net_3 to tmpOE__RX_net_0
+Aliasing tmpOE__CTRL_net_2 to tmpOE__RX_net_0
+Aliasing tmpOE__CTRL_net_1 to tmpOE__RX_net_0
+Aliasing tmpOE__CTRL_net_0 to tmpOE__RX_net_0
+Aliasing tmpOE__SD_net_7 to tmpOE__RX_net_0
+Aliasing tmpOE__SD_net_6 to tmpOE__RX_net_0
+Aliasing tmpOE__SD_net_5 to tmpOE__RX_net_0
+Aliasing tmpOE__SD_net_4 to tmpOE__RX_net_0
+Aliasing tmpOE__SD_net_3 to tmpOE__RX_net_0
+Aliasing tmpOE__SD_net_2 to tmpOE__RX_net_0
+Aliasing tmpOE__SD_net_1 to tmpOE__RX_net_0
+Aliasing tmpOE__SD_net_0 to tmpOE__RX_net_0
 Aliasing tmpOE__LED_1_net_0 to tmpOE__RX_net_0
+Aliasing tmpOE__WDT_Reset_net_0 to tmpOE__RX_net_0
+Aliasing Net_135 to zero
+Aliasing \WDT_Timer:TimerUDB:ctrl_cmode_1\ to zero
+Aliasing \WDT_Timer:TimerUDB:trigger_enable\ to tmpOE__RX_net_0
+Aliasing \WDT_Timer:TimerUDB:status_6\ to zero
+Aliasing \WDT_Timer:TimerUDB:status_5\ to zero
+Aliasing \WDT_Timer:TimerUDB:status_4\ to zero
+Aliasing \WDT_Timer:TimerUDB:status_0\ to \WDT_Timer:TimerUDB:tc_i\
 Aliasing \Node_Timer:TimerUDB:capture_last\\D\ to zero
 Aliasing \Node_Timer:TimerUDB:hwEnable_reg\\D\ to \Node_Timer:TimerUDB:run_mode\
 Aliasing \Node_Timer:TimerUDB:capture_out_reg_i\\D\ to \Node_Timer:TimerUDB:capt_fifo_load_int\
+Aliasing \WDT_Timer:TimerUDB:capture_last\\D\ to zero
+Aliasing \WDT_Timer:TimerUDB:hwEnable_reg\\D\ to \WDT_Timer:TimerUDB:run_mode\
+Aliasing \WDT_Timer:TimerUDB:capture_out_reg_i\\D\ to \WDT_Timer:TimerUDB:capt_fifo_load_int\
 Removing Lhs of wire one[6] = tmpOE__RX_net_0[1]
 Removing Lhs of wire tmpOE__TX_net_0[9] = tmpOE__RX_net_0[1]
 Removing Lhs of wire tmpOE__LED_net_0[24] = tmpOE__RX_net_0[1]
@@ -286,70 +312,53 @@ Removing Rhs of wire \Node_Timer:TimerUDB:status_3\[157] = \Node_Timer:TimerUDB:
 Removing Lhs of wire \Node_Timer:TimerUDB:cs_addr_2\[160] = zero[2]
 Removing Lhs of wire \Node_Timer:TimerUDB:cs_addr_1\[161] = \Node_Timer:TimerUDB:trig_reg\[149]
 Removing Lhs of wire \Node_Timer:TimerUDB:cs_addr_0\[162] = \Node_Timer:TimerUDB:per_zero\[141]
-Removing Lhs of wire tmpOE__Digit4Bit1_net_0[294] = tmpOE__RX_net_0[1]
-Removing Rhs of wire Net_91[295] = \Hex4Reg:control_out_0\[323]
-Removing Rhs of wire Net_91[295] = \Hex4Reg:control_0\[343]
-Removing Lhs of wire tmpOE__Digit4Bit2_net_0[301] = tmpOE__RX_net_0[1]
-Removing Rhs of wire Net_88[302] = \Hex4Reg:control_out_1\[324]
-Removing Rhs of wire Net_88[302] = \Hex4Reg:control_1\[342]
-Removing Lhs of wire tmpOE__Digit4Bit3_net_0[308] = tmpOE__RX_net_0[1]
-Removing Rhs of wire Net_89[309] = \Hex4Reg:control_out_2\[325]
-Removing Rhs of wire Net_89[309] = \Hex4Reg:control_2\[341]
-Removing Lhs of wire tmpOE__Digit4Bit4_net_0[315] = tmpOE__RX_net_0[1]
-Removing Rhs of wire Net_90[316] = \Hex4Reg:control_out_3\[326]
-Removing Rhs of wire Net_90[316] = \Hex4Reg:control_3\[340]
-Removing Lhs of wire \Hex4Reg:clk\[321] = zero[2]
-Removing Lhs of wire \Hex4Reg:rst\[322] = zero[2]
-Removing Lhs of wire tmpOE__Digit3Bit1_net_0[345] = tmpOE__RX_net_0[1]
-Removing Rhs of wire Net_101[346] = \Hex3Reg:control_out_0\[374]
-Removing Rhs of wire Net_101[346] = \Hex3Reg:control_0\[394]
-Removing Lhs of wire tmpOE__Digit3Bit2_net_0[352] = tmpOE__RX_net_0[1]
-Removing Rhs of wire Net_102[353] = \Hex3Reg:control_out_1\[375]
-Removing Rhs of wire Net_102[353] = \Hex3Reg:control_1\[393]
-Removing Lhs of wire tmpOE__Digit3Bit3_net_0[359] = tmpOE__RX_net_0[1]
-Removing Rhs of wire Net_103[360] = \Hex3Reg:control_out_2\[376]
-Removing Rhs of wire Net_103[360] = \Hex3Reg:control_2\[392]
-Removing Lhs of wire tmpOE__Digit3Bit4_net_0[366] = tmpOE__RX_net_0[1]
-Removing Rhs of wire Net_104[367] = \Hex3Reg:control_out_3\[377]
-Removing Rhs of wire Net_104[367] = \Hex3Reg:control_3\[391]
-Removing Lhs of wire \Hex3Reg:clk\[372] = zero[2]
-Removing Lhs of wire \Hex3Reg:rst\[373] = zero[2]
-Removing Lhs of wire tmpOE__Digit2Bit1_net_0[396] = tmpOE__RX_net_0[1]
-Removing Rhs of wire Net_112[397] = \Hex2Reg:control_out_0\[425]
-Removing Rhs of wire Net_112[397] = \Hex2Reg:control_0\[445]
-Removing Lhs of wire tmpOE__Digit2Bit2_net_0[403] = tmpOE__RX_net_0[1]
-Removing Rhs of wire Net_113[404] = \Hex2Reg:control_out_1\[426]
-Removing Rhs of wire Net_113[404] = \Hex2Reg:control_1\[444]
-Removing Lhs of wire tmpOE__Digit2Bit3_net_0[410] = tmpOE__RX_net_0[1]
-Removing Rhs of wire Net_114[411] = \Hex2Reg:control_out_2\[427]
-Removing Rhs of wire Net_114[411] = \Hex2Reg:control_2\[443]
-Removing Lhs of wire tmpOE__Digit2Bit4_net_0[417] = tmpOE__RX_net_0[1]
-Removing Rhs of wire Net_115[418] = \Hex2Reg:control_out_3\[428]
-Removing Rhs of wire Net_115[418] = \Hex2Reg:control_3\[442]
-Removing Lhs of wire \Hex2Reg:clk\[423] = zero[2]
-Removing Lhs of wire \Hex2Reg:rst\[424] = zero[2]
-Removing Lhs of wire tmpOE__Digit1Bit1_net_0[447] = tmpOE__RX_net_0[1]
-Removing Rhs of wire Net_122[448] = \Hex1Reg:control_out_0\[476]
-Removing Rhs of wire Net_122[448] = \Hex1Reg:control_0\[496]
-Removing Lhs of wire tmpOE__Digit1Bit2_net_0[454] = tmpOE__RX_net_0[1]
-Removing Rhs of wire Net_123[455] = \Hex1Reg:control_out_1\[477]
-Removing Rhs of wire Net_123[455] = \Hex1Reg:control_1\[495]
-Removing Lhs of wire tmpOE__Digit1Bit3_net_0[461] = tmpOE__RX_net_0[1]
-Removing Rhs of wire Net_124[462] = \Hex1Reg:control_out_2\[478]
-Removing Rhs of wire Net_124[462] = \Hex1Reg:control_2\[494]
-Removing Lhs of wire tmpOE__Digit1Bit4_net_0[468] = tmpOE__RX_net_0[1]
-Removing Rhs of wire Net_125[469] = \Hex1Reg:control_out_3\[479]
-Removing Rhs of wire Net_125[469] = \Hex1Reg:control_3\[493]
-Removing Lhs of wire \Hex1Reg:clk\[474] = zero[2]
-Removing Lhs of wire \Hex1Reg:rst\[475] = zero[2]
-Removing Lhs of wire tmpOE__LED_1_net_0[498] = tmpOE__RX_net_0[1]
-Removing Lhs of wire \Node_Timer:TimerUDB:capture_last\\D\[503] = zero[2]
-Removing Lhs of wire \Node_Timer:TimerUDB:tc_reg_i\\D\[504] = \Node_Timer:TimerUDB:status_tc\[139]
-Removing Lhs of wire \Node_Timer:TimerUDB:hwEnable_reg\\D\[505] = \Node_Timer:TimerUDB:control_7\[117]
-Removing Lhs of wire \Node_Timer:TimerUDB:capture_out_reg_i\\D\[506] = \Node_Timer:TimerUDB:capt_fifo_load\[135]
+Removing Lhs of wire tmpOE__CTRL_net_5[294] = tmpOE__RX_net_0[1]
+Removing Lhs of wire tmpOE__CTRL_net_4[295] = tmpOE__RX_net_0[1]
+Removing Lhs of wire tmpOE__CTRL_net_3[296] = tmpOE__RX_net_0[1]
+Removing Lhs of wire tmpOE__CTRL_net_2[297] = tmpOE__RX_net_0[1]
+Removing Lhs of wire tmpOE__CTRL_net_1[298] = tmpOE__RX_net_0[1]
+Removing Lhs of wire tmpOE__CTRL_net_0[299] = tmpOE__RX_net_0[1]
+Removing Lhs of wire tmpOE__SD_net_7[315] = tmpOE__RX_net_0[1]
+Removing Lhs of wire tmpOE__SD_net_6[316] = tmpOE__RX_net_0[1]
+Removing Lhs of wire tmpOE__SD_net_5[317] = tmpOE__RX_net_0[1]
+Removing Lhs of wire tmpOE__SD_net_4[318] = tmpOE__RX_net_0[1]
+Removing Lhs of wire tmpOE__SD_net_3[319] = tmpOE__RX_net_0[1]
+Removing Lhs of wire tmpOE__SD_net_2[320] = tmpOE__RX_net_0[1]
+Removing Lhs of wire tmpOE__SD_net_1[321] = tmpOE__RX_net_0[1]
+Removing Lhs of wire tmpOE__SD_net_0[322] = tmpOE__RX_net_0[1]
+Removing Lhs of wire tmpOE__LED_1_net_0[342] = tmpOE__RX_net_0[1]
+Removing Lhs of wire tmpOE__WDT_Reset_net_0[348] = tmpOE__RX_net_0[1]
+Removing Lhs of wire Net_135[355] = zero[2]
+Removing Rhs of wire Net_136[357] = \WDT_Timer:Net_55\[358]
+Removing Lhs of wire \WDT_Timer:TimerUDB:ctrl_enable\[374] = \WDT_Timer:TimerUDB:control_7\[366]
+Removing Lhs of wire \WDT_Timer:TimerUDB:ctrl_cmode_1\[376] = zero[2]
+Removing Rhs of wire \WDT_Timer:TimerUDB:timer_enable\[385] = \WDT_Timer:TimerUDB:runmode_enable\[397]
+Removing Rhs of wire \WDT_Timer:TimerUDB:run_mode\[386] = \WDT_Timer:TimerUDB:hwEnable\[387]
+Removing Lhs of wire \WDT_Timer:TimerUDB:run_mode\[386] = \WDT_Timer:TimerUDB:control_7\[366]
+Removing Lhs of wire \WDT_Timer:TimerUDB:trigger_enable\[389] = tmpOE__RX_net_0[1]
+Removing Lhs of wire \WDT_Timer:TimerUDB:tc_i\[391] = \WDT_Timer:TimerUDB:status_tc\[388]
+Removing Lhs of wire \WDT_Timer:TimerUDB:capt_fifo_load_int\[396] = \WDT_Timer:TimerUDB:capt_fifo_load\[384]
+Removing Lhs of wire \WDT_Timer:TimerUDB:status_6\[399] = zero[2]
+Removing Lhs of wire \WDT_Timer:TimerUDB:status_5\[400] = zero[2]
+Removing Lhs of wire \WDT_Timer:TimerUDB:status_4\[401] = zero[2]
+Removing Lhs of wire \WDT_Timer:TimerUDB:status_0\[402] = \WDT_Timer:TimerUDB:status_tc\[388]
+Removing Lhs of wire \WDT_Timer:TimerUDB:status_1\[403] = \WDT_Timer:TimerUDB:capt_fifo_load\[384]
+Removing Rhs of wire \WDT_Timer:TimerUDB:status_2\[404] = \WDT_Timer:TimerUDB:fifo_full\[405]
+Removing Rhs of wire \WDT_Timer:TimerUDB:status_3\[406] = \WDT_Timer:TimerUDB:fifo_nempty\[407]
+Removing Lhs of wire \WDT_Timer:TimerUDB:cs_addr_2\[409] = zero[2]
+Removing Lhs of wire \WDT_Timer:TimerUDB:cs_addr_1\[410] = \WDT_Timer:TimerUDB:trig_reg\[398]
+Removing Lhs of wire \WDT_Timer:TimerUDB:cs_addr_0\[411] = \WDT_Timer:TimerUDB:per_zero\[390]
+Removing Lhs of wire \Node_Timer:TimerUDB:capture_last\\D\[589] = zero[2]
+Removing Lhs of wire \Node_Timer:TimerUDB:tc_reg_i\\D\[590] = \Node_Timer:TimerUDB:status_tc\[139]
+Removing Lhs of wire \Node_Timer:TimerUDB:hwEnable_reg\\D\[591] = \Node_Timer:TimerUDB:control_7\[117]
+Removing Lhs of wire \Node_Timer:TimerUDB:capture_out_reg_i\\D\[592] = \Node_Timer:TimerUDB:capt_fifo_load\[135]
+Removing Lhs of wire \WDT_Timer:TimerUDB:capture_last\\D\[593] = zero[2]
+Removing Lhs of wire \WDT_Timer:TimerUDB:tc_reg_i\\D\[594] = \WDT_Timer:TimerUDB:status_tc\[388]
+Removing Lhs of wire \WDT_Timer:TimerUDB:hwEnable_reg\\D\[595] = \WDT_Timer:TimerUDB:control_7\[366]
+Removing Lhs of wire \WDT_Timer:TimerUDB:capture_out_reg_i\\D\[596] = \WDT_Timer:TimerUDB:capt_fifo_load\[384]
 
 ------------------------------------------------------
-Aliased 0 equations, 98 wires.
+Aliased 0 equations, 81 wires.
 ------------------------------------------------------
 
 ----------------------------------------------------------
@@ -370,6 +379,12 @@ Note:  Expanding virtual equation for '\Node_Timer:TimerUDB:fifo_load_polarized\
 Note:  Expanding virtual equation for '\Node_Timer:TimerUDB:timer_enable\' (cost = 0):
 \Node_Timer:TimerUDB:timer_enable\ <= (\Node_Timer:TimerUDB:control_7\);
 
+Note:  Expanding virtual equation for '\WDT_Timer:TimerUDB:fifo_load_polarized\' (cost = 0):
+\WDT_Timer:TimerUDB:fifo_load_polarized\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\WDT_Timer:TimerUDB:timer_enable\' (cost = 0):
+\WDT_Timer:TimerUDB:timer_enable\ <= (\WDT_Timer:TimerUDB:control_7\);
+
 
 Substituting virtuals - pass 2:
 
@@ -377,7 +392,7 @@ Substituting virtuals - pass 2:
 ----------------------------------------------------------
 Circuit simplification results:
 
-	Expanded 4 signals.
+	Expanded 6 signals.
 	Turned 0 signals into soft nodes.
 	Maximum default expansion cost was set at 3.
 ----------------------------------------------------------
@@ -386,11 +401,14 @@ Circuit simplification results:
 Alias Detection
 ------------------------------------------------------
 Aliasing \Node_Timer:TimerUDB:capt_fifo_load\ to zero
+Aliasing \WDT_Timer:TimerUDB:capt_fifo_load\ to zero
 Removing Lhs of wire \Node_Timer:TimerUDB:capt_fifo_load\[135] = zero[2]
 Removing Lhs of wire \Node_Timer:TimerUDB:trig_reg\[149] = \Node_Timer:TimerUDB:control_7\[117]
+Removing Lhs of wire \WDT_Timer:TimerUDB:capt_fifo_load\[384] = zero[2]
+Removing Lhs of wire \WDT_Timer:TimerUDB:trig_reg\[398] = \WDT_Timer:TimerUDB:control_7\[366]
 
 ------------------------------------------------------
-Aliased 0 equations, 2 wires.
+Aliased 0 equations, 4 wires.
 ------------------------------------------------------
 
 ----------------------------------------------------------
@@ -420,6 +438,7 @@ CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\wa
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\bin\warp.exe
 Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\Dashboard.cyprj -dcpsoc3 Dashboard.v -verilog
 </CYPRESSTAG>
+<<<<<<< HEAD
 Warp synthesis phase: Elapsed time ==> 1s.546ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
@@ -428,13 +447,26 @@ Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\fiona\OneD
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
 Design parsing phase: Elapsed time ==> 0s.016ms
+=======
+Warp synthesis phase: Elapsed time ==> 1s.239ms
+<CYPRESSTAG name="Fitter results...">
+<CYPRESSTAG name="Fitter startup details...">
+cyp3fit: V4.2.0.641, Family: PSoC3, Started at: Monday, 03 June 2019 15:27:50
+Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\Dashboard.cyprj -d CY8C5868AXI-LP035 Dashboard.v -verilog
+</CYPRESSTAG>
+<CYPRESSTAG name="Design parsing">
+Design parsing phase: Elapsed time ==> 0s.014ms
+>>>>>>> whgentry_fe6
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech Mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
     Converted constant MacroCell: \Node_Timer:TimerUDB:capture_last\ from registered to combinatorial
     Converted constant MacroCell: \Node_Timer:TimerUDB:capture_out_reg_i\ from registered to combinatorial
+    Converted constant MacroCell: \WDT_Timer:TimerUDB:capture_last\ from registered to combinatorial
+    Converted constant MacroCell: \WDT_Timer:TimerUDB:capture_out_reg_i\ from registered to combinatorial
 Assigning clock CAN_Clock to clock BUS_CLK because it is a pass-through
 Assigning clock timer_clock_1 to clock BUS_CLK because it is a pass-through
+Assigning clock timer_clock_2 to clock BUS_CLK because it is a pass-through
 <CYPRESSTAG name="Global Clock Selection" icon="FILE_RPT_TECHM">
     Digital Clock 0: Automatic-assigning  clock 'timer_clock'. Fanout=1, Signal=Net_28
 </CYPRESSTAG>
@@ -447,6 +479,14 @@ Done removing unused cells.
         EnableIn: Constant 1 was determined to be synchronous to ClockIn
         ClockOut: BUS_CLK, EnableOut: Constant 1
     UDB Clk/Enable \Node_Timer:TimerUDB:sCTRLReg:SyncCtl:cy_psoc3_udb_Ctl_Clk_Sync\: with output requested to be synchronous
+        ClockIn: BUS_CLK was determined to be a global clock that is synchronous to BUS_CLK
+        EnableIn: Constant 1 was determined to be synchronous to ClockIn
+        ClockOut: BUS_CLK, EnableOut: Constant 1
+    UDB Clk/Enable \WDT_Timer:TimerUDB:clock_enable_block\: with output requested to be synchronous
+        ClockIn: BUS_CLK was determined to be a global clock that is synchronous to BUS_CLK
+        EnableIn: Constant 1 was determined to be synchronous to ClockIn
+        ClockOut: BUS_CLK, EnableOut: Constant 1
+    UDB Clk/Enable \WDT_Timer:TimerUDB:sCTRLReg:SyncCtl:cy_psoc3_udb_Ctl_Clk_Sync\: with output requested to be synchronous
         ClockIn: BUS_CLK was determined to be a global clock that is synchronous to BUS_CLK
         EnableIn: Constant 1 was determined to be synchronous to ClockIn
         ClockOut: BUS_CLK, EnableOut: Constant 1
@@ -942,8 +982,9 @@ Design Equations
         {
         }
 
-    Pin : Name = Digit4Bit1(0)
+    Pin : Name = CTRL(0)
         Attributes:
+            Alias: WR
             In Group/Port: True
             In Sync Option: AUTO
             Out Sync Option: NOSYNC
@@ -959,7 +1000,7 @@ Design Equations
             LCD Mode: COMMON
             Register Mode: RegComb
             CaSense Mode: NEITHER
-            Treat as pin: True
+            Treat as pin: False
             Is OE Registered: False
             Uses Analog: False
             Can contain Digital: True
@@ -971,19 +1012,19 @@ Design Equations
             SIO Vtrip: MULTIPLIER_0_5
             SIO Multiplier Index: 0
             SIO RefSel: VCC_IO
-            Required Capabilities: DIGITAL, ROUTABLE
-            Initial Value: 0
+            Required Capabilities: DIGITAL
+            Initial Value: 1
             IO Voltage: 0
         PORT MAP (
-            pa_out => Digit4Bit1(0)__PA ,
-            pin_input => Net_91 ,
-            pad => Digit4Bit1(0)_PAD );
+            pa_out => CTRL(0)__PA ,
+            pad => CTRL(0)_PAD );
         Properties:
         {
         }
 
-    Pin : Name = Digit4Bit2(0)
+    Pin : Name = CTRL(1)
         Attributes:
+            Alias: RD
             In Group/Port: True
             In Sync Option: AUTO
             Out Sync Option: NOSYNC
@@ -999,7 +1040,7 @@ Design Equations
             LCD Mode: COMMON
             Register Mode: RegComb
             CaSense Mode: NEITHER
-            Treat as pin: True
+            Treat as pin: False
             Is OE Registered: False
             Uses Analog: False
             Can contain Digital: True
@@ -1011,19 +1052,19 @@ Design Equations
             SIO Vtrip: MULTIPLIER_0_5
             SIO Multiplier Index: 0
             SIO RefSel: VCC_IO
-            Required Capabilities: DIGITAL, ROUTABLE
-            Initial Value: 0
+            Required Capabilities: DIGITAL
+            Initial Value: 1
             IO Voltage: 0
         PORT MAP (
-            pa_out => Digit4Bit2(0)__PA ,
-            pin_input => Net_88 ,
-            pad => Digit4Bit2(0)_PAD );
+            pa_out => CTRL(1)__PA ,
+            pad => CTRL(1)_PAD );
         Properties:
         {
         }
 
-    Pin : Name = Digit4Bit3(0)
+    Pin : Name = CTRL(2)
         Attributes:
+            Alias: CE
             In Group/Port: True
             In Sync Option: AUTO
             Out Sync Option: NOSYNC
@@ -1039,7 +1080,7 @@ Design Equations
             LCD Mode: COMMON
             Register Mode: RegComb
             CaSense Mode: NEITHER
-            Treat as pin: True
+            Treat as pin: False
             Is OE Registered: False
             Uses Analog: False
             Can contain Digital: True
@@ -1051,19 +1092,19 @@ Design Equations
             SIO Vtrip: MULTIPLIER_0_5
             SIO Multiplier Index: 0
             SIO RefSel: VCC_IO
-            Required Capabilities: DIGITAL, ROUTABLE
-            Initial Value: 0
+            Required Capabilities: DIGITAL
+            Initial Value: 1
             IO Voltage: 0
         PORT MAP (
-            pa_out => Digit4Bit3(0)__PA ,
-            pin_input => Net_89 ,
-            pad => Digit4Bit3(0)_PAD );
+            pa_out => CTRL(2)__PA ,
+            pad => CTRL(2)_PAD );
         Properties:
         {
         }
 
-    Pin : Name = Digit4Bit4(0)
+    Pin : Name = CTRL(3)
         Attributes:
+            Alias: CD
             In Group/Port: True
             In Sync Option: AUTO
             Out Sync Option: NOSYNC
@@ -1079,7 +1120,7 @@ Design Equations
             LCD Mode: COMMON
             Register Mode: RegComb
             CaSense Mode: NEITHER
-            Treat as pin: True
+            Treat as pin: False
             Is OE Registered: False
             Uses Analog: False
             Can contain Digital: True
@@ -1091,19 +1132,19 @@ Design Equations
             SIO Vtrip: MULTIPLIER_0_5
             SIO Multiplier Index: 0
             SIO RefSel: VCC_IO
-            Required Capabilities: DIGITAL, ROUTABLE
-            Initial Value: 0
+            Required Capabilities: DIGITAL
+            Initial Value: 1
             IO Voltage: 0
         PORT MAP (
-            pa_out => Digit4Bit4(0)__PA ,
-            pin_input => Net_90 ,
-            pad => Digit4Bit4(0)_PAD );
+            pa_out => CTRL(3)__PA ,
+            pad => CTRL(3)_PAD );
         Properties:
         {
         }
 
-    Pin : Name = Digit3Bit1(0)
+    Pin : Name = CTRL(4)
         Attributes:
+            Alias: RESET
             In Group/Port: True
             In Sync Option: AUTO
             Out Sync Option: NOSYNC
@@ -1119,7 +1160,7 @@ Design Equations
             LCD Mode: COMMON
             Register Mode: RegComb
             CaSense Mode: NEITHER
-            Treat as pin: True
+            Treat as pin: False
             Is OE Registered: False
             Uses Analog: False
             Can contain Digital: True
@@ -1131,19 +1172,19 @@ Design Equations
             SIO Vtrip: MULTIPLIER_0_5
             SIO Multiplier Index: 0
             SIO RefSel: VCC_IO
-            Required Capabilities: DIGITAL, ROUTABLE
-            Initial Value: 0
+            Required Capabilities: DIGITAL
+            Initial Value: 1
             IO Voltage: 0
         PORT MAP (
-            pa_out => Digit3Bit1(0)__PA ,
-            pin_input => Net_101 ,
-            pad => Digit3Bit1(0)_PAD );
+            pa_out => CTRL(4)__PA ,
+            pad => CTRL(4)_PAD );
         Properties:
         {
         }
 
-    Pin : Name = Digit3Bit2(0)
+    Pin : Name = CTRL(5)
         Attributes:
+            Alias: FS
             In Group/Port: True
             In Sync Option: AUTO
             Out Sync Option: NOSYNC
@@ -1159,7 +1200,7 @@ Design Equations
             LCD Mode: COMMON
             Register Mode: RegComb
             CaSense Mode: NEITHER
-            Treat as pin: True
+            Treat as pin: False
             Is OE Registered: False
             Uses Analog: False
             Can contain Digital: True
@@ -1171,26 +1212,25 @@ Design Equations
             SIO Vtrip: MULTIPLIER_0_5
             SIO Multiplier Index: 0
             SIO RefSel: VCC_IO
-            Required Capabilities: DIGITAL, ROUTABLE
-            Initial Value: 0
+            Required Capabilities: DIGITAL
+            Initial Value: 1
             IO Voltage: 0
         PORT MAP (
-            pa_out => Digit3Bit2(0)__PA ,
-            pin_input => Net_102 ,
-            pad => Digit3Bit2(0)_PAD );
+            pa_out => CTRL(5)__PA ,
+            pad => CTRL(5)_PAD );
         Properties:
         {
         }
 
-    Pin : Name = Digit3Bit3(0)
+    Pin : Name = SD(0)
         Attributes:
             In Group/Port: True
-            In Sync Option: AUTO
+            In Sync Option: NOSYNC
             Out Sync Option: NOSYNC
             Interrupt generated: False
             Interrupt mode: NONE
             Drive mode: CMOS_OUT
-            VTrip: EITHER
+            VTrip: CMOS
             Slew: FAST
             Input Sync needed: False
             Output Sync needed: False
@@ -1199,7 +1239,7 @@ Design Equations
             LCD Mode: COMMON
             Register Mode: RegComb
             CaSense Mode: NEITHER
-            Treat as pin: True
+            Treat as pin: False
             Is OE Registered: False
             Uses Analog: False
             Can contain Digital: True
@@ -1211,26 +1251,25 @@ Design Equations
             SIO Vtrip: MULTIPLIER_0_5
             SIO Multiplier Index: 0
             SIO RefSel: VCC_IO
-            Required Capabilities: DIGITAL, ROUTABLE
+            Required Capabilities: DIGITAL
             Initial Value: 0
             IO Voltage: 0
         PORT MAP (
-            pa_out => Digit3Bit3(0)__PA ,
-            pin_input => Net_103 ,
-            pad => Digit3Bit3(0)_PAD );
+            pa_out => SD(0)__PA ,
+            pad => SD(0)_PAD );
         Properties:
         {
         }
 
-    Pin : Name = Digit3Bit4(0)
+    Pin : Name = SD(1)
         Attributes:
             In Group/Port: True
-            In Sync Option: AUTO
+            In Sync Option: NOSYNC
             Out Sync Option: NOSYNC
             Interrupt generated: False
             Interrupt mode: NONE
             Drive mode: CMOS_OUT
-            VTrip: EITHER
+            VTrip: CMOS
             Slew: FAST
             Input Sync needed: False
             Output Sync needed: False
@@ -1239,7 +1278,7 @@ Design Equations
             LCD Mode: COMMON
             Register Mode: RegComb
             CaSense Mode: NEITHER
-            Treat as pin: True
+            Treat as pin: False
             Is OE Registered: False
             Uses Analog: False
             Can contain Digital: True
@@ -1251,26 +1290,25 @@ Design Equations
             SIO Vtrip: MULTIPLIER_0_5
             SIO Multiplier Index: 0
             SIO RefSel: VCC_IO
-            Required Capabilities: DIGITAL, ROUTABLE
+            Required Capabilities: DIGITAL
             Initial Value: 0
             IO Voltage: 0
         PORT MAP (
-            pa_out => Digit3Bit4(0)__PA ,
-            pin_input => Net_104 ,
-            pad => Digit3Bit4(0)_PAD );
+            pa_out => SD(1)__PA ,
+            pad => SD(1)_PAD );
         Properties:
         {
         }
 
-    Pin : Name = Digit2Bit1(0)
+    Pin : Name = SD(2)
         Attributes:
             In Group/Port: True
-            In Sync Option: AUTO
+            In Sync Option: NOSYNC
             Out Sync Option: NOSYNC
             Interrupt generated: False
             Interrupt mode: NONE
             Drive mode: CMOS_OUT
-            VTrip: EITHER
+            VTrip: CMOS
             Slew: FAST
             Input Sync needed: False
             Output Sync needed: False
@@ -1279,7 +1317,7 @@ Design Equations
             LCD Mode: COMMON
             Register Mode: RegComb
             CaSense Mode: NEITHER
-            Treat as pin: True
+            Treat as pin: False
             Is OE Registered: False
             Uses Analog: False
             Can contain Digital: True
@@ -1291,26 +1329,25 @@ Design Equations
             SIO Vtrip: MULTIPLIER_0_5
             SIO Multiplier Index: 0
             SIO RefSel: VCC_IO
-            Required Capabilities: DIGITAL, ROUTABLE
+            Required Capabilities: DIGITAL
             Initial Value: 0
             IO Voltage: 0
         PORT MAP (
-            pa_out => Digit2Bit1(0)__PA ,
-            pin_input => Net_112 ,
-            pad => Digit2Bit1(0)_PAD );
+            pa_out => SD(2)__PA ,
+            pad => SD(2)_PAD );
         Properties:
         {
         }
 
-    Pin : Name = Digit2Bit2(0)
+    Pin : Name = SD(3)
         Attributes:
             In Group/Port: True
-            In Sync Option: AUTO
+            In Sync Option: NOSYNC
             Out Sync Option: NOSYNC
             Interrupt generated: False
             Interrupt mode: NONE
             Drive mode: CMOS_OUT
-            VTrip: EITHER
+            VTrip: CMOS
             Slew: FAST
             Input Sync needed: False
             Output Sync needed: False
@@ -1319,7 +1356,7 @@ Design Equations
             LCD Mode: COMMON
             Register Mode: RegComb
             CaSense Mode: NEITHER
-            Treat as pin: True
+            Treat as pin: False
             Is OE Registered: False
             Uses Analog: False
             Can contain Digital: True
@@ -1331,26 +1368,25 @@ Design Equations
             SIO Vtrip: MULTIPLIER_0_5
             SIO Multiplier Index: 0
             SIO RefSel: VCC_IO
-            Required Capabilities: DIGITAL, ROUTABLE
+            Required Capabilities: DIGITAL
             Initial Value: 0
             IO Voltage: 0
         PORT MAP (
-            pa_out => Digit2Bit2(0)__PA ,
-            pin_input => Net_113 ,
-            pad => Digit2Bit2(0)_PAD );
+            pa_out => SD(3)__PA ,
+            pad => SD(3)_PAD );
         Properties:
         {
         }
 
-    Pin : Name = Digit2Bit3(0)
+    Pin : Name = SD(4)
         Attributes:
             In Group/Port: True
-            In Sync Option: AUTO
+            In Sync Option: NOSYNC
             Out Sync Option: NOSYNC
             Interrupt generated: False
             Interrupt mode: NONE
             Drive mode: CMOS_OUT
-            VTrip: EITHER
+            VTrip: CMOS
             Slew: FAST
             Input Sync needed: False
             Output Sync needed: False
@@ -1359,7 +1395,7 @@ Design Equations
             LCD Mode: COMMON
             Register Mode: RegComb
             CaSense Mode: NEITHER
-            Treat as pin: True
+            Treat as pin: False
             Is OE Registered: False
             Uses Analog: False
             Can contain Digital: True
@@ -1371,26 +1407,25 @@ Design Equations
             SIO Vtrip: MULTIPLIER_0_5
             SIO Multiplier Index: 0
             SIO RefSel: VCC_IO
-            Required Capabilities: DIGITAL, ROUTABLE
+            Required Capabilities: DIGITAL
             Initial Value: 0
             IO Voltage: 0
         PORT MAP (
-            pa_out => Digit2Bit3(0)__PA ,
-            pin_input => Net_114 ,
-            pad => Digit2Bit3(0)_PAD );
+            pa_out => SD(4)__PA ,
+            pad => SD(4)_PAD );
         Properties:
         {
         }
 
-    Pin : Name = Digit2Bit4(0)
+    Pin : Name = SD(5)
         Attributes:
             In Group/Port: True
-            In Sync Option: AUTO
+            In Sync Option: NOSYNC
             Out Sync Option: NOSYNC
             Interrupt generated: False
             Interrupt mode: NONE
             Drive mode: CMOS_OUT
-            VTrip: EITHER
+            VTrip: CMOS
             Slew: FAST
             Input Sync needed: False
             Output Sync needed: False
@@ -1399,7 +1434,7 @@ Design Equations
             LCD Mode: COMMON
             Register Mode: RegComb
             CaSense Mode: NEITHER
-            Treat as pin: True
+            Treat as pin: False
             Is OE Registered: False
             Uses Analog: False
             Can contain Digital: True
@@ -1411,26 +1446,25 @@ Design Equations
             SIO Vtrip: MULTIPLIER_0_5
             SIO Multiplier Index: 0
             SIO RefSel: VCC_IO
-            Required Capabilities: DIGITAL, ROUTABLE
+            Required Capabilities: DIGITAL
             Initial Value: 0
             IO Voltage: 0
         PORT MAP (
-            pa_out => Digit2Bit4(0)__PA ,
-            pin_input => Net_115 ,
-            pad => Digit2Bit4(0)_PAD );
+            pa_out => SD(5)__PA ,
+            pad => SD(5)_PAD );
         Properties:
         {
         }
 
-    Pin : Name = Digit1Bit1(0)
+    Pin : Name = SD(6)
         Attributes:
             In Group/Port: True
-            In Sync Option: AUTO
+            In Sync Option: NOSYNC
             Out Sync Option: NOSYNC
             Interrupt generated: False
             Interrupt mode: NONE
             Drive mode: CMOS_OUT
-            VTrip: EITHER
+            VTrip: CMOS
             Slew: FAST
             Input Sync needed: False
             Output Sync needed: False
@@ -1439,7 +1473,7 @@ Design Equations
             LCD Mode: COMMON
             Register Mode: RegComb
             CaSense Mode: NEITHER
-            Treat as pin: True
+            Treat as pin: False
             Is OE Registered: False
             Uses Analog: False
             Can contain Digital: True
@@ -1451,26 +1485,25 @@ Design Equations
             SIO Vtrip: MULTIPLIER_0_5
             SIO Multiplier Index: 0
             SIO RefSel: VCC_IO
-            Required Capabilities: DIGITAL, ROUTABLE
+            Required Capabilities: DIGITAL
             Initial Value: 0
             IO Voltage: 0
         PORT MAP (
-            pa_out => Digit1Bit1(0)__PA ,
-            pin_input => Net_122 ,
-            pad => Digit1Bit1(0)_PAD );
+            pa_out => SD(6)__PA ,
+            pad => SD(6)_PAD );
         Properties:
         {
         }
 
-    Pin : Name = Digit1Bit2(0)
+    Pin : Name = SD(7)
         Attributes:
             In Group/Port: True
-            In Sync Option: AUTO
+            In Sync Option: NOSYNC
             Out Sync Option: NOSYNC
             Interrupt generated: False
             Interrupt mode: NONE
             Drive mode: CMOS_OUT
-            VTrip: EITHER
+            VTrip: CMOS
             Slew: FAST
             Input Sync needed: False
             Output Sync needed: False
@@ -1479,7 +1512,7 @@ Design Equations
             LCD Mode: COMMON
             Register Mode: RegComb
             CaSense Mode: NEITHER
-            Treat as pin: True
+            Treat as pin: False
             Is OE Registered: False
             Uses Analog: False
             Can contain Digital: True
@@ -1491,93 +1524,12 @@ Design Equations
             SIO Vtrip: MULTIPLIER_0_5
             SIO Multiplier Index: 0
             SIO RefSel: VCC_IO
-            Required Capabilities: DIGITAL, ROUTABLE
+            Required Capabilities: DIGITAL
             Initial Value: 0
             IO Voltage: 0
         PORT MAP (
-            pa_out => Digit1Bit2(0)__PA ,
-            pin_input => Net_123 ,
-            pad => Digit1Bit2(0)_PAD );
-        Properties:
-        {
-        }
-
-    Pin : Name = Digit1Bit3(0)
-        Attributes:
-            In Group/Port: True
-            In Sync Option: AUTO
-            Out Sync Option: NOSYNC
-            Interrupt generated: False
-            Interrupt mode: NONE
-            Drive mode: CMOS_OUT
-            VTrip: EITHER
-            Slew: FAST
-            Input Sync needed: False
-            Output Sync needed: False
-            SC shield enabled: False
-            POR State: ANY
-            LCD Mode: COMMON
-            Register Mode: RegComb
-            CaSense Mode: NEITHER
-            Treat as pin: True
-            Is OE Registered: False
-            Uses Analog: False
-            Can contain Digital: True
-            Is SIO: False
-            SIO Output Buf: NONREGULATED
-            SIO Input Buf: SINGLE_ENDED
-            SIO HiFreq: LOW
-            SIO Hyst: DISABLED
-            SIO Vtrip: MULTIPLIER_0_5
-            SIO Multiplier Index: 0
-            SIO RefSel: VCC_IO
-            Required Capabilities: DIGITAL, ROUTABLE
-            Initial Value: 0
-            IO Voltage: 0
-        PORT MAP (
-            pa_out => Digit1Bit3(0)__PA ,
-            pin_input => Net_124 ,
-            pad => Digit1Bit3(0)_PAD );
-        Properties:
-        {
-        }
-
-    Pin : Name = Digit1Bit4(0)
-        Attributes:
-            In Group/Port: True
-            In Sync Option: AUTO
-            Out Sync Option: NOSYNC
-            Interrupt generated: False
-            Interrupt mode: NONE
-            Drive mode: CMOS_OUT
-            VTrip: EITHER
-            Slew: FAST
-            Input Sync needed: False
-            Output Sync needed: False
-            SC shield enabled: False
-            POR State: ANY
-            LCD Mode: COMMON
-            Register Mode: RegComb
-            CaSense Mode: NEITHER
-            Treat as pin: True
-            Is OE Registered: False
-            Uses Analog: False
-            Can contain Digital: True
-            Is SIO: False
-            SIO Output Buf: NONREGULATED
-            SIO Input Buf: SINGLE_ENDED
-            SIO HiFreq: LOW
-            SIO Hyst: DISABLED
-            SIO Vtrip: MULTIPLIER_0_5
-            SIO Multiplier Index: 0
-            SIO RefSel: VCC_IO
-            Required Capabilities: DIGITAL, ROUTABLE
-            Initial Value: 0
-            IO Voltage: 0
-        PORT MAP (
-            pa_out => Digit1Bit4(0)__PA ,
-            pin_input => Net_125 ,
-            pad => Digit1Bit4(0)_PAD );
+            pa_out => SD(7)__PA ,
+            pad => SD(7)_PAD );
         Properties:
         {
         }
@@ -1620,6 +1572,45 @@ Design Equations
         Properties:
         {
         }
+
+    Pin : Name = WDT_Reset(0)
+        Attributes:
+            In Group/Port: True
+            In Sync Option: AUTO
+            Out Sync Option: NOSYNC
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: RES_PULL_DOWN
+            VTrip: EITHER
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilities: DIGITAL
+            Initial Value: 1
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => WDT_Reset(0)__PA ,
+            pad => WDT_Reset(0)_PAD );
+        Properties:
+        {
+        }
     </CYPRESSTAG>
     <CYPRESSTAG name="Macrocell listing" icon="FILE_RPT_EQUATION">
 
@@ -1637,6 +1628,16 @@ Design Equations
               \Node_Timer:TimerUDB:per_zero\
         );
         Output = \Node_Timer:TimerUDB:status_tc\ (fanout=1)
+
+    MacroCell: Name=\WDT_Timer:TimerUDB:status_tc\, Mode=(Combinatorial)
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \WDT_Timer:TimerUDB:control_7\ * \WDT_Timer:TimerUDB:per_zero\
+        );
+        Output = \WDT_Timer:TimerUDB:status_tc\ (fanout=1)
 
     MacroCell: Name=__ONE__, Mode=(Combinatorial)
         Total # of inputs        : 0
@@ -1760,6 +1761,149 @@ Design Equations
         Clock Polarity: Active High
         Clock Enable: True
         Previous in chain : \Node_Timer:TimerUDB:sT24:timerdp:u1\
+
+    datapathcell: Name =\WDT_Timer:TimerUDB:sT32:timerdp:u0\
+        PORT MAP (
+            clock => ClockBlock_BUS_CLK ,
+            cs_addr_1 => \WDT_Timer:TimerUDB:control_7\ ,
+            cs_addr_0 => \WDT_Timer:TimerUDB:per_zero\ ,
+            chain_out => \WDT_Timer:TimerUDB:sT32:timerdp:carry0\ );
+        Properties:
+        {
+            a0_init = "00000000"
+            a1_init = "00000000"
+            ce0_sync = 1
+            ce1_sync = 1
+            cl0_sync = 1
+            cl1_sync = 1
+            cmsb_sync = 1
+            co_msb_sync = 1
+            cy_dpconfig = "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111000000000000000000000001000000000000000000011000"
+            d0_init = "00000000"
+            d1_init = "00000000"
+            f0_blk_sync = 1
+            f0_bus_sync = 1
+            f1_blk_sync = 1
+            f1_bus_sync = 1
+            ff0_sync = 1
+            ff1_sync = 1
+            ov_msb_sync = 1
+            so_sync = 1
+            z0_sync = 1
+            z1_sync = 1
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+        Next in chain : \WDT_Timer:TimerUDB:sT32:timerdp:u1\
+
+    datapathcell: Name =\WDT_Timer:TimerUDB:sT32:timerdp:u1\
+        PORT MAP (
+            clock => ClockBlock_BUS_CLK ,
+            cs_addr_1 => \WDT_Timer:TimerUDB:control_7\ ,
+            cs_addr_0 => \WDT_Timer:TimerUDB:per_zero\ ,
+            chain_in => \WDT_Timer:TimerUDB:sT32:timerdp:carry0\ ,
+            chain_out => \WDT_Timer:TimerUDB:sT32:timerdp:carry1\ );
+        Properties:
+        {
+            a0_init = "00000000"
+            a1_init = "00000000"
+            ce0_sync = 1
+            ce1_sync = 1
+            cl0_sync = 1
+            cl1_sync = 1
+            cmsb_sync = 1
+            co_msb_sync = 1
+            cy_dpconfig = "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111100000110000000000000001000000110000000000011000"
+            d0_init = "00000000"
+            d1_init = "00000000"
+            f0_blk_sync = 1
+            f0_bus_sync = 1
+            f1_blk_sync = 1
+            f1_bus_sync = 1
+            ff0_sync = 1
+            ff1_sync = 1
+            ov_msb_sync = 1
+            so_sync = 1
+            z0_sync = 1
+            z1_sync = 1
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+        Previous in chain : \WDT_Timer:TimerUDB:sT32:timerdp:u0\
+        Next in chain : \WDT_Timer:TimerUDB:sT32:timerdp:u2\
+
+    datapathcell: Name =\WDT_Timer:TimerUDB:sT32:timerdp:u2\
+        PORT MAP (
+            clock => ClockBlock_BUS_CLK ,
+            cs_addr_1 => \WDT_Timer:TimerUDB:control_7\ ,
+            cs_addr_0 => \WDT_Timer:TimerUDB:per_zero\ ,
+            chain_in => \WDT_Timer:TimerUDB:sT32:timerdp:carry1\ ,
+            chain_out => \WDT_Timer:TimerUDB:sT32:timerdp:carry2\ );
+        Properties:
+        {
+            a0_init = "00000000"
+            a1_init = "00000000"
+            ce0_sync = 1
+            ce1_sync = 1
+            cl0_sync = 1
+            cl1_sync = 1
+            cmsb_sync = 1
+            co_msb_sync = 1
+            cy_dpconfig = "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111100000110000000000000001000000110000000000011000"
+            d0_init = "00000000"
+            d1_init = "00000000"
+            f0_blk_sync = 1
+            f0_bus_sync = 1
+            f1_blk_sync = 1
+            f1_bus_sync = 1
+            ff0_sync = 1
+            ff1_sync = 1
+            ov_msb_sync = 1
+            so_sync = 1
+            z0_sync = 1
+            z1_sync = 1
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+        Previous in chain : \WDT_Timer:TimerUDB:sT32:timerdp:u1\
+        Next in chain : \WDT_Timer:TimerUDB:sT32:timerdp:u3\
+
+    datapathcell: Name =\WDT_Timer:TimerUDB:sT32:timerdp:u3\
+        PORT MAP (
+            clock => ClockBlock_BUS_CLK ,
+            cs_addr_1 => \WDT_Timer:TimerUDB:control_7\ ,
+            cs_addr_0 => \WDT_Timer:TimerUDB:per_zero\ ,
+            z0_comb => \WDT_Timer:TimerUDB:per_zero\ ,
+            f0_bus_stat_comb => \WDT_Timer:TimerUDB:status_3\ ,
+            f0_blk_stat_comb => \WDT_Timer:TimerUDB:status_2\ ,
+            chain_in => \WDT_Timer:TimerUDB:sT32:timerdp:carry2\ );
+        Properties:
+        {
+            a0_init = "00000000"
+            a1_init = "00000000"
+            ce0_sync = 1
+            ce1_sync = 1
+            cl0_sync = 1
+            cl1_sync = 1
+            cmsb_sync = 1
+            co_msb_sync = 1
+            cy_dpconfig = "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111100000110000000000000001000000110000000000011000"
+            d0_init = "00000000"
+            d1_init = "00000000"
+            f0_blk_sync = 1
+            f0_bus_sync = 1
+            f1_blk_sync = 1
+            f1_bus_sync = 1
+            ff0_sync = 1
+            ff1_sync = 1
+            ov_msb_sync = 1
+            so_sync = 1
+            z0_sync = 1
+            z1_sync = 1
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+        Previous in chain : \WDT_Timer:TimerUDB:sT32:timerdp:u2\
     </CYPRESSTAG>
     <CYPRESSTAG name="Status register listing">
     </CYPRESSTAG>
@@ -1776,6 +1920,22 @@ Design Equations
             status_2 => \Node_Timer:TimerUDB:status_2\ ,
             status_0 => \Node_Timer:TimerUDB:status_tc\ ,
             interrupt => Net_57 );
+        Properties:
+        {
+            cy_force_order = 1
+            cy_int_mask = "1111111"
+            cy_md_select = "0000011"
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+
+    statusicell: Name =\WDT_Timer:TimerUDB:rstSts:stsreg\
+        PORT MAP (
+            clock => ClockBlock_BUS_CLK ,
+            status_3 => \WDT_Timer:TimerUDB:status_3\ ,
+            status_2 => \WDT_Timer:TimerUDB:status_2\ ,
+            status_0 => \WDT_Timer:TimerUDB:status_tc\ ,
+            interrupt => Net_136 );
         Properties:
         {
             cy_force_order = 1
@@ -1815,84 +1975,26 @@ Design Equations
         Clock Polarity: Active High
         Clock Enable: True
 
-    controlcell: Name =\Hex4Reg:Sync:ctrl_reg\
+    controlcell: Name =\WDT_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\
         PORT MAP (
-            control_7 => \Hex4Reg:control_7\ ,
-            control_6 => \Hex4Reg:control_6\ ,
-            control_5 => \Hex4Reg:control_5\ ,
-            control_4 => \Hex4Reg:control_4\ ,
-            control_3 => Net_90 ,
-            control_2 => Net_89 ,
-            control_1 => Net_88 ,
-            control_0 => Net_91 );
+            clock => ClockBlock_BUS_CLK ,
+            control_7 => \WDT_Timer:TimerUDB:control_7\ ,
+            control_6 => \WDT_Timer:TimerUDB:control_6\ ,
+            control_5 => \WDT_Timer:TimerUDB:control_5\ ,
+            control_4 => \WDT_Timer:TimerUDB:control_4\ ,
+            control_3 => \WDT_Timer:TimerUDB:control_3\ ,
+            control_2 => \WDT_Timer:TimerUDB:control_2\ ,
+            control_1 => \WDT_Timer:TimerUDB:control_1\ ,
+            control_0 => \WDT_Timer:TimerUDB:control_0\ );
         Properties:
         {
-            cy_ctrl_mode_0 = "00000000"
+            cy_ctrl_mode_0 = "11111111"
             cy_ctrl_mode_1 = "00000000"
             cy_ext_reset = 0
             cy_force_order = 1
             cy_init_value = "00000000"
         }
-        Clock Enable: True
-
-    controlcell: Name =\Hex3Reg:Sync:ctrl_reg\
-        PORT MAP (
-            control_7 => \Hex3Reg:control_7\ ,
-            control_6 => \Hex3Reg:control_6\ ,
-            control_5 => \Hex3Reg:control_5\ ,
-            control_4 => \Hex3Reg:control_4\ ,
-            control_3 => Net_104 ,
-            control_2 => Net_103 ,
-            control_1 => Net_102 ,
-            control_0 => Net_101 );
-        Properties:
-        {
-            cy_ctrl_mode_0 = "00000000"
-            cy_ctrl_mode_1 = "00000000"
-            cy_ext_reset = 0
-            cy_force_order = 1
-            cy_init_value = "00000000"
-        }
-        Clock Enable: True
-
-    controlcell: Name =\Hex2Reg:Sync:ctrl_reg\
-        PORT MAP (
-            control_7 => \Hex2Reg:control_7\ ,
-            control_6 => \Hex2Reg:control_6\ ,
-            control_5 => \Hex2Reg:control_5\ ,
-            control_4 => \Hex2Reg:control_4\ ,
-            control_3 => Net_115 ,
-            control_2 => Net_114 ,
-            control_1 => Net_113 ,
-            control_0 => Net_112 );
-        Properties:
-        {
-            cy_ctrl_mode_0 = "00000000"
-            cy_ctrl_mode_1 = "00000000"
-            cy_ext_reset = 0
-            cy_force_order = 1
-            cy_init_value = "00000000"
-        }
-        Clock Enable: True
-
-    controlcell: Name =\Hex1Reg:Sync:ctrl_reg\
-        PORT MAP (
-            control_7 => \Hex1Reg:control_7\ ,
-            control_6 => \Hex1Reg:control_6\ ,
-            control_5 => \Hex1Reg:control_5\ ,
-            control_4 => \Hex1Reg:control_4\ ,
-            control_3 => Net_125 ,
-            control_2 => Net_124 ,
-            control_1 => Net_123 ,
-            control_0 => Net_122 );
-        Properties:
-        {
-            cy_ctrl_mode_0 = "00000000"
-            cy_ctrl_mode_1 = "00000000"
-            cy_ext_reset = 0
-            cy_force_order = 1
-            cy_init_value = "00000000"
-        }
+        Clock Polarity: Active High
         Clock Enable: True
     </CYPRESSTAG>
     <CYPRESSTAG name="Count7 listing">
@@ -1931,6 +2033,15 @@ Design Equations
             int_type = "10"
             is_nmi = 0
         }
+
+    interrupt: Name =isr_wdt
+        PORT MAP (
+            interrupt => Net_136 );
+        Properties:
+        {
+            int_type = "00"
+            is_nmi = 0
+        }
     </CYPRESSTAG>
 </CYPRESSTAG>
 <CYPRESSTAG name="Technology mapping summary" expanded>
@@ -1945,8 +2056,8 @@ Digital Clocks                :    1 :    7 :    8 : 12.50 %
 Analog Clocks                 :    0 :    4 :    4 :  0.00 %
 CapSense Buffers              :    0 :    2 :    2 :  0.00 %
 Digital Filter Block          :    0 :    1 :    1 :  0.00 %
-Interrupts                    :    3 :   29 :   32 :  9.38 %
-IO                            :   32 :   40 :   72 : 44.44 %
+Interrupts                    :    4 :   28 :   32 : 12.50 %
+IO                            :   31 :   41 :   72 : 43.06 %
 Segment LCD                   :    0 :    1 :    1 :  0.00 %
 CAN 2.0b                      :    1 :    0 :    1 : 100.00 %
 I2C                           :    0 :    1 :    1 :  0.00 %
@@ -1954,14 +2065,14 @@ USB                           :    0 :    1 :    1 :  0.00 %
 DMA Channels                  :    0 :   24 :   24 :  0.00 %
 Timer                         :    1 :    3 :    4 : 25.00 %
 UDB                           :      :      :      :        
-  Macrocells                  :    2 :  190 :  192 :  1.04 %
-  Unique P-terms              :    1 :  383 :  384 :  0.26 %
-  Total P-terms               :    1 :      :      :        
-  Datapath Cells              :    3 :   21 :   24 : 12.50 %
-  Status Cells                :    1 :   23 :   24 :  4.17 %
-    StatusI Registers         :    1 :      :      :        
-  Control Cells               :    5 :   19 :   24 : 20.83 %
-    Control Registers         :    5 :      :      :        
+  Macrocells                  :    3 :  189 :  192 :  1.56 %
+  Unique P-terms              :    2 :  382 :  384 :  0.52 %
+  Total P-terms               :    2 :      :      :        
+  Datapath Cells              :    7 :   17 :   24 : 29.17 %
+  Status Cells                :    2 :   22 :   24 :  8.33 %
+    StatusI Registers         :    2 :      :      :        
+  Control Cells               :    2 :   22 :   24 :  8.33 %
+    Control Registers         :    2 :      :      :        
 Opamp                         :    0 :    4 :    4 :  0.00 %
 Comparator                    :    0 :    4 :    4 :  0.00 %
 Delta-Sigma ADC               :    0 :    1 :    1 :  0.00 %
@@ -1971,40 +2082,49 @@ Analog (SC/CT) Blocks         :    0 :    4 :    4 :  0.00 %
 DAC                           :      :      :      :        
   VIDAC                       :    0 :    4 :    4 :  0.00 %
 </CYPRESSTAG>
+<<<<<<< HEAD
 Technology Mapping: Elapsed time ==> 0s.115ms
 Tech Mapping phase: Elapsed time ==> 0s.210ms
+=======
+Technology Mapping: Elapsed time ==> 0s.116ms
+Tech Mapping phase: Elapsed time ==> 0s.216ms
+>>>>>>> whgentry_fe6
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 Initial Analog Placement Results:
 IO_0@[IOP=(5)][IoId=(0)] : Buzzer(0) (fixed)
-IO_1@[IOP=(2)][IoId=(1)] : Digit1Bit1(0) (fixed)
-IO_0@[IOP=(2)][IoId=(0)] : Digit1Bit2(0) (fixed)
-IO_5@[IOP=(15)][IoId=(5)] : Digit1Bit3(0) (fixed)
-IO_4@[IOP=(15)][IoId=(4)] : Digit1Bit4(0) (fixed)
-IO_3@[IOP=(6)][IoId=(3)] : Digit2Bit1(0) (fixed)
-IO_2@[IOP=(6)][IoId=(2)] : Digit2Bit2(0) (fixed)
-IO_1@[IOP=(6)][IoId=(1)] : Digit2Bit3(0) (fixed)
-IO_0@[IOP=(6)][IoId=(0)] : Digit2Bit4(0) (fixed)
-IO_7@[IOP=(4)][IoId=(7)] : Digit3Bit1(0) (fixed)
-IO_6@[IOP=(4)][IoId=(6)] : Digit3Bit2(0) (fixed)
-IO_5@[IOP=(4)][IoId=(5)] : Digit3Bit3(0) (fixed)
-IO_4@[IOP=(4)][IoId=(4)] : Digit3Bit4(0) (fixed)
-IO_7@[IOP=(0)][IoId=(7)] : Digit4Bit1(0) (fixed)
-IO_6@[IOP=(0)][IoId=(6)] : Digit4Bit2(0) (fixed)
-IO_5@[IOP=(0)][IoId=(5)] : Digit4Bit3(0) (fixed)
-IO_4@[IOP=(0)][IoId=(4)] : Digit4Bit4(0) (fixed)
+IO_0@[IOP=(15)][IoId=(0)] : CTRL(0) (fixed)
+IO_1@[IOP=(15)][IoId=(1)] : CTRL(1) (fixed)
+IO_2@[IOP=(15)][IoId=(2)] : CTRL(2) (fixed)
+IO_3@[IOP=(15)][IoId=(3)] : CTRL(3) (fixed)
+IO_4@[IOP=(15)][IoId=(4)] : CTRL(4) (fixed)
+IO_5@[IOP=(15)][IoId=(5)] : CTRL(5) (fixed)
 IO_0@[IOP=(3)][IoId=(0)] : Drive(0) (fixed)
 IO_1@[IOP=(3)][IoId=(1)] : HV(0) (fixed)
 IO_2@[IOP=(5)][IoId=(2)] : LED(0) (fixed)
 IO_3@[IOP=(5)][IoId=(3)] : LED_1(0) (fixed)
-IO_5@[IOP=(2)][IoId=(5)] : RGB1_1(0) (fixed)
+IO_1@[IOP=(4)][IoId=(1)] : RGB1_1(0) (fixed)
 IO_3@[IOP=(0)][IoId=(3)] : RGB1_2(0) (fixed)
-IO_6@[IOP=(2)][IoId=(6)] : RGB2_1(0) (fixed)
+IO_0@[IOP=(4)][IoId=(0)] : RGB2_1(0) (fixed)
 IO_2@[IOP=(0)][IoId=(2)] : RGB2_2(0) (fixed)
-IO_7@[IOP=(2)][IoId=(7)] : RGB3_1(0) (fixed)
+IO_3@[IOP=(12)][IoId=(3)] : RGB3_1(0) (fixed)
 IO_1@[IOP=(0)][IoId=(1)] : RGB3_2(0) (fixed)
+<<<<<<< HEAD
 IO_5@[IOP=(3)][IoId=(5)] : RX(0) (fixed)
 IO_4@[IOP=(3)][IoId=(4)] : TX(0) (fixed)
+=======
+IO_4@[IOP=(3)][IoId=(4)] : RX(0) (fixed)
+IO_0@[IOP=(2)][IoId=(0)] : SD(0) (fixed)
+IO_1@[IOP=(2)][IoId=(1)] : SD(1) (fixed)
+IO_2@[IOP=(2)][IoId=(2)] : SD(2) (fixed)
+IO_3@[IOP=(2)][IoId=(3)] : SD(3) (fixed)
+IO_4@[IOP=(2)][IoId=(4)] : SD(4) (fixed)
+IO_5@[IOP=(2)][IoId=(5)] : SD(5) (fixed)
+IO_6@[IOP=(2)][IoId=(6)] : SD(6) (fixed)
+IO_7@[IOP=(2)][IoId=(7)] : SD(7) (fixed)
+IO_5@[IOP=(3)][IoId=(5)] : TX(0) (fixed)
+IO_7@[IOP=(6)][IoId=(7)] : WDT_Reset(0) (fixed)
+>>>>>>> whgentry_fe6
 Analog Placement phase: Elapsed time ==> 0s.017ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
@@ -2023,11 +2143,19 @@ Dump of CyP35AnalogRoutingResultsDB
 IsVddaHalfUsedForComp = False
 IsVddaHalfUsedForSar0 = False
 IsVddaHalfUsedForSar1 = False
+<<<<<<< HEAD
 Analog Code Generation phase: Elapsed time ==> 0s.281ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
 I2076: Total run-time: 0.7 sec.
+=======
+Analog Code Generation phase: Elapsed time ==> 0s.296ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Digital Placement">
+<CYPRESSTAG name="Detailed placement messages">
+I2076: Total run-time: 0.8 sec.
+>>>>>>> whgentry_fe6
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
@@ -2038,14 +2166,14 @@ PLD Packing Summary
 ------------------------------------------------------------
             Resource Type : Used : Free :  Max :  % Used
     ====================================================
-                     PLDs :    2 :   46 :   48 :   4.17%
+                     PLDs :    3 :   45 :   48 :   6.25%
 
 <CYPRESSTAG name="PLD Statistics">
 
         PLD Resource Type :     Average/LAB
     =======================================
-                   Inputs :            1.00
-                   Pterms :            0.50
+                   Inputs :            1.33
+                   Pterms :            0.67
                Macrocells :            1.00
 </CYPRESSTAG>
 <CYPRESSTAG name="Packed PLD Contents">
@@ -2058,7 +2186,11 @@ PLD Packing: Elapsed time ==> 0s.001ms
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
+<<<<<<< HEAD
 Partitioning: Elapsed time ==> 0s.039ms
+=======
+Partitioning: Elapsed time ==> 0s.044ms
+>>>>>>> whgentry_fe6
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -2068,7 +2200,7 @@ Final Placement Summary
 
        Resource Type :      Count : Avg Inputs : Avg Outputs
     ========================================================
-                 UDB :          8 :       0.25 :       0.25
+                 UDB :          8 :       0.50 :       0.38
 <CYPRESSTAG name="Final Placement Details">
 <CYPRESSTAG name="Component Details">
 
@@ -2077,10 +2209,19 @@ Component Placement Details
 ------------------------------------------------------------
 UDB [UDB=(0,0)] is empty.
 UDB [UDB=(0,1)] is empty.
-UDB [UDB=(0,2)] contents:
-LAB@[UDB=(0,2)][LB=0] #macrocells=1, #inputs=0, #pterms=0
+UDB [UDB=(0,2)] is empty.
+UDB [UDB=(0,3)] is empty.
+UDB [UDB=(0,4)] is empty.
+UDB [UDB=(0,5)] is empty.
+UDB [UDB=(1,0)] is empty.
+UDB [UDB=(1,1)] is empty.
+UDB [UDB=(1,2)] contents:
+LAB@[UDB=(1,2)][LB=1] #macrocells=1, #inputs=0, #pterms=0
 {
-    [McSlotId=0]:     MacroCell: Name=__ONE__, Mode=(Combinatorial) @ [UDB=(0,2)][LB=0][MC=0]
+    [McSlotId=0]: (empty)
+    [McSlotId=1]: (empty)
+    [McSlotId=2]: (empty)
+    [McSlotId=3]:     MacroCell: Name=__ONE__, Mode=(Combinatorial) @ [UDB=(1,2)][LB=1][MC=3]
         Total # of inputs        : 0
         Total # of product terms : 0
             Clock Enable: True
@@ -2092,72 +2233,76 @@ LAB@[UDB=(0,2)][LB=0] #macrocells=1, #inputs=0, #pterms=0
         Properties               : 
         {
         }
+}
 
+UDB [UDB=(1,3)] is empty.
+UDB [UDB=(1,4)] is empty.
+UDB [UDB=(1,5)] is empty.
+UDB [UDB=(2,0)] contents:
+datapathcell: Name =\WDT_Timer:TimerUDB:sT32:timerdp:u0\
+    PORT MAP (
+        clock => ClockBlock_BUS_CLK ,
+        cs_addr_1 => \WDT_Timer:TimerUDB:control_7\ ,
+        cs_addr_0 => \WDT_Timer:TimerUDB:per_zero\ ,
+        chain_out => \WDT_Timer:TimerUDB:sT32:timerdp:carry0\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111000000000000000000000001000000000000000000011000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Next in chain : \WDT_Timer:TimerUDB:sT32:timerdp:u1\
+
+UDB [UDB=(2,1)] contents:
+LAB@[UDB=(2,1)][LB=1] #macrocells=1, #inputs=2, #pterms=1
+{
+    [McSlotId=0]: (empty)
     [McSlotId=1]: (empty)
-    [McSlotId=2]: (empty)
+    [McSlotId=2]:     MacroCell: Name=\WDT_Timer:TimerUDB:status_tc\, Mode=(Combinatorial) @ [UDB=(2,1)][LB=1][MC=2]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \WDT_Timer:TimerUDB:control_7\ * \WDT_Timer:TimerUDB:per_zero\
+        );
+        Output = \WDT_Timer:TimerUDB:status_tc\ (fanout=1)
+        Properties               : 
+        {
+        }
+
     [McSlotId=3]: (empty)
 }
 
-UDB [UDB=(0,3)] contents:
-controlcell: Name =\Hex2Reg:Sync:ctrl_reg\
-    PORT MAP (
-        control_7 => \Hex2Reg:control_7\ ,
-        control_6 => \Hex2Reg:control_6\ ,
-        control_5 => \Hex2Reg:control_5\ ,
-        control_4 => \Hex2Reg:control_4\ ,
-        control_3 => Net_115 ,
-        control_2 => Net_114 ,
-        control_1 => Net_113 ,
-        control_0 => Net_112 );
-    Properties:
-    {
-        cy_ctrl_mode_0 = "00000000"
-        cy_ctrl_mode_1 = "00000000"
-        cy_ext_reset = 0
-        cy_force_order = 1
-        cy_init_value = "00000000"
-    }
-    Clock Enable: True
-
-UDB [UDB=(0,4)] is empty.
-UDB [UDB=(0,5)] is empty.
-UDB [UDB=(1,0)] is empty.
-UDB [UDB=(1,1)] is empty.
-UDB [UDB=(1,2)] is empty.
-UDB [UDB=(1,3)] contents:
-controlcell: Name =\Hex1Reg:Sync:ctrl_reg\
-    PORT MAP (
-        control_7 => \Hex1Reg:control_7\ ,
-        control_6 => \Hex1Reg:control_6\ ,
-        control_5 => \Hex1Reg:control_5\ ,
-        control_4 => \Hex1Reg:control_4\ ,
-        control_3 => Net_125 ,
-        control_2 => Net_124 ,
-        control_1 => Net_123 ,
-        control_0 => Net_122 );
-    Properties:
-    {
-        cy_ctrl_mode_0 = "00000000"
-        cy_ctrl_mode_1 = "00000000"
-        cy_ext_reset = 0
-        cy_force_order = 1
-        cy_init_value = "00000000"
-    }
-    Clock Enable: True
-
-UDB [UDB=(1,4)] is empty.
-UDB [UDB=(1,5)] is empty.
-UDB [UDB=(2,0)] is empty.
-UDB [UDB=(2,1)] is empty.
-UDB [UDB=(2,2)] is empty.
-UDB [UDB=(2,3)] contents:
-datapathcell: Name =\Node_Timer:TimerUDB:sT24:timerdp:u1\
+datapathcell: Name =\WDT_Timer:TimerUDB:sT32:timerdp:u3\
     PORT MAP (
         clock => ClockBlock_BUS_CLK ,
-        cs_addr_1 => \Node_Timer:TimerUDB:control_7\ ,
-        cs_addr_0 => \Node_Timer:TimerUDB:per_zero\ ,
-        chain_in => \Node_Timer:TimerUDB:sT24:timerdp:carry0\ ,
-        chain_out => \Node_Timer:TimerUDB:sT24:timerdp:carry1\ );
+        cs_addr_1 => \WDT_Timer:TimerUDB:control_7\ ,
+        cs_addr_0 => \WDT_Timer:TimerUDB:per_zero\ ,
+        z0_comb => \WDT_Timer:TimerUDB:per_zero\ ,
+        f0_bus_stat_comb => \WDT_Timer:TimerUDB:status_3\ ,
+        f0_blk_stat_comb => \WDT_Timer:TimerUDB:status_2\ ,
+        chain_in => \WDT_Timer:TimerUDB:sT32:timerdp:carry2\ );
     Properties:
     {
         a0_init = "00000000"
@@ -2184,10 +2329,26 @@ datapathcell: Name =\Node_Timer:TimerUDB:sT24:timerdp:u1\
     }
     Clock Polarity: Active High
     Clock Enable: True
-    Previous in chain : \Node_Timer:TimerUDB:sT24:timerdp:u0\
-    Next in chain : \Node_Timer:TimerUDB:sT24:timerdp:u2\
+    Previous in chain : \WDT_Timer:TimerUDB:sT32:timerdp:u2\
 
-UDB [UDB=(2,4)] contents:
+statusicell: Name =\WDT_Timer:TimerUDB:rstSts:stsreg\
+    PORT MAP (
+        clock => ClockBlock_BUS_CLK ,
+        status_3 => \WDT_Timer:TimerUDB:status_3\ ,
+        status_2 => \WDT_Timer:TimerUDB:status_2\ ,
+        status_0 => \WDT_Timer:TimerUDB:status_tc\ ,
+        interrupt => Net_136 );
+    Properties:
+    {
+        cy_force_order = 1
+        cy_int_mask = "1111111"
+        cy_md_select = "0000011"
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(2,2)] is empty.
+UDB [UDB=(2,3)] contents:
 datapathcell: Name =\Node_Timer:TimerUDB:sT24:timerdp:u0\
     PORT MAP (
         clock => ClockBlock_BUS_CLK ,
@@ -2222,17 +2383,56 @@ datapathcell: Name =\Node_Timer:TimerUDB:sT24:timerdp:u0\
     Clock Enable: True
     Next in chain : \Node_Timer:TimerUDB:sT24:timerdp:u1\
 
-controlcell: Name =\Node_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\
+UDB [UDB=(2,4)] is empty.
+UDB [UDB=(2,5)] is empty.
+UDB [UDB=(3,0)] contents:
+datapathcell: Name =\WDT_Timer:TimerUDB:sT32:timerdp:u1\
     PORT MAP (
         clock => ClockBlock_BUS_CLK ,
-        control_7 => \Node_Timer:TimerUDB:control_7\ ,
-        control_6 => \Node_Timer:TimerUDB:control_6\ ,
-        control_5 => \Node_Timer:TimerUDB:control_5\ ,
-        control_4 => \Node_Timer:TimerUDB:control_4\ ,
-        control_3 => \Node_Timer:TimerUDB:control_3\ ,
-        control_2 => \Node_Timer:TimerUDB:control_2\ ,
-        control_1 => \Node_Timer:TimerUDB:control_1\ ,
-        control_0 => \Node_Timer:TimerUDB:control_0\ );
+        cs_addr_1 => \WDT_Timer:TimerUDB:control_7\ ,
+        cs_addr_0 => \WDT_Timer:TimerUDB:per_zero\ ,
+        chain_in => \WDT_Timer:TimerUDB:sT32:timerdp:carry0\ ,
+        chain_out => \WDT_Timer:TimerUDB:sT32:timerdp:carry1\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111100000110000000000000001000000110000000000011000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Previous in chain : \WDT_Timer:TimerUDB:sT32:timerdp:u0\
+    Next in chain : \WDT_Timer:TimerUDB:sT32:timerdp:u2\
+
+controlcell: Name =\WDT_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\
+    PORT MAP (
+        clock => ClockBlock_BUS_CLK ,
+        control_7 => \WDT_Timer:TimerUDB:control_7\ ,
+        control_6 => \WDT_Timer:TimerUDB:control_6\ ,
+        control_5 => \WDT_Timer:TimerUDB:control_5\ ,
+        control_4 => \WDT_Timer:TimerUDB:control_4\ ,
+        control_3 => \WDT_Timer:TimerUDB:control_3\ ,
+        control_2 => \WDT_Timer:TimerUDB:control_2\ ,
+        control_1 => \WDT_Timer:TimerUDB:control_1\ ,
+        control_0 => \WDT_Timer:TimerUDB:control_0\ );
     Properties:
     {
         cy_ctrl_mode_0 = "11111111"
@@ -2244,11 +2444,65 @@ controlcell: Name =\Node_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\
     Clock Polarity: Active High
     Clock Enable: True
 
-UDB [UDB=(2,5)] is empty.
-UDB [UDB=(3,0)] is empty.
-UDB [UDB=(3,1)] is empty.
-UDB [UDB=(3,2)] is empty.
-UDB [UDB=(3,3)] contents:
+UDB [UDB=(3,1)] contents:
+datapathcell: Name =\WDT_Timer:TimerUDB:sT32:timerdp:u2\
+    PORT MAP (
+        clock => ClockBlock_BUS_CLK ,
+        cs_addr_1 => \WDT_Timer:TimerUDB:control_7\ ,
+        cs_addr_0 => \WDT_Timer:TimerUDB:per_zero\ ,
+        chain_in => \WDT_Timer:TimerUDB:sT32:timerdp:carry1\ ,
+        chain_out => \WDT_Timer:TimerUDB:sT32:timerdp:carry2\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111100000110000000000000001000000110000000000011000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Previous in chain : \WDT_Timer:TimerUDB:sT32:timerdp:u1\
+    Next in chain : \WDT_Timer:TimerUDB:sT32:timerdp:u3\
+
+UDB [UDB=(3,2)] contents:
+LAB@[UDB=(3,2)][LB=0] #macrocells=1, #inputs=2, #pterms=1
+{
+    [McSlotId=0]:     MacroCell: Name=\Node_Timer:TimerUDB:status_tc\, Mode=(Combinatorial) @ [UDB=(3,2)][LB=0][MC=0]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \Node_Timer:TimerUDB:control_7\ * 
+              \Node_Timer:TimerUDB:per_zero\
+        );
+        Output = \Node_Timer:TimerUDB:status_tc\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]: (empty)
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
 datapathcell: Name =\Node_Timer:TimerUDB:sT24:timerdp:u2\
     PORT MAP (
         clock => ClockBlock_BUS_CLK ,
@@ -2286,49 +2540,6 @@ datapathcell: Name =\Node_Timer:TimerUDB:sT24:timerdp:u2\
     Clock Enable: True
     Previous in chain : \Node_Timer:TimerUDB:sT24:timerdp:u1\
 
-UDB [UDB=(3,4)] contents:
-controlcell: Name =\Hex4Reg:Sync:ctrl_reg\
-    PORT MAP (
-        control_7 => \Hex4Reg:control_7\ ,
-        control_6 => \Hex4Reg:control_6\ ,
-        control_5 => \Hex4Reg:control_5\ ,
-        control_4 => \Hex4Reg:control_4\ ,
-        control_3 => Net_90 ,
-        control_2 => Net_89 ,
-        control_1 => Net_88 ,
-        control_0 => Net_91 );
-    Properties:
-    {
-        cy_ctrl_mode_0 = "00000000"
-        cy_ctrl_mode_1 = "00000000"
-        cy_ext_reset = 0
-        cy_force_order = 1
-        cy_init_value = "00000000"
-    }
-    Clock Enable: True
-
-UDB [UDB=(3,5)] contents:
-LAB@[UDB=(3,5)][LB=0] #macrocells=1, #inputs=2, #pterms=1
-{
-    [McSlotId=0]:     MacroCell: Name=\Node_Timer:TimerUDB:status_tc\, Mode=(Combinatorial) @ [UDB=(3,5)][LB=0][MC=0]
-        Total # of inputs        : 2
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \Node_Timer:TimerUDB:control_7\ * 
-              \Node_Timer:TimerUDB:per_zero\
-        );
-        Output = \Node_Timer:TimerUDB:status_tc\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]: (empty)
-    [McSlotId=2]: (empty)
-    [McSlotId=3]: (empty)
-}
-
 statusicell: Name =\Node_Timer:TimerUDB:rstSts:stsreg\
     PORT MAP (
         clock => ClockBlock_BUS_CLK ,
@@ -2345,26 +2556,67 @@ statusicell: Name =\Node_Timer:TimerUDB:rstSts:stsreg\
     Clock Polarity: Active High
     Clock Enable: True
 
-controlcell: Name =\Hex3Reg:Sync:ctrl_reg\
+UDB [UDB=(3,3)] contents:
+datapathcell: Name =\Node_Timer:TimerUDB:sT24:timerdp:u1\
     PORT MAP (
-        control_7 => \Hex3Reg:control_7\ ,
-        control_6 => \Hex3Reg:control_6\ ,
-        control_5 => \Hex3Reg:control_5\ ,
-        control_4 => \Hex3Reg:control_4\ ,
-        control_3 => Net_104 ,
-        control_2 => Net_103 ,
-        control_1 => Net_102 ,
-        control_0 => Net_101 );
+        clock => ClockBlock_BUS_CLK ,
+        cs_addr_1 => \Node_Timer:TimerUDB:control_7\ ,
+        cs_addr_0 => \Node_Timer:TimerUDB:per_zero\ ,
+        chain_in => \Node_Timer:TimerUDB:sT24:timerdp:carry0\ ,
+        chain_out => \Node_Timer:TimerUDB:sT24:timerdp:carry1\ );
     Properties:
     {
-        cy_ctrl_mode_0 = "00000000"
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111100000110000000000000001000000110000000000011000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Previous in chain : \Node_Timer:TimerUDB:sT24:timerdp:u0\
+    Next in chain : \Node_Timer:TimerUDB:sT24:timerdp:u2\
+
+controlcell: Name =\Node_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\
+    PORT MAP (
+        clock => ClockBlock_BUS_CLK ,
+        control_7 => \Node_Timer:TimerUDB:control_7\ ,
+        control_6 => \Node_Timer:TimerUDB:control_6\ ,
+        control_5 => \Node_Timer:TimerUDB:control_5\ ,
+        control_4 => \Node_Timer:TimerUDB:control_4\ ,
+        control_3 => \Node_Timer:TimerUDB:control_3\ ,
+        control_2 => \Node_Timer:TimerUDB:control_2\ ,
+        control_1 => \Node_Timer:TimerUDB:control_1\ ,
+        control_0 => \Node_Timer:TimerUDB:control_0\ );
+    Properties:
+    {
+        cy_ctrl_mode_0 = "11111111"
         cy_ctrl_mode_1 = "00000000"
         cy_ext_reset = 0
         cy_force_order = 1
         cy_init_value = "00000000"
     }
+    Clock Polarity: Active High
     Clock Enable: True
 
+UDB [UDB=(3,4)] is empty.
+UDB [UDB=(3,5)] is empty.
 Intr container @ [IntrContainer=(0)]: 
   Intr@ [IntrContainer=(0)][IntrId=(0)] 
     interrupt: Name =isr_can
@@ -2382,6 +2634,15 @@ Intr container @ [IntrContainer=(0)]:
         Properties:
         {
             int_type = "10"
+            is_nmi = 0
+        }
+  Intr@ [IntrContainer=(0)][IntrId=(2)] 
+    interrupt: Name =isr_wdt
+        PORT MAP (
+            interrupt => Net_136 );
+        Properties:
+        {
+            int_type = "00"
             is_nmi = 0
         }
   Intr@ [IntrContainer=(0)][IntrId=(16)] 
@@ -2515,182 +2776,18 @@ Pin : Name = RGB1_2(0)
     {
     }
 
-[IoId=4]: 
-Pin : Name = Digit4Bit4(0)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: NOSYNC
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: CMOS_OUT
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL, ROUTABLE
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => Digit4Bit4(0)__PA ,
-        pin_input => Net_90 ,
-        pad => Digit4Bit4(0)_PAD );
-    Properties:
-    {
-    }
-
-[IoId=5]: 
-Pin : Name = Digit4Bit3(0)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: NOSYNC
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: CMOS_OUT
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL, ROUTABLE
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => Digit4Bit3(0)__PA ,
-        pin_input => Net_89 ,
-        pad => Digit4Bit3(0)_PAD );
-    Properties:
-    {
-    }
-
-[IoId=6]: 
-Pin : Name = Digit4Bit2(0)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: NOSYNC
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: CMOS_OUT
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL, ROUTABLE
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => Digit4Bit2(0)__PA ,
-        pin_input => Net_88 ,
-        pad => Digit4Bit2(0)_PAD );
-    Properties:
-    {
-    }
-
-[IoId=7]: 
-Pin : Name = Digit4Bit1(0)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: NOSYNC
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: CMOS_OUT
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL, ROUTABLE
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => Digit4Bit1(0)__PA ,
-        pin_input => Net_91 ,
-        pad => Digit4Bit1(0)_PAD );
-    Properties:
-    {
-    }
-
 Port 1 contains the following IO cells:
 Port 2 contains the following IO cells:
 [IoId=0]: 
-Pin : Name = Digit1Bit2(0)
+Pin : Name = SD(0)
     Attributes:
         In Group/Port: True
-        In Sync Option: AUTO
+        In Sync Option: NOSYNC
         Out Sync Option: NOSYNC
         Interrupt generated: False
         Interrupt mode: NONE
         Drive mode: CMOS_OUT
-        VTrip: EITHER
+        VTrip: CMOS
         Slew: FAST
         Input Sync needed: False
         Output Sync needed: False
@@ -2699,7 +2796,7 @@ Pin : Name = Digit1Bit2(0)
         LCD Mode: COMMON
         Register Mode: RegComb
         CaSense Mode: NEITHER
-        Treat as pin: True
+        Treat as pin: False
         Is OE Registered: False
         Uses Analog: False
         Can contain Digital: True
@@ -2711,27 +2808,26 @@ Pin : Name = Digit1Bit2(0)
         SIO Vtrip: MULTIPLIER_0_5
         SIO Multiplier Index: 0
         SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL, ROUTABLE
+        Required Capabilities: DIGITAL
         Initial Value: 0
         IO Voltage: 0
     PORT MAP (
-        pa_out => Digit1Bit2(0)__PA ,
-        pin_input => Net_123 ,
-        pad => Digit1Bit2(0)_PAD );
+        pa_out => SD(0)__PA ,
+        pad => SD(0)_PAD );
     Properties:
     {
     }
 
 [IoId=1]: 
-Pin : Name = Digit1Bit1(0)
+Pin : Name = SD(1)
     Attributes:
         In Group/Port: True
-        In Sync Option: AUTO
+        In Sync Option: NOSYNC
         Out Sync Option: NOSYNC
         Interrupt generated: False
         Interrupt mode: NONE
         Drive mode: CMOS_OUT
-        VTrip: EITHER
+        VTrip: CMOS
         Slew: FAST
         Input Sync needed: False
         Output Sync needed: False
@@ -2740,7 +2836,7 @@ Pin : Name = Digit1Bit1(0)
         LCD Mode: COMMON
         Register Mode: RegComb
         CaSense Mode: NEITHER
-        Treat as pin: True
+        Treat as pin: False
         Is OE Registered: False
         Uses Analog: False
         Can contain Digital: True
@@ -2752,27 +2848,146 @@ Pin : Name = Digit1Bit1(0)
         SIO Vtrip: MULTIPLIER_0_5
         SIO Multiplier Index: 0
         SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL, ROUTABLE
+        Required Capabilities: DIGITAL
         Initial Value: 0
         IO Voltage: 0
     PORT MAP (
-        pa_out => Digit1Bit1(0)__PA ,
-        pin_input => Net_122 ,
-        pad => Digit1Bit1(0)_PAD );
+        pa_out => SD(1)__PA ,
+        pad => SD(1)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=2]: 
+Pin : Name = SD(2)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: NOSYNC
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: False
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => SD(2)__PA ,
+        pad => SD(2)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=3]: 
+Pin : Name = SD(3)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: NOSYNC
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: False
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => SD(3)__PA ,
+        pad => SD(3)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=4]: 
+Pin : Name = SD(4)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: NOSYNC
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: False
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => SD(4)__PA ,
+        pad => SD(4)_PAD );
     Properties:
     {
     }
 
 [IoId=5]: 
-Pin : Name = RGB1_1(0)
+Pin : Name = SD(5)
     Attributes:
         In Group/Port: True
-        In Sync Option: AUTO
+        In Sync Option: NOSYNC
         Out Sync Option: NOSYNC
         Interrupt generated: False
         Interrupt mode: NONE
         Drive mode: CMOS_OUT
-        VTrip: EITHER
+        VTrip: CMOS
         Slew: FAST
         Input Sync needed: False
         Output Sync needed: False
@@ -2781,7 +2996,7 @@ Pin : Name = RGB1_1(0)
         LCD Mode: COMMON
         Register Mode: RegComb
         CaSense Mode: NEITHER
-        Treat as pin: True
+        Treat as pin: False
         Is OE Registered: False
         Uses Analog: False
         Can contain Digital: True
@@ -2794,25 +3009,25 @@ Pin : Name = RGB1_1(0)
         SIO Multiplier Index: 0
         SIO RefSel: VCC_IO
         Required Capabilities: DIGITAL
-        Initial Value: 1
+        Initial Value: 0
         IO Voltage: 0
     PORT MAP (
-        pa_out => RGB1_1(0)__PA ,
-        pad => RGB1_1(0)_PAD );
+        pa_out => SD(5)__PA ,
+        pad => SD(5)_PAD );
     Properties:
     {
     }
 
 [IoId=6]: 
-Pin : Name = RGB2_1(0)
+Pin : Name = SD(6)
     Attributes:
         In Group/Port: True
-        In Sync Option: AUTO
+        In Sync Option: NOSYNC
         Out Sync Option: NOSYNC
         Interrupt generated: False
         Interrupt mode: NONE
         Drive mode: CMOS_OUT
-        VTrip: EITHER
+        VTrip: CMOS
         Slew: FAST
         Input Sync needed: False
         Output Sync needed: False
@@ -2821,7 +3036,7 @@ Pin : Name = RGB2_1(0)
         LCD Mode: COMMON
         Register Mode: RegComb
         CaSense Mode: NEITHER
-        Treat as pin: True
+        Treat as pin: False
         Is OE Registered: False
         Uses Analog: False
         Can contain Digital: True
@@ -2834,25 +3049,25 @@ Pin : Name = RGB2_1(0)
         SIO Multiplier Index: 0
         SIO RefSel: VCC_IO
         Required Capabilities: DIGITAL
-        Initial Value: 1
+        Initial Value: 0
         IO Voltage: 0
     PORT MAP (
-        pa_out => RGB2_1(0)__PA ,
-        pad => RGB2_1(0)_PAD );
+        pa_out => SD(6)__PA ,
+        pad => SD(6)_PAD );
     Properties:
     {
     }
 
 [IoId=7]: 
-Pin : Name = RGB3_1(0)
+Pin : Name = SD(7)
     Attributes:
         In Group/Port: True
-        In Sync Option: AUTO
+        In Sync Option: NOSYNC
         Out Sync Option: NOSYNC
         Interrupt generated: False
         Interrupt mode: NONE
         Drive mode: CMOS_OUT
-        VTrip: EITHER
+        VTrip: CMOS
         Slew: FAST
         Input Sync needed: False
         Output Sync needed: False
@@ -2861,7 +3076,7 @@ Pin : Name = RGB3_1(0)
         LCD Mode: COMMON
         Register Mode: RegComb
         CaSense Mode: NEITHER
-        Treat as pin: True
+        Treat as pin: False
         Is OE Registered: False
         Uses Analog: False
         Can contain Digital: True
@@ -2874,11 +3089,11 @@ Pin : Name = RGB3_1(0)
         SIO Multiplier Index: 0
         SIO RefSel: VCC_IO
         Required Capabilities: DIGITAL
-        Initial Value: 1
+        Initial Value: 0
         IO Voltage: 0
     PORT MAP (
-        pa_out => RGB3_1(0)__PA ,
-        pad => RGB3_1(0)_PAD );
+        pa_out => SD(7)__PA ,
+        pad => SD(7)_PAD );
     Properties:
     {
     }
@@ -2967,47 +3182,6 @@ Pin : Name = HV(0)
     }
 
 [IoId=4]: 
-Pin : Name = TX(0)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: NOSYNC
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: CMOS_OUT
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL, ROUTABLE
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => TX(0)__PA ,
-        pin_input => Net_12 ,
-        pad => TX(0)_PAD );
-    Properties:
-    {
-    }
-
-[IoId=5]: 
 Pin : Name = RX(0)
     Attributes:
         In Group/Port: True
@@ -3048,50 +3222,8 @@ Pin : Name = RX(0)
     {
     }
 
-Port 4 contains the following IO cells:
-[IoId=4]: 
-Pin : Name = Digit3Bit4(0)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: NOSYNC
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: CMOS_OUT
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL, ROUTABLE
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => Digit3Bit4(0)__PA ,
-        pin_input => Net_104 ,
-        pad => Digit3Bit4(0)_PAD );
-    Properties:
-    {
-    }
-
 [IoId=5]: 
-Pin : Name = Digit3Bit3(0)
+Pin : Name = TX(0)
     Attributes:
         In Group/Port: True
         In Sync Option: AUTO
@@ -3124,15 +3256,16 @@ Pin : Name = Digit3Bit3(0)
         Initial Value: 0
         IO Voltage: 0
     PORT MAP (
-        pa_out => Digit3Bit3(0)__PA ,
-        pin_input => Net_103 ,
-        pad => Digit3Bit3(0)_PAD );
+        pa_out => TX(0)__PA ,
+        pin_input => Net_12 ,
+        pad => TX(0)_PAD );
     Properties:
     {
     }
 
-[IoId=6]: 
-Pin : Name = Digit3Bit2(0)
+Port 4 contains the following IO cells:
+[IoId=0]: 
+Pin : Name = RGB2_1(0)
     Attributes:
         In Group/Port: True
         In Sync Option: AUTO
@@ -3161,19 +3294,18 @@ Pin : Name = Digit3Bit2(0)
         SIO Vtrip: MULTIPLIER_0_5
         SIO Multiplier Index: 0
         SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL, ROUTABLE
-        Initial Value: 0
+        Required Capabilities: DIGITAL
+        Initial Value: 1
         IO Voltage: 0
     PORT MAP (
-        pa_out => Digit3Bit2(0)__PA ,
-        pin_input => Net_102 ,
-        pad => Digit3Bit2(0)_PAD );
+        pa_out => RGB2_1(0)__PA ,
+        pad => RGB2_1(0)_PAD );
     Properties:
     {
     }
 
-[IoId=7]: 
-Pin : Name = Digit3Bit1(0)
+[IoId=1]: 
+Pin : Name = RGB1_1(0)
     Attributes:
         In Group/Port: True
         In Sync Option: AUTO
@@ -3202,13 +3334,12 @@ Pin : Name = Digit3Bit1(0)
         SIO Vtrip: MULTIPLIER_0_5
         SIO Multiplier Index: 0
         SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL, ROUTABLE
-        Initial Value: 0
+        Required Capabilities: DIGITAL
+        Initial Value: 1
         IO Voltage: 0
     PORT MAP (
-        pa_out => Digit3Bit1(0)__PA ,
-        pin_input => Net_101 ,
-        pad => Digit3Bit1(0)_PAD );
+        pa_out => RGB1_1(0)__PA ,
+        pad => RGB1_1(0)_PAD );
     Properties:
     {
     }
@@ -3335,15 +3466,15 @@ Pin : Name = LED_1(0)
     }
 
 Port 6 contains the following IO cells:
-[IoId=0]: 
-Pin : Name = Digit2Bit4(0)
+[IoId=7]: 
+Pin : Name = WDT_Reset(0)
     Attributes:
         In Group/Port: True
         In Sync Option: AUTO
         Out Sync Option: NOSYNC
         Interrupt generated: False
         Interrupt mode: NONE
-        Drive mode: CMOS_OUT
+        Drive mode: RES_PULL_DOWN
         VTrip: EITHER
         Slew: FAST
         Input Sync needed: False
@@ -3365,144 +3496,19 @@ Pin : Name = Digit2Bit4(0)
         SIO Vtrip: MULTIPLIER_0_5
         SIO Multiplier Index: 0
         SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL, ROUTABLE
-        Initial Value: 0
+        Required Capabilities: DIGITAL
+        Initial Value: 1
         IO Voltage: 0
     PORT MAP (
-        pa_out => Digit2Bit4(0)__PA ,
-        pin_input => Net_115 ,
-        pad => Digit2Bit4(0)_PAD );
-    Properties:
-    {
-    }
-
-[IoId=1]: 
-Pin : Name = Digit2Bit3(0)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: NOSYNC
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: CMOS_OUT
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL, ROUTABLE
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => Digit2Bit3(0)__PA ,
-        pin_input => Net_114 ,
-        pad => Digit2Bit3(0)_PAD );
-    Properties:
-    {
-    }
-
-[IoId=2]: 
-Pin : Name = Digit2Bit2(0)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: NOSYNC
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: CMOS_OUT
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL, ROUTABLE
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => Digit2Bit2(0)__PA ,
-        pin_input => Net_113 ,
-        pad => Digit2Bit2(0)_PAD );
-    Properties:
-    {
-    }
-
-[IoId=3]: 
-Pin : Name = Digit2Bit1(0)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: NOSYNC
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: CMOS_OUT
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL, ROUTABLE
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => Digit2Bit1(0)__PA ,
-        pin_input => Net_112 ,
-        pad => Digit2Bit1(0)_PAD );
+        pa_out => WDT_Reset(0)__PA ,
+        pad => WDT_Reset(0)_PAD );
     Properties:
     {
     }
 
 Port 12 contains the following IO cells:
-Port 15 contains the following IO cells:
-[IoId=4]: 
-Pin : Name = Digit1Bit4(0)
+[IoId=3]: 
+Pin : Name = RGB3_1(0)
     Attributes:
         In Group/Port: True
         In Sync Option: AUTO
@@ -3531,20 +3537,226 @@ Pin : Name = Digit1Bit4(0)
         SIO Vtrip: MULTIPLIER_0_5
         SIO Multiplier Index: 0
         SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL, ROUTABLE
-        Initial Value: 0
+        Required Capabilities: DIGITAL
+        Initial Value: 1
         IO Voltage: 0
     PORT MAP (
-        pa_out => Digit1Bit4(0)__PA ,
-        pin_input => Net_125 ,
-        pad => Digit1Bit4(0)_PAD );
+        pa_out => RGB3_1(0)__PA ,
+        pad => RGB3_1(0)_PAD );
+    Properties:
+    {
+    }
+
+Port 15 contains the following IO cells:
+[IoId=0]: 
+Pin : Name = CTRL(0)
+    Attributes:
+        Alias: WR
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: False
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => CTRL(0)__PA ,
+        pad => CTRL(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=1]: 
+Pin : Name = CTRL(1)
+    Attributes:
+        Alias: RD
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: False
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => CTRL(1)__PA ,
+        pad => CTRL(1)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=2]: 
+Pin : Name = CTRL(2)
+    Attributes:
+        Alias: CE
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: False
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => CTRL(2)__PA ,
+        pad => CTRL(2)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=3]: 
+Pin : Name = CTRL(3)
+    Attributes:
+        Alias: CD
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: False
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => CTRL(3)__PA ,
+        pad => CTRL(3)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=4]: 
+Pin : Name = CTRL(4)
+    Attributes:
+        Alias: RESET
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: False
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => CTRL(4)__PA ,
+        pad => CTRL(4)_PAD );
     Properties:
     {
     }
 
 [IoId=5]: 
-Pin : Name = Digit1Bit3(0)
+Pin : Name = CTRL(5)
     Attributes:
+        Alias: FS
         In Group/Port: True
         In Sync Option: AUTO
         Out Sync Option: NOSYNC
@@ -3560,7 +3772,7 @@ Pin : Name = Digit1Bit3(0)
         LCD Mode: COMMON
         Register Mode: RegComb
         CaSense Mode: NEITHER
-        Treat as pin: True
+        Treat as pin: False
         Is OE Registered: False
         Uses Analog: False
         Can contain Digital: True
@@ -3572,13 +3784,12 @@ Pin : Name = Digit1Bit3(0)
         SIO Vtrip: MULTIPLIER_0_5
         SIO Multiplier Index: 0
         SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL, ROUTABLE
-        Initial Value: 0
+        Required Capabilities: DIGITAL
+        Initial Value: 1
         IO Voltage: 0
     PORT MAP (
-        pa_out => Digit1Bit3(0)__PA ,
-        pin_input => Net_124 ,
-        pad => Digit1Bit3(0)_PAD );
+        pa_out => CTRL(5)__PA ,
+        pad => CTRL(5)_PAD );
     Properties:
     {
     }
@@ -3659,54 +3870,60 @@ PHUB group 0: empty
 ------------------------------------------------------------
 Port Configuration report
 ------------------------------------------------------------
-     |     |       | Interrupt |                  |               | 
-Port | Pin | Fixed |      Type |       Drive Mode |          Name | Connections
------+-----+-------+-----------+------------------+---------------+------------
-   0 |   1 |     * |      NONE |         CMOS_OUT |     RGB3_2(0) | 
-     |   2 |     * |      NONE |         CMOS_OUT |     RGB2_2(0) | 
-     |   3 |     * |      NONE |         CMOS_OUT |     RGB1_2(0) | 
-     |   4 |     * |      NONE |         CMOS_OUT | Digit4Bit4(0) | In(Net_90)
-     |   5 |     * |      NONE |         CMOS_OUT | Digit4Bit3(0) | In(Net_89)
-     |   6 |     * |      NONE |         CMOS_OUT | Digit4Bit2(0) | In(Net_88)
-     |   7 |     * |      NONE |         CMOS_OUT | Digit4Bit1(0) | In(Net_91)
------+-----+-------+-----------+------------------+---------------+------------
-   2 |   0 |     * |      NONE |         CMOS_OUT | Digit1Bit2(0) | In(Net_123)
-     |   1 |     * |      NONE |         CMOS_OUT | Digit1Bit1(0) | In(Net_122)
-     |   5 |     * |      NONE |         CMOS_OUT |     RGB1_1(0) | 
-     |   6 |     * |      NONE |         CMOS_OUT |     RGB2_1(0) | 
-     |   7 |     * |      NONE |         CMOS_OUT |     RGB3_1(0) | 
------+-----+-------+-----------+------------------+---------------+------------
-   3 |   0 |     * |      NONE |     HI_Z_DIGITAL |      Drive(0) | 
-     |   1 |     * |      NONE |     HI_Z_DIGITAL |         HV(0) | 
-     |   4 |     * |      NONE |         CMOS_OUT |         TX(0) | In(Net_12)
-     |   5 |     * |      NONE |     HI_Z_DIGITAL |         RX(0) | FB(Net_11)
------+-----+-------+-----------+------------------+---------------+------------
-   4 |   4 |     * |      NONE |         CMOS_OUT | Digit3Bit4(0) | In(Net_104)
-     |   5 |     * |      NONE |         CMOS_OUT | Digit3Bit3(0) | In(Net_103)
-     |   6 |     * |      NONE |         CMOS_OUT | Digit3Bit2(0) | In(Net_102)
-     |   7 |     * |      NONE |         CMOS_OUT | Digit3Bit1(0) | In(Net_101)
------+-----+-------+-----------+------------------+---------------+------------
-   5 |   0 |     * |      NONE |         CMOS_OUT |     Buzzer(0) | 
-     |   2 |     * |      NONE |         CMOS_OUT |        LED(0) | 
-     |   3 |     * |      NONE |         CMOS_OUT |      LED_1(0) | 
------+-----+-------+-----------+------------------+---------------+------------
-   6 |   0 |     * |      NONE |         CMOS_OUT | Digit2Bit4(0) | In(Net_115)
-     |   1 |     * |      NONE |         CMOS_OUT | Digit2Bit3(0) | In(Net_114)
-     |   2 |     * |      NONE |         CMOS_OUT | Digit2Bit2(0) | In(Net_113)
-     |   3 |     * |      NONE |         CMOS_OUT | Digit2Bit1(0) | In(Net_112)
------+-----+-------+-----------+------------------+---------------+------------
-  15 |   4 |     * |      NONE |         CMOS_OUT | Digit1Bit4(0) | In(Net_125)
-     |   5 |     * |      NONE |         CMOS_OUT | Digit1Bit3(0) | In(Net_124)
--------------------------------------------------------------------------------
+     |     |       | Interrupt |                  |              | 
+Port | Pin | Fixed |      Type |       Drive Mode |         Name | Connections
+-----+-----+-------+-----------+------------------+--------------+------------
+   0 |   1 |     * |      NONE |         CMOS_OUT |    RGB3_2(0) | 
+     |   2 |     * |      NONE |         CMOS_OUT |    RGB2_2(0) | 
+     |   3 |     * |      NONE |         CMOS_OUT |    RGB1_2(0) | 
+-----+-----+-------+-----------+------------------+--------------+------------
+   2 |   0 |     * |      NONE |         CMOS_OUT |        SD(0) | 
+     |   1 |     * |      NONE |         CMOS_OUT |        SD(1) | 
+     |   2 |     * |      NONE |         CMOS_OUT |        SD(2) | 
+     |   3 |     * |      NONE |         CMOS_OUT |        SD(3) | 
+     |   4 |     * |      NONE |         CMOS_OUT |        SD(4) | 
+     |   5 |     * |      NONE |         CMOS_OUT |        SD(5) | 
+     |   6 |     * |      NONE |         CMOS_OUT |        SD(6) | 
+     |   7 |     * |      NONE |         CMOS_OUT |        SD(7) | 
+-----+-----+-------+-----------+------------------+--------------+------------
+   3 |   0 |     * |      NONE |     HI_Z_DIGITAL |     Drive(0) | 
+     |   1 |     * |      NONE |     HI_Z_DIGITAL |        HV(0) | 
+     |   4 |     * |      NONE |     HI_Z_DIGITAL |        RX(0) | FB(Net_11)
+     |   5 |     * |      NONE |         CMOS_OUT |        TX(0) | In(Net_12)
+-----+-----+-------+-----------+------------------+--------------+------------
+   4 |   0 |     * |      NONE |         CMOS_OUT |    RGB2_1(0) | 
+     |   1 |     * |      NONE |         CMOS_OUT |    RGB1_1(0) | 
+-----+-----+-------+-----------+------------------+--------------+------------
+   5 |   0 |     * |      NONE |         CMOS_OUT |    Buzzer(0) | 
+     |   2 |     * |      NONE |         CMOS_OUT |       LED(0) | 
+     |   3 |     * |      NONE |         CMOS_OUT |     LED_1(0) | 
+-----+-----+-------+-----------+------------------+--------------+------------
+   6 |   7 |     * |      NONE |    RES_PULL_DOWN | WDT_Reset(0) | 
+-----+-----+-------+-----------+------------------+--------------+------------
+  12 |   3 |     * |      NONE |         CMOS_OUT |    RGB3_1(0) | 
+-----+-----+-------+-----------+------------------+--------------+------------
+  15 |   0 |     * |      NONE |         CMOS_OUT |      CTRL(0) | 
+     |   1 |     * |      NONE |         CMOS_OUT |      CTRL(1) | 
+     |   2 |     * |      NONE |         CMOS_OUT |      CTRL(2) | 
+     |   3 |     * |      NONE |         CMOS_OUT |      CTRL(3) | 
+     |   4 |     * |      NONE |         CMOS_OUT |      CTRL(4) | 
+     |   5 |     * |      NONE |         CMOS_OUT |      CTRL(5) | 
+------------------------------------------------------------------------------
 </CYPRESSTAG>
 </CYPRESSTAG>
 </CYPRESSTAG>
+<<<<<<< HEAD
 Digital component placer commit/Report: Elapsed time ==> 0s.073ms
 Digital Placement phase: Elapsed time ==> 1s.365ms
+=======
+Digital component placer commit/Report: Elapsed time ==> 0s.074ms
+Digital Placement phase: Elapsed time ==> 1s.262ms
+>>>>>>> whgentry_fe6
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 "C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Users\fiona\OneDrive\Documents\PSoC Creator\4.2\Devices\psoc5/psoc5lp/route_arch-rrg.cydata" --vh2-path "Dashboard_r.vh2" --pcf-path "Dashboard.pco" --des-name "Dashboard" --dsf-path "Dashboard.dsf" --sdc-path "Dashboard.sdc" --lib-path "Dashboard_r.lib"
 Routing successful.
+<<<<<<< HEAD
 Digital Routing phase: Elapsed time ==> 1s.810ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Generation">
@@ -3718,11 +3935,25 @@ Bitstream Verification phase: Elapsed time ==> 0s.035ms
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in Dashboard_timing.html.
 Static timing analysis phase: Elapsed time ==> 0s.431ms
+=======
+Digital Routing phase: Elapsed time ==> 1s.357ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Bitstream Generation">
+Bitstream Generation phase: Elapsed time ==> 0s.196ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Bitstream Verification">
+Bitstream Verification phase: Elapsed time ==> 0s.045ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Static timing analysis">
+Timing report is in Dashboard_timing.html.
+Static timing analysis phase: Elapsed time ==> 0s.289ms
+>>>>>>> whgentry_fe6
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
 Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
+<<<<<<< HEAD
 Design database save phase: Elapsed time ==> 0s.212ms
 </CYPRESSTAG>
 cydsfit: Elapsed time ==> 4s.660ms
@@ -3731,3 +3962,13 @@ Fitter phase: Elapsed time ==> 4s.661ms
 API generation phase: Elapsed time ==> 2s.161ms
 Dependency generation phase: Elapsed time ==> 0s.016ms
 Cleanup phase: Elapsed time ==> 0s.004ms
+=======
+Design database save phase: Elapsed time ==> 0s.184ms
+</CYPRESSTAG>
+cydsfit: Elapsed time ==> 3s.897ms
+</CYPRESSTAG>
+Fitter phase: Elapsed time ==> 3s.897ms
+API generation phase: Elapsed time ==> 1s.357ms
+Dependency generation phase: Elapsed time ==> 0s.009ms
+Cleanup phase: Elapsed time ==> 0s.001ms
+>>>>>>> whgentry_fe6

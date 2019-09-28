@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccm5eLhK.s 			page 1
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccCwIp8Z.s 			page 1
+>>>>>>> whgentry_fe6
 
 
    1              		.syntax unified
@@ -58,7 +62,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccm5eLhK.s 			page 1
   28:Generated_Source\PSoC5/CAN_Timer_PM.c **** * Summary:
   29:Generated_Source\PSoC5/CAN_Timer_PM.c **** *     Save the current user configuration
   30:Generated_Source\PSoC5/CAN_Timer_PM.c **** *
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccm5eLhK.s 			page 2
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccCwIp8Z.s 			page 2
+>>>>>>> whgentry_fe6
 
 
   31:Generated_Source\PSoC5/CAN_Timer_PM.c **** * Parameters:
@@ -118,7 +126,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccm5eLhK.s 			page 1
   68:Generated_Source\PSoC5/CAN_Timer_PM.c **** *
   69:Generated_Source\PSoC5/CAN_Timer_PM.c **** * Return:
   70:Generated_Source\PSoC5/CAN_Timer_PM.c **** *  void
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccm5eLhK.s 			page 3
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccCwIp8Z.s 			page 3
+>>>>>>> whgentry_fe6
 
 
   71:Generated_Source\PSoC5/CAN_Timer_PM.c **** *
@@ -178,7 +190,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccm5eLhK.s 			page 1
  108:Generated_Source\PSoC5/CAN_Timer_PM.c **** *  CAN_Timer_backup.TimerEnableState:  Is modified depending on the
  109:Generated_Source\PSoC5/CAN_Timer_PM.c **** *  enable state of the block before entering sleep mode.
  110:Generated_Source\PSoC5/CAN_Timer_PM.c **** *
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccm5eLhK.s 			page 4
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccCwIp8Z.s 			page 4
+>>>>>>> whgentry_fe6
 
 
  111:Generated_Source\PSoC5/CAN_Timer_PM.c **** *******************************************************************************/
@@ -238,7 +254,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccm5eLhK.s 			page 1
   99              		.section	.text.CAN_Timer_Wakeup,"ax",%progbits
  100              		.align	2
  101              		.global	CAN_Timer_Wakeup
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccm5eLhK.s 			page 5
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccCwIp8Z.s 			page 5
+>>>>>>> whgentry_fe6
 
 
  102              		.thumb
@@ -298,7 +318,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccm5eLhK.s 			page 1
  127              	.L12:
  128 0010 00000000 		.word	.LANCHOR0
  129              		.cfi_endproc
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccm5eLhK.s 			page 6
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccCwIp8Z.s 			page 6
+>>>>>>> whgentry_fe6
 
 
  130              	.LFE3:
@@ -358,7 +382,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccm5eLhK.s 			page 1
  184 0052 00000000 		.4byte	.LASF6
  185 0056 02       		.uleb128 0x2
  186 0057 08       		.byte	0x8
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccm5eLhK.s 			page 7
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccCwIp8Z.s 			page 7
+>>>>>>> whgentry_fe6
 
 
  187 0058 07       		.byte	0x7
@@ -418,7 +446,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccm5eLhK.s 			page 1
  241 00c0 08       		.uleb128 0x8
  242 00c1 D0010000 		.4byte	.LASF16
  243 00c5 03       		.byte	0x3
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccm5eLhK.s 			page 8
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccCwIp8Z.s 			page 8
+>>>>>>> whgentry_fe6
 
 
  244 00c6 53       		.byte	0x53
@@ -478,7 +510,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccm5eLhK.s 			page 1
  298 0141 5E010000 		.4byte	.LASF21
  299 0145 03       		.byte	0x3
  300 0146 5B       		.byte	0x5b
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccm5eLhK.s 			page 9
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccCwIp8Z.s 			page 9
+>>>>>>> whgentry_fe6
 
 
  301 0147 0D       		.uleb128 0xd
@@ -538,7 +574,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccm5eLhK.s 			page 1
  355 002e 3A       		.uleb128 0x3a
  356 002f 0B       		.uleb128 0xb
  357 0030 3B       		.uleb128 0x3b
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccm5eLhK.s 			page 10
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccCwIp8Z.s 			page 10
+>>>>>>> whgentry_fe6
 
 
  358 0031 05       		.uleb128 0x5
@@ -598,7 +638,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccm5eLhK.s 			page 1
  412 0067 2E       		.uleb128 0x2e
  413 0068 00       		.byte	0
  414 0069 3F       		.uleb128 0x3f
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccm5eLhK.s 			page 11
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccCwIp8Z.s 			page 11
+>>>>>>> whgentry_fe6
 
 
  415 006a 19       		.uleb128 0x19
@@ -658,7 +702,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccm5eLhK.s 			page 1
  469 00a4 34       		.uleb128 0x34
  470 00a5 00       		.byte	0
  471 00a6 03       		.uleb128 0x3
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccm5eLhK.s 			page 12
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccCwIp8Z.s 			page 12
+>>>>>>> whgentry_fe6
 
 
  472 00a7 0E       		.uleb128 0xe
@@ -718,7 +766,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccm5eLhK.s 			page 1
  526 0014 28000000 		.4byte	.LFE2
  527 0018 00000000 		.4byte	.LFB3
  528 001c 14000000 		.4byte	.LFE3
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccm5eLhK.s 			page 13
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccCwIp8Z.s 			page 13
+>>>>>>> whgentry_fe6
 
 
  529 0020 00000000 		.4byte	0
@@ -778,7 +830,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccm5eLhK.s 			page 1
  549      6420696E 
  549      7400
  550              	.LASF7:
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccm5eLhK.s 			page 14
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccCwIp8Z.s 			page 14
+>>>>>>> whgentry_fe6
 
 
  551 00e7 6C6F6E67 		.ascii	"long long unsigned int\000"
@@ -838,7 +894,11 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccm5eLhK.s 			page 1
  572      63796473 
  572      6E00
  573              	.LASF3:
+<<<<<<< HEAD
 ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccm5eLhK.s 			page 15
+=======
+ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccCwIp8Z.s 			page 15
+>>>>>>> whgentry_fe6
 
 
  574 01bd 73686F72 		.ascii	"short unsigned int\000"

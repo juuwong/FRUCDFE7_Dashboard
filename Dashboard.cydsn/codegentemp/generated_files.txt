@@ -71,71 +71,28 @@
   <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Node_Timer_PM.c" value="SOURCE_C;CortexM3;;;;Node_Timer" />
   <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\isr_nodeok.c" value="SOURCE_C;CortexM3;;;;isr_nodeok" />
   <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\isr_nodeok.h" value="HEADER;;;;;isr_nodeok" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit4Bit1_aliases.h" value="HEADER;;;;;Digit4Bit1" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit4Bit1.c" value="SOURCE_C;CortexM3;;;;Digit4Bit1" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit4Bit1.h" value="HEADER;;;;;Digit4Bit1" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit4Bit2_aliases.h" value="HEADER;;;;;Digit4Bit2" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit4Bit2.c" value="SOURCE_C;CortexM3;;;;Digit4Bit2" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit4Bit2.h" value="HEADER;;;;;Digit4Bit2" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit4Bit3_aliases.h" value="HEADER;;;;;Digit4Bit3" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit4Bit3.c" value="SOURCE_C;CortexM3;;;;Digit4Bit3" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit4Bit3.h" value="HEADER;;;;;Digit4Bit3" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit4Bit4_aliases.h" value="HEADER;;;;;Digit4Bit4" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit4Bit4.c" value="SOURCE_C;CortexM3;;;;Digit4Bit4" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit4Bit4.h" value="HEADER;;;;;Digit4Bit4" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Hex4Reg.h" value="HEADER;;;;;Hex4Reg" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Hex4Reg.c" value="SOURCE_C;CortexM3;;;;Hex4Reg" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Hex4Reg_PM.c" value="SOURCE_C;CortexM3;;;;Hex4Reg" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit3Bit1_aliases.h" value="HEADER;;;;;Digit3Bit1" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit3Bit1.c" value="SOURCE_C;CortexM3;;;;Digit3Bit1" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit3Bit1.h" value="HEADER;;;;;Digit3Bit1" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit3Bit2_aliases.h" value="HEADER;;;;;Digit3Bit2" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit3Bit2.c" value="SOURCE_C;CortexM3;;;;Digit3Bit2" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit3Bit2.h" value="HEADER;;;;;Digit3Bit2" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit3Bit3_aliases.h" value="HEADER;;;;;Digit3Bit3" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit3Bit3.c" value="SOURCE_C;CortexM3;;;;Digit3Bit3" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit3Bit3.h" value="HEADER;;;;;Digit3Bit3" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit3Bit4_aliases.h" value="HEADER;;;;;Digit3Bit4" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit3Bit4.c" value="SOURCE_C;CortexM3;;;;Digit3Bit4" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit3Bit4.h" value="HEADER;;;;;Digit3Bit4" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Hex3Reg.h" value="HEADER;;;;;Hex3Reg" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Hex3Reg.c" value="SOURCE_C;CortexM3;;;;Hex3Reg" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Hex3Reg_PM.c" value="SOURCE_C;CortexM3;;;;Hex3Reg" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit2Bit1_aliases.h" value="HEADER;;;;;Digit2Bit1" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit2Bit1.c" value="SOURCE_C;CortexM3;;;;Digit2Bit1" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit2Bit1.h" value="HEADER;;;;;Digit2Bit1" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit2Bit2_aliases.h" value="HEADER;;;;;Digit2Bit2" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit2Bit2.c" value="SOURCE_C;CortexM3;;;;Digit2Bit2" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit2Bit2.h" value="HEADER;;;;;Digit2Bit2" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit2Bit3_aliases.h" value="HEADER;;;;;Digit2Bit3" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit2Bit3.c" value="SOURCE_C;CortexM3;;;;Digit2Bit3" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit2Bit3.h" value="HEADER;;;;;Digit2Bit3" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit2Bit4_aliases.h" value="HEADER;;;;;Digit2Bit4" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit2Bit4.c" value="SOURCE_C;CortexM3;;;;Digit2Bit4" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit2Bit4.h" value="HEADER;;;;;Digit2Bit4" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Hex2Reg.h" value="HEADER;;;;;Hex2Reg" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Hex2Reg.c" value="SOURCE_C;CortexM3;;;;Hex2Reg" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Hex2Reg_PM.c" value="SOURCE_C;CortexM3;;;;Hex2Reg" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit1Bit1_aliases.h" value="HEADER;;;;;Digit1Bit1" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit1Bit1.c" value="SOURCE_C;CortexM3;;;;Digit1Bit1" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit1Bit1.h" value="HEADER;;;;;Digit1Bit1" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit1Bit2_aliases.h" value="HEADER;;;;;Digit1Bit2" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit1Bit2.c" value="SOURCE_C;CortexM3;;;;Digit1Bit2" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit1Bit2.h" value="HEADER;;;;;Digit1Bit2" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit1Bit3_aliases.h" value="HEADER;;;;;Digit1Bit3" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit1Bit3.c" value="SOURCE_C;CortexM3;;;;Digit1Bit3" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit1Bit3.h" value="HEADER;;;;;Digit1Bit3" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit1Bit4_aliases.h" value="HEADER;;;;;Digit1Bit4" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit1Bit4.c" value="SOURCE_C;CortexM3;;;;Digit1Bit4" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Digit1Bit4.h" value="HEADER;;;;;Digit1Bit4" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Hex1Reg.h" value="HEADER;;;;;Hex1Reg" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Hex1Reg.c" value="SOURCE_C;CortexM3;;;;Hex1Reg" />
-  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Hex1Reg_PM.c" value="SOURCE_C;CortexM3;;;;Hex1Reg" />
+  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\CTRL_aliases.h" value="HEADER;;;;;CTRL" />
+  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\CTRL.c" value="SOURCE_C;CortexM3;;;;CTRL" />
+  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\CTRL.h" value="HEADER;;;;;CTRL" />
+  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\SD_aliases.h" value="HEADER;;;;;SD" />
+  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\SD.c" value="SOURCE_C;CortexM3;;;;SD" />
+  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\SD.h" value="HEADER;;;;;SD" />
   <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\LED_1_aliases.h" value="HEADER;;;;;LED_1" />
   <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\LED_1.c" value="SOURCE_C;CortexM3;;;;LED_1" />
   <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\LED_1.h" value="HEADER;;;;;LED_1" />
   <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\EEPROM_1.c" value="SOURCE_C;CortexM3;;;;EEPROM_1" />
   <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\EEPROM_1.h" value="HEADER;;;;;EEPROM_1" />
+<<<<<<< HEAD
+=======
+  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\WDT_Reset_aliases.h" value="HEADER;;;;;WDT_Reset" />
+  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\WDT_Reset.c" value="SOURCE_C;CortexM3;;;;WDT_Reset" />
+  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\WDT_Reset.h" value="HEADER;;;;;WDT_Reset" />
+  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\WDT_Timer.c" value="SOURCE_C;CortexM3;;;;WDT_Timer" />
+  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\WDT_Timer.h" value="HEADER;;;;;WDT_Timer" />
+  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\WDT_Timer_PM.c" value="SOURCE_C;CortexM3;;;;WDT_Timer" />
+  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\isr_wdt.c" value="SOURCE_C;CortexM3;;;;isr_wdt" />
+  <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\isr_wdt.h" value="HEADER;;;;;isr_wdt" />
+>>>>>>> whgentry_fe6
   <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\cy_em_eeprom.c" value="SOURCE_C;CortexM3;;;;Em_EEPROM_Dynamic" />
   <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\cy_em_eeprom.h" value="HEADER;;;;;Em_EEPROM_Dynamic" />
   <file name="C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\cm3gcc.ld" value="LINKER_SCRIPT;;;b98f980c-3bd1-4fc7-a887-c56a20a46fdd;;cy_boot" />

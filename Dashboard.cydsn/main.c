@@ -1,7 +1,11 @@
-    #include <project.h>
+
+#include <project.h>
 #include <stdio.h>
+#include "T6963C.h"
+#include "graphic.h"
+#include "LED.h"
 #include "can_manga.h"
-#include "data.h"
+
 
 // Uncomment THROTTLE_LIMITING to enable power reduction at high temperatures
 #define THROTTLE_LIMITING
@@ -11,12 +15,74 @@ volatile double THROTTLE_MULTIPLIER = 1;
 // declared external in can_manga.c
 volatile uint8 PACK_TEMP = 0;
 volatile int32 CURRENT = 0;
+volatile int ERROR_NODE;
+volatile int ERROR_IDX;
 volatile uint32_t voltage = 0;
 uint8_t charge = 0;
 
 const double THROTTLE_MAP[8] = { 95, 71, 59, 47, 35, 23, 11, 5 };
 
+// mimiced in charger code
+// so master board can send SOC back and forth
+// 240 values taken from data sheet
+// used to approximate state of charge
+int SOC_LUT[240] =  {
+    0, 5, 13, 22, 31, 39,
+    48, 57, 67, 76, 86, 
+    90, 106, 117, 127, 138,
+    150, 162, 174, 186, 199,
+    212, 226, 241, 256, 271, 
+    288, 205, 324, 345, 364,
+    386, 410, 436, 465, 497,
+    534, 577, 629, 695, 780,
+    881, 972, 1044, 1103, 1157,
+    1206, 1253, 1299, 1344, 1389, 
+    1434, 1479, 1527, 1576, 1628, 
+    1682, 1738, 1798, 1859, 1924,
+    1992, 2062, 2134, 2208, 2281, 
+    2424, 2492, 2557, 2620, 2681,
+    2743, 2804, 2868, 2903, 3003,
+    3078, 3161, 3253, 3354, 3467, 
+    3589, 3720, 3851, 3976, 4092, 
+    4200, 4303, 4404, 4504, 4603,
+    4700, 4792, 4878, 4958, 5032,
+    5101, 5166, 5228, 5289, 5347,
+    5405, 5462, 5518, 5573, 5628,
+    5680, 5731, 5780, 5826, 5869,
+    5911, 5951, 5988, 6024, 6059,
+    6092, 6124, 6156, 6187, 6217, 
+    6247, 6278, 6308, 6337, 6368,
+    6398, 6428, 6459, 6491, 6523,
+    6556, 6590, 6625, 6660, 6696,
+    6733, 6770, 6808, 6846, 6884,
+    6923, 6961, 7000, 7039, 7077,
+    7115, 7153, 7191, 7228, 7266, 
+    7303, 7340, 7376, 7413, 7449,
+    7484, 7520, 7555, 7590, 7625,
+    7659, 7694, 7728, 7762, 7796,
+    7830, 7864, 7898, 7932, 7966, 
+    8000, 8034, 8068, 8102, 8136,
+    8170, 8204, 8238, 8272, 8306,
+    8340, 8373, 8406, 8440, 8472,
+    8505, 8538, 8570, 8602, 8632,
+    8666, 8697, 8729, 8760, 8791,
+    8822, 8853, 8884, 8915, 8945, 
+    8976, 9006, 9036, 9067, 9097, 
+    9127, 9157, 9186, 9216, 9245,
+    9275, 9304, 9333, 9362, 9390,
+    9419, 9447, 9475, 9503, 9531,
+    9559, 9586, 9613, 9640, 9647, 
+    9693, 9720, 9746, 9772, 9797,
+    9823, 9848, 9873, 9898, 9923,
+    9947, 9971, 9995, 100000    
+};
+
 uint16_t curr_voltage = 0;
+
+int firstStart = 0;
+int firstLV = 0;
+int firstHV = 0;
+int firstDrive = 0;
 
 #define PWM_PULSE_WIDTH_STEP        (10u)
 #define SWITCH_PRESSED              (0u)
@@ -50,6 +116,20 @@ void nodeCheckStart()
     isr_nodeok_Start();
 }
 
+void displayData() {
+    GLCD_Clear_Frame();
+    GLCD_DrawInt(0,0,PACK_TEMP,8);
+    GLCD_DrawInt(120,0,charge,8);
+    GLCD_Write_Frame();
+}
+
+CY_ISR(ISR_WDT){
+    WDT_Timer_STATUS;
+    WDT_Reset_Write(0);
+    CyDelay(100);
+    WDT_Reset_Write(1);
+}
+
 typedef enum 
 {
 	Startup,
@@ -69,6 +149,7 @@ typedef enum
 	fromHV_Enabled,
 	fromDrive,
     fromFault,
+    fromBMS,
     nodeFailure
     
 }Error_State;
@@ -92,6 +173,8 @@ uint8 DriveSwitch = SWITCH_OFF;
 volatile uint32_t pedalOK = 0; // for pedal node
 
 volatile int previous_state = -1; // used for SOC writing
+
+volatile BMS_STATUS bms_status = NO_ERROR;
 
 /*******************************************************************************
 * Function Name: main
@@ -130,11 +213,25 @@ int main()
 
     CyGlobalIntEnable;
     
+    GLCD_Initalize();
+    GLCD_Clear_Graphic();
+    GLCD_Clear_Text();
+    GLCD_Clear_CG();
+    
     nodeCheckStart();
+    
+    // WatchDog Timer
+    WDT_Timer_Start();
+    isr_wdt_StartEx(ISR_WDT);
+    
+    bms_status = NO_ERROR;
+    int bms_error;
+    int faulted = 0;
+    
     
     for(;;)
     {
-    
+        
         LED_Write(1);
         
         // Check if all nodes are OK
@@ -145,33 +242,54 @@ int main()
             error_state = nodeFailure;
         }
         
+        if(bms_status != NO_ERROR && state != Startup) {
+            state = Fault;
+            error_state = fromBMS;
+            if(!faulted)
+                bms_error = bms_status;
+        }
+
+        
         switch(state)
         {    
+
             // startup -- 
             case Startup:
-                Hex1Reg_Write(0x8);
-                Hex2Reg_Write(0x0);
-                Hex3Reg_Write(0xF);
-                Hex4Reg_Write(0xF);
-  
+                GLCD_Clear_Frame();
+                if(firstStart == 0) {
+                    GLCD_DrawString(0,0,"START",8);
+                    GLCD_Write_Frame();
+                } else {
+                    displayData();
+                }
+                
                 //Initialize CAN
                 CAN_GlobalIntEnable();
                 CAN_Init();
                 CAN_Start();
-                CyDelay(1000);
+                LED_color_wheel(200);
                 
                 can_send_status(state, error_state);
 
-                Buzzer_Write(1);
+                Buzzer_Write(0);
                 CyDelay(50);
                 
-                Buzzer_Write(0);
+                Buzzer_Write(1);
                 
                 state = LV;
                 
             break;
                 
             case LV:
+                if(firstLV == 0) {
+                    GLCD_Clear_Frame();
+                    GLCD_DrawString(0,0,"LV",8);
+                    GLCD_Write_Frame();
+                    firstLV = 1;
+                } else {
+                    charge = SOC_LUT[(voltage - 93400) / 100] / 100;
+                    displayData();
+                }
                 
                 CAN_GlobalIntEnable();
                 CAN_Init();
@@ -183,7 +301,7 @@ int main()
                 can_send_status(state, error_state);
 
                 // calcualte SOC and display SOC
-                charge = SOC_LUT[(voltage - 93400) / 100] / 100;
+                //charge = SOC_LUT[(voltage - 93400) / 100] / 100;
                 //hex2Display(charge);
 
                 Buzzer_Write(0);
@@ -193,14 +311,7 @@ int main()
                 // RGB code goes here
                 // pick a color
                 // all on. 
-                
-                RGB3_1_Write(0);
-                RGB2_1_Write(0);
-                RGB1_1_Write(0);
-                
-                RGB3_2_Write(1);
-                RGB2_2_Write(1);
-                RGB1_2_Write(1);
+                LED_color(YELLOW);
                 
                 if (Drive_Read())
                 {
@@ -218,6 +329,10 @@ int main()
             break;
                 
             case Precharging:
+                GLCD_Clear_Frame();
+                GLCD_DrawString(0,0,"PRCHGE",8);
+                GLCD_Write_Frame();
+                
                 CAN_GlobalIntEnable();
                 CAN_Init();
                 CAN_Start();
@@ -225,14 +340,7 @@ int main()
                 
                 can_send_status(state, error_state);
                 
-                RGB3_1_Write(1);
-                RGB2_1_Write(0);
-                RGB1_1_Write(0);
-                /*
-                RGB3_2_Write(1);
-                RGB2_2_Write(1);
-                RGB1_2_Write(1);
-                */
+                LED_color(MAGENTA);
                 Buzzer_Write(0);
                 
                 PrechargingTimeCount = 0;
@@ -265,6 +373,15 @@ int main()
             break;
 	        
             case HV_Enabled:
+                if(firstHV == 0) {
+                    GLCD_Clear_Frame();
+                    GLCD_DrawString(0,0,"HV",8);
+                    GLCD_Write_Frame();
+                    firstHV = 1;
+                } else {
+                    charge = SOC_LUT[(voltage - 93400) / 100] / 100;
+                    displayData();
+                }
 
                 CAN_GlobalIntEnable();
                 CAN_Init();
@@ -277,9 +394,7 @@ int main()
                 //
                 // RGB code goes here
                 // Blue
-                RGB3_1_Write(0);
-                RGB2_1_Write(0);
-                RGB1_1_Write(1);
+                LED_color(BLUE);
                 
                 /*
                 RGB3_2_Write(1);
@@ -323,9 +438,18 @@ int main()
             break;
                 
 	        case Drive:
-                //CAN_GlobalIntEnable();
-                //CAN_Init();
-                //CAN_Start();
+                if(firstDrive == 0) {
+                    GLCD_Clear_Frame();
+                    GLCD_DrawString(0,0,"DRIVE",8);
+                    GLCD_Write_Frame();
+                    firstDrive = 1;
+                } else {
+                    // calcualte SOC
+                    if(CURRENT < 2500) {
+                        charge = SOC_LUT[(voltage - 93400) / 100] / 100;
+                    } 
+                    displayData();
+                }
                 
                 can_send_charge(charge, 0);
                 
@@ -333,11 +457,8 @@ int main()
                 //
                 // RGB code goes here
                 // Green
-                RGB3_1_Write(1);
-                RGB2_1_Write(0);
-                RGB1_1_Write(1);
-                
-                
+                LED_color(GREEN);
+                   
                 uint8_t ACK = 0xFF;
                 
                 DriveTimeCount++;
@@ -358,13 +479,10 @@ int main()
                 uint8_t Throttle_Low = Throttle_Total & 0x00FF;
                 
                 // send attenuated throttle and interlock to motor controller
-                //can_send_cmd(1, Throttle_High, Throttle_Low); // setInterlock 
+                can_send_cmd(1, Throttle_High, Throttle_Low); // setInterlock 
                 
-                // calcualte SOC
-                if(CURRENT > 2500) {
-                    charge = SOC_LUT[(voltage - 93400) / 100] / 100;
-                    hex2Display(charge);
-                }
+                // Display pack temp and soc on display
+               // displayData();
                 
                 // check if everything is going well
                 // if exiting drive improperly also send charge
@@ -406,20 +524,30 @@ int main()
                 //
                 // RGB code goes here
                 // flashing red
-                RGB3_1_Write(1);
-                RGB2_1_Write(1);
-                RGB1_1_Write(1);
-                /*
-                RGB3_2_Write(0);
-                RGB2_2_Write(0);
-                RGB1_2_Write(0);
-                */
-                RGB1_1_Write(0);
+                LED_color(RED);
                 CyDelay(1000);
-                RGB1_1_Write(1);
+                LED_color(OFF);
                 CyDelay(1000);
                 
                 Buzzer_Write(0);
+                
+                if(error_state == fromBMS) {}
+                GLCD_Clear_Frame();
+                GLCD_DrawString(0,0,"DASH",2);
+                GLCD_DrawString(0,32,"FAULT:",2);
+                GLCD_DrawInt(80,32,error_state,2);
+                GLCD_DrawString(110, 0, "T:", 2);
+                GLCD_DrawString(110, 32, "FALUT:", 2);
+                char* bms_f;
+                //sprintf(bms_f, "%x", bms_error);
+                if(error_state == fromBMS) {
+                    GLCD_DrawChar(110, 0, PACK_TEMP, 2);
+                GLCD_DrawInt(180, 32, bms_error, 2);
+                GLCD_DrawInt(180, 0, ERROR_NODE, 2);
+                GLCD_DrawChar(184, 0, ',', 2);
+                GLCD_DrawInt(188, 0, ERROR_IDX, 2);
+                }
+                GLCD_Write_Frame();
                 
                 if(error_state == fromLV)
                 {
@@ -467,87 +595,24 @@ int main()
                 {
                     state = Fault;
                 }
+                else if (error_state == fromBMS)
+                {
+                    state = Fault;
+                }
             break;
                 
             default:
                 RGB3_1_Write(1);
                 RGB2_1_Write(1);
                 RGB1_1_Write(1);
-                /*
-                RGB3_2_Write(1);
-                RGB2_2_Write(1);
-                RGB1_2_Write(1);
-                */
+           
         }// end of switch
         
+
         
-        //if (receiveMailboxNumber == CAN_RX_MAILBOX_switchStatus)
-        //{
-            //LCD_Position(1u, 3u);
-            //send
-            //if (CAN_RX_DATA_BYTE1(CAN_RX_MAILBOX_switchStatus) == SWITCH_PRESSED)
-            //{
-                /* Display received switch status on LCD */
-            
-                //LCD_PrintString("pressed ");
-
-                /* Increase the PWM pulse width */
-                //pulseWidthValue += PWM_PULSE_WIDTH_STEP;
-
-                /* Send message with the new PWM pulse width */
-                //dataPWM.byte[0u] = pulseWidthValue;
-                //CAN_SendMsg(&messagePWM);
-
-                /* Display value of PWM pulse width on LCD */
-                //LCD_Position(0u, 14u);
-                //LCD_PrintInt8(pulseWidthValue);
-
-            //}
-            //else
-            //{
-                /* Display received switch status on LCD */
-            //    LCD_PrintString("released");
-            //}
-            //receiveMailboxNumber = 0xFFu;
-        //}
-        
-        //received
-
-        //if (receiveMailboxNumber == CAN_RX_MAILBOX_ADCdata)
-        //{
-        //    adcData = ((uint16) ((uint16) CAN_RX_DATA_BYTE1(CAN_RX_MAILBOX_ADCdata) << ONE_BYTE_OFFSET)) | 
-        //    CAN_RX_DATA_BYTE2(CAN_RX_MAILBOX_ADCdata);
-            
-            /* Display received ADC data on LCD */
-       //     sprintf(txData, "%u.%.3u", (adcData / 1000u), (adcData % 1000u));
-        //    txData[DATA_SIZE - 1u] = (char8) '\0';
-            
-        //    LCD_Position(0u, 4u);
-         //   LCD_PrintString(txData);
-         //   receiveMailboxNumber = 0xFFu;
-        //}
     } 
 }
 
-/*
-// 0 for HV, 1 for Drive
-static uint32 ReadSwSwitch(uint8_t choice)
-{
-    uint32 heldDown;
-    uint32 swStatus;
-
-    swStatus = 0u;  // Switch is not active 
-    heldDown = 0u;  // Reset debounce counter
-
-    
-    if (choice)
-        swStatus = Drive_Read();
-    else
-        swStatus = HV_Read();
-
-    return (swStatus);
-}
-*/
 /*******************************************************************************
 * Function Name: ISR_CAN
 ********************************************************************************
@@ -594,5 +659,7 @@ CY_ISR(ISR_CAN)
    //     CAN_RX_ACK_MESSAGE(CAN_RX_MAILBOX_ADCdata);
    // }
 }
+
+
 
 /* [] END OF FILE */
