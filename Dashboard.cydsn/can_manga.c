@@ -32,6 +32,7 @@ volatile uint8_t ERROR_TOLERANCE = 0;
 volatile uint8_t ABS_MOTOR_RPM = 0;
 volatile uint8_t THROTTLE_HIGH = 0;
 volatile uint8_t THROTTLE_LOW = 0;
+volatile uint8_t BSPD_CATCH = 0;
 
 volatile uint8_t VOLT_B1;
 volatile uint8_t VOLT_B2;
@@ -123,6 +124,7 @@ void can_receive(uint8_t *msg, int ID)
             break;
         case 0x0201:    // BSPD (brake position from pedal node)
             ERROR_TOLERANCE = msg[CAN_DATA_BYTE_1];
+            BSPD_CATCH = msg[CAN_DATA_BYTE_5]; //recieved from buffer[4] in 0x201
             break;
         case 0x0200:    // throttle
             pedalOK = 0x0;

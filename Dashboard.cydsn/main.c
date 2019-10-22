@@ -593,7 +593,8 @@ int main()
                 }
                 else if (error_state == nodeFailure)
                 {
-                    state = Fault;
+                    state = Fault; //HERE
+                    GLCD_DrawChar(110, 0, BSPD_CATCH, 2);
                 }
                 else if (error_state == fromBMS)
                 {
