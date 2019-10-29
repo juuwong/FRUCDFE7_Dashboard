@@ -1,3 +1,59 @@
---------------- Build Started: 05/21/2019 15:30:49 Project: Dashboard, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
-The code generation step is up to date.
+--------------- Build Started: 10/28/2019 18:39:19 Project: Dashboard, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+cydsfit.exe -.appdatapath "C:\Users\ianrd\AppData\Local\Cypress Semiconductor\PSoC Creator\4.2" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\cygwin\home\ianrd\FRUCDFE7_Dashboard\Dashboard.cydsn\Dashboard.cyprj -d CY8C5868AXI-LP035 -s C:\cygwin\home\ianrd\FRUCDFE7_Dashboard\Dashboard.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+Elaborating Design...
+ADD: sdb.M0060: warning: Warning in component: CAN. The BUS_CLK clock accuracy should be 0.5% or better. Please, use an external XTAL or external clock source to meet the CAN accurate clocking requirements.
+ * C:\cygwin\home\ianrd\FRUCDFE7_Dashboard\Dashboard.cydsn\TopDesign\TopDesign.cysch (Instance:CAN)
+HDL Generation...
+Synthesis...
+Tech Mapping...
+Analog Placement...
+Analog Routing...
+Analog Code Generation...
+Digital Placement...
+Digital Routing...
+Bitstream Generation...
+Bitstream Verification...
+Static timing analysis...
+API Generation...
+Dependency Generation...
+Cleanup...
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/graphic.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -Og -c graphic.c -o .\CortexM3\ARM_GCC_541\Debug\graphic.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/T6963C.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -Og -c T6963C.c -o .\CortexM3\ARM_GCC_541\Debug\T6963C.o
+T6963C.c: In function 'GLCD_Write_Frame':
+T6963C.c:203:30: warning: iteration 30u invokes undefined behavior [-Waggressive-loop-optimizations]
+         GLCD_Write_Data(FRAME[i]);
+                              ^
+T6963C.c:202:5: note: containing loop
+     for(i = 0; i < GLCD_GRAPHIC_SIZE; i++) {
+     ^
+T6963C.c: In function 'GLCD_Clear_Frame':
+T6963C.c:191:18: warning: iteration 30u invokes undefined behavior [-Waggressive-loop-optimizations]
+         FRAME[i] = 0x00;
+                  ^
+T6963C.c:190:5: note: containing loop
+     for(i = 0; i < GLCD_GRAPHIC_SIZE; i++) {
+     ^
 arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/main.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM3\ARM_GCC_541\Debug\main.o
+main.c: In function 'main':
+main.c:597:43: error: 'BSPD_CATCH' undeclared (first use in this function)
+                     GLCD_DrawChar(110, 0, BSPD_CATCH, 2);
+                                           ^
+main.c:597:43: note: each undeclared identifier is reported only once for each function it appears in
+main.c:541:23: warning: unused variable 'bms_f' [-Wunused-variable]
+                 char* bms_f;
+                       ^
+main.c:471:25: warning: unused variable 'ABS_Motor_RPM' [-Wunused-variable]
+                 uint8_t ABS_Motor_RPM = getABSMotorRPM();
+                         ^
+main.c:208:12: warning: unused variable 'direction' [-Wunused-variable]
+     int8_t direction=1;
+            ^
+main.c:207:13: warning: unused variable 'value' [-Wunused-variable]
+     uint8_t value=0; // replace the value with 
+             ^
+main.c: At top level:
+main.c:165:15: warning: 'ReadSwSwitch' declared 'static' but never defined [-Wunused-function]
+ static uint32 ReadSwSwitch(void);
+               ^
+The command 'arm-none-eabi-gcc.exe' failed with exit code '1'.
+--------------- Build Failed: 10/28/2019 18:39:39 ---------------

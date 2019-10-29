@@ -1,9 +1,5 @@
 # Dashboard
-<<<<<<< HEAD
-# 2019-05-18 07:36:05Z
-=======
-# 2019-06-03 22:27:51Z
->>>>>>> whgentry_fe6
+# 2019-10-29 01:39:28Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0

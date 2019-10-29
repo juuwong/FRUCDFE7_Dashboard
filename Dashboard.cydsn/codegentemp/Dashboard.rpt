@@ -1,27 +1,16 @@
-<<<<<<< HEAD
-Loading plugins phase: Elapsed time ==> 0s.195ms
-=======
-Loading plugins phase: Elapsed time ==> 0s.174ms
->>>>>>> whgentry_fe6
+Loading plugins phase: Elapsed time ==> 0s.260ms
 <CYPRESSTAG name="CyDsfit arguments...">
-cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\Dashboard.cyprj -d CY8C5868AXI-LP035 -s C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\cygwin\home\ianrd\FRUCDFE7_Dashboard\Dashboard.cydsn\Dashboard.cyprj -d CY8C5868AXI-LP035 -s C:\cygwin\home\ianrd\FRUCDFE7_Dashboard\Dashboard.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 </CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 ADD: sdb.M0060: warning: Warning in component: CAN. The BUS_CLK clock accuracy should be 0.5% or better. Please, use an external XTAL or external clock source to meet the CAN accurate clocking requirements.
- * C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\TopDesign\TopDesign.cysch (Instance:CAN)
+ * C:\cygwin\home\ianrd\FRUCDFE7_Dashboard\Dashboard.cydsn\TopDesign\TopDesign.cysch (Instance:CAN)
 
 </CYPRESSTAG>
-<<<<<<< HEAD
-Elaboration phase: Elapsed time ==> 2s.089ms
+Elaboration phase: Elapsed time ==> 3s.144ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.094ms
-=======
-Elaboration phase: Elapsed time ==> 1s.676ms
-<CYPRESSTAG name="HDL generation results...">
-</CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.054ms
->>>>>>> whgentry_fe6
+HDL generation phase: Elapsed time ==> 0s.168ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -39,27 +28,23 @@ HDL generation phase: Elapsed time ==> 0s.054ms
 ======================================================================
 Compiling:  Dashboard.v
 Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\bin\warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\Dashboard.cyprj -dcpsoc3 Dashboard.v -verilog
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\cygwin\home\ianrd\FRUCDFE7_Dashboard\Dashboard.cydsn\Dashboard.cyprj -dcpsoc3 Dashboard.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  Dashboard.v
 Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\bin\warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\Dashboard.cyprj -dcpsoc3 Dashboard.v -verilog
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\cygwin\home\ianrd\FRUCDFE7_Dashboard\Dashboard.cydsn\Dashboard.cyprj -dcpsoc3 Dashboard.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  Dashboard.v
 Program  :   vlogfe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\Dashboard.cyprj -dcpsoc3 -verilog Dashboard.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\cygwin\home\ianrd\FRUCDFE7_Dashboard\Dashboard.cydsn\Dashboard.cyprj -dcpsoc3 -verilog Dashboard.v
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-<<<<<<< HEAD
-Sat May 18 00:36:03 2019
-=======
-Mon Jun 03 15:27:49 2019
->>>>>>> whgentry_fe6
+Mon Oct 28 18:39:25 2019
 
 
 ======================================================================
@@ -69,11 +54,7 @@ Options  :    -yv2 -q10 Dashboard.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-<<<<<<< HEAD
-Sat May 18 00:36:03 2019
-=======
-Mon Jun 03 15:27:49 2019
->>>>>>> whgentry_fe6
+Mon Oct 28 18:39:25 2019
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'
@@ -113,15 +94,11 @@ vlogfe:  No errors.
 ======================================================================
 Compiling:  Dashboard.v
 Program  :   tovif
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\Dashboard.cyprj -dcpsoc3 -verilog Dashboard.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\cygwin\home\ianrd\FRUCDFE7_Dashboard\Dashboard.cydsn\Dashboard.cyprj -dcpsoc3 -verilog Dashboard.v
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-<<<<<<< HEAD
-Sat May 18 00:36:03 2019
-=======
-Mon Jun 03 15:27:49 2019
->>>>>>> whgentry_fe6
+Mon Oct 28 18:39:25 2019
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -132,9 +109,9 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\c
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Dashboard.ctl'.
+Linking 'C:\cygwin\home\ianrd\FRUCDFE7_Dashboard\Dashboard.cydsn\codegentemp\Dashboard.ctl'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
-Linking 'C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Dashboard.v'.
+Linking 'C:\cygwin\home\ianrd\FRUCDFE7_Dashboard\Dashboard.cydsn\codegentemp\Dashboard.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'.
@@ -151,15 +128,11 @@ tovif:  No errors.
 ======================================================================
 Compiling:  Dashboard.v
 Program  :   topld
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\Dashboard.cyprj -dcpsoc3 -verilog Dashboard.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\cygwin\home\ianrd\FRUCDFE7_Dashboard\Dashboard.cydsn\Dashboard.cyprj -dcpsoc3 -verilog Dashboard.v
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-<<<<<<< HEAD
-Sat May 18 00:36:04 2019
-=======
-Mon Jun 03 15:27:50 2019
->>>>>>> whgentry_fe6
+Mon Oct 28 18:39:26 2019
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -170,9 +143,9 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\c
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Dashboard.ctl'.
+Linking 'C:\cygwin\home\ianrd\FRUCDFE7_Dashboard\Dashboard.cydsn\codegentemp\Dashboard.ctl'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
-Linking 'C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\codegentemp\Dashboard.v'.
+Linking 'C:\cygwin\home\ianrd\FRUCDFE7_Dashboard\Dashboard.cydsn\codegentemp\Dashboard.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'.
@@ -436,27 +409,16 @@ topld:  No errors.
 
 CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\bin\warp.exe
-Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\Dashboard.cyprj -dcpsoc3 Dashboard.v -verilog
+Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\cygwin\home\ianrd\FRUCDFE7_Dashboard\Dashboard.cydsn\Dashboard.cyprj -dcpsoc3 Dashboard.v -verilog
 </CYPRESSTAG>
-<<<<<<< HEAD
-Warp synthesis phase: Elapsed time ==> 1s.546ms
+Warp synthesis phase: Elapsed time ==> 2s.020ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V4.2.0.641, Family: PSoC3, Started at: Saturday, 18 May 2019 00:36:04
-Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\Dashboard.cyprj -d CY8C5868AXI-LP035 Dashboard.v -verilog
+cyp3fit: V4.2.0.641, Family: PSoC3, Started at: Monday, 28 October 2019 18:39:27
+Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\cygwin\home\ianrd\FRUCDFE7_Dashboard\Dashboard.cydsn\Dashboard.cyprj -d CY8C5868AXI-LP035 Dashboard.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.016ms
-=======
-Warp synthesis phase: Elapsed time ==> 1s.239ms
-<CYPRESSTAG name="Fitter results...">
-<CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V4.2.0.641, Family: PSoC3, Started at: Monday, 03 June 2019 15:27:50
-Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\Dashboard.cyprj -d CY8C5868AXI-LP035 Dashboard.v -verilog
-</CYPRESSTAG>
-<CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.014ms
->>>>>>> whgentry_fe6
+Design parsing phase: Elapsed time ==> 0s.038ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech Mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -2082,13 +2044,8 @@ Analog (SC/CT) Blocks         :    0 :    4 :    4 :  0.00 %
 DAC                           :      :      :      :        
   VIDAC                       :    0 :    4 :    4 :  0.00 %
 </CYPRESSTAG>
-<<<<<<< HEAD
-Technology Mapping: Elapsed time ==> 0s.115ms
-Tech Mapping phase: Elapsed time ==> 0s.210ms
-=======
-Technology Mapping: Elapsed time ==> 0s.116ms
-Tech Mapping phase: Elapsed time ==> 0s.216ms
->>>>>>> whgentry_fe6
+Technology Mapping: Elapsed time ==> 0s.163ms
+Tech Mapping phase: Elapsed time ==> 0s.306ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 Initial Analog Placement Results:
@@ -2109,10 +2066,6 @@ IO_0@[IOP=(4)][IoId=(0)] : RGB2_1(0) (fixed)
 IO_2@[IOP=(0)][IoId=(2)] : RGB2_2(0) (fixed)
 IO_3@[IOP=(12)][IoId=(3)] : RGB3_1(0) (fixed)
 IO_1@[IOP=(0)][IoId=(1)] : RGB3_2(0) (fixed)
-<<<<<<< HEAD
-IO_5@[IOP=(3)][IoId=(5)] : RX(0) (fixed)
-IO_4@[IOP=(3)][IoId=(4)] : TX(0) (fixed)
-=======
 IO_4@[IOP=(3)][IoId=(4)] : RX(0) (fixed)
 IO_0@[IOP=(2)][IoId=(0)] : SD(0) (fixed)
 IO_1@[IOP=(2)][IoId=(1)] : SD(1) (fixed)
@@ -2124,11 +2077,10 @@ IO_6@[IOP=(2)][IoId=(6)] : SD(6) (fixed)
 IO_7@[IOP=(2)][IoId=(7)] : SD(7) (fixed)
 IO_5@[IOP=(3)][IoId=(5)] : TX(0) (fixed)
 IO_7@[IOP=(6)][IoId=(7)] : WDT_Reset(0) (fixed)
->>>>>>> whgentry_fe6
-Analog Placement phase: Elapsed time ==> 0s.017ms
+Analog Placement phase: Elapsed time ==> 0s.024ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
-Analog Routing phase: Elapsed time ==> 0s.000ms
+Analog Routing phase: Elapsed time ==> 0s.001ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Code Generation">
 ============ Analog Final Answer Routes ============
@@ -2143,19 +2095,11 @@ Dump of CyP35AnalogRoutingResultsDB
 IsVddaHalfUsedForComp = False
 IsVddaHalfUsedForSar0 = False
 IsVddaHalfUsedForSar1 = False
-<<<<<<< HEAD
-Analog Code Generation phase: Elapsed time ==> 0s.281ms
+Analog Code Generation phase: Elapsed time ==> 0s.392ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
-I2076: Total run-time: 0.7 sec.
-=======
-Analog Code Generation phase: Elapsed time ==> 0s.296ms
-</CYPRESSTAG>
-<CYPRESSTAG name="Digital Placement">
-<CYPRESSTAG name="Detailed placement messages">
-I2076: Total run-time: 0.8 sec.
->>>>>>> whgentry_fe6
+I2076: Total run-time: 1.1 sec.
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
@@ -2179,18 +2123,14 @@ PLD Packing Summary
 <CYPRESSTAG name="Packed PLD Contents">
 Packed PLD Contents not displayed at this verbose level.</CYPRESSTAG>
 </CYPRESSTAG>
-PLD Packing: Elapsed time ==> 0s.001ms
+PLD Packing: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Partitioning">
 <CYPRESSTAG name="Initial Partitioning Summary">
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-<<<<<<< HEAD
-Partitioning: Elapsed time ==> 0s.039ms
-=======
-Partitioning: Elapsed time ==> 0s.044ms
->>>>>>> whgentry_fe6
+Partitioning: Elapsed time ==> 0s.087ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -3912,63 +3852,33 @@ Port | Pin | Fixed |      Type |       Drive Mode |         Name | Connections
 </CYPRESSTAG>
 </CYPRESSTAG>
 </CYPRESSTAG>
-<<<<<<< HEAD
-Digital component placer commit/Report: Elapsed time ==> 0s.073ms
-Digital Placement phase: Elapsed time ==> 1s.365ms
-=======
-Digital component placer commit/Report: Elapsed time ==> 0s.074ms
-Digital Placement phase: Elapsed time ==> 1s.262ms
->>>>>>> whgentry_fe6
+Digital component placer commit/Report: Elapsed time ==> 0s.081ms
+Digital Placement phase: Elapsed time ==> 1s.790ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
-"C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Users\fiona\OneDrive\Documents\PSoC Creator\4.2\Devices\psoc5/psoc5lp/route_arch-rrg.cydata" --vh2-path "Dashboard_r.vh2" --pcf-path "Dashboard.pco" --des-name "Dashboard" --dsf-path "Dashboard.dsf" --sdc-path "Dashboard.sdc" --lib-path "Dashboard_r.lib"
+"C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\psoc5/psoc5lp/route_arch-rrg.cydata" --vh2-path "Dashboard_r.vh2" --pcf-path "Dashboard.pco" --des-name "Dashboard" --dsf-path "Dashboard.dsf" --sdc-path "Dashboard.sdc" --lib-path "Dashboard_r.lib"
 Routing successful.
-<<<<<<< HEAD
-Digital Routing phase: Elapsed time ==> 1s.810ms
+Digital Routing phase: Elapsed time ==> 2s.012ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Generation">
-Bitstream Generation phase: Elapsed time ==> 0s.246ms
+Bitstream Generation phase: Elapsed time ==> 0s.501ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Verification">
-Bitstream Verification phase: Elapsed time ==> 0s.035ms
+Bitstream Verification phase: Elapsed time ==> 0s.078ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in Dashboard_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.431ms
-=======
-Digital Routing phase: Elapsed time ==> 1s.357ms
-</CYPRESSTAG>
-<CYPRESSTAG name="Bitstream Generation">
-Bitstream Generation phase: Elapsed time ==> 0s.196ms
-</CYPRESSTAG>
-<CYPRESSTAG name="Bitstream Verification">
-Bitstream Verification phase: Elapsed time ==> 0s.045ms
-</CYPRESSTAG>
-<CYPRESSTAG name="Static timing analysis">
-Timing report is in Dashboard_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.289ms
->>>>>>> whgentry_fe6
+Static timing analysis phase: Elapsed time ==> 0s.668ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
 Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-<<<<<<< HEAD
-Design database save phase: Elapsed time ==> 0s.212ms
+Design database save phase: Elapsed time ==> 0s.319ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 4s.660ms
+cydsfit: Elapsed time ==> 6s.262ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 4s.661ms
-API generation phase: Elapsed time ==> 2s.161ms
-Dependency generation phase: Elapsed time ==> 0s.016ms
-Cleanup phase: Elapsed time ==> 0s.004ms
-=======
-Design database save phase: Elapsed time ==> 0s.184ms
-</CYPRESSTAG>
-cydsfit: Elapsed time ==> 3s.897ms
-</CYPRESSTAG>
-Fitter phase: Elapsed time ==> 3s.897ms
-API generation phase: Elapsed time ==> 1s.357ms
-Dependency generation phase: Elapsed time ==> 0s.009ms
-Cleanup phase: Elapsed time ==> 0s.001ms
->>>>>>> whgentry_fe6
+Fitter phase: Elapsed time ==> 6s.262ms
+API generation phase: Elapsed time ==> 4s.106ms
+Dependency generation phase: Elapsed time ==> 0s.061ms
+Cleanup phase: Elapsed time ==> 0s.005ms

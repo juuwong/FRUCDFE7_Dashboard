@@ -14,6 +14,7 @@ volatile double THROTTLE_MULTIPLIER = 1;
 
 // declared external in can_manga.c
 volatile uint8 PACK_TEMP = 0;
+volatile uint8 BSPD_CATCH = 0;
 volatile int32 CURRENT = 0;
 volatile int ERROR_NODE;
 volatile int ERROR_IDX;
@@ -594,7 +595,7 @@ int main()
                 else if (error_state == nodeFailure)
                 {
                     state = Fault; //HERE
-                    GLCD_DrawChar(110, 0, BSPD_CATCH, 2);
+                    GLCD_DrawInt(0, 0, BSPD_CATCH, 8);
                 }
                 else if (error_state == fromBMS)
                 {

@@ -1,10 +1,6 @@
 (DELAYFILE
  (SDFVERSION "IEEE 1497 4.0")
-<<<<<<< HEAD
- (DATE "2019-05-18T07:36:09Z")
-=======
- (DATE "2019-06-03T22:27:54Z")
->>>>>>> whgentry_fe6
+ (DATE "2019-10-29T01:39:32Z")
  (DESIGN "Dashboard")
  (VENDOR "Cypress Semiconductor")
  (PROGRAM "PSoC Creator")
