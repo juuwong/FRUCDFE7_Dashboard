@@ -1,9 +1,5 @@
--- Project:   C:\Users\fiona\OneDrive\Documents\FE3-Dashboard\Dashboard.cydsn\Dashboard.cyprj
-<<<<<<< HEAD
--- Generated: 05/18/2019 00:36:09
-=======
--- Generated: 06/03/2019 15:27:54
->>>>>>> whgentry_fe6
+-- Project:   C:\cygwin\home\ianrd\FRUCDFE7_Dashboard\Dashboard.cydsn\Dashboard.cyprj
+-- Generated: 10/28/2019 17:55:37
 -- PSoC Creator  4.2
 
 ENTITY Dashboard IS

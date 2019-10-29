@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc1qlQKv.s 			page 1
-=======
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc5v1Z97.s 			page 1
->>>>>>> whgentry_fe6
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\ccOthccN.s 			page 1
 
 
    1              		.syntax unified
@@ -62,11 +58,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc5v1Z97.s 			page 1
   28:Generated_Source\PSoC5/RGB1_2.c **** *
   29:Generated_Source\PSoC5/RGB1_2.c **** * Summary:
   30:Generated_Source\PSoC5/RGB1_2.c **** *  Assign a new value to the digital port's data output register.  
-<<<<<<< HEAD
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc1qlQKv.s 			page 2
-=======
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc5v1Z97.s 			page 2
->>>>>>> whgentry_fe6
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\ccOthccN.s 			page 2
 
 
   31:Generated_Source\PSoC5/RGB1_2.c **** *
@@ -126,11 +118,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc5v1Z97.s 			page 1
   52:Generated_Source\PSoC5/RGB1_2.c **** * 
   53:Generated_Source\PSoC5/RGB1_2.c **** * Parameters:  
   54:Generated_Source\PSoC5/RGB1_2.c **** *  mode:  Change the pins to one of the following drive modes.
-<<<<<<< HEAD
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc1qlQKv.s 			page 3
-=======
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc5v1Z97.s 			page 3
->>>>>>> whgentry_fe6
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\ccOthccN.s 			page 3
 
 
   55:Generated_Source\PSoC5/RGB1_2.c **** *
@@ -190,11 +178,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc5v1Z97.s 			page 1
   79:Generated_Source\PSoC5/RGB1_2.c **** * Summary:
   80:Generated_Source\PSoC5/RGB1_2.c **** *  Read the current value on the pins of the Digital Port in right justified 
   81:Generated_Source\PSoC5/RGB1_2.c **** *  form.
-<<<<<<< HEAD
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc1qlQKv.s 			page 4
-=======
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc5v1Z97.s 			page 4
->>>>>>> whgentry_fe6
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\ccOthccN.s 			page 4
 
 
   82:Generated_Source\PSoC5/RGB1_2.c **** *
@@ -254,11 +238,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc5v1Z97.s 			page 1
  110:Generated_Source\PSoC5/RGB1_2.c **** *  Returns the current value assigned to the Digital Port's data output register
  111:Generated_Source\PSoC5/RGB1_2.c **** *  
  112:Generated_Source\PSoC5/RGB1_2.c **** *******************************************************************************/
-<<<<<<< HEAD
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc1qlQKv.s 			page 5
-=======
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc5v1Z97.s 			page 5
->>>>>>> whgentry_fe6
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\ccOthccN.s 			page 5
 
 
  113:Generated_Source\PSoC5/RGB1_2.c **** uint8 RGB1_2_ReadDataReg(void) 
@@ -293,52 +273,48 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc5v1Z97.s 			page 1
  142 0006 00000000 		.4byte	.Ldebug_abbrev0
  143 000a 04       		.byte	0x4
  144 000b 01       		.uleb128 0x1
- 145 000c 58000000 		.4byte	.LASF20
+ 145 000c 90000000 		.4byte	.LASF20
  146 0010 0C       		.byte	0xc
- 147 0011 10010000 		.4byte	.LASF21
- 148 0015 83010000 		.4byte	.LASF22
+ 147 0011 48010000 		.4byte	.LASF21
+ 148 0015 38000000 		.4byte	.LASF22
  149 0019 00000000 		.4byte	.Ldebug_ranges0+0
  150 001d 00000000 		.4byte	0
  151 0021 00000000 		.4byte	.Ldebug_line0
  152 0025 02       		.uleb128 0x2
  153 0026 01       		.byte	0x1
  154 0027 06       		.byte	0x6
- 155 0028 D9010000 		.4byte	.LASF0
+ 155 0028 D1010000 		.4byte	.LASF0
  156 002c 02       		.uleb128 0x2
  157 002d 01       		.byte	0x1
  158 002e 08       		.byte	0x8
- 159 002f 4A000000 		.4byte	.LASF1
+ 159 002f 82000000 		.4byte	.LASF1
  160 0033 02       		.uleb128 0x2
  161 0034 02       		.byte	0x2
  162 0035 05       		.byte	0x5
- 163 0036 73010000 		.4byte	.LASF2
+ 163 0036 AB010000 		.4byte	.LASF2
  164 003a 02       		.uleb128 0x2
  165 003b 02       		.byte	0x2
  166 003c 07       		.byte	0x7
- 167 003d FD000000 		.4byte	.LASF3
+ 167 003d 35010000 		.4byte	.LASF3
  168 0041 02       		.uleb128 0x2
  169 0042 04       		.byte	0x4
-<<<<<<< HEAD
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc1qlQKv.s 			page 6
-=======
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc5v1Z97.s 			page 6
->>>>>>> whgentry_fe6
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\ccOthccN.s 			page 6
 
 
  170 0043 05       		.byte	0x5
- 171 0044 C3010000 		.4byte	.LASF4
+ 171 0044 BB010000 		.4byte	.LASF4
  172 0048 02       		.uleb128 0x2
  173 0049 04       		.byte	0x4
  174 004a 07       		.byte	0x7
- 175 004b EB000000 		.4byte	.LASF5
+ 175 004b 23010000 		.4byte	.LASF5
  176 004f 02       		.uleb128 0x2
  177 0050 08       		.byte	0x8
  178 0051 05       		.byte	0x5
- 179 0052 60010000 		.4byte	.LASF6
+ 179 0052 98010000 		.4byte	.LASF6
  180 0056 02       		.uleb128 0x2
  181 0057 08       		.byte	0x8
  182 0058 07       		.byte	0x7
- 183 0059 44010000 		.4byte	.LASF7
+ 183 0059 7C010000 		.4byte	.LASF7
  184 005d 03       		.uleb128 0x3
  185 005e 04       		.byte	0x4
  186 005f 05       		.byte	0x5
@@ -346,33 +322,33 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc5v1Z97.s 			page 1
  188 0064 02       		.uleb128 0x2
  189 0065 04       		.byte	0x4
  190 0066 07       		.byte	0x7
- 191 0067 37010000 		.4byte	.LASF8
+ 191 0067 6F010000 		.4byte	.LASF8
  192 006b 04       		.uleb128 0x4
- 193 006c 7D010000 		.4byte	.LASF12
+ 193 006c B5010000 		.4byte	.LASF12
  194 0070 02       		.byte	0x2
  195 0071 3801     		.2byte	0x138
  196 0073 2C000000 		.4byte	0x2c
  197 0077 02       		.uleb128 0x2
  198 0078 04       		.byte	0x4
  199 0079 04       		.byte	0x4
- 200 007a 44000000 		.4byte	.LASF9
+ 200 007a 7C000000 		.4byte	.LASF9
  201 007e 02       		.uleb128 0x2
  202 007f 08       		.byte	0x8
  203 0080 04       		.byte	0x4
- 204 0081 30010000 		.4byte	.LASF10
+ 204 0081 68010000 		.4byte	.LASF10
  205 0085 02       		.uleb128 0x2
  206 0086 01       		.byte	0x1
  207 0087 08       		.byte	0x8
- 208 0088 6E010000 		.4byte	.LASF11
+ 208 0088 A6010000 		.4byte	.LASF11
  209 008c 04       		.uleb128 0x4
- 210 008d E6000000 		.4byte	.LASF13
+ 210 008d 1E010000 		.4byte	.LASF13
  211 0091 02       		.byte	0x2
  212 0092 E201     		.2byte	0x1e2
  213 0094 98000000 		.4byte	0x98
  214 0098 05       		.uleb128 0x5
  215 0099 6B000000 		.4byte	0x6b
  216 009d 06       		.uleb128 0x6
- 217 009e CC010000 		.4byte	.LASF14
+ 217 009e C4010000 		.4byte	.LASF14
  218 00a2 01       		.byte	0x1
  219 00a3 27       		.byte	0x27
  220 00a4 00000000 		.4byte	.LFB0
@@ -382,11 +358,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc5v1Z97.s 			page 1
  224 00ae CF000000 		.4byte	0xcf
  225 00b2 07       		.uleb128 0x7
  226 00b3 27000000 		.4byte	.LASF16
-<<<<<<< HEAD
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc1qlQKv.s 			page 7
-=======
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc5v1Z97.s 			page 7
->>>>>>> whgentry_fe6
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\ccOthccN.s 			page 7
 
 
  227 00b7 01       		.byte	0x1
@@ -411,14 +383,14 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc5v1Z97.s 			page 1
  246 00df 9C       		.byte	0x9c
  247 00e0 F4000000 		.4byte	0xf4
  248 00e4 07       		.uleb128 0x7
- 249 00e5 5B010000 		.4byte	.LASF17
+ 249 00e5 93010000 		.4byte	.LASF17
  250 00e9 01       		.byte	0x1
  251 00ea 45       		.byte	0x45
  252 00eb 6B000000 		.4byte	0x6b
  253 00ef 21000000 		.4byte	.LLST1
  254 00f3 00       		.byte	0
  255 00f4 09       		.uleb128 0x9
- 256 00f5 38000000 		.4byte	.LASF18
+ 256 00f5 70000000 		.4byte	.LASF18
  257 00f9 01       		.byte	0x1
  258 00fa 5D       		.byte	0x5d
  259 00fb 6B000000 		.4byte	0x6b
@@ -446,11 +418,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc5v1Z97.s 			page 1
  281 0005 13       		.uleb128 0x13
  282 0006 0B       		.uleb128 0xb
  283 0007 03       		.uleb128 0x3
-<<<<<<< HEAD
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc1qlQKv.s 			page 8
-=======
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc5v1Z97.s 			page 8
->>>>>>> whgentry_fe6
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\ccOthccN.s 			page 8
 
 
  284 0008 0E       		.uleb128 0xe
@@ -510,11 +478,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc5v1Z97.s 			page 1
  338 003e 2E       		.uleb128 0x2e
  339 003f 01       		.byte	0x1
  340 0040 3F       		.uleb128 0x3f
-<<<<<<< HEAD
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc1qlQKv.s 			page 9
-=======
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc5v1Z97.s 			page 9
->>>>>>> whgentry_fe6
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\ccOthccN.s 			page 9
 
 
  341 0041 19       		.uleb128 0x19
@@ -574,11 +538,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc5v1Z97.s 			page 1
  395 0078 3F       		.uleb128 0x3f
  396 0079 19       		.uleb128 0x19
  397 007a 03       		.uleb128 0x3
-<<<<<<< HEAD
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc1qlQKv.s 			page 10
-=======
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc5v1Z97.s 			page 10
->>>>>>> whgentry_fe6
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\ccOthccN.s 			page 10
 
 
  398 007b 0E       		.uleb128 0xe
@@ -638,11 +598,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc5v1Z97.s 			page 1
  452 000a 04       		.byte	0x4
  453 000b 00       		.byte	0
  454 000c 0000     		.2byte	0
-<<<<<<< HEAD
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc1qlQKv.s 			page 11
-=======
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc5v1Z97.s 			page 11
->>>>>>> whgentry_fe6
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\ccOthccN.s 			page 11
 
 
  455 000e 0000     		.2byte	0
@@ -694,123 +650,113 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc5v1Z97.s 			page 1
  488 002d 73746174 		.ascii	"staticBits\000"
  488      69634269 
  488      747300
- 489              	.LASF18:
- 490 0038 52474231 		.ascii	"RGB1_2_Read\000"
- 490      5F325F52 
- 490      65616400 
- 491              	.LASF9:
- 492 0044 666C6F61 		.ascii	"float\000"
- 492      7400
- 493              	.LASF1:
-<<<<<<< HEAD
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc1qlQKv.s 			page 12
-=======
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc5v1Z97.s 			page 12
->>>>>>> whgentry_fe6
+ 489              	.LASF22:
+ 490 0038 433A5C63 		.ascii	"C:\\cygwin\\home\\ianrd\\FRUCDFE7_Dashboard\\Dashbo"
+ 490      79677769 
+ 490      6E5C686F 
+ 490      6D655C69 
+ 490      616E7264 
+ 491 0066 6172642E 		.ascii	"ard.cydsn\000"
+ 491      63796473 
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\ccOthccN.s 			page 12
 
 
- 494 004a 756E7369 		.ascii	"unsigned char\000"
- 494      676E6564 
- 494      20636861 
- 494      7200
- 495              	.LASF20:
- 496 0058 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 496      43313120 
- 496      352E342E 
- 496      31203230 
- 496      31363036 
- 497 008b 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 497      20726576 
- 497      6973696F 
- 497      6E203233 
- 497      37373135 
- 498 00be 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 498      66756E63 
- 498      74696F6E 
- 498      2D736563 
- 498      74696F6E 
- 499              	.LASF13:
- 500 00e6 72656738 		.ascii	"reg8\000"
- 500      00
- 501              	.LASF5:
- 502 00eb 6C6F6E67 		.ascii	"long unsigned int\000"
- 502      20756E73 
- 502      69676E65 
- 502      6420696E 
- 502      7400
- 503              	.LASF3:
- 504 00fd 73686F72 		.ascii	"short unsigned int\000"
- 504      7420756E 
- 504      7369676E 
- 504      65642069 
- 504      6E7400
- 505              	.LASF21:
- 506 0110 47656E65 		.ascii	"Generated_Source\\PSoC5\\RGB1_2.c\000"
- 506      72617465 
- 506      645F536F 
- 506      75726365 
- 506      5C50536F 
- 507              	.LASF10:
- 508 0130 646F7562 		.ascii	"double\000"
- 508      6C6500
- 509              	.LASF8:
- 510 0137 756E7369 		.ascii	"unsigned int\000"
- 510      676E6564 
- 510      20696E74 
- 510      00
- 511              	.LASF7:
- 512 0144 6C6F6E67 		.ascii	"long long unsigned int\000"
- 512      206C6F6E 
- 512      6720756E 
- 512      7369676E 
- 512      65642069 
- 513              	.LASF17:
- 514 015b 6D6F6465 		.ascii	"mode\000"
-<<<<<<< HEAD
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc1qlQKv.s 			page 13
-=======
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\cc5v1Z97.s 			page 13
->>>>>>> whgentry_fe6
+ 491      6E00
+ 492              	.LASF18:
+ 493 0070 52474231 		.ascii	"RGB1_2_Read\000"
+ 493      5F325F52 
+ 493      65616400 
+ 494              	.LASF9:
+ 495 007c 666C6F61 		.ascii	"float\000"
+ 495      7400
+ 496              	.LASF1:
+ 497 0082 756E7369 		.ascii	"unsigned char\000"
+ 497      676E6564 
+ 497      20636861 
+ 497      7200
+ 498              	.LASF20:
+ 499 0090 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 499      43313120 
+ 499      352E342E 
+ 499      31203230 
+ 499      31363036 
+ 500 00c3 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 500      20726576 
+ 500      6973696F 
+ 500      6E203233 
+ 500      37373135 
+ 501 00f6 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 501      66756E63 
+ 501      74696F6E 
+ 501      2D736563 
+ 501      74696F6E 
+ 502              	.LASF13:
+ 503 011e 72656738 		.ascii	"reg8\000"
+ 503      00
+ 504              	.LASF5:
+ 505 0123 6C6F6E67 		.ascii	"long unsigned int\000"
+ 505      20756E73 
+ 505      69676E65 
+ 505      6420696E 
+ 505      7400
+ 506              	.LASF3:
+ 507 0135 73686F72 		.ascii	"short unsigned int\000"
+ 507      7420756E 
+ 507      7369676E 
+ 507      65642069 
+ 507      6E7400
+ 508              	.LASF21:
+ 509 0148 47656E65 		.ascii	"Generated_Source\\PSoC5\\RGB1_2.c\000"
+ 509      72617465 
+ 509      645F536F 
+ 509      75726365 
+ 509      5C50536F 
+ 510              	.LASF10:
+ 511 0168 646F7562 		.ascii	"double\000"
+ 511      6C6500
+ 512              	.LASF8:
+ 513 016f 756E7369 		.ascii	"unsigned int\000"
+ 513      676E6564 
+ 513      20696E74 
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\ccOthccN.s 			page 13
 
 
- 514      00
- 515              	.LASF6:
- 516 0160 6C6F6E67 		.ascii	"long long int\000"
- 516      206C6F6E 
- 516      6720696E 
- 516      7400
- 517              	.LASF11:
- 518 016e 63686172 		.ascii	"char\000"
- 518      00
- 519              	.LASF2:
- 520 0173 73686F72 		.ascii	"short int\000"
- 520      7420696E 
- 520      7400
- 521              	.LASF12:
- 522 017d 75696E74 		.ascii	"uint8\000"
- 522      3800
- 523              	.LASF22:
- 524 0183 433A5C55 		.ascii	"C:\\Users\\fiona\\OneDrive\\Documents\\FE3-Dashboar"
- 524      73657273 
- 524      5C66696F 
- 524      6E615C4F 
- 524      6E654472 
- 525 01b1 645C4461 		.ascii	"d\\Dashboard.cydsn\000"
- 525      7368626F 
- 525      6172642E 
- 525      63796473 
- 525      6E00
+ 513      00
+ 514              	.LASF7:
+ 515 017c 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 515      206C6F6E 
+ 515      6720756E 
+ 515      7369676E 
+ 515      65642069 
+ 516              	.LASF17:
+ 517 0193 6D6F6465 		.ascii	"mode\000"
+ 517      00
+ 518              	.LASF6:
+ 519 0198 6C6F6E67 		.ascii	"long long int\000"
+ 519      206C6F6E 
+ 519      6720696E 
+ 519      7400
+ 520              	.LASF11:
+ 521 01a6 63686172 		.ascii	"char\000"
+ 521      00
+ 522              	.LASF2:
+ 523 01ab 73686F72 		.ascii	"short int\000"
+ 523      7420696E 
+ 523      7400
+ 524              	.LASF12:
+ 525 01b5 75696E74 		.ascii	"uint8\000"
+ 525      3800
  526              	.LASF4:
- 527 01c3 6C6F6E67 		.ascii	"long int\000"
+ 527 01bb 6C6F6E67 		.ascii	"long int\000"
  527      20696E74 
  527      00
  528              	.LASF14:
- 529 01cc 52474231 		.ascii	"RGB1_2_Write\000"
+ 529 01c4 52474231 		.ascii	"RGB1_2_Write\000"
  529      5F325F57 
  529      72697465 
  529      00
  530              	.LASF0:
- 531 01d9 7369676E 		.ascii	"signed char\000"
+ 531 01d1 7369676E 		.ascii	"signed char\000"
  531      65642063 
  531      68617200 
  532              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

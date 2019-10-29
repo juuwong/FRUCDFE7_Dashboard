@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 1
-=======
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
->>>>>>> whgentry_fe6
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 1
 
 
    1              		.syntax unified
@@ -62,11 +58,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
   28:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #include "can_manga.h"
   29:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
   30:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #define buffer_LEN 8
-<<<<<<< HEAD
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 2
-=======
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 2
->>>>>>> whgentry_fe6
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 2
 
 
   31:Generated_Source\PSoC5/CAN_TX_RX_func.c **** extern uint8_t can_buffer[];
@@ -126,11 +118,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
   63:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     {
   64:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         shift = 1u;    /* Start from first mailbox */
   65:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         for (i = 0u; i < CAN_NUMBER_OF_TX_MAILBOXES; i++)
-<<<<<<< HEAD
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 3
-=======
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 3
->>>>>>> whgentry_fe6
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 3
 
 
   66:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         {
@@ -190,11 +178,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
   92:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                             regTemp |= CAN_TX_IDE_MASK;
   77              		.loc 1 92 0
   78 0030 43F48013 		orr	r3, r3, #1048576
-<<<<<<< HEAD
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 4
-=======
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 4
->>>>>>> whgentry_fe6
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 4
 
 
   79              	.LVL6:
@@ -254,11 +238,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  113:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                                 CAN_TX_DATA_BYTE(i, j) = message->msg->byte[j];
  113              		.loc 1 113 0
  114 0060 1B49     		ldr	r1, .L22+4
-<<<<<<< HEAD
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 5
-=======
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 5
->>>>>>> whgentry_fe6
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 5
 
 
  115 0062 01EB0214 		add	r4, r1, r2, lsl #4
@@ -318,11 +298,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  125:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         #if (CY_PSOC3 || CY_PSOC5)
  126:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                             CY_SET_REG32(CAN_TX_CMD_PTR(i), CAN_SEND_MESSAGE);
  155              		.loc 1 126 0
-<<<<<<< HEAD
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 6
-=======
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 6
->>>>>>> whgentry_fe6
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 6
 
 
  156 00a0 0123     		movs	r3, #1
@@ -382,11 +358,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  187              	.L15:
  148:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             {
  149:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 break;
-<<<<<<< HEAD
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 7
-=======
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 7
->>>>>>> whgentry_fe6
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 7
 
 
  150:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
@@ -446,11 +418,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  168:Generated_Source\PSoC5/CAN_TX_RX_func.c **** ********************************************************************************
  169:Generated_Source\PSoC5/CAN_TX_RX_func.c **** *
  170:Generated_Source\PSoC5/CAN_TX_RX_func.c **** * Summary:
-<<<<<<< HEAD
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 8
-=======
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 8
->>>>>>> whgentry_fe6
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 8
 
 
  171:Generated_Source\PSoC5/CAN_TX_RX_func.c **** *  This function cancels transmission of a message that has been queued to be
@@ -510,11 +478,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  191:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     /*******************************************************************************
  192:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsgDash_status
  193:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     ********************************************************************************
-<<<<<<< HEAD
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 9
-=======
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 9
->>>>>>> whgentry_fe6
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 9
 
 
  194:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
@@ -574,11 +538,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  275 0010 02D9     		bls	.L31
  276              		.loc 1 229 0 is_stmt 0 discriminator 1
  277 0012 C3F10B00 		rsb	r0, r3, #11
-<<<<<<< HEAD
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 10
-=======
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 10
->>>>>>> whgentry_fe6
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 10
 
 
  278 0016 01E0     		b	.L32
@@ -638,11 +598,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  316 0040 20A00040 		.word	1073782816
  317 0044 00000000 		.word	can_buffer
  318 0048 28A00040 		.word	1073782824
-<<<<<<< HEAD
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 11
-=======
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 11
->>>>>>> whgentry_fe6
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 11
 
 
  319              		.cfi_endproc
@@ -702,11 +658,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  343              	.LVL35:
  344              	.L42:
  345              	.LBB3:
-<<<<<<< HEAD
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 12
-=======
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 12
->>>>>>> whgentry_fe6
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 12
 
 
  272:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
@@ -766,11 +718,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  377              		.loc 1 268 0
  378 0036 0020     		movs	r0, #0
  379 0038 7047     		bx	lr
-<<<<<<< HEAD
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 13
-=======
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 13
->>>>>>> whgentry_fe6
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 13
 
 
  380              	.L43:
@@ -828,21 +776,9 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  320:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *******************************************************************************/
  321:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     uint8 CAN_SendMsg2(void) 
  322:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     {
-<<<<<<< HEAD
- 403              		.loc 1 322 0
- 404              		.cfi_startproc
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 14
-
-
- 405              		@ args = 0, pretend = 0, frame = 0
- 406              		@ frame_needed = 0, uses_anonymous_args = 0
- 407              		@ link register save eliminated.
- 408              	.LVL40:
-=======
->>>>>>> whgentry_fe6
  323:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
  324:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 14
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 14
 
 
  325:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
@@ -857,166 +793,6 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  334:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             {
  335:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 /* `#START MESSAGE_2_TRASMITTED` */
  336:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
-<<<<<<< HEAD
- 337:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 
- 338:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 /* `#END` */
- 339:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 340:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_SOC_CALLBACK
- 341:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                     CAN_SendMsg_SOC_Callback();
- 342:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_SOC_CALLBACK */
- 343:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 344:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(2u),
- 414              		.loc 1 344 0
- 415 000a 044A     		ldr	r2, .L49
- 416 000c 1368     		ldr	r3, [r2]
- 417 000e 43F00103 		orr	r3, r3, #1
- 418 0012 1360     		str	r3, [r2]
- 323:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
- 419              		.loc 1 323 0
- 420 0014 0020     		movs	r0, #0
- 421 0016 7047     		bx	lr
- 422              	.L48:
- 331:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
- 423              		.loc 1 331 0
- 424 0018 0120     		movs	r0, #1
- 425              	.LVL41:
- 345:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(2u)) | CAN_SEND_MESSAGE);
- 346:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
- 347:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 348:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         return (result);
- 349:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     }
- 426              		.loc 1 349 0
- 427 001a 7047     		bx	lr
- 428              	.L50:
- 429              		.align	2
- 430              	.L49:
- 431 001c 40A00040 		.word	1073782848
- 432              		.cfi_endproc
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 15
-
-
- 433              	.LFE67:
- 434              		.size	CAN_SendMsgSOC, .-CAN_SendMsgSOC
- 435              		.section	.text.CAN_ReceiveMsg,"ax",%progbits
- 436              		.align	2
- 437              		.global	CAN_ReceiveMsg
- 438              		.thumb
- 439              		.thumb_func
- 440              		.type	CAN_ReceiveMsg, %function
- 441              	CAN_ReceiveMsg:
- 442              	.LFB68:
- 350:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #endif /* CAN_TX2_FUNC_ENABLE */
- 351:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 352:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 353:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #if (CAN_TX3_FUNC_ENABLE)
- 354:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     /*******************************************************************************
- 355:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg3
- 356:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     ********************************************************************************
- 357:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 358:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Summary:
- 359:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 3. The function checks
- 360:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  if mailbox 3 doesn't already have un-transmitted messages waiting for
- 361:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
- 362:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
- 363:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 364:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Parameters:
- 365:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
- 366:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 367:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Return:
- 368:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
- 369:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *   Define                             Description
- 370:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
- 371:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
- 372:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 373:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *******************************************************************************/
- 374:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     uint8 CAN_SendMsg3(void) 
- 375:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     {
- 376:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
- 377:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 378:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
- 379:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             if ((CAN_TX[3u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
- 380:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
- 381:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(3u) & CAN_TX_REQUEST_PENDING) != 0u)
- 382:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
- 383:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             {
- 384:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 result = CAN_FAIL;
- 385:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
- 386:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             else
- 387:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             {
- 388:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 /* `#START MESSAGE_3_TRASMITTED` */
- 389:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 390:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 /* `#END` */
- 391:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 392:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_3_CALLBACK
- 393:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                     CAN_SendMsg_3_Callback();
- 394:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_3_CALLBACK */
- 395:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 396:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(3u),
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 16
-
-
- 397:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(3u)) | CAN_SEND_MESSAGE);
- 398:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
- 399:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 400:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         return (result);
- 401:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     }
- 402:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #endif /* CAN_TX3_FUNC_ENABLE */
- 403:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 404:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 405:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #if (CAN_TX4_FUNC_ENABLE)
- 406:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     /*******************************************************************************
- 407:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg4
- 408:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     ********************************************************************************
- 409:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 410:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Summary:
- 411:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 4. The function checks
- 412:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  if mailbox 4 doesn't already have un-transmitted messages waiting for
- 413:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
- 414:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
- 415:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 416:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Parameters:
- 417:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
- 418:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 419:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Return:
- 420:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
- 421:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *   Define                             Description
- 422:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
- 423:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
- 424:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 425:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *******************************************************************************/
- 426:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     uint8 CAN_SendMsg4(void) 
- 427:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     {
- 428:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
- 429:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 430:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
- 431:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             if ((CAN_TX[4u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
- 432:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
- 433:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(4u) & CAN_TX_REQUEST_PENDING) != 0u)
- 434:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
- 435:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             {
- 436:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 result = CAN_FAIL;
- 437:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
- 438:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             else
- 439:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             {
- 440:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 /* `#START MESSAGE_4_TRASMITTED` */
- 441:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 442:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 /* `#END` */
- 443:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 444:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_4_CALLBACK
- 445:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                     CAN_SendMsg_4_Callback();
- 446:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_4_CALLBACK */
- 447:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 448:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(4u),
- 449:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(4u)) | CAN_SEND_MESSAGE);
- 450:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
- 451:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 452:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         return (result);
- 453:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     }
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 17
-
-
- 454:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #endif /* CAN_TX4_FUNC_ENABLE */
-=======
  337:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 /* `#END` */
  338:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
  339:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_2_CALLBACK
@@ -1062,7 +838,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  379:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
  380:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(3u) & CAN_TX_REQUEST_PENDING) != 0u)
  381:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 15
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 15
 
 
  382:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             {
@@ -1122,7 +898,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  436:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
  437:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             else
  438:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             {
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 16
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 16
 
 
  439:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 /* `#START MESSAGE_4_TRASMITTED` */
@@ -1141,7 +917,6 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  452:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     }
  453:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #endif /* CAN_TX4_FUNC_ENABLE */
  454:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
->>>>>>> whgentry_fe6
  455:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
  456:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #if (CAN_TX5_FUNC_ENABLE)
  457:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     /*******************************************************************************
@@ -1183,7 +958,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  493:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 /* `#END` */
  494:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
  495:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_5_CALLBACK
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 17
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 17
 
 
  496:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                     CAN_SendMsg_5_Callback();
@@ -1198,1913 +973,6 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  505:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #endif /* CAN_TX5_FUNC_ENABLE */
  506:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
  507:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
-<<<<<<< HEAD
- 508:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 509:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #if (CAN_TX6_FUNC_ENABLE)
- 510:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     /*******************************************************************************
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 18
-
-
- 511:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg6
- 512:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     ********************************************************************************
- 513:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 514:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Summary:
- 515:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 6. The function checks
- 516:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  if mailbox 6 doesn't already have un-transmitted messages waiting for
- 517:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
- 518:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
- 519:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 520:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Parameters:
- 521:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
- 522:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 523:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Return:
- 524:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
- 525:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *   Define                             Description
- 526:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
- 527:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
- 528:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 529:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *******************************************************************************/
- 530:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     uint8 CAN_SendMsg6(void) 
- 531:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     {
- 532:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
- 533:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 534:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
- 535:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             if ((CAN_TX[6u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
- 536:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
- 537:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(6u) & CAN_TX_REQUEST_PENDING) != 0u)
- 538:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
- 539:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             {
- 540:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 result = CAN_FAIL;
- 541:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
- 542:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             else
- 543:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             {
- 544:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 /* `#START MESSAGE_6_TRASMITTED` */
- 545:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 546:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 /* `#END` */
- 547:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 548:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_6_CALLBACK
- 549:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                     CAN_SendMsg_6_Callback();
- 550:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_6_CALLBACK */
- 551:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 552:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(6u),
- 553:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(6u)) | CAN_SEND_MESSAGE);
- 554:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
- 555:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 556:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         return (result);
- 557:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     }
- 558:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #endif /* CAN_TX6_FUNC_ENABLE */
- 559:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 560:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 561:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #if (CAN_TX7_FUNC_ENABLE)
- 562:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     /*******************************************************************************
- 563:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg7)
- 564:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     ********************************************************************************
- 565:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 566:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Summary:
- 567:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 7. The function checks
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 19
-
-
- 568:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  if mailbox 7 doesn't already have un-transmitted messages waiting for
- 569:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
- 570:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
- 571:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 572:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Parameters:
- 573:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
- 574:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 575:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Return:
- 576:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
- 577:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *   Define                             Description
- 578:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
- 579:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
- 580:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
- 581:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *******************************************************************************/
- 582:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     uint8 CAN_SendMsg7(void) 
- 583:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     {
- 584:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
- 585:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 586:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
- 587:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             if ((CAN_TX[7u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
- 588:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
- 589:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(7u) & CAN_TX_REQUEST_PENDING) != 0u)
- 590:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
- 591:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             {
- 592:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 result = CAN_FAIL;
- 593:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
- 594:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             else
- 595:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             {
- 596:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 /* `#START MESSAGE_7_TRASMITTED` */
- 597:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 598:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 /* `#END` */
- 599:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 600:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_7_CALLBACK
- 601:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                     CAN_SendMsg_7_Callback();
- 602:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_7_CALLBACK */
- 603:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 604:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(7u),
- 605:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(7u)) | CAN_SEND_MESSAGE);
- 606:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
- 607:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 608:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         return (result);
- 609:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     }
- 610:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #endif /* CAN_TX7_FUNC_ENABLE */
- 611:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 612:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 613:Generated_Source\PSoC5/CAN_TX_RX_func.c **** /*******************************************************************************
- 614:Generated_Source\PSoC5/CAN_TX_RX_func.c **** * FUNCTION NAME:   CAN_ReceiveMsg
- 615:Generated_Source\PSoC5/CAN_TX_RX_func.c **** ********************************************************************************
- 616:Generated_Source\PSoC5/CAN_TX_RX_func.c **** *
- 617:Generated_Source\PSoC5/CAN_TX_RX_func.c **** * Summary:
- 618:Generated_Source\PSoC5/CAN_TX_RX_func.c **** *  This function is the entry point to Receive Message Interrupt for Basic
- 619:Generated_Source\PSoC5/CAN_TX_RX_func.c **** *  mailboxes. Clears the Receive particular Message interrupt flag. Generated
- 620:Generated_Source\PSoC5/CAN_TX_RX_func.c **** *  only if one of the Receive mailboxes is designed as Basic.
- 621:Generated_Source\PSoC5/CAN_TX_RX_func.c **** *
- 622:Generated_Source\PSoC5/CAN_TX_RX_func.c **** * Parameters:
- 623:Generated_Source\PSoC5/CAN_TX_RX_func.c **** *  rxMailbox: The mailbox number that trig Receive Message Interrupt.
- 624:Generated_Source\PSoC5/CAN_TX_RX_func.c **** *
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 20
-
-
- 625:Generated_Source\PSoC5/CAN_TX_RX_func.c **** * Return:
- 626:Generated_Source\PSoC5/CAN_TX_RX_func.c **** *  None.
- 627:Generated_Source\PSoC5/CAN_TX_RX_func.c **** *
- 628:Generated_Source\PSoC5/CAN_TX_RX_func.c **** * Reentrant:
- 629:Generated_Source\PSoC5/CAN_TX_RX_func.c **** *  Depends on the Customer code.
- 630:Generated_Source\PSoC5/CAN_TX_RX_func.c **** *
- 631:Generated_Source\PSoC5/CAN_TX_RX_func.c **** *******************************************************************************/
- 632:Generated_Source\PSoC5/CAN_TX_RX_func.c **** void CAN_ReceiveMsg(uint8 rxMailbox) 
- 633:Generated_Source\PSoC5/CAN_TX_RX_func.c **** {
- 443              		.loc 1 633 0
- 444              		.cfi_startproc
- 445              		@ args = 0, pretend = 0, frame = 40
- 446              		@ frame_needed = 0, uses_anonymous_args = 0
- 447              	.LVL42:
- 448 0000 F0B5     		push	{r4, r5, r6, r7, lr}
- 449              		.cfi_def_cfa_offset 20
- 450              		.cfi_offset 4, -20
- 451              		.cfi_offset 5, -16
- 452              		.cfi_offset 6, -12
- 453              		.cfi_offset 7, -8
- 454              		.cfi_offset 14, -4
- 455 0002 8BB0     		sub	sp, sp, #44
- 456              		.cfi_def_cfa_offset 64
- 634:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     #if (CY_PSOC3 || CY_PSOC5)
- 635:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         if ((CAN_RX[rxMailbox].rxcmd.byte[0u] & CAN_RX_ACK_MSG) != 0u)
- 457              		.loc 1 635 0
- 458 0004 4701     		lsls	r7, r0, #5
- 459 0006 184E     		ldr	r6, .L58
- 460 0008 BC19     		adds	r4, r7, r6
- 461 000a BB5D     		ldrb	r3, [r7, r6]	@ zero_extendqisi2
- 462 000c 13F0010F 		tst	r3, #1
- 463 0010 28D0     		beq	.L51
- 464              	.LBB4:
- 636:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     #else  /* CY_PSOC4 */
- 637:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         if ((CAN_RX_CMD_REG(rxMailbox) & CAN_RX_ACK_MSG) != 0u)
- 638:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     #endif /* CY_PSOC3 || CY_PSOC5 */
- 639:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         {
- 640:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             /* `#START MESSAGE_BASIC_RECEIVED` */
- 641:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             
- 642:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             
- 643:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             int ID = CAN_GET_RX_ID(rxMailbox);
- 465              		.loc 1 643 0
- 466 0012 A378     		ldrb	r3, [r4, #2]	@ zero_extendqisi2
- 467 0014 13F0100F 		tst	r3, #16
- 468 0018 03D0     		beq	.L53
- 469              		.loc 1 643 0 is_stmt 0 discriminator 1
- 470 001a 6368     		ldr	r3, [r4, #4]
- 471 001c 4FEAD30E 		lsr	lr, r3, #3
- 472 0020 02E0     		b	.L54
- 473              	.L53:
- 474              		.loc 1 643 0 discriminator 2
- 475 0022 6368     		ldr	r3, [r4, #4]
- 476 0024 4FEA535E 		lsr	lr, r3, #21
- 477              	.L54:
- 478              	.LVL43:
- 644:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             CAN_RX_STRUCT test = CAN_RX[rxMailbox]; // is test always 0s?
- 479              		.loc 1 644 0 is_stmt 1 discriminator 4
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 21
-
-
- 480 0028 02AD     		add	r5, sp, #8
- 481 002a 2068     		ldr	r0, [r4]	@ unaligned
- 482              	.LVL44:
- 483 002c 6168     		ldr	r1, [r4, #4]	@ unaligned
- 484 002e A268     		ldr	r2, [r4, #8]	@ unaligned
- 485 0030 E368     		ldr	r3, [r4, #12]	@ unaligned
- 486 0032 0FC5     		stmia	r5!, {r0, r1, r2, r3}
- 487 0034 2069     		ldr	r0, [r4, #16]	@ unaligned
- 488 0036 6169     		ldr	r1, [r4, #20]	@ unaligned
- 489 0038 A269     		ldr	r2, [r4, #24]	@ unaligned
- 490 003a E369     		ldr	r3, [r4, #28]	@ unaligned
- 491 003c 0FC5     		stmia	r5!, {r0, r1, r2, r3}
- 492              	.LVL45:
- 645:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             uint8_t data[8];
- 646:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             int i = 0;
- 647:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             for (i = 0; i < 8; i++)
- 493              		.loc 1 647 0 discriminator 4
- 494 003e 0023     		movs	r3, #0
- 495 0040 06E0     		b	.L55
- 496              	.LVL46:
- 497              	.L56:
- 648:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 data[i] = CAN_RX[rxMailbox].rxdata.byte[i];
- 498              		.loc 1 648 0 discriminator 3
- 499 0042 E218     		adds	r2, r4, r3
- 500 0044 117A     		ldrb	r1, [r2, #8]	@ zero_extendqisi2
- 501 0046 0AAA     		add	r2, sp, #40
- 502 0048 1A44     		add	r2, r2, r3
- 503 004a 02F8281C 		strb	r1, [r2, #-40]
- 647:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 data[i] = CAN_RX[rxMailbox].rxdata.byte[i];
- 504              		.loc 1 647 0 discriminator 3
- 505 004e 0133     		adds	r3, r3, #1
- 506              	.LVL47:
- 507              	.L55:
- 647:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 data[i] = CAN_RX[rxMailbox].rxdata.byte[i];
- 508              		.loc 1 647 0 is_stmt 0 discriminator 1
- 509 0050 072B     		cmp	r3, #7
- 510 0052 F6DD     		ble	.L56
- 649:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             
- 650:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             can_receive(data, ID);
- 511              		.loc 1 650 0 is_stmt 1
- 512 0054 7146     		mov	r1, lr
- 513 0056 6846     		mov	r0, sp
- 514 0058 FFF7FEFF 		bl	can_receive
- 515              	.LVL48:
- 651:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             
- 652:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             /*
- 653:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             uint8_t rx_length, rx_index;
- 654:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 655:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 			rx_length = CAN_GET_DLC(rxMailbox); // gets length of message
- 656:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 657:Generated_Source\PSoC5/CAN_TX_RX_func.c ****  			can_queue[can_tail].length = rx_length;
- 658:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 			can_queue[can_tail].id = CAN_GET_RX_ID(rxMailbox);
- 659:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 			can_queue[can_tail].millicounter = 0;
- 660:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 661:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 			for(rx_index = 0; rx_index < rx_length; rx_index++)
- 662:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 			{
- 663:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 				can_queue[can_tail].data[rx_index] =
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 22
-
-
- 664:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 					CAN_RX_DATA_BYTE(rxMailbox, rx_index);
- 665:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 			} // for all bytes, copy data to can_queue
- 666:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 667:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 			can_tail = (can_tail + 1) % CAN_QUEUE_LENGTH;
- 668:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 669:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 			if(can_tail == can_head) // if need to roll queue
- 670:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 				can_head = (can_head + 1) % CAN_QUEUE_LENGTH;
- 671:Generated_Source\PSoC5/CAN_TX_RX_func.c ****              */
- 672:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             /* `#END` */
- 673:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 674:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             #ifdef CAN_RECEIVE_MSG_CALLBACK
- 675:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CAN_ReceiveMsg_Callback();
- 676:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             #endif /* CAN_RECEIVE_MSG_CALLBACK */
- 677:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
- 678:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             #if (CY_PSOC3 || CY_PSOC5)
- 679:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CAN_RX[rxMailbox].rxcmd.byte[0u] |= CAN_RX_ACK_MSG;
- 516              		.loc 1 679 0
- 517 005c BB5D     		ldrb	r3, [r7, r6]	@ zero_extendqisi2
- 518 005e 43F00103 		orr	r3, r3, #1
- 519 0062 BB55     		strb	r3, [r7, r6]
- 520              	.L51:
- 521              	.LBE4:
- 680:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             #else  /* CY_PSOC4 */
- 681:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CAN_RX_CMD_REG(rxMailbox) |= CAN_RX_ACK_MSG;
- 682:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             #endif /* CY_PSOC3 || CY_PSOC5 */
- 683:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         }
- 684:Generated_Source\PSoC5/CAN_TX_RX_func.c **** }
- 522              		.loc 1 684 0
- 523 0064 0BB0     		add	sp, sp, #44
- 524              		.cfi_def_cfa_offset 20
- 525              		@ sp needed
- 526 0066 F0BD     		pop	{r4, r5, r6, r7, pc}
- 527              	.L59:
- 528              		.align	2
- 529              	.L58:
- 530 0068 A0A00040 		.word	1073782944
- 531              		.cfi_endproc
- 532              	.LFE68:
- 533              		.size	CAN_ReceiveMsg, .-CAN_ReceiveMsg
- 534              		.text
- 535              	.Letext0:
- 536              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
- 537              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
- 538              		.file 4 "Generated_Source\\PSoC5\\cytypes.h"
- 539              		.file 5 "Generated_Source\\PSoC5\\CAN.h"
- 540              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
- 541              		.file 7 "./can_manga.h"
- 542              		.section	.debug_info,"",%progbits
- 543              	.Ldebug_info0:
- 544 0000 A7040000 		.4byte	0x4a7
- 545 0004 0400     		.2byte	0x4
- 546 0006 00000000 		.4byte	.Ldebug_abbrev0
- 547 000a 04       		.byte	0x4
- 548 000b 01       		.uleb128 0x1
- 549 000c A6020000 		.4byte	.LASF56
- 550 0010 0C       		.byte	0xc
- 551 0011 5B020000 		.4byte	.LASF57
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 23
-
-
- 552 0015 85010000 		.4byte	.LASF58
- 553 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 554 001d 00000000 		.4byte	0
- 555 0021 00000000 		.4byte	.Ldebug_line0
- 556 0025 02       		.uleb128 0x2
- 557 0026 01       		.byte	0x1
- 558 0027 06       		.byte	0x6
- 559 0028 29010000 		.4byte	.LASF0
- 560 002c 03       		.uleb128 0x3
- 561 002d C4000000 		.4byte	.LASF4
- 562 0031 02       		.byte	0x2
- 563 0032 1D       		.byte	0x1d
- 564 0033 37000000 		.4byte	0x37
- 565 0037 02       		.uleb128 0x2
- 566 0038 01       		.byte	0x1
- 567 0039 08       		.byte	0x8
- 568 003a 1B010000 		.4byte	.LASF1
- 569 003e 02       		.uleb128 0x2
- 570 003f 02       		.byte	0x2
- 571 0040 05       		.byte	0x5
- 572 0041 22000000 		.4byte	.LASF2
- 573 0045 02       		.uleb128 0x2
- 574 0046 02       		.byte	0x2
- 575 0047 07       		.byte	0x7
- 576 0048 72010000 		.4byte	.LASF3
- 577 004c 03       		.uleb128 0x3
- 578 004d 51020000 		.4byte	.LASF5
- 579 0051 02       		.byte	0x2
- 580 0052 3F       		.byte	0x3f
- 581 0053 57000000 		.4byte	0x57
- 582 0057 02       		.uleb128 0x2
- 583 0058 04       		.byte	0x4
- 584 0059 05       		.byte	0x5
- 585 005a A3000000 		.4byte	.LASF6
- 586 005e 02       		.uleb128 0x2
- 587 005f 04       		.byte	0x4
- 588 0060 07       		.byte	0x7
- 589 0061 B2000000 		.4byte	.LASF7
- 590 0065 02       		.uleb128 0x2
- 591 0066 08       		.byte	0x8
- 592 0067 05       		.byte	0x5
- 593 0068 84000000 		.4byte	.LASF8
- 594 006c 02       		.uleb128 0x2
- 595 006d 08       		.byte	0x8
- 596 006e 07       		.byte	0x7
- 597 006f 35010000 		.4byte	.LASF9
- 598 0073 04       		.uleb128 0x4
- 599 0074 04       		.byte	0x4
- 600 0075 05       		.byte	0x5
- 601 0076 696E7400 		.ascii	"int\000"
- 602 007a 02       		.uleb128 0x2
- 603 007b 04       		.byte	0x4
- 604 007c 07       		.byte	0x7
- 605 007d 4C010000 		.4byte	.LASF10
- 606 0081 03       		.uleb128 0x3
- 607 0082 65000000 		.4byte	.LASF11
- 608 0086 03       		.byte	0x3
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 24
-
-
- 609 0087 18       		.byte	0x18
- 610 0088 2C000000 		.4byte	0x2c
- 611 008c 03       		.uleb128 0x3
- 612 008d E2010000 		.4byte	.LASF12
- 613 0091 03       		.byte	0x3
- 614 0092 2C       		.byte	0x2c
- 615 0093 4C000000 		.4byte	0x4c
- 616 0097 05       		.uleb128 0x5
- 617 0098 6D000000 		.4byte	.LASF13
- 618 009c 04       		.byte	0x4
- 619 009d 3801     		.2byte	0x138
- 620 009f 37000000 		.4byte	0x37
- 621 00a3 05       		.uleb128 0x5
- 622 00a4 0E020000 		.4byte	.LASF14
- 623 00a8 04       		.byte	0x4
- 624 00a9 3A01     		.2byte	0x13a
- 625 00ab 5E000000 		.4byte	0x5e
- 626 00af 02       		.uleb128 0x2
- 627 00b0 04       		.byte	0x4
- 628 00b1 04       		.byte	0x4
- 629 00b2 7E000000 		.4byte	.LASF15
- 630 00b6 02       		.uleb128 0x2
- 631 00b7 08       		.byte	0x8
- 632 00b8 04       		.byte	0x4
- 633 00b9 8A020000 		.4byte	.LASF16
- 634 00bd 02       		.uleb128 0x2
- 635 00be 01       		.byte	0x1
- 636 00bf 08       		.byte	0x8
- 637 00c0 C5010000 		.4byte	.LASF17
- 638 00c4 05       		.uleb128 0x5
- 639 00c5 15020000 		.4byte	.LASF18
- 640 00c9 04       		.byte	0x4
- 641 00ca E201     		.2byte	0x1e2
- 642 00cc D0000000 		.4byte	0xd0
- 643 00d0 06       		.uleb128 0x6
- 644 00d1 97000000 		.4byte	0x97
- 645 00d5 05       		.uleb128 0x5
- 646 00d6 6C010000 		.4byte	.LASF19
- 647 00da 04       		.byte	0x4
- 648 00db E401     		.2byte	0x1e4
- 649 00dd E1000000 		.4byte	0xe1
- 650 00e1 06       		.uleb128 0x6
- 651 00e2 A3000000 		.4byte	0xa3
- 652 00e6 02       		.uleb128 0x2
- 653 00e7 08       		.byte	0x8
- 654 00e8 04       		.byte	0x4
- 655 00e9 08010000 		.4byte	.LASF20
- 656 00ed 02       		.uleb128 0x2
- 657 00ee 04       		.byte	0x4
- 658 00ef 07       		.byte	0x7
- 659 00f0 3B000000 		.4byte	.LASF21
- 660 00f4 07       		.uleb128 0x7
- 661 00f5 08       		.byte	0x8
- 662 00f6 05       		.byte	0x5
- 663 00f7 6F       		.byte	0x6f
- 664 00f8 09010000 		.4byte	0x109
- 665 00fc 08       		.uleb128 0x8
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 25
-
-
- 666 00fd EF000000 		.4byte	.LASF23
- 667 0101 05       		.byte	0x5
- 668 0102 71       		.byte	0x71
- 669 0103 09010000 		.4byte	0x109
- 670 0107 00       		.byte	0
- 671 0108 00       		.byte	0
- 672 0109 09       		.uleb128 0x9
- 673 010a 97000000 		.4byte	0x97
- 674 010e 19010000 		.4byte	0x119
- 675 0112 0A       		.uleb128 0xa
- 676 0113 ED000000 		.4byte	0xed
- 677 0117 07       		.byte	0x7
- 678 0118 00       		.byte	0
- 679 0119 03       		.uleb128 0x3
- 680 011a 59010000 		.4byte	.LASF22
- 681 011e 05       		.byte	0x5
- 682 011f 72       		.byte	0x72
- 683 0120 F4000000 		.4byte	0xf4
- 684 0124 07       		.uleb128 0x7
- 685 0125 08       		.byte	0x8
- 686 0126 05       		.byte	0x5
- 687 0127 75       		.byte	0x75
- 688 0128 39010000 		.4byte	0x139
- 689 012c 08       		.uleb128 0x8
- 690 012d EF000000 		.4byte	.LASF23
- 691 0131 05       		.byte	0x5
- 692 0132 77       		.byte	0x77
- 693 0133 49010000 		.4byte	0x149
- 694 0137 00       		.byte	0
- 695 0138 00       		.byte	0
- 696 0139 09       		.uleb128 0x9
- 697 013a C4000000 		.4byte	0xc4
- 698 013e 49010000 		.4byte	0x149
- 699 0142 0A       		.uleb128 0xa
- 700 0143 ED000000 		.4byte	0xed
- 701 0147 07       		.byte	0x7
- 702 0148 00       		.byte	0
- 703 0149 06       		.uleb128 0x6
- 704 014a 39010000 		.4byte	0x139
- 705 014e 03       		.uleb128 0x3
- 706 014f 13000000 		.4byte	.LASF24
- 707 0153 05       		.byte	0x5
- 708 0154 78       		.byte	0x78
- 709 0155 24010000 		.4byte	0x124
- 710 0159 07       		.uleb128 0x7
- 711 015a 04       		.byte	0x4
- 712 015b 05       		.byte	0x5
- 713 015c 7B       		.byte	0x7b
- 714 015d 6E010000 		.4byte	0x16e
- 715 0161 08       		.uleb128 0x8
- 716 0162 EF000000 		.4byte	.LASF23
- 717 0166 05       		.byte	0x5
- 718 0167 7D       		.byte	0x7d
- 719 0168 7E010000 		.4byte	0x17e
- 720 016c 00       		.byte	0
- 721 016d 00       		.byte	0
- 722 016e 09       		.uleb128 0x9
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 26
-
-
- 723 016f C4000000 		.4byte	0xc4
- 724 0173 7E010000 		.4byte	0x17e
- 725 0177 0A       		.uleb128 0xa
- 726 0178 ED000000 		.4byte	0xed
- 727 017c 03       		.byte	0x3
- 728 017d 00       		.byte	0
- 729 017e 06       		.uleb128 0x6
- 730 017f 6E010000 		.4byte	0x16e
- 731 0183 03       		.uleb128 0x3
- 732 0184 92000000 		.4byte	.LASF25
- 733 0188 05       		.byte	0x5
- 734 0189 7E       		.byte	0x7e
- 735 018a 59010000 		.4byte	0x159
- 736 018e 07       		.uleb128 0x7
- 737 018f 0C       		.byte	0xc
- 738 0190 05       		.byte	0x5
- 739 0191 81       		.byte	0x81
- 740 0192 DE010000 		.4byte	0x1de
- 741 0196 0B       		.uleb128 0xb
- 742 0197 696400   		.ascii	"id\000"
- 743 019a 05       		.byte	0x5
- 744 019b 83       		.byte	0x83
- 745 019c A3000000 		.4byte	0xa3
- 746 01a0 00       		.byte	0
- 747 01a1 0B       		.uleb128 0xb
- 748 01a2 72747200 		.ascii	"rtr\000"
- 749 01a6 05       		.byte	0x5
- 750 01a7 84       		.byte	0x84
- 751 01a8 97000000 		.4byte	0x97
- 752 01ac 04       		.byte	0x4
- 753 01ad 0B       		.uleb128 0xb
- 754 01ae 69646500 		.ascii	"ide\000"
- 755 01b2 05       		.byte	0x5
- 756 01b3 85       		.byte	0x85
- 757 01b4 97000000 		.4byte	0x97
- 758 01b8 05       		.byte	0x5
- 759 01b9 0B       		.uleb128 0xb
- 760 01ba 646C6300 		.ascii	"dlc\000"
- 761 01be 05       		.byte	0x5
- 762 01bf 86       		.byte	0x86
- 763 01c0 97000000 		.4byte	0x97
- 764 01c4 06       		.byte	0x6
- 765 01c5 0B       		.uleb128 0xb
- 766 01c6 69727100 		.ascii	"irq\000"
- 767 01ca 05       		.byte	0x5
- 768 01cb 87       		.byte	0x87
- 769 01cc 97000000 		.4byte	0x97
- 770 01d0 07       		.byte	0x7
- 771 01d1 0B       		.uleb128 0xb
- 772 01d2 6D736700 		.ascii	"msg\000"
- 773 01d6 05       		.byte	0x5
- 774 01d7 8B       		.byte	0x8b
- 775 01d8 DE010000 		.4byte	0x1de
- 776 01dc 08       		.byte	0x8
- 777 01dd 00       		.byte	0
- 778 01de 0C       		.uleb128 0xc
- 779 01df 04       		.byte	0x4
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 27
-
-
- 780 01e0 19010000 		.4byte	0x119
- 781 01e4 03       		.uleb128 0x3
- 782 01e5 22020000 		.4byte	.LASF26
- 783 01e9 05       		.byte	0x5
- 784 01ea 8C       		.byte	0x8c
- 785 01eb 8E010000 		.4byte	0x18e
- 786 01ef 07       		.uleb128 0x7
- 787 01f0 20       		.byte	0x20
- 788 01f1 05       		.byte	0x5
- 789 01f2 A0       		.byte	0xa0
- 790 01f3 4C020000 		.4byte	0x24c
- 791 01f7 08       		.uleb128 0x8
- 792 01f8 EA010000 		.4byte	.LASF27
- 793 01fc 05       		.byte	0x5
- 794 01fd A2       		.byte	0xa2
- 795 01fe 83010000 		.4byte	0x183
- 796 0202 00       		.byte	0
- 797 0203 08       		.uleb128 0x8
- 798 0204 73000000 		.4byte	.LASF28
- 799 0208 05       		.byte	0x5
- 800 0209 A3       		.byte	0xa3
- 801 020a 83010000 		.4byte	0x183
- 802 020e 04       		.byte	0x4
- 803 020f 08       		.uleb128 0x8
- 804 0210 4B000000 		.4byte	.LASF29
- 805 0214 05       		.byte	0x5
- 806 0215 A4       		.byte	0xa4
- 807 0216 4E010000 		.4byte	0x14e
- 808 021a 08       		.byte	0x8
- 809 021b 08       		.uleb128 0x8
- 810 021c 34030000 		.4byte	.LASF30
- 811 0220 05       		.byte	0x5
- 812 0221 A5       		.byte	0xa5
- 813 0222 83010000 		.4byte	0x183
- 814 0226 10       		.byte	0x10
- 815 0227 08       		.uleb128 0x8
- 816 0228 78000000 		.4byte	.LASF31
- 817 022c 05       		.byte	0x5
- 818 022d A6       		.byte	0xa6
- 819 022e 83010000 		.4byte	0x183
- 820 0232 14       		.byte	0x14
- 821 0233 08       		.uleb128 0x8
- 822 0234 14010000 		.4byte	.LASF32
- 823 0238 05       		.byte	0x5
- 824 0239 A7       		.byte	0xa7
- 825 023a 83010000 		.4byte	0x183
- 826 023e 18       		.byte	0x18
- 827 023f 08       		.uleb128 0x8
- 828 0240 83020000 		.4byte	.LASF33
- 829 0244 05       		.byte	0x5
- 830 0245 A8       		.byte	0xa8
- 831 0246 83010000 		.4byte	0x183
- 832 024a 1C       		.byte	0x1c
- 833 024b 00       		.byte	0
- 834 024c 03       		.uleb128 0x3
- 835 024d CA010000 		.4byte	.LASF34
- 836 0251 05       		.byte	0x5
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 28
-
-
- 837 0252 A9       		.byte	0xa9
- 838 0253 EF010000 		.4byte	0x1ef
- 839 0257 07       		.uleb128 0x7
- 840 0258 10       		.byte	0x10
- 841 0259 05       		.byte	0x5
- 842 025a AC       		.byte	0xac
- 843 025b 84020000 		.4byte	0x284
- 844 025f 08       		.uleb128 0x8
- 845 0260 9D000000 		.4byte	.LASF35
- 846 0264 05       		.byte	0x5
- 847 0265 AE       		.byte	0xae
- 848 0266 83010000 		.4byte	0x183
- 849 026a 00       		.byte	0
- 850 026b 08       		.uleb128 0x8
- 851 026c E5000000 		.4byte	.LASF36
- 852 0270 05       		.byte	0x5
- 853 0271 AF       		.byte	0xaf
- 854 0272 83010000 		.4byte	0x183
- 855 0276 04       		.byte	0x4
- 856 0277 08       		.uleb128 0x8
- 857 0278 44000000 		.4byte	.LASF37
- 858 027c 05       		.byte	0x5
- 859 027d B0       		.byte	0xb0
- 860 027e 4E010000 		.4byte	0x14e
- 861 0282 08       		.byte	0x8
- 862 0283 00       		.byte	0
- 863 0284 03       		.uleb128 0x3
- 864 0285 F5010000 		.4byte	.LASF38
- 865 0289 05       		.byte	0x5
- 866 028a B1       		.byte	0xb1
- 867 028b 57020000 		.4byte	0x257
- 868 028f 0D       		.uleb128 0xd
- 869 0290 2D020000 		.4byte	.LASF45
- 870 0294 01       		.byte	0x1
- 871 0295 37       		.byte	0x37
- 872 0296 97000000 		.4byte	0x97
- 873 029a 00000000 		.4byte	.LFB63
- 874 029e DC000000 		.4byte	.LFE63-.LFB63
- 875 02a2 01       		.uleb128 0x1
- 876 02a3 9C       		.byte	0x9c
- 877 02a4 0E030000 		.4byte	0x30e
- 878 02a8 0E       		.uleb128 0xe
- 879 02a9 1A020000 		.4byte	.LASF43
- 880 02ad 01       		.byte	0x1
- 881 02ae 37       		.byte	0x37
- 882 02af 0E030000 		.4byte	0x30e
- 883 02b3 00000000 		.4byte	.LLST0
- 884 02b7 0F       		.uleb128 0xf
- 885 02b8 6900     		.ascii	"i\000"
- 886 02ba 01       		.byte	0x1
- 887 02bb 39       		.byte	0x39
- 888 02bc 97000000 		.4byte	0x97
- 889 02c0 21000000 		.4byte	.LLST1
- 890 02c4 0F       		.uleb128 0xf
- 891 02c5 6A00     		.ascii	"j\000"
- 892 02c7 01       		.byte	0x1
- 893 02c8 39       		.byte	0x39
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 29
-
-
- 894 02c9 97000000 		.4byte	0x97
- 895 02cd 4A000000 		.4byte	.LLST2
- 896 02d1 10       		.uleb128 0x10
- 897 02d2 AC000000 		.4byte	.LASF39
- 898 02d6 01       		.byte	0x1
- 899 02d7 39       		.byte	0x39
- 900 02d8 97000000 		.4byte	0x97
- 901 02dc 74000000 		.4byte	.LLST3
- 902 02e0 10       		.uleb128 0x10
- 903 02e1 5F000000 		.4byte	.LASF40
- 904 02e5 01       		.byte	0x1
- 905 02e6 3A       		.byte	0x3a
- 906 02e7 97000000 		.4byte	0x97
- 907 02eb 92000000 		.4byte	.LLST4
- 908 02ef 10       		.uleb128 0x10
- 909 02f0 0C000000 		.4byte	.LASF41
- 910 02f4 01       		.byte	0x1
- 911 02f5 3B       		.byte	0x3b
- 912 02f6 97000000 		.4byte	0x97
- 913 02fa BC000000 		.4byte	.LLST5
- 914 02fe 10       		.uleb128 0x10
- 915 02ff 91020000 		.4byte	.LASF42
- 916 0303 01       		.byte	0x1
- 917 0304 3C       		.byte	0x3c
- 918 0305 A3000000 		.4byte	0xa3
- 919 0309 F2000000 		.4byte	.LLST6
- 920 030d 00       		.byte	0
- 921 030e 0C       		.uleb128 0xc
- 922 030f 04       		.byte	0x4
- 923 0310 14030000 		.4byte	0x314
- 924 0314 11       		.uleb128 0x11
- 925 0315 E4010000 		.4byte	0x1e4
- 926 0319 12       		.uleb128 0x12
- 927 031a 52000000 		.4byte	.LASF49
- 928 031e 01       		.byte	0x1
- 929 031f B5       		.byte	0xb5
- 930 0320 00000000 		.4byte	.LFB64
- 931 0324 1C000000 		.4byte	.LFE64-.LFB64
- 932 0328 01       		.uleb128 0x1
- 933 0329 9C       		.byte	0x9c
- 934 032a 3E030000 		.4byte	0x33e
- 935 032e 0E       		.uleb128 0xe
- 936 032f 39020000 		.4byte	.LASF44
- 937 0333 01       		.byte	0x1
- 938 0334 B5       		.byte	0xb5
- 939 0335 97000000 		.4byte	0x97
- 940 0339 32010000 		.4byte	.LLST7
- 941 033d 00       		.byte	0
- 942 033e 0D       		.uleb128 0xd
- 943 033f CE000000 		.4byte	.LASF46
- 944 0343 01       		.byte	0x1
- 945 0344 D3       		.byte	0xd3
- 946 0345 97000000 		.4byte	0x97
- 947 0349 00000000 		.4byte	.LFB65
- 948 034d 4C000000 		.4byte	.LFE65-.LFB65
- 949 0351 01       		.uleb128 0x1
- 950 0352 9C       		.byte	0x9c
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 30
-
-
- 951 0353 7E030000 		.4byte	0x37e
- 952 0357 10       		.uleb128 0x10
- 953 0358 0C000000 		.4byte	.LASF41
- 954 035c 01       		.byte	0x1
- 955 035d D5       		.byte	0xd5
- 956 035e 97000000 		.4byte	0x97
- 957 0362 53010000 		.4byte	.LLST8
- 958 0366 13       		.uleb128 0x13
- 959 0367 0E000000 		.4byte	.LBB2
- 960 036b 28000000 		.4byte	.LBE2-.LBB2
- 961 036f 0F       		.uleb128 0xf
- 962 0370 6900     		.ascii	"i\000"
- 963 0372 01       		.byte	0x1
- 964 0373 E2       		.byte	0xe2
- 965 0374 81000000 		.4byte	0x81
- 966 0378 72010000 		.4byte	.LLST9
- 967 037c 00       		.byte	0
- 968 037d 00       		.byte	0
- 969 037e 14       		.uleb128 0x14
- 970 037f F4000000 		.4byte	.LASF47
- 971 0383 01       		.byte	0x1
- 972 0384 0A01     		.2byte	0x10a
- 973 0386 97000000 		.4byte	0x97
- 974 038a 00000000 		.4byte	.LFB66
- 975 038e 4C000000 		.4byte	.LFE66-.LFB66
- 976 0392 01       		.uleb128 0x1
- 977 0393 9C       		.byte	0x9c
- 978 0394 C1030000 		.4byte	0x3c1
- 979 0398 15       		.uleb128 0x15
- 980 0399 0C000000 		.4byte	.LASF41
- 981 039d 01       		.byte	0x1
- 982 039e 0C01     		.2byte	0x10c
- 983 03a0 97000000 		.4byte	0x97
- 984 03a4 90010000 		.4byte	.LLST10
- 985 03a8 13       		.uleb128 0x13
- 986 03a9 0E000000 		.4byte	.LBB3
- 987 03ad 28000000 		.4byte	.LBE3-.LBB3
- 988 03b1 16       		.uleb128 0x16
- 989 03b2 6900     		.ascii	"i\000"
- 990 03b4 01       		.byte	0x1
- 991 03b5 1901     		.2byte	0x119
- 992 03b7 81000000 		.4byte	0x81
- 993 03bb AF010000 		.4byte	.LLST11
- 994 03bf 00       		.byte	0
- 995 03c0 00       		.byte	0
- 996 03c1 14       		.uleb128 0x14
- 997 03c2 42020000 		.4byte	.LASF48
- 998 03c6 01       		.byte	0x1
- 999 03c7 4101     		.2byte	0x141
- 1000 03c9 97000000 		.4byte	0x97
- 1001 03cd 00000000 		.4byte	.LFB67
- 1002 03d1 20000000 		.4byte	.LFE67-.LFB67
- 1003 03d5 01       		.uleb128 0x1
- 1004 03d6 9C       		.byte	0x9c
- 1005 03d7 EC030000 		.4byte	0x3ec
- 1006 03db 15       		.uleb128 0x15
- 1007 03dc 0C000000 		.4byte	.LASF41
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 31
-
-
- 1008 03e0 01       		.byte	0x1
- 1009 03e1 4301     		.2byte	0x143
- 1010 03e3 97000000 		.4byte	0x97
- 1011 03e7 CD010000 		.4byte	.LLST12
- 1012 03eb 00       		.byte	0
- 1013 03ec 17       		.uleb128 0x17
- 1014 03ed 2C000000 		.4byte	.LASF50
- 1015 03f1 01       		.byte	0x1
- 1016 03f2 7802     		.2byte	0x278
- 1017 03f4 00000000 		.4byte	.LFB68
- 1018 03f8 6C000000 		.4byte	.LFE68-.LFB68
- 1019 03fc 01       		.uleb128 0x1
- 1020 03fd 9C       		.byte	0x9c
- 1021 03fe 68040000 		.4byte	0x468
- 1022 0402 18       		.uleb128 0x18
- 1023 0403 D8010000 		.4byte	.LASF51
- 1024 0407 01       		.byte	0x1
- 1025 0408 7802     		.2byte	0x278
- 1026 040a 97000000 		.4byte	0x97
- 1027 040e EC010000 		.4byte	.LLST13
- 1028 0412 13       		.uleb128 0x13
- 1029 0413 12000000 		.4byte	.LBB4
- 1030 0417 52000000 		.4byte	.LBE4-.LBB4
- 1031 041b 16       		.uleb128 0x16
- 1032 041c 494400   		.ascii	"ID\000"
- 1033 041f 01       		.byte	0x1
- 1034 0420 8302     		.2byte	0x283
- 1035 0422 73000000 		.4byte	0x73
- 1036 0426 0D020000 		.4byte	.LLST14
- 1037 042a 19       		.uleb128 0x19
- 1038 042b EA000000 		.4byte	.LASF52
- 1039 042f 01       		.byte	0x1
- 1040 0430 8402     		.2byte	0x284
- 1041 0432 4C020000 		.4byte	0x24c
- 1042 0436 02       		.uleb128 0x2
- 1043 0437 91       		.byte	0x91
- 1044 0438 48       		.sleb128 -56
- 1045 0439 19       		.uleb128 0x19
- 1046 043a F0010000 		.4byte	.LASF53
- 1047 043e 01       		.byte	0x1
- 1048 043f 8502     		.2byte	0x285
- 1049 0441 68040000 		.4byte	0x468
- 1050 0445 02       		.uleb128 0x2
- 1051 0446 91       		.byte	0x91
- 1052 0447 40       		.sleb128 -64
- 1053 0448 16       		.uleb128 0x16
- 1054 0449 6900     		.ascii	"i\000"
- 1055 044b 01       		.byte	0x1
- 1056 044c 8602     		.2byte	0x286
- 1057 044e 73000000 		.4byte	0x73
- 1058 0452 20020000 		.4byte	.LLST15
- 1059 0456 1A       		.uleb128 0x1a
- 1060 0457 5C000000 		.4byte	.LVL48
- 1061 045b 9F040000 		.4byte	0x49f
- 1062 045f 1B       		.uleb128 0x1b
- 1063 0460 01       		.uleb128 0x1
- 1064 0461 50       		.byte	0x50
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 32
-
-
- 1065 0462 02       		.uleb128 0x2
- 1066 0463 7D       		.byte	0x7d
- 1067 0464 00       		.sleb128 0
- 1068 0465 00       		.byte	0
- 1069 0466 00       		.byte	0
- 1070 0467 00       		.byte	0
- 1071 0468 09       		.uleb128 0x9
- 1072 0469 81000000 		.4byte	0x81
- 1073 046d 78040000 		.4byte	0x478
- 1074 0471 0A       		.uleb128 0xa
- 1075 0472 ED000000 		.4byte	0xed
- 1076 0476 07       		.byte	0x7
- 1077 0477 00       		.byte	0
- 1078 0478 1C       		.uleb128 0x1c
- 1079 0479 99020000 		.4byte	.LASF54
- 1080 047d 06       		.byte	0x6
- 1081 047e 5506     		.2byte	0x655
- 1082 0480 84040000 		.4byte	0x484
- 1083 0484 06       		.uleb128 0x6
- 1084 0485 8C000000 		.4byte	0x8c
- 1085 0489 09       		.uleb128 0x9
- 1086 048a 81000000 		.4byte	0x81
- 1087 048e 94040000 		.4byte	0x494
- 1088 0492 1D       		.uleb128 0x1d
- 1089 0493 00       		.byte	0
- 1090 0494 1E       		.uleb128 0x1e
- 1091 0495 03020000 		.4byte	.LASF55
- 1092 0499 01       		.byte	0x1
- 1093 049a 1F       		.byte	0x1f
- 1094 049b 89040000 		.4byte	0x489
- 1095 049f 1F       		.uleb128 0x1f
- 1096 04a0 00000000 		.4byte	.LASF59
- 1097 04a4 00000000 		.4byte	.LASF59
- 1098 04a8 07       		.byte	0x7
- 1099 04a9 11       		.byte	0x11
- 1100 04aa 00       		.byte	0
- 1101              		.section	.debug_abbrev,"",%progbits
- 1102              	.Ldebug_abbrev0:
- 1103 0000 01       		.uleb128 0x1
- 1104 0001 11       		.uleb128 0x11
- 1105 0002 01       		.byte	0x1
- 1106 0003 25       		.uleb128 0x25
- 1107 0004 0E       		.uleb128 0xe
- 1108 0005 13       		.uleb128 0x13
- 1109 0006 0B       		.uleb128 0xb
- 1110 0007 03       		.uleb128 0x3
- 1111 0008 0E       		.uleb128 0xe
- 1112 0009 1B       		.uleb128 0x1b
- 1113 000a 0E       		.uleb128 0xe
- 1114 000b 55       		.uleb128 0x55
- 1115 000c 17       		.uleb128 0x17
- 1116 000d 11       		.uleb128 0x11
- 1117 000e 01       		.uleb128 0x1
- 1118 000f 10       		.uleb128 0x10
- 1119 0010 17       		.uleb128 0x17
- 1120 0011 00       		.byte	0
- 1121 0012 00       		.byte	0
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 33
-
-
- 1122 0013 02       		.uleb128 0x2
- 1123 0014 24       		.uleb128 0x24
- 1124 0015 00       		.byte	0
- 1125 0016 0B       		.uleb128 0xb
- 1126 0017 0B       		.uleb128 0xb
- 1127 0018 3E       		.uleb128 0x3e
- 1128 0019 0B       		.uleb128 0xb
- 1129 001a 03       		.uleb128 0x3
- 1130 001b 0E       		.uleb128 0xe
- 1131 001c 00       		.byte	0
- 1132 001d 00       		.byte	0
- 1133 001e 03       		.uleb128 0x3
- 1134 001f 16       		.uleb128 0x16
- 1135 0020 00       		.byte	0
- 1136 0021 03       		.uleb128 0x3
- 1137 0022 0E       		.uleb128 0xe
- 1138 0023 3A       		.uleb128 0x3a
- 1139 0024 0B       		.uleb128 0xb
- 1140 0025 3B       		.uleb128 0x3b
- 1141 0026 0B       		.uleb128 0xb
- 1142 0027 49       		.uleb128 0x49
- 1143 0028 13       		.uleb128 0x13
- 1144 0029 00       		.byte	0
- 1145 002a 00       		.byte	0
- 1146 002b 04       		.uleb128 0x4
- 1147 002c 24       		.uleb128 0x24
- 1148 002d 00       		.byte	0
- 1149 002e 0B       		.uleb128 0xb
- 1150 002f 0B       		.uleb128 0xb
- 1151 0030 3E       		.uleb128 0x3e
- 1152 0031 0B       		.uleb128 0xb
- 1153 0032 03       		.uleb128 0x3
- 1154 0033 08       		.uleb128 0x8
- 1155 0034 00       		.byte	0
- 1156 0035 00       		.byte	0
- 1157 0036 05       		.uleb128 0x5
- 1158 0037 16       		.uleb128 0x16
- 1159 0038 00       		.byte	0
- 1160 0039 03       		.uleb128 0x3
- 1161 003a 0E       		.uleb128 0xe
- 1162 003b 3A       		.uleb128 0x3a
- 1163 003c 0B       		.uleb128 0xb
- 1164 003d 3B       		.uleb128 0x3b
- 1165 003e 05       		.uleb128 0x5
- 1166 003f 49       		.uleb128 0x49
- 1167 0040 13       		.uleb128 0x13
- 1168 0041 00       		.byte	0
- 1169 0042 00       		.byte	0
- 1170 0043 06       		.uleb128 0x6
- 1171 0044 35       		.uleb128 0x35
- 1172 0045 00       		.byte	0
- 1173 0046 49       		.uleb128 0x49
- 1174 0047 13       		.uleb128 0x13
- 1175 0048 00       		.byte	0
- 1176 0049 00       		.byte	0
- 1177 004a 07       		.uleb128 0x7
- 1178 004b 13       		.uleb128 0x13
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 34
-
-
- 1179 004c 01       		.byte	0x1
- 1180 004d 0B       		.uleb128 0xb
- 1181 004e 0B       		.uleb128 0xb
- 1182 004f 3A       		.uleb128 0x3a
- 1183 0050 0B       		.uleb128 0xb
- 1184 0051 3B       		.uleb128 0x3b
- 1185 0052 0B       		.uleb128 0xb
- 1186 0053 01       		.uleb128 0x1
- 1187 0054 13       		.uleb128 0x13
- 1188 0055 00       		.byte	0
- 1189 0056 00       		.byte	0
- 1190 0057 08       		.uleb128 0x8
- 1191 0058 0D       		.uleb128 0xd
- 1192 0059 00       		.byte	0
- 1193 005a 03       		.uleb128 0x3
- 1194 005b 0E       		.uleb128 0xe
- 1195 005c 3A       		.uleb128 0x3a
- 1196 005d 0B       		.uleb128 0xb
- 1197 005e 3B       		.uleb128 0x3b
- 1198 005f 0B       		.uleb128 0xb
- 1199 0060 49       		.uleb128 0x49
- 1200 0061 13       		.uleb128 0x13
- 1201 0062 38       		.uleb128 0x38
- 1202 0063 0B       		.uleb128 0xb
- 1203 0064 00       		.byte	0
- 1204 0065 00       		.byte	0
- 1205 0066 09       		.uleb128 0x9
- 1206 0067 01       		.uleb128 0x1
- 1207 0068 01       		.byte	0x1
- 1208 0069 49       		.uleb128 0x49
- 1209 006a 13       		.uleb128 0x13
- 1210 006b 01       		.uleb128 0x1
- 1211 006c 13       		.uleb128 0x13
- 1212 006d 00       		.byte	0
- 1213 006e 00       		.byte	0
- 1214 006f 0A       		.uleb128 0xa
- 1215 0070 21       		.uleb128 0x21
- 1216 0071 00       		.byte	0
- 1217 0072 49       		.uleb128 0x49
- 1218 0073 13       		.uleb128 0x13
- 1219 0074 2F       		.uleb128 0x2f
- 1220 0075 0B       		.uleb128 0xb
- 1221 0076 00       		.byte	0
- 1222 0077 00       		.byte	0
- 1223 0078 0B       		.uleb128 0xb
- 1224 0079 0D       		.uleb128 0xd
- 1225 007a 00       		.byte	0
- 1226 007b 03       		.uleb128 0x3
- 1227 007c 08       		.uleb128 0x8
- 1228 007d 3A       		.uleb128 0x3a
- 1229 007e 0B       		.uleb128 0xb
- 1230 007f 3B       		.uleb128 0x3b
- 1231 0080 0B       		.uleb128 0xb
- 1232 0081 49       		.uleb128 0x49
- 1233 0082 13       		.uleb128 0x13
- 1234 0083 38       		.uleb128 0x38
- 1235 0084 0B       		.uleb128 0xb
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 35
-
-
- 1236 0085 00       		.byte	0
- 1237 0086 00       		.byte	0
- 1238 0087 0C       		.uleb128 0xc
- 1239 0088 0F       		.uleb128 0xf
- 1240 0089 00       		.byte	0
- 1241 008a 0B       		.uleb128 0xb
- 1242 008b 0B       		.uleb128 0xb
- 1243 008c 49       		.uleb128 0x49
- 1244 008d 13       		.uleb128 0x13
- 1245 008e 00       		.byte	0
- 1246 008f 00       		.byte	0
- 1247 0090 0D       		.uleb128 0xd
- 1248 0091 2E       		.uleb128 0x2e
- 1249 0092 01       		.byte	0x1
- 1250 0093 3F       		.uleb128 0x3f
- 1251 0094 19       		.uleb128 0x19
- 1252 0095 03       		.uleb128 0x3
- 1253 0096 0E       		.uleb128 0xe
- 1254 0097 3A       		.uleb128 0x3a
- 1255 0098 0B       		.uleb128 0xb
- 1256 0099 3B       		.uleb128 0x3b
- 1257 009a 0B       		.uleb128 0xb
- 1258 009b 27       		.uleb128 0x27
- 1259 009c 19       		.uleb128 0x19
- 1260 009d 49       		.uleb128 0x49
- 1261 009e 13       		.uleb128 0x13
- 1262 009f 11       		.uleb128 0x11
- 1263 00a0 01       		.uleb128 0x1
- 1264 00a1 12       		.uleb128 0x12
- 1265 00a2 06       		.uleb128 0x6
- 1266 00a3 40       		.uleb128 0x40
- 1267 00a4 18       		.uleb128 0x18
- 1268 00a5 9742     		.uleb128 0x2117
- 1269 00a7 19       		.uleb128 0x19
- 1270 00a8 01       		.uleb128 0x1
- 1271 00a9 13       		.uleb128 0x13
- 1272 00aa 00       		.byte	0
- 1273 00ab 00       		.byte	0
- 1274 00ac 0E       		.uleb128 0xe
- 1275 00ad 05       		.uleb128 0x5
- 1276 00ae 00       		.byte	0
- 1277 00af 03       		.uleb128 0x3
- 1278 00b0 0E       		.uleb128 0xe
- 1279 00b1 3A       		.uleb128 0x3a
- 1280 00b2 0B       		.uleb128 0xb
- 1281 00b3 3B       		.uleb128 0x3b
- 1282 00b4 0B       		.uleb128 0xb
- 1283 00b5 49       		.uleb128 0x49
- 1284 00b6 13       		.uleb128 0x13
- 1285 00b7 02       		.uleb128 0x2
- 1286 00b8 17       		.uleb128 0x17
- 1287 00b9 00       		.byte	0
- 1288 00ba 00       		.byte	0
- 1289 00bb 0F       		.uleb128 0xf
- 1290 00bc 34       		.uleb128 0x34
- 1291 00bd 00       		.byte	0
- 1292 00be 03       		.uleb128 0x3
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 36
-
-
- 1293 00bf 08       		.uleb128 0x8
- 1294 00c0 3A       		.uleb128 0x3a
- 1295 00c1 0B       		.uleb128 0xb
- 1296 00c2 3B       		.uleb128 0x3b
- 1297 00c3 0B       		.uleb128 0xb
- 1298 00c4 49       		.uleb128 0x49
- 1299 00c5 13       		.uleb128 0x13
- 1300 00c6 02       		.uleb128 0x2
- 1301 00c7 17       		.uleb128 0x17
- 1302 00c8 00       		.byte	0
- 1303 00c9 00       		.byte	0
- 1304 00ca 10       		.uleb128 0x10
- 1305 00cb 34       		.uleb128 0x34
- 1306 00cc 00       		.byte	0
- 1307 00cd 03       		.uleb128 0x3
- 1308 00ce 0E       		.uleb128 0xe
- 1309 00cf 3A       		.uleb128 0x3a
- 1310 00d0 0B       		.uleb128 0xb
- 1311 00d1 3B       		.uleb128 0x3b
- 1312 00d2 0B       		.uleb128 0xb
- 1313 00d3 49       		.uleb128 0x49
- 1314 00d4 13       		.uleb128 0x13
- 1315 00d5 02       		.uleb128 0x2
- 1316 00d6 17       		.uleb128 0x17
- 1317 00d7 00       		.byte	0
- 1318 00d8 00       		.byte	0
- 1319 00d9 11       		.uleb128 0x11
- 1320 00da 26       		.uleb128 0x26
- 1321 00db 00       		.byte	0
- 1322 00dc 49       		.uleb128 0x49
- 1323 00dd 13       		.uleb128 0x13
- 1324 00de 00       		.byte	0
- 1325 00df 00       		.byte	0
- 1326 00e0 12       		.uleb128 0x12
- 1327 00e1 2E       		.uleb128 0x2e
- 1328 00e2 01       		.byte	0x1
- 1329 00e3 3F       		.uleb128 0x3f
- 1330 00e4 19       		.uleb128 0x19
- 1331 00e5 03       		.uleb128 0x3
- 1332 00e6 0E       		.uleb128 0xe
- 1333 00e7 3A       		.uleb128 0x3a
- 1334 00e8 0B       		.uleb128 0xb
- 1335 00e9 3B       		.uleb128 0x3b
- 1336 00ea 0B       		.uleb128 0xb
- 1337 00eb 27       		.uleb128 0x27
- 1338 00ec 19       		.uleb128 0x19
- 1339 00ed 11       		.uleb128 0x11
- 1340 00ee 01       		.uleb128 0x1
- 1341 00ef 12       		.uleb128 0x12
- 1342 00f0 06       		.uleb128 0x6
- 1343 00f1 40       		.uleb128 0x40
- 1344 00f2 18       		.uleb128 0x18
- 1345 00f3 9742     		.uleb128 0x2117
- 1346 00f5 19       		.uleb128 0x19
- 1347 00f6 01       		.uleb128 0x1
- 1348 00f7 13       		.uleb128 0x13
- 1349 00f8 00       		.byte	0
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 37
-
-
- 1350 00f9 00       		.byte	0
- 1351 00fa 13       		.uleb128 0x13
- 1352 00fb 0B       		.uleb128 0xb
- 1353 00fc 01       		.byte	0x1
- 1354 00fd 11       		.uleb128 0x11
- 1355 00fe 01       		.uleb128 0x1
- 1356 00ff 12       		.uleb128 0x12
- 1357 0100 06       		.uleb128 0x6
- 1358 0101 00       		.byte	0
- 1359 0102 00       		.byte	0
- 1360 0103 14       		.uleb128 0x14
- 1361 0104 2E       		.uleb128 0x2e
- 1362 0105 01       		.byte	0x1
- 1363 0106 3F       		.uleb128 0x3f
- 1364 0107 19       		.uleb128 0x19
- 1365 0108 03       		.uleb128 0x3
- 1366 0109 0E       		.uleb128 0xe
- 1367 010a 3A       		.uleb128 0x3a
- 1368 010b 0B       		.uleb128 0xb
- 1369 010c 3B       		.uleb128 0x3b
- 1370 010d 05       		.uleb128 0x5
- 1371 010e 27       		.uleb128 0x27
- 1372 010f 19       		.uleb128 0x19
- 1373 0110 49       		.uleb128 0x49
- 1374 0111 13       		.uleb128 0x13
- 1375 0112 11       		.uleb128 0x11
- 1376 0113 01       		.uleb128 0x1
- 1377 0114 12       		.uleb128 0x12
- 1378 0115 06       		.uleb128 0x6
- 1379 0116 40       		.uleb128 0x40
- 1380 0117 18       		.uleb128 0x18
- 1381 0118 9742     		.uleb128 0x2117
- 1382 011a 19       		.uleb128 0x19
- 1383 011b 01       		.uleb128 0x1
- 1384 011c 13       		.uleb128 0x13
- 1385 011d 00       		.byte	0
- 1386 011e 00       		.byte	0
- 1387 011f 15       		.uleb128 0x15
- 1388 0120 34       		.uleb128 0x34
- 1389 0121 00       		.byte	0
- 1390 0122 03       		.uleb128 0x3
- 1391 0123 0E       		.uleb128 0xe
- 1392 0124 3A       		.uleb128 0x3a
- 1393 0125 0B       		.uleb128 0xb
- 1394 0126 3B       		.uleb128 0x3b
- 1395 0127 05       		.uleb128 0x5
- 1396 0128 49       		.uleb128 0x49
- 1397 0129 13       		.uleb128 0x13
- 1398 012a 02       		.uleb128 0x2
- 1399 012b 17       		.uleb128 0x17
- 1400 012c 00       		.byte	0
- 1401 012d 00       		.byte	0
- 1402 012e 16       		.uleb128 0x16
- 1403 012f 34       		.uleb128 0x34
- 1404 0130 00       		.byte	0
- 1405 0131 03       		.uleb128 0x3
- 1406 0132 08       		.uleb128 0x8
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 38
-
-
- 1407 0133 3A       		.uleb128 0x3a
- 1408 0134 0B       		.uleb128 0xb
- 1409 0135 3B       		.uleb128 0x3b
- 1410 0136 05       		.uleb128 0x5
- 1411 0137 49       		.uleb128 0x49
- 1412 0138 13       		.uleb128 0x13
- 1413 0139 02       		.uleb128 0x2
- 1414 013a 17       		.uleb128 0x17
- 1415 013b 00       		.byte	0
- 1416 013c 00       		.byte	0
- 1417 013d 17       		.uleb128 0x17
- 1418 013e 2E       		.uleb128 0x2e
- 1419 013f 01       		.byte	0x1
- 1420 0140 3F       		.uleb128 0x3f
- 1421 0141 19       		.uleb128 0x19
- 1422 0142 03       		.uleb128 0x3
- 1423 0143 0E       		.uleb128 0xe
- 1424 0144 3A       		.uleb128 0x3a
- 1425 0145 0B       		.uleb128 0xb
- 1426 0146 3B       		.uleb128 0x3b
- 1427 0147 05       		.uleb128 0x5
- 1428 0148 27       		.uleb128 0x27
- 1429 0149 19       		.uleb128 0x19
- 1430 014a 11       		.uleb128 0x11
- 1431 014b 01       		.uleb128 0x1
- 1432 014c 12       		.uleb128 0x12
- 1433 014d 06       		.uleb128 0x6
- 1434 014e 40       		.uleb128 0x40
- 1435 014f 18       		.uleb128 0x18
- 1436 0150 9742     		.uleb128 0x2117
- 1437 0152 19       		.uleb128 0x19
- 1438 0153 01       		.uleb128 0x1
- 1439 0154 13       		.uleb128 0x13
- 1440 0155 00       		.byte	0
- 1441 0156 00       		.byte	0
- 1442 0157 18       		.uleb128 0x18
- 1443 0158 05       		.uleb128 0x5
- 1444 0159 00       		.byte	0
- 1445 015a 03       		.uleb128 0x3
- 1446 015b 0E       		.uleb128 0xe
- 1447 015c 3A       		.uleb128 0x3a
- 1448 015d 0B       		.uleb128 0xb
- 1449 015e 3B       		.uleb128 0x3b
- 1450 015f 05       		.uleb128 0x5
- 1451 0160 49       		.uleb128 0x49
- 1452 0161 13       		.uleb128 0x13
- 1453 0162 02       		.uleb128 0x2
- 1454 0163 17       		.uleb128 0x17
- 1455 0164 00       		.byte	0
- 1456 0165 00       		.byte	0
- 1457 0166 19       		.uleb128 0x19
- 1458 0167 34       		.uleb128 0x34
- 1459 0168 00       		.byte	0
- 1460 0169 03       		.uleb128 0x3
- 1461 016a 0E       		.uleb128 0xe
- 1462 016b 3A       		.uleb128 0x3a
- 1463 016c 0B       		.uleb128 0xb
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 39
-
-
- 1464 016d 3B       		.uleb128 0x3b
- 1465 016e 05       		.uleb128 0x5
- 1466 016f 49       		.uleb128 0x49
- 1467 0170 13       		.uleb128 0x13
- 1468 0171 02       		.uleb128 0x2
- 1469 0172 18       		.uleb128 0x18
- 1470 0173 00       		.byte	0
- 1471 0174 00       		.byte	0
- 1472 0175 1A       		.uleb128 0x1a
- 1473 0176 898201   		.uleb128 0x4109
- 1474 0179 01       		.byte	0x1
- 1475 017a 11       		.uleb128 0x11
- 1476 017b 01       		.uleb128 0x1
- 1477 017c 31       		.uleb128 0x31
- 1478 017d 13       		.uleb128 0x13
- 1479 017e 00       		.byte	0
- 1480 017f 00       		.byte	0
- 1481 0180 1B       		.uleb128 0x1b
- 1482 0181 8A8201   		.uleb128 0x410a
- 1483 0184 00       		.byte	0
- 1484 0185 02       		.uleb128 0x2
- 1485 0186 18       		.uleb128 0x18
- 1486 0187 9142     		.uleb128 0x2111
- 1487 0189 18       		.uleb128 0x18
- 1488 018a 00       		.byte	0
- 1489 018b 00       		.byte	0
- 1490 018c 1C       		.uleb128 0x1c
- 1491 018d 34       		.uleb128 0x34
- 1492 018e 00       		.byte	0
- 1493 018f 03       		.uleb128 0x3
- 1494 0190 0E       		.uleb128 0xe
- 1495 0191 3A       		.uleb128 0x3a
- 1496 0192 0B       		.uleb128 0xb
- 1497 0193 3B       		.uleb128 0x3b
- 1498 0194 05       		.uleb128 0x5
- 1499 0195 49       		.uleb128 0x49
- 1500 0196 13       		.uleb128 0x13
- 1501 0197 3F       		.uleb128 0x3f
- 1502 0198 19       		.uleb128 0x19
- 1503 0199 3C       		.uleb128 0x3c
- 1504 019a 19       		.uleb128 0x19
- 1505 019b 00       		.byte	0
- 1506 019c 00       		.byte	0
- 1507 019d 1D       		.uleb128 0x1d
- 1508 019e 21       		.uleb128 0x21
- 1509 019f 00       		.byte	0
- 1510 01a0 00       		.byte	0
- 1511 01a1 00       		.byte	0
- 1512 01a2 1E       		.uleb128 0x1e
- 1513 01a3 34       		.uleb128 0x34
- 1514 01a4 00       		.byte	0
- 1515 01a5 03       		.uleb128 0x3
- 1516 01a6 0E       		.uleb128 0xe
- 1517 01a7 3A       		.uleb128 0x3a
- 1518 01a8 0B       		.uleb128 0xb
- 1519 01a9 3B       		.uleb128 0x3b
- 1520 01aa 0B       		.uleb128 0xb
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 40
-
-
- 1521 01ab 49       		.uleb128 0x49
- 1522 01ac 13       		.uleb128 0x13
- 1523 01ad 3F       		.uleb128 0x3f
- 1524 01ae 19       		.uleb128 0x19
- 1525 01af 3C       		.uleb128 0x3c
- 1526 01b0 19       		.uleb128 0x19
- 1527 01b1 00       		.byte	0
- 1528 01b2 00       		.byte	0
- 1529 01b3 1F       		.uleb128 0x1f
- 1530 01b4 2E       		.uleb128 0x2e
- 1531 01b5 00       		.byte	0
- 1532 01b6 3F       		.uleb128 0x3f
- 1533 01b7 19       		.uleb128 0x19
- 1534 01b8 3C       		.uleb128 0x3c
- 1535 01b9 19       		.uleb128 0x19
- 1536 01ba 6E       		.uleb128 0x6e
- 1537 01bb 0E       		.uleb128 0xe
- 1538 01bc 03       		.uleb128 0x3
- 1539 01bd 0E       		.uleb128 0xe
- 1540 01be 3A       		.uleb128 0x3a
- 1541 01bf 0B       		.uleb128 0xb
- 1542 01c0 3B       		.uleb128 0x3b
- 1543 01c1 0B       		.uleb128 0xb
- 1544 01c2 00       		.byte	0
- 1545 01c3 00       		.byte	0
- 1546 01c4 00       		.byte	0
- 1547              		.section	.debug_loc,"",%progbits
- 1548              	.Ldebug_loc0:
- 1549              	.LLST0:
- 1550 0000 00000000 		.4byte	.LVL0
- 1551 0004 CA000000 		.4byte	.LVL24
- 1552 0008 0100     		.2byte	0x1
- 1553 000a 50       		.byte	0x50
- 1554 000b CA000000 		.4byte	.LVL24
- 1555 000f DC000000 		.4byte	.LFE63
- 1556 0013 0400     		.2byte	0x4
- 1557 0015 F3       		.byte	0xf3
- 1558 0016 01       		.uleb128 0x1
- 1559 0017 50       		.byte	0x50
- 1560 0018 9F       		.byte	0x9f
- 1561 0019 00000000 		.4byte	0
- 1562 001d 00000000 		.4byte	0
- 1563              	.LLST1:
- 1564 0021 08000000 		.4byte	.LVL2
- 1565 0025 B2000000 		.4byte	.LVL18
- 1566 0029 0100     		.2byte	0x1
- 1567 002b 52       		.byte	0x52
- 1568 002c B4000000 		.4byte	.LVL19
- 1569 0030 B6000000 		.4byte	.LVL20
- 1570 0034 0100     		.2byte	0x1
- 1571 0036 52       		.byte	0x52
- 1572 0037 BA000000 		.4byte	.LVL21
- 1573 003b C4000000 		.4byte	.LVL23
- 1574 003f 0100     		.2byte	0x1
- 1575 0041 52       		.byte	0x52
- 1576 0042 00000000 		.4byte	0
- 1577 0046 00000000 		.4byte	0
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 41
-
-
- 1578              	.LLST2:
- 1579 004a 5C000000 		.4byte	.LVL10
- 1580 004e 60000000 		.4byte	.LVL11
- 1581 0052 0200     		.2byte	0x2
- 1582 0054 30       		.byte	0x30
- 1583 0055 9F       		.byte	0x9f
- 1584 0056 60000000 		.4byte	.LVL11
- 1585 005a 7E000000 		.4byte	.LVL12
- 1586 005e 0100     		.2byte	0x1
- 1587 0060 53       		.byte	0x53
- 1588 0061 80000000 		.4byte	.LVL13
- 1589 0065 90000000 		.4byte	.LVL14
- 1590 0069 0100     		.2byte	0x1
- 1591 006b 53       		.byte	0x53
- 1592 006c 00000000 		.4byte	0
- 1593 0070 00000000 		.4byte	0
- 1594              	.LLST3:
- 1595 0074 08000000 		.4byte	.LVL2
- 1596 0078 B6000000 		.4byte	.LVL20
- 1597 007c 0100     		.2byte	0x1
- 1598 007e 57       		.byte	0x57
- 1599 007f BA000000 		.4byte	.LVL21
- 1600 0083 C4000000 		.4byte	.LVL23
- 1601 0087 0100     		.2byte	0x1
- 1602 0089 57       		.byte	0x57
- 1603 008a 00000000 		.4byte	0
- 1604 008e 00000000 		.4byte	0
- 1605              	.LLST4:
- 1606 0092 02000000 		.4byte	.LVL1
- 1607 0096 08000000 		.4byte	.LVL2
- 1608 009a 0200     		.2byte	0x2
- 1609 009c 30       		.byte	0x30
- 1610 009d 9F       		.byte	0x9f
- 1611 009e 08000000 		.4byte	.LVL2
- 1612 00a2 C2000000 		.4byte	.LVL22
- 1613 00a6 0100     		.2byte	0x1
- 1614 00a8 56       		.byte	0x56
- 1615 00a9 C4000000 		.4byte	.LVL23
- 1616 00ad CC000000 		.4byte	.LVL25
- 1617 00b1 0100     		.2byte	0x1
- 1618 00b3 56       		.byte	0x56
- 1619 00b4 00000000 		.4byte	0
- 1620 00b8 00000000 		.4byte	0
- 1621              	.LLST5:
- 1622 00bc 02000000 		.4byte	.LVL1
- 1623 00c0 08000000 		.4byte	.LVL2
- 1624 00c4 0200     		.2byte	0x2
- 1625 00c6 31       		.byte	0x31
- 1626 00c7 9F       		.byte	0x9f
- 1627 00c8 08000000 		.4byte	.LVL2
- 1628 00cc 20000000 		.4byte	.LVL5
- 1629 00d0 0100     		.2byte	0x1
- 1630 00d2 51       		.byte	0x51
- 1631 00d3 A8000000 		.4byte	.LVL15
- 1632 00d7 AA000000 		.4byte	.LVL16
- 1633 00db 0200     		.2byte	0x2
- 1634 00dd 30       		.byte	0x30
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 42
-
-
- 1635 00de 9F       		.byte	0x9f
- 1636 00df AA000000 		.4byte	.LVL16
- 1637 00e3 DC000000 		.4byte	.LFE63
- 1638 00e7 0100     		.2byte	0x1
- 1639 00e9 51       		.byte	0x51
- 1640 00ea 00000000 		.4byte	0
- 1641 00ee 00000000 		.4byte	0
- 1642              	.LLST6:
- 1643 00f2 16000000 		.4byte	.LVL3
- 1644 00f6 1E000000 		.4byte	.LVL4
- 1645 00fa 0200     		.2byte	0x2
- 1646 00fc 30       		.byte	0x30
- 1647 00fd 9F       		.byte	0x9f
- 1648 00fe 1E000000 		.4byte	.LVL4
- 1649 0102 4E000000 		.4byte	.LVL7
- 1650 0106 0100     		.2byte	0x1
- 1651 0108 53       		.byte	0x53
- 1652 0109 4E000000 		.4byte	.LVL7
- 1653 010d 50000000 		.4byte	.LVL8
- 1654 0111 0100     		.2byte	0x1
- 1655 0113 5E       		.byte	0x5e
- 1656 0114 50000000 		.4byte	.LVL8
- 1657 0118 54000000 		.4byte	.LVL9
- 1658 011c 0100     		.2byte	0x1
- 1659 011e 53       		.byte	0x53
- 1660 011f 54000000 		.4byte	.LVL9
- 1661 0123 AA000000 		.4byte	.LVL16
- 1662 0127 0100     		.2byte	0x1
- 1663 0129 5E       		.byte	0x5e
- 1664 012a 00000000 		.4byte	0
- 1665 012e 00000000 		.4byte	0
- 1666              	.LLST7:
- 1667 0132 00000000 		.4byte	.LVL26
- 1668 0136 06000000 		.4byte	.LVL27
- 1669 013a 0100     		.2byte	0x1
- 1670 013c 50       		.byte	0x50
- 1671 013d 06000000 		.4byte	.LVL27
- 1672 0141 1C000000 		.4byte	.LFE64
- 1673 0145 0400     		.2byte	0x4
- 1674 0147 F3       		.byte	0xf3
- 1675 0148 01       		.uleb128 0x1
- 1676 0149 50       		.byte	0x50
- 1677 014a 9F       		.byte	0x9f
- 1678 014b 00000000 		.4byte	0
- 1679 014f 00000000 		.4byte	0
- 1680              	.LLST8:
- 1681 0153 00000000 		.4byte	.LVL28
- 1682 0157 3C000000 		.4byte	.LVL33
- 1683 015b 0200     		.2byte	0x2
- 1684 015d 30       		.byte	0x30
- 1685 015e 9F       		.byte	0x9f
- 1686 015f 3C000000 		.4byte	.LVL33
- 1687 0163 4C000000 		.4byte	.LFE65
- 1688 0167 0100     		.2byte	0x1
- 1689 0169 50       		.byte	0x50
- 1690 016a 00000000 		.4byte	0
- 1691 016e 00000000 		.4byte	0
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 43
-
-
- 1692              	.LLST9:
- 1693 0172 0E000000 		.4byte	.LVL29
- 1694 0176 26000000 		.4byte	.LVL30
- 1695 017a 0100     		.2byte	0x1
- 1696 017c 53       		.byte	0x53
- 1697 017d 28000000 		.4byte	.LVL31
- 1698 0181 30000000 		.4byte	.LVL32
- 1699 0185 0100     		.2byte	0x1
- 1700 0187 53       		.byte	0x53
- 1701 0188 00000000 		.4byte	0
- 1702 018c 00000000 		.4byte	0
- 1703              	.LLST10:
- 1704 0190 00000000 		.4byte	.LVL34
- 1705 0194 3C000000 		.4byte	.LVL39
- 1706 0198 0200     		.2byte	0x2
- 1707 019a 30       		.byte	0x30
- 1708 019b 9F       		.byte	0x9f
- 1709 019c 3C000000 		.4byte	.LVL39
- 1710 01a0 4C000000 		.4byte	.LFE66
- 1711 01a4 0100     		.2byte	0x1
- 1712 01a6 50       		.byte	0x50
- 1713 01a7 00000000 		.4byte	0
- 1714 01ab 00000000 		.4byte	0
- 1715              	.LLST11:
- 1716 01af 0E000000 		.4byte	.LVL35
- 1717 01b3 26000000 		.4byte	.LVL36
- 1718 01b7 0100     		.2byte	0x1
- 1719 01b9 53       		.byte	0x53
- 1720 01ba 28000000 		.4byte	.LVL37
- 1721 01be 30000000 		.4byte	.LVL38
- 1722 01c2 0100     		.2byte	0x1
- 1723 01c4 53       		.byte	0x53
- 1724 01c5 00000000 		.4byte	0
- 1725 01c9 00000000 		.4byte	0
- 1726              	.LLST12:
- 1727 01cd 00000000 		.4byte	.LVL40
- 1728 01d1 1A000000 		.4byte	.LVL41
- 1729 01d5 0200     		.2byte	0x2
- 1730 01d7 30       		.byte	0x30
- 1731 01d8 9F       		.byte	0x9f
- 1732 01d9 1A000000 		.4byte	.LVL41
- 1733 01dd 20000000 		.4byte	.LFE67
- 1734 01e1 0100     		.2byte	0x1
- 1735 01e3 50       		.byte	0x50
- 1736 01e4 00000000 		.4byte	0
- 1737 01e8 00000000 		.4byte	0
- 1738              	.LLST13:
- 1739 01ec 00000000 		.4byte	.LVL42
- 1740 01f0 2C000000 		.4byte	.LVL44
- 1741 01f4 0100     		.2byte	0x1
- 1742 01f6 50       		.byte	0x50
- 1743 01f7 2C000000 		.4byte	.LVL44
- 1744 01fb 6C000000 		.4byte	.LFE68
- 1745 01ff 0400     		.2byte	0x4
- 1746 0201 F3       		.byte	0xf3
- 1747 0202 01       		.uleb128 0x1
- 1748 0203 50       		.byte	0x50
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 44
-
-
- 1749 0204 9F       		.byte	0x9f
- 1750 0205 00000000 		.4byte	0
- 1751 0209 00000000 		.4byte	0
- 1752              	.LLST14:
- 1753 020d 28000000 		.4byte	.LVL43
- 1754 0211 5B000000 		.4byte	.LVL48-1
- 1755 0215 0100     		.2byte	0x1
- 1756 0217 5E       		.byte	0x5e
- 1757 0218 00000000 		.4byte	0
- 1758 021c 00000000 		.4byte	0
- 1759              	.LLST15:
- 1760 0220 3E000000 		.4byte	.LVL45
- 1761 0224 42000000 		.4byte	.LVL46
- 1762 0228 0200     		.2byte	0x2
- 1763 022a 30       		.byte	0x30
- 1764 022b 9F       		.byte	0x9f
- 1765 022c 42000000 		.4byte	.LVL46
- 1766 0230 5B000000 		.4byte	.LVL48-1
- 1767 0234 0100     		.2byte	0x1
- 1768 0236 53       		.byte	0x53
- 1769 0237 00000000 		.4byte	0
- 1770 023b 00000000 		.4byte	0
- 1771              		.section	.debug_aranges,"",%progbits
- 1772 0000 44000000 		.4byte	0x44
- 1773 0004 0200     		.2byte	0x2
- 1774 0006 00000000 		.4byte	.Ldebug_info0
- 1775 000a 04       		.byte	0x4
- 1776 000b 00       		.byte	0
- 1777 000c 0000     		.2byte	0
- 1778 000e 0000     		.2byte	0
- 1779 0010 00000000 		.4byte	.LFB63
- 1780 0014 DC000000 		.4byte	.LFE63-.LFB63
- 1781 0018 00000000 		.4byte	.LFB64
- 1782 001c 1C000000 		.4byte	.LFE64-.LFB64
- 1783 0020 00000000 		.4byte	.LFB65
- 1784 0024 4C000000 		.4byte	.LFE65-.LFB65
- 1785 0028 00000000 		.4byte	.LFB66
- 1786 002c 4C000000 		.4byte	.LFE66-.LFB66
- 1787 0030 00000000 		.4byte	.LFB67
- 1788 0034 20000000 		.4byte	.LFE67-.LFB67
- 1789 0038 00000000 		.4byte	.LFB68
- 1790 003c 6C000000 		.4byte	.LFE68-.LFB68
- 1791 0040 00000000 		.4byte	0
- 1792 0044 00000000 		.4byte	0
- 1793              		.section	.debug_ranges,"",%progbits
- 1794              	.Ldebug_ranges0:
- 1795 0000 00000000 		.4byte	.LFB63
- 1796 0004 DC000000 		.4byte	.LFE63
- 1797 0008 00000000 		.4byte	.LFB64
- 1798 000c 1C000000 		.4byte	.LFE64
- 1799 0010 00000000 		.4byte	.LFB65
- 1800 0014 4C000000 		.4byte	.LFE65
- 1801 0018 00000000 		.4byte	.LFB66
- 1802 001c 4C000000 		.4byte	.LFE66
- 1803 0020 00000000 		.4byte	.LFB67
- 1804 0024 20000000 		.4byte	.LFE67
- 1805 0028 00000000 		.4byte	.LFB68
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 45
-
-
- 1806 002c 6C000000 		.4byte	.LFE68
- 1807 0030 00000000 		.4byte	0
- 1808 0034 00000000 		.4byte	0
- 1809              		.section	.debug_line,"",%progbits
- 1810              	.Ldebug_line0:
- 1811 0000 BF020000 		.section	.debug_str,"MS",%progbits,1
- 1811      02007001 
- 1811      00000201 
- 1811      FB0E0D00 
- 1811      01010101 
- 1812              	.LASF59:
- 1813 0000 63616E5F 		.ascii	"can_receive\000"
- 1813      72656365 
- 1813      69766500 
- 1814              	.LASF41:
- 1815 000c 72657375 		.ascii	"result\000"
- 1815      6C7400
- 1816              	.LASF24:
- 1817 0013 43414E5F 		.ascii	"CAN_DATA_BYTES\000"
- 1817      44415441 
- 1817      5F425954 
- 1817      455300
- 1818              	.LASF2:
- 1819 0022 73686F72 		.ascii	"short int\000"
- 1819      7420696E 
- 1819      7400
- 1820              	.LASF50:
- 1821 002c 43414E5F 		.ascii	"CAN_ReceiveMsg\000"
- 1821      52656365 
- 1821      6976654D 
- 1821      736700
- 1822              	.LASF21:
- 1823 003b 73697A65 		.ascii	"sizetype\000"
- 1823      74797065 
- 1823      00
- 1824              	.LASF37:
- 1825 0044 74786461 		.ascii	"txdata\000"
- 1825      746100
- 1826              	.LASF29:
- 1827 004b 72786461 		.ascii	"rxdata\000"
- 1827      746100
- 1828              	.LASF49:
- 1829 0052 43414E5F 		.ascii	"CAN_TxCancel\000"
- 1829      54784361 
- 1829      6E63656C 
- 1829      00
- 1830              	.LASF40:
- 1831 005f 72657472 		.ascii	"retry\000"
- 1831      7900
- 1832              	.LASF11:
- 1833 0065 75696E74 		.ascii	"uint8_t\000"
- 1833      385F7400 
- 1834              	.LASF13:
- 1835 006d 75696E74 		.ascii	"uint8\000"
- 1835      3800
- 1836              	.LASF28:
- 1837 0073 72786964 		.ascii	"rxid\000"
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 46
-
-
- 1837      00
- 1838              	.LASF31:
- 1839 0078 72786163 		.ascii	"rxacr\000"
- 1839      7200
- 1840              	.LASF15:
- 1841 007e 666C6F61 		.ascii	"float\000"
- 1841      7400
- 1842              	.LASF8:
- 1843 0084 6C6F6E67 		.ascii	"long long int\000"
- 1843      206C6F6E 
- 1843      6720696E 
- 1843      7400
- 1844              	.LASF25:
- 1845 0092 43414E5F 		.ascii	"CAN_REG_32\000"
- 1845      5245475F 
- 1845      333200
- 1846              	.LASF35:
- 1847 009d 7478636D 		.ascii	"txcmd\000"
- 1847      6400
- 1848              	.LASF6:
- 1849 00a3 6C6F6E67 		.ascii	"long int\000"
- 1849      20696E74 
- 1849      00
- 1850              	.LASF39:
- 1851 00ac 73686966 		.ascii	"shift\000"
- 1851      7400
- 1852              	.LASF7:
- 1853 00b2 6C6F6E67 		.ascii	"long unsigned int\000"
- 1853      20756E73 
- 1853      69676E65 
- 1853      6420696E 
- 1853      7400
- 1854              	.LASF4:
- 1855 00c4 5F5F7569 		.ascii	"__uint8_t\000"
- 1855      6E74385F 
- 1855      7400
- 1856              	.LASF46:
- 1857 00ce 43414E5F 		.ascii	"CAN_SendMsgDash_status\000"
- 1857      53656E64 
- 1857      4D736744 
- 1857      6173685F 
- 1857      73746174 
- 1858              	.LASF36:
- 1859 00e5 74786964 		.ascii	"txid\000"
- 1859      00
- 1860              	.LASF52:
- 1861 00ea 74657374 		.ascii	"test\000"
- 1861      00
- 1862              	.LASF23:
- 1863 00ef 62797465 		.ascii	"byte\000"
- 1863      00
- 1864              	.LASF47:
- 1865 00f4 43414E5F 		.ascii	"CAN_SendMsgDash_cmd\000"
- 1865      53656E64 
- 1865      4D736744 
- 1865      6173685F 
- 1865      636D6400 
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 47
-
-
- 1866              	.LASF20:
- 1867 0108 6C6F6E67 		.ascii	"long double\000"
- 1867      20646F75 
- 1867      626C6500 
- 1868              	.LASF32:
- 1869 0114 7278616D 		.ascii	"rxamrd\000"
- 1869      726400
- 1870              	.LASF1:
- 1871 011b 756E7369 		.ascii	"unsigned char\000"
- 1871      676E6564 
- 1871      20636861 
- 1871      7200
- 1872              	.LASF0:
- 1873 0129 7369676E 		.ascii	"signed char\000"
- 1873      65642063 
- 1873      68617200 
- 1874              	.LASF9:
- 1875 0135 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1875      206C6F6E 
- 1875      6720756E 
- 1875      7369676E 
- 1875      65642069 
- 1876              	.LASF10:
- 1877 014c 756E7369 		.ascii	"unsigned int\000"
- 1877      676E6564 
- 1877      20696E74 
- 1877      00
- 1878              	.LASF22:
- 1879 0159 43414E5F 		.ascii	"CAN_DATA_BYTES_MSG\000"
- 1879      44415441 
- 1879      5F425954 
- 1879      45535F4D 
- 1879      534700
- 1880              	.LASF19:
- 1881 016c 72656733 		.ascii	"reg32\000"
- 1881      3200
- 1882              	.LASF3:
- 1883 0172 73686F72 		.ascii	"short unsigned int\000"
- 1883      7420756E 
- 1883      7369676E 
- 1883      65642069 
- 1883      6E7400
- 1884              	.LASF58:
- 1885 0185 433A5C55 		.ascii	"C:\\Users\\fiona\\OneDrive\\Documents\\FE3-Dashboar"
- 1885      73657273 
- 1885      5C66696F 
- 1885      6E615C4F 
- 1885      6E654472 
- 1886 01b3 645C4461 		.ascii	"d\\Dashboard.cydsn\000"
- 1886      7368626F 
- 1886      6172642E 
- 1886      63796473 
- 1886      6E00
- 1887              	.LASF17:
- 1888 01c5 63686172 		.ascii	"char\000"
- 1888      00
- 1889              	.LASF34:
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 48
-
-
- 1890 01ca 43414E5F 		.ascii	"CAN_RX_STRUCT\000"
- 1890      52585F53 
- 1890      54525543 
- 1890      5400
- 1891              	.LASF51:
- 1892 01d8 72784D61 		.ascii	"rxMailbox\000"
- 1892      696C626F 
- 1892      7800
- 1893              	.LASF12:
- 1894 01e2 696E7433 		.ascii	"int32_t\000"
- 1894      325F7400 
- 1895              	.LASF27:
- 1896 01ea 7278636D 		.ascii	"rxcmd\000"
- 1896      6400
- 1897              	.LASF53:
- 1898 01f0 64617461 		.ascii	"data\000"
- 1898      00
- 1899              	.LASF38:
- 1900 01f5 43414E5F 		.ascii	"CAN_TX_STRUCT\000"
- 1900      54585F53 
- 1900      54525543 
- 1900      5400
- 1901              	.LASF55:
- 1902 0203 63616E5F 		.ascii	"can_buffer\000"
- 1902      62756666 
- 1902      657200
- 1903              	.LASF14:
- 1904 020e 75696E74 		.ascii	"uint32\000"
- 1904      333200
- 1905              	.LASF18:
- 1906 0215 72656738 		.ascii	"reg8\000"
- 1906      00
- 1907              	.LASF43:
- 1908 021a 6D657373 		.ascii	"message\000"
- 1908      61676500 
- 1909              	.LASF26:
- 1910 0222 43414E5F 		.ascii	"CAN_TX_MSG\000"
- 1910      54585F4D 
- 1910      534700
- 1911              	.LASF45:
- 1912 022d 43414E5F 		.ascii	"CAN_SendMsg\000"
- 1912      53656E64 
- 1912      4D736700 
- 1913              	.LASF44:
- 1914 0239 62756666 		.ascii	"bufferId\000"
- 1914      65724964 
- 1914      00
- 1915              	.LASF48:
- 1916 0242 43414E5F 		.ascii	"CAN_SendMsgSOC\000"
- 1916      53656E64 
- 1916      4D736753 
- 1916      4F4300
- 1917              	.LASF5:
- 1918 0251 5F5F696E 		.ascii	"__int32_t\000"
- 1918      7433325F 
- 1918      7400
- 1919              	.LASF57:
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccErtkvh.s 			page 49
-
-
- 1920 025b 47656E65 		.ascii	"Generated_Source\\PSoC5\\CAN_TX_RX_func.c\000"
- 1920      72617465 
- 1920      645F536F 
- 1920      75726365 
- 1920      5C50536F 
- 1921              	.LASF33:
- 1922 0283 72786163 		.ascii	"rxacrd\000"
- 1922      726400
- 1923              	.LASF16:
- 1924 028a 646F7562 		.ascii	"double\000"
- 1924      6C6500
- 1925              	.LASF42:
- 1926 0291 72656754 		.ascii	"regTemp\000"
- 1926      656D7000 
- 1927              	.LASF54:
- 1928 0299 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 1928      52784275 
- 1928      66666572 
- 1928      00
- 1929              	.LASF56:
- 1930 02a6 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1930      43313120 
- 1930      352E342E 
- 1930      31203230 
- 1930      31363036 
- 1931 02d9 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 1931      20726576 
- 1931      6973696F 
- 1931      6E203233 
- 1931      37373135 
- 1932 030c 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1932      66756E63 
- 1932      74696F6E 
- 1932      2D736563 
- 1932      74696F6E 
- 1933              	.LASF30:
- 1934 0334 7278616D 		.ascii	"rxamr\000"
- 1934      7200
- 1935              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
-=======
  508:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #if (CAN_TX6_FUNC_ENABLE)
  509:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     /*******************************************************************************
  510:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg6
@@ -3150,7 +1018,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  550:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
  551:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(6u),
  552:Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(6u)) | CAN_SEND_MESSAGE);
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 18
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 18
 
 
  553:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
@@ -3210,7 +1078,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  607:Generated_Source\PSoC5/CAN_TX_RX_func.c ****         return (result);
  608:Generated_Source\PSoC5/CAN_TX_RX_func.c ****     }
  609:Generated_Source\PSoC5/CAN_TX_RX_func.c **** #endif /* CAN_TX7_FUNC_ENABLE */
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 19
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 19
 
 
  610:Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
@@ -3270,7 +1138,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  642:Generated_Source\PSoC5/CAN_TX_RX_func.c ****             int ID = CAN_GET_RX_ID(rxMailbox);
  425              		.loc 1 642 0
  426 0012 A378     		ldrb	r3, [r4, #2]	@ zero_extendqisi2
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 20
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 20
 
 
  427 0014 13F0100F 		tst	r3, #16
@@ -3330,7 +1198,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  472 0054 7146     		mov	r1, lr
  473 0056 6846     		mov	r0, sp
  474 0058 FFF7FEFF 		bl	can_receive
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 21
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 21
 
 
  475              	.LVL46:
@@ -3390,7 +1258,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  495              		.text
  496              	.Letext0:
  497              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 22
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 22
 
 
  498              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
@@ -3407,9 +1275,9 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  509 0006 00000000 		.4byte	.Ldebug_abbrev0
  510 000a 04       		.byte	0x4
  511 000b 01       		.uleb128 0x1
- 512 000c A2020000 		.4byte	.LASF57
+ 512 000c 9A020000 		.4byte	.LASF57
  513 0010 0C       		.byte	0xc
- 514 0011 57020000 		.4byte	.LASF58
+ 514 0011 4F020000 		.4byte	.LASF58
  515 0015 8B010000 		.4byte	.LASF59
  516 0019 00000000 		.4byte	.Ldebug_ranges0+0
  517 001d 00000000 		.4byte	0
@@ -3436,7 +1304,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  538 0047 07       		.byte	0x7
  539 0048 78010000 		.4byte	.LASF3
  540 004c 03       		.uleb128 0x3
- 541 004d 4D020000 		.4byte	.LASF5
+ 541 004d 45020000 		.4byte	.LASF5
  542 0051 02       		.byte	0x2
  543 0052 3F       		.byte	0x3f
  544 0053 57000000 		.4byte	0x57
@@ -3450,7 +1318,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  552 0061 BD000000 		.4byte	.LASF7
  553 0065 02       		.uleb128 0x2
  554 0066 08       		.byte	0x8
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 23
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 23
 
 
  555 0067 05       		.byte	0x5
@@ -3473,7 +1341,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  572 0087 18       		.byte	0x18
  573 0088 2C000000 		.4byte	0x2c
  574 008c 03       		.uleb128 0x3
- 575 008d E8010000 		.4byte	.LASF12
+ 575 008d E0010000 		.4byte	.LASF12
  576 0091 03       		.byte	0x3
  577 0092 2C       		.byte	0x2c
  578 0093 4C000000 		.4byte	0x4c
@@ -3483,7 +1351,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  582 009d 3801     		.2byte	0x138
  583 009f 37000000 		.4byte	0x37
  584 00a3 05       		.uleb128 0x5
- 585 00a4 14020000 		.4byte	.LASF14
+ 585 00a4 0C020000 		.4byte	.LASF14
  586 00a8 04       		.byte	0x4
  587 00a9 3A01     		.2byte	0x13a
  588 00ab 5E000000 		.4byte	0x5e
@@ -3494,13 +1362,13 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  593 00b6 02       		.uleb128 0x2
  594 00b7 08       		.byte	0x8
  595 00b8 04       		.byte	0x4
- 596 00b9 86020000 		.4byte	.LASF16
+ 596 00b9 7E020000 		.4byte	.LASF16
  597 00bd 02       		.uleb128 0x2
  598 00be 01       		.byte	0x1
  599 00bf 08       		.byte	0x8
- 600 00c0 CB010000 		.4byte	.LASF17
+ 600 00c0 C3010000 		.4byte	.LASF17
  601 00c4 05       		.uleb128 0x5
- 602 00c5 1B020000 		.4byte	.LASF18
+ 602 00c5 13020000 		.4byte	.LASF18
  603 00c9 04       		.byte	0x4
  604 00ca E201     		.2byte	0x1e2
  605 00cc D0000000 		.4byte	0xd0
@@ -3510,7 +1378,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  609 00d6 72010000 		.4byte	.LASF19
  610 00da 04       		.byte	0x4
  611 00db E401     		.2byte	0x1e4
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 24
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 24
 
 
  612 00dd E1000000 		.4byte	0xe1
@@ -3570,7 +1438,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  666 0149 06       		.uleb128 0x6
  667 014a 39010000 		.4byte	0x139
  668 014e 03       		.uleb128 0x3
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 25
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 25
 
 
  669 014f 13000000 		.4byte	.LASF24
@@ -3630,7 +1498,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  723 01ba 646C6300 		.ascii	"dlc\000"
  724 01be 05       		.byte	0x5
  725 01bf 86       		.byte	0x86
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 26
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 26
 
 
  726 01c0 97000000 		.4byte	0x97
@@ -3652,7 +1520,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  742 01df 04       		.byte	0x4
  743 01e0 19010000 		.4byte	0x119
  744 01e4 03       		.uleb128 0x3
- 745 01e5 28020000 		.4byte	.LASF26
+ 745 01e5 20020000 		.4byte	.LASF26
  746 01e9 05       		.byte	0x5
  747 01ea 8C       		.byte	0x8c
  748 01eb 8E010000 		.4byte	0x18e
@@ -3662,7 +1530,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  752 01f2 A0       		.byte	0xa0
  753 01f3 4C020000 		.4byte	0x24c
  754 01f7 08       		.uleb128 0x8
- 755 01f8 F0010000 		.4byte	.LASF27
+ 755 01f8 E8010000 		.4byte	.LASF27
  756 01fc 05       		.byte	0x5
  757 01fd A2       		.byte	0xa2
  758 01fe 83010000 		.4byte	0x183
@@ -3680,7 +1548,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  770 0216 4E010000 		.4byte	0x14e
  771 021a 08       		.byte	0x8
  772 021b 08       		.uleb128 0x8
- 773 021c 30030000 		.4byte	.LASF30
+ 773 021c 28030000 		.4byte	.LASF30
  774 0220 05       		.byte	0x5
  775 0221 A5       		.byte	0xa5
  776 0222 83010000 		.4byte	0x183
@@ -3690,7 +1558,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  780 022c 05       		.byte	0x5
  781 022d A6       		.byte	0xa6
  782 022e 83010000 		.4byte	0x183
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 27
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 27
 
 
  783 0232 14       		.byte	0x14
@@ -3701,14 +1569,14 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  788 023a 83010000 		.4byte	0x183
  789 023e 18       		.byte	0x18
  790 023f 08       		.uleb128 0x8
- 791 0240 7F020000 		.4byte	.LASF33
+ 791 0240 77020000 		.4byte	.LASF33
  792 0244 05       		.byte	0x5
  793 0245 A8       		.byte	0xa8
  794 0246 83010000 		.4byte	0x183
  795 024a 1C       		.byte	0x1c
  796 024b 00       		.byte	0
  797 024c 03       		.uleb128 0x3
- 798 024d D0010000 		.4byte	.LASF34
+ 798 024d C8010000 		.4byte	.LASF34
  799 0251 05       		.byte	0x5
  800 0252 A9       		.byte	0xa9
  801 0253 EF010000 		.4byte	0x1ef
@@ -3724,7 +1592,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  811 0266 83010000 		.4byte	0x183
  812 026a 00       		.byte	0
  813 026b 08       		.uleb128 0x8
- 814 026c 48020000 		.4byte	.LASF36
+ 814 026c 40020000 		.4byte	.LASF36
  815 0270 05       		.byte	0x5
  816 0271 AF       		.byte	0xaf
  817 0272 83010000 		.4byte	0x183
@@ -3737,7 +1605,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  824 0282 08       		.byte	0x8
  825 0283 00       		.byte	0
  826 0284 03       		.uleb128 0x3
- 827 0285 FB010000 		.4byte	.LASF38
+ 827 0285 F3010000 		.4byte	.LASF38
  828 0289 05       		.byte	0x5
  829 028a B1       		.byte	0xb1
  830 028b 57020000 		.4byte	0x257
@@ -3749,8 +1617,8 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  836 029d 07       		.byte	0x7
  837 029e 00       		.byte	0
  838 029f 0D       		.uleb128 0xd
- 839 02a0 33020000 		.4byte	.LASF45
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 28
+ 839 02a0 2B020000 		.4byte	.LASF45
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 28
 
 
  840 02a4 01       		.byte	0x1
@@ -3762,7 +1630,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  846 02b3 9C       		.byte	0x9c
  847 02b4 1E030000 		.4byte	0x31e
  848 02b8 0E       		.uleb128 0xe
- 849 02b9 20020000 		.4byte	.LASF43
+ 849 02b9 18020000 		.4byte	.LASF43
  850 02bd 01       		.byte	0x1
  851 02be 37       		.byte	0x37
  852 02bf 1E030000 		.4byte	0x31e
@@ -3798,7 +1666,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  882 0306 97000000 		.4byte	0x97
  883 030a BC000000 		.4byte	.LLST5
  884 030e 10       		.uleb128 0x10
- 885 030f 8D020000 		.4byte	.LASF42
+ 885 030f 85020000 		.4byte	.LASF42
  886 0313 01       		.byte	0x1
  887 0314 3C       		.byte	0x3c
  888 0315 A3000000 		.4byte	0xa3
@@ -3810,7 +1678,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  894 0324 11       		.uleb128 0x11
  895 0325 E4010000 		.4byte	0x1e4
  896 0329 12       		.uleb128 0x12
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 29
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 29
 
 
  897 032a 5D000000 		.4byte	.LASF48
@@ -3822,7 +1690,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  903 0339 9C       		.byte	0x9c
  904 033a 4E030000 		.4byte	0x34e
  905 033e 0E       		.uleb128 0xe
- 906 033f 3F020000 		.4byte	.LASF44
+ 906 033f 37020000 		.4byte	.LASF44
  907 0343 01       		.byte	0x1
  908 0344 B5       		.byte	0xb5
  909 0345 97000000 		.4byte	0x97
@@ -3870,7 +1738,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  951 03ad 01       		.byte	0x1
  952 03ae 0C01     		.2byte	0x10c
  953 03b0 97000000 		.4byte	0x97
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 30
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 30
 
 
  954 03b4 90010000 		.4byte	.LLST10
@@ -3895,7 +1763,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  973 03e2 9C       		.byte	0x9c
  974 03e3 4D040000 		.4byte	0x44d
  975 03e7 18       		.uleb128 0x18
- 976 03e8 DE010000 		.4byte	.LASF50
+ 976 03e8 D6010000 		.4byte	.LASF50
  977 03ec 01       		.byte	0x1
  978 03ed 7702     		.2byte	0x277
  979 03ef 97000000 		.4byte	0x97
@@ -3918,7 +1786,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  996 041c 91       		.byte	0x91
  997 041d 48       		.sleb128 -56
  998 041e 19       		.uleb128 0x19
- 999 041f F6010000 		.4byte	.LASF52
+ 999 041f EE010000 		.4byte	.LASF52
  1000 0423 01       		.byte	0x1
  1001 0424 8402     		.2byte	0x284
  1002 0426 8F020000 		.4byte	0x28f
@@ -3930,7 +1798,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  1008 0430 01       		.byte	0x1
  1009 0431 8502     		.2byte	0x285
  1010 0433 73000000 		.4byte	0x73
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 31
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 31
 
 
  1011 0437 01020000 		.4byte	.LLST14
@@ -3990,7 +1858,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  1065 048a 57       		.byte	0x57
  1066 048b 7D       		.byte	0x7d
  1067 048c 57       		.byte	0x57
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 32
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 32
 
 
  1068 048d 1C       		.byte	0x1c
@@ -4050,7 +1918,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  1122 04c3 1C       		.byte	0x1c
  1123 04c4 08       		.byte	0x8
  1124 04c5 08       		.byte	0x8
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 33
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 33
 
 
  1125 04c6 1C       		.byte	0x1c
@@ -4110,7 +1978,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  1179 04fc 1E       		.byte	0x1e
  1180 04fd 10       		.byte	0x10
  1181 04fe 10       		.byte	0x10
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 34
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 34
 
 
  1182 04ff 10       		.byte	0x10
@@ -4170,7 +2038,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  1236 0535 07       		.byte	0x7
  1237 0536 03       		.byte	0x3
  1238 0537 00       		.byte	0
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 35
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 35
 
 
  1239 0538 00       		.byte	0
@@ -4230,7 +2098,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  1293 056e 46       		.byte	0x46
  1294 056f 21       		.byte	0x21
  1295 0570 41       		.byte	0x41
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 36
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 36
 
 
  1296 0571 49       		.byte	0x49
@@ -4290,7 +2158,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  1350 05a7 41       		.byte	0x41
  1351 05a8 22       		.byte	0x22
  1352 05a9 14       		.byte	0x14
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 37
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 37
 
 
  1353 05aa 08       		.byte	0x8
@@ -4350,7 +2218,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  1407 05e0 41       		.byte	0x41
  1408 05e1 00       		.byte	0
  1409 05e2 20       		.byte	0x20
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 38
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 38
 
 
  1410 05e3 40       		.byte	0x40
@@ -4410,7 +2278,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  1464 0619 3F       		.byte	0x3f
  1465 061a 40       		.byte	0x40
  1466 061b 40       		.byte	0x40
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 39
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 39
 
 
  1467 061c 40       		.byte	0x40
@@ -4470,7 +2338,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  1521 0652 07       		.byte	0x7
  1522 0653 08       		.byte	0x8
  1523 0654 00       		.byte	0
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 40
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 40
 
 
  1524 0655 20       		.byte	0x20
@@ -4530,7 +2398,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  1578 068b 00       		.byte	0
  1579 068c 00       		.byte	0
  1580 068d 41       		.byte	0x41
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 41
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 41
 
 
  1581 068e 7F       		.byte	0x7f
@@ -4590,7 +2458,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  1635 06c4 40       		.byte	0x40
  1636 06c5 30       		.byte	0x30
  1637 06c6 40       		.byte	0x40
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 42
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 42
 
 
  1638 06c7 3C       		.byte	0x3c
@@ -4650,7 +2518,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  1692 06fd 55       		.byte	0x55
  1693 06fe 59       		.byte	0x59
  1694 06ff 21       		.byte	0x21
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 43
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 43
 
 
  1695 0700 55       		.byte	0x55
@@ -4710,7 +2578,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  1749 0736 7D       		.byte	0x7d
  1750 0737 12       		.byte	0x12
  1751 0738 11       		.byte	0x11
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 44
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 44
 
 
  1752 0739 12       		.byte	0x12
@@ -4770,7 +2638,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  1806 076f 42       		.byte	0x42
  1807 0770 42       		.byte	0x42
  1808 0771 3D       		.byte	0x3d
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 45
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 45
 
 
  1809 0772 3D       		.byte	0x3d
@@ -4830,7 +2698,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  1863 07a8 72       		.byte	0x72
  1864 07a9 7D       		.byte	0x7d
  1865 07aa 0D       		.byte	0xd
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 46
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 46
 
 
  1866 07ab 19       		.byte	0x19
@@ -4890,7 +2758,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  1920 07e1 00       		.byte	0
  1921 07e2 55       		.byte	0x55
  1922 07e3 00       		.byte	0
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 47
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 47
 
 
  1923 07e4 AA       		.byte	0xaa
@@ -4950,7 +2818,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  1977 081a 10       		.byte	0x10
  1978 081b 1F       		.byte	0x1f
  1979 081c 10       		.byte	0x10
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 48
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 48
 
 
  1980 081d 10       		.byte	0x10
@@ -5010,7 +2878,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  2034 0853 00       		.byte	0
  2035 0854 00       		.byte	0
  2036 0855 1F       		.byte	0x1f
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 49
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 49
 
 
  2037 0856 10       		.byte	0x10
@@ -5070,7 +2938,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  2091 088c 1F       		.byte	0x1f
  2092 088d 10       		.byte	0x10
  2093 088e 1F       		.byte	0x1f
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 50
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 50
 
 
  2094 088f 00       		.byte	0
@@ -5130,7 +2998,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  2148 08c5 FF       		.byte	0xff
  2149 08c6 0F       		.byte	0xf
  2150 08c7 0F       		.byte	0xf
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 51
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 51
 
 
  2151 08c8 0F       		.byte	0xf
@@ -5190,7 +3058,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  2205 08fe 72       		.byte	0x72
  2206 08ff 01       		.byte	0x1
  2207 0900 72       		.byte	0x72
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 52
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 52
 
 
  2208 0901 4C       		.byte	0x4c
@@ -5250,7 +3118,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  2262 0937 00       		.byte	0
  2263 0938 00       		.byte	0
  2264 0939 08       		.byte	0x8
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 53
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 53
 
 
  2265 093a 08       		.byte	0x8
@@ -5305,12 +3173,12 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  2314 096b 11       		.uleb128 0x11
  2315 096c 4D040000 		.4byte	0x44d
  2316 0970 1E       		.uleb128 0x1e
- 2317 0971 95020000 		.4byte	.LASF54
+ 2317 0971 8D020000 		.4byte	.LASF54
  2318 0975 07       		.byte	0x7
  2319 0976 5506     		.2byte	0x655
  2320 0978 7C090000 		.4byte	0x97c
  2321 097c 06       		.uleb128 0x6
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 54
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 54
 
 
  2322 097d 8C000000 		.4byte	0x8c
@@ -5335,7 +3203,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  2341 09ab 20       		.uleb128 0x20
  2342 09ac 00       		.byte	0
  2343 09ad 21       		.uleb128 0x21
- 2344 09ae 09020000 		.4byte	.LASF56
+ 2344 09ae 01020000 		.4byte	.LASF56
  2345 09b2 01       		.byte	0x1
  2346 09b3 1F       		.byte	0x1f
  2347 09b4 A2090000 		.4byte	0x9a2
@@ -5370,7 +3238,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  2376 0014 24       		.uleb128 0x24
  2377 0015 00       		.byte	0
  2378 0016 0B       		.uleb128 0xb
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 55
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 55
 
 
  2379 0017 0B       		.uleb128 0xb
@@ -5430,7 +3298,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  2433 004d 0B       		.uleb128 0xb
  2434 004e 0B       		.uleb128 0xb
  2435 004f 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 56
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 56
 
 
  2436 0050 0B       		.uleb128 0xb
@@ -5490,7 +3358,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  2490 0086 00       		.byte	0
  2491 0087 0C       		.uleb128 0xc
  2492 0088 0F       		.uleb128 0xf
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 57
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 57
 
 
  2493 0089 00       		.byte	0
@@ -5550,7 +3418,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  2547 00c0 3A       		.uleb128 0x3a
  2548 00c1 0B       		.uleb128 0xb
  2549 00c2 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 58
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 58
 
 
  2550 00c3 0B       		.uleb128 0xb
@@ -5610,7 +3478,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  2604 00fa 13       		.uleb128 0x13
  2605 00fb 0B       		.uleb128 0xb
  2606 00fc 01       		.byte	0x1
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 59
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 59
 
 
  2607 00fd 11       		.uleb128 0x11
@@ -5670,7 +3538,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  2661 0134 0B       		.uleb128 0xb
  2662 0135 3B       		.uleb128 0x3b
  2663 0136 05       		.uleb128 0x5
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 60
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 60
 
 
  2664 0137 49       		.uleb128 0x49
@@ -5730,7 +3598,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  2718 016e 05       		.uleb128 0x5
  2719 016f 49       		.uleb128 0x49
  2720 0170 13       		.uleb128 0x13
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 61
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 61
 
 
  2721 0171 02       		.uleb128 0x2
@@ -5790,7 +3658,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  2775 01ac 05       		.uleb128 0x5
  2776 01ad 49       		.uleb128 0x49
  2777 01ae 13       		.uleb128 0x13
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 62
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 62
 
 
  2778 01af 3F       		.uleb128 0x3f
@@ -5850,7 +3718,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  2832 01e5 03       		.uleb128 0x3
  2833 01e6 0E       		.uleb128 0xe
  2834 01e7 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 63
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 63
 
 
  2835 01e8 0B       		.uleb128 0xb
@@ -5910,7 +3778,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  2889 0074 08000000 		.4byte	.LVL2
  2890 0078 B6000000 		.4byte	.LVL20
  2891 007c 0100     		.2byte	0x1
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 64
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 64
 
 
  2892 007e 57       		.byte	0x57
@@ -5970,7 +3838,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  2946 0109 4E000000 		.4byte	.LVL7
  2947 010d 50000000 		.4byte	.LVL8
  2948 0111 0100     		.2byte	0x1
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 65
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 65
 
 
  2949 0113 5E       		.byte	0x5e
@@ -6030,7 +3898,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  3003 019c 3C000000 		.4byte	.LVL39
  3004 01a0 4C000000 		.4byte	.LFE66
  3005 01a4 0100     		.2byte	0x1
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 66
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 66
 
 
  3006 01a6 50       		.byte	0x50
@@ -6090,7 +3958,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  3060 000e 0000     		.2byte	0
  3061 0010 00000000 		.4byte	.LFB63
  3062 0014 DC000000 		.4byte	.LFE63-.LFB63
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 67
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 67
 
 
  3063 0018 00000000 		.4byte	.LFB64
@@ -6150,7 +4018,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  3101      736700
  3102              	.LASF21:
  3103 0040 73697A65 		.ascii	"sizetype\000"
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 68
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 68
 
 
  3103      74797065 
@@ -6210,7 +4078,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  3135 00bd 6C6F6E67 		.ascii	"long unsigned int\000"
  3135      20756E73 
  3135      69676E65 
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 69
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 69
 
 
  3135      6420696E 
@@ -6270,7 +4138,7 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  3159      5F425954 
  3159      45535F4D 
  3159      534700
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 70
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 70
 
 
  3160              	.LASF19:
@@ -6283,118 +4151,115 @@ ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 1
  3163      65642069 
  3163      6E7400
  3164              	.LASF59:
- 3165 018b 433A5C55 		.ascii	"C:\\Users\\fiona\\OneDrive\\Documents\\FE3-Dashboar"
- 3165      73657273 
- 3165      5C66696F 
- 3165      6E615C4F 
- 3165      6E654472 
- 3166 01b9 645C4461 		.ascii	"d\\Dashboard.cydsn\000"
- 3166      7368626F 
- 3166      6172642E 
+ 3165 018b 433A5C63 		.ascii	"C:\\cygwin\\home\\ianrd\\FRUCDFE7_Dashboard\\Dashbo"
+ 3165      79677769 
+ 3165      6E5C686F 
+ 3165      6D655C69 
+ 3165      616E7264 
+ 3166 01b9 6172642E 		.ascii	"ard.cydsn\000"
  3166      63796473 
  3166      6E00
  3167              	.LASF17:
- 3168 01cb 63686172 		.ascii	"char\000"
+ 3168 01c3 63686172 		.ascii	"char\000"
  3168      00
  3169              	.LASF34:
- 3170 01d0 43414E5F 		.ascii	"CAN_RX_STRUCT\000"
+ 3170 01c8 43414E5F 		.ascii	"CAN_RX_STRUCT\000"
  3170      52585F53 
  3170      54525543 
  3170      5400
  3171              	.LASF50:
- 3172 01de 72784D61 		.ascii	"rxMailbox\000"
+ 3172 01d6 72784D61 		.ascii	"rxMailbox\000"
  3172      696C626F 
  3172      7800
  3173              	.LASF12:
- 3174 01e8 696E7433 		.ascii	"int32_t\000"
+ 3174 01e0 696E7433 		.ascii	"int32_t\000"
  3174      325F7400 
  3175              	.LASF27:
- 3176 01f0 7278636D 		.ascii	"rxcmd\000"
+ 3176 01e8 7278636D 		.ascii	"rxcmd\000"
  3176      6400
  3177              	.LASF52:
- 3178 01f6 64617461 		.ascii	"data\000"
+ 3178 01ee 64617461 		.ascii	"data\000"
  3178      00
  3179              	.LASF38:
- 3180 01fb 43414E5F 		.ascii	"CAN_TX_STRUCT\000"
+ 3180 01f3 43414E5F 		.ascii	"CAN_TX_STRUCT\000"
  3180      54585F53 
  3180      54525543 
  3180      5400
  3181              	.LASF56:
- 3182 0209 63616E5F 		.ascii	"can_buffer\000"
+ 3182 0201 63616E5F 		.ascii	"can_buffer\000"
  3182      62756666 
  3182      657200
  3183              	.LASF14:
- 3184 0214 75696E74 		.ascii	"uint32\000"
+ 3184 020c 75696E74 		.ascii	"uint32\000"
  3184      333200
  3185              	.LASF18:
- 3186 021b 72656738 		.ascii	"reg8\000"
+ 3186 0213 72656738 		.ascii	"reg8\000"
  3186      00
  3187              	.LASF43:
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 71
-
-
- 3188 0220 6D657373 		.ascii	"message\000"
+ 3188 0218 6D657373 		.ascii	"message\000"
  3188      61676500 
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 71
+
+
  3189              	.LASF26:
- 3190 0228 43414E5F 		.ascii	"CAN_TX_MSG\000"
+ 3190 0220 43414E5F 		.ascii	"CAN_TX_MSG\000"
  3190      54585F4D 
  3190      534700
  3191              	.LASF45:
- 3192 0233 43414E5F 		.ascii	"CAN_SendMsg\000"
+ 3192 022b 43414E5F 		.ascii	"CAN_SendMsg\000"
  3192      53656E64 
  3192      4D736700 
  3193              	.LASF44:
- 3194 023f 62756666 		.ascii	"bufferId\000"
+ 3194 0237 62756666 		.ascii	"bufferId\000"
  3194      65724964 
  3194      00
  3195              	.LASF36:
- 3196 0248 74786964 		.ascii	"txid\000"
+ 3196 0240 74786964 		.ascii	"txid\000"
  3196      00
  3197              	.LASF5:
- 3198 024d 5F5F696E 		.ascii	"__int32_t\000"
+ 3198 0245 5F5F696E 		.ascii	"__int32_t\000"
  3198      7433325F 
  3198      7400
  3199              	.LASF58:
- 3200 0257 47656E65 		.ascii	"Generated_Source\\PSoC5\\CAN_TX_RX_func.c\000"
+ 3200 024f 47656E65 		.ascii	"Generated_Source\\PSoC5\\CAN_TX_RX_func.c\000"
  3200      72617465 
  3200      645F536F 
  3200      75726365 
  3200      5C50536F 
  3201              	.LASF33:
- 3202 027f 72786163 		.ascii	"rxacrd\000"
+ 3202 0277 72786163 		.ascii	"rxacrd\000"
  3202      726400
  3203              	.LASF16:
- 3204 0286 646F7562 		.ascii	"double\000"
+ 3204 027e 646F7562 		.ascii	"double\000"
  3204      6C6500
  3205              	.LASF42:
- 3206 028d 72656754 		.ascii	"regTemp\000"
+ 3206 0285 72656754 		.ascii	"regTemp\000"
  3206      656D7000 
  3207              	.LASF54:
- 3208 0295 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 3208 028d 49544D5F 		.ascii	"ITM_RxBuffer\000"
  3208      52784275 
  3208      66666572 
  3208      00
  3209              	.LASF57:
- 3210 02a2 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 3210 029a 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
  3210      43313120 
  3210      352E342E 
  3210      31203230 
  3210      31363036 
- 3211 02d5 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 3211 02cd 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
  3211      20726576 
  3211      6973696F 
  3211      6E203233 
  3211      37373135 
- 3212 0308 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 3212 0300 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
  3212      66756E63 
  3212      74696F6E 
  3212      2D736563 
  3212      74696F6E 
-ARM GAS  C:\Users\fiona\AppData\Local\Temp\ccIFlHla.s 			page 72
-
-
  3213              	.LASF30:
- 3214 0330 7278616D 		.ascii	"rxamr\000"
+ 3214 0328 7278616D 		.ascii	"rxamr\000"
+ARM GAS  C:\Users\ianrd\AppData\Local\Temp\cclMk4gk.s 			page 72
+
+
  3214      7200
  3215              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
->>>>>>> whgentry_fe6

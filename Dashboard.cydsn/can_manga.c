@@ -20,6 +20,7 @@ extern volatile uint32_t pedalOK;
 extern volatile double THROTTLE_MULTIPLIER;
 extern const double THROTTLE_MAP[8];
 extern volatile uint8_t PACK_TEMP;
+extern volatile uint8_t BSPD_CATCH;
 extern volatile int32 CURRENT;
 extern volatile int ERROR_NODE;
 extern volatile int ERROR_IDX;
@@ -32,7 +33,6 @@ volatile uint8_t ERROR_TOLERANCE = 0;
 volatile uint8_t ABS_MOTOR_RPM = 0;
 volatile uint8_t THROTTLE_HIGH = 0;
 volatile uint8_t THROTTLE_LOW = 0;
-volatile uint8_t BSPD_CATCH = 0;
 
 volatile uint8_t VOLT_B1;
 volatile uint8_t VOLT_B2;
