@@ -73,7 +73,7 @@ int SOC_LUT[240] =  {
     9559, 9586, 9613, 9640, 9647, 
     9693, 9720, 9746, 9772, 9797,
     9823, 9848, 9873, 9898, 9923,
-    9947, 9971, 9995, 100000    
+    9947, 9971, 9995, 100000  //9995 -> 100000 or 10000?  
 };
 
 uint16_t curr_voltage = 0;
@@ -115,14 +115,16 @@ void nodeCheckStart()
     isr_nodeok_Start();
 }
 
-void displayData() {
+void displayData() 
+{
     GLCD_Clear_Frame();
     GLCD_DrawInt(0,0,PACK_TEMP,8);
     GLCD_DrawInt(120,0,charge,8);
     GLCD_Write_Frame();
 }
 
-CY_ISR(ISR_WDT){
+CY_ISR(ISR_WDT) //What is this?
+{
     WDT_Timer_STATUS;
     WDT_Reset_Write(0);
     CyDelay(100);
@@ -140,7 +142,7 @@ typedef enum
     
 }Dash_State;
 
-typedef enum 
+typedef enum //syntax: type def structure variable is declared with Error_State
 {
 	OK,
 	fromLV,
@@ -199,12 +201,12 @@ int main()
 {   
     EEPROM_1_Start();
     
-    Dash_State state = Startup;
-    Error_State error_state = OK;
+    Dash_State state = Startup; 
+    Error_State error_state = OK; //define type error_state for variables in Error_State
     
     //Tach Meter Stuff
-    uint8_t value=0; // replace the value with 
-    int8_t direction=1;
+    uint8_t value = 0; // replace the value with 
+    int8_t direction = 1;
     
     //precharging time counter
     volatile uint32_t PrechargingTimeCount = 0;
@@ -228,20 +230,20 @@ int main()
     int faulted = 0;
     
     
-    for(;;)
+    for(;;) //for(;;) functional equivalent to while (true) {}
     {
-        
-        LED_Write(1);
+        LED_Write(1); //1 = true?
         
         // Check if all nodes are OK
-        if (pedalOK > PEDAL_TIMEOUT)
+        if (pedalOK > PEDAL_TIMEOUT) //what is PEDAL_TIMEOUT?
         {
             can_send_cmd(0, 0, 0); // setInterlock. 
             state = Fault;
             error_state = nodeFailure;
         }
         
-        if(bms_status != NO_ERROR && state != Startup) {
+        if(bms_status != NO_ERROR && state != Startup) 
+        {
             state = Fault;
             error_state = fromBMS;
             if(!faulted)
@@ -255,18 +257,23 @@ int main()
             // startup -- 
             case Startup:
                 GLCD_Clear_Frame();
-                if(firstStart == 0) {
-                    GLCD_DrawString(0,0,"START",8);
+                if(firstStart == 0) 
+                {
+                    GLCD_DrawString(0,0,"START",8); //STARTUP State Machine
                     GLCD_Write_Frame();
-                } else {
-                    displayData();
+                } 
+                else 
+                {
+                    displayData(); //display BMS PACK_TEMP and charge
                 }
                 
                 //Initialize CAN
                 CAN_GlobalIntEnable();
                 CAN_Init();
                 CAN_Start();
-                LED_color_wheel(200);
+                LED_color_wheel(200); //purple? 
+                //should I try predefined color coding: https://www.keil.com/pack/doc/mw/Board/html/group__bsp__glcd__colors.html#details
+
                 
                 can_send_status(state, error_state);
 
@@ -280,13 +287,16 @@ int main()
             break;
                 
             case LV:
-                if(firstLV == 0) {
+                if(firstLV == 0) 
+                {
                     GLCD_Clear_Frame();
-                    GLCD_DrawString(0,0,"LV",8);
+                    GLCD_DrawString(0,0,"LV",8); //LV State Machine; display LV on dash at x=0,y=0, what is 8?
                     GLCD_Write_Frame();
-                    firstLV = 1;
-                } else {
-                    charge = SOC_LUT[(voltage - 93400) / 100] / 100;
+                    firstLV = 1; //is this necessary? should break out of loop w/o this line
+                }
+                else 
+                {
+                    charge = SOC_LUT[(voltage - 93400) / 100] / 100; //what is this? what is 93400. is it charge state? Is full charge 100000?
                     displayData();
                 }
                 
@@ -299,20 +309,17 @@ int main()
           
                 can_send_status(state, error_state);
 
-                // calcualte SOC and display SOC
+                //calculate SOC and display SOC
                 //charge = SOC_LUT[(voltage - 93400) / 100] / 100;
                 //hex2Display(charge);
 
                 Buzzer_Write(0);
-                
-                
-                //
                 // RGB code goes here
                 // pick a color
                 // all on. 
                 LED_color(YELLOW);
                 
-                if (Drive_Read())
+                if (Drive_Read()) //what is Drive_Read?
                 {
                     state = Fault;
                     error_state = fromLV;
@@ -437,14 +444,18 @@ int main()
             break;
                 
 	        case Drive:
-                if(firstDrive == 0) {
+                if(firstDrive == 0)
+                {
                     GLCD_Clear_Frame();
                     GLCD_DrawString(0,0,"DRIVE",8);
                     GLCD_Write_Frame();
                     firstDrive = 1;
-                } else {
+                } 
+                else 
+                {
                     // calcualte SOC
-                    if(CURRENT < 2500) {
+                    if(CURRENT < 2500) 
+                    {
                         charge = SOC_LUT[(voltage - 93400) / 100] / 100;
                     } 
                     displayData();
@@ -481,25 +492,28 @@ int main()
                 can_send_cmd(1, Throttle_High, Throttle_Low); // setInterlock 
                 
                 // Display pack temp and soc on display
-               // displayData();
-                
+                // displayData();
+
                 // check if everything is going well
                 // if exiting drive improperly also send charge
-                // probably kyle just turing the car off wrong
-                if (!HV_Read()) {
+                // probably kyle just turning the car off wrong
+                if (!HV_Read()) 
+                {
                     can_send_cmd(0, 0, 0);   
                     can_send_charge(charge, 1); 
                     state = LV;
                 }
                 // if exiting drive mode send SOC to BMS
                 // likely that car is about to shut down
-                if (!Drive_Read()) {
+                if (!Drive_Read()) 
+                {
                     state = HV_Enabled;
                     can_send_cmd(1, 0, 0);
                     can_send_charge(charge, 1);
                 }
                 if ((ACK != 0xFF) | 
                     (!getCurtisHeartBeatCheck())) // TODO: Heart beat message is never cleared
+                    //who's Curtis
                 {
                     can_send_cmd(0, 0, 0);
                     state = Fault;
@@ -536,7 +550,7 @@ int main()
                 GLCD_DrawString(0,32,"FAULT:",2);
                 GLCD_DrawInt(80,32,error_state,2);
                 GLCD_DrawString(110, 0, "T:", 2);
-                GLCD_DrawString(110, 32, "FALUT:", 2);
+                GLCD_DrawString(110, 32, "FAULT:", 2);
                 char* bms_f;
                 //sprintf(bms_f, "%x", bms_error);
                 if(error_state == fromBMS) {
