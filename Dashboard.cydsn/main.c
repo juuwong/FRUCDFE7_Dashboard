@@ -5,7 +5,6 @@
 #include "graphic.h"
 #include "LED.h"
 #include "can_manga.h"
-//remove this comment
 
 // Uncomment THROTTLE_LIMITING to enable power reduction at high temperatures
 #define THROTTLE_LIMITING
