@@ -1,0 +1,5 @@
+/*
+I created a fork of the original project on my account. There are branches for each collaborator including the master branch. 
+Our primary code editor is PSOC Creator 4.2 since it includes source code and the associated components.
+The program is written in C. The primary file is "main.c" where .c are files containing source code and .h are files containing the associated headers. 
+*/
