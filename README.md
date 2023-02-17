@@ -1,5 +1,4 @@
-/*
-I created a fork of the original project on my account. There are branches for each collaborator including the master branch. 
+'''
 The program is written in C. The primary file is "main.c" where .c are files containing source code and .h are files containing the associated headers.
 Our primary code editor is PSOC Creator 4.2 since it implements the source code and the associated components
 The C source code files can be viewed with any other text editor.
@@ -15,4 +14,4 @@ You might find the CAN topography helpful to understand the drive modes and vari
 I have not been given a clear objective on what to do with the code except to try to understand as much as I can. 
 My leads are saying that much of the code is commented out and I can see that many parts can be cleaned up. 
 Additionally as the school year progresses, the leads would like to implement more features and be able to display more information on the dashboard.
-*/
+'''
